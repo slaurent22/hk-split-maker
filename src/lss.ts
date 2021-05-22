@@ -1,7 +1,6 @@
-import * as fs from "fs/promises";
 import xml from "xml";
 
-interface Config {
+export interface Config {
     splitIds: Array<string>;
     ordered: true;
     endTriggeringAutosplit: true;
@@ -71,7 +70,7 @@ function getMetadataNode(config: Config): xml.XmlObject {
     ], };
 }
 
-function createSplitsXml(config: Config): string {
+export function createSplitsXml(config: Config): string {
     const {
         splitIds,
         ordered,
@@ -104,28 +103,3 @@ function createSplitsXml(config: Config): string {
         indent: "  ",
     });
 }
-
-const config: Config = {
-    splitIds: [
-        "KingsPass",
-        "VengefulSpirit",
-        "Greenpath",
-        "MothwingCloak",
-        "Aluba"
-    ],
-    ordered: true,
-    endTriggeringAutosplit: true,
-    gameName: "Hollow Knight Category Extensions",
-    categoryName: "Aluba%",
-    variables: {
-        platform: "PC",
-        patch: "1.2.2.1",
-    },
-};
-
-async function main() {
-    const lss = createSplitsXml(config);
-    await fs.writeFile("./splits.lss", lss);
-}
-
-void main();
