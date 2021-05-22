@@ -4,7 +4,7 @@ const SPLITS_DEFINITIONS_FILE = "./asset/splits.txt";
 const SPLITS_DEFINITIONS_REGEXP =
     /\[Description\("(?<description>.+)"\), ToolTip\("(?<tooltip>.+)"\)\]\s+(?<id>\w+),/g;
 
-type SplitDefinition = {
+interface SplitDefinition {
     description: string;
     tooltip: string;
     id: string;
@@ -12,7 +12,7 @@ type SplitDefinition = {
 
 export async function parseSplitsDefinitions(): Promise<Map<string, SplitDefinition>> {
     const definitionsSource = await fs.readFile(SPLITS_DEFINITIONS_FILE, {
-        encoding: "utf-8"
+        encoding: "utf-8",
     });
     const matches = definitionsSource.matchAll(SPLITS_DEFINITIONS_REGEXP);
 
@@ -24,10 +24,10 @@ export async function parseSplitsDefinitions(): Promise<Map<string, SplitDefinit
         }
 
         const {
-            description, id, tooltip
+            description, id, tooltip,
         } = match.groups;
         definitions.set(id, {
-            description, id, tooltip
+            description, id, tooltip,
         });
     }
 

@@ -6,8 +6,8 @@ async function main() {
 }
 
 try {
-    main();
+    void main();
 }
-catch(e) {
+catch (e) {
     console.error(e);
 }

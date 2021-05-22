@@ -1,27 +1,17 @@
+import * as fs from "fs/promises";
 import xml from "xml";
-import { parseSplitsDefinitions } from "./splits";
 
-const GAME_NAMES = {
-    HK: "Hollow Knight",
-    HKMEMES: "Hollow Knight Category Extensions",
-    HKMODS: "Hollow Knight Mods"
-};
-
-const CATEGORY_NAMES = {
-    ALUBA: "Aluba%"
-}
-
-type Config = {
-    splitIds: Array<string>,
-    ordered: true,
-    endTriggeringAutosplit: true,
+interface Config {
+    splitIds: Array<string>;
+    ordered: true;
+    endTriggeringAutosplit: true;
     categoryName: string;
     gameName: string;
     variables?: {
         platform?: string;
         patch?: string;
-    }
-};
+    };
+}
 
 function boolRepr(bool: boolean): string {
     return bool ? "True" : "False";
@@ -29,23 +19,23 @@ function boolRepr(bool: boolean): string {
 
 function getSegmentNode(id: string): xml.XmlObject {
     return { Segment: [
-        { Name: id },
-        { Icon: "" },
+        { Name: id, },
+        { Icon: "", },
         { SplitTimes: [
-            { SplitTime: { _attr: { name: "Personal Best" } } },
-        ]},
-        { BestSegmentTime: "" },
-        { SegmentHistory: "" }
-    ] }
+            { SplitTime: { _attr: { name: "Personal Best", }, }, }
+        ], },
+        { BestSegmentTime: "", },
+        { SegmentHistory: "", }
+    ], };
 }
 
 function getVariableNode(name: string, value: string): xml.XmlObject {
     return {
         Variable: [
-            { _attr: { name } },
+            { _attr: { name, }, },
             value
-        ]
-    }
+        ],
+    };
 }
 
 function getVariablesNode(config: Config): xml.XmlObject {
@@ -55,30 +45,30 @@ function getVariablesNode(config: Config): xml.XmlObject {
     const variablesNode = {
         Variables: [
             glitchVarNode
-        ]
+        ],
     };
 
     if (config.variables?.patch) {
         variablesNode.Variables.push(
             getVariableNode("Patch", config.variables.patch)
-        )
+        );
     }
 
     return variablesNode;
 }
 
 function getMetadataNode(config: Config): xml.XmlObject {
-    const platformAttr = { _attr: { usesEmulator: boolRepr(false) }};
+    const platformAttr = { _attr: { usesEmulator: boolRepr(false), }, };
     const platformNode = config.variables?.platform ?
-        { Platform: [ platformAttr, config.variables.platform ] } :
-        { Platform: platformAttr };
+        { Platform: [ platformAttr, config.variables.platform ], } :
+        { Platform: platformAttr, };
 
 
     return { Metadata: [
-        { Run: { _attr: { id: "" }}},
+        { Run: { _attr: { id: "", }, }, },
         platformNode,
         getVariablesNode(config)
-    ] };
+    ], };
 }
 
 function createSplitsXml(config: Config): string {
@@ -87,36 +77,33 @@ function createSplitsXml(config: Config): string {
         ordered,
         endTriggeringAutosplit,
         categoryName,
-        gameName
+        gameName,
     } = config;
 
     const segments = splitIds.map(getSegmentNode);
-    const autosplits = splitIds.map(Split => ({ Split }))
+    const autosplits = splitIds.map(Split => ({ Split, }));
     return xml({
         Run: [
-            { _attr: { version: "1.7.0" } },
-            { GameIcon: "" },
-            { GameName: gameName },
-            { CategoryName: categoryName },
+            { _attr: { version: "1.7.0", }, },
+            { GameIcon: "", },
+            { GameName: gameName, },
+            { CategoryName: categoryName, },
             getMetadataNode(config),
-            { Offset: "00:00:00" },
-            { AttemptCount: "0" },
-            { AttemptHistory: "" },
-            { Segments: segments },
+            { Offset: "00:00:00", },
+            { AttemptCount: "0", },
+            { AttemptHistory: "", },
+            { Segments: segments, },
             { AutoSplitterSettings: [
-                { Ordered: boolRepr(ordered) },
-                { AutosplitEndRuns: boolRepr(endTriggeringAutosplit) },
-                { Splits: autosplits }
-            ] },
-        ]
+                { Ordered: boolRepr(ordered), },
+                { AutosplitEndRuns: boolRepr(endTriggeringAutosplit), },
+                { Splits: autosplits, }
+            ], }
+        ],
     }, {
         declaration: true,
-        indent: "  "
+        indent: "  ",
     });
 }
-
-
-
 
 const config: Config = {
     splitIds: [
@@ -128,13 +115,17 @@ const config: Config = {
     ],
     ordered: true,
     endTriggeringAutosplit: true,
-    gameName: GAME_NAMES.HKMEMES,
-    categoryName: CATEGORY_NAMES.ALUBA,
+    gameName: "Hollow Knight Category Extensions",
+    categoryName: "Aluba%",
     variables: {
         platform: "PC",
-        patch: "1.2.2.1"
-    }
+        patch: "1.2.2.1",
+    },
 };
 
-const lss = createSplitsXml(config);
-console.log(lss);
+async function main() {
+    const lss = createSplitsXml(config);
+    await fs.writeFile("./splits.lss", lss);
+}
+
+void main();
