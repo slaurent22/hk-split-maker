@@ -1,6 +1,6 @@
 import * as fs from "fs/promises";
 
-const SPLITS_DEFINITIONS_FILE = "./src/splits.txt";
+const SPLITS_DEFINITIONS_FILE = "./asset/splits.txt";
 const SPLITS_DEFINITIONS_REGEXP =
     /\[Description\("(?<description>.+)"\), ToolTip\("(?<tooltip>.+)"\)\]\s+(?<id>\w+),/g;
 
