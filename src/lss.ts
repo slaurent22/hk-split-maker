@@ -1,4 +1,5 @@
 import xml from "xml";
+import { parseSplitsDefinitions } from "./splits";
 
 export interface Config {
     splitIds: Array<string>;
@@ -16,9 +17,9 @@ function boolRepr(bool: boolean): string {
     return bool ? "True" : "False";
 }
 
-function getSegmentNode(id: string): xml.XmlObject {
+function getSegmentNode(name: string): xml.XmlObject {
     return { Segment: [
-        { Name: id, },
+        { Name: name, },
         { Icon: "", },
         { SplitTimes: [
             { SplitTime: { _attr: { name: "Personal Best", }, }, }
@@ -70,7 +71,7 @@ function getMetadataNode(config: Config): xml.XmlObject {
     ], };
 }
 
-export function createSplitsXml(config: Config): string {
+export async function createSplitsXml(config: Config): Promise<string> {
     const {
         splitIds,
         ordered,
@@ -79,7 +80,15 @@ export function createSplitsXml(config: Config): string {
         gameName,
     } = config;
 
-    const segments = splitIds.map(getSegmentNode);
+    const splitDefinitions = await parseSplitsDefinitions();
+
+    const segments = splitIds.map(splitId => {
+        const splitDefinition = splitDefinitions.get(splitId);
+        if (!splitDefinition) {
+            throw new Error(`Failed to find a definition for split id ${splitId}`);
+        }
+        return getSegmentNode(splitDefinition.name);
+    });
     const autosplits = splitIds.map(Split => ({ Split, }));
     return xml({
         Run: [

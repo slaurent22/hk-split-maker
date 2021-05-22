@@ -21,7 +21,7 @@ const config: Config = {
 };
 
 async function main() {
-    const lss = createSplitsXml(config);
+    const lss = await createSplitsXml(config);
     await fs.writeFile("./splits.lss", lss);
 }
 
