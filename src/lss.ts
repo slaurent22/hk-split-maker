@@ -10,6 +10,7 @@ export interface Config {
     variables?: {
         platform?: string;
         patch?: string;
+        glitch?: string;
     };
 }
 
@@ -43,7 +44,8 @@ function getVariableNode(name: string, value: string): xml.XmlObject {
 
 function getVariablesNode(config: Config): xml.XmlObject {
     const glitchAttrName = `${config.categoryName} Glitch`;
-    const glitchVarNode = getVariableNode(glitchAttrName, "No Major Glitches");
+    const glitch = config.variables?.glitch || "No Major Glitches";
+    const glitchVarNode = getVariableNode(glitchAttrName, glitch);
 
     const variablesNode = {
         Variables: [
