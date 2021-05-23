@@ -1,4 +1,4 @@
-import xml from "xml";
+import xml from "./external-lib/xml.js";
 import { getIconData, parseSplitsDefinitions } from "./splits";
 
 export interface Config {
@@ -76,7 +76,7 @@ function getMetadataNode(config: Config): xml.XmlObject {
     ], };
 }
 
-export async function createSplitsXml(config: Config): Promise<string> {
+export function createSplitsXml(config: Config): string {
     const {
         splitIds,
         ordered,
@@ -85,8 +85,8 @@ export async function createSplitsXml(config: Config): Promise<string> {
         gameName,
     } = config;
 
-    const splitDefinitions = await parseSplitsDefinitions();
-    const icons = await getIconData();
+    const splitDefinitions = parseSplitsDefinitions();
+    const icons = getIconData();
 
     const segments = splitIds.map(splitId => {
         const splitDefinition = splitDefinitions.get(splitId);
