@@ -1,5 +1,5 @@
 import xml from "xml";
-import { parseSplitsDefinitions } from "./splits";
+import { getIconData, parseSplitsDefinitions } from "./splits";
 
 export interface Config {
     splitIds: Array<string>;
@@ -17,10 +17,13 @@ function boolRepr(bool: boolean): string {
     return bool ? "True" : "False";
 }
 
-function getSegmentNode(name: string): xml.XmlObject {
+function getSegmentNode(name: string, iconData?: string): xml.XmlObject {
+    const iconNode: xml.XmlObject = {
+        Icon: iconData ? { _cdata: iconData, } : "",
+    };
     return { Segment: [
         { Name: name, },
-        { Icon: "", },
+        iconNode,
         { SplitTimes: [
             { SplitTime: { _attr: { name: "Personal Best", }, }, }
         ], },
@@ -81,13 +84,15 @@ export async function createSplitsXml(config: Config): Promise<string> {
     } = config;
 
     const splitDefinitions = await parseSplitsDefinitions();
+    const icons = await getIconData();
 
     const segments = splitIds.map(splitId => {
         const splitDefinition = splitDefinitions.get(splitId);
         if (!splitDefinition) {
             throw new Error(`Failed to find a definition for split id ${splitId}`);
         }
-        return getSegmentNode(splitDefinition.name);
+        const iconData = icons.get(splitId);
+        return getSegmentNode(splitDefinition.name, iconData);
     });
     const autosplits = splitIds.map(Split => ({ Split, }));
     return xml({

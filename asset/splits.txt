@@ -724,4 +724,4 @@
         [Description("White Palace - Second Orb (Lever)"), ToolTip("Splits when lighting the second orb in White Palace")]
         WhitePalaceOrb2,
         [Description("White Palace - Third Orb (Lever)"), ToolTip("Splits when lighting the third orb in White Palace")]
-        WhitePalaceOrb3
+        WhitePalaceOrb3,

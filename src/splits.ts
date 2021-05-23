@@ -4,7 +4,7 @@ import * as fs from "fs/promises";
 const SPLITS_DEFINITIONS_FILE = "./asset/splits.txt";
 const SPLITS_DEFINITIONS_REGEXP =
     /\[Description\("(?<description>.+)"\), ToolTip\("(?<tooltip>.+)"\)\]\s+(?<id>\w+),/g;
-const DESCRIPTION_NAME_REGEXP = /(?<name>.+)\s+\(.+\)/;
+// const DESCRIPTION_NAME_REGEXP = /(?<name>.+)\s+\(.+\)/;
 
 interface SplitDefinition {
     description: string;
@@ -14,10 +14,11 @@ interface SplitDefinition {
 }
 
 function getName(description: string) {
-    const match = DESCRIPTION_NAME_REGEXP.exec(description);
-    assert(match, `Invalid Description: ${description}`);
-    assert(match.groups, "RegExp match must have groups");
-    return match.groups.name;
+    return description;
+    // const match = DESCRIPTION_NAME_REGEXP.exec(description);
+    // assert(match, `Invalid Description: ${description}`);
+    // assert(match.groups, "RegExp match must have groups");
+    // return match.groups.name;
 }
 
 export async function parseSplitsDefinitions(): Promise<Map<string, SplitDefinition>> {
@@ -46,4 +47,10 @@ export async function parseSplitsDefinitions(): Promise<Map<string, SplitDefinit
     }
 
     return definitions;
+}
+
+export async function getIconData(): Promise<Map<string, string>> {
+    const iconDataSource = await fs.readFile("./asset/icons.json");
+    const iconDataObject = JSON.parse(iconDataSource.toString()) as Record<string, string>;
+    return new Map(Object.entries(iconDataObject));
 }
