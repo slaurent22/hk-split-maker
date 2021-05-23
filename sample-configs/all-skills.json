@@ -1,0 +1,37 @@
+{
+    "splitIds": [
+        "VengefulSpirit",
+        "Greenpath",
+        "MothwingCloak",
+        "MantisClaw",
+        "BlueLake",
+        "GorgeousHusk",
+        "DashSlash",
+        "ShadeSoul",
+        "DesolateDive",
+        "KingsStationStation",
+        "CrystalHeart",
+        "DescendingDark",
+        "DreamNail",
+        "Lurien",
+        "Abyss",
+        "MonarchWings",
+        "KingsBrand",
+        "CycloneSlash",
+        "Monomon",
+        "GreatSlash",
+        "HowlingWraiths",
+        "Hegemol",
+        "ShadeCloak",
+        "AbyssShriek",
+        "UnchainedHollowKnight"
+    ],
+    "ordered": true,
+    "endTriggeringAutosplit": false,
+    "gameName": "Hollow Knight",
+    "categoryName": "All Skills",
+    "variables": {
+        "platform": "PC",
+        "patch": "1.2.2.1"
+    }
+}

@@ -94,6 +94,11 @@ export async function createSplitsXml(config: Config): Promise<string> {
         const iconData = icons.get(splitId);
         return getSegmentNode(splitDefinition.name, iconData);
     });
+
+    if (!endTriggeringAutosplit) {
+        segments.push(getSegmentNode(categoryName));
+    }
+
     const autosplits = splitIds.map(Split => ({ Split, }));
     return xml({
         Run: [
