@@ -52,7 +52,7 @@ export default class App extends Component {
         );
     }
 
-    protected onSubmit(event: FormEvent<HTMLFormElement>): void {
+    protected async onSubmit(event: FormEvent<HTMLFormElement>): Promise<void> {
         event.preventDefault();
         const inputElement = document.getElementById("split-config-input") as HTMLTextAreaElement;
         let configObject;
@@ -67,7 +67,7 @@ export default class App extends Component {
         let output = "";
         try {
             // todo: runtime schema validation
-            output = createSplitsXml(configObject as Config);
+            output = await createSplitsXml(configObject as Config);
 
         }
         catch (e) {

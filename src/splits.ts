@@ -1,5 +1,4 @@
 import splits from "./asset/splits.txt";
-import icons from "./asset/icons.json";
 
 // const SPLITS_DEFINITIONS_FILE = "./asset/splits.txt";
 const SPLITS_DEFINITIONS_REGEXP =
@@ -46,6 +45,7 @@ export function parseSplitsDefinitions(): Map<string, SplitDefinition> {
     return definitions;
 }
 
-export function getIconData(): Map<string, string> {
+export async function getIconData(): Promise<Map<string, string>> {
+    const { default: icons, } = await import("./asset/icons.json");
     return new Map(Object.entries(icons));
 }

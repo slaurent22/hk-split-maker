@@ -76,7 +76,7 @@ function getMetadataNode(config: Config): xml.XmlObject {
     ], };
 }
 
-export function createSplitsXml(config: Config): string {
+export async function createSplitsXml(config: Config): Promise<string> {
     const {
         splitIds,
         ordered,
@@ -86,7 +86,7 @@ export function createSplitsXml(config: Config): string {
     } = config;
 
     const splitDefinitions = parseSplitsDefinitions();
-    const icons = getIconData();
+    const icons = await getIconData();
 
     const segments = splitIds.map(splitId => {
         const splitDefinition = splitDefinitions.get(splitId);

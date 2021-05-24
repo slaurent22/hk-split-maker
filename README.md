@@ -12,13 +12,7 @@ As of this writing, you must clone the repository and install/build manually via
 npm install && npm run build
 ```
 
-Specify a config file and an output file, like so:
-```sh
-$ node build/main.js sample-configs/112-apb.json splits.lss
-Reading from sample-configs/112-apb.json
-Writing to splits.lss
-Done!
-```
+Open the generated `dist/index.html` in a web browser.
 
 ![LiveSplit Screenshot of 112% APB Splits](./doc/img/112-apb.lss.PNG)
 ![LiveSplit Screenshot of 112% APB Splits, scrolled to the end](./doc/img/112-apb-end.lss.PNG)
