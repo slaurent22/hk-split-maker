@@ -98,6 +98,26 @@ export default class App extends Component {
         const outputElement = document.getElementById("split-result") as HTMLTextAreaElement;
         const output = outputElement.value;
         const outBlob = new Blob([output]);
-        saveAs(outBlob, "splits.lss");
+
+        // Guess a good file name.
+        // Can be inaccurate if a new config has been entered but not processed yet.
+        const inputElement = document.getElementById("split-config-input") as HTMLTextAreaElement;
+        let splitName = "";
+        let configObject;
+        try {
+            configObject = JSON.parse(inputElement.value) as Config;
+            splitName = configObject?.categoryName || "splits";
+            // Make file name compatible:
+            splitName = splitName
+                .toLowerCase()
+                .replace(/[^a-z0-9]/gi, "_")  // replace non-alphanum with _
+                .replace(/^_+|_+$/g, "")  // remove outer _
+                .replace(/^_+|_+$/g, "")  // remove outer _
+                .replace(/_{2,}/g, "_");  // join multiple _
+        }
+        catch {
+            splitName = "splits";
+        }
+        saveAs(outBlob, `${splitName}.lss`);
     }
 }
