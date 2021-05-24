@@ -36,7 +36,7 @@ export default class App extends Component {
                     <h2>Input config JSON</h2>
                     <textarea
                         id="split-config-input"
-                        rows={TEXTAREA_ROWS}
+                        rows={"TEXTAREA_ROWS"}
                         cols={TEXTAREA_COLS}
                         defaultValue={JSON.stringify(sampleConfig, null, 4)}
                     ></textarea>

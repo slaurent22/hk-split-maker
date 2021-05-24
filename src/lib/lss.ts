@@ -1,5 +1,5 @@
 import xml from "../external-lib/xml.js";
-import { getIconData, parseSplitsDefinitions } from "./splits";
+import { getIconData, parseSplitsDefinitions } from './splits';
 
 export interface Config {
     splitIds: Array<string>;
