@@ -40,7 +40,7 @@ export default class App extends Component {
                         defaultValue={JSON.stringify(sampleConfig, null, 4)}
                     ></textarea>
                     <br></br>
-                    <input type="submit" value="Submit"/>
+                    <input id="submit-button" type="submit" value="Submit"/>
                 </form>
                 <h2>Output Splits File</h2>
                 <textarea
@@ -65,15 +65,20 @@ export default class App extends Component {
         }
         console.log(configObject);
         let output = "";
+
+        const submitButton = document.getElementById("submit-button") as HTMLInputElement;
+        submitButton.disabled = true;
         try {
             // todo: runtime schema validation
             output = await createSplitsXml(configObject as Config);
-
         }
         catch (e) {
-            alert("Failed to create splits. The error has been logged to console.error");
             console.error(e);
+            alert("Failed to create splits. The error has been logged to console.error");
             return;
+        }
+        finally {
+            submitButton.disabled = false;
         }
 
         const outputElement = document.getElementById("split-result") as HTMLTextAreaElement;
