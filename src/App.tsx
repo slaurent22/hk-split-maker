@@ -1,5 +1,6 @@
 import type { FormEvent, ReactNode } from "react";
 import React, { Component } from "react";
+import { saveAs } from "file-saver";
 import type { Config } from "./lss";
 import { createSplitsXml } from "./lss";
 
@@ -43,11 +44,19 @@ export default class App extends Component {
                     <input id="submit-button" type="submit" value="Submit"/>
                 </form>
                 <h2>Output Splits File</h2>
-                <textarea
-                    id="split-result"
-                    rows={TEXTAREA_ROWS}
-                    cols={TEXTAREA_COLS}
-                ></textarea>
+                <div style={({
+                    display: "table-caption",
+                })}>
+                    <button
+                        id="download-button"
+                        onClick={this.onDownload.bind(this)}
+                    >💾 Download</button>
+                    <textarea
+                        id="split-result"
+                        rows={TEXTAREA_ROWS}
+                        cols={TEXTAREA_COLS}
+                    ></textarea>
+                </div>
             </div>
         );
     }
@@ -83,5 +92,12 @@ export default class App extends Component {
 
         const outputElement = document.getElementById("split-result") as HTMLTextAreaElement;
         outputElement.value = output;
+    }
+
+    protected onDownload(): void {
+        const outputElement = document.getElementById("split-result") as HTMLTextAreaElement;
+        const output = outputElement.value;
+        const outBlob = new Blob([output]);
+        saveAs(outBlob, "splits.lss");
     }
 }
