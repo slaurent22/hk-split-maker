@@ -1,8 +1,8 @@
 import type { FormEvent, ReactNode } from "react";
 import React, { Component } from "react";
 import { saveAs } from "file-saver";
-import type { Config } from "./lss";
-import { createSplitsXml } from "./lss";
+import type { Config } from "../lib/lss";
+import { createSplitsXml } from "../lib/lss";
 
 const TEXTAREA_ROWS = 22;
 const TEXTAREA_COLS = 80;
