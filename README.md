@@ -9,10 +9,10 @@ Write a small configuration for Hollow Knight splits and a produce a full LiveSp
 As of this writing, you must clone the repository and install/build manually via [Node.js](https://nodejs.org/en/).
 
 ```sh
-npm install && npm run build
+npm install && npm serve
 ```
 
-Open the generated `dist/index.html` in a web browser.
+Navigate to `http://localhost:8080/hk-split-maker/` in your web browser
 
 ![LiveSplit Screenshot of 112% APB Splits](./doc/img/112-apb.lss.PNG)
 ![LiveSplit Screenshot of 112% APB Splits, scrolled to the end](./doc/img/112-apb-end.lss.PNG)
