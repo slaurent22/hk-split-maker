@@ -11,6 +11,10 @@ interface SplitDefinition {
     id: string;
     name: string;
 }
+interface IconDefinition {
+    imageId: string;
+    file: string;
+}
 
 function getName(description: string) {
     return description;
@@ -45,7 +49,14 @@ export function parseSplitsDefinitions(): Map<string, SplitDefinition> {
     return definitions;
 }
 
-export async function getIconData(): Promise<Map<string, string>> {
+export async function getIconLocations(): Promise<Map<string, IconDefinition>> {
     const { default: icons, } = await import("../asset/icons.json");
+    const result = new Map<string, IconDefinition>();
+    Object.keys(icons).forEach(key => result.set(key, icons[key]));
+    return result;
+}
+
+export async function getIconData(name: string): Promise<Map<string, string>> {
+    const { default: icons, } = await import(`../asset/${name}-icons.json`) as Record<string, string>;
     return new Map(Object.entries(icons));
 }

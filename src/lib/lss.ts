@@ -1,5 +1,5 @@
 import xml from "../external-lib/xml.js";
-import { getIconData, parseSplitsDefinitions } from "./splits";
+import { getIconData, getIconLocations, parseSplitsDefinitions } from "./splits";
 
 export interface Config {
     splitIds: Array<string>;
@@ -86,15 +86,36 @@ export async function createSplitsXml(config: Config): Promise<string> {
     } = config;
 
     const splitDefinitions = parseSplitsDefinitions();
-    const icons = await getIconData();
+    const iconLocations = await getIconLocations();
+    const iconFiles = new Set<string>();
+    const iconData = new Map<string, string>();
+
+    splitIds.forEach(splitId => {
+        const file = iconLocations.get(splitId)?.file;
+        if (file) {
+            iconFiles.add(file);
+        }
+    });
+    const iconLookups = await Promise.all(
+        // Load all required files
+        Array.from(iconFiles).map(file => getIconData(file))
+    );
+    iconLookups.forEach(icons => {
+        // no Object.assign for Maps
+        icons.forEach((value, key) => iconData.set(key, value));
+    });
 
     const segments = splitIds.map(splitId => {
         const splitDefinition = splitDefinitions.get(splitId);
         if (!splitDefinition) {
             throw new Error(`Failed to find a definition for split id ${splitId}`);
         }
-        const iconData = icons.get(splitId);
-        return getSegmentNode(splitDefinition.name, iconData);
+        const iconInfo = iconLocations.get(splitId);
+        let icon = "";
+        if (iconInfo) {
+            icon = iconData.get(iconInfo.imageId) || "";
+        }
+        return getSegmentNode(splitDefinition.name, icon);
     });
 
     if (!endTriggeringAutosplit) {
@@ -123,4 +144,5 @@ export async function createSplitsXml(config: Config): Promise<string> {
         declaration: true,
         indent: "  ",
     });
+
 }
