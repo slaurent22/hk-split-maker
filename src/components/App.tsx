@@ -26,8 +26,19 @@ const sampleConfig = {
     },
 };
 
-
-export default class App extends Component {
+type AppProps = Record<string, never>;
+interface AppState {
+    configInput: string;
+    splitOutput: string;
+}
+export default class App extends Component<AppProps, AppState> {
+    constructor(props: AppProps) {
+        super(props);
+        this.state = {
+            configInput: JSON.stringify(sampleConfig, null, 4),
+            splitOutput: "",
+        };
+    }
     public render(): ReactNode {
         return (
             <div className="App">
@@ -38,7 +49,8 @@ export default class App extends Component {
                         id="split-config-input"
                         rows={TEXTAREA_ROWS}
                         cols={TEXTAREA_COLS}
-                        defaultValue={JSON.stringify(sampleConfig, null, 4)}
+                        defaultValue={this.state.configInput}
+                        onChange={this.onConfigInputChange.bind(this)}
                     ></textarea>
                     <br></br>
                     <input id="submit-button" type="submit" value="Submit"/>
@@ -55,18 +67,28 @@ export default class App extends Component {
                         id="split-result"
                         rows={TEXTAREA_ROWS}
                         cols={TEXTAREA_COLS}
+                        defaultValue={this.state.splitOutput}
                     ></textarea>
                 </div>
             </div>
         );
     }
 
-    protected async onSubmit(event: FormEvent<HTMLFormElement>): Promise<void> {
+    private onConfigInputChange(event: React.ChangeEvent<HTMLTextAreaElement>) {
+        this.setState({
+            configInput: event.target.value,
+        });
+    }
+
+    private parseConfigInput() {
+        return JSON.parse(this.state.configInput) as Config;
+    }
+
+    private async onSubmit(event: FormEvent<HTMLFormElement>): Promise<void> {
         event.preventDefault();
-        const inputElement = document.getElementById("split-config-input") as HTMLTextAreaElement;
         let configObject;
         try {
-            configObject = JSON.parse(inputElement.value) as unknown;
+            configObject = this.parseConfigInput();
         }
         catch {
             alert("Failed to parse config as JSON");
@@ -79,7 +101,7 @@ export default class App extends Component {
         submitButton.disabled = true;
         try {
             // todo: runtime schema validation
-            output = await createSplitsXml(configObject as Config);
+            output = await createSplitsXml(configObject);
         }
         catch (e) {
             console.error(e);
@@ -90,22 +112,21 @@ export default class App extends Component {
             submitButton.disabled = false;
         }
 
-        const outputElement = document.getElementById("split-result") as HTMLTextAreaElement;
-        outputElement.value = output;
+        this.setState({
+            splitOutput: output,
+        });
     }
 
-    protected onDownload(): void {
-        const outputElement = document.getElementById("split-result") as HTMLTextAreaElement;
-        const output = outputElement.value;
+    private onDownload(): void {
+        const output = this.state.splitOutput;
         const outBlob = new Blob([output]);
 
         // Guess a good file name.
         // Can be inaccurate if a new config has been entered but not processed yet.
-        const inputElement = document.getElementById("split-config-input") as HTMLTextAreaElement;
         let splitName = "";
         let configObject;
         try {
-            configObject = JSON.parse(inputElement.value) as Config;
+            configObject = this.parseConfigInput();
             splitName = configObject?.categoryName || "splits";
             // Make file name compatible:
             splitName = splitName
