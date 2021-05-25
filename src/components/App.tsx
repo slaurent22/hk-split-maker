@@ -3,9 +3,8 @@ import React, { Component } from "react";
 import { saveAs } from "file-saver";
 import type { Config } from "../lib/lss";
 import { createSplitsXml } from "../lib/lss";
-
-const TEXTAREA_ROWS = 22;
-const TEXTAREA_COLS = 80;
+import SplitConfigEditor from "./SplitConfigEditor";
+import SplitOutputEditor from "./SplitOutputEditor";
 
 const sampleConfig = {
     "splitIds": [
@@ -31,11 +30,12 @@ interface AppState {
     configInput: string;
     splitOutput: string;
 }
+const defaultValue = JSON.stringify(sampleConfig, null, 4);
 export default class App extends Component<AppProps, AppState> {
     constructor(props: AppProps) {
         super(props);
         this.state = {
-            configInput: JSON.stringify(sampleConfig, null, 4),
+            configInput: defaultValue,
             splitOutput: "",
         };
     }
@@ -45,13 +45,10 @@ export default class App extends Component<AppProps, AppState> {
                 <h1>Hollow Knight Split Maker</h1>
                 <form onSubmit={this.onSubmit.bind(this)}>
                     <h2>Input config JSON</h2>
-                    <textarea
-                        id="split-config-input"
-                        rows={TEXTAREA_ROWS}
-                        cols={TEXTAREA_COLS}
-                        defaultValue={this.state.configInput}
+                    <SplitConfigEditor
+                        defaultValue={defaultValue}
                         onChange={this.onConfigInputChange.bind(this)}
-                    ></textarea>
+                    />
                     <br></br>
                     <input id="submit-button" type="submit" value="Submit"/>
                 </form>
@@ -61,20 +58,17 @@ export default class App extends Component<AppProps, AppState> {
                         id="download-button"
                         onClick={this.onDownload.bind(this)}
                     >💾 Download</button>
-                    <textarea
-                        id="split-result"
-                        rows={TEXTAREA_ROWS}
-                        cols={TEXTAREA_COLS}
+                    <SplitOutputEditor
                         defaultValue={this.state.splitOutput}
-                    ></textarea>
+                    />
                 </div>
             </div>
         );
     }
 
-    private onConfigInputChange(event: React.ChangeEvent<HTMLTextAreaElement>) {
+    private onConfigInputChange(value: string|undefined) {
         this.setState({
-            configInput: event.target.value,
+            configInput: value ?? "",
         });
     }
 
