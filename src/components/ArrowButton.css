@@ -4,7 +4,8 @@ button.arrow-button {
     font-weight: bold;
     font-variant: small-caps;
     font-size: 20px;
-    border: none;
+    border: 1px solid white;
+    border-radius: 3px;
     cursor: pointer;
     display: flex;
     align-items: center;
@@ -22,6 +23,7 @@ button.arrow-button .buttonText {
 }
 button.arrow-button[disabled] {
     color: grey;
+    border-color: grey;
     cursor: default;
 }
 button.arrow-button[disabled] .arrow {

@@ -60,3 +60,10 @@ a {
         margin: 0;
     }
 }
+#submit-button {
+    margin-left: auto;
+    margin-right: 0;
+}
+#download-button {
+    margin-left: 0;
+}
