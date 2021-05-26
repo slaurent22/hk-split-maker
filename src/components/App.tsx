@@ -42,7 +42,7 @@ export default class App extends Component<AppProps, AppState> {
     }
     public render(): ReactNode {
         return (
-            <div className="App">
+            <div className="app">
                 <h1>
                     <img
                         id="logo"
@@ -82,24 +82,30 @@ export default class App extends Component<AppProps, AppState> {
                         Splits ➡ From File
                     </li>
                 </ol>
-                <h2>Input config JSON</h2>
-                <form onSubmit={this.onSubmit.bind(this)}>
-                    <SplitConfigEditor
-                        defaultValue={defaultValue}
-                        onChange={this.onConfigInputChange.bind(this)}
-                    />
-                    <br></br>
-                    <input id="submit-button" type="submit" value="Submit"/>
-                </form>
-                <h2>Output Splits File</h2>
-                <div className="output-container">
-                    <button
-                        id="download-button"
-                        onClick={this.onDownload.bind(this)}
-                    >💾 Download</button>
-                    <SplitOutputEditor
-                        defaultValue={this.state.splitOutput}
-                    />
+                <div id="main">
+                    <div id="left" className="side">
+                        <h2>Input config JSON</h2>
+                        <input id="submit-button" type="submit" value="Submit"/>
+                        <form onSubmit={this.onSubmit.bind(this)}>
+                            <SplitConfigEditor
+                                defaultValue={defaultValue}
+                                onChange={this.onConfigInputChange.bind(this)}
+                            />
+                            <br></br>
+                        </form>
+                    </div>
+                    <div id="right" className="side">
+                        <h2>Output Splits File</h2>
+                        <div className="output-container">
+                            <button
+                                id="download-button"
+                                onClick={this.onDownload.bind(this)}
+                            >💾 Download</button>
+                            <SplitOutputEditor
+                                defaultValue={this.state.splitOutput}
+                            />
+                        </div>
+                    </div>
                 </div>
             </div>
         );
