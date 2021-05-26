@@ -5,6 +5,7 @@
 
 const path = require("path");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
+const MonacoWebpackPlugin = require("monaco-editor-webpack-plugin");
 
 module.exports = {
     entry: {
@@ -32,6 +33,9 @@ module.exports = {
             {
                 test: /\.(png|svg|jpg|jpeg|gif)$/i,
                 type: "asset/resource",
+            }, {
+                test: /\.ttf$/,
+                use: ["file-loader"],
             }
         ],
     },
@@ -39,7 +43,8 @@ module.exports = {
         new HtmlWebpackPlugin({
             title: "HK Split Maker",
             favicon: "./src/asset/image/favicon.png",
-        })
+        }),
+        new MonacoWebpackPlugin()
     ],
     resolve: {
         extensions: [".tsx", ".ts", ".js"],

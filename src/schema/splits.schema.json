@@ -1,0 +1,95 @@
+{
+    "$schema": "https://json-schema.org/draft/2020-12/schema",
+    "$id": "https://slaurbot.herokuapp.com/hk-split-maker/splits.schema.json",
+    "title": "HK Splits",
+    "description": "A Hollow Knight LiveSplit Configuration",
+    "type": "object",
+    "properties": {
+        "ordered": {
+            "description": "Ordered splits improve performance and are required for certain splits (e.g. KingsPass).",
+            "type": "boolean"
+        },
+        "endTriggeringAutosplit": {
+            "description": "Whether to end time at the last autosplit. Set this to false for full-game runs, where time ends on a final cutscene.",
+            "type": "boolean"
+        },
+        "categoryName": {
+            "description": "The category name on the associated speedrun.com board.",
+            "type": "string"
+        },
+        "gameName": {
+            "description": "The game name on the associated speedrun.com board.",
+            "enum": [
+                "Hollow Knight",
+                "Hollow Knight Category Extensions",
+                "Hollow Knight Mods"
+            ]
+        },
+        "variables": {
+            "description": "Additional optional info to describe your run",
+            "type": "object",
+            "properties": {
+                "platform": {
+                    "description": "Where you run the game.",
+                    "enum": [
+                        "PC",
+                        "PlayStation 4",
+                        "PlayStation 5",
+                        "Switch",
+                        "Xbox One",
+                        "Xbox Series S",
+                        "Xbox Series X"
+                    ]
+                },
+                "patch": {
+                    "description": "The version/build number of the version of the game you're playing.",
+                    "enum": [
+                        "1.0.0.5",
+                        "1.0.0.6",
+                        "1.0.0.7",
+                        "1.0.1.1",
+                        "1.0.1.4",
+                        "1.0.2.8",
+                        "1.0.3.1",
+                        "1.0.3.4",
+                        "1.0.3.7",
+                        "1.1.1.4",
+                        "1.1.1.6",
+                        "1.1.1.7",
+                        "1.1.1.8",
+                        "1.2.1.0",
+                        "1.2.1.1",
+                        "1.2.1.4",
+                        "1.2.2.1",
+                        "1.3.1.5",
+                        "1.4.1.4",
+                        "1.4.2.4",
+                        "1.4.3.2"
+                    ]
+                },
+                "glitch": {
+                    "description": "The glitch ruleset",
+                    "enum": [
+                        "No Major Glitches",
+                        "Current Patch NMG",
+                        "No Main Menu Storage",
+                        "All Glitches"
+                    ]
+                }
+            }
+        },
+        "splitIds": {
+            "type": "array",
+            "items": {
+                "type": "string"
+            }
+        }
+    },
+    "required": [
+        "ordered",
+        "endTriggeringAutosplit",
+        "categoryName",
+        "gameName",
+        "splitIds"
+    ]
+}
