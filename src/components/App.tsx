@@ -82,24 +82,32 @@ export default class App extends Component<AppProps, AppState> {
                         Splits ➡ From File
                     </li>
                 </ol>
-                <h2>Input config JSON</h2>
-                <form onSubmit={this.onSubmit.bind(this)}>
-                    <SplitConfigEditor
-                        defaultValue={defaultValue}
-                        onChange={this.onConfigInputChange.bind(this)}
-                    />
-                    <br></br>
-                    <input id="submit-button" type="submit" value="Submit"/>
-                </form>
-                <h2>Output Splits File</h2>
-                <div className="output-container">
-                    <button
-                        id="download-button"
-                        onClick={this.onDownload.bind(this)}
-                    >💾 Download</button>
-                    <SplitOutputEditor
-                        defaultValue={this.state.splitOutput}
-                    />
+                <div className="input-output">
+                    <div className="editor-section">
+                        <h2>Input config JSON</h2>
+                        <form onSubmit={this.onSubmit.bind(this)}>
+                            <SplitConfigEditor
+                                defaultValue={defaultValue}
+                                onChange={this.onConfigInputChange.bind(this)}
+                            />
+                            <br></br>
+                            <input id="submit-button" type="submit" value="Submit"/>
+                        </form>
+                    </div>
+                    <div className="separator"></div>
+                    <div className="output-section">
+                        <h2>Output Splits File</h2>
+                        <div className="output-container">
+                            <SplitOutputEditor
+                                defaultValue={this.state.splitOutput}
+                            />
+                            <br></br>
+                            <button
+                                id="download-button"
+                                onClick={this.onDownload.bind(this)}
+                            >💾 Download</button>
+                        </div>
+                    </div>
                 </div>
             </div>
         );
