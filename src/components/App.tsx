@@ -82,24 +82,31 @@ export default class App extends Component<AppProps, AppState> {
                         Splits ➡ From File
                     </li>
                 </ol>
-                <h2>Input config JSON</h2>
-                <form onSubmit={this.onSubmit.bind(this)}>
-                    <SplitConfigEditor
-                        defaultValue={defaultValue}
-                        onChange={this.onConfigInputChange.bind(this)}
-                    />
-                    <br></br>
-                    <input id="submit-button" type="submit" value="Submit"/>
-                </form>
-                <h2>Output Splits File</h2>
-                <div className="output-container">
-                    <button
-                        id="download-button"
-                        onClick={this.onDownload.bind(this)}
-                    >💾 Download</button>
-                    <SplitOutputEditor
-                        defaultValue={this.state.splitOutput}
-                    />
+                    <div class="input-output">
+                        <div class="editor-section">
+                            <h2>Input config JSON</h2>
+                            <form onSubmit={this.onSubmit.bind(this)}>
+                                <SplitConfigEditor
+                                    defaultValue={defaultValue}
+                                    onChange={this.onConfigInputChange.bind(this)}
+                                />
+                                <br></br>
+                                <input id="submit-button" type="submit" value="Submit"/>
+                            </form>
+                        </div>
+                        <div class="separator"></div>
+                        <div class="output-section">
+                            <h2>Output Splits File</h2>
+                            <div className="output-container">
+                                <button
+                                    id="download-button"
+                                    onClick={this.onDownload.bind(this)}
+                                >💾 Download</button>
+                                <SplitOutputEditor
+                                    defaultValue={this.state.splitOutput}
+                                />
+                        </div>
+                    </div>
                 </div>
             </div>
         );
