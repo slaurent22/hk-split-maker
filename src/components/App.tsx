@@ -43,8 +43,16 @@ export default class App extends Component<AppProps, AppState> {
     public render(): ReactNode {
         return (
             <div className="App">
-                <img src={logo}></img>
-                <h1>Hollow Knight Split Maker</h1>
+                <h1>
+                    <img
+                        id="logo"
+                        src={logo}
+                        alt="HK Split Maker logo"
+                        width={45}
+                        height={42}
+                    ></img>
+                    {" Hollow Knight Split Maker"}
+                </h1>
                 <h2>Instructions</h2>
                 <ol>
                     <li>
