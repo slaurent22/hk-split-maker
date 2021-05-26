@@ -1,3 +1,14 @@
+body {
+    background-color: #2f3136;
+    color: rgb(220, 221, 222);
+}
+h1, h2 {
+    color: white;
+    font-variant: small-caps;
+}
+a {
+    color: #00b0f4;
+}
 .output-container {
     display: table-caption;
 }
@@ -6,6 +17,11 @@
     width: 600px;
     height: 400px;
     border: 1px solid #ccc;
+}
+.hk-split-maker-monaco-editor .monaco-editor,
+.hk-split-maker-monaco-editor .monaco-editor .margin,
+.hk-split-maker-monaco-editor .monaco-editor-background {
+    background-color: #2f3136;
 }
 
 #logo {
