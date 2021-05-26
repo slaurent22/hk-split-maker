@@ -6,7 +6,7 @@
   "scripts": {
     "build-prod": "rm -rf dist/ && webpack --mode production",
     "serve": "webpack serve --mode development",
-    "lint": "eslint .",
+    "lint": "eslint --max-warnings 0 .",
     "lintfix": "eslint --fix .",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
