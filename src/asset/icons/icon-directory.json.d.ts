@@ -1,4 +1,4 @@
-interface IconDefinition {
+export interface IconDefinition {
     imageId: string;
     file: string;
 }

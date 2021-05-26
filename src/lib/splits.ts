@@ -1,4 +1,6 @@
 import splits from "../asset/splits.txt";
+import type { IconClass } from "./icons";
+import Icons, { getIconDirectory } from "./icons";
 
 // const SPLITS_DEFINITIONS_FILE = "./asset/splits.txt";
 const SPLITS_DEFINITIONS_REGEXP =
@@ -50,13 +52,30 @@ export function parseSplitsDefinitions(): Map<string, SplitDefinition> {
 }
 
 export async function getIconLocations(): Promise<Map<string, IconDefinition>> {
-    const { default: icons, } = await import("../asset/icons.json");
+    const iconDirectory = await getIconDirectory();
     const result = new Map<string, IconDefinition>();
-    Object.keys(icons).forEach(key => result.set(key, icons[key]));
+    Object.keys(iconDirectory).forEach(key => result.set(key, iconDirectory[key]));
     return result;
 }
 
+function assertIsIconClass(name: string): asserts name is IconClass {
+    switch (name) {
+    case "boss":
+    case "charm":
+    case "collectible":
+    case "enemy":
+    case "event":
+    case "item":
+    case "location":
+    case "skill":
+        return;
+    default:
+        throw new Error(`Unknown icon class '${name}'`);
+    }
+}
+
 export async function getIconData(name: string): Promise<Map<string, string>> {
-    const { default: icons, } = await import(`../asset/${name}-icons.json`) as Record<string, string>;
+    assertIsIconClass(name);
+    const icons = await Icons[name]();
     return new Map(Object.entries(icons));
 }
