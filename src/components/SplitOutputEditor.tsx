@@ -23,6 +23,7 @@ export default class SplitOutputEditor extends Component<Props, State> {
             <div className="hk-split-maker-monaco-editor">
                 <Editor
                     defaultLanguage="xml"
+                    theme="vs-dark"
                     value={this.props.defaultValue}
                     options={({
                         minimap: {

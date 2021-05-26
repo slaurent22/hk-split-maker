@@ -43,6 +43,7 @@ export default class SplitConfigEditor extends Component<Props, State> {
                     defaultLanguage="json"
                     defaultValue={this.state.value}
                     onChange={this.props.onChange}
+                    theme="vs-dark"
                     options={({
                         minimap: {
                             enabled: false,
