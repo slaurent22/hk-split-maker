@@ -1,5 +1,9 @@
-.output-container {
-    display: table-caption;
+#logo {
+    vertical-align: top;
+}
+
+.input-Output {
+	display: inline-flex;
 }
 
 .hk-split-maker-monaco-editor {
@@ -8,6 +12,10 @@
     border: 1px solid #ccc;
 }
 
-#logo {
-    vertical-align: top;
+.separator {
+	width:20px;
+}
+
+.output-container {
+    display: table-caption;
 }
