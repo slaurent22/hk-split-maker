@@ -1,9 +1,10 @@
-import type { FormEvent, ReactNode } from "react";
+import type { ReactNode } from "react";
 import React, { Component } from "react";
 import { saveAs } from "file-saver";
 import type { Config } from "../lib/lss";
 import { createSplitsXml } from "../lib/lss";
 import logo from "../asset/image/favicon.png";
+import ArrowButton from "./ArrowButton";
 import SplitConfigEditor from "./SplitConfigEditor";
 import SplitOutputEditor from "./SplitOutputEditor";
 
@@ -85,22 +86,25 @@ export default class App extends Component<AppProps, AppState> {
                 <div id="main">
                     <div id="left" className="side">
                         <h2>Input config JSON</h2>
-                        <input id="submit-button" type="submit" value="Submit"/>
-                        <form onSubmit={this.onSubmit.bind(this)}>
+                        <div className="output-container">
+                            <ArrowButton
+                                text="Submit"
+                                onClick={this.onSubmit.bind(this)}
+                            />
                             <SplitConfigEditor
                                 defaultValue={defaultValue}
                                 onChange={this.onConfigInputChange.bind(this)}
                             />
                             <br></br>
-                        </form>
+                        </div>
                     </div>
                     <div id="right" className="side">
                         <h2>Output Splits File</h2>
                         <div className="output-container">
-                            <button
-                                id="download-button"
+                            <ArrowButton
+                                text="Download"
                                 onClick={this.onDownload.bind(this)}
-                            >💾 Download</button>
+                            />
                             <SplitOutputEditor
                                 defaultValue={this.state.splitOutput}
                             />
@@ -121,8 +125,7 @@ export default class App extends Component<AppProps, AppState> {
         return JSON.parse(this.state.configInput) as Config;
     }
 
-    private async onSubmit(event: FormEvent<HTMLFormElement>): Promise<void> {
-        event.preventDefault();
+    private async onSubmit(): Promise<void> {
         let configObject;
         try {
             configObject = this.parseConfigInput();
@@ -134,8 +137,6 @@ export default class App extends Component<AppProps, AppState> {
         console.log(configObject);
         let output = "";
 
-        const submitButton = document.getElementById("submit-button") as HTMLInputElement;
-        submitButton.disabled = true;
         try {
             // todo: runtime schema validation
             output = await createSplitsXml(configObject);
@@ -144,9 +145,6 @@ export default class App extends Component<AppProps, AppState> {
             console.error(e);
             alert("Failed to create splits. The error has been logged to console.error");
             return;
-        }
-        finally {
-            submitButton.disabled = false;
         }
 
         this.setState({

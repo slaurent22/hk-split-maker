@@ -1,0 +1,22 @@
+button.arrow-button {
+    background: none;
+    color: white;
+    font-weight: bold;
+    font-variant: small-caps;
+    font-size: 20px;
+    border: none;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    font-family: serif;
+    margin: 8px;
+}
+button.arrow-button .arrow-right {
+    transform: rotate(180deg);
+}
+button.arrow-button .arrow {
+    height: 24px;
+}
+button.arrow-button .buttonText {
+    margin: 0 8px;
+}
