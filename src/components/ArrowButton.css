@@ -20,3 +20,10 @@ button.arrow-button .arrow {
 button.arrow-button .buttonText {
     margin: 0 8px;
 }
+button.arrow-button[disabled] {
+    color: grey;
+    cursor: default;
+}
+button.arrow-button[disabled] .arrow {
+    filter: brightness(45%);
+}

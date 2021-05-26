@@ -89,6 +89,7 @@ export default class App extends Component<AppProps, AppState> {
                         <div className="output-container">
                             <ArrowButton
                                 text="Submit"
+                                id="submit-button"
                                 onClick={this.onSubmit.bind(this)}
                             />
                             <SplitConfigEditor
@@ -102,6 +103,7 @@ export default class App extends Component<AppProps, AppState> {
                         <h2>Output Splits File</h2>
                         <div className="output-container">
                             <ArrowButton
+                                id="download-button"
                                 text="Download"
                                 onClick={this.onDownload.bind(this)}
                             />
@@ -137,6 +139,9 @@ export default class App extends Component<AppProps, AppState> {
         console.log(configObject);
         let output = "";
 
+        const submitButton = document.getElementById("submit-button") as HTMLInputElement;
+        submitButton.disabled = true;
+
         try {
             // todo: runtime schema validation
             output = await createSplitsXml(configObject);
@@ -145,6 +150,9 @@ export default class App extends Component<AppProps, AppState> {
             console.error(e);
             alert("Failed to create splits. The error has been logged to console.error");
             return;
+        }
+        finally {
+            submitButton.disabled = false;
         }
 
         this.setState({

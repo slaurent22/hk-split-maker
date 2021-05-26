@@ -3,11 +3,13 @@ import arrow from "../asset/image/arrow.png";
 import "./ArrowButton.css";
 
 interface Props {
+    id: string;
     onClick: () => void;
     text: string;
 }
 
 const ArrowButton: React.FC<Props> = ({
+    id,
     onClick,
     text,
 }) => {
@@ -15,6 +17,7 @@ const ArrowButton: React.FC<Props> = ({
         <button
             className="arrow-button"
             onClick={onClick}
+            id={id}
         >
             <img
                 src={arrow}
