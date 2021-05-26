@@ -18,9 +18,7 @@ a {
 }
 #input-output {
     display: flex;
-}
-#input-output .side {
-    width: calc(50% - 20px);
+    justify-content: space-evenly;
 }
 #editor-section {
     margin-right: 20px;
@@ -55,4 +53,11 @@ a {
     #editor-section, #output-section {
         margin: 0;
     }
+}
+#submit-button {
+    margin-left: auto;
+    margin-right: 0;
+}
+#download-button {
+    margin-left: 0;
 }

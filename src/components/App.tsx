@@ -1,9 +1,10 @@
-import type { FormEvent, ReactNode } from "react";
+import type { ReactNode } from "react";
 import React, { Component } from "react";
 import { saveAs } from "file-saver";
 import type { Config } from "../lib/lss";
 import { createSplitsXml } from "../lib/lss";
 import logo from "../asset/image/favicon.png";
+import ArrowButton from "./ArrowButton";
 import SplitConfigEditor from "./SplitConfigEditor";
 import SplitOutputEditor from "./SplitOutputEditor";
 
@@ -75,7 +76,7 @@ export default class App extends Component<AppProps, AppState> {
                         LiveSplit later if needed!
                     </li>
                     <li>
-                        Click "Submit". The button will temporarily disable
+                        Click "Generate". The button will temporarily disable
                         while in progress.
                     </li>
                     <li>
@@ -87,21 +88,26 @@ export default class App extends Component<AppProps, AppState> {
                 <div id="input-output">
                     <div id="editor-section" className="side">
                         <h2>Input config JSON</h2>
-                        <form onSubmit={this.onSubmit.bind(this)}>
-                            <input id="submit-button" type="submit" value="Submit"/>
+                        <div id="editor-section">
+                            <ArrowButton
+                                text="Generate"
+                                id="submit-button"
+                                onClick={this.onSubmit.bind(this)}
+                            />
                             <SplitConfigEditor
                                 defaultValue={defaultValue}
                                 onChange={this.onConfigInputChange.bind(this)}
                             />
-                        </form>
+                        </div>
                     </div>
                     <div id="output-section" className="side">
                         <h2>Output Splits File</h2>
                         <div id="output-container">
-                            <button
+                            <ArrowButton
                                 id="download-button"
+                                text="Download"
                                 onClick={this.onDownload.bind(this)}
-                            >💾 Download</button>
+                            />
                             <SplitOutputEditor
                                 defaultValue={this.state.splitOutput}
                             />
@@ -122,8 +128,7 @@ export default class App extends Component<AppProps, AppState> {
         return JSON.parse(this.state.configInput) as Config;
     }
 
-    private async onSubmit(event: FormEvent<HTMLFormElement>): Promise<void> {
-        event.preventDefault();
+    private async onSubmit(): Promise<void> {
         let configObject;
         try {
             configObject = this.parseConfigInput();
@@ -137,6 +142,7 @@ export default class App extends Component<AppProps, AppState> {
 
         const submitButton = document.getElementById("submit-button") as HTMLInputElement;
         submitButton.disabled = true;
+
         try {
             // todo: runtime schema validation
             output = await createSplitsXml(configObject);
