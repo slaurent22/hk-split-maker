@@ -343,8 +343,6 @@
         AspidHunter,
         [Description("Aluba (Killed)"), ToolTip("Splits when killing an Aluba")]
         Aluba,
-        //[Description("Al2ba (Killed)"), ToolTip("Splits when killing two Alubas")]
-        //Al2ba,
         [Description("Husk Miner (Killed)"), ToolTip("Splits when killing a Husk Miner")]
         HuskMiner,
         [Description("Great Hopper (Killed)"), ToolTip("Splits when killing a Great Hopper")]
@@ -353,8 +351,6 @@
         GorgeousHusk,
         [Description("Menderbug (Killed)"), ToolTip("Splits when killing Menderbug")]
         MenderBug,
-        //[Description("Revek (Killed)"), ToolTip("Splits when talking to Revek after clearing all other Glade ghosts")]
-        //Revek,
         [Description("Moss Knight (Mini Boss)"), ToolTip("Splits when killing Moss Knight")]
         MossKnight,
         [Description("Shrumal Ogre (Mini Boss)"), ToolTip("Splits when killing the final Shrumal Ogre")]
