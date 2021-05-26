@@ -8,13 +8,21 @@ body {
 h1, h2 {
     color: white;
     font-variant: small-caps;
+    text-align: center;
 }
 a {
     color: #00b0f4;
 }
 
 #logo {
-    vertical-align: top;
+    height: auto;
+    width: 90%;
+    max-width: 600px;
+}
+ol {
+    max-width: 1024px;
+    margin-left: auto;
+    margin-right: auto;
 }
 #input-output {
     display: flex;

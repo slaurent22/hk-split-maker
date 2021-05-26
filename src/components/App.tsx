@@ -3,7 +3,7 @@ import React, { Component } from "react";
 import { saveAs } from "file-saver";
 import type { Config } from "../lib/lss";
 import { createSplitsXml } from "../lib/lss";
-import logo from "../asset/image/favicon.png";
+import logo from "../asset/image/logo.png";
 import ArrowButton from "./ArrowButton";
 import SplitConfigEditor from "./SplitConfigEditor";
 import SplitOutputEditor from "./SplitOutputEditor";
@@ -50,10 +50,7 @@ export default class App extends Component<AppProps, AppState> {
                             id="logo"
                             src={logo}
                             alt="HK Split Maker logo"
-                            width={45}
-                            height={42}
                         ></img>
-                        {" Hollow Knight Split Maker"}
                     </h1>
                 </header>
                 <h2>Instructions</h2>
