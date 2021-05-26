@@ -56,9 +56,7 @@ export default class App extends Component<AppProps, AppState> {
                     <input id="submit-button" type="submit" value="Submit"/>
                 </form>
                 <h2>Output Splits File</h2>
-                <div style={({
-                    display: "table-caption",
-                })}>
+                <div className="output-container">
                     <button
                         id="download-button"
                         onClick={this.onDownload.bind(this)}
