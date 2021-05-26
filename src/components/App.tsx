@@ -3,6 +3,7 @@ import React, { Component } from "react";
 import { saveAs } from "file-saver";
 import type { Config } from "../lib/lss";
 import { createSplitsXml } from "../lib/lss";
+import logo from "../asset/image/favicon.png";
 import SplitConfigEditor from "./SplitConfigEditor";
 import SplitOutputEditor from "./SplitOutputEditor";
 
@@ -42,6 +43,7 @@ export default class App extends Component<AppProps, AppState> {
     public render(): ReactNode {
         return (
             <div className="App">
+                <img src={logo}></img>
                 <h1>Hollow Knight Split Maker</h1>
                 <h2>Instructions</h2>
                 <ol>

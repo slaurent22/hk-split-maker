@@ -1,3 +1,4 @@
+![](src/asset/image/favicon.png)
 # hk split maker
 
 Write a small configuration for Hollow Knight splits and a produce a full LiveSplit file. List your triggers once, and get both the autosplitter settings and the segment list from that list!
