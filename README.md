@@ -1,5 +1,4 @@
-![](src/asset/image/favicon.png)
-# hk split maker
+# ![](src/asset/image/favicon-tiny.png) HK Split Maker
 
 Write a small configuration for Hollow Knight splits and a produce a full LiveSplit file. List your triggers once, and get both the autosplitter settings and the segment list from that list!
 
@@ -8,10 +7,7 @@ Write a small configuration for Hollow Knight splits and a produce a full LiveSp
 
 ## Use
 
-Use the [web UI](https://slaurbot.herokuapp.com/hk-split-maker/)!
-
-![LiveSplit Screenshot of 112% APB Splits](./doc/img/112-apb.lss.PNG)
-![LiveSplit Screenshot of 112% APB Splits, scrolled to the end](./doc/img/112-apb-end.lss.PNG)
+Use the [HK Split Maker web UI](https://hksplitmaker.com/)!
 
 ## Development
 
@@ -21,7 +17,7 @@ For development or local use, clone the repository and install/build manually vi
 npm install && npm run serve
 ```
 
-Navigate to `http://localhost:8080/hk-split-maker/` in your web browser.
+Navigate to `http://localhost:8080/` in your web browser.
 
 ## Future Enhancements
 
