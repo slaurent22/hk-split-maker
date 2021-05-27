@@ -1,7 +1,7 @@
 import splits from "../asset/splits.txt";
+import type { IconDefinition } from "../asset/icons/icon-directory.json";
 import type { IconClass } from "./icons";
 import Icons, { getIconDirectory } from "./icons";
-import type { IconDefinition } from "../asset/icons/icon-directory.json";
 
 // const SPLITS_DEFINITIONS_FILE = "./asset/splits.txt";
 const SPLITS_DEFINITIONS_REGEXP =

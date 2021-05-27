@@ -1,10 +1,13 @@
 import type { ReactNode } from "react";
 import React, { Component } from "react";
 import { saveAs } from "file-saver";
+import { getCategory, getCategoryDirectory } from "../lib/categories";
+import type { CategoryDefinition } from "../asset/categories/category-directory.json";
 import type { Config } from "../lib/lss";
 import { createSplitsXml } from "../lib/lss";
 import logo from "../asset/image/logo.png";
 import ArrowButton from "./ArrowButton";
+import CategorySelect from "./CategorySelect";
 import SplitConfigEditor from "./SplitConfigEditor";
 import SplitOutputEditor from "./SplitOutputEditor";
 
@@ -31,15 +34,23 @@ type AppProps = Record<string, never>;
 interface AppState {
     configInput: string;
     splitOutput: string;
+    categories?: Record<string, Array<CategoryDefinition>>;
 }
 const defaultValue = JSON.stringify(sampleConfig, null, 4);
 export default class App extends Component<AppProps, AppState> {
+
+    private inputEditor: React.MutableRefObject<SplitConfigEditor|null>;
+
     constructor(props: AppProps) {
         super(props);
         this.state = {
             configInput: defaultValue,
             splitOutput: "",
         };
+        this.inputEditor = React.createRef();
+    }
+    public async componentDidMount(): Promise<void> {
+        this.setState({ categories: await getCategoryDirectory(), });
     }
     public render(): ReactNode {
         return (
@@ -85,15 +96,29 @@ export default class App extends Component<AppProps, AppState> {
                 <div id="input-output">
                     <div id="editor-section" className="side">
                         <h2>Input config JSON</h2>
-                        <div id="editor-section">
-                            <ArrowButton
-                                text="Generate"
-                                id="submit-button"
-                                onClick={this.onSubmit.bind(this)}
-                            />
+                        <div className="output-container">
+                            <div className="row">
+                                {/* Hacky, but useful: Only render the drop down once we have data.
+                                    Otherwise, the initial defaultValue will be empty, and never uptdated,
+                                    so the inital value will always be the first in the list, not Aluba.
+                                    Setting value instead of defaultValue leads to the change event
+                                    not triggering when the initial value is re-selected. */}
+                                {this.state.categories && <CategorySelect
+                                    id="categories"
+                                    onChange={this.onCategorySelect.bind(this)}
+                                    data={this.state.categories}
+                                    initial="aluba"
+                                />}
+                                <ArrowButton
+                                    text="Generate"
+                                    id="submit-button"
+                                    onClick={this.onSubmit.bind(this)}
+                                />
+                            </div>
                             <SplitConfigEditor
                                 defaultValue={defaultValue}
                                 onChange={this.onConfigInputChange.bind(this)}
+                                ref={this.inputEditor}
                             />
                         </div>
                     </div>
@@ -119,6 +144,13 @@ export default class App extends Component<AppProps, AppState> {
         this.setState({
             configInput: value ?? "",
         });
+    }
+
+    private async onCategorySelect() {
+        const categorySelect = document.getElementById("categories") as HTMLInputElement;
+        if (categorySelect.value && this.inputEditor.current) {
+            this.inputEditor.current.setContent(await getCategory(categorySelect.value));
+        }
     }
 
     private parseConfigInput() {

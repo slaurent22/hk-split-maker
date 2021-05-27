@@ -1,7 +1,8 @@
 import type { ReactNode } from "react";
 import React, { Component } from "react";
-import type { OnChange, Monaco } from "@monaco-editor/react";
+import type { OnChange, OnMount, Monaco } from "@monaco-editor/react";
 import Editor from "@monaco-editor/react";
+import type { editor } from "monaco-editor";
 import { Uri } from "monaco-editor";
 import SplitConfigSchema from "../schema/splits.schema.json";
 
@@ -28,12 +29,16 @@ function handleEditorWillMount(monaco: Monaco) {
 }
 
 export default class SplitConfigEditor extends Component<Props, State> {
+
+    private editorRef: React.MutableRefObject<editor.IStandaloneCodeEditor|null>;
+
     constructor(props: Props) {
         super(props);
         this.state = {
             value: props.defaultValue,
         };
         console.log(this.state);
+        this.editorRef = React.createRef();
     }
 
     public render(): ReactNode {
@@ -42,6 +47,7 @@ export default class SplitConfigEditor extends Component<Props, State> {
                 <Editor
                     defaultLanguage="json"
                     defaultValue={this.state.value}
+                    value={this.state.value}
                     onChange={this.props.onChange}
                     theme="vs-dark"
                     options={({
@@ -51,8 +57,15 @@ export default class SplitConfigEditor extends Component<Props, State> {
                     })}
                     path={modelUri.toString()}
                     beforeMount={handleEditorWillMount}
+                    onMount={this.handleMounted}
                 />
             </div>
         );
     }
+    public setContent = (value: string): void => {
+        this.editorRef.current?.setValue(value);
+    };
+    private handleMounted: OnMount = (editorInstance: editor.IStandaloneCodeEditor) => {
+        this.editorRef.current = editorInstance;
+    };
 }
