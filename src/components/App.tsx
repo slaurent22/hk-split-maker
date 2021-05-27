@@ -124,7 +124,7 @@ export default class App extends Component<AppProps, AppState> {
                     </div>
                     <div id="output-section" className="side">
                         <h2>Output Splits File</h2>
-                        <div id="output-container">
+                        <div className="output-container">
                             <ArrowButton
                                 id="download-button"
                                 text="Download"
