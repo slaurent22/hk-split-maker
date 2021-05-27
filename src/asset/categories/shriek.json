@@ -3,12 +3,16 @@
         "VengefulSpirit",
         "Greenpath",
         "MothwingCloak",
-        "Aluba"
+        "MantisClaw",
+        "HowlingWraiths",
+        "BlueLake",
+        "KingsBrand",
+        "AbyssShriek"
     ],
     "ordered": true,
     "endTriggeringAutosplit": true,
     "gameName": "Hollow Knight Category Extensions",
-    "categoryName": "Aluba%",
+    "categoryName": "Shriek%",
     "variables": {
         "platform": "PC",
         "patch": "1.4.3.2",

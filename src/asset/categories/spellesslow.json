@@ -1,0 +1,23 @@
+{
+    "splitIds": [
+        "GruzMother",
+        "Mask1",
+        "DreamNail",
+        "MantisClaw",
+        "Hegemol",
+        "BlackKnight",
+        "Lurien",
+        "CrystalHeart",
+        "Uumuu",
+        "Monomon"
+    ],
+    "ordered": true,
+    "endTriggeringAutosplit": false,
+    "gameName": "Hollow Knight Category Extensions",
+    "categoryName": "Low% Spelless",
+    "variables": {
+        "platform": "PC",
+        "patch": "1.4.3.2",
+        "glitch": "Current Patch NMG"
+    }
+}

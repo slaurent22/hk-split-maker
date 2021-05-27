@@ -1,14 +1,12 @@
 {
     "splitIds": [
         "VengefulSpirit",
-        "Greenpath",
-        "MothwingCloak",
-        "Aluba"
+        "Greenpath"
     ],
     "ordered": true,
-    "endTriggeringAutosplit": true,
+    "endTriggeringAutosplit": false,
     "gameName": "Hollow Knight Category Extensions",
-    "categoryName": "Aluba%",
+    "categoryName": "Eat Me Too",
     "variables": {
         "platform": "PC",
         "patch": "1.4.3.2",

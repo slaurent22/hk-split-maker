@@ -3,15 +3,18 @@
         "VengefulSpirit",
         "Greenpath",
         "MothwingCloak",
-        "Aluba"
+        "MantisClaw",
+        "TramPass",
+        "Hive",
+        "Hiveblood"
     ],
     "ordered": true,
     "endTriggeringAutosplit": true,
     "gameName": "Hollow Knight Category Extensions",
-    "categoryName": "Aluba%",
+    "categoryName": "Hiveblood%",
     "variables": {
         "platform": "PC",
         "patch": "1.4.3.2",
-        "glitch": "Current Patch NMG"
+        "glitch": "No Major Glitches"
     }
 }

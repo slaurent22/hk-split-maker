@@ -1,0 +1,39 @@
+{
+    "splitIds": [
+        "VengefulSpirit",
+        "Greenpath",
+        "MothwingCloak",
+        "NotchShrumalOgres",
+        "MantisClaw",
+        "BlueLake",
+        "DreamNail",
+        "NightmareLantern",
+        "GorgeousHusk",
+        "Lemm2",
+        "LumaflyLantern",
+        "Grimmchild",
+        "SlyKey",
+        "CrystalGuardian1",
+        "CrystalHeart",
+        "ElegantKey",
+        "ShadeSoul",
+        "QueensStationStation",
+        "Grimmchild2",
+        "KingdomsEdge",
+        "TroupeMasterGrimm",
+        "DeepnestSpa",
+        "BrummFlame",
+        "TramPass",
+        "Hive",
+        "NightmareKingGrimm"
+    ],
+    "ordered": true,
+    "endTriggeringAutosplit": true,
+    "gameName": "Hollow Knight Category Extensions",
+    "categoryName": "NKG%",
+    "variables": {
+        "platform": "PC",
+        "patch": "1.4.3.2",
+        "glitch": "No Major Glitches"
+    }
+}

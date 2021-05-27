@@ -1,0 +1,27 @@
+{
+    "splitIds": [
+        "VengefulSpirit",
+        "Greenpath",
+        "MothwingCloak",
+        "MantisClaw",
+        "BlueLake",
+        "DreamNail",
+        "BlackKnight",
+        "LumaflyLantern",
+        "CrystalHeart",
+        "Uumuu",
+        "SporeShroom",
+        "Hegemol",
+        "MrMushroom1",
+        "MrMushroom7"
+    ],
+    "ordered": true,
+    "endTriggeringAutosplit": false,
+    "gameName": "Hollow Knight Category Extensions",
+    "categoryName": "Mr. Mushroom Ending",
+    "variables": {
+        "platform": "PC",
+        "patch": "1.4.3.2",
+        "glitch": "No Major Glitches"
+    }
+}

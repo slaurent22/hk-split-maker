@@ -1,0 +1,25 @@
+{
+    "splitIds": [
+        "VengefulSpirit",
+        "MothwingCloak",
+        "MantisClaw",
+        "SporeShroom",
+        "Weaversong",
+        "GlowingWomb",
+        "BlueLake",
+        "DreamNail",
+        "Grimmchild",
+        "Lemm2",
+        "KingsStationStation",
+        "DreamGate"
+    ],
+    "ordered": true,
+    "endTriggeringAutosplit": false,
+    "gameName": "Hollow Knight Category Extensions",
+    "categoryName": "Marissa Audience",
+    "variables": {
+        "platform": "PC",
+        "patch": "1.4.3.2",
+        "glitch": "Current Patch NMG"
+    }
+}

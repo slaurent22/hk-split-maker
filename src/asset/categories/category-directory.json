@@ -11,8 +11,152 @@
     ],
     "Hollow Knight Category Extensions": [
         {
+            "fileName": "0geo",
+            "displayName": "0 Geo"
+        },
+        {
+            "fileName": "3VF",
+            "displayName": "3 Vessel Fragments"
+        },
+        {
+            "fileName": "4MS",
+            "displayName": "4 Mask Shards"
+        },
+        {
+            "fileName": "4ms0geo",
+            "displayName": "4ms 0 Geo"
+        },
+        {
+            "fileName": "al2ba",
+            "displayName": "Al2ba%"
+        },
+        {
+            "fileName": "all_skulls",
+            "displayName": "16MS (1.2.2.1)"
+        },
+        {
+            "fileName": "allcharmnotches",
+            "displayName": "All Charm Notches"
+        },
+        {
+            "fileName": "ACN",
+            "displayName": "All Charm Notches (1.2.2.1)"
+        },
+        {
+            "fileName": "allstagstations",
+            "displayName": "All Stag Stations"
+        },
+        {
+            "fileName": "allunbreakablecharms",
+            "displayName": "All Unbreakable Charms"
+        },
+        {
+            "fileName": "allunbreakablecharms_steel_soul",
+            "displayName": "All Unbreakable Charms (Steel Soul)"
+        },
+        {
+            "fileName": "allwhisperingroots",
+            "displayName": "All Whispering Roots"
+        },
+        {
             "fileName": "aluba",
             "displayName": "Aluba%"
+        },
+        {
+            "fileName": "eatmetoo",
+            "displayName": "Eat Me Too"
+        },
+        {
+            "fileName": "elderbug",
+            "displayName": "Elderbug%"
+        },
+        {
+            "fileName": "enragedguardian",
+            "displayName": "Enraged Guardian%"
+        },
+        {
+            "fileName": "fool",
+            "displayName": "Fool% (1.2.2.1)"
+        },
+        {
+            "fileName": "gpz",
+            "displayName": "GPZ%"
+        },
+        {
+            "fileName": "greathopper",
+            "displayName": "Great Hopper%"
+        },
+        {
+            "fileName": "hiveblood",
+            "displayName": "Hiveblood%"
+        },
+        {
+            "fileName": "LBC",
+            "displayName": "Lifeblood Core%"
+        },
+        {
+            "fileName": "lowAB",
+            "displayName": "Low% All Bindings"
+        },
+        {
+            "fileName": "marissaaudience",
+            "displayName": "Marissa Audience"
+        },
+        {
+            "fileName": "marmu",
+            "displayName": "Marmu%"
+        },
+        {
+            "fileName": "mrmushroomending",
+            "displayName": "Mr. Mushroom Ending"
+        },
+        {
+            "fileName": "myla",
+            "displayName": "Myla%"
+        },
+        {
+            "fileName": "nice",
+            "displayName": "Nice% (1.2.2.1)"
+        },
+        {
+            "fileName": "NKG_flame_splits",
+            "displayName": "NKG% (with flame splits)"
+        },
+        {
+            "fileName": "NKG_no_flames",
+            "displayName": "NKG% (no flame splits)"
+        },
+        {
+            "fileName": "NMG",
+            "displayName": "NMG%"
+        },
+        {
+            "fileName": "nosk",
+            "displayName": "Nosk%"
+        },
+        {
+            "fileName": "shriek",
+            "displayName": "Shriek%"
+        },
+        {
+            "fileName": "spelless",
+            "displayName": "Spelless"
+        },
+        {
+            "fileName": "spellesslow",
+            "displayName": "Low% Spelless"
+        },
+        {
+            "fileName": "spellessTE",
+            "displayName": "Spelless True Ending"
+        },
+        {
+            "fileName": "worldsoul",
+            "displayName": "Worldsoul (1.2.2.1)"
+        },
+        {
+            "fileName": "zote",
+            "displayName": "Zote%"
         }
     ]
 }

@@ -2,13 +2,25 @@
     "splitIds": [
         "VengefulSpirit",
         "Greenpath",
+        "Zote1",
         "MothwingCloak",
-        "Aluba"
+        "ShamanStone",
+        "MantisClaw",
+        "BrettaRescued",
+        "DeepnestSpa",
+        "Zote2",
+        "TramPass",
+        "NailUpgrade1",
+        "MonarchWings",
+        "LittleFool",
+        "ZoteKilled",
+        "DreamNail",
+        "GreyPrince"
     ],
     "ordered": true,
     "endTriggeringAutosplit": true,
     "gameName": "Hollow Knight Category Extensions",
-    "categoryName": "Aluba%",
+    "categoryName": "GPZ%",
     "variables": {
         "platform": "PC",
         "patch": "1.4.3.2",

@@ -3,12 +3,17 @@
         "VengefulSpirit",
         "Greenpath",
         "MothwingCloak",
-        "Aluba"
+        "MantisClaw",
+        "GorgeousHusk",
+        "DashSlash",
+        "GreatSlash",
+        "CycloneSlash",
+        "NailmastersGlory"
     ],
     "ordered": true,
     "endTriggeringAutosplit": true,
     "gameName": "Hollow Knight Category Extensions",
-    "categoryName": "Aluba%",
+    "categoryName": "NMG%",
     "variables": {
         "platform": "PC",
         "patch": "1.4.3.2",

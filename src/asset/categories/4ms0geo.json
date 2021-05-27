@@ -1,14 +1,23 @@
 {
     "splitIds": [
+        "Dirtmouth",
+        "Grub1",
+        "AspidHunter",
+        "MaskFragment1",
+        "Grub2",
+        "Grub3",
         "VengefulSpirit",
         "Greenpath",
-        "MothwingCloak",
-        "Aluba"
+        "Grub4",
+        "Grub5",
+        "MaskFragment2",
+        "MaskFragment3",
+        "Mask1"
     ],
     "ordered": true,
     "endTriggeringAutosplit": true,
     "gameName": "Hollow Knight Category Extensions",
-    "categoryName": "Aluba%",
+    "categoryName": "4ms 0 Geo",
     "variables": {
         "platform": "PC",
         "patch": "1.4.3.2",

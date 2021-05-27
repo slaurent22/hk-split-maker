@@ -1,0 +1,27 @@
+{
+    "splitIds": [
+        "VengefulSpirit",
+        "Greenpath",
+        "MothwingCloak",
+        "MantisClaw",
+        "DesolateDive",
+        "CrystalPeak",
+        "CrystalHeart",
+        "DescendingDark",
+        "DreamNail",
+        "Uumuu",
+        "BeastsDenTrapBench",
+        "Hegemol",
+        "TramPass",
+        "BlackKnight"
+    ],
+    "ordered": true,
+    "endTriggeringAutosplit": false,
+    "gameName": "Hollow Knight Category Extensions",
+    "categoryName": "0 Geo",
+    "variables": {
+        "platform": "PC",
+        "patch": "1.4.3.2",
+        "glitch": "No Major Glitches"
+    }
+}

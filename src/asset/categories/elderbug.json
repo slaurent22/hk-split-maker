@@ -3,15 +3,20 @@
         "VengefulSpirit",
         "Greenpath",
         "MothwingCloak",
-        "Aluba"
+        "MantisClaw",
+        "BlueLake",
+        "DreamNail",
+        "DesolateDive",
+        "StoreroomsStation",
+        "ElderbugFlower"
     ],
     "ordered": true,
     "endTriggeringAutosplit": true,
     "gameName": "Hollow Knight Category Extensions",
-    "categoryName": "Aluba%",
+    "categoryName": "Elderbug%",
     "variables": {
         "platform": "PC",
         "patch": "1.4.3.2",
-        "glitch": "Current Patch NMG"
+        "glitch": "No Major Glitches"
     }
 }

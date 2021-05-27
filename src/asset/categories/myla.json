@@ -3,15 +3,19 @@
         "VengefulSpirit",
         "Greenpath",
         "MothwingCloak",
-        "Aluba"
+        "MantisClaw",
+        "BlueLake",
+        "Lemm2",
+        "CrystalHeart",
+        "HuskMiner"
     ],
     "ordered": true,
     "endTriggeringAutosplit": true,
     "gameName": "Hollow Knight Category Extensions",
-    "categoryName": "Aluba%",
+    "categoryName": "Myla%",
     "variables": {
         "platform": "PC",
         "patch": "1.4.3.2",
-        "glitch": "Current Patch NMG"
+        "glitch": "No Major Glitches"
     }
 }

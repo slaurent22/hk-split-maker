@@ -3,12 +3,15 @@
         "VengefulSpirit",
         "Greenpath",
         "MothwingCloak",
-        "Aluba"
+        "Aluba",
+        "MantisClaw",
+        "DeepnestSpa",
+        "QueensGardens"
     ],
     "ordered": true,
-    "endTriggeringAutosplit": true,
+    "endTriggeringAutosplit": false,
     "gameName": "Hollow Knight Category Extensions",
-    "categoryName": "Aluba%",
+    "categoryName": "Al2ba%",
     "variables": {
         "platform": "PC",
         "patch": "1.4.3.2",

@@ -3,12 +3,17 @@
         "VengefulSpirit",
         "Greenpath",
         "MothwingCloak",
-        "Aluba"
+        "MantisClaw",
+        "BlueLake",
+        "GorgeousHusk",
+        "JonisBlessing",
+        "KingsBrand",
+        "LifebloodCore"
     ],
     "ordered": true,
     "endTriggeringAutosplit": true,
     "gameName": "Hollow Knight Category Extensions",
-    "categoryName": "Aluba%",
+    "categoryName": "Lifeblood Core%",
     "variables": {
         "platform": "PC",
         "patch": "1.4.3.2",

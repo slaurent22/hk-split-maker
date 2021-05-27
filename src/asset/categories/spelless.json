@@ -1,0 +1,30 @@
+{
+    "splitIds": [
+        "FuryOfTheFallen",
+        "FalseKnight",
+        "Longnail",
+        "Greenpath",
+        "MothwingCloak",
+        "MegaMossCharger",
+        "FragileStrength",
+        "MantisClaw",
+        "DreamNail",
+        "GorgeousHusk",
+        "NailUpgrade1",
+        "BlackKnight",
+        "LumaflyLantern",
+        "CrystalHeart",
+        "SporeShroom",
+        "BeastsDenTrapBench",
+        "Hegemol"
+    ],
+    "ordered": true,
+    "endTriggeringAutosplit": false,
+    "gameName": "Hollow Knight Category Extensions",
+    "categoryName": "Spelless",
+    "variables": {
+        "platform": "PC",
+        "patch": "1.4.3.2",
+        "glitch": "No Major Glitches"
+    }
+}

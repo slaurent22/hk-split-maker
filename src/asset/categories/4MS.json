@@ -1,0 +1,25 @@
+{
+    "splitIds": [
+        "Dirtmouth",
+        "Grub1",
+        "MaskFragment1",
+        "Grub2",
+        "AspidHunter",
+        "MaskFragment2",
+        "GruzMother",
+        "Grub3",
+        "Grub4",
+        "Grub5",
+        "MaskFragment3",
+        "Mask1"
+    ],
+    "ordered": true,
+    "endTriggeringAutosplit": true,
+    "gameName": "Hollow Knight Category Extensions",
+    "categoryName": "4 Mask Shards",
+    "variables": {
+        "platform": "PC",
+        "patch": "1.4.3.2",
+        "glitch": "Current Patch NMG"
+    }
+}

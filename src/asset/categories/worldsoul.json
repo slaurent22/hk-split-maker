@@ -1,0 +1,38 @@
+{
+    "splitIds": [
+        "FalseKnight",
+        "VengefulSpirit",
+        "MothwingCloak",
+        "MantisClaw",
+        "QueensStationStation",
+        "VesselFragment1",
+        "VesselFragment2",
+        "ShamanStone",
+        "DreamNail",
+        "Vessel1",
+        "KingsStationStation",
+        "GorgeousHusk",
+        "DashSlash",
+        "DesolateDive",
+        "SoulTyrant",
+        "VesselFragment4",
+        "CrystalHeart",
+        "SpiritGladeOpen",
+        "Lemm2",
+        "VesselFragment5",
+        "BrokenVessel",
+        "LostKin",
+        "Vessel2",
+        "VesselFragment8",
+        "Vessel3"
+    ],
+    "ordered": false,
+    "endTriggeringAutosplit": true,
+    "gameName": "Hollow Knight Category Extensions",
+    "categoryName": "Worldsoul",
+    "variables": {
+        "platform": "PC",
+        "patch": "1.2.2.1",
+        "glitch": "No Major Glitches"
+    }
+}
