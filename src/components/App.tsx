@@ -42,17 +42,19 @@ export default class App extends Component<AppProps, AppState> {
     }
     public render(): ReactNode {
         return (
-            <div className="App">
-                <h1>
-                    <img
-                        id="logo"
-                        src={logo}
-                        alt="HK Split Maker logo"
-                        width={45}
-                        height={42}
-                    ></img>
-                    {" Hollow Knight Split Maker"}
-                </h1>
+            <div id="app">
+                <header>
+                    <h1>
+                        <img
+                            id="logo"
+                            src={logo}
+                            alt="HK Split Maker logo"
+                            width={45}
+                            height={42}
+                        ></img>
+                        {" Hollow Knight Split Maker"}
+                    </h1>
+                </header>
                 <h2>Instructions</h2>
                 <ol>
                     <li>
@@ -82,30 +84,27 @@ export default class App extends Component<AppProps, AppState> {
                         Splits ➡ From File
                     </li>
                 </ol>
-                <div className="input-output">
-                    <div className="editor-section">
+                <div id="input-output">
+                    <div id="editor-section" className="side">
                         <h2>Input config JSON</h2>
                         <form onSubmit={this.onSubmit.bind(this)}>
+                            <input id="submit-button" type="submit" value="Submit"/>
                             <SplitConfigEditor
                                 defaultValue={defaultValue}
                                 onChange={this.onConfigInputChange.bind(this)}
                             />
-                            <br></br>
-                            <input id="submit-button" type="submit" value="Submit"/>
                         </form>
                     </div>
-                    <div className="separator"></div>
-                    <div className="output-section">
+                    <div id="output-section" className="side">
                         <h2>Output Splits File</h2>
-                        <div className="output-container">
-                            <SplitOutputEditor
-                                defaultValue={this.state.splitOutput}
-                            />
-                            <br></br>
+                        <div id="output-container">
                             <button
                                 id="download-button"
                                 onClick={this.onDownload.bind(this)}
                             >💾 Download</button>
+                            <SplitOutputEditor
+                                defaultValue={this.state.splitOutput}
+                            />
                         </div>
                     </div>
                 </div>
