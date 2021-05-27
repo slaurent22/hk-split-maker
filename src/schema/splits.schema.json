@@ -81,7 +81,1758 @@
         "splitIds": {
             "type": "array",
             "items": {
-                "type": "string"
+                "oneOf": [
+                    {
+                        "title": "Abyss Shriek (Skill)",
+                        "description": "Splits when obtaining Abyss Shriek (Shadow Scream)",
+                        "const": "AbyssShriek"
+                    },
+                    {
+                        "title": "Crystal Heart (Skill)",
+                        "description": "Splits when obtaining Crystal Heart (Super Dash)",
+                        "const": "CrystalHeart"
+                    },
+                    {
+                        "title": "Cyclone Slash (Skill)",
+                        "description": "Splits when obtaining Cyclone Slash (Nail Art)",
+                        "const": "CycloneSlash"
+                    },
+                    {
+                        "title": "Dash Slash (Skill)",
+                        "description": "Splits when obtaining Dash Slash (Nail Art)",
+                        "const": "DashSlash"
+                    },
+                    {
+                        "title": "Descending Dark (Skill)",
+                        "description": "Splits when obtaining Descending Dark (Shadow Dive)",
+                        "const": "DescendingDark"
+                    },
+                    {
+                        "title": "Desolate Dive (Skill)",
+                        "description": "Splits when obtaining Desolate Dive",
+                        "const": "DesolateDive"
+                    },
+                    {
+                        "title": "Dream Nail (Skill)",
+                        "description": "Splits when obtaining Dream Nail",
+                        "const": "DreamNail"
+                    },
+                    {
+                        "title": "Dream Nail - Awoken (Skill)",
+                        "description": "Splits when Awkening the Dream Nail",
+                        "const": "DreamNail2"
+                    },
+                    {
+                        "title": "Dream Gate (Skill)",
+                        "description": "Splits when obtaining Dream Gate",
+                        "const": "DreamGate"
+                    },
+                    {
+                        "title": "Great Slash (Skill)",
+                        "description": "Splits when obtaining Great Slash (Nail Art)",
+                        "const": "GreatSlash"
+                    },
+                    {
+                        "title": "Howling Wraiths (Skill)",
+                        "description": "Splits when obtaining Howling Wraiths (Scream)",
+                        "const": "HowlingWraiths"
+                    },
+                    {
+                        "title": "Isma's Tear (Skill)",
+                        "description": "Splits when obtaining Isma's Tear (Acid Armour)",
+                        "const": "IsmasTear"
+                    },
+                    {
+                        "title": "Mantis Claw (Skill)",
+                        "description": "Splits when obtaining Mantis Claw (Wall Jump)",
+                        "const": "MantisClaw"
+                    },
+                    {
+                        "title": "Monarch Wings (Skill)",
+                        "description": "Splits when obtaining Monarch Wings (Double Jump)",
+                        "const": "MonarchWings"
+                    },
+                    {
+                        "title": "Mothwing Cloak (Skill)",
+                        "description": "Splits when obtaining Mothwing Cloak (Dash)",
+                        "const": "MothwingCloak"
+                    },
+                    {
+                        "title": "Shade Cloak (Skill)",
+                        "description": "Splits when obtaining Shade Cloak (Shadow Dash)",
+                        "const": "ShadeCloak"
+                    },
+                    {
+                        "title": "Shade Soul (Skill)",
+                        "description": "Splits when obtaining Shade Soul (Vengeful Spirit 2)",
+                        "const": "ShadeSoul"
+                    },
+                    {
+                        "title": "Vengeful Spirit (Skill)",
+                        "description": "Splits when obtaining Vengeful Spirit",
+                        "const": "VengefulSpirit"
+                    },
+                    {
+                        "title": "God Tuner (Item)",
+                        "description": "Splits when obtaining the God Tuner",
+                        "const": "GodTuner"
+                    },
+                    {
+                        "title": "Hunter's Mark (Item)",
+                        "description": "Splits when obtaining the Hunter's Mark",
+                        "const": "HuntersMark"
+                    },
+                    {
+                        "title": "Kings Brand (Item)",
+                        "description": "Splits when obtaining the Kings Brand",
+                        "const": "KingsBrand"
+                    },
+                    {
+                        "title": "Love Key (Item)",
+                        "description": "Splits when obtaining the Love Key",
+                        "const": "LoveKey"
+                    },
+                    {
+                        "title": "Elegant Key (Item)",
+                        "description": "Splits when obtaining the Elegant Key",
+                        "const": "ElegantKey"
+                    },
+                    {
+                        "title": "Lumafly Lantern (Item)",
+                        "description": "Splits when obtaining the Lumafly Lantern",
+                        "const": "LumaflyLantern"
+                    },
+                    {
+                        "title": "Pale Lurker Key (Item)",
+                        "description": "Splits when obtaining the Simple Key from the Pale Lurker",
+                        "const": "PaleLurkerKey"
+                    },
+                    {
+                        "title": "Pale Ore - Any (Item)",
+                        "description": "Splits if you've obtained any Pale Ore",
+                        "const": "PaleOre"
+                    },
+                    {
+                        "title": "Salubra's Blessing (Item)",
+                        "description": "Splits when obtaining Salubra's Blessing",
+                        "const": "SalubrasBlessing"
+                    },
+                    {
+                        "title": "Simple Key - First (Item)",
+                        "description": "Splits when obtaining the first Simple Key",
+                        "const": "SimpleKey"
+                    },
+                    {
+                        "title": "Shopkeeper's Key (Item)",
+                        "description": "Splits when obtaining the Shopkeeper's Key from the Crystal Peak key room",
+                        "const": "SlyKey"
+                    },
+                    {
+                        "title": "Tram Pass (Item)",
+                        "description": "Splits when obtaining the Tram Pass",
+                        "const": "TramPass"
+                    },
+                    {
+                        "title": "Mask Fragment 1 (Fragment)",
+                        "description": "Splits when getting 1st Mask fragment",
+                        "const": "MaskFragment1"
+                    },
+                    {
+                        "title": "Mask Fragment 2 (Fragment)",
+                        "description": "Splits when getting 2nd Mask fragment",
+                        "const": "MaskFragment2"
+                    },
+                    {
+                        "title": "Mask Fragment 3 (Fragment)",
+                        "description": "Splits when getting 3rd Mask fragment",
+                        "const": "MaskFragment3"
+                    },
+                    {
+                        "title": "Mask Fragment 4 (Upgrade)",
+                        "description": "Splits when getting 4th Mask fragment (6 HP)",
+                        "const": "Mask1"
+                    },
+                    {
+                        "title": "Mask Fragment 5 (Fragment)",
+                        "description": "Splits when getting 5th Mask fragment",
+                        "const": "MaskFragment5"
+                    },
+                    {
+                        "title": "Mask Fragment 6 (Fragment)",
+                        "description": "Splits when getting 6th Mask fragment",
+                        "const": "MaskFragment6"
+                    },
+                    {
+                        "title": "Mask Fragment 7 (Fragment)",
+                        "description": "Splits when getting 7th Mask fragment",
+                        "const": "MaskFragment7"
+                    },
+                    {
+                        "title": "Mask Fragment 8 (Upgrade)",
+                        "description": "Splits when getting 8th Mask fragment (7 HP)",
+                        "const": "Mask2"
+                    },
+                    {
+                        "title": "Mask Fragment 9 (Fragment)",
+                        "description": "Splits when getting 9th Mask fragment",
+                        "const": "MaskFragment9"
+                    },
+                    {
+                        "title": "Mask Fragment 10 (Fragment)",
+                        "description": "Splits when getting 10th Mask fragment",
+                        "const": "MaskFragment10"
+                    },
+                    {
+                        "title": "Mask Fragment 11 (Fragment)",
+                        "description": "Splits when getting 11th Mask fragment",
+                        "const": "MaskFragment11"
+                    },
+                    {
+                        "title": "Mask Fragment 12 (Upgrade)",
+                        "description": "Splits when getting 12th Mask fragment (8 HP)",
+                        "const": "Mask3"
+                    },
+                    {
+                        "title": "Mask Fragment 13 (Fragment)",
+                        "description": "Splits when getting 13th Mask fragment",
+                        "const": "MaskFragment13"
+                    },
+                    {
+                        "title": "Mask Fragment 14 (Fragment)",
+                        "description": "Splits when getting 14th Mask fragment",
+                        "const": "MaskFragment14"
+                    },
+                    {
+                        "title": "Mask Fragment 15 (Fragment)",
+                        "description": "Splits when getting 15th Mask fragment",
+                        "const": "MaskFragment15"
+                    },
+                    {
+                        "title": "Mask Fragment 16 (Upgrade)",
+                        "description": "Splits when getting 16th Mask fragment (9 HP)",
+                        "const": "Mask4"
+                    },
+                    {
+                        "title": "Nail 1 (Upgrade)",
+                        "description": "Splits when getting Nail Upgrade 1",
+                        "const": "NailUpgrade1"
+                    },
+                    {
+                        "title": "Nail 2 (Upgrade)",
+                        "description": "Splits when getting Nail Upgrade 2",
+                        "const": "NailUpgrade2"
+                    },
+                    {
+                        "title": "Nail 3 (Upgrade)",
+                        "description": "Splits when getting Coil Nail (Upgrade 3)",
+                        "const": "NailUpgrade3"
+                    },
+                    {
+                        "title": "Nail 4 (Upgrade)",
+                        "description": "Splits when getting Pure Nail (Upgrade 4)",
+                        "const": "NailUpgrade4"
+                    },
+                    {
+                        "title": "Vessel Fragment 1 (Fragment)",
+                        "description": "Splits when getting 1st Vessel fragment",
+                        "const": "VesselFragment1"
+                    },
+                    {
+                        "title": "Vessel Fragment 2 (Fragment)",
+                        "description": "Splits when getting 2nd Vessel fragment",
+                        "const": "VesselFragment2"
+                    },
+                    {
+                        "title": "Vessel Fragment 3 (Upgrade)",
+                        "description": "Splits when getting 3rd Vessel fragment (1 extra MP)",
+                        "const": "Vessel1"
+                    },
+                    {
+                        "title": "Vessel Fragment 4 (Fragment)",
+                        "description": "Splits when getting 4th Vessel fragment",
+                        "const": "VesselFragment4"
+                    },
+                    {
+                        "title": "Vessel Fragment 5 (Fragment)",
+                        "description": "Splits when getting 5th Vessel fragment",
+                        "const": "VesselFragment5"
+                    },
+                    {
+                        "title": "Vessel Fragment 6 (Upgrade)",
+                        "description": "Splits when getting 6th Vessel fragment (2 extra MP)",
+                        "const": "Vessel2"
+                    },
+                    {
+                        "title": "Vessel Fragment 7 (Fragment)",
+                        "description": "Splits when getting 7th Vessel fragment",
+                        "const": "VesselFragment7"
+                    },
+                    {
+                        "title": "Vessel Fragment 8 (Fragment)",
+                        "description": "Splits when getting 8th Vessel fragment",
+                        "const": "VesselFragment8"
+                    },
+                    {
+                        "title": "Vessel Fragment 9 (Upgrade)",
+                        "description": "Splits when getting 9th Vessel fragment (3 extra MP)",
+                        "const": "Vessel3"
+                    },
+                    {
+                        "title": "Broken Vessel (Boss)",
+                        "description": "Splits when killing Broken Vessel",
+                        "const": "BrokenVessel"
+                    },
+                    {
+                        "title": "Brooding Mawlek (Boss)",
+                        "description": "Splits when killing Brooding Mawlek",
+                        "const": "BroodingMawlek"
+                    },
+                    {
+                        "title": "Collector (Boss)",
+                        "description": "Splits when killing Collector",
+                        "const": "Collector"
+                    },
+                    {
+                        "title": "Crystal Guardian 1 (Boss)",
+                        "description": "Splits when killing the Crystal Guardian for the first time",
+                        "const": "CrystalGuardian1"
+                    },
+                    {
+                        "title": "Crystal Guardian 2 (Boss)",
+                        "description": "Splits when killing the Crystal Guardian for the second time",
+                        "const": "CrystalGuardian2"
+                    },
+                    {
+                        "title": "Dung Defender (Boss)",
+                        "description": "Splits when killing Dung Defender",
+                        "const": "DungDefender"
+                    },
+                    {
+                        "title": "Elder Hu (Boss)",
+                        "description": "Splits when killing Elder Hu",
+                        "const": "ElderHu"
+                    },
+                    {
+                        "title": "False Knight (Boss)",
+                        "description": "Splits when killing False Knight",
+                        "const": "FalseKnight"
+                    },
+                    {
+                        "title": "Failed Champion (Boss)",
+                        "description": "Splits when killing Failed Champion (False Knight Dream)",
+                        "const": "FailedKnight"
+                    },
+                    {
+                        "title": "Flukemarm (Boss)",
+                        "description": "Splits when killing Flukemarm",
+                        "const": "Flukemarm"
+                    },
+                    {
+                        "title": "Galien (Boss)",
+                        "description": "Splits when killing Galien",
+                        "const": "Galien"
+                    },
+                    {
+                        "title": "God Tamer (Boss)",
+                        "description": "Splits when killing the God Tamer",
+                        "const": "GodTamer"
+                    },
+                    {
+                        "title": "Gorb (Boss)",
+                        "description": "Splits when killing Gorb",
+                        "const": "Gorb"
+                    },
+                    {
+                        "title": "Grey Prince Zote (Boss)",
+                        "description": "Splits when killing Grey Prince",
+                        "const": "GreyPrince"
+                    },
+                    {
+                        "title": "Gruz Mother (Boss)",
+                        "description": "Splits when killing Gruz Mother",
+                        "const": "GruzMother"
+                    },
+                    {
+                        "title": "Hollow Knight Practice (Boss)",
+                        "description": "Splits when killing The Hollow Knight",
+                        "const": "HollowKnightBoss"
+                    },
+                    {
+                        "title": "Hornet 1 (Boss)",
+                        "description": "Splits when killing Hornet for the first time",
+                        "const": "Hornet1"
+                    },
+                    {
+                        "title": "Hornet 2 (Boss)",
+                        "description": "Splits when killing Hornet for the second time",
+                        "const": "Hornet2"
+                    },
+                    {
+                        "title": "Lost Kin (Boss)",
+                        "description": "Splits when killing Lost Kin (Broken Vessel Dream)",
+                        "const": "LostKin"
+                    },
+                    {
+                        "title": "Mantis Lords (Boss)",
+                        "description": "Splits when killing Mantis Lords",
+                        "const": "MantisLords"
+                    },
+                    {
+                        "title": "Markoth (Boss)",
+                        "description": "Splits when killing Markoth",
+                        "const": "Markoth"
+                    },
+                    {
+                        "title": "Marmu (Boss)",
+                        "description": "Splits when killing Marmu",
+                        "const": "Marmu"
+                    },
+                    {
+                        "title": "Mega Moss Charger (Boss)",
+                        "description": "Splits when killing Mega Moss Charger",
+                        "const": "MegaMossCharger"
+                    },
+                    {
+                        "title": "Nightmare King Grimm (Boss)",
+                        "description": "Splits when killing Nightmare King Grimm",
+                        "const": "NightmareKingGrimm"
+                    },
+                    {
+                        "title": "No Eyes (Boss)",
+                        "description": "Splits when killing No Eyes",
+                        "const": "NoEyes"
+                    },
+                    {
+                        "title": "Nosk (Boss)",
+                        "description": "Splits when killing Nosk",
+                        "const": "Nosk"
+                    },
+                    {
+                        "title": "Oro & Mato Nail Bros (Boss)",
+                        "description": "Splits when killing the Nail Bros (Pantheon)",
+                        "const": "MatoOroNailBros"
+                    },
+                    {
+                        "title": "Radiance Practice (Boss)",
+                        "description": "Splits when killing The Radiance",
+                        "const": "RadianceBoss"
+                    },
+                    {
+                        "title": "Pure Vessel (Boss)",
+                        "description": "Splits when killing Pure Vessel",
+                        "const": "PureVessel"
+                    },
+                    {
+                        "title": "Sheo Paintmaster (Boss)",
+                        "description": "Splits when killing Sheo (Pantheon)",
+                        "const": "SheoPaintmaster"
+                    },
+                    {
+                        "title": "Sly Nailsage (Boss)",
+                        "description": "Splits when killing Nailsage Sly (Pantheon)",
+                        "const": "SlyNailsage"
+                    },
+                    {
+                        "title": "Soul Master (Boss)",
+                        "description": "Splits when killing Soul Master",
+                        "const": "SoulMaster"
+                    },
+                    {
+                        "title": "Soul Tyrant (Boss)",
+                        "description": "Splits when killing Soul Tyrant (Soul Master Dream)",
+                        "const": "SoulTyrant"
+                    },
+                    {
+                        "title": "Traitor Lord (Boss)",
+                        "description": "Splits when killing Traitor Lord",
+                        "const": "TraitorLord"
+                    },
+                    {
+                        "title": "Troupe Master Grimm (Boss)",
+                        "description": "Splits when killing Troupe Master Grimm",
+                        "const": "TroupeMasterGrimm"
+                    },
+                    {
+                        "title": "Uumuu (Boss)",
+                        "description": "Splits when killing Uumuu",
+                        "const": "Uumuu"
+                    },
+                    {
+                        "title": "Watcher Knight (Boss)",
+                        "description": "Splits when killing Watcher Knight",
+                        "const": "BlackKnight"
+                    },
+                    {
+                        "title": "White Defender (Boss)",
+                        "description": "Splits when killing White Defender",
+                        "const": "WhiteDefender"
+                    },
+                    {
+                        "title": "Xero (Boss)",
+                        "description": "Splits when killing Xero",
+                        "const": "Xero"
+                    },
+                    {
+                        "title": "Hive Knight (Boss)",
+                        "description": "Splits when killing Hive Knight",
+                        "const": "HiveKnight"
+                    },
+                    {
+                        "title": "Vengefly King (Pantheon)",
+                        "description": "Splits after killing Vengefly King in Pantheon 1",
+                        "const": "VengeflyKingP"
+                    },
+                    {
+                        "title": "Gruz Mother (Pantheon)",
+                        "description": "Splits after killing Gruz Mother in Pantheon 1",
+                        "const": "GruzMotherP"
+                    },
+                    {
+                        "title": "False Knight (Pantheon)",
+                        "description": "Splits after killing False Knight in Pantheon 1",
+                        "const": "FalseKnightP"
+                    },
+                    {
+                        "title": "Massive Moss Charger (Pantheon)",
+                        "description": "Splits after killing Massive Moss Charger in Pantheon 1",
+                        "const": "MassiveMossChargerP"
+                    },
+                    {
+                        "title": "Hornet 1 (Pantheon)",
+                        "description": "Splits after killing Hornet 1 in Pantheon 1",
+                        "const": "Hornet1P"
+                    },
+                    {
+                        "title": "Gorb (Pantheon)",
+                        "description": "Splits after killing Gorb in Pantheon 1",
+                        "const": "GorbP"
+                    },
+                    {
+                        "title": "Dung Defender (Pantheon)",
+                        "description": "Splits after killing Dung Defender in Pantheon 1",
+                        "const": "DungDefenderP"
+                    },
+                    {
+                        "title": "Soul Warrior (Pantheon)",
+                        "description": "Splits after killing Soul Warrior in Pantheon 1",
+                        "const": "SoulWarriorP"
+                    },
+                    {
+                        "title": "Brooding Mawlek (Pantheon)",
+                        "description": "Splits after killing Brooding Mawlek in Pantheon 1",
+                        "const": "BroodingMawlekP"
+                    },
+                    {
+                        "title": "Oro & Mato Nail Bros (Pantheon)",
+                        "description": "Splits after killing Oro & Mato in Pantheon 1",
+                        "const": "OroMatoNailBrosP"
+                    },
+                    {
+                        "title": "Xero (Pantheon)",
+                        "description": "Splits after killing Xero in Pantheon 2",
+                        "const": "XeroP"
+                    },
+                    {
+                        "title": "Crystal Guardian (Pantheon)",
+                        "description": "Splits after killing Crystal Guardian in Pantheon 2",
+                        "const": "CrystalGuardianP"
+                    },
+                    {
+                        "title": "Soul Master (Pantheon)",
+                        "description": "Splits after killing Soul Master in Pantheon 2",
+                        "const": "SoulMasterP"
+                    },
+                    {
+                        "title": "Oblobbles (Pantheon)",
+                        "description": "Splits after killing Oblobbles in Pantheon 2",
+                        "const": "OblobblesP"
+                    },
+                    {
+                        "title": "Mantis Lords (Pantheon)",
+                        "description": "Splits after killing Mantis Lords in Pantheon 2",
+                        "const": "MantisLordsP"
+                    },
+                    {
+                        "title": "Marmu (Pantheon)",
+                        "description": "Splits after killing Marmu in Pantheon 2",
+                        "const": "MarmuP"
+                    },
+                    {
+                        "title": "Nosk (Pantheon)",
+                        "description": "Splits after killing Nosk in Pantheon 2",
+                        "const": "NoskP"
+                    },
+                    {
+                        "title": "Flukemarm (Pantheon)",
+                        "description": "Splits after killing Flukemarm in Pantheon 2",
+                        "const": "FlukemarmP"
+                    },
+                    {
+                        "title": "Broken Vessel (Pantheon)",
+                        "description": "Splits after killing Broken Vessel in Pantheon 2",
+                        "const": "BrokenVesselP"
+                    },
+                    {
+                        "title": "Sheo Paintmaster (Pantheon)",
+                        "description": "Splits after killing Sheo Paintmaster in Pantheon 2",
+                        "const": "SheoPaintmasterP"
+                    },
+                    {
+                        "title": "Hive Knight (Pantheon)",
+                        "description": "Splits after killing Hive Knight in Pantheon 3",
+                        "const": "HiveKnightP"
+                    },
+                    {
+                        "title": "Elder Hu (Pantheon)",
+                        "description": "Splits after killing Elder Hu in Pantheon 3",
+                        "const": "ElderHuP"
+                    },
+                    {
+                        "title": "Collector (Pantheon)",
+                        "description": "Splits after killing The Collector in Pantheon 3",
+                        "const": "CollectorP"
+                    },
+                    {
+                        "title": "God Tamer (Pantheon)",
+                        "description": "Splits after killing God Tamer in Pantheon 3",
+                        "const": "GodTamerP"
+                    },
+                    {
+                        "title": "Troupe Master Grimm (Pantheon)",
+                        "description": "Splits after killing Troupe Master Grimm in Pantheon 3",
+                        "const": "TroupeMasterGrimmP"
+                    },
+                    {
+                        "title": "Galien (Pantheon)",
+                        "description": "Splits after killing Galien in Pantheon 3",
+                        "const": "GalienP"
+                    },
+                    {
+                        "title": "Grey Prince Zote (Pantheon)",
+                        "description": "Splits after killing Grey Prince Zote in Pantheon 3",
+                        "const": "GreyPrinceZoteP"
+                    },
+                    {
+                        "title": "Uumuu (Pantheon)",
+                        "description": "Splits after killing Uumuu in Pantheon 3",
+                        "const": "UumuuP"
+                    },
+                    {
+                        "title": "Hornet 2 (Pantheon)",
+                        "description": "Splits after killing Hornet 2 in Pantheon 3",
+                        "const": "Hornet2P"
+                    },
+                    {
+                        "title": "Sly Nailsage (Pantheon)",
+                        "description": "Splits after killing Sly Nailsage in Pantheon 3",
+                        "const": "SlyP"
+                    },
+                    {
+                        "title": "Enraged Guardian (Pantheon)",
+                        "description": "Splits after killing Enraged Guardian in Pantheon 4",
+                        "const": "EnragedGuardianP"
+                    },
+                    {
+                        "title": "Lost Kin (Pantheon)",
+                        "description": "Splits after killing Lost Kin in Pantheon 4",
+                        "const": "LostKinP"
+                    },
+                    {
+                        "title": "No Eyes (Pantheon)",
+                        "description": "Splits after killing No Eyes in Pantheon 4",
+                        "const": "NoEyesP"
+                    },
+                    {
+                        "title": "Traitor Lord (Pantheon)",
+                        "description": "Splits after killing Traitor Lord in Pantheon 4",
+                        "const": "TraitorLordP"
+                    },
+                    {
+                        "title": "White Defender (Pantheon)",
+                        "description": "Splits after killing White Defender in Pantheon 4",
+                        "const": "WhiteDefenderP"
+                    },
+                    {
+                        "title": "Failed Champion (Pantheon)",
+                        "description": "Splits after killing Failed Champion in Pantheon 4",
+                        "const": "FailedChampionP"
+                    },
+                    {
+                        "title": "Markoth (Pantheon)",
+                        "description": "Splits after killing Markoth in Pantheon 4",
+                        "const": "MarkothP"
+                    },
+                    {
+                        "title": "Watcher Knights (Pantheon)",
+                        "description": "Splits after killing Watcher Knights in Pantheon 4",
+                        "const": "WatcherKnightsP"
+                    },
+                    {
+                        "title": "Soul Tyrant (Pantheon)",
+                        "description": "Splits after killing Soul Tyrant in Pantheon 4",
+                        "const": "SoulTyrantP"
+                    },
+                    {
+                        "title": "Pure Vessel (Pantheon)",
+                        "description": "Splits after killing Pure Vessel in Pantheon 4",
+                        "const": "PureVesselP"
+                    },
+                    {
+                        "title": "Nosk Hornet (Pantheon)",
+                        "description": "Splits after killing Nosk Hornet in Pantheon 5",
+                        "const": "NoskHornetP"
+                    },
+                    {
+                        "title": "Nightmare King Grimm (Pantheon)",
+                        "description": "Splits after killing Nightmare King Grimm in Pantheon 5",
+                        "const": "NightmareKingGrimmP"
+                    },
+                    {
+                        "title": "Herrah the Beast (Dreamer)",
+                        "description": "Splits when you see the mask for Herrah (In Spider Area)",
+                        "const": "Hegemol"
+                    },
+                    {
+                        "title": "Lurien the Watcher (Dreamer)",
+                        "description": "Splits when you see the mask for Lurien (After killing Watcher Knight)",
+                        "const": "Lurien"
+                    },
+                    {
+                        "title": "Monomon the Teacher (Dreamer)",
+                        "description": "Splits when you see the mask for Monomon (After killing Uumuu)",
+                        "const": "Monomon"
+                    },
+                    {
+                        "title": "First Dreamer (Dreamer)",
+                        "description": "Splits when you see the mask for the first dreamer killed",
+                        "const": "Dreamer1"
+                    },
+                    {
+                        "title": "Second Dreamer (Dreamer)",
+                        "description": "Splits when you see the mask for the second dreamer killed",
+                        "const": "Dreamer2"
+                    },
+                    {
+                        "title": "Third Dreamer (Dreamer)",
+                        "description": "Splits when you see the mask for the third dreamer killed",
+                        "const": "Dreamer3"
+                    },
+                    {
+                        "title": "Nightmare Lantern Lit (Event)",
+                        "description": "Splits when initially lighting the Nightmare Lantern",
+                        "const": "NightmareLantern"
+                    },
+                    {
+                        "title": "Nightmare Lantern Destroyed (Event)",
+                        "description": "Splits when destroying the Nightmare Lantern",
+                        "const": "NightmareLanternDestroyed"
+                    },
+                    {
+                        "title": "Seer Departs (Event)",
+                        "description": "Splits when the Seer Departs after bringing back 2400 essence",
+                        "const": "SeerDeparts"
+                    },
+                    {
+                        "title": "Spirit Glade Door (Event)",
+                        "description": "Splits when the Seer open Spirit Glade after bringing back 200 essence",
+                        "const": "SpiritGladeOpen"
+                    },
+                    {
+                        "title": "Chandelier - Watcher Knights (Event)",
+                        "description": "Splits when dropping the chandelier on one of the watcher knights",
+                        "const": "WatcherChandelier"
+                    },
+                    {
+                        "title": "City Gate (Event)",
+                        "description": "Splits when using the City Key to open the gate",
+                        "const": "CityGateOpen"
+                    },
+                    {
+                        "title": "Trap Bench - Beasts Den (Event)",
+                        "description": "Splits when getting the trap bench in Beasts Den",
+                        "const": "BeastsDenTrapBench"
+                    },
+                    {
+                        "title": "Chains Broken - Hollow Knight (Event)",
+                        "description": "Splits at the end of the first Hollow Knight scream after the chains are broken",
+                        "const": "UnchainedHollowKnight"
+                    },
+                    {
+                        "title": "Radiance Dream Entry (Event)",
+                        "description": "Splits when going into the dream world for Hollow Knight to fight Radiance",
+                        "const": "HollowKnightDreamnail"
+                    },
+                    {
+                        "title": "Colosseum Fight 1 (Trial)",
+                        "description": "Splits when beating the first Colosseum trial",
+                        "const": "ColosseumBronze"
+                    },
+                    {
+                        "title": "Colosseum Fight 2 (Trial)",
+                        "description": "Splits when beating the second Colosseum trial",
+                        "const": "ColosseumSilver"
+                    },
+                    {
+                        "title": "Colosseum Fight 3 (Trial)",
+                        "description": "Splits when beating the third Colosseum trial",
+                        "const": "ColosseumGold"
+                    },
+                    {
+                        "title": "Pantheon 1 (Trial)",
+                        "description": "Splits when beating the first Pantheon",
+                        "const": "Pantheon1"
+                    },
+                    {
+                        "title": "Pantheon 2 (Trial)",
+                        "description": "Splits when beating the second Pantheon",
+                        "const": "Pantheon2"
+                    },
+                    {
+                        "title": "Pantheon 3 (Trial)",
+                        "description": "Splits when beating the third Pantheon",
+                        "const": "Pantheon3"
+                    },
+                    {
+                        "title": "Pantheon 4 (Trial)",
+                        "description": "Splits when beating the fourth Pantheon",
+                        "const": "Pantheon4"
+                    },
+                    {
+                        "title": "Pantheon 5 (Trial)",
+                        "description": "Splits when beating the fifth Pantheon",
+                        "const": "Pantheon5"
+                    },
+                    {
+                        "title": "Path of Pain (Completed)",
+                        "description": "Splits when completing the Path of Pain section in White Palace",
+                        "const": "PathOfPain"
+                    },
+                    {
+                        "title": "Aspid Hunter (Mini Boss)",
+                        "description": "Splits when killing the final Aspid Hunter",
+                        "const": "AspidHunter"
+                    },
+                    {
+                        "title": "Aluba (Killed)",
+                        "description": "Splits when killing an Aluba",
+                        "const": "Aluba"
+                    },
+                    {
+                        "title": "Husk Miner (Killed)",
+                        "description": "Splits when killing a Husk Miner",
+                        "const": "HuskMiner"
+                    },
+                    {
+                        "title": "Great Hopper (Killed)",
+                        "description": "Splits when killing a Great Hopper",
+                        "const": "GreatHopper"
+                    },
+                    {
+                        "title": "Gorgeous Husk (Killed)",
+                        "description": "Splits when killing Gorgeous Husk",
+                        "const": "GorgeousHusk"
+                    },
+                    {
+                        "title": "Menderbug (Killed)",
+                        "description": "Splits when killing Menderbug",
+                        "const": "MenderBug"
+                    },
+                    {
+                        "title": "Moss Knight (Mini Boss)",
+                        "description": "Splits when killing Moss Knight",
+                        "const": "MossKnight"
+                    },
+                    {
+                        "title": "Shrumal Ogre (Mini Boss)",
+                        "description": "Splits when killing the final Shrumal Ogre",
+                        "const": "MushroomBrawler"
+                    },
+                    {
+                        "title": "Zote Rescued Vengefly King (Mini Boss)",
+                        "description": "Splits when rescuing Zote from the Vengefly King",
+                        "const": "Zote1"
+                    },
+                    {
+                        "title": "Zote Rescued Deepnest (Mini Boss)",
+                        "description": "Splits when rescuing Zote in Deepnest",
+                        "const": "Zote2"
+                    },
+                    {
+                        "title": "Zote Killed Colosseum (Mini Boss)",
+                        "description": "Splits when killing Zote in the Colosseum",
+                        "const": "ZoteKilled"
+                    },
+                    {
+                        "title": "Forgotten Crossroads (Stag Station)",
+                        "description": "Splits when opening the Forgotten Crossroads Stag Station",
+                        "const": "CrossroadsStation"
+                    },
+                    {
+                        "title": "Greenpath (Stag Station)",
+                        "description": "Splits when obtaining Greenpath Stag Station",
+                        "const": "GreenpathStation"
+                    },
+                    {
+                        "title": "Queen's Station (Stag Station)",
+                        "description": "Splits when obtaining Queens Station Stag Station",
+                        "const": "QueensStationStation"
+                    },
+                    {
+                        "title": "Queen's Gardens (Stag Station)",
+                        "description": "Splits when obtaining Queens Gardens Stag Station",
+                        "const": "QueensGardensStation"
+                    },
+                    {
+                        "title": "City Storerooms (Stag Station)",
+                        "description": "Splits when obtaining City Storerooms Stag Station",
+                        "const": "StoreroomsStation"
+                    },
+                    {
+                        "title": "Kings Station (Stag Station)",
+                        "description": "Splits when obtaining Kings Station Stag Station",
+                        "const": "KingsStationStation"
+                    },
+                    {
+                        "title": "Resting Grounds (Stag Station)",
+                        "description": "Splits when obtaining Resting Grounds Stag Station",
+                        "const": "RestingGroundsStation"
+                    },
+                    {
+                        "title": "Distant Village (Stag Station)",
+                        "description": "Splits when obtaining Distant Village Stag Station",
+                        "const": "DeepnestStation"
+                    },
+                    {
+                        "title": "Hidden Station (Stag Station)",
+                        "description": "Splits when obtaining to Hidden Station Stag Station",
+                        "const": "HiddenStationStation"
+                    },
+                    {
+                        "title": "Stagnest (Stag Station)",
+                        "description": "Splits when traveling to Stagnest (Requires Ordered Splits)",
+                        "const": "StagnestStation"
+                    },
+                    {
+                        "title": "Mr. Mushroom 1 (Spot)",
+                        "description": "Splits when talking to Mr. Mushroom",
+                        "const": "MrMushroom1"
+                    },
+                    {
+                        "title": "Mr. Mushroom 2 (Spot)",
+                        "description": "Splits when talking to Mr. Mushroom",
+                        "const": "MrMushroom2"
+                    },
+                    {
+                        "title": "Mr. Mushroom 3 (Spot)",
+                        "description": "Splits when talking to Mr. Mushroom",
+                        "const": "MrMushroom3"
+                    },
+                    {
+                        "title": "Mr. Mushroom 4 (Spot)",
+                        "description": "Splits when talking to Mr. Mushroom",
+                        "const": "MrMushroom4"
+                    },
+                    {
+                        "title": "Mr. Mushroom 5 (Spot)",
+                        "description": "Splits when talking to Mr. Mushroom",
+                        "const": "MrMushroom5"
+                    },
+                    {
+                        "title": "Mr. Mushroom 6 (Spot)",
+                        "description": "Splits when talking to Mr. Mushroom",
+                        "const": "MrMushroom6"
+                    },
+                    {
+                        "title": "Mr. Mushroom 7 (Spot)",
+                        "description": "Splits when talking to Mr. Mushroom",
+                        "const": "MrMushroom7"
+                    },
+                    {
+                        "title": "Ancient Basin (Area)",
+                        "description": "Splits when entering Ancient Basin text first appears",
+                        "const": "Abyss"
+                    },
+                    {
+                        "title": "City Of Tears (Area)",
+                        "description": "Splits when entering City Of Tears text first appears",
+                        "const": "CityOfTears"
+                    },
+                    {
+                        "title": "Colosseum (Area)",
+                        "description": "Splits when entering Colosseum text first appears",
+                        "const": "Colosseum"
+                    },
+                    {
+                        "title": "Crystal Peak (Area)",
+                        "description": "Splits when entering Crystal Peak text first appears",
+                        "const": "CrystalPeak"
+                    },
+                    {
+                        "title": "Deepnest (Area)",
+                        "description": "Splits when entering Deepnest text first appears",
+                        "const": "Deepnest"
+                    },
+                    {
+                        "title": "Deepnest Spa (Area)",
+                        "description": "Splits when entering the Deepnest Spa area with bench",
+                        "const": "DeepnestSpa"
+                    },
+                    {
+                        "title": "Dirtmouth (Area)",
+                        "description": "Splits when entering Dirtmouth text first appears",
+                        "const": "Dirtmouth"
+                    },
+                    {
+                        "title": "Fog Canyon (Area)",
+                        "description": "Splits when entering Fog Canyon text first appears",
+                        "const": "FogCanyon"
+                    },
+                    {
+                        "title": "Forgotten Crossroads (Area)",
+                        "description": "Splits when entering Forgotten Crossroads text first appears",
+                        "const": "ForgottenCrossroads"
+                    },
+                    {
+                        "title": "Fungal Wastes (Area)",
+                        "description": "Splits when entering Fungal Wastes text first appears",
+                        "const": "FungalWastes"
+                    },
+                    {
+                        "title": "Godhome (Area)",
+                        "description": "Splits when entering Godhome text first appears",
+                        "const": "Godhome"
+                    },
+                    {
+                        "title": "Greenpath (Area)",
+                        "description": "Splits when entering Greenpath text first appears",
+                        "const": "Greenpath"
+                    },
+                    {
+                        "title": "Hive (Area)",
+                        "description": "Splits when entering Hive text first appears",
+                        "const": "Hive"
+                    },
+                    {
+                        "title": "Infected Crossroads (Area)",
+                        "description": "Splits when entering Infected Crossroads text first appears",
+                        "const": "InfectedCrossroads"
+                    },
+                    {
+                        "title": "Kingdom's Edge (Area)",
+                        "description": "Splits when entering Kingdom's Edge text first appears",
+                        "const": "KingdomsEdge"
+                    },
+                    {
+                        "title": "Queens Gardens (Area)",
+                        "description": "Splits when entering Queen's Gardens text first appears",
+                        "const": "QueensGardens"
+                    },
+                    {
+                        "title": "Resting Grounds (Area)",
+                        "description": "Splits when entering Resting Grounds text first appears",
+                        "const": "RestingGrounds"
+                    },
+                    {
+                        "title": "Royal Waterways (Area)",
+                        "description": "Splits when entering Royal Waterways text first appears",
+                        "const": "RoyalWaterways"
+                    },
+                    {
+                        "title": "Teachers Archive (Area)",
+                        "description": "Splits when entering Teachers Archive for the first time",
+                        "const": "TeachersArchive"
+                    },
+                    {
+                        "title": "White Palace (Area)",
+                        "description": "Splits when entering White Palace text for the first time",
+                        "const": "WhitePalace"
+                    },
+                    {
+                        "title": "White Palace - Workshop (Area)",
+                        "description": "Splits when visiting the secret room in White Palace",
+                        "const": "WhitePalaceSecretRoom"
+                    },
+                    {
+                        "title": "King's Pass (Area)",
+                        "description": "Splits when leaving King's pass",
+                        "const": "KingsPass"
+                    },
+                    {
+                        "title": "Blue Lake (Area)",
+                        "description": "Splits on transition to Blue Lake from Gruz Mother scene (requires Ordered Splits)",
+                        "const": "BlueLake"
+                    },
+                    {
+                        "title": "Baldur Shell (Charm)",
+                        "description": "Splits when obtaining the Baldur Shell charm",
+                        "const": "BaldurShell"
+                    },
+                    {
+                        "title": "Dashmaster (Charm)",
+                        "description": "Splits when obtaining the Dashmaster charm",
+                        "const": "Dashmaster"
+                    },
+                    {
+                        "title": "Deep Focus (Charm)",
+                        "description": "Splits when obtaining the Deep Focus charm",
+                        "const": "DeepFocus"
+                    },
+                    {
+                        "title": "Defenders Crest (Charm)",
+                        "description": "Splits when obtaining the Defenders Crest charm",
+                        "const": "DefendersCrest"
+                    },
+                    {
+                        "title": "Dreamshield (Charm)",
+                        "description": "Splits when obtaining the Dreamshield charm",
+                        "const": "Dreamshield"
+                    },
+                    {
+                        "title": "Dream Wielder (Charm)",
+                        "description": "Splits when obtaining the Dream Wielder charm",
+                        "const": "DreamWielder"
+                    },
+                    {
+                        "title": "Flukenest (Charm)",
+                        "description": "Splits when obtaining the Flukenest charm",
+                        "const": "Flukenest"
+                    },
+                    {
+                        "title": "Fragile Greed (Charm)",
+                        "description": "Splits when obtaining the Fragile Greed charm",
+                        "const": "FragileGreed"
+                    },
+                    {
+                        "title": "Fragile Heart (Charm)",
+                        "description": "Splits when obtaining the Fragile Heart charm",
+                        "const": "FragileHeart"
+                    },
+                    {
+                        "title": "Fragile Strength (Charm)",
+                        "description": "Splits when obtaining the Fragile Strength charm",
+                        "const": "FragileStrength"
+                    },
+                    {
+                        "title": "Fury of the Fallen (Charm)",
+                        "description": "Splits when obtaining the Fury of the Fallen charm",
+                        "const": "FuryOfTheFallen"
+                    },
+                    {
+                        "title": "Gathering Swarm (Charm)",
+                        "description": "Splits when obtaining the Gathering Swarm charm",
+                        "const": "GatheringSwarm"
+                    },
+                    {
+                        "title": "Glowing Womb (Charm)",
+                        "description": "Splits when obtaining the Glowing Womb charm",
+                        "const": "GlowingWomb"
+                    },
+                    {
+                        "title": "Grimmchild (Charm)",
+                        "description": "Splits when obtaining the Grimmchild charm",
+                        "const": "Grimmchild"
+                    },
+                    {
+                        "title": "Grimmchild Lvl 2 (Charm)",
+                        "description": "Splits when obtaining the Grimmchild Lvl 2 charm",
+                        "const": "Grimmchild2"
+                    },
+                    {
+                        "title": "Grimmchild Lvl 3 (Charm)",
+                        "description": "Splits when obtaining the Grimmchild Lvl 3 charm",
+                        "const": "Grimmchild3"
+                    },
+                    {
+                        "title": "Grimmchild Lvl 4 (Charm)",
+                        "description": "Splits when obtaining the Grimmchild Lvl 4 charm",
+                        "const": "Grimmchild4"
+                    },
+                    {
+                        "title": "Grubberfly's Elegy (Charm)",
+                        "description": "Splits when obtaining the Grubberfly's Elegy charm",
+                        "const": "GrubberflysElegy"
+                    },
+                    {
+                        "title": "Grubsong (Charm)",
+                        "description": "Splits when obtaining the Grubsong charm",
+                        "const": "Grubsong"
+                    },
+                    {
+                        "title": "Heavy Blow (Charm)",
+                        "description": "Splits when obtaining the Heavy Blow charm",
+                        "const": "HeavyBlow"
+                    },
+                    {
+                        "title": "Hiveblood (Charm)",
+                        "description": "Splits when obtaining the Hiveblood charm",
+                        "const": "Hiveblood"
+                    },
+                    {
+                        "title": "Joni's Blessing (Charm)",
+                        "description": "Splits when obtaining the Joni's Blessing charm",
+                        "const": "JonisBlessing"
+                    },
+                    {
+                        "title": "Kingsoul Fragment - Queen's (Charm)",
+                        "description": "Splits on picking up the left Kingsoul White Fragment",
+                        "const": "WhiteFragmentLeft"
+                    },
+                    {
+                        "title": "Kingsoul Fragment - King's (Charm)",
+                        "description": "Splits on picking up the right Kingsoul White Fragment",
+                        "const": "WhiteFragmentRight"
+                    },
+                    {
+                        "title": "Kingsoul (Charm)",
+                        "description": "Splits when obtaining the completed Kingsoul charm",
+                        "const": "Kingsoul"
+                    },
+                    {
+                        "title": "Lifeblood Core (Charm)",
+                        "description": "Splits when obtaining the Lifeblood Core charm",
+                        "const": "LifebloodCore"
+                    },
+                    {
+                        "title": "Lifeblood Heart (Charm)",
+                        "description": "Splits when obtaining the Lifeblood Heart charm",
+                        "const": "LifebloodHeart"
+                    },
+                    {
+                        "title": "Longnail (Charm)",
+                        "description": "Splits when obtaining the Longnail charm",
+                        "const": "Longnail"
+                    },
+                    {
+                        "title": "Mark Of Pride (Charm)",
+                        "description": "Splits when obtaining the Mark Of Pride charm",
+                        "const": "MarkOfPride"
+                    },
+                    {
+                        "title": "Nailmaster's Glory (Charm)",
+                        "description": "Splits when obtaining the Nailmaster's Glory charm",
+                        "const": "NailmastersGlory"
+                    },
+                    {
+                        "title": "Quick Focus (Charm)",
+                        "description": "Splits when obtaining the Quick Focus charm",
+                        "const": "QuickFocus"
+                    },
+                    {
+                        "title": "Quick Slash (Charm)",
+                        "description": "Splits when obtaining the Quick Slash charm",
+                        "const": "QuickSlash"
+                    },
+                    {
+                        "title": "Shaman Stone (Charm)",
+                        "description": "Splits when obtaining Shaman Stone charm",
+                        "const": "ShamanStone"
+                    },
+                    {
+                        "title": "Shape of Unn (Charm)",
+                        "description": "Splits when obtaining Shape of Unn charm",
+                        "const": "ShapeOfUnn"
+                    },
+                    {
+                        "title": "Sharp Shadow (Charm)",
+                        "description": "Splits when obtaining Sharp Shadow charm",
+                        "const": "SharpShadow"
+                    },
+                    {
+                        "title": "Soul Catcher (Charm)",
+                        "description": "Splits when obtaining the Soul Catcher charm",
+                        "const": "SoulCatcher"
+                    },
+                    {
+                        "title": "Soul Eater (Charm)",
+                        "description": "Splits when obtaining the Soul Eater charm",
+                        "const": "SoulEater"
+                    },
+                    {
+                        "title": "Spell Twister (Charm)",
+                        "description": "Splits when obtaining the Spell Twister charm",
+                        "const": "SpellTwister"
+                    },
+                    {
+                        "title": "Spore Shroom (Charm)",
+                        "description": "Splits when obtaining the Spore Shroom charm",
+                        "const": "SporeShroom"
+                    },
+                    {
+                        "title": "Sprintmaster (Charm)",
+                        "description": "Splits when obtaining the Sprintmaster charm",
+                        "const": "Sprintmaster"
+                    },
+                    {
+                        "title": "Stalwart Shell (Charm)",
+                        "description": "Splits when obtaining Stalwart Shell charm",
+                        "const": "StalwartShell"
+                    },
+                    {
+                        "title": "Steady Body (Charm)",
+                        "description": "Splits when obtaining the Steady Body charm",
+                        "const": "SteadyBody"
+                    },
+                    {
+                        "title": "Thorns Of Agony (Charm)",
+                        "description": "Splits when obtaining Thorns of Agony charm",
+                        "const": "ThornsOfAgony"
+                    },
+                    {
+                        "title": "Void Heart (Charm)",
+                        "description": "Splits when changing the Kingsoul to the Void Heart charm",
+                        "const": "VoidHeart"
+                    },
+                    {
+                        "title": "Wayward Compass (Charm)",
+                        "description": "Splits when obtaining Wayward Compass charm",
+                        "const": "WaywardCompass"
+                    },
+                    {
+                        "title": "Weaversong (Charm)",
+                        "description": "Splits when obtaining the Weaversong charm",
+                        "const": "Weaversong"
+                    },
+                    {
+                        "title": "Shrumal Ogres (Charm Notch)",
+                        "description": "Splits when obtaining the charm notch after defeating the Shrumal Ogres",
+                        "const": "NotchShrumalOgres"
+                    },
+                    {
+                        "title": "Fog Canyon (Charm Notch)",
+                        "description": "Splits when obtaining the charm notch in Fog Canyon",
+                        "const": "NotchFogCanyon"
+                    },
+                    {
+                        "title": "Salubra 1 (Charm Notch)",
+                        "description": "Splits when obtaining the first charm notch from Salubra",
+                        "const": "NotchSalubra1"
+                    },
+                    {
+                        "title": "Salubra 2 (Charm Notch)",
+                        "description": "Splits when obtaining the second charm notch from Salubra",
+                        "const": "NotchSalubra2"
+                    },
+                    {
+                        "title": "Salubra 3 (Charm Notch)",
+                        "description": "Splits when obtaining the third charm notch from Salubra",
+                        "const": "NotchSalubra3"
+                    },
+                    {
+                        "title": "Salubra 4 (Charm Notch)",
+                        "description": "Splits when obtaining the fourth charm notch from Salubra",
+                        "const": "NotchSalubra4"
+                    },
+                    {
+                        "title": "Relic Dealer Lemm (NPC)",
+                        "description": "Splits when talking to Lemm for the first time",
+                        "const": "Lemm1"
+                    },
+                    {
+                        "title": "Relic Dealer Lemm Shop (NPC)",
+                        "description": "Splits when talking to Lemm in the shop for the first time",
+                        "const": "Lemm2"
+                    },
+                    {
+                        "title": "Elderbug Flower Quest (NPC)",
+                        "description": "Splits when giving the flower to the Elderbug",
+                        "const": "ElderbugFlower"
+                    },
+                    {
+                        "title": "Bretta Rescued (NPC)",
+                        "description": "Splits when saving Bretta",
+                        "const": "BrettaRescued"
+                    },
+                    {
+                        "title": "Brumm Flame (NPC)",
+                        "description": "Splits when collecting Brumm's flame in Deepnest",
+                        "const": "BrummFlame"
+                    },
+                    {
+                        "title": "Little Fool (NPC)",
+                        "description": "Splits when talking to the Little Fool for the first time",
+                        "const": "LittleFool"
+                    },
+                    {
+                        "title": "Grimm Flame 1 (Flame)",
+                        "description": "Splits after obtaining the first flame.",
+                        "const": "Flame1"
+                    },
+                    {
+                        "title": "Grimm Flame 2 (Flame)",
+                        "description": "Splits after obtaining the second flame.",
+                        "const": "Flame2"
+                    },
+                    {
+                        "title": "Grimm Flame 3 (Flame)",
+                        "description": "Splits after obtaining the third flame.",
+                        "const": "Flame3"
+                    },
+                    {
+                        "title": "Pale Ore 1 (Ore)",
+                        "description": "Splits after obtaining the first pale ore.",
+                        "const": "Ore1"
+                    },
+                    {
+                        "title": "Pale Ore 2 (Ore)",
+                        "description": "Splits after obtaining the second pale ore.",
+                        "const": "Ore2"
+                    },
+                    {
+                        "title": "Pale Ore 3 (Ore)",
+                        "description": "Splits after obtaining the third pale ore.",
+                        "const": "Ore3"
+                    },
+                    {
+                        "title": "Pale Ore 4 (Ore)",
+                        "description": "Splits after obtaining the fourth pale ore.",
+                        "const": "Ore4"
+                    },
+                    {
+                        "title": "Pale Ore 5 (Ore)",
+                        "description": "Splits after obtaining the fifth pale ore.",
+                        "const": "Ore5"
+                    },
+                    {
+                        "title": "Pale Ore 6 (Ore)",
+                        "description": "Splits after obtaining the sixth pale ore.",
+                        "const": "Ore6"
+                    },
+                    {
+                        "title": "Rescued Grub 1 (Grub)",
+                        "description": "Splits when rescuing grub #1",
+                        "const": "Grub1"
+                    },
+                    {
+                        "title": "Rescued Grub 2 (Grub)",
+                        "description": "Splits when rescuing grub #2",
+                        "const": "Grub2"
+                    },
+                    {
+                        "title": "Rescued Grub 3 (Grub)",
+                        "description": "Splits when rescuing grub #3",
+                        "const": "Grub3"
+                    },
+                    {
+                        "title": "Rescued Grub 4 (Grub)",
+                        "description": "Splits when rescuing grub #4",
+                        "const": "Grub4"
+                    },
+                    {
+                        "title": "Rescued Grub 5 (Grub)",
+                        "description": "Splits when rescuing grub #5",
+                        "const": "Grub5"
+                    },
+                    {
+                        "title": "Rescued Grub 6 (Grub)",
+                        "description": "Splits when rescuing grub #6",
+                        "const": "Grub6"
+                    },
+                    {
+                        "title": "Rescued Grub 7 (Grub)",
+                        "description": "Splits when rescuing grub #7",
+                        "const": "Grub7"
+                    },
+                    {
+                        "title": "Rescued Grub 8 (Grub)",
+                        "description": "Splits when rescuing grub #8",
+                        "const": "Grub8"
+                    },
+                    {
+                        "title": "Rescued Grub 9 (Grub)",
+                        "description": "Splits when rescuing grub #9",
+                        "const": "Grub9"
+                    },
+                    {
+                        "title": "Rescued Grub 10 (Grub)",
+                        "description": "Splits when rescuing grub #10",
+                        "const": "Grub10"
+                    },
+                    {
+                        "title": "Rescued Grub 11 (Grub)",
+                        "description": "Splits when rescuing grub #11",
+                        "const": "Grub11"
+                    },
+                    {
+                        "title": "Rescued Grub 12 (Grub)",
+                        "description": "Splits when rescuing grub #12",
+                        "const": "Grub12"
+                    },
+                    {
+                        "title": "Rescued Grub 13 (Grub)",
+                        "description": "Splits when rescuing grub #13",
+                        "const": "Grub13"
+                    },
+                    {
+                        "title": "Rescued Grub 14 (Grub)",
+                        "description": "Splits when rescuing grub #14",
+                        "const": "Grub14"
+                    },
+                    {
+                        "title": "Rescued Grub 15 (Grub)",
+                        "description": "Splits when rescuing grub #15",
+                        "const": "Grub15"
+                    },
+                    {
+                        "title": "Rescued Grub 16 (Grub)",
+                        "description": "Splits when rescuing grub #16",
+                        "const": "Grub16"
+                    },
+                    {
+                        "title": "Rescued Grub 17 (Grub)",
+                        "description": "Splits when rescuing grub #17",
+                        "const": "Grub17"
+                    },
+                    {
+                        "title": "Rescued Grub 18 (Grub)",
+                        "description": "Splits when rescuing grub #18",
+                        "const": "Grub18"
+                    },
+                    {
+                        "title": "Rescued Grub 19 (Grub)",
+                        "description": "Splits when rescuing grub #19",
+                        "const": "Grub19"
+                    },
+                    {
+                        "title": "Rescued Grub 20 (Grub)",
+                        "description": "Splits when rescuing grub #20",
+                        "const": "Grub20"
+                    },
+                    {
+                        "title": "Rescued Grub 21 (Grub)",
+                        "description": "Splits when rescuing grub #21",
+                        "const": "Grub21"
+                    },
+                    {
+                        "title": "Rescued Grub 22 (Grub)",
+                        "description": "Splits when rescuing grub #22",
+                        "const": "Grub22"
+                    },
+                    {
+                        "title": "Rescued Grub 23 (Grub)",
+                        "description": "Splits when rescuing grub #23",
+                        "const": "Grub23"
+                    },
+                    {
+                        "title": "Rescued Grub 24 (Grub)",
+                        "description": "Splits when rescuing grub #24",
+                        "const": "Grub24"
+                    },
+                    {
+                        "title": "Rescued Grub 25 (Grub)",
+                        "description": "Splits when rescuing grub #25",
+                        "const": "Grub25"
+                    },
+                    {
+                        "title": "Rescued Grub 26 (Grub)",
+                        "description": "Splits when rescuing grub #26",
+                        "const": "Grub26"
+                    },
+                    {
+                        "title": "Rescued Grub 27 (Grub)",
+                        "description": "Splits when rescuing grub #27",
+                        "const": "Grub27"
+                    },
+                    {
+                        "title": "Rescued Grub 28 (Grub)",
+                        "description": "Splits when rescuing grub #28",
+                        "const": "Grub28"
+                    },
+                    {
+                        "title": "Rescued Grub 29 (Grub)",
+                        "description": "Splits when rescuing grub #29",
+                        "const": "Grub29"
+                    },
+                    {
+                        "title": "Rescued Grub 30 (Grub)",
+                        "description": "Splits when rescuing grub #30",
+                        "const": "Grub30"
+                    },
+                    {
+                        "title": "Rescued Grub 31 (Grub)",
+                        "description": "Splits when rescuing grub #31",
+                        "const": "Grub31"
+                    },
+                    {
+                        "title": "Rescued Grub 32 (Grub)",
+                        "description": "Splits when rescuing grub #32",
+                        "const": "Grub32"
+                    },
+                    {
+                        "title": "Rescued Grub 33 (Grub)",
+                        "description": "Splits when rescuing grub #33",
+                        "const": "Grub33"
+                    },
+                    {
+                        "title": "Rescued Grub 34 (Grub)",
+                        "description": "Splits when rescuing grub #34",
+                        "const": "Grub34"
+                    },
+                    {
+                        "title": "Rescued Grub 35 (Grub)",
+                        "description": "Splits when rescuing grub #35",
+                        "const": "Grub35"
+                    },
+                    {
+                        "title": "Rescued Grub 36 (Grub)",
+                        "description": "Splits when rescuing grub #36",
+                        "const": "Grub36"
+                    },
+                    {
+                        "title": "Rescued Grub 37 (Grub)",
+                        "description": "Splits when rescuing grub #37",
+                        "const": "Grub37"
+                    },
+                    {
+                        "title": "Rescued Grub 38 (Grub)",
+                        "description": "Splits when rescuing grub #38",
+                        "const": "Grub38"
+                    },
+                    {
+                        "title": "Rescued Grub 39 (Grub)",
+                        "description": "Splits when rescuing grub #39",
+                        "const": "Grub39"
+                    },
+                    {
+                        "title": "Rescued Grub 40 (Grub)",
+                        "description": "Splits when rescuing grub #40",
+                        "const": "Grub40"
+                    },
+                    {
+                        "title": "Rescued Grub 41 (Grub)",
+                        "description": "Splits when rescuing grub #41",
+                        "const": "Grub41"
+                    },
+                    {
+                        "title": "Rescued Grub 42 (Grub)",
+                        "description": "Splits when rescuing grub #42",
+                        "const": "Grub42"
+                    },
+                    {
+                        "title": "Rescued Grub 43 (Grub)",
+                        "description": "Splits when rescuing grub #43",
+                        "const": "Grub43"
+                    },
+                    {
+                        "title": "Rescued Grub 44 (Grub)",
+                        "description": "Splits when rescuing grub #44",
+                        "const": "Grub44"
+                    },
+                    {
+                        "title": "Rescued Grub 45 (Grub)",
+                        "description": "Splits when rescuing grub #45",
+                        "const": "Grub45"
+                    },
+                    {
+                        "title": "Rescued Grub 46 (Grub)",
+                        "description": "Splits when rescuing grub #46",
+                        "const": "Grub46"
+                    },
+                    {
+                        "title": "Whispering Root (Ancestral Mound)",
+                        "description": "Splits upon completing the whispering root in the Ancestral Mound",
+                        "const": "TreeMound"
+                    },
+                    {
+                        "title": "Whispering Root (City of Tears)",
+                        "description": "Splits upon completing the whispering root in the City of Tears",
+                        "const": "TreeCity"
+                    },
+                    {
+                        "title": "Whispering Root (Crystal Peak)",
+                        "description": "Splits upon completing the whispering root in Crystal Peak",
+                        "const": "TreePeak"
+                    },
+                    {
+                        "title": "Whispering Root (Deepnest)",
+                        "description": "Splits upon completing the whispering root in Deepnest",
+                        "const": "TreeDeepnest"
+                    },
+                    {
+                        "title": "Whispering Root (Forgotten Crossroads)",
+                        "description": "Splits upon completing the whispering root in the Forgotten Crossroads",
+                        "const": "TreeCrossroads"
+                    },
+                    {
+                        "title": "Whispering Root (Leg Eater)",
+                        "description": "Splits upon completing the whispering root left from Leg Eater",
+                        "const": "TreeLegEater"
+                    },
+                    {
+                        "title": "Whispering Root (Mantis Village)",
+                        "description": "Splits upon completing the whispering root above the Mantis Village",
+                        "const": "TreeMantisVillage"
+                    },
+                    {
+                        "title": "Whispering Root (Greenpath)",
+                        "description": "Splits upon completing the whispering root in Greenpath",
+                        "const": "TreeGreenpath"
+                    },
+                    {
+                        "title": "Whispering Root (Hive)",
+                        "description": "Splits upon completing the whispering root in the Hive",
+                        "const": "TreeHive"
+                    },
+                    {
+                        "title": "Whispering Root (Howling Cliifs)",
+                        "description": "Splits upon completing the whispering root in the Howling Cliifs",
+                        "const": "TreeCliffs"
+                    },
+                    {
+                        "title": "Whispering Root (Kingdom's Edge)",
+                        "description": "Splits upon completing the whispering root in the Kingdom's Edge",
+                        "const": "TreeKingdomsEdge"
+                    },
+                    {
+                        "title": "Whispering Root (Queen's Gardens)",
+                        "description": "Splits upon completing the whispering root in the Queen's Gardens",
+                        "const": "TreeQueensGardens"
+                    },
+                    {
+                        "title": "Whispering Root (Resting Grounds)",
+                        "description": "Splits upon completing the whispering root in the Resting Grounds",
+                        "const": "TreeRestingGrounds"
+                    },
+                    {
+                        "title": "Whispering Root (Royal Waterways)",
+                        "description": "Splits upon completing the whispering root in the Royal Waterways",
+                        "const": "TreeWaterways"
+                    },
+                    {
+                        "title": "Whispering Root (Spirits' Glade)",
+                        "description": "Splits upon completing the whispering root in the Spirits' Glade",
+                        "const": "TreeGlade"
+                    },
+                    {
+                        "title": "Queen's Garden Bench (Toll)",
+                        "description": "Splits when buying Queen's Garden toll bench",
+                        "const": "TollBenchQG"
+                    },
+                    {
+                        "title": "Sanctum Bench (Toll)",
+                        "description": "Splits when buying City/Sanctum toll bench by Cornifer's location",
+                        "const": "TollBenchCity"
+                    },
+                    {
+                        "title": "Basin Bench (Toll)",
+                        "description": "Splits when buying Ancient Basin toll bench",
+                        "const": "TollBenchBasin"
+                    },
+                    {
+                        "title": "White Palace - First Orb (Lever)",
+                        "description": "Splits when lighting the first orb in White Palace",
+                        "const": "WhitePalaceOrb1"
+                    },
+                    {
+                        "title": "White Palace - Second Orb (Lever)",
+                        "description": "Splits when lighting the second orb in White Palace",
+                        "const": "WhitePalaceOrb2"
+                    },
+                    {
+                        "title": "White Palace - Third Orb (Lever)",
+                        "description": "Splits when lighting the third orb in White Palace",
+                        "const": "WhitePalaceOrb3"
+                    }
+                ]
             }
         }
     },
