@@ -11,32 +11,13 @@ import CategorySelect from "./CategorySelect";
 import SplitConfigEditor from "./SplitConfigEditor";
 import SplitOutputEditor from "./SplitOutputEditor";
 
-const sampleConfig = {
-    "splitIds": [
-        "KingsPass",
-        "VengefulSpirit",
-        "Greenpath",
-        "MothwingCloak",
-        "Aluba"
-    ],
-    "ordered": true,
-    "endTriggeringAutosplit": true,
-    "gameName": "Hollow Knight Category Extensions",
-    "categoryName": "Aluba%",
-    "variables": {
-        "platform": "PC",
-        "patch": "1.4.3.2",
-        "glitch": "Current Patch NMG",
-    },
-};
-
 type AppProps = Record<string, never>;
 interface AppState {
     configInput: string;
     splitOutput: string;
     categories?: Record<string, Array<CategoryDefinition>>;
+    initialCategory: string;
 }
-const defaultValue = JSON.stringify(sampleConfig, null, 4);
 export default class App extends Component<AppProps, AppState> {
 
     private inputEditor: React.MutableRefObject<SplitConfigEditor|null>;
@@ -44,13 +25,23 @@ export default class App extends Component<AppProps, AppState> {
     constructor(props: AppProps) {
         super(props);
         this.state = {
-            configInput: defaultValue,
+            configInput: "",
             splitOutput: "",
+            initialCategory: "",
         };
         this.inputEditor = React.createRef();
     }
     public async componentDidMount(): Promise<void> {
-        this.setState({ categories: await getCategoryDirectory(), });
+        const newState = { categories: await getCategoryDirectory(), initialCategory: "", };
+        const hash = window.location.hash.substring(1);
+        if (newState.categories) {
+            const initialCategory = Object.values(newState.categories).flat().find(category => {
+                return category.fileName === hash;
+            });
+            newState.initialCategory = initialCategory?.fileName || "aluba";
+            await this.updateCategory(newState.initialCategory);
+        }
+        this.setState(newState);
     }
     public render(): ReactNode {
         return (
@@ -114,11 +105,11 @@ export default class App extends Component<AppProps, AppState> {
                                     so the inital value will always be the first in the list, not Aluba.
                                     Setting value instead of defaultValue leads to the change event
                                     not triggering when the initial value is re-selected. */}
-                                {this.state.categories && <CategorySelect
+                                {this.state.categories && this.state.initialCategory && <CategorySelect
                                     id="categories"
                                     onChange={this.onCategorySelect.bind(this)}
                                     data={this.state.categories}
-                                    initial="aluba"
+                                    initial={this.state.initialCategory}
                                 />}
                                 <ArrowButton
                                     text="Generate"
@@ -127,7 +118,7 @@ export default class App extends Component<AppProps, AppState> {
                                 />
                             </div>
                             <SplitConfigEditor
-                                defaultValue={defaultValue}
+                                defaultValue={this.state.configInput}
                                 onChange={this.onConfigInputChange.bind(this)}
                                 ref={this.inputEditor}
                             />
@@ -157,10 +148,18 @@ export default class App extends Component<AppProps, AppState> {
         });
     }
 
+    private async updateCategory(name: string) {
+        if (name && this.inputEditor.current) {
+            const editorContent = await getCategory(name);
+            this.inputEditor.current.setContent(editorContent);
+            this.onConfigInputChange(editorContent);
+            window.location.hash = name;
+        }
+    }
     private async onCategorySelect() {
         const categorySelect = document.getElementById("categories") as HTMLInputElement;
-        if (categorySelect.value && this.inputEditor.current) {
-            this.inputEditor.current.setContent(await getCategory(categorySelect.value));
+        if (categorySelect.value) {
+            await this.updateCategory(categorySelect.value);
         }
     }
 
