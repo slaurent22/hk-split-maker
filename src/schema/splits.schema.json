@@ -1779,8 +1779,8 @@
                         "const": "TreeHive"
                     },
                     {
-                        "title": "Whispering Root (Howling Cliifs)",
-                        "description": "Splits upon completing the whispering root in the Howling Cliifs",
+                        "title": "Whispering Root (Howling Cliffs)",
+                        "description": "Splits upon completing the whispering root in the Howling Cliffs",
                         "const": "TreeCliffs"
                     },
                     {
@@ -3529,8 +3529,8 @@
                         "const": "-TreeHive"
                     },
                     {
-                        "title": "Whispering Root (Howling Cliifs)",
-                        "description": "(subsplit) Splits upon completing the whispering root in the Howling Cliifs",
+                        "title": "Whispering Root (Howling Cliffs)",
+                        "description": "(subsplit) Splits upon completing the whispering root in the Howling Cliffs",
                         "const": "-TreeCliffs"
                     },
                     {
