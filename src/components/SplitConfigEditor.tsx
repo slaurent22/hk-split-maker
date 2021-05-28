@@ -63,7 +63,12 @@ export default class SplitConfigEditor extends Component<Props, State> {
         );
     }
     public setContent = (value: string): void => {
-        this.editorRef.current?.setValue(value);
+        if (this.editorRef.current) {
+            this.editorRef.current.setValue(value);
+        }
+        else {
+            this.setState({ value, });
+        }
     };
     private handleMounted: OnMount = (editorInstance: editor.IStandaloneCodeEditor) => {
         this.editorRef.current = editorInstance;
