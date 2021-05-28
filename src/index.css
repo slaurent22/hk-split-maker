@@ -2,14 +2,18 @@ body {
     background-color: #2f3136;
     color: rgb(220, 221, 222);
 }
+
 #app {
     padding: 10px 30px;
 }
-h1, h2 {
+
+h1,
+h2 {
     color: white;
     font-variant: small-caps;
     text-align: center;
 }
+
 a {
     color: #00b0f4;
 }
@@ -19,38 +23,47 @@ a {
     width: 90%;
     max-width: 600px;
 }
+
 ol {
     max-width: 1024px;
     margin-left: auto;
     margin-right: auto;
 }
+
 #input-output {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-evenly;
     width: 100%;
 }
+
 #input-output .side {
     display: block;
     width: 600px;
 }
+
 #editor-section {
     margin-right: 20px;
 }
+
 #output-section {
     margin-left: 20px;
 }
+
 .output-container {
     display: block;
     width: 100%;
 }
+
 #submit-button {
     margin-left: auto;
     margin-right: 0;
 }
+
 #download-button {
     margin-left: 0;
 }
+
 .row {
     display: flex;
     flex-wrap: wrap;
@@ -61,6 +74,7 @@ ol {
     min-width: 100%;
     border: 1px solid #ccc;
 }
+
 .hk-split-maker-monaco-editor .monaco-editor,
 .hk-split-maker-monaco-editor .monaco-editor .margin,
 .hk-split-maker-monaco-editor .monaco-editor-background {
@@ -71,14 +85,18 @@ ol {
     #input-output {
         flex-direction: column;
     }
+
     #input-output .side {
         width: 100%;
         min-width: 0;
     }
+
     .output-container {
         width: 100%;
     }
-    #editor-section, #output-section {
+
+    #editor-section,
+    #output-section {
         margin: 0;
     }
 }
