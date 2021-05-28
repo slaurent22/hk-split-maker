@@ -77,6 +77,17 @@ export default class App extends Component<AppProps, AppState> {
                     <li>
                         List your desired splits in the "splitIds" section of
                         the configuration.
+                        <ul>
+                            <li>
+                                Mark a split as a <b>subsplit</b> by prefixing the name with a minus sign (-).
+                                These entries will get an autosplit and a segment name beginning with the minus sign,
+                                for use with the LiveSplit Subsplits layout component.
+                            </li>
+                            <li>
+                                Include your own <b>manual splits</b> by prefixing the name with a precent sign (%).
+                                These entries will neither get an autosplit nor an icon.
+                            </li>
+                        </ul>
                     </li>
                     <li>
                         Change the other configuration values as you see fit.

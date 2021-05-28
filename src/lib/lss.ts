@@ -14,6 +14,9 @@ export interface Config {
     };
 }
 
+const MANUAL_SPLIT_RE = /%(?<name>.+)/;
+const SUB_SPLIT_RE = /-(?<name>.+)/;
+
 function boolRepr(bool: boolean): string {
     return bool ? "True" : "False";
 }
@@ -90,8 +93,46 @@ export async function createSplitsXml(config: Config): Promise<string> {
     const iconFiles = new Set<string>();
     const iconData = new Map<string, string>();
 
-    splitIds.forEach(splitId => {
-        const file = iconLocations.get(splitId)?.file;
+    const parsedSplitIds = splitIds.map(splitId => {
+        let rawId = splitId;
+        let manual = false;
+        let subsplit = false;
+        const manualSplitMatch = MANUAL_SPLIT_RE.exec(splitId);
+        if (manualSplitMatch) {
+            const name = manualSplitMatch.groups?.name;
+            if (!name) {
+                throw new Error(`Failed to parse name out of "${splitId}"`);
+            }
+            rawId = name;
+            manual = true;
+        }
+
+        const subSplitMatch = SUB_SPLIT_RE.exec(rawId);
+        if (subSplitMatch) {
+            if (!subSplitMatch.groups) {
+                throw new Error(`Failed to parse name out of "${splitId}"`);
+            }
+            rawId = subSplitMatch.groups.name;
+            subsplit = true;
+        }
+
+        const splitDefinition = splitDefinitions.get(rawId);
+        if (!splitDefinition && !manual) {
+            throw new Error(`Failed to find a definition for split id ${rawId}`);
+        }
+
+        const name = splitDefinition ? splitDefinition.name : rawId;
+
+        return {
+            rawId,
+            manual,
+            subsplit,
+            name,
+        };
+    });
+
+    parsedSplitIds.forEach(({ rawId, }) => {
+        const file = iconLocations.get(rawId)?.file;
         if (file) {
             iconFiles.add(file);
         }
@@ -105,24 +146,28 @@ export async function createSplitsXml(config: Config): Promise<string> {
         icons.forEach((value, key) => iconData.set(key, value));
     });
 
-    const segments = splitIds.map(splitId => {
-        const splitDefinition = splitDefinitions.get(splitId);
-        if (!splitDefinition) {
-            throw new Error(`Failed to find a definition for split id ${splitId}`);
-        }
-        const iconInfo = iconLocations.get(splitId);
+    const segments = parsedSplitIds.map(({ rawId, subsplit, name, }) => {
+        const iconInfo = iconLocations.get(rawId);
         let icon = "";
         if (iconInfo) {
             icon = iconData.get(iconInfo.imageId) || "";
         }
-        return getSegmentNode(splitDefinition.name, icon);
+        const namePrefix = subsplit ? "-" : "";
+        return getSegmentNode(`${namePrefix}${name}`, icon);
     });
 
     if (!endTriggeringAutosplit) {
         segments.push(getSegmentNode(categoryName));
     }
 
-    const autosplits = splitIds.map(Split => ({ Split, }));
+    const autosplits = parsedSplitIds
+        .filter(({ manual, }) => {
+            return !manual;
+        })
+        .map(({ rawId, }) => {
+            return { Split: rawId, };
+        });
+
     return xml({
         Run: [
             { _attr: { version: "1.7.0", }, },
