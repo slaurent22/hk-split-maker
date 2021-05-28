@@ -6,7 +6,7 @@ import Icons, { getIconDirectory } from "./icons";
 // const SPLITS_DEFINITIONS_FILE = "./asset/splits.txt";
 const SPLITS_DEFINITIONS_REGEXP =
     /\[Description\("(?<description>.+)"\), ToolTip\("(?<tooltip>.+)"\)\]\s+(?<id>\w+),/g;
-// const DESCRIPTION_NAME_REGEXP = /(?<name>.+)\s+\(.+\)/;
+const DESCRIPTION_NAME_REGEXP = /(?<name>.+)\s+\((?<qualifier>.+)\)/;
 
 interface SplitDefinition {
     description: string;
@@ -16,11 +16,31 @@ interface SplitDefinition {
 }
 
 function getName(description: string) {
-    return description;
-    // const match = DESCRIPTION_NAME_REGEXP.exec(description);
-    // assert(match, `Invalid Description: ${description}`);
-    // assert(match.groups, "RegExp match must have groups");
-    // return match.groups.name;
+    const match = DESCRIPTION_NAME_REGEXP.exec(description);
+    if (!match) {
+        throw new Error(`Invalid Description: ${description}`);
+    }
+    if (!match.groups) {
+        throw new Error("RegExp match must have groups");
+    }
+
+    const { name, qualifier, } = match.groups;
+
+    if (name === "Whispering Root") {
+        // qualifier is the area
+        return `${qualifier} Root`;
+    }
+    switch (qualifier) {
+    case "Charm Notch":
+        return `${name} Notch`;
+    case "Stag Station":
+        return `${name} Stag`;
+    case "Grub": {
+        return name.substr("Rescued ".length);
+    }
+    default:
+        return name;
+    }
 }
 
 export function parseSplitsDefinitions(): Map<string, SplitDefinition> {
