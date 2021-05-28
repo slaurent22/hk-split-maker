@@ -99,7 +99,7 @@ export default class App extends Component<AppProps, AppState> {
                         <div className="output-container">
                             <div className="row">
                                 {/* Hacky, but useful: Only render the drop down once we have data.
-                                    Otherwise, the initial defaultValue will be empty, and never uptdated,
+                                    Otherwise, the initial defaultValue will be empty, and never updated,
                                     so the inital value will always be the first in the list, not Aluba.
                                     Setting value instead of defaultValue leads to the change event
                                     not triggering when the initial value is re-selected. */}
