@@ -1,0 +1,29 @@
+{
+    "splitIds": [
+        "VengefulSpirit",
+        "Greenpath",
+        "MothwingCloak",
+        "NotchShrumalOgres",
+        "MantisClaw",
+        "CycloneSlash",
+        "ShamanStone",
+        "GorgeousHusk",
+        "DashSlash",
+        "NailUpgrade1",
+        "ShadeSoul",
+        "SpellTwister",
+        "LittleFool",
+        "ColosseumBronze",
+        "ColosseumSilver",
+        "ColosseumGold"
+    ],
+    "ordered": true,
+    "endTriggeringAutosplit": true,
+    "gameName": "Hollow Knight Category Extensions",
+    "categoryName": "Fool%",
+    "variables": {
+        "platform": "PC",
+        "patch": "1.2.2.1",
+        "glitch": "No Major Glitches"
+    }
+}

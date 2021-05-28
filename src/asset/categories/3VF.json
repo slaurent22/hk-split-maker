@@ -1,0 +1,21 @@
+{
+    "splitIds": [
+        "VengefulSpirit",
+        "Greenpath",
+        "MothwingCloak",
+        "MantisClaw",
+        "VesselFragment1",
+        "BlueLake",
+        "VesselFragment2",
+        "Vessel1"
+    ],
+    "ordered": true,
+    "endTriggeringAutosplit": true,
+    "gameName": "Hollow Knight Category Extensions",
+    "categoryName": "3 Vessel Fragments",
+    "variables": {
+        "platform": "PC",
+        "patch": "1.4.3.2",
+        "glitch": "Current Patch NMG"
+    }
+}

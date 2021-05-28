@@ -1,9 +1,13 @@
-import type { FormEvent, ReactNode } from "react";
+import type { ReactNode } from "react";
 import React, { Component } from "react";
 import { saveAs } from "file-saver";
+import { getCategory, getCategoryDirectory } from "../lib/categories";
+import type { CategoryDefinition } from "../asset/categories/category-directory.json";
 import type { Config } from "../lib/lss";
 import { createSplitsXml } from "../lib/lss";
-import logo from "../asset/image/favicon.png";
+import logo from "../asset/image/logo.png";
+import ArrowButton from "./ArrowButton";
+import CategorySelect from "./CategorySelect";
 import SplitConfigEditor from "./SplitConfigEditor";
 import SplitOutputEditor from "./SplitOutputEditor";
 
@@ -30,29 +34,36 @@ type AppProps = Record<string, never>;
 interface AppState {
     configInput: string;
     splitOutput: string;
+    categories?: Record<string, Array<CategoryDefinition>>;
 }
 const defaultValue = JSON.stringify(sampleConfig, null, 4);
 export default class App extends Component<AppProps, AppState> {
+
+    private inputEditor: React.MutableRefObject<SplitConfigEditor|null>;
+
     constructor(props: AppProps) {
         super(props);
         this.state = {
             configInput: defaultValue,
             splitOutput: "",
         };
+        this.inputEditor = React.createRef();
+    }
+    public async componentDidMount(): Promise<void> {
+        this.setState({ categories: await getCategoryDirectory(), });
     }
     public render(): ReactNode {
         return (
-            <div className="App">
-                <h1>
-                    <img
-                        id="logo"
-                        src={logo}
-                        alt="HK Split Maker logo"
-                        width={45}
-                        height={42}
-                    ></img>
-                    {" Hollow Knight Split Maker"}
-                </h1>
+            <div id="app">
+                <header>
+                    <h1>
+                        <img
+                            id="logo"
+                            src={logo}
+                            alt="HK Split Maker logo"
+                        ></img>
+                    </h1>
+                </header>
                 <h2>Instructions</h2>
                 <ol>
                     <li>
@@ -73,7 +84,7 @@ export default class App extends Component<AppProps, AppState> {
                         LiveSplit later if needed!
                     </li>
                     <li>
-                        Click "Submit". The button will temporarily disable
+                        Click "Generate". The button will temporarily disable
                         while in progress.
                     </li>
                     <li>
@@ -82,30 +93,46 @@ export default class App extends Component<AppProps, AppState> {
                         Splits ➡ From File
                     </li>
                 </ol>
-                <div className="input-output">
-                    <div className="editor-section">
+                <div id="input-output">
+                    <div id="editor-section" className="side">
                         <h2>Input config JSON</h2>
-                        <form onSubmit={this.onSubmit.bind(this)}>
+                        <div className="output-container">
+                            <div className="row">
+                                {/* Hacky, but useful: Only render the drop down once we have data.
+                                    Otherwise, the initial defaultValue will be empty, and never updated,
+                                    so the inital value will always be the first in the list, not Aluba.
+                                    Setting value instead of defaultValue leads to the change event
+                                    not triggering when the initial value is re-selected. */}
+                                {this.state.categories && <CategorySelect
+                                    id="categories"
+                                    onChange={this.onCategorySelect.bind(this)}
+                                    data={this.state.categories}
+                                    initial="aluba"
+                                />}
+                                <ArrowButton
+                                    text="Generate"
+                                    id="submit-button"
+                                    onClick={this.onSubmit.bind(this)}
+                                />
+                            </div>
                             <SplitConfigEditor
                                 defaultValue={defaultValue}
                                 onChange={this.onConfigInputChange.bind(this)}
+                                ref={this.inputEditor}
                             />
-                            <br></br>
-                            <input id="submit-button" type="submit" value="Submit"/>
-                        </form>
+                        </div>
                     </div>
-                    <div className="separator"></div>
-                    <div className="output-section">
+                    <div id="output-section" className="side">
                         <h2>Output Splits File</h2>
                         <div className="output-container">
+                            <ArrowButton
+                                id="download-button"
+                                text="Download"
+                                onClick={this.onDownload.bind(this)}
+                            />
                             <SplitOutputEditor
                                 defaultValue={this.state.splitOutput}
                             />
-                            <br></br>
-                            <button
-                                id="download-button"
-                                onClick={this.onDownload.bind(this)}
-                            >💾 Download</button>
                         </div>
                     </div>
                 </div>
@@ -119,12 +146,18 @@ export default class App extends Component<AppProps, AppState> {
         });
     }
 
+    private async onCategorySelect() {
+        const categorySelect = document.getElementById("categories") as HTMLInputElement;
+        if (categorySelect.value && this.inputEditor.current) {
+            this.inputEditor.current.setContent(await getCategory(categorySelect.value));
+        }
+    }
+
     private parseConfigInput() {
         return JSON.parse(this.state.configInput) as Config;
     }
 
-    private async onSubmit(event: FormEvent<HTMLFormElement>): Promise<void> {
-        event.preventDefault();
+    private async onSubmit(): Promise<void> {
         let configObject;
         try {
             configObject = this.parseConfigInput();
@@ -138,6 +171,7 @@ export default class App extends Component<AppProps, AppState> {
 
         const submitButton = document.getElementById("submit-button") as HTMLInputElement;
         submitButton.disabled = true;
+
         try {
             // todo: runtime schema validation
             output = await createSplitsXml(configObject);

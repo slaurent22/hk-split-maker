@@ -1,0 +1,15 @@
+{
+    "splitIds": [
+        "VengefulSpirit",
+        "Greenpath"
+    ],
+    "ordered": true,
+    "endTriggeringAutosplit": false,
+    "gameName": "Hollow Knight Category Extensions",
+    "categoryName": "Eat Me Too",
+    "variables": {
+        "platform": "PC",
+        "patch": "1.4.3.2",
+        "glitch": "Current Patch NMG"
+    }
+}

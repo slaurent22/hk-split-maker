@@ -1,0 +1,22 @@
+{
+    "splitIds": [
+        "GruzMother",
+        "DreamNail",
+        "MantisClaw",
+        "Hegemol",
+        "BlackKnight",
+        "Lurien",
+        "CrystalHeart",
+        "Uumuu",
+        "Monomon"
+    ],
+    "ordered": true,
+    "endTriggeringAutosplit": false,
+    "gameName": "Hollow Knight Mods",
+    "categoryName": "Low% All Bindings",
+    "variables": {
+        "platform": "PC",
+        "patch": "1.4.3.2",
+        "glitch": "Current Patch NMG"
+    }
+}

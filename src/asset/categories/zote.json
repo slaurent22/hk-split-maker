@@ -1,0 +1,22 @@
+{
+    "splitIds": [
+        "VengefulSpirit",
+        "Greenpath",
+        "Zote1",
+        "MothwingCloak",
+        "MantisClaw",
+        "Zote2",
+        "TramPass",
+        "LittleFool",
+        "ZoteKilled"
+    ],
+    "ordered": true,
+    "endTriggeringAutosplit": true,
+    "gameName": "Hollow Knight Category Extensions",
+    "categoryName": "Zote%",
+    "variables": {
+        "platform": "PC",
+        "patch": "1.4.3.2",
+        "glitch": "No Major Glitches"
+    }
+}

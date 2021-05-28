@@ -1,0 +1,22 @@
+{
+    "splitIds": [
+        "VengefulSpirit",
+        "Greenpath",
+        "MothwingCloak",
+        "MantisClaw",
+        "GruzMother",
+        "GorgeousHusk",
+        "LumaflyLantern",
+        "CrystalGuardian1",
+        "CrystalGuardian2"
+    ],
+    "ordered": true,
+    "endTriggeringAutosplit": true,
+    "gameName": "Hollow Knight Category Extensions",
+    "categoryName": "Enraged Guardian%",
+    "variables": {
+        "platform": "PC",
+        "patch": "1.4.3.2",
+        "glitch": "Current Patch NMG"
+    }
+}

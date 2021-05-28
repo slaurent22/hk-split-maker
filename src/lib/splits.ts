@@ -1,4 +1,5 @@
 import splits from "../asset/splits.txt";
+import type { IconDefinition } from "../asset/icons/icon-directory.json";
 import type { IconClass } from "./icons";
 import Icons, { getIconDirectory } from "./icons";
 
@@ -12,10 +13,6 @@ interface SplitDefinition {
     tooltip: string;
     id: string;
     name: string;
-}
-interface IconDefinition {
-    imageId: string;
-    file: string;
 }
 
 function getName(description: string) {
