@@ -22,6 +22,8 @@ export default class App extends Component<AppProps, AppState> {
 
     private inputEditor: React.MutableRefObject<SplitConfigEditor|null>;
 
+    private categoryHasChanged = false;
+
     constructor(props: AppProps) {
         super(props);
         this.state = {
@@ -153,7 +155,10 @@ export default class App extends Component<AppProps, AppState> {
             const editorContent = await getCategory(name);
             this.inputEditor.current.setContent(editorContent);
             this.onConfigInputChange(editorContent);
-            window.location.hash = name;
+            if (this.categoryHasChanged) {
+                window.location.hash = name;
+            }
+            this.categoryHasChanged = true;
         }
     }
     private async onCategorySelect() {
