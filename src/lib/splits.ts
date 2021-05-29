@@ -26,10 +26,71 @@ function getName(description: string) {
 
     const { name, qualifier, } = match.groups;
 
-    if (name === "Whispering Root") {
-        // qualifier is the area
-        return `${qualifier} Root`;
+    switch (name) {
+        case "Dream Nail - Awoken": {
+            return "Awoken Dream Nail";
+        }
+        case "Crystal Guardian 1": {
+            return "Crystal Guardian";
+        }
+        case "Crystal Guardian 2": {
+            return "Enraged Guardian";
+        }
+        case "Chains Broken - Hollow Knight": {
+            return "Hollow Knight Scream";
+        }
+        case "Radiance Dream Entry": {
+            return "Hollow Knight (Dreamnailed)";
+        }
+        case "Colosseum Fight 1": {
+            return "Trial of the Warrior";
+        }
+        case "Colosseum Fight 2": {
+            return "Trial of the Conqueror";
+        }
+        case "Colosseum Fight 3": {
+            return "Trial of the Fool";
+        }
+        case "Pantheon 1": {
+            return "Pantheon of the Master";
+        }
+        case "Pantheon 2": {
+            return "Pantheon of the Artist";
+        }
+        case "Pantheon 3": {
+            return "Pantheon of the Sage";
+        }
+        case "Pantheon 4": {
+            return "Pantheon of the Knight";
+        }
+        case "Pantheon 5": {
+            return "Pantheon of Hallownest";
+        }
+        case "Aspid Hunter": {
+            return "Aspid Arena";
+        }
+        case "Husk Miner": {
+            return "Myla";
+        }
+        case "Kingsoul Fragment - Queen's": {
+            return "Queen Fragment";
+        }
+        case "Kingsoul Fragment - King's": {
+            return "King Fragment";
+        }
+        case "Relic Dealer Lemm":
+        case "Relic Dealer Lemm Shop": {
+            return name.substr("Relic Dealer ".length);
+        }
+        case "Whispering Root": {
+            // qualifier is the area
+            return `${qualifier} Root`;
+        }
+        default: {
+            break;
+        }
     }
+
     switch (qualifier) {
         case "Charm Notch":
             return `${name} Notch`;
