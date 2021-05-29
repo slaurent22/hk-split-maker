@@ -31,15 +31,15 @@ function getName(description: string) {
         return `${qualifier} Root`;
     }
     switch (qualifier) {
-    case "Charm Notch":
-        return `${name} Notch`;
-    case "Stag Station":
-        return `${name} Stag`;
-    case "Grub": {
-        return name.substr("Rescued ".length);
-    }
-    default:
-        return name;
+        case "Charm Notch":
+            return `${name} Notch`;
+        case "Stag Station":
+            return `${name} Stag`;
+        case "Grub": {
+            return name.substr("Rescued ".length);
+        }
+        default:
+            return name;
     }
 }
 
@@ -77,17 +77,17 @@ export async function getIconLocations(): Promise<Map<string, IconDefinition>> {
 
 function assertIsIconClass(name: string): asserts name is IconClass {
     switch (name) {
-    case "boss":
-    case "charm":
-    case "collectible":
-    case "enemy":
-    case "event":
-    case "item":
-    case "location":
-    case "skill":
-        return;
-    default:
-        throw new Error(`Unknown icon class '${name}'`);
+        case "boss":
+        case "charm":
+        case "collectible":
+        case "enemy":
+        case "event":
+        case "item":
+        case "location":
+        case "skill":
+            return;
+        default:
+            throw new Error(`Unknown icon class '${name}'`);
     }
 }
 
