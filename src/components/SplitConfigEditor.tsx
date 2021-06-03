@@ -4,7 +4,7 @@ import type { OnChange, OnMount, Monaco } from "@monaco-editor/react";
 import Editor from "@monaco-editor/react";
 import type { editor } from "monaco-editor";
 import { Uri } from "monaco-editor";
-import SplitConfigSchema from "../schema/splits.schema.json";
+import SplitConfigSchema from "../schema/splits.schema";
 
 interface Props {
     defaultValue: string;
