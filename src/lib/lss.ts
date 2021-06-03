@@ -1,5 +1,5 @@
 import xml from "../external-lib/xml.js";
-import { getIconData, getIconLocations, parseSplitsDefinitions } from "./splits";
+import { getIconData, getIconLocations, getSplitsDefinitions } from "./splits";
 
 export interface Config {
     splitIds: Array<string>;
@@ -88,7 +88,7 @@ export async function createSplitsXml(config: Config): Promise<string> {
         gameName,
     } = config;
 
-    const splitDefinitions = parseSplitsDefinitions();
+    const splitDefinitions = getSplitsDefinitions();
     const iconLocations = await getIconLocations();
     const iconFiles = new Set<string>();
     const iconData = new Map<string, string>();

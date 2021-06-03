@@ -1,18 +1,14 @@
-import splits from "../asset/splits.txt";
 import type { IconDefinition } from "../asset/icons/icon-directory.json";
+import Splits from "../splits.json";
 import type { IconClass } from "./icons";
 import Icons, { getIconDirectory } from "./icons";
 
-// const SPLITS_DEFINITIONS_FILE = "./asset/splits.txt";
-const SPLITS_DEFINITIONS_REGEXP =
-    /\[Description\("(?<description>.+)"\), ToolTip\("(?<tooltip>.+)"\)\]\s+(?<id>\w+),/g;
 const DESCRIPTION_NAME_REGEXP = /(?<name>.+)\s+\((?<qualifier>.+)\)/;
-
 interface SplitDefinition {
     description: string;
-    tooltip: string;
     id: string;
     name: string;
+    title: string;
 }
 
 function getName(description: string) {
@@ -104,25 +100,20 @@ function getName(description: string) {
     }
 }
 
-export function parseSplitsDefinitions(): Map<string, SplitDefinition> {
-    const matches = splits.matchAll(SPLITS_DEFINITIONS_REGEXP);
+export function getSplitsDefinitions(): Map<string, SplitDefinition> {
     const definitions = new Map<string, SplitDefinition>();
-    for (const match of matches) {
-        if (!match.groups) {
-            throw new Error("RegExp match must have groups");
-        }
-
+    for (const split of Splits) {
         const {
             description,
             id,
-            tooltip,
-        } = match.groups;
-        const name = getName(description);
+            title,
+        } = split;
+        const name = getName(title);
         definitions.set(id, {
             description,
             id,
-            tooltip,
             name,
+            title,
         });
     }
 
