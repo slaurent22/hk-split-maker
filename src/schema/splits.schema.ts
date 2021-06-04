@@ -1,7 +1,9 @@
 import SplitConfigSchemaSource from "../schema/splits.schema.json";
-import Splits from "../splits.json";
+import { parseSplitsDefinitions } from "../lib/splits";
 
-const splitsSchema = Splits.map(({ title, description, id, }) => {
+const Splits = [...parseSplitsDefinitions().values()];
+
+const splitsSchema = Splits.map(({ description: title, tooltip: description, id, }) => {
     return {
         title,
         description,
@@ -9,7 +11,7 @@ const splitsSchema = Splits.map(({ title, description, id, }) => {
     };
 });
 
-const subsplitsSchema = Splits.map(({ title, description, id, }) => {
+const subsplitsSchema = Splits.map(({ description: title, tooltip: description, id, }) => {
     return {
         title,
         description: `(subsplit) ${description}`,
