@@ -136,6 +136,7 @@ export default class App extends Component<AppProps, AppState> {
                             />
                             <SplitOutputEditor
                                 defaultValue={this.state.splitOutput}
+                                onChange={this.onSplitOutputChange.bind(this)}
                             />
                         </div>
                     </div>
@@ -147,6 +148,12 @@ export default class App extends Component<AppProps, AppState> {
     private onConfigInputChange(value: string|undefined) {
         this.setState({
             configInput: value ?? "",
+        });
+    }
+
+    private onSplitOutputChange(value: string|undefined) {
+        this.setState({
+            splitOutput: value ?? "",
         });
     }
 
