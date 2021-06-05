@@ -14,7 +14,7 @@ const CategorySelect: React.FC<Props> = ({
     onChange,
     data,
     initial,
-}) => {
+}: Props) => {
     if (!data) {
         return <select id={id}></select>;
     }

@@ -12,7 +12,7 @@ const ArrowButton: React.FC<Props> = ({
     id,
     onClick,
     text,
-}) => {
+}: Props) => {
     return (
         <button
             className="arrow-button"

@@ -6,7 +6,8 @@
     "extends": [
         "eslint:recommended",
         "plugin:@typescript-eslint/recommended",
-        "plugin:@typescript-eslint/recommended-requiring-type-checking"
+        "plugin:@typescript-eslint/recommended-requiring-type-checking",
+        "plugin:react/recommended"
     ],
     "parser": "@typescript-eslint/parser",
     "parserOptions": {
@@ -16,8 +17,14 @@
     },
     "plugins": [
         "@typescript-eslint",
-        "import"
+        "import",
+        "react"
     ],
+    "settings": {
+        "react": {
+            "version": "detect"
+        }
+    },
     "rules": {
         "@typescript-eslint/brace-style": ["warn", "stroustrup"],
         "@typescript-eslint/comma-dangle": ["warn", {"arrays": "never","objects": "always","imports": "never","exports": "never","functions": "never", "enums": "always"}],
@@ -89,6 +96,7 @@
         "object-curly-spacing": ["warn", "always"],
         "prefer-const": "error",
         "radix": "error",
+        "react/no-unescaped-entities": ["warn", { "forbid": [">","\\", "}"] }],
         "space-before-blocks": "warn",
         "space-in-parens": "warn",
         "space-unary-ops": "warn",

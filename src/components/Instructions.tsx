@@ -10,7 +10,7 @@ export default class Instructions extends Component {
                     <li>
                         Find the splits you want to use from the <a
                             href="https://github.com/slaurent22/hk-split-maker/blob/main/src/asset/splits.txt"
-                            target="_blank"
+                            target="_blank" rel="noreferrer"
                         >splits.txt</a> file. For example, if you want to split
                         on "Mask Fragment 4 (Upgrade)", then use "Mask1" as the
                         split name.
