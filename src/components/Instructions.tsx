@@ -1,6 +1,8 @@
 import type { ReactNode } from "react";
 import React, { Component } from "react";
 
+const VIDEO_URL = "https://www.youtube.com/watch?v=JBdm7LvZAZQ";
+
 export default class Instructions extends Component {
     public render(): ReactNode {
         return (
@@ -45,6 +47,12 @@ export default class Instructions extends Component {
                         Splits ➡ From File
                     </li>
                 </ol>
+                <h2>Video Tutorial</h2>
+                <div className="centered">
+                    <a href={VIDEO_URL} target="_blank" rel="noreferrer">
+                        HK Split Maker Tutorial on YouTube
+                    </a>
+                </div>
             </div>
         );
     }

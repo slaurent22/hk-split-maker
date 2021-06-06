@@ -30,6 +30,10 @@ ol {
     margin-right: auto;
 }
 
+.centered {
+    text-align: center;
+}
+
 #input-output {
     display: flex;
     flex-wrap: wrap;
