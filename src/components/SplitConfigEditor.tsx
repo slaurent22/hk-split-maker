@@ -37,7 +37,6 @@ export default class SplitConfigEditor extends Component<Props, State> {
         this.state = {
             value: props.defaultValue,
         };
-        console.log(this.state);
         this.editorRef = React.createRef();
     }
 

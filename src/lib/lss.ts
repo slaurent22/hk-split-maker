@@ -1,5 +1,6 @@
 import xml from "../external-lib/xml.js";
-import { getIconData, getIconLocations, parseSplitsDefinitions } from "./splits";
+import { createLiveSplitIconData } from "./image-util";
+import { getIconURLs, parseSplitsDefinitions } from "./splits";
 
 export interface Config {
     splitIds: Array<string>;
@@ -89,9 +90,9 @@ export async function createSplitsXml(config: Config): Promise<string> {
     } = config;
 
     const splitDefinitions = parseSplitsDefinitions();
-    const iconLocations = await getIconLocations();
-    const iconFiles = new Set<string>();
-    const iconData = new Map<string, string>();
+    const allIconURLs = getIconURLs();
+    const iconURLsToFetch = new Set<string>();
+    const liveSplitIconData = new Map<string, string>();
 
     const parsedSplitIds = splitIds.map(splitId => {
         let rawId = splitId;
@@ -132,25 +133,31 @@ export async function createSplitsXml(config: Config): Promise<string> {
     });
 
     parsedSplitIds.forEach(({ rawId, }) => {
-        const file = iconLocations.get(rawId)?.file;
-        if (file) {
-            iconFiles.add(file);
+        const url = allIconURLs.get(rawId);
+        if (url) {
+            iconURLsToFetch.add(url);
         }
     });
-    const iconLookups = await Promise.all(
-        // Load all required files
-        Array.from(iconFiles).map(file => getIconData(file))
+
+    await Promise.all(
+        [...iconURLsToFetch].map(async url => {
+            try {
+                const iconData = await createLiveSplitIconData(url);
+                console.log(iconData);
+                liveSplitIconData.set(url, iconData);
+            }
+            catch (e) {
+                console.error(`Failed to create icon data for ${url}`);
+                console.error(e);
+            }
+        })
     );
-    iconLookups.forEach(icons => {
-        // no Object.assign for Maps
-        icons.forEach((value, key) => iconData.set(key, value));
-    });
 
     const segments = parsedSplitIds.map(({ rawId, subsplit, name, }) => {
-        const iconInfo = iconLocations.get(rawId);
+        const iconURL = allIconURLs.get(rawId);
         let icon = "";
-        if (iconInfo) {
-            icon = iconData.get(iconInfo.imageId) || "";
+        if (iconURL) {
+            icon = liveSplitIconData.get(iconURL) || "";
         }
         const namePrefix = subsplit ? "-" : "";
         return getSegmentNode(`${namePrefix}${name}`, icon);

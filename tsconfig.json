@@ -13,6 +13,7 @@
     "outDir": "./dist/",
     "strict": true,
     "target": "es5",
-    "resolveJsonModule": true
+    "resolveJsonModule": true,
+    "sourceMap": true
   }
 }

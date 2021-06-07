@@ -11,6 +11,7 @@ module.exports = {
     entry: {
         index: "./src/index.tsx",
     },
+    devtool: "eval-source-map",
     module: {
         rules: [
             {

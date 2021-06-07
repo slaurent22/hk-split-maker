@@ -142,7 +142,6 @@ export default class App extends Component<AppProps, AppState> {
             alert("Failed to parse config as JSON");
             return;
         }
-        console.log(configObject);
         let output = "";
 
         const submitButton = document.getElementById("submit-button") as HTMLInputElement;

@@ -17,7 +17,6 @@ export default class SplitOutputEditor extends Component<Props, State> {
         this.state = {
             value: props.defaultValue,
         };
-        console.log(this.state);
     }
 
     public render(): ReactNode {

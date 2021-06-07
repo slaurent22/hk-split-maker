@@ -1,1402 +1,389 @@
 {
-  "AbyssShriek": {
-    "imageId": "AbyssShriek",
-    "file": "skill"
-  },
-  "CrystalHeart": {
-    "imageId": "CrystalHeart",
-    "file": "skill"
-  },
-  "CycloneSlash": {
-    "imageId": "CycloneSlash",
-    "file": "skill"
-  },
-  "DashSlash": {
-    "imageId": "DashSlash",
-    "file": "skill"
-  },
-  "DescendingDark": {
-    "imageId": "DescendingDark",
-    "file": "skill"
-  },
-  "DesolateDive": {
-    "imageId": "DesolateDive",
-    "file": "skill"
-  },
-  "DreamNail": {
-    "imageId": "DreamNail",
-    "file": "skill"
-  },
-  "DreamNail2": {
-    "imageId": "DreamNail2",
-    "file": "skill"
-  },
-  "DreamGate": {
-    "imageId": "DreamGate",
-    "file": "skill"
-  },
-  "GreatSlash": {
-    "imageId": "GreatSlash",
-    "file": "skill"
-  },
-  "HowlingWraiths": {
-    "imageId": "HowlingWraiths",
-    "file": "skill"
-  },
-  "IsmasTear": {
-    "imageId": "IsmasTear",
-    "file": "skill"
-  },
-  "MantisClaw": {
-    "imageId": "MantisClaw",
-    "file": "skill"
-  },
-  "MonarchWings": {
-    "imageId": "MonarchWings",
-    "file": "skill"
-  },
-  "MothwingCloak": {
-    "imageId": "MothwingCloak",
-    "file": "skill"
-  },
-  "ShadeCloak": {
-    "imageId": "ShadeCloak",
-    "file": "skill"
-  },
-  "ShadeSoul": {
-    "imageId": "ShadeSoul",
-    "file": "skill"
-  },
-  "VengefulSpirit": {
-    "imageId": "VengefulSpirit",
-    "file": "skill"
-  },
-  "GodTuner": {
-    "imageId": "GodTuner",
-    "file": "item"
-  },
-  "HuntersMark": {
-    "imageId": "HuntersMark",
-    "file": "item"
-  },
-  "KingsBrand": {
-    "imageId": "KingsBrand",
-    "file": "item"
-  },
-  "LoveKey": {
-    "imageId": "LoveKey",
-    "file": "item"
-  },
-  "ElegantKey": {
-    "imageId": "ElegantKey",
-    "file": "item"
-  },
-  "LumaflyLantern": {
-    "imageId": "LumaflyLantern",
-    "file": "item"
-  },
-  "PaleLurkerKey": {
-    "imageId": "Key",
-    "file": "item"
-  },
-  "PaleOre": {
-    "imageId": "Ore",
-    "file": "collectible"
-  },
-  "SalubrasBlessing": {
-    "imageId": "SalubrasBlessing",
-    "file": "item"
-  },
-  "SimpleKey": {
-    "imageId": "Key",
-    "file": "item"
-  },
-  "SlyKey": {
-    "imageId": "SlyKey",
-    "file": "item"
-  },
-  "TramPass": {
-    "imageId": "TramPass",
-    "file": "item"
-  },
-  "MaskFragment1": {
-    "imageId": "MaskFragment1",
-    "file": "item"
-  },
-  "MaskFragment2": {
-    "imageId": "MaskFramgent2",
-    "file": "item"
-  },
-  "MaskFragment3": {
-    "imageId": "MaskFragment3",
-    "file": "item"
-  },
-  "Mask1": {
-    "imageId": "Mask",
-    "file": "item"
-  },
-  "MaskFragment5": {
-    "imageId": "MaskFragment1",
-    "file": "item"
-  },
-  "MaskFragment6": {
-    "imageId": "MaskFramgent2",
-    "file": "item"
-  },
-  "MaskFragment7": {
-    "imageId": "MaskFragment3",
-    "file": "item"
-  },
-  "Mask2": {
-    "imageId": "Mask",
-    "file": "item"
-  },
-  "MaskFragment9": {
-    "imageId": "MaskFragment1",
-    "file": "item"
-  },
-  "MaskFragment10": {
-    "imageId": "MaskFramgent2",
-    "file": "item"
-  },
-  "MaskFragment11": {
-    "imageId": "MaskFragment3",
-    "file": "item"
-  },
-  "Mask3": {
-    "imageId": "Mask",
-    "file": "item"
-  },
-  "MaskFragment13": {
-    "imageId": "MaskFragment1",
-    "file": "item"
-  },
-  "MaskFragment14": {
-    "imageId": "MaskFramgent2",
-    "file": "item"
-  },
-  "MaskFragment15": {
-    "imageId": "MaskFragment3",
-    "file": "item"
-  },
-  "Mask4": {
-    "imageId": "Mask",
-    "file": "item"
-  },
-  "NailUpgrade1": {
-    "imageId": "NailUpgrade1",
-    "file": "item"
-  },
-  "NailUpgrade2": {
-    "imageId": "NailUpgrade2",
-    "file": "item"
-  },
-  "NailUpgrade3": {
-    "imageId": "NailUpgrade3",
-    "file": "item"
-  },
-  "NailUpgrade4": {
-    "imageId": "NailUpgrade4",
-    "file": "item"
-  },
-  "VesselFragment1": {
-    "imageId": "VesselFragment",
-    "file": "item"
-  },
-  "VesselFragment2": {
-    "imageId": "VesselFragment",
-    "file": "item"
-  },
-  "Vessel1": {
-    "imageId": "Vessel",
-    "file": "item"
-  },
-  "VesselFragment4": {
-    "imageId": "VesselFragment",
-    "file": "item"
-  },
-  "VesselFragment5": {
-    "imageId": "VesselFragment",
-    "file": "item"
-  },
-  "Vessel2": {
-    "imageId": "Vessel",
-    "file": "item"
-  },
-  "VesselFragment7": {
-    "imageId": "VesselFragment",
-    "file": "item"
-  },
-  "VesselFragment8": {
-    "imageId": "VesselFragment",
-    "file": "item"
-  },
-  "Vessel3": {
-    "imageId": "Vessel",
-    "file": "item"
-  },
-  "BrokenVessel": {
-    "imageId": "BrokenVessel",
-    "file": "boss"
-  },
-  "BroodingMawlek": {
-    "imageId": "BroodingMawlek",
-    "file": "boss"
-  },
-  "Collector": {
-    "imageId": "Collector",
-    "file": "boss"
-  },
-  "CrystalGuardian1": {
-    "imageId": "CrystalGuardian",
-    "file": "boss"
-  },
-  "CrystalGuardian2": {
-    "imageId": "CrystalGuardian",
-    "file": "boss"
-  },
-  "DungDefender": {
-    "imageId": "DungDefender",
-    "file": "boss"
-  },
-  "ElderHu": {
-    "imageId": "ElderHu",
-    "file": "boss"
-  },
-  "FalseKnight": {
-    "imageId": "FalseKnight",
-    "file": "boss"
-  },
-  "FailedKnight": {
-    "imageId": "FalseKnight",
-    "file": "boss"
-  },
-  "Flukemarm": {
-    "imageId": "Flukemarm",
-    "file": "boss"
-  },
-  "Galien": {
-    "imageId": "Galien",
-    "file": "boss"
-  },
-  "GodTamer": {
-    "imageId": "GodTamer",
-    "file": "boss"
-  },
-  "Gorb": {
-    "imageId": "Gorb",
-    "file": "boss"
-  },
-  "GreyPrince": {
-    "imageId": "GreyPrince",
-    "file": "boss"
-  },
-  "GruzMother": {
-    "imageId": "GruzMother",
-    "file": "boss"
-  },
-  "HollowKnightBoss": {
-    "imageId": "HollowKnightBoss",
-    "file": "boss"
-  },
-  "Hornet1": {
-    "imageId": "Hornet",
-    "file": "boss"
-  },
-  "Hornet2": {
-    "imageId": "Hornet",
-    "file": "boss"
-  },
-  "LostKin": {
-    "imageId": "BrokenVessel",
-    "file": "boss"
-  },
-  "MantisLords": {
-    "imageId": "MantisLords",
-    "file": "boss"
-  },
-  "Markoth": {
-    "imageId": "Markoth",
-    "file": "boss"
-  },
-  "Marmu": {
-    "imageId": "Marmu",
-    "file": "boss"
-  },
-  "MegaMossCharger": {
-    "imageId": "MassiveMossCharger",
-    "file": "boss"
-  },
-  "NightmareKingGrimm": {
-    "imageId": "NightmareKingGrimm",
-    "file": "boss"
-  },
-  "NoEyes": {
-    "imageId": "NoEyes",
-    "file": "boss"
-  },
-  "Nosk": {
-    "imageId": "Nosk",
-    "file": "boss"
-  },
-  "MatoOroNailBros": {
-    "imageId": "OroMato",
-    "file": "boss"
-  },
-  "RadianceBoss": {
-    "imageId": "Radiance",
-    "file": "event"
-  },
-  "PureVessel": {
-    "imageId": "PureVessel",
-    "file": "boss"
-  },
-  "SheoPaintmaster": {
-    "imageId": "SheoPaintmaster",
-    "file": "boss"
-  },
-  "SlyNailsage": {
-    "imageId": "SlyNailsage",
-    "file": "boss"
-  },
-  "SoulMaster": {
-    "imageId": "SoulMaster",
-    "file": "boss"
-  },
-  "SoulTyrant": {
-    "imageId": "SoulMaster",
-    "file": "boss"
-  },
-  "TraitorLord": {
-    "imageId": "TraitorLord",
-    "file": "boss"
-  },
-  "TroupeMasterGrimm": {
-    "imageId": "TroupeMasterGrimm",
-    "file": "boss"
-  },
-  "Uumuu": {
-    "imageId": "Uumuu",
-    "file": "boss"
-  },
-  "BlackKnight": {
-    "imageId": "WatcherKnight",
-    "file": "boss"
-  },
-  "WhiteDefender": {
-    "imageId": "WhiteDefender",
-    "file": "boss"
-  },
-  "Xero": {
-    "imageId": "Xero",
-    "file": "boss"
-  },
-  "HiveKnight": {
-    "imageId": "HiveKnight",
-    "file": "boss"
-  },
-  "VengeflyKingP": {
-    "imageId": "VengeflyKing",
-    "file": "boss"
-  },
-  "GruzMotherP": {
-    "imageId": "GruzMother",
-    "file": "boss"
-  },
-  "FalseKnightP": {
-    "imageId": "FalseKnight",
-    "file": "boss"
-  },
-  "MassiveMossChargerP": {
-    "imageId": "MassiveMossCharger",
-    "file": "boss"
-  },
-  "Hornet1P": {
-    "imageId": "Hornet",
-    "file": "boss"
-  },
-  "GorbP": {
-    "imageId": "Gorb",
-    "file": "boss"
-  },
-  "DungDefenderP": {
-    "imageId": "DungDefender",
-    "file": "boss"
-  },
-  "SoulWarriorP": {
-    "imageId": "SoulWarriorP",
-    "file": "boss"
-  },
-  "BroodingMawlekP": {
-    "imageId": "BroodingMawlek",
-    "file": "boss"
-  },
-  "OroMatoNailBrosP": {
-    "imageId": "OroMato",
-    "file": "boss"
-  },
-  "XeroP": {
-    "imageId": "Xero",
-    "file": "boss"
-  },
-  "CrystalGuardianP": {
-    "imageId": "CrystalGuardian",
-    "file": "boss"
-  },
-  "SoulMasterP": {
-    "imageId": "SoulMaster",
-    "file": "boss"
-  },
-  "OblobblesP": {
-    "imageId": "OblobblesP",
-    "file": "boss"
-  },
-  "MantisLordsP": {
-    "imageId": "MantisLords",
-    "file": "boss"
-  },
-  "MarmuP": {
-    "imageId": "Marmu",
-    "file": "boss"
-  },
-  "NoskP": {
-    "imageId": "Nosk",
-    "file": "boss"
-  },
-  "FlukemarmP": {
-    "imageId": "Flukemarm",
-    "file": "boss"
-  },
-  "BrokenVesselP": {
-    "imageId": "BrokenVessel",
-    "file": "boss"
-  },
-  "SheoPaintmasterP": {
-    "imageId": "SheoPaintmaster",
-    "file": "boss"
-  },
-  "HiveKnightP": {
-    "imageId": "HiveKnight",
-    "file": "boss"
-  },
-  "ElderHuP": {
-    "imageId": "ElderHu",
-    "file": "boss"
-  },
-  "CollectorP": {
-    "imageId": "Collector",
-    "file": "boss"
-  },
-  "GodTamerP": {
-    "imageId": "GodTamer",
-    "file": "boss"
-  },
-  "TroupeMasterGrimmP": {
-    "imageId": "TroupeMasterGrimm",
-    "file": "boss"
-  },
-  "GalienP": {
-    "imageId": "Galien",
-    "file": "boss"
-  },
-  "GreyPrinceZoteP": {
-    "imageId": "GreyPrince",
-    "file": "boss"
-  },
-  "UumuuP": {
-    "imageId": "Uumuu",
-    "file": "boss"
-  },
-  "Hornet2P": {
-    "imageId": "Hornet",
-    "file": "boss"
-  },
-  "SlyP": {
-    "imageId": "SlyNailsage",
-    "file": "boss"
-  },
-  "EnragedGuardianP": {
-    "imageId": "CrystalGuardian",
-    "file": "boss"
-  },
-  "LostKinP": {
-    "imageId": "BrokenVessel",
-    "file": "boss"
-  },
-  "NoEyesP": {
-    "imageId": "NoEyes",
-    "file": "boss"
-  },
-  "TraitorLordP": {
-    "imageId": "TraitorLord",
-    "file": "boss"
-  },
-  "WhiteDefenderP": {
-    "imageId": "WhiteDefender",
-    "file": "boss"
-  },
-  "FailedChampionP": {
-    "imageId": "FalseKnight",
-    "file": "boss"
-  },
-  "MarkothP": {
-    "imageId": "Markoth",
-    "file": "boss"
-  },
-  "WatcherKnightsP": {
-    "imageId": "WatcherKnight",
-    "file": "boss"
-  },
-  "SoulTyrantP": {
-    "imageId": "SoulMaster",
-    "file": "boss"
-  },
-  "PureVesselP": {
-    "imageId": "PureVessel",
-    "file": "boss"
-  },
-  "NoskHornetP": {
-    "imageId": "Nosk",
-    "file": "boss"
-  },
-  "NightmareKingGrimmP": {
-    "imageId": "NightmareKingGrimm",
-    "file": "boss"
-  },
-  "Hegemol": {
-    "imageId": "Hegemol",
-    "file": "boss"
-  },
-  "Lurien": {
-    "imageId": "Lurien",
-    "file": "boss"
-  },
-  "Monomon": {
-    "imageId": "Monomon",
-    "file": "boss"
-  },
-  "Dreamer1": {
-    "imageId": "Dreamer",
-    "file": "boss"
-  },
-  "Dreamer2": {
-    "imageId": "Dreamer",
-    "file": "boss"
-  },
-  "Dreamer3": {
-    "imageId": "Dreamer",
-    "file": "boss"
-  },
-  "NightmareLantern": {
-    "imageId": "NightmareLantern",
-    "file": "boss"
-  },
-  "NightmareLanternDestroyed": {
-    "imageId": "NightmareLantern",
-    "file": "boss"
-  },
-  "SeerDeparts": {
-    "imageId": "SeerDeparts",
-    "file": "event"
-  },
-  "SpiritGladeOpen": {
-    "imageId": "SpiritGladeOpen",
-    "file": "event"
-  },
-  "WatcherChandelier": {
-    "imageId": "WatcherChandelier",
-    "file": "event"
-  },
-  "CityGateOpen": {
-    "imageId": "CityGateOpen",
-    "file": "event"
-  },
-  "BeastsDenTrapBench": {
-    "imageId": "Bench",
-    "file": "event"
-  },
-  "UnchainedHollowKnight": {
-    "imageId": "UnchainedHollowKnight",
-    "file": "event"
-  },
-  "HollowKnightDreamnail": {
-    "imageId": "HollowKnightBoss",
-    "file": "boss"
-  },
-  "ColosseumBronze": {
-    "imageId": "ColosseumBronze",
-    "file": "event"
-  },
-  "ColosseumSilver": {
-    "imageId": "ColosseumSilver",
-    "file": "event"
-  },
-  "ColosseumGold": {
-    "imageId": "ColosseumGold",
-    "file": "event"
-  },
-  "Pantheon1": {
-    "imageId": "Pantheon1",
-    "file": "event"
-  },
-  "Pantheon2": {
-    "imageId": "Pantheon2",
-    "file": "event"
-  },
-  "Pantheon3": {
-    "imageId": "Pantheon3",
-    "file": "event"
-  },
-  "Pantheon4": {
-    "imageId": "Pantheon4",
-    "file": "event"
-  },
-  "Pantheon5": {
-    "imageId": "Pantheon5",
-    "file": "event"
-  },
-  "PathOfPain": {
-    "imageId": "PathOfPain",
-    "file": "event"
-  },
-  "AspidHunter": {
-    "imageId": "AspidHunter",
-    "file": "enemy"
-  },
-  "Aluba": {
-    "imageId": "Aluba",
-    "file": "enemy"
-  },
-  "HuskMiner": {
-    "imageId": "HuskMiner",
-    "file": "enemy"
-  },
-  "GreatHopper": {
-    "imageId": "GreatHopper",
-    "file": "enemy"
-  },
-  "GorgeousHusk": {
-    "imageId": "GorgeousHusk",
-    "file": "enemy"
-  },
-  "MenderBug": {
-    "imageId": "MenderBug",
-    "file": "enemy"
-  },
-  "MossKnight": {
-    "imageId": "MossKnight",
-    "file": "enemy"
-  },
-  "MushroomBrawler": {
-    "imageId": "MushroomBrawler",
-    "file": "enemy"
-  },
-  "Zote1": {
-    "imageId": "VengeflyKing",
-    "file": "boss"
-  },
-  "Zote2": {
-    "imageId": "Zote",
-    "file": "boss"
-  },
-  "ZoteKilled": {
-    "imageId": "Zote",
-    "file": "boss"
-  },
-  "CrossroadsStation": {
-    "imageId": "Stag",
-    "file": "event"
-  },
-  "GreenpathStation": {
-    "imageId": "Stag",
-    "file": "event"
-  },
-  "QueensStationStation": {
-    "imageId": "Stag",
-    "file": "event"
-  },
-  "QueensGardensStation": {
-    "imageId": "Stag",
-    "file": "event"
-  },
-  "StoreroomsStation": {
-    "imageId": "Stag",
-    "file": "event"
-  },
-  "KingsStationStation": {
-    "imageId": "Stag",
-    "file": "event"
-  },
-  "RestingGroundsStation": {
-    "imageId": "Stag",
-    "file": "event"
-  },
-  "DeepnestStation": {
-    "imageId": "Stag",
-    "file": "event"
-  },
-  "HiddenStationStation": {
-    "imageId": "Stag",
-    "file": "event"
-  },
-  "StagnestStation": {
-    "imageId": "Stag",
-    "file": "event"
-  },
-  "MrMushroom1": {
-    "imageId": "MrMushroom",
-    "file": "enemy"
-  },
-  "MrMushroom2": {
-    "imageId": "MrMushroom",
-    "file": "enemy"
-  },
-  "MrMushroom3": {
-    "imageId": "MrMushroom",
-    "file": "enemy"
-  },
-  "MrMushroom4": {
-    "imageId": "MrMushroom",
-    "file": "enemy"
-  },
-  "MrMushroom5": {
-    "imageId": "MrMushroom",
-    "file": "enemy"
-  },
-  "MrMushroom6": {
-    "imageId": "MrMushroom",
-    "file": "enemy"
-  },
-  "MrMushroom7": {
-    "imageId": "MrMushroom",
-    "file": "enemy"
-  },
-  "Abyss": {
-    "imageId": "Abyss",
-    "file": "location"
-  },
-  "CityOfTears": {
-    "imageId": "CityOfTears",
-    "file": "location"
-  },
-  "Colosseum": {
-    "imageId": "Colosseum",
-    "file": "location"
-  },
-  "CrystalPeak": {
-    "imageId": "CrystalPeak",
-    "file": "location"
-  },
-  "Deepnest": {
-    "imageId": "Deepnest",
-    "file": "location"
-  },
-  "DeepnestSpa": {
-    "imageId": "DeepnestSpa",
-    "file": "location"
-  },
-  "Dirtmouth": {
-    "imageId": "Dirtmouth",
-    "file": "location"
-  },
-  "FogCanyon": {
-    "imageId": "FogCanyon",
-    "file": "location"
-  },
-  "ForgottenCrossroads": {
-    "imageId": "ForgottenCrossroads",
-    "file": "location"
-  },
-  "FungalWastes": {
-    "imageId": "FungalWastes",
-    "file": "location"
-  },
-  "Godhome": {
-    "imageId": "Godhome",
-    "file": "location"
-  },
-  "Greenpath": {
-    "imageId": "Greenpath",
-    "file": "location"
-  },
-  "Hive": {
-    "imageId": "Hive",
-    "file": "location"
-  },
-  "InfectedCrossroads": {
-    "imageId": "InfectedCrossroads",
-    "file": "location"
-  },
-  "KingdomsEdge": {
-    "imageId": "KingdomsEdge",
-    "file": "location"
-  },
-  "QueensGardens": {
-    "imageId": "QueensGardens",
-    "file": "location"
-  },
-  "RestingGrounds": {
-    "imageId": "RestingGrounds",
-    "file": "location"
-  },
-  "RoyalWaterways": {
-    "imageId": "RoyalWaterways",
-    "file": "location"
-  },
-  "TeachersArchive": {
-    "imageId": "TeachersArchive",
-    "file": "location"
-  },
-  "WhitePalace": {
-    "imageId": "WhitePalace",
-    "file": "location"
-  },
-  "WhitePalaceSecretRoom": {
-    "imageId": "WhitePalaceSecretRoom",
-    "file": "location"
-  },
-  "KingsPass": {
-    "imageId": "KingsPass",
-    "file": "location"
-  },
-  "BlueLake": {
-    "imageId": "BlueLake",
-    "file": "location"
-  },
-  "BaldurShell": {
-    "imageId": "BaldurShell",
-    "file": "charm"
-  },
-  "Dashmaster": {
-    "imageId": "Dashmaster",
-    "file": "charm"
-  },
-  "DeepFocus": {
-    "imageId": "DeepFocus",
-    "file": "charm"
-  },
-  "DefendersCrest": {
-    "imageId": "DefendersCrest",
-    "file": "charm"
-  },
-  "Dreamshield": {
-    "imageId": "Dreamshield",
-    "file": "charm"
-  },
-  "DreamWielder": {
-    "imageId": "DreamWielder",
-    "file": "charm"
-  },
-  "Flukenest": {
-    "imageId": "Flukenest",
-    "file": "charm"
-  },
-  "FragileGreed": {
-    "imageId": "FragileGreed",
-    "file": "charm"
-  },
-  "FragileHeart": {
-    "imageId": "FragileHeart",
-    "file": "charm"
-  },
-  "FragileStrength": {
-    "imageId": "FragileStrength",
-    "file": "charm"
-  },
-  "FuryOfTheFallen": {
-    "imageId": "FuryOfTheFallen",
-    "file": "charm"
-  },
-  "GatheringSwarm": {
-    "imageId": "GatheringSwarm",
-    "file": "charm"
-  },
-  "GlowingWomb": {
-    "imageId": "GlowingWomb",
-    "file": "charm"
-  },
-  "Grimmchild": {
-    "imageId": "Grimmchild",
-    "file": "charm"
-  },
-  "Grimmchild2": {
-    "imageId": "Grimmchild2",
-    "file": "charm"
-  },
-  "Grimmchild3": {
-    "imageId": "Grimmchild3",
-    "file": "charm"
-  },
-  "Grimmchild4": {
-    "imageId": "Grimmchild4",
-    "file": "charm"
-  },
-  "GrubberflysElegy": {
-    "imageId": "GrubberflysElegy",
-    "file": "charm"
-  },
-  "Grubsong": {
-    "imageId": "Grubsong",
-    "file": "charm"
-  },
-  "HeavyBlow": {
-    "imageId": "HeavyBlow",
-    "file": "charm"
-  },
-  "Hiveblood": {
-    "imageId": "Hiveblood",
-    "file": "charm"
-  },
-  "JonisBlessing": {
-    "imageId": "JonisBlessing",
-    "file": "charm"
-  },
-  "WhiteFragmentLeft": {
-    "imageId": "WhiteFragmentLeft",
-    "file": "charm"
-  },
-  "WhiteFragmentRight": {
-    "imageId": "WhiteFragmentRight",
-    "file": "charm"
-  },
-  "Kingsoul": {
-    "imageId": "Kingsoul",
-    "file": "charm"
-  },
-  "LifebloodCore": {
-    "imageId": "LifebloodCore",
-    "file": "charm"
-  },
-  "LifebloodHeart": {
-    "imageId": "LifebloodHeart",
-    "file": "charm"
-  },
-  "Longnail": {
-    "imageId": "Longnail",
-    "file": "charm"
-  },
-  "MarkOfPride": {
-    "imageId": "MarkOfPride",
-    "file": "charm"
-  },
-  "NailmastersGlory": {
-    "imageId": "NailmastersGlory",
-    "file": "charm"
-  },
-  "QuickFocus": {
-    "imageId": "QuickFocus",
-    "file": "charm"
-  },
-  "QuickSlash": {
-    "imageId": "QuickSlash",
-    "file": "charm"
-  },
-  "ShamanStone": {
-    "imageId": "ShamanStone",
-    "file": "charm"
-  },
-  "ShapeOfUnn": {
-    "imageId": "ShapeOfUnn",
-    "file": "charm"
-  },
-  "SharpShadow": {
-    "imageId": "SharpShadow",
-    "file": "charm"
-  },
-  "SoulCatcher": {
-    "imageId": "SoulCatcher",
-    "file": "charm"
-  },
-  "SoulEater": {
-    "imageId": "SoulEater",
-    "file": "charm"
-  },
-  "SpellTwister": {
-    "imageId": "SpellTwister",
-    "file": "charm"
-  },
-  "SporeShroom": {
-    "imageId": "SporeShroom",
-    "file": "charm"
-  },
-  "Sprintmaster": {
-    "imageId": "Sprintmaster",
-    "file": "charm"
-  },
-  "StalwartShell": {
-    "imageId": "StalwartShell",
-    "file": "charm"
-  },
-  "SteadyBody": {
-    "imageId": "SteadyBody",
-    "file": "charm"
-  },
-  "ThornsOfAgony": {
-    "imageId": "ThornsOfAgony",
-    "file": "charm"
-  },
-  "VoidHeart": {
-    "imageId": "VoidHeart",
-    "file": "charm"
-  },
-  "WaywardCompass": {
-    "imageId": "WaywardCompass",
-    "file": "charm"
-  },
-  "Weaversong": {
-    "imageId": "Weaversong",
-    "file": "charm"
-  },
-  "NotchShrumalOgres": {
-    "imageId": "Notch",
-    "file": "collectible"
-  },
-  "NotchFogCanyon": {
-    "imageId": "Notch",
-    "file": "collectible"
-  },
-  "NotchSalubra1": {
-    "imageId": "Notch",
-    "file": "collectible"
-  },
-  "NotchSalubra2": {
-    "imageId": "Notch",
-    "file": "collectible"
-  },
-  "NotchSalubra3": {
-    "imageId": "Notch",
-    "file": "collectible"
-  },
-  "NotchSalubra4": {
-    "imageId": "Notch",
-    "file": "collectible"
-  },
-  "Lemm1": {
-    "imageId": "Lemm1",
-    "file": "collectible"
-  },
-  "Lemm2": {
-    "imageId": "Lemm2",
-    "file": "collectible"
-  },
-  "ElderbugFlower": {
-    "imageId": "ElderbugFlower",
-    "file": "event"
-  },
-  "BrettaRescued": {
-    "imageId": "BrettaRescued",
-    "file": "event"
-  },
-  "BrummFlame": {
-    "imageId": "BrummFlame",
-    "file": "collectible"
-  },
-  "LittleFool": {
-    "imageId": "LittleFool",
-    "file": "collectible"
-  },
-  "Flame1": {
-    "imageId": "Flame",
-    "file": "collectible"
-  },
-  "Flame2": {
-    "imageId": "Flame",
-    "file": "collectible"
-  },
-  "Flame3": {
-    "imageId": "Flame",
-    "file": "collectible"
-  },
-  "Ore1": {
-    "imageId": "Ore",
-    "file": "collectible"
-  },
-  "Ore2": {
-    "imageId": "Ore",
-    "file": "collectible"
-  },
-  "Ore3": {
-    "imageId": "Ore",
-    "file": "collectible"
-  },
-  "Ore4": {
-    "imageId": "Ore",
-    "file": "collectible"
-  },
-  "Ore5": {
-    "imageId": "Ore",
-    "file": "collectible"
-  },
-  "Ore6": {
-    "imageId": "Ore",
-    "file": "collectible"
-  },
-  "Grub1": {
-    "imageId": "Grub",
-    "file": "collectible"
-  },
-  "Grub2": {
-    "imageId": "Grub",
-    "file": "collectible"
-  },
-  "Grub3": {
-    "imageId": "Grub",
-    "file": "collectible"
-  },
-  "Grub4": {
-    "imageId": "Grub",
-    "file": "collectible"
-  },
-  "Grub5": {
-    "imageId": "Grub",
-    "file": "collectible"
-  },
-  "Grub6": {
-    "imageId": "Grub",
-    "file": "collectible"
-  },
-  "Grub7": {
-    "imageId": "Grub",
-    "file": "collectible"
-  },
-  "Grub8": {
-    "imageId": "Grub",
-    "file": "collectible"
-  },
-  "Grub9": {
-    "imageId": "Grub",
-    "file": "collectible"
-  },
-  "Grub10": {
-    "imageId": "Grub",
-    "file": "collectible"
-  },
-  "Grub11": {
-    "imageId": "Grub",
-    "file": "collectible"
-  },
-  "Grub12": {
-    "imageId": "Grub",
-    "file": "collectible"
-  },
-  "Grub13": {
-    "imageId": "Grub",
-    "file": "collectible"
-  },
-  "Grub14": {
-    "imageId": "Grub",
-    "file": "collectible"
-  },
-  "Grub15": {
-    "imageId": "Grub",
-    "file": "collectible"
-  },
-  "Grub16": {
-    "imageId": "Grub",
-    "file": "collectible"
-  },
-  "Grub17": {
-    "imageId": "Grub",
-    "file": "collectible"
-  },
-  "Grub18": {
-    "imageId": "Grub",
-    "file": "collectible"
-  },
-  "Grub19": {
-    "imageId": "Grub",
-    "file": "collectible"
-  },
-  "Grub20": {
-    "imageId": "Grub",
-    "file": "collectible"
-  },
-  "Grub21": {
-    "imageId": "Grub",
-    "file": "collectible"
-  },
-  "Grub22": {
-    "imageId": "Grub",
-    "file": "collectible"
-  },
-  "Grub23": {
-    "imageId": "Grub",
-    "file": "collectible"
-  },
-  "Grub24": {
-    "imageId": "Grub",
-    "file": "collectible"
-  },
-  "Grub25": {
-    "imageId": "Grub",
-    "file": "collectible"
-  },
-  "Grub26": {
-    "imageId": "Grub",
-    "file": "collectible"
-  },
-  "Grub27": {
-    "imageId": "Grub",
-    "file": "collectible"
-  },
-  "Grub28": {
-    "imageId": "Grub",
-    "file": "collectible"
-  },
-  "Grub29": {
-    "imageId": "Grub",
-    "file": "collectible"
-  },
-  "Grub30": {
-    "imageId": "Grub",
-    "file": "collectible"
-  },
-  "Grub31": {
-    "imageId": "Grub",
-    "file": "collectible"
-  },
-  "Grub32": {
-    "imageId": "Grub",
-    "file": "collectible"
-  },
-  "Grub33": {
-    "imageId": "Grub",
-    "file": "collectible"
-  },
-  "Grub34": {
-    "imageId": "Grub",
-    "file": "collectible"
-  },
-  "Grub35": {
-    "imageId": "Grub",
-    "file": "collectible"
-  },
-  "Grub36": {
-    "imageId": "Grub",
-    "file": "collectible"
-  },
-  "Grub37": {
-    "imageId": "Grub",
-    "file": "collectible"
-  },
-  "Grub38": {
-    "imageId": "Grub",
-    "file": "collectible"
-  },
-  "Grub39": {
-    "imageId": "Grub",
-    "file": "collectible"
-  },
-  "Grub40": {
-    "imageId": "Grub",
-    "file": "collectible"
-  },
-  "Grub41": {
-    "imageId": "Grub",
-    "file": "collectible"
-  },
-  "Grub42": {
-    "imageId": "Grub",
-    "file": "collectible"
-  },
-  "Grub43": {
-    "imageId": "Grub",
-    "file": "collectible"
-  },
-  "Grub44": {
-    "imageId": "Grub",
-    "file": "collectible"
-  },
-  "Grub45": {
-    "imageId": "Grub",
-    "file": "collectible"
-  },
-  "Grub46": {
-    "imageId": "Grub",
-    "file": "collectible"
-  },
-  "TreeMound": {
-    "imageId": "Tree",
-    "file": "collectible"
-  },
-  "TreeCity": {
-    "imageId": "Tree",
-    "file": "collectible"
-  },
-  "TreePeak": {
-    "imageId": "Tree",
-    "file": "collectible"
-  },
-  "TreeDeepnest": {
-    "imageId": "Tree",
-    "file": "collectible"
-  },
-  "TreeCrossroads": {
-    "imageId": "Tree",
-    "file": "collectible"
-  },
-  "TreeLegEater": {
-    "imageId": "Tree",
-    "file": "collectible"
-  },
-  "TreeMantisVillage": {
-    "imageId": "Tree",
-    "file": "collectible"
-  },
-  "TreeGreenpath": {
-    "imageId": "Tree",
-    "file": "collectible"
-  },
-  "TreeHive": {
-    "imageId": "Tree",
-    "file": "collectible"
-  },
-  "TreeCliffs": {
-    "imageId": "Tree",
-    "file": "collectible"
-  },
-  "TreeKingdomsEdge": {
-    "imageId": "Tree",
-    "file": "collectible"
-  },
-  "TreeQueensGardens": {
-    "imageId": "Tree",
-    "file": "collectible"
-  },
-  "TreeRestingGrounds": {
-    "imageId": "Tree",
-    "file": "collectible"
-  },
-  "TreeWaterways": {
-    "imageId": "Tree",
-    "file": "collectible"
-  },
-  "TreeGlade": {
-    "imageId": "Tree",
-    "file": "collectible"
-  },
-  "TollBenchQG": {
-    "imageId": "Bench",
-    "file": "event"
-  },
-  "TollBenchCity": {
-    "imageId": "Bench",
-    "file": "event"
-  },
-  "TollBenchBasin": {
-    "imageId": "Bench",
-    "file": "event"
-  },
-  "WhitePalaceOrb1": {
-    "imageId": "Orb",
-    "file": "collectible"
-  },
-  "WhitePalaceOrb2": {
-    "imageId": "Orb",
-    "file": "collectible"
-  },
-  "WhitePalaceOrb3": {
-    "imageId": "Orb",
-    "file": "collectible"
-  }
+    "AbyssShriek": "skill/AbyssShriek.png",
+    "CrystalHeart": "skill/CrystalHeart.png",
+    "CycloneSlash": "skill/CycloneSlash.png",
+    "DashSlash": "skill/DashSlash.png",
+    "DescendingDark": "skill/DescendingDark.png",
+    "DesolateDive": "skill/DesolateDive.png",
+    "DreamNail": "skill/DreamNail.png",
+    "DreamNail2": "skill/DreamNail2.png",
+    "DreamGate": "skill/DreamGate.png",
+    "GreatSlash": "skill/GreatSlash.png",
+    "HowlingWraiths": "skill/HowlingWraiths.png",
+    "IsmasTear": "skill/IsmasTear.png",
+    "MantisClaw": "skill/MantisClaw.png",
+    "MonarchWings": "skill/MonarchWings.png",
+    "MothwingCloak": "skill/MothwingCloak.png",
+    "ShadeCloak": "skill/ShadeCloak.png",
+    "ShadeSoul": "skill/ShadeSoul.png",
+    "VengefulSpirit": "skill/VengefulSpirit.png",
+    "CityKey": "TO_BE_DETERMINED/CityKey.png",
+    "HasDelicateFlower": "TO_BE_DETERMINED/HasDelicateFlower.png",
+    "ElegantKey": "item/ElegantKey.png",
+    "GodTuner": "item/GodTuner.png",
+    "HuntersMark": "item/HuntersMark.png",
+    "KingsBrand": "item/KingsBrand.png",
+    "LoveKey": "item/LoveKey.png",
+    "LumaflyLantern": "item/LumaflyLantern.png",
+    "PaleLurkerKey": "item/Key.png",
+    "PaleOre": "collectible/Ore.png",
+    "SalubrasBlessing": "item/SalubrasBlessing.png",
+    "SimpleKey": "item/Key.png",
+    "SlyKey": "item/SlyKey.png",
+    "TramPass": "item/TramPass.png",
+    "MaskFragment1": "item/MaskFragment1.png",
+    "MaskFragment2": "item/MaskFramgent2.png",
+    "MaskFragment3": "item/MaskFragment3.png",
+    "Mask1": "item/Mask.png",
+    "MaskFragment5": "item/MaskFragment1.png",
+    "MaskFragment6": "item/MaskFramgent2.png",
+    "MaskFragment7": "item/MaskFragment3.png",
+    "Mask2": "item/Mask.png",
+    "MaskFragment9": "item/MaskFragment1.png",
+    "MaskFragment10": "item/MaskFramgent2.png",
+    "MaskFragment11": "item/MaskFragment3.png",
+    "Mask3": "item/Mask.png",
+    "MaskFragment13": "item/MaskFragment1.png",
+    "MaskFragment14": "item/MaskFramgent2.png",
+    "MaskFragment15": "item/MaskFragment3.png",
+    "Mask4": "item/Mask.png",
+    "NailUpgrade1": "item/NailUpgrade1.png",
+    "NailUpgrade2": "item/NailUpgrade2.png",
+    "NailUpgrade3": "item/NailUpgrade3.png",
+    "NailUpgrade4": "item/NailUpgrade4.png",
+    "VesselFragment1": "item/VesselFragment.png",
+    "VesselFragment2": "item/VesselFragment.png",
+    "Vessel1": "item/Vessel.png",
+    "VesselFragment4": "item/VesselFragment.png",
+    "VesselFragment5": "item/VesselFragment.png",
+    "Vessel2": "item/Vessel.png",
+    "VesselFragment7": "item/VesselFragment.png",
+    "VesselFragment8": "item/VesselFragment.png",
+    "Vessel3": "item/Vessel.png",
+    "BrokenVessel": "boss/BrokenVessel.png",
+    "BroodingMawlek": "boss/BroodingMawlek.png",
+    "Collector": "boss/Collector.png",
+    "CrystalGuardian1": "boss/CrystalGuardian.png",
+    "CrystalGuardian2": "boss/CrystalGuardian.png",
+    "DungDefender": "boss/DungDefender.png",
+    "ElderHu": "boss/ElderHu.png",
+    "FalseKnight": "boss/FalseKnight.png",
+    "FailedKnight": "boss/FalseKnight.png",
+    "FailedChampionEssence": "TO_BE_DETERMINED/FailedChampionEssence.png",
+    "Flukemarm": "boss/Flukemarm.png",
+    "Galien": "boss/Galien.png",
+    "GodTamer": "boss/GodTamer.png",
+    "Gorb": "boss/Gorb.png",
+    "GreyPrince": "boss/GreyPrince.png",
+    "GreyPrinceEssence": "TO_BE_DETERMINED/GreyPrinceEssence.png",
+    "GruzMother": "boss/GruzMother.png",
+    "HollowKnightBoss": "boss/HollowKnightBoss.png",
+    "Hornet1": "boss/Hornet.png",
+    "Hornet2": "boss/Hornet.png",
+    "LostKin": "boss/BrokenVessel.png",
+    "LostKinEssence": "TO_BE_DETERMINED/LostKinEssence.png",
+    "MantisLords": "boss/MantisLords.png",
+    "Markoth": "boss/Markoth.png",
+    "Marmu": "boss/Marmu.png",
+    "MegaMossCharger": "boss/MassiveMossCharger.png",
+    "NightmareKingGrimm": "boss/NightmareKingGrimm.png",
+    "NoEyes": "boss/NoEyes.png",
+    "Nosk": "boss/Nosk.png",
+    "MatoOroNailBros": "boss/OroMato.png",
+    "RadianceBoss": "event/Radiance.png",
+    "PureVessel": "boss/PureVessel.png",
+    "SheoPaintmaster": "boss/SheoPaintmaster.png",
+    "SlyNailsage": "boss/SlyNailsage.png",
+    "SoulMaster": "boss/SoulMaster.png",
+    "SoulTyrant": "boss/SoulMaster.png",
+    "SoulTyrantEssence": "TO_BE_DETERMINED/SoulTyrantEssence.png",
+    "TraitorLord": "boss/TraitorLord.png",
+    "TroupeMasterGrimm": "boss/TroupeMasterGrimm.png",
+    "Uumuu": "boss/Uumuu.png",
+    "BlackKnight": "boss/WatcherKnight.png",
+    "WhiteDefender": "boss/WhiteDefender.png",
+    "WhiteDefenderEssence": "TO_BE_DETERMINED/WhiteDefenderEssence.png",
+    "Xero": "boss/Xero.png",
+    "HiveKnight": "boss/HiveKnight.png",
+    "VengeflyKingP": "boss/VengeflyKing.png",
+    "GruzMotherP": "boss/GruzMother.png",
+    "FalseKnightP": "boss/FalseKnight.png",
+    "MassiveMossChargerP": "boss/MassiveMossCharger.png",
+    "Hornet1P": "boss/Hornet.png",
+    "GorbP": "boss/Gorb.png",
+    "DungDefenderP": "boss/DungDefender.png",
+    "SoulWarriorP": "boss/SoulWarriorP.png",
+    "BroodingMawlekP": "boss/BroodingMawlek.png",
+    "OroMatoNailBrosP": "boss/OroMato.png",
+    "XeroP": "boss/Xero.png",
+    "CrystalGuardianP": "boss/CrystalGuardian.png",
+    "SoulMasterP": "boss/SoulMaster.png",
+    "OblobblesP": "boss/OblobblesP.png",
+    "MantisLordsP": "boss/MantisLords.png",
+    "MarmuP": "boss/Marmu.png",
+    "NoskP": "boss/Nosk.png",
+    "FlukemarmP": "boss/Flukemarm.png",
+    "BrokenVesselP": "boss/BrokenVessel.png",
+    "SheoPaintmasterP": "boss/SheoPaintmaster.png",
+    "HiveKnightP": "boss/HiveKnight.png",
+    "ElderHuP": "boss/ElderHu.png",
+    "CollectorP": "boss/Collector.png",
+    "GodTamerP": "boss/GodTamer.png",
+    "TroupeMasterGrimmP": "boss/TroupeMasterGrimm.png",
+    "GalienP": "boss/Galien.png",
+    "GreyPrinceZoteP": "boss/GreyPrince.png",
+    "UumuuP": "boss/Uumuu.png",
+    "Hornet2P": "boss/Hornet.png",
+    "SlyP": "boss/SlyNailsage.png",
+    "EnragedGuardianP": "boss/CrystalGuardian.png",
+    "LostKinP": "boss/BrokenVessel.png",
+    "NoEyesP": "boss/NoEyes.png",
+    "TraitorLordP": "boss/TraitorLord.png",
+    "WhiteDefenderP": "boss/WhiteDefender.png",
+    "FailedChampionP": "boss/FalseKnight.png",
+    "MarkothP": "boss/Markoth.png",
+    "WatcherKnightsP": "boss/WatcherKnight.png",
+    "SoulTyrantP": "boss/SoulMaster.png",
+    "PureVesselP": "boss/PureVessel.png",
+    "NoskHornetP": "boss/Nosk.png",
+    "NightmareKingGrimmP": "boss/NightmareKingGrimm.png",
+    "Hegemol": "boss/Hegemol.png",
+    "Lurien": "boss/Lurien.png",
+    "Monomon": "boss/Monomon.png",
+    "Dreamer1": "boss/Dreamer.png",
+    "Dreamer2": "boss/Dreamer.png",
+    "Dreamer3": "boss/Dreamer.png",
+    "PreGrimmShop": "TO_BE_DETERMINED/PreGrimmShop.png",
+    "CanOvercharm": "TO_BE_DETERMINED/CanOvercharm.png",
+    "UnchainedHollowKnight": "event/UnchainedHollowKnight.png",
+    "WatcherChandelier": "event/WatcherChandelier.png",
+    "CityGateOpen": "event/CityGateOpen.png",
+    "FlowerQuest": "TO_BE_DETERMINED/FlowerQuest.png",
+    "NailsmithKilled": "TO_BE_DETERMINED/NailsmithKilled.png",
+    "NightmareLantern": "boss/NightmareLantern.png",
+    "NightmareLanternDestroyed": "boss/NightmareLantern.png",
+    "HollowKnightDreamnail": "boss/HollowKnightBoss.png",
+    "SeerDeparts": "event/SeerDeparts.png",
+    "SpiritGladeOpen": "event/SpiritGladeOpen.png",
+    "BeastsDenTrapBench": "event/Bench.png",
+    "ColosseumBronze": "event/ColosseumBronze.png",
+    "ColosseumSilver": "event/ColosseumSilver.png",
+    "ColosseumGold": "event/ColosseumGold.png",
+    "Pantheon1": "event/Pantheon1.png",
+    "Pantheon2": "event/Pantheon2.png",
+    "Pantheon3": "event/Pantheon3.png",
+    "Pantheon4": "event/Pantheon4.png",
+    "Pantheon5": "event/Pantheon5.png",
+    "PathOfPain": "event/PathOfPain.png",
+    "AspidHunter": "enemy/AspidHunter.png",
+    "Aluba": "enemy/Aluba.png",
+    "HuskMiner": "enemy/HuskMiner.png",
+    "GreatHopper": "enemy/GreatHopper.png",
+    "GorgeousHusk": "enemy/GorgeousHusk.png",
+    "MenderBug": "enemy/MenderBug.png",
+    "killedSanctumWarrior": "TO_BE_DETERMINED/killedSanctumWarrior.png",
+    "killedSoulTwister": "TO_BE_DETERMINED/killedSoulTwister.png",
+    "MossKnight": "enemy/MossKnight.png",
+    "MushroomBrawler": "enemy/MushroomBrawler.png",
+    "Zote1": "boss/VengeflyKing.png",
+    "Zote2": "boss/Zote.png",
+    "ZoteKilled": "boss/Zote.png",
+    "CrossroadsStation": "event/Stag.png",
+    "GreenpathStation": "event/Stag.png",
+    "QueensStationStation": "event/Stag.png",
+    "QueensGardensStation": "event/Stag.png",
+    "StoreroomsStation": "event/Stag.png",
+    "KingsStationStation": "event/Stag.png",
+    "RestingGroundsStation": "event/Stag.png",
+    "DeepnestStation": "event/Stag.png",
+    "HiddenStationStation": "event/Stag.png",
+    "StagnestStation": "event/Stag.png",
+    "MrMushroom1": "enemy/MrMushroom.png",
+    "MrMushroom2": "enemy/MrMushroom.png",
+    "MrMushroom3": "enemy/MrMushroom.png",
+    "MrMushroom4": "enemy/MrMushroom.png",
+    "MrMushroom5": "enemy/MrMushroom.png",
+    "MrMushroom6": "enemy/MrMushroom.png",
+    "MrMushroom7": "enemy/MrMushroom.png",
+    "Abyss": "location/Abyss.png",
+    "CityOfTears": "location/CityOfTears.png",
+    "Colosseum": "location/Colosseum.png",
+    "CrystalPeak": "location/CrystalPeak.png",
+    "Deepnest": "location/Deepnest.png",
+    "DeepnestSpa": "location/DeepnestSpa.png",
+    "Dirtmouth": "location/Dirtmouth.png",
+    "FogCanyon": "location/FogCanyon.png",
+    "ForgottenCrossroads": "location/ForgottenCrossroads.png",
+    "FungalWastes": "location/FungalWastes.png",
+    "Godhome": "location/Godhome.png",
+    "Greenpath": "location/Greenpath.png",
+    "Hive": "location/Hive.png",
+    "InfectedCrossroads": "location/InfectedCrossroads.png",
+    "KingdomsEdge": "location/KingdomsEdge.png",
+    "QueensGardens": "location/QueensGardens.png",
+    "RestingGrounds": "location/RestingGrounds.png",
+    "RoyalWaterways": "location/RoyalWaterways.png",
+    "TeachersArchive": "location/TeachersArchive.png",
+    "WhitePalace": "location/WhitePalace.png",
+    "WhitePalaceSecretRoom": "location/WhitePalaceSecretRoom.png",
+    "BlueLake": "location/BlueLake.png",
+    "EnterAnyDream": "TO_BE_DETERMINED/EnterAnyDream.png",
+    "EnterGreenpath": "TO_BE_DETERMINED/EnterGreenpath.png",
+    "EnterGreenpathWithOvercharm": "TO_BE_DETERMINED/EnterGreenpathWithOvercharm.png",
+    "KingsPass": "location/KingsPass.png",
+    "KingsPassEnterFromTown": "TO_BE_DETERMINED/KingsPassEnterFromTown.png",
+    "EnterNKG": "TO_BE_DETERMINED/EnterNKG.png",
+    "EnterSanctum": "TO_BE_DETERMINED/EnterSanctum.png",
+    "EnterSanctumWithShadeSoul": "TO_BE_DETERMINED/EnterSanctumWithShadeSoul.png",
+    "BaldurShell": "charm/BaldurShell.png",
+    "Dashmaster": "charm/Dashmaster.png",
+    "DeepFocus": "charm/DeepFocus.png",
+    "DefendersCrest": "charm/DefendersCrest.png",
+    "Dreamshield": "charm/Dreamshield.png",
+    "DreamWielder": "charm/DreamWielder.png",
+    "Flukenest": "charm/Flukenest.png",
+    "FragileGreed": "charm/FragileGreed.png",
+    "FragileHeart": "charm/FragileHeart.png",
+    "FragileStrength": "charm/FragileStrength.png",
+    "FuryOfTheFallen": "charm/FuryOfTheFallen.png",
+    "GatheringSwarm": "charm/GatheringSwarm.png",
+    "GlowingWomb": "charm/GlowingWomb.png",
+    "Grimmchild": "charm/Grimmchild.png",
+    "Grimmchild2": "charm/Grimmchild2.png",
+    "Grimmchild3": "charm/Grimmchild3.png",
+    "Grimmchild4": "charm/Grimmchild4.png",
+    "GrubberflysElegy": "charm/GrubberflysElegy.png",
+    "Grubsong": "charm/Grubsong.png",
+    "HeavyBlow": "charm/HeavyBlow.png",
+    "Hiveblood": "charm/Hiveblood.png",
+    "JonisBlessing": "charm/JonisBlessing.png",
+    "WhiteFragmentLeft": "charm/WhiteFragmentLeft.png",
+    "WhiteFragmentRight": "charm/WhiteFragmentRight.png",
+    "Kingsoul": "charm/Kingsoul.png",
+    "LifebloodCore": "charm/LifebloodCore.png",
+    "LifebloodHeart": "charm/LifebloodHeart.png",
+    "Longnail": "charm/Longnail.png",
+    "MarkOfPride": "charm/MarkOfPride.png",
+    "NailmastersGlory": "charm/NailmastersGlory.png",
+    "QuickFocus": "charm/QuickFocus.png",
+    "QuickSlash": "charm/QuickSlash.png",
+    "ShamanStone": "charm/ShamanStone.png",
+    "ShapeOfUnn": "charm/ShapeOfUnn.png",
+    "SharpShadow": "charm/SharpShadow.png",
+    "SoulCatcher": "charm/SoulCatcher.png",
+    "SoulEater": "charm/SoulEater.png",
+    "SpellTwister": "charm/SpellTwister.png",
+    "SporeShroom": "charm/SporeShroom.png",
+    "Sprintmaster": "charm/Sprintmaster.png",
+    "StalwartShell": "charm/StalwartShell.png",
+    "SteadyBody": "charm/SteadyBody.png",
+    "ThornsOfAgony": "charm/ThornsOfAgony.png",
+    "VoidHeart": "charm/VoidHeart.png",
+    "WaywardCompass": "charm/WaywardCompass.png",
+    "Weaversong": "charm/Weaversong.png",
+    "NotchShrumalOgres": "collectible/Notch.png",
+    "NotchFogCanyon": "collectible/Notch.png",
+    "NotchGrimm": "TO_BE_DETERMINED/NotchGrimm.png",
+    "NotchSalubra1": "collectible/Notch.png",
+    "NotchSalubra2": "collectible/Notch.png",
+    "NotchSalubra3": "collectible/Notch.png",
+    "NotchSalubra4": "collectible/Notch.png",
+    "MetGreyMourner": "TO_BE_DETERMINED/MetGreyMourner.png",
+    "GreyMournerSeerAscended": "TO_BE_DETERMINED/GreyMournerSeerAscended.png",
+    "Lemm2": "collectible/Lemm2.png",
+    "ElderbugFlower": "event/ElderbugFlower.png",
+    "BrettaRescued": "event/BrettaRescued.png",
+    "BrummFlame": "collectible/BrummFlame.png",
+    "LittleFool": "collectible/LittleFool.png",
+    "SlyRescued": "TO_BE_DETERMINED/SlyRescued.png",
+    "Flame1": "collectible/Flame.png",
+    "Flame2": "collectible/Flame.png",
+    "Flame3": "collectible/Flame.png",
+    "Ore1": "collectible/Ore.png",
+    "Ore2": "collectible/Ore.png",
+    "Ore3": "collectible/Ore.png",
+    "Ore4": "collectible/Ore.png",
+    "Ore5": "collectible/Ore.png",
+    "Ore6": "collectible/Ore.png",
+    "Grub1": "collectible/Grub.png",
+    "Grub2": "collectible/Grub.png",
+    "Grub3": "collectible/Grub.png",
+    "Grub4": "collectible/Grub.png",
+    "Grub5": "collectible/Grub.png",
+    "Grub6": "collectible/Grub.png",
+    "Grub7": "collectible/Grub.png",
+    "Grub8": "collectible/Grub.png",
+    "Grub9": "collectible/Grub.png",
+    "Grub10": "collectible/Grub.png",
+    "Grub11": "collectible/Grub.png",
+    "Grub12": "collectible/Grub.png",
+    "Grub13": "collectible/Grub.png",
+    "Grub14": "collectible/Grub.png",
+    "Grub15": "collectible/Grub.png",
+    "Grub16": "collectible/Grub.png",
+    "Grub17": "collectible/Grub.png",
+    "Grub18": "collectible/Grub.png",
+    "Grub19": "collectible/Grub.png",
+    "Grub20": "collectible/Grub.png",
+    "Grub21": "collectible/Grub.png",
+    "Grub22": "collectible/Grub.png",
+    "Grub23": "collectible/Grub.png",
+    "Grub24": "collectible/Grub.png",
+    "Grub25": "collectible/Grub.png",
+    "Grub26": "collectible/Grub.png",
+    "Grub27": "collectible/Grub.png",
+    "Grub28": "collectible/Grub.png",
+    "Grub29": "collectible/Grub.png",
+    "Grub30": "collectible/Grub.png",
+    "Grub31": "collectible/Grub.png",
+    "Grub32": "collectible/Grub.png",
+    "Grub33": "collectible/Grub.png",
+    "Grub34": "collectible/Grub.png",
+    "Grub35": "collectible/Grub.png",
+    "Grub36": "collectible/Grub.png",
+    "Grub37": "collectible/Grub.png",
+    "Grub38": "collectible/Grub.png",
+    "Grub39": "collectible/Grub.png",
+    "Grub40": "collectible/Grub.png",
+    "Grub41": "collectible/Grub.png",
+    "Grub42": "collectible/Grub.png",
+    "Grub43": "collectible/Grub.png",
+    "Grub44": "collectible/Grub.png",
+    "Grub45": "collectible/Grub.png",
+    "Grub46": "collectible/Grub.png",
+    "TreeMound": "collectible/Tree.png",
+    "TreeCity": "collectible/Tree.png",
+    "TreePeak": "collectible/Tree.png",
+    "TreeDeepnest": "collectible/Tree.png",
+    "TreeCrossroads": "collectible/Tree.png",
+    "TreeLegEater": "collectible/Tree.png",
+    "TreeMantisVillage": "collectible/Tree.png",
+    "TreeGreenpath": "collectible/Tree.png",
+    "TreeHive": "collectible/Tree.png",
+    "TreeCliffs": "collectible/Tree.png",
+    "TreeKingdomsEdge": "collectible/Tree.png",
+    "TreeQueensGardens": "collectible/Tree.png",
+    "TreeRestingGrounds": "collectible/Tree.png",
+    "TreeWaterways": "collectible/Tree.png",
+    "TreeGlade": "collectible/Tree.png",
+    "TollBenchQG": "event/Bench.png",
+    "TollBenchCity": "event/Bench.png",
+    "TollBenchBasin": "event/Bench.png",
+    "WaterwaysManhole": "TO_BE_DETERMINED/WaterwaysManhole.png",
+    "TramDeepnest": "TO_BE_DETERMINED/TramDeepnest.png",
+    "WhitePalaceOrb1": "collectible/Orb.png",
+    "WhitePalaceOrb3": "collectible/Orb.png",
+    "WhitePalaceOrb2": "collectible/Orb.png",
+    "WhitePalaceLeftWingMid": "TO_BE_DETERMINED/WhitePalaceLeftWingMid.png",
+    "WhitePalaceRightEntry": "TO_BE_DETERMINED/WhitePalaceRightEntry.png",
+    "WhitePalaceRightClimb": "TO_BE_DETERMINED/WhitePalaceRightClimb.png",
+    "WhitePalaceRightSqueeze": "TO_BE_DETERMINED/WhitePalaceRightSqueeze.png",
+    "WhitePalaceRightDone": "TO_BE_DETERMINED/WhitePalaceRightDone.png",
+    "WhitePalaceTopEntry": "TO_BE_DETERMINED/WhitePalaceTopEntry.png",
+    "WhitePalaceTopClimb": "TO_BE_DETERMINED/WhitePalaceTopClimb.png",
+    "WhitePalaceTopLeverRoom": "TO_BE_DETERMINED/WhitePalaceTopLeverRoom.png",
+    "WhitePalaceTopLastPlats": "TO_BE_DETERMINED/WhitePalaceTopLastPlats.png",
+    "WhitePalaceThroneRoom": "TO_BE_DETERMINED/WhitePalaceThroneRoom.png",
+    "WhitePalaceAtrium": "TO_BE_DETERMINED/WhitePalaceAtrium.png",
+    "DgateKingdomsEdgeAcid": "TO_BE_DETERMINED/DgateKingdomsEdgeAcid.png"
 }

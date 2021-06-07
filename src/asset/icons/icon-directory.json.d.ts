@@ -1,6 +1,2 @@
-export interface IconDefinition {
-    imageId: string;
-    file: string;
-}
-declare const icons: Record<string, IconDefinition>;
+declare const icons: Record<string, string>;
 export default icons;
