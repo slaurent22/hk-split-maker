@@ -4,7 +4,15 @@
     "title": "HK Splits",
     "description": "A Hollow Knight LiveSplit Configuration",
     "type": "object",
+    "additionalProperties": false,
     "properties": {
+        "names": {
+            "additionalProperties": false,
+            "description": "Name overrides for the splits.",
+            "type": "object",
+            "properties": {
+            }
+        },
         "ordered": {
             "description": "Ordered splits improve performance and are required for certain splits (e.g. KingsPass).",
             "type": "boolean"

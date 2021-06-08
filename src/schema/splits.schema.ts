@@ -38,4 +38,24 @@ const items = SplitConfigSchemaSource.properties.splitIds.items as {
 
 items.oneOf = items.oneOf.concat(splitsSchema).concat(subsplitsSchema).concat(manualSplit);
 
+console.log(items.oneOf);
+
+
+interface NamePropItem {
+    type: "string";
+    description: string;
+}
+
+const namesProperties: Record<string, NamePropItem> = {};
+for (const split of splitsSchema) {
+    namesProperties[split.const] = {
+        type: "string",
+        description: split.description,
+    };
+}
+const names = SplitConfigSchemaSource.properties.names;
+names.properties = namesProperties;
+
+console.log(names);
+
 export default SplitConfigSchemaSource;

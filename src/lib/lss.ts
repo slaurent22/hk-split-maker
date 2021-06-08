@@ -4,6 +4,7 @@ import { getIconURLs, parseSplitsDefinitions } from "./splits";
 
 export interface Config {
     splitIds: Array<string>;
+    names?: Record<string, string|Array<string>>;
     ordered: true;
     endTriggeringAutosplit: true;
     categoryName: string;
@@ -87,6 +88,7 @@ export async function createSplitsXml(config: Config): Promise<string> {
         endTriggeringAutosplit,
         categoryName,
         gameName,
+        names,
     } = config;
 
     const splitDefinitions = parseSplitsDefinitions();
@@ -94,7 +96,13 @@ export async function createSplitsXml(config: Config): Promise<string> {
     const iconURLsToFetch = new Set<string>();
     const liveSplitIconData = new Map<string, string>();
 
+    const splitIdCount = new Map<string, number>();
     const parsedSplitIds = splitIds.map(splitId => {
+        if (!splitIdCount.has(splitId)) {
+            splitIdCount.set(splitId, 0);
+        }
+        const currentSplitIdCount = splitIdCount.get(splitId) as number;
+
         let rawId = splitId;
         let manual = false;
         let subsplit = false;
@@ -122,8 +130,18 @@ export async function createSplitsXml(config: Config): Promise<string> {
             throw new Error(`Failed to find a definition for split id ${rawId}`);
         }
 
-        const name = splitDefinition ? splitDefinition.name : rawId;
+        let name = splitDefinition ? splitDefinition.name : rawId;
+        const nameOverride = names && names[splitId];
+        if (nameOverride) {
+            if (typeof nameOverride === "string") {
+                name = nameOverride;
+            }
+            else {
+                name = nameOverride[currentSplitIdCount];
+            }
+        }
 
+        splitIdCount.set(splitId, 1 + currentSplitIdCount);
         return {
             rawId,
             manual,
@@ -143,7 +161,6 @@ export async function createSplitsXml(config: Config): Promise<string> {
         [...iconURLsToFetch].map(async url => {
             try {
                 const iconData = await createLiveSplitIconData(url);
-                console.log(iconData);
                 liveSplitIconData.set(url, iconData);
             }
             catch (e) {

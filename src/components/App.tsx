@@ -138,7 +138,8 @@ export default class App extends Component<AppProps, AppState> {
         try {
             configObject = this.parseConfigInput();
         }
-        catch {
+        catch (e) {
+            console.log(e);
             alert("Failed to parse config as JSON");
             return;
         }
