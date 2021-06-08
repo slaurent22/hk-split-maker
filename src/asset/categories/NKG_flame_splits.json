@@ -31,6 +31,22 @@
         "Flame3",
         "NightmareKingGrimm"
     ],
+    "names": {
+        "Flame1": [
+            "Peak Flame",
+            "King's Pass Flame"
+        ],
+        "Flame2": [
+            "Storerooms Flame",
+            "Resting Grounds Flame",
+            "Hive Flame"
+        ],
+        "Flame3": [
+            "Greenpath Flame",
+            "Kingdom's Edge Flame",
+            "Broken Bridge Flame"
+        ]
+    },
     "ordered": true,
     "endTriggeringAutosplit": true,
     "gameName": "Hollow Knight Category Extensions",

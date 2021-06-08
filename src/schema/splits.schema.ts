@@ -42,16 +42,39 @@ console.log(items.oneOf);
 
 
 interface NamePropItem {
-    type: "string";
-    description: string;
+    oneOf: [
+        {
+            type: "string";
+            description: string;
+        },
+        {
+            type: "array";
+            description: string;
+            items: {
+                type: "string";
+            };
+        }
+    ];
 }
 
 const namesProperties: Record<string, NamePropItem> = {};
 for (const split of splitsSchema) {
     namesProperties[split.const] = {
-        type: "string",
-        description: split.description,
-    };
+        oneOf: [
+            {
+                type: "string",
+                description: split.description,
+            },
+            {
+                type: "array",
+                description: split.description,
+                items: {
+                    type: "string",
+                },
+            }
+        ],
+    }
+    ;
 }
 const names = SplitConfigSchemaSource.properties.names;
 names.properties = namesProperties;
