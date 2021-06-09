@@ -46,6 +46,10 @@ export default class Instructions extends Component {
                         Open this file in LiveSplit via right click ➡ Open
                         Splits ➡ From File
                     </li>
+                    <li>
+                        To <b>compare against loadless time</b>, right-click
+                        "Compare Against" ➡ select "Game Time"
+                    </li>
                 </ol>
                 <h2>Video Tutorial</h2>
                 <div className="centered">
