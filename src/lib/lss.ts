@@ -133,12 +133,14 @@ export async function createSplitsXml(config: Config): Promise<string> {
         let name = splitDefinition ? splitDefinition.name : rawId;
         const nameOverride = names && names[splitId];
         if (nameOverride) {
+            let nameTemplate = "";
             if (typeof nameOverride === "string") {
-                name = nameOverride;
+                nameTemplate = nameOverride;
             }
             else {
-                name = nameOverride[currentSplitIdCount];
+                nameTemplate = nameOverride[currentSplitIdCount];
             }
+            name = nameTemplate.replace("%s", name);
         }
 
         splitIdCount.set(splitId, 1 + currentSplitIdCount);
