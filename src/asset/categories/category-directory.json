@@ -7,6 +7,10 @@
       {
         "fileName": "all-skills",
         "displayName": "All Skills (1.2.2.1)"
+      },
+      {
+        "fileName": "any",
+        "displayName": "Any% (1.2.2.1)"
       }
     ],
     "Hollow Knight Category Extensions": [
