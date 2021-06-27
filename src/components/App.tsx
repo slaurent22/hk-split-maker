@@ -49,6 +49,10 @@ export default class App extends Component<AppProps, AppState> {
     public render(): ReactNode {
         return (
             <div id="app">
+                <div className="alert-banner">
+                    <span className="close-ab" onClick={this.parentElement.style.display="none"}>&times;</span>
+                    Intestested in contributing or suggesting ideas and splits? Check out the <a href="https://github.com/slaurent22/hk-split-maker">Github Project Site!</a>
+                </div>
                 <Header />
                 <Instructions />
                 <div id="input-output">
