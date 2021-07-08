@@ -1,0 +1,37 @@
+{
+    "splitIds": [
+        "VengefulSpirit",
+        "Greenpath",
+        "MothwingCloak",
+        "MantisClaw",
+        "BlueLake",
+        "GorgeousHusk",
+        "DesolateDive",
+        "KingsStationStation",
+        "CrystalHeart",
+        "DescendingDark",
+        "DreamNail",
+        "CycloneSlash",
+        "ShadeSoul",
+        "Lurien",
+        "TollBenchBasin",
+        "MonarchWings",
+        "Monomon",
+        "GreatSlash",
+        "HowlingWraiths",
+        "Hegemol",
+        "DashSlash",
+        "KingsBrand",
+        "ShadeCloak",
+        "AbyssShriek",
+        "UnchainedHollowKnight"
+    ],
+    "ordered": true,
+    "endTriggeringAutosplit": false,
+    "gameName": "Hollow Knight",
+    "categoryName": "Any%",
+    "variables": {
+        "platform": "PC",
+        "patch": "1.5.75.11827"
+    }
+}
