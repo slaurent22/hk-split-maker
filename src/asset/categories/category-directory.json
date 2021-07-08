@@ -9,8 +9,20 @@
         "displayName": "All Skills (1.2.2.1)"
       },
       {
+        "fileName": "all-skills_cp",
+        "displayName": "All Skills (1.4+)"
+      },
+      {
         "fileName": "any",
         "displayName": "Any% (1.2.2.1)"
+      },
+      {
+        "fileName": "any_cp",
+        "displayName": "Any% (1.4+)"
+      },
+      {
+        "fileName": "any_cp_spore",
+        "displayName": "Any% (1.4.3.2) w/ Spore Shroom"
       }
     ],
     "Hollow Knight Category Extensions": [
