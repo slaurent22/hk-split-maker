@@ -395,6 +395,7 @@
         "WhitePalaceOrb1",
         "WhitePalaceOrb3",
         "WhitePalaceOrb2",
+        "WhitePalaceLeftEntry",
         "WhitePalaceLeftWingMid",
         "WhitePalaceRightEntry",
         "WhitePalaceRightClimb",
@@ -411,7 +412,14 @@
         "PathOfPainTransition2",
         "PathOfPainTransition3",
         "DgateKingdomsEdgeAcid",
-        "SoulMasterEncountered"
+        "SoulMasterEncountered",
+        "GodhomeBench",
+        "Menu",
+        "MenuClaw",
+        "MenuGorgeousHusk",
+        "TransClaw",
+        "TransGorgeousHusk",
+        "PlayerDeath"
     ],
     "ordered": true,
     "endTriggeringAutosplit": false,

@@ -395,6 +395,7 @@ import TramDeepnest from "./Misc/Tram.png";
 import WhitePalaceOrb1 from "./Enemy/Wingmould.png";
 import WhitePalaceOrb3 from "./Enemy/Wingmould.png";
 import WhitePalaceOrb2 from "./Enemy/Wingmould.png";
+import WhitePalaceLeftEntry from "./Enemy/Wingmould.png";
 import WhitePalaceLeftWingMid from "./Enemy/Wingmould.png";
 import WhitePalaceRightEntry from "./Enemy/Wingmould.png";
 import WhitePalaceRightClimb from "./Enemy/Wingmould.png";
@@ -412,6 +413,13 @@ import PathOfPainTransition2 from "./Enemy/Wingmould.png";
 import PathOfPainTransition3 from "./Enemy/Wingmould.png";
 import DgateKingdomsEdgeAcid from "./Skill/DreamGate.png";
 import SoulMasterEncountered from "./Boss/SoulMaster.png";
+import GodhomeBench from "./Misc/Godseeker.png";
+import Menu from "./Misc/MapQuill.png";
+import MenuClaw from "./Skill/MantisClaw.png";
+import MenuGorgeousHusk from "./Enemy/GorgeousHusk.png";
+import TransClaw from "./Skill/MantisClaw.png";
+import TransGorgeousHusk from "./Enemy/GorgeousHusk.png";
+import PlayerDeath from "./Enemy/Shade.png";
 export default {
     AbyssShriek,
     CrystalHeart,
@@ -808,6 +816,7 @@ export default {
     WhitePalaceOrb1,
     WhitePalaceOrb3,
     WhitePalaceOrb2,
+    WhitePalaceLeftEntry,
     WhitePalaceLeftWingMid,
     WhitePalaceRightEntry,
     WhitePalaceRightClimb,
@@ -825,4 +834,11 @@ export default {
     PathOfPainTransition3,
     DgateKingdomsEdgeAcid,
     SoulMasterEncountered,
+    GodhomeBench,
+    Menu,
+    MenuClaw,
+    MenuGorgeousHusk,
+    TransClaw,
+    TransGorgeousHusk,
+    PlayerDeath,
 };

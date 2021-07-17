@@ -63,7 +63,7 @@ const every = {
     "categoryName": "EVERY AUTOSPLIT",
     "variables": {
         "platform": "PC",
-        "patch": "1.4.3.2"
+        "patch": "1.5.75"
     }
 }
 
@@ -155,6 +155,7 @@ function getUrl(id, qualifier) {
             case "SeerDeparts":                return getUrl("Ascension", "Achievement");
             case "SpiritGladeOpen":            return getUrl("Attunement", "Achievement");
             case "BeastsDenTrapBench":         return getUrl("Bench", "Misc");
+            case "PlayerDeath":                return getUrl("Shade", "Enemy");
         }
     }
 
@@ -244,6 +245,17 @@ function getUrl(id, qualifier) {
             case "EnterSanctum":
             case "EnterSanctumWithShadeSoul":    return getUrl("Folly", "Enemy");
             case "WaterwaysEntry":               return getUrl("RoyalWaterways", "Area");
+            case "GodhomeBench":                 return getUrl("Godhome", "Area");
+            case "MenuClaw":                     return getUrl("MantisClaw", "Skill");
+            case "MenuGorgeousHusk":             return getUrl("GorgeousHusk", "Enemy");
+            case "TransClaw":                    return getUrl("MantisClaw", "Skill");
+            case "TransGorgeousHusk":            return getUrl("GorgeousHusk", "Enemy");
+        }
+    }
+
+    if (qualifier === "Menu") {
+        switch (id) {
+            case "Menu": return getUrl("MapQuill", "Misc");
         }
     }
 
