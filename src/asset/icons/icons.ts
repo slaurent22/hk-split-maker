@@ -251,7 +251,7 @@ import KingsPass from "./Enemy/Vengefly.png";
 import KingsPassEnterFromTown from "./Enemy/Vengefly.png";
 import KingdomsEdgeEntry from "./Enemy/PrimalAspid.png";
 import KingdomsEdgeOvercharmedEntry from "./Enemy/PrimalAspid.png";
-import EnterNKG from "./Boss/NightmareKingGrimm.png";
+import EnterNKG from "./Enemy/GrimmkinNightmare.png";
 import QueensGardensEntry from "./Enemy/SpinyHusk.png";
 import EnterSanctum from "./Enemy/Folly.png";
 import EnterSanctumWithShadeSoul from "./Enemy/Folly.png";

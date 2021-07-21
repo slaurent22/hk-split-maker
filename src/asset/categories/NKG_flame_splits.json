@@ -29,6 +29,7 @@
         "TramPass",
         "Flame2",
         "Flame3",
+        "EnterNKG",
         "NightmareKingGrimm"
     ],
     "names": {
@@ -45,7 +46,8 @@
             "Greenpath Flame",
             "Kingdom's Edge Flame",
             "Broken Bridge Flame"
-        ]
+        ],
+        "EnterNKG": "Enter NKG"
     },
     "ordered": true,
     "endTriggeringAutosplit": true,

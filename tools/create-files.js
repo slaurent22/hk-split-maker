@@ -240,7 +240,7 @@ function getUrl(id, qualifier) {
             case "KingsPassEnterFromTown":       return getUrl("Vengefly", "Enemy");
             case "KingdomsEdgeEntry":
             case "KingdomsEdgeOvercharmedEntry": return getUrl("KingdomsEdge", "Area");
-            case "EnterNKG":                     return getUrl("NightmareKingGrimm", "Boss");
+            case "EnterNKG":                     return getUrl("GrimmkinNightmare", "Enemy");
             case "QueensGardensEntry":           return getUrl("QueensGardens", "Area");
             case "EnterSanctum":
             case "EnterSanctumWithShadeSoul":    return getUrl("Folly", "Enemy");
