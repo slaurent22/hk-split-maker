@@ -1,10 +1,11 @@
 {
     "splitIds": [
         "VengefulSpirit",
-        "Greenpath"
+        "EnterGreenpath",
+        "PlayerDeath"
     ],
     "ordered": true,
-    "endTriggeringAutosplit": false,
+    "endTriggeringAutosplit": true,
     "gameName": "Hollow Knight Category Extensions",
     "categoryName": "Eat Me Too",
     "variables": {
