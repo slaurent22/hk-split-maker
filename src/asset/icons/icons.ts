@@ -21,6 +21,7 @@ import VengefulSpirit from "./Skill/VengefulSpirit.png";
 import CityKey from "./Item/CityKey.png";
 import HasDelicateFlower from "./Item/DelicateFlower.png";
 import ElegantKey from "./Item/ElegantKey.png";
+import ElegantKeyShoptimised from "./Item/ElegantKey.png";
 import GodTuner from "./Item/GodTuner.png";
 import HuntersMark from "./Item/HuntersMark.png";
 import KingsBrand from "./Item/KingsBrand.png";
@@ -163,10 +164,12 @@ import Dreamer1 from "./Dreamer/Dreamer.png";
 import Dreamer2 from "./Dreamer/Dreamer.png";
 import Dreamer3 from "./Dreamer/Dreamer.png";
 import PreGrimmShop from "./Boss/TroupeMasterGrimm.png";
+import SlyShopFinished from "./NPC/SlyRescued.png";
 import CanOvercharm from "./Achievement/Charmed.png";
 import UnchainedHollowKnight from "./Boss/HollowKnightBoss.png";
 import WatcherChandelier from "./Misc/WatcherChandelier.png";
 import CityGateOpen from "./Item/CityKey.png";
+import PlayerDeath from "./Enemy/Shade.png";
 import FlowerQuest from "./Item/DelicateFlower.png";
 import FlowerRewardGiven from "./Achievement/Solace.png";
 import HappyCouplePlayerDataEvent from "./Achievement/HappyCouple.png";
@@ -244,8 +247,11 @@ import BlueLake from "./Achievement/Witness.png";
 import CrystalPeakEntry from "./Enemy/CrystalCrawler.png";
 import EnterAnyDream from "./Skill/DreamNail.png";
 import FogCanyonEntry from "./Enemy/Uoma.png";
+import TransGorgeousHusk from "./Enemy/GorgeousHusk.png";
 import EnterGreenpath from "./Enemy/Mosscreep.png";
 import EnterGreenpathWithOvercharm from "./Enemy/Mosscreep.png";
+import TransClaw from "./Skill/MantisClaw.png";
+import TransDescendingDark from "./Skill/DescendingDark.png";
 import HiveEntry from "./Enemy/Hiveling.png";
 import KingsPass from "./Enemy/Vengefly.png";
 import KingsPassEnterFromTown from "./Enemy/Vengefly.png";
@@ -417,9 +423,6 @@ import GodhomeBench from "./Misc/Godseeker.png";
 import Menu from "./Misc/MapQuill.png";
 import MenuClaw from "./Skill/MantisClaw.png";
 import MenuGorgeousHusk from "./Enemy/GorgeousHusk.png";
-import TransClaw from "./Skill/MantisClaw.png";
-import TransGorgeousHusk from "./Enemy/GorgeousHusk.png";
-import PlayerDeath from "./Enemy/Shade.png";
 export default {
     AbyssShriek,
     CrystalHeart,
@@ -442,6 +445,7 @@ export default {
     CityKey,
     HasDelicateFlower,
     ElegantKey,
+    ElegantKeyShoptimised,
     GodTuner,
     HuntersMark,
     KingsBrand,
@@ -584,10 +588,12 @@ export default {
     Dreamer2,
     Dreamer3,
     PreGrimmShop,
+    SlyShopFinished,
     CanOvercharm,
     UnchainedHollowKnight,
     WatcherChandelier,
     CityGateOpen,
+    PlayerDeath,
     FlowerQuest,
     FlowerRewardGiven,
     HappyCouplePlayerDataEvent,
@@ -665,8 +671,11 @@ export default {
     CrystalPeakEntry,
     EnterAnyDream,
     FogCanyonEntry,
+    TransGorgeousHusk,
     EnterGreenpath,
     EnterGreenpathWithOvercharm,
+    TransClaw,
+    TransDescendingDark,
     HiveEntry,
     KingsPass,
     KingsPassEnterFromTown,
@@ -838,7 +847,4 @@ export default {
     Menu,
     MenuClaw,
     MenuGorgeousHusk,
-    TransClaw,
-    TransGorgeousHusk,
-    PlayerDeath,
 };

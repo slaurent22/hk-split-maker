@@ -110,7 +110,8 @@ const NEW_ID_MAP = {
     "Dreamer1": "Dreamer",
     "Dreamer2": "Dreamer",
     "Dreamer3": "Dreamer",
-    "Hegemol": "Herrah"
+    "Hegemol": "Herrah",
+    "ElegantKeyShoptimised": "ElegantKey"
 };
 
 function getUrl(id, qualifier) {
@@ -156,6 +157,7 @@ function getUrl(id, qualifier) {
             case "SpiritGladeOpen":            return getUrl("Attunement", "Achievement");
             case "BeastsDenTrapBench":         return getUrl("Bench", "Misc");
             case "PlayerDeath":                return getUrl("Shade", "Enemy");
+            case "SlyShopFinished":            return getUrl("SlyRescued", "NPC");
         }
     }
 
@@ -246,16 +248,17 @@ function getUrl(id, qualifier) {
             case "EnterSanctumWithShadeSoul":    return getUrl("Folly", "Enemy");
             case "WaterwaysEntry":               return getUrl("RoyalWaterways", "Area");
             case "GodhomeBench":                 return getUrl("Godhome", "Area");
-            case "MenuClaw":                     return getUrl("MantisClaw", "Skill");
-            case "MenuGorgeousHusk":             return getUrl("GorgeousHusk", "Enemy");
             case "TransClaw":                    return getUrl("MantisClaw", "Skill");
             case "TransGorgeousHusk":            return getUrl("GorgeousHusk", "Enemy");
+            case "TransDescendingDark":          return getUrl("DescendingDark", "Skill");
         }
     }
 
     if (qualifier === "Menu") {
         switch (id) {
             case "Menu": return getUrl("MapQuill", "Misc");
+            case "MenuClaw":                     return getUrl("MantisClaw", "Skill");
+            case "MenuGorgeousHusk":             return getUrl("GorgeousHusk", "Enemy");
         }
     }
 
