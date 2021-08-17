@@ -111,7 +111,8 @@ const NEW_ID_MAP = {
     "Dreamer2": "Dreamer",
     "Dreamer3": "Dreamer",
     "Hegemol": "Herrah",
-    "ElegantKeyShoptimised": "ElegantKey"
+    "ElegantKeyShoptimised": "ElegantKey",
+    "SlySimpleKey": "SimpleKey"
 };
 
 function getUrl(id, qualifier) {
@@ -137,6 +138,28 @@ function getUrl(id, qualifier) {
         return getUrl("CharmNotch", "Item");
     }
 
+    if (qualifier === "Item") {
+        switch (id) {
+            case "AllSeals": return getUrl("HallownestSeal", "Relic");
+            case "AllEggs":  return getUrl("RancidEgg", "Item");
+            case "mapDirtmouth":
+            case "mapCrossroads":
+            case "mapGreenpath":
+            case "mapFogCanyon":
+            case "mapRoyalGardens":
+            case "mapFungalWastes":
+            case "mapCity":
+            case "mapWaterways":
+            case "mapMines":
+            case "mapDeepnest":
+            case "mapCliffs":
+            case "mapOutskirts":
+            case "mapRestingGrounds":
+            case "mapAbyss":
+                return getUrl("Map", "Misc")
+        }
+    }
+
     if (qualifier === "Event") {
         switch (id) {
             case "PreGrimmShop":               return getUrl("TroupeMasterGrimm", "Boss");
@@ -158,6 +181,8 @@ function getUrl(id, qualifier) {
             case "BeastsDenTrapBench":         return getUrl("Bench", "Misc");
             case "PlayerDeath":                return getUrl("Shade", "Enemy");
             case "SlyShopFinished":            return getUrl("SlyRescued", "NPC");
+            case "AllBreakables":              return getUrl("FragileStrengthBroken", "Charm");
+            case "MetEmilitia":                return getUrl("Emilitia", "NPC");
         }
     }
 
@@ -251,6 +276,7 @@ function getUrl(id, qualifier) {
             case "TransClaw":                    return getUrl("MantisClaw", "Skill");
             case "TransGorgeousHusk":            return getUrl("GorgeousHusk", "Enemy");
             case "TransDescendingDark":          return getUrl("DescendingDark", "Skill");
+            case "CorniferAtHome":               return getUrl("Iselda", "Misc");
         }
     }
 
@@ -268,6 +294,11 @@ function getUrl(id, qualifier) {
             case "GreyMournerSeerAscended": return getUrl("GreyMourner", "NPC");
             case "Lemm2": return getUrl("Lemm", "Misc");
             case "BrummFlame": return getUrl("FlameConsumed", "Misc");
+            case "givenGodseekerFlower":
+            case "givenOroFlower":
+            case "givenWhiteLadyFlower":
+            case "givenEmilitiaFlower":
+                return getUrl("DelicateFlower", "Item");
         }
     }
 

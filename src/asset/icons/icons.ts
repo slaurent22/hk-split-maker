@@ -173,7 +173,6 @@ import PlayerDeath from "./Enemy/Shade.png";
 import FlowerQuest from "./Item/DelicateFlower.png";
 import FlowerRewardGiven from "./Achievement/Solace.png";
 import HappyCouplePlayerDataEvent from "./Achievement/HappyCouple.png";
-import AllCharmNotchesLemm2CP from "./Misc/Lemm.png";
 import NailsmithKilled from "./Achievement/Purity.png";
 import NailsmithSpared from "./Achievement/HappyCouple.png";
 import NightmareLantern from "./Misc/Flame.png";
@@ -315,9 +314,10 @@ import NotchSalubra1 from "./Item/CharmNotch.png";
 import NotchSalubra2 from "./Item/CharmNotch.png";
 import NotchSalubra3 from "./Item/CharmNotch.png";
 import NotchSalubra4 from "./Item/CharmNotch.png";
+import Lemm2 from "./Misc/Lemm.png";
+import AllCharmNotchesLemm2CP from "./Misc/Lemm.png";
 import MetGreyMourner from "./NPC/GreyMourner.png";
 import GreyMournerSeerAscended from "./NPC/GreyMourner.png";
-import Lemm2 from "./Misc/Lemm.png";
 import ElderbugFlower from "./NPC/ElderbugFlower.png";
 import BrettaRescued from "./NPC/BrettaRescued.png";
 import BrummFlame from "./Misc/FlameConsumed.png";
@@ -423,6 +423,30 @@ import GodhomeBench from "./Misc/Godseeker.png";
 import Menu from "./Misc/MapQuill.png";
 import MenuClaw from "./Skill/MantisClaw.png";
 import MenuGorgeousHusk from "./Enemy/GorgeousHusk.png";
+import CorniferAtHome from "./Misc/Iselda.png";
+import AllSeals from "./Relic/HallownestSeal.png";
+import AllEggs from "./Item/RancidEgg.png";
+import SlySimpleKey from "./Item/SimpleKey.png";
+import AllBreakables from "./Charm/FragileStrengthBroken.png";
+import MetEmilitia from "./NPC/Emilitia.png";
+import mapDirtmouth from "./Misc/Map.png";
+import mapCrossroads from "./Misc/Map.png";
+import mapGreenpath from "./Misc/Map.png";
+import mapFogCanyon from "./Misc/Map.png";
+import mapRoyalGardens from "./Misc/Map.png";
+import mapFungalWastes from "./Misc/Map.png";
+import mapCity from "./Misc/Map.png";
+import mapWaterways from "./Misc/Map.png";
+import mapMines from "./Misc/Map.png";
+import mapDeepnest from "./Misc/Map.png";
+import mapCliffs from "./Misc/Map.png";
+import mapOutskirts from "./Misc/Map.png";
+import mapRestingGrounds from "./Misc/Map.png";
+import mapAbyss from "./Misc/Map.png";
+import givenGodseekerFlower from "./Item/DelicateFlower.png";
+import givenOroFlower from "./Item/DelicateFlower.png";
+import givenWhiteLadyFlower from "./Item/DelicateFlower.png";
+import givenEmilitiaFlower from "./Item/DelicateFlower.png";
 export default {
     AbyssShriek,
     CrystalHeart,
@@ -597,7 +621,6 @@ export default {
     FlowerQuest,
     FlowerRewardGiven,
     HappyCouplePlayerDataEvent,
-    AllCharmNotchesLemm2CP,
     NailsmithKilled,
     NailsmithSpared,
     NightmareLantern,
@@ -739,9 +762,10 @@ export default {
     NotchSalubra2,
     NotchSalubra3,
     NotchSalubra4,
+    Lemm2,
+    AllCharmNotchesLemm2CP,
     MetGreyMourner,
     GreyMournerSeerAscended,
-    Lemm2,
     ElderbugFlower,
     BrettaRescued,
     BrummFlame,
@@ -847,4 +871,28 @@ export default {
     Menu,
     MenuClaw,
     MenuGorgeousHusk,
+    CorniferAtHome,
+    AllSeals,
+    AllEggs,
+    SlySimpleKey,
+    AllBreakables,
+    MetEmilitia,
+    mapDirtmouth,
+    mapCrossroads,
+    mapGreenpath,
+    mapFogCanyon,
+    mapRoyalGardens,
+    mapFungalWastes,
+    mapCity,
+    mapWaterways,
+    mapMines,
+    mapDeepnest,
+    mapCliffs,
+    mapOutskirts,
+    mapRestingGrounds,
+    mapAbyss,
+    givenGodseekerFlower,
+    givenOroFlower,
+    givenWhiteLadyFlower,
+    givenEmilitiaFlower,
 };
