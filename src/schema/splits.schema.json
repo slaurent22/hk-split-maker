@@ -21,6 +21,14 @@
             "description": "Whether to end time at the last autosplit. Set this to false for full-game runs, where time ends on a final cutscene.",
             "type": "boolean"
         },
+        "endingSplit": {
+            "description": "Info for the last split if it's a game-ending split rather than an autosplit",
+            "type": "object",
+            "properties": {
+                "name": "The name to appear in the LiveSplit UI",
+                "icon": "The autosplit name whose icon to use (e.g. RadianceBoss, HollowKnightBoss)"
+            }
+        },
         "categoryName": {
             "description": "The category name on the associated speedrun.com board.",
             "type": "string"

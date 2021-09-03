@@ -17,6 +17,10 @@
     ],
     "ordered": true,
     "endTriggeringAutosplit": false,
+    "endingSplit": {
+        "name": "HollowKnight",
+        "icon": "HollowKnightBoss"
+    },
     "gameName": "Hollow Knight Category Extensions",
     "categoryName": "Mr. Mushroom Ending",
     "variables": {

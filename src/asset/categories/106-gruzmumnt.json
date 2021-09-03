@@ -119,11 +119,14 @@
     "NailUpgrade4": "Pure Nail",
     "Kingsoul": "[2D] White Palace",
     "NightmareKingGrimm": "[3D] %s",
-    "HollowKnightDreamnail": "The Hollow Knight",
-    "106% TE": "The Radiance"
+    "HollowKnightDreamnail": "The Hollow Knight"
   },
   "ordered": true,
   "endTriggeringAutosplit": false,
+  "endingSplit": {
+    "name": "Radiance",
+    "icon": "RadianceBoss"
+  },
   "gameName": "Hollow Knight",
   "categoryName": "106% TE",
   "variables": {

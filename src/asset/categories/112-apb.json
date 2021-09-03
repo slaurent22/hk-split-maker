@@ -166,6 +166,10 @@
     ],
     "ordered": true,
     "endTriggeringAutosplit": false,
+    "endingSplit": {
+        "name": "Absolute Radiance",
+        "icon": "RadianceBoss"
+    },
     "gameName": "Hollow Knight",
     "categoryName": "112% APB",
     "variables": {

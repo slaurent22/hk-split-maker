@@ -41,6 +41,10 @@
     ],
     "ordered": true,
     "endTriggeringAutosplit": false,
+    "endingSplit": {
+        "name": "Radiance",
+        "icon": "RadianceBoss"
+    },
     "gameName": "Hollow Knight Category Extensions",
     "categoryName": "Pantheon 5 Boss Order",
     "variables": {

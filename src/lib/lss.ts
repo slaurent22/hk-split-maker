@@ -7,6 +7,10 @@ export interface Config {
     names?: Record<string, string|Array<string>>;
     ordered: true;
     endTriggeringAutosplit: true;
+    endingSplit?: {
+        name?: string;
+        icon?: string;
+    };
     categoryName: string;
     gameName: string;
     variables?: {
@@ -86,6 +90,7 @@ export async function createSplitsXml(config: Config): Promise<string> {
         splitIds,
         ordered,
         endTriggeringAutosplit,
+        endingSplit,
         categoryName,
         gameName,
         names,
@@ -158,6 +163,12 @@ export async function createSplitsXml(config: Config): Promise<string> {
             iconURLsToFetch.add(url);
         }
     });
+    if (!endTriggeringAutosplit && endingSplit?.icon) {
+        const url = allIconURLs.get(endingSplit.icon);
+        if (url) {
+            iconURLsToFetch.add(url);
+        }
+    }
 
     await Promise.all(
         [...iconURLsToFetch].map(async url => {
@@ -176,14 +187,23 @@ export async function createSplitsXml(config: Config): Promise<string> {
         const iconURL = allIconURLs.get(rawId);
         let icon = "";
         if (iconURL) {
-            icon = liveSplitIconData.get(iconURL) || "";
+            icon = liveSplitIconData.get(iconURL) ?? "";
         }
         const namePrefix = subsplit ? "-" : "";
         return getSegmentNode(`${namePrefix}${name}`, icon);
     });
 
     if (!endTriggeringAutosplit) {
-        segments.push(getSegmentNode(categoryName));
+        const endingSplitName = endingSplit?.name ?? categoryName;
+        let icon = "";
+        if (endingSplit?.icon) {
+            const url = allIconURLs.get(endingSplit.icon);
+            if (url) {
+                icon = liveSplitIconData.get(url) ?? "";
+            }
+
+        }
+        segments.push(getSegmentNode(endingSplitName, icon));
     }
 
     const autosplits = parsedSplitIds

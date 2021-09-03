@@ -13,6 +13,10 @@
     ],
     "ordered": true,
     "endTriggeringAutosplit": false,
+    "endingSplit": {
+        "name": "HollowKnight",
+        "icon": "HollowKnightBoss"
+    },
     "gameName": "Hollow Knight Category Extensions",
     "categoryName": "Low% Spelless",
     "variables": {

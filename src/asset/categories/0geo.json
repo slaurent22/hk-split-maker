@@ -17,6 +17,10 @@
     ],
     "ordered": true,
     "endTriggeringAutosplit": false,
+    "endingSplit": {
+        "name": "Hollow Knight",
+        "icon": "HollowKnightBoss"
+    },
     "gameName": "Hollow Knight Category Extensions",
     "categoryName": "0 Geo",
     "variables": {
