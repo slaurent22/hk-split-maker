@@ -210,7 +210,7 @@ function getUrl(id, qualifier) {
             case "AspidHunter":          return getUrl("AspidHunter", "Enemy");
             case "MossKnight":           return getUrl("MossKnight", "Enemy");
             case "MushroomBrawler":      return getUrl("ShrumalOgre", "Enemy");
-            case "Zote1":                return getUrl("Zote", "Enemy");
+            case "Zote1":                return getUrl("VengeflyKing", "Boss");
             case "Zote2":                return getUrl("Zote", "Enemy");
             case "ZoteKilled":           return getUrl("Zote", "Enemy");
             case "Aluba":                return getUrl("Aluba", "Enemy");

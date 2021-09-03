@@ -38,7 +38,7 @@ function getName(description: string) {
             return "Hollow Knight Scream";
         }
         case "Radiance Dream Entry": {
-            return "Hollow Knight (Dreamnailed)";
+            return "Hollow Knight";
         }
         case "Colosseum Fight 1": {
             return "Trial of the Warrior";
@@ -83,6 +83,9 @@ function getName(description: string) {
         case "Whispering Root": {
             // qualifier is the area
             return `${qualifier} Root`;
+        }
+        case "Zote Rescued Vengefly King": {
+            return "Vengefly King";
         }
         default: {
             break;

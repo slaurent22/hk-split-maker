@@ -200,7 +200,7 @@ import killedSanctumWarrior from "./Boss/SoulWarrior.png";
 import killedSoulTwister from "./Enemy/SoulTwister.png";
 import MossKnight from "./Enemy/MossKnight.png";
 import MushroomBrawler from "./Enemy/ShrumalOgre.png";
-import Zote1 from "./Enemy/Zote.png";
+import Zote1 from "./Boss/VengeflyKing.png";
 import Zote2 from "./Enemy/Zote.png";
 import ZoteKilled from "./Enemy/Zote.png";
 import CrossroadsStation from "./Misc/Stag.png";
