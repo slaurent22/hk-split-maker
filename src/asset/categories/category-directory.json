@@ -171,6 +171,10 @@
             "displayName": "Pantheon 5 Boss Order"
         },
         {
+            "fileName": "p5bo-breaks",
+            "displayName": "Pantheon 5 Boss Order (manual rest break splits)"
+        },
+        {
             "fileName": "shriek",
             "displayName": "Shriek%"
         },
