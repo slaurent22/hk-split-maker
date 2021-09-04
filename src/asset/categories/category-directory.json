@@ -29,6 +29,16 @@
         "displayName": "Any% (1.4.3.2) w/ Spore Shroom"
       }
     ],
+    "Hollow Knight Mods": [
+        {
+            "fileName": "all-geo-rocks",
+            "displayName": "All Geo Rocks"
+        },
+        {
+            "fileName": "kronk",
+            "displayName": "Kronk%"
+        }
+    ],
     "Hollow Knight Category Extensions": [
         {
             "fileName": "0geo",
@@ -118,10 +128,7 @@
             "fileName": "hiveblood",
             "displayName": "Hiveblood%"
         },
-        {
-            "fileName": "kronk",
-            "displayName": "Kronk%"
-        },
+
         {
             "fileName": "LBC",
             "displayName": "Lifeblood Core%"

@@ -1,0 +1,50 @@
+{
+    "splitIds": [
+        "VengefulSpirit",
+        "Greenpath",
+        "MothwingCloak",
+        "MantisClaw",
+        "DesolateDive",
+        "CrystalPeak",
+        "CrystalHeart",
+        "DescendingDark",
+        "DreamNail",
+        "MonarchWings",
+        "HowlingWraiths",
+        "WaterwaysManhole",
+        "DeepnestSpa",
+        "TramPass",
+        "BeastsDenTrapBench",
+        "QueensGardensStation",
+        "KingsBrand",
+        "HuntersMark"
+    ],
+    "names": {
+        "VengefulSpirit": "%s [11]",
+        "Greenpath": "%s [11]",
+        "MothwingCloak": "%s [24]",
+        "MantisClaw": "%s [32]",
+        "DesolateDive": "%s [45]",
+        "CrystalPeak": "%s [56]",
+        "CrystalHeart": "%s [71]",
+        "DescendingDark": "%s [73]",
+        "DreamNail": "%s [73]",
+        "MonarchWings": "%s [87]",
+        "HowlingWraiths": "%s [103]",
+        "WaterwaysManhole": "%s [126]",
+        "DeepnestSpa": "%s [150]",
+        "TramPass": "%s [158]",
+        "BeastsDenTrapBench": "%s [161]",
+        "QueensGardensStation": "%s [181]",
+        "KingsBrand": "%s [198]",
+        "HuntersMark": "All Geo Rocks [207]"
+    },
+    "ordered": true,
+    "endTriggeringAutosplit": true,
+    "gameName": "Hollow Knight Mods",
+    "categoryName": "All Geo Rocks",
+    "variables": {
+        "platform": "PC",
+        "patch": "1.4.3.2"
+    }
+}
