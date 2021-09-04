@@ -21,7 +21,7 @@
         "HiveKnight",
         "ElderHu",
         "Collector",
-        "ColosseumGold",
+        "GodTamer",
         "TroupeMasterGrimm",
         "BlackKnight",
         "Uumuu",
@@ -41,6 +41,12 @@
     ],
     "ordered": true,
     "endTriggeringAutosplit": false,
+    "names": {
+        "Hornet1": "Hornet (Protector)",
+        "Hornet2": "Hornet (Sentinel)",
+        "killedSanctumWarrior": "Soul Warrior",
+        "ColosseumSilver": "Oblobbles"
+    },
     "endingSplit": {
         "name": "Radiance",
         "icon": "RadianceBoss"
