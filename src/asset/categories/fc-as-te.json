@@ -1,0 +1,43 @@
+{
+    "splitIds": [
+        "CrystalHeart",
+        "VengefulSpirit",
+        "MothwingCloak",
+        "IsmasTear",
+        "MantisClaw",
+        "DreamNail",
+        "MonarchWings",
+        "Galien",
+        "Hegemol",
+        "ShamanStone",
+        "DesolateDive",
+        "DreamGate",
+        "DescendingDark",
+        "DashSlash",
+        "Lurien",
+        "ShadeCloak",
+        "LoveKey",
+        "Monomon",
+        "GreatSlash",
+        "DreamNail2",
+        "HowlingWraiths",
+        "VoidHeart",
+        "KingsBrand",
+        "CycloneSlash",
+        "AbyssShriek",
+        "ShadeSoul",
+        "HollowKnightDreamnail"
+    ],
+    "ordered": true,
+    "endTriggeringAutosplit": false,
+    "endingSplit": {
+        "name": "Radiance",
+        "icon": "RadianceBoss"
+    },
+    "gameName": "Hollow Knight Mods",
+    "categoryName": "Forgotten Corners AS TE",
+    "variables": {
+        "platform": "PC",
+        "patch": "1.4.3.2"
+    }
+}
