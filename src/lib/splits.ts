@@ -87,6 +87,9 @@ function getName(description: string) {
         case "Zote Rescued Vengefly King": {
             return "Vengefly King";
         }
+        case "Mega Moss Charger": {
+            return "Massive Moss Charger";
+        }
         default: {
             break;
         }
