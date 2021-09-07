@@ -41,7 +41,7 @@ export default class App extends Component<AppProps, AppState> {
             const initialCategory = Object.values(newState.categories).flat().find(category => {
                 return category.fileName === hash;
             });
-            newState.initialCategory = initialCategory?.fileName || "aluba";
+            newState.initialCategory = initialCategory?.fileName || "4MS";
             await this.updateCategory(newState.initialCategory);
         }
         this.setState(newState);
