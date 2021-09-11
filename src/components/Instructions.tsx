@@ -26,7 +26,8 @@ const Instructions: React.FC = () => {
                         </li>
                         <li>
                             Include your own <b>manual splits</b> by prefixing the name with a precent sign (%).
-                            These entries will neither get an autosplit nor an icon.
+                            These entries will neither get an autosplit nor an icon. <b>
+                            If using ordered splits, use the ManualSplit autosplit instead!!!</b>
                         </li>
                     </ul>
                 </li>
