@@ -112,7 +112,9 @@ const NEW_ID_MAP = {
     "Dreamer3": "Dreamer",
     "Hegemol": "Herrah",
     "ElegantKeyShoptimised": "ElegantKey",
-    "SlySimpleKey": "SimpleKey"
+    "SlySimpleKey": "SimpleKey",
+    "KilledOblobbles": "Oblobbles",
+    "ManualSplit": "Knight"
 };
 
 function getUrl(id, qualifier) {
@@ -277,6 +279,9 @@ function getUrl(id, qualifier) {
             case "TransGorgeousHusk":            return getUrl("GorgeousHusk", "Enemy");
             case "TransDescendingDark":          return getUrl("DescendingDark", "Skill");
             case "CorniferAtHome":               return getUrl("Iselda", "Misc");
+            case "QueensGardensFrogsTrans":      return getUrl("QueensGardens", "Area");
+            case "QueensGardensPostArenaTransition": return getUrl("QueensGardens", "Area");
+            case "WhitePalaceEntry":             return getUrl("WhitePalace", "Area");
         }
     }
 

@@ -99,6 +99,7 @@ import NightmareKingGrimm from "./Boss/NightmareKingGrimm.png";
 import NoEyes from "./Boss/NoEyes.png";
 import NoEyesEssence from "./Boss/NoEyes.png";
 import Nosk from "./Boss/Nosk.png";
+import KilledOblobbles from "./Boss/Oblobbles.png";
 import MatoOroNailBros from "./Boss/MatoOroNailBros.png";
 import RadianceBoss from "./Boss/RadianceBoss.png";
 import PureVessel from "./Boss/PureVessel.png";
@@ -258,9 +259,12 @@ import KingdomsEdgeEntry from "./Enemy/PrimalAspid.png";
 import KingdomsEdgeOvercharmedEntry from "./Enemy/PrimalAspid.png";
 import EnterNKG from "./Enemy/GrimmkinNightmare.png";
 import QueensGardensEntry from "./Enemy/SpinyHusk.png";
+import QueensGardensFrogsTrans from "./Enemy/SpinyHusk.png";
+import QueensGardensPostArenaTransition from "./Enemy/SpinyHusk.png";
 import EnterSanctum from "./Enemy/Folly.png";
 import EnterSanctumWithShadeSoul from "./Enemy/Folly.png";
 import WaterwaysEntry from "./Enemy/Flukefey.png";
+import WhitePalaceEntry from "./Enemy/Wingmould.png";
 import BaldurShell from "./Charm/BaldurShell.png";
 import Dashmaster from "./Charm/Dashmaster.png";
 import DeepFocus from "./Charm/DeepFocus.png";
@@ -401,6 +405,8 @@ import TramDeepnest from "./Misc/Tram.png";
 import WhitePalaceOrb1 from "./Enemy/Wingmould.png";
 import WhitePalaceOrb3 from "./Enemy/Wingmould.png";
 import WhitePalaceOrb2 from "./Enemy/Wingmould.png";
+import WhitePalaceLowerEntry from "./Enemy/Wingmould.png";
+import WhitePalaceLowerOrb from "./Enemy/Wingmould.png";
 import WhitePalaceLeftEntry from "./Enemy/Wingmould.png";
 import WhitePalaceLeftWingMid from "./Enemy/Wingmould.png";
 import WhitePalaceRightEntry from "./Enemy/Wingmould.png";
@@ -447,6 +453,7 @@ import givenGodseekerFlower from "./Item/DelicateFlower.png";
 import givenOroFlower from "./Item/DelicateFlower.png";
 import givenWhiteLadyFlower from "./Item/DelicateFlower.png";
 import givenEmilitiaFlower from "./Item/DelicateFlower.png";
+import ManualSplit from "./Misc/Knight.png";
 export default {
     AbyssShriek,
     CrystalHeart,
@@ -547,6 +554,7 @@ export default {
     NoEyes,
     NoEyesEssence,
     Nosk,
+    KilledOblobbles,
     MatoOroNailBros,
     RadianceBoss,
     PureVessel,
@@ -706,9 +714,12 @@ export default {
     KingdomsEdgeOvercharmedEntry,
     EnterNKG,
     QueensGardensEntry,
+    QueensGardensFrogsTrans,
+    QueensGardensPostArenaTransition,
     EnterSanctum,
     EnterSanctumWithShadeSoul,
     WaterwaysEntry,
+    WhitePalaceEntry,
     BaldurShell,
     Dashmaster,
     DeepFocus,
@@ -849,6 +860,8 @@ export default {
     WhitePalaceOrb1,
     WhitePalaceOrb3,
     WhitePalaceOrb2,
+    WhitePalaceLowerEntry,
+    WhitePalaceLowerOrb,
     WhitePalaceLeftEntry,
     WhitePalaceLeftWingMid,
     WhitePalaceRightEntry,
@@ -895,4 +908,5 @@ export default {
     givenOroFlower,
     givenWhiteLadyFlower,
     givenEmilitiaFlower,
+    ManualSplit,
 };

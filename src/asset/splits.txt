@@ -202,6 +202,8 @@ NoEyes,
 NoEyesEssence,
 [Description("Nosk (Boss)"), ToolTip("Splits when killing Nosk")]
 Nosk,
+[Description("Oblobbles (Boss)"), ToolTip("Splits when 2 Oblobbles are deafeated (ideally the first pair you encounter in Colo 2)")]
+KilledOblobbles,
 [Description("Oro & Mato Nail Bros (Boss)"), ToolTip("Splits when killing the Nail Bros (Pantheon)")]
 MatoOroNailBros,
 [Description("Radiance Practice (Boss)"), ToolTip("Splits when killing The Radiance")]
@@ -487,7 +489,7 @@ Hive,
 InfectedCrossroads,
 [Description("Kingdom's Edge (Area)"), ToolTip("Splits when entering Kingdom's Edge text first appears")]
 KingdomsEdge,
-[Description("Queens Gardens (Area)"), ToolTip("Splits when entering Queen's Gardens text first appears")]
+[Description("Queen's Gardens (Area)"), ToolTip("Splits when entering Queen's Gardens text first appears")]
 QueensGardens,
 [Description("Resting Grounds (Area)"), ToolTip("Splits when entering Resting Grounds text first appears")]
 RestingGrounds,
@@ -532,14 +534,20 @@ KingdomsEdgeEntry,
 KingdomsEdgeOvercharmedEntry,
 [Description("NKG Dream (Transition)"), ToolTip("Splits on transition to NKG dream")]
 EnterNKG,
-[Description("Queen's Garden (Transition)"), ToolTip("Splits on transition to Hive")]
+[Description("Queen's Garden - QGA/Mound Entry (Transition)"), ToolTip("Splits on transition to QG scene following QGA")]
 QueensGardensEntry,
+[Description("Queen's Garden - Frogs (Transition)"), ToolTip("Splits on transition to QG frogs scene")]
+QueensGardensFrogsTrans,
+[Description("Queen's Garden - Post-Upper Arena (Transition)"), ToolTip("Splits on transition to room after upper arena in QG. Useful for TE, 1xx, and other categories that go to upper QG")]
+QueensGardensPostArenaTransition,
 [Description("Sanctum (Transition)"), ToolTip("Splits when entering Sanctum")]
 EnterSanctum,
 [Description("Sanctum w/ Shade Soul (Transition)"), ToolTip("Splits when entering Sanctum after obtaining shade soul")]
 EnterSanctumWithShadeSoul,
 [Description("Waterways Manhole (Transition)"), ToolTip("Splits on transition to Waterways through Waterways")]
 WaterwaysEntry,
+[Description("White Palace Entry (Transition)"), ToolTip("Splits when entering the first White Palace scene")]
+WhitePalaceEntry,
 
 [Description("Baldur Shell (Charm)"), ToolTip("Splits when obtaining the Baldur Shell charm")]
 BaldurShell,
@@ -829,6 +837,11 @@ WhitePalaceOrb3,
 [Description("White Palace - Right Orb (Lever)"), ToolTip("Splits when lighting the orb in White Palace right wing")]
 WhitePalaceOrb2,
 
+
+[Description("White Palace - Lower Entry (Room)"), ToolTip("Splits on transition to White_Palace_01")]
+WhitePalaceLowerEntry,
+[Description("White Palace - Lower Orb (Room)"), ToolTip("Splits on transition to White_Palace_02")]
+WhitePalaceLowerOrb,
 [Description("White Palace - Left Entry (Room)"), ToolTip("Splits on transition to White_Palace_04")]
 WhitePalaceLeftEntry,
 [Description("White Palace - Left Midpoint (Room)"), ToolTip("Splits on transition between White_Palace_04 and _14")]
@@ -900,7 +913,7 @@ mapCrossroads,
 mapGreenpath,
 [Description("Map Fog Canyon (Item)"), ToolTip("Splits when acquiring the Fog Canyon map")]
 mapFogCanyon,
-[Description("Map Queens Gardens (Item)"), ToolTip("Splits when acquiring the QG map")]
+[Description("Map Queen's Gardens (Item)"), ToolTip("Splits when acquiring the QG map")]
 mapRoyalGardens,
 [Description("Map Fungal Wastes (Item)"), ToolTip("Splits when acquiring the Fungal Wastes map")]
 mapFungalWastes,
@@ -929,3 +942,6 @@ givenOroFlower,
 givenWhiteLadyFlower,
 [Description("Emilitia Flower (NPC)"), ToolTip("Splits when giving Emilita a flower")]
 givenEmilitiaFlower,
+
+[Description("Manual Split (Misc)"), ToolTip("Never splits. Use this when you need to manually split while using ordered splits")]
+ManualSplit,
