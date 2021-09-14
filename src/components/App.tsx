@@ -39,7 +39,7 @@ export default class App extends Component<AppProps, AppState> {
         const hash = window.location.hash.substring(1);
         if (newState.categories) {
             const initialCategory = Object.values(newState.categories).flat().find(category => {
-                return category.fileName === hash;
+                return category.fileName.toLowerCase() === hash.toLowerCase();
             });
             newState.initialCategory = initialCategory?.fileName || "4MS";
             await this.updateCategory(newState.initialCategory);
