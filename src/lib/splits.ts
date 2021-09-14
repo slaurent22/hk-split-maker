@@ -103,9 +103,6 @@ function getName(description: string) {
         case "Grub": {
             return name.substr("Rescued ".length);
         }
-        case "Essence": {
-            return `${name} Essence`;
-        }
         default:
             return name;
     }
