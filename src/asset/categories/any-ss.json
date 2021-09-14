@@ -23,8 +23,5 @@
         "icon": "HollowKnightBoss"
     },
     "gameName": "Hollow Knight",
-    "categoryName": "Any% Steel Soul",
-    "variables": {
-        "platform": "PC"
-    }
+    "categoryName": "Any% Steel Soul"
 }

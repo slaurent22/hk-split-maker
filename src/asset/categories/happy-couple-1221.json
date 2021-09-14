@@ -65,7 +65,6 @@
     "gameName": "Hollow Knight Category Extensions",
     "categoryName": "Happy Couple",
     "variables": {
-        "platform": "PC",
-        "patch": "1.2.2.1"
+        "glitch": "No Major Glitches"
     }
 }

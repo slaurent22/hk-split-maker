@@ -42,9 +42,5 @@
     "ordered": true,
     "endTriggeringAutosplit": true,
     "gameName": "Hollow Knight Mods",
-    "categoryName": "All Geo Rocks",
-    "variables": {
-        "platform": "PC",
-        "patch": "1.4.3.2"
-    }
+    "categoryName": "All Geo Rocks"
 }

@@ -42,10 +42,5 @@
         "icon": "HollowKnightBoss"
     },
     "gameName": "Hollow Knight Category Extensions",
-    "categoryName": "Spelless True Ending",
-    "variables": {
-        "platform": "PC",
-        "patch": "1.5.75",
-        "glitch": "Current Patch NMG"
-    }
+    "categoryName": "Spelless True Ending"
 }

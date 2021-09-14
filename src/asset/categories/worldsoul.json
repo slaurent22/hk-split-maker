@@ -29,10 +29,5 @@
     "ordered": false,
     "endTriggeringAutosplit": true,
     "gameName": "Hollow Knight Category Extensions",
-    "categoryName": "Worldsoul",
-    "variables": {
-        "platform": "PC",
-        "patch": "1.2.2.1",
-        "glitch": "No Major Glitches"
-    }
+    "categoryName": "Worldsoul"
 }

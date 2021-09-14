@@ -33,9 +33,5 @@
         "icon": "HollowKnightBoss"
     },
     "gameName": "Hollow Knight",
-    "categoryName": "All Skills",
-    "variables": {
-        "platform": "PC",
-        "patch": "1.2.2.1"
-    }
+    "categoryName": "All Skills"
 }

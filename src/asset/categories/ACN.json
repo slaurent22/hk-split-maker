@@ -47,10 +47,5 @@
     "ordered": true,
     "endTriggeringAutosplit": true,
     "gameName": "Hollow Knight Category Extensions",
-    "categoryName": "All Charm Notches",
-    "variables": {
-        "platform": "PC",
-        "patch": "1.2.2.1",
-        "glitch": "No Major Glitches"
-    }
+    "categoryName": "All Charm Notches"
 }

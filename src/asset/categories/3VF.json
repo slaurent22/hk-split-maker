@@ -12,10 +12,5 @@
     "ordered": true,
     "endTriggeringAutosplit": true,
     "gameName": "Hollow Knight Category Extensions",
-    "categoryName": "3 Vessel Fragments",
-    "variables": {
-        "platform": "PC",
-        "patch": "1.5.75",
-        "glitch": "Current Patch NMG"
-    }
+    "categoryName": "3 Vessel Fragments"
 }

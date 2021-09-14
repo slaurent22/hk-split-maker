@@ -25,10 +25,5 @@
     "ordered": true,
     "endTriggeringAutosplit": true,
     "gameName": "Hollow Knight Category Extensions",
-    "categoryName": "All Whispering Roots",
-    "variables": {
-        "platform": "PC",
-        "patch": "1.5.75",
-        "glitch": "No Major Glitches"
-    }
+    "categoryName": "All Whispering Roots"
 }

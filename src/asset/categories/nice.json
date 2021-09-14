@@ -52,10 +52,5 @@
         "icon": "HollowKnightBoss"
     },
     "gameName": "Hollow Knight Category Extensions",
-    "categoryName": "Nice%",
-    "variables": {
-        "platform": "PC",
-        "patch": "1.2.2.1",
-        "glitch": "No Major Glitches"
-    }
+    "categoryName": "Nice%"
 }

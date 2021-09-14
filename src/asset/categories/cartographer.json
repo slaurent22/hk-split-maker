@@ -22,9 +22,5 @@
     "ordered": true,
     "endTriggeringAutosplit": true,
     "gameName": "Hollow Knight Category Extensions",
-    "categoryName": "Cartographer",
-    "variables": {
-        "platform": "PC",
-        "patch": "1.5.75"
-    }
+    "categoryName": "Cartographer"
 }

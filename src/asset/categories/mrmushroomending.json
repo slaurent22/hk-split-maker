@@ -22,10 +22,5 @@
         "icon": "HollowKnightBoss"
     },
     "gameName": "Hollow Knight Category Extensions",
-    "categoryName": "Mr. Mushroom Ending",
-    "variables": {
-        "platform": "PC",
-        "patch": "1.5.75",
-        "glitch": "No Major Glitches"
-    }
+    "categoryName": "Mr. Mushroom Ending"
 }

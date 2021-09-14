@@ -12,8 +12,5 @@
     "ordered": true,
     "endTriggeringAutosplit": true,
     "gameName": "Hollow Knight Category Extensions",
-    "categoryName": "Gaslight, Gatekeep, Girlboss",
-    "variables": {
-        "platform": "PC"
-    }
+    "categoryName": "Gaslight, Gatekeep, Girlboss"
 }

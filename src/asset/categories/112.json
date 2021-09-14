@@ -182,9 +182,5 @@
         "icon": "RadianceBoss"
     },
     "gameName": "Hollow Knight",
-    "categoryName": "112% APB",
-    "variables": {
-        "platform": "PC",
-        "patch": "1.5.75"
-    }
+    "categoryName": "112% APB"
 }

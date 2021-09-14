@@ -22,10 +22,5 @@
         "icon": "HollowKnightBoss"
     },
     "gameName": "Hollow Knight Category Extensions",
-    "categoryName": "0 Geo",
-    "variables": {
-        "platform": "PC",
-        "patch": "1.5.75",
-        "glitch": "No Major Glitches"
-    }
+    "categoryName": "0 Geo"
 }

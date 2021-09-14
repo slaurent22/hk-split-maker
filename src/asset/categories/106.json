@@ -128,10 +128,5 @@
     "icon": "RadianceBoss"
   },
   "gameName": "Hollow Knight",
-  "categoryName": "106% TE",
-  "variables": {
-    "platform": "PC",
-    "patch": "1.2.2.1",
-    "glitch": "No Major Glitches"
-  }
+  "categoryName": "106% TE"
 }

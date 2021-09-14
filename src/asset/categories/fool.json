@@ -20,10 +20,5 @@
     "ordered": true,
     "endTriggeringAutosplit": true,
     "gameName": "Hollow Knight Category Extensions",
-    "categoryName": "Fool%",
-    "variables": {
-        "platform": "PC",
-        "patch": "1.2.2.1",
-        "glitch": "No Major Glitches"
-    }
+    "categoryName": "Fool%"
 }

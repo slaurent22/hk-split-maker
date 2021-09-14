@@ -65,9 +65,5 @@
     "ordered": false,
     "endTriggeringAutosplit": true,
     "gameName": "Hollow Knight Mods",
-    "categoryName": "Kronk%",
-    "variables": {
-        "platform": "PC",
-        "patch": "1.4.3.2"
-    }
+    "categoryName": "Kronk%"
 }
