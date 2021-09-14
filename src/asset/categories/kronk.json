@@ -1,7 +1,7 @@
 {
     "splitIds": [
         "VengefulSpirit",
-        "Greenpath",
+        "EnterGreenpath",
         "MothwingCloak",
         "ShamanStone",
         "DreamNail",
@@ -32,7 +32,7 @@
         "HuntersMark"
     ],
     "names": {
-        "Greenpath": "%s (1)",
+        "EnterGreenpath": "%s (1)",
         "MothwingCloak": "%s (2)",
         "ShamanStone": "%s (2)",
         "DreamNail": "%s (3)",

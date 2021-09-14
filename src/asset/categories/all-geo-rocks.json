@@ -1,7 +1,7 @@
 {
     "splitIds": [
         "VengefulSpirit",
-        "Greenpath",
+        "EnterGreenpath",
         "MothwingCloak",
         "MantisClaw",
         "DesolateDive",
@@ -21,7 +21,7 @@
     ],
     "names": {
         "VengefulSpirit": "%s [11]",
-        "Greenpath": "%s [11]",
+        "EnterGreenpath": "%s [11]",
         "MothwingCloak": "%s [24]",
         "MantisClaw": "%s [32]",
         "DesolateDive": "%s [45]",
