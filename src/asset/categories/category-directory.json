@@ -31,6 +31,14 @@
       {
         "fileName": "any-ss",
         "displayName": "Any% Steel Soul"
+      },
+      {
+        "fileName": "te",
+        "displayName": "True Ending"
+      },
+      {
+        "fileName": "te-cp",
+        "displayName": "True Ending (1.4+ Shriek)"
       }
     ],
     "Hollow Knight Mods": [
