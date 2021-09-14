@@ -43,6 +43,26 @@
     ],
     "Hollow Knight: Individual Level": [
         {
+            "fileName": "p1",
+            "displayName": "Pantheon of the Master (P1)"
+        },
+        {
+            "fileName": "p2",
+            "displayName": "Pantheon of the Artist (P2)"
+        },
+        {
+            "fileName": "p3",
+            "displayName": "Pantheon of the Sage (P3)"
+        },
+        {
+            "fileName": "p4",
+            "displayName": "Pantheon of the Knight (P4)"
+        },
+        {
+            "fileName": "p5",
+            "displayName": "Pantheon of Hallownest (P5)"
+        },
+        {
             "fileName": "pop",
             "displayName": "Path of Pain"
         }
