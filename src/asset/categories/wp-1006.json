@@ -1,0 +1,13 @@
+{
+    "splitIds": [
+        "WhitePalaceOrb1",
+        "WhitePalaceOrb3",
+        "WhitePalaceOrb2",
+        "WhitePalaceTopLeverRoom",
+        "Kingsoul"
+    ],
+    "ordered": true,
+    "endTriggeringAutosplit": true,
+    "gameName": "Hollow Knight",
+    "categoryName": "White Palace"
+}
