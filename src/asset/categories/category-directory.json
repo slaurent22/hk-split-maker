@@ -103,6 +103,10 @@
             "displayName": "3 Vessel Fragments"
         },
         {
+            "fileName": "worldsoul",
+            "displayName": "Worldsoul (9 Vessel Fragments)"
+        },
+        {
             "fileName": "4ms",
             "displayName": "4 Mask Shards"
         },
@@ -261,10 +265,6 @@
         {
             "fileName": "spelless-te",
             "displayName": "Spelless True Ending"
-        },
-        {
-            "fileName": "worldsoul",
-            "displayName": "Worldsoul (1.2.2.1)"
         },
         {
             "fileName": "zote",
