@@ -13,7 +13,7 @@ interface SplitDefinition {
     name: string;
 }
 
-function getName(description: string) {
+function getName(description: string): string {
     const match = DESCRIPTION_NAME_REGEXP.exec(description);
     if (!match) {
         throw new Error(`Invalid Description: ${description}`);
@@ -103,9 +103,33 @@ function getName(description: string) {
         case "Grub": {
             return name.substr("Rescued ".length);
         }
-        default:
-            return name;
+        case "Transition":
+            switch (name) {
+                case "Ancient Basin":
+                case "Crystal Peak":
+                case "Fog Canyon":
+                case "Greenpath":
+                case "Greenpath w/ Unlocked Overcharm":
+                case "Hive":
+                case "Kingdom's Edge":
+                case "Kingdom's Edge Overcharmed":
+                case "NKG Dream":
+                case "Sanctum":
+                case "Sanctum w/ Shade Soul":
+                case "Waterways Manhole": {
+                    return `Enter ${name}`;
+                }
+                default: break;
+            }
+            break;
+        case "Essence": {
+            return `${name} Essence`;
+        }
+        default: {
+            break;
+        }
     }
+    return name;
 }
 
 export function parseSplitsDefinitions(): Map<string, SplitDefinition> {
