@@ -5,6 +5,7 @@ import { getIconURLs, parseSplitsDefinitions } from "./splits";
 export interface Config {
     splitIds: Array<string>;
     names?: Record<string, string|Array<string>>;
+    icons?: Record<string, string|Array<string>>;
     ordered: true;
     endTriggeringAutosplit: true;
     endingSplit?: {
@@ -94,6 +95,7 @@ export async function createSplitsXml(config: Config): Promise<string> {
         categoryName,
         gameName,
         names,
+        icons,
     } = config;
 
     const splitDefinitions = parseSplitsDefinitions();
@@ -108,7 +110,7 @@ export async function createSplitsXml(config: Config): Promise<string> {
         }
         const currentSplitIdCount = splitIdCount.get(splitId) as number;
 
-        let rawId = splitId;
+        let autosplitId = splitId;
         let manual = false;
         let subsplit = false;
         const manualSplitMatch = MANUAL_SPLIT_RE.exec(splitId);
@@ -117,25 +119,25 @@ export async function createSplitsXml(config: Config): Promise<string> {
             if (!name) {
                 throw new Error(`Failed to parse name out of "${splitId}"`);
             }
-            rawId = name;
+            autosplitId = name;
             manual = true;
         }
 
-        const subSplitMatch = SUB_SPLIT_RE.exec(rawId);
+        const subSplitMatch = SUB_SPLIT_RE.exec(autosplitId);
         if (subSplitMatch) {
             if (!subSplitMatch.groups) {
                 throw new Error(`Failed to parse name out of "${splitId}"`);
             }
-            rawId = subSplitMatch.groups.name;
+            autosplitId = subSplitMatch.groups.name;
             subsplit = true;
         }
 
-        const splitDefinition = splitDefinitions.get(rawId);
+        const splitDefinition = splitDefinitions.get(autosplitId);
         if (!splitDefinition && !manual) {
-            throw new Error(`Failed to find a definition for split id ${rawId}`);
+            throw new Error(`Failed to find a definition for split id ${autosplitId}`);
         }
 
-        let name = splitDefinition ? splitDefinition.name : rawId;
+        let name = splitDefinition ? splitDefinition.name : autosplitId;
         const nameOverride = names && names[splitId];
         if (nameOverride) {
             let nameTemplate = "";
@@ -148,17 +150,27 @@ export async function createSplitsXml(config: Config): Promise<string> {
             name = nameTemplate.replace("%s", name);
         }
 
+        let iconId = autosplitId;
+        const iconOverride = icons && icons[splitId];
+        if (typeof iconOverride === "string") {
+            iconId = iconOverride;
+        }
+        else if (iconOverride?.length) {
+            iconId = iconOverride[currentSplitIdCount];
+        }
+
         splitIdCount.set(splitId, 1 + currentSplitIdCount);
         return {
-            rawId,
+            autosplitId,
             manual,
             subsplit,
             name,
+            iconId,
         };
     });
 
-    parsedSplitIds.forEach(({ rawId, }) => {
-        const url = allIconURLs.get(rawId);
+    parsedSplitIds.forEach(({ iconId, }) => {
+        const url = allIconURLs.get(iconId);
         if (url) {
             iconURLsToFetch.add(url);
         }
@@ -183,8 +195,8 @@ export async function createSplitsXml(config: Config): Promise<string> {
         })
     );
 
-    const segments = parsedSplitIds.map(({ rawId, subsplit, name, }) => {
-        const iconURL = allIconURLs.get(rawId);
+    const segments = parsedSplitIds.map(({ subsplit, name, iconId, }) => {
+        const iconURL = allIconURLs.get(iconId);
         let icon = "";
         if (iconURL) {
             icon = liveSplitIconData.get(iconURL) ?? "";
@@ -210,8 +222,8 @@ export async function createSplitsXml(config: Config): Promise<string> {
         .filter(({ manual, }) => {
             return !manual;
         })
-        .map(({ rawId, }) => {
-            return { Split: rawId, };
+        .map(({ autosplitId, }) => {
+            return { Split: autosplitId, };
         });
 
     return xml({
