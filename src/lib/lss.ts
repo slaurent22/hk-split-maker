@@ -111,16 +111,16 @@ export async function createSplitsXml(config: Config): Promise<string> {
         const currentSplitIdCount = splitIdCount.get(splitId) as number;
 
         let autosplitId = splitId;
-        let manual = false;
         let subsplit = false;
+        let name = "";
         const manualSplitMatch = MANUAL_SPLIT_RE.exec(splitId);
         if (manualSplitMatch) {
-            const name = manualSplitMatch.groups?.name;
-            if (!name) {
+            const parsedName = manualSplitMatch.groups?.name;
+            if (!parsedName) {
                 throw new Error(`Failed to parse name out of "${splitId}"`);
             }
-            autosplitId = name;
-            manual = true;
+            autosplitId = "ManualSplit";
+            name = parsedName;
         }
 
         const subSplitMatch = SUB_SPLIT_RE.exec(autosplitId);
@@ -133,12 +133,11 @@ export async function createSplitsXml(config: Config): Promise<string> {
         }
 
         const splitDefinition = splitDefinitions.get(autosplitId);
-        if (!splitDefinition && !manual) {
+        if (!splitDefinition) {
             throw new Error(`Failed to find a definition for split id ${autosplitId}`);
         }
 
-        let name = splitDefinition ? splitDefinition.name : autosplitId;
-        const nameOverride = names && names[splitId];
+        const nameOverride = names && names[autosplitId];
         if (nameOverride) {
             let nameTemplate = "";
             if (typeof nameOverride === "string") {
@@ -147,11 +146,17 @@ export async function createSplitsXml(config: Config): Promise<string> {
             else {
                 nameTemplate = nameOverride[currentSplitIdCount];
             }
-            name = nameTemplate.replace("%s", name);
+            if (nameTemplate) {
+                name = nameTemplate.replace("%s", name);
+            }
+        }
+
+        if (!name) {
+            name = splitDefinition.name;
         }
 
         let iconId = autosplitId;
-        const iconOverride = icons && icons[splitId];
+        const iconOverride = icons && icons[autosplitId];
         if (typeof iconOverride === "string") {
             iconId = iconOverride;
         }
@@ -162,7 +167,6 @@ export async function createSplitsXml(config: Config): Promise<string> {
         splitIdCount.set(splitId, 1 + currentSplitIdCount);
         return {
             autosplitId,
-            manual,
             subsplit,
             name,
             iconId,
@@ -219,9 +223,6 @@ export async function createSplitsXml(config: Config): Promise<string> {
     }
 
     const autosplits = parsedSplitIds
-        .filter(({ manual, }) => {
-            return !manual;
-        })
         .map(({ autosplitId, }) => {
             return { Split: autosplitId, };
         });
