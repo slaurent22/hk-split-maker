@@ -1,0 +1,38 @@
+{
+    "splitIds": [
+        "VengefulSpirit",
+        "Greenpath",
+        "MothwingCloak",
+        "BlueLake",
+        "DreamNail",
+        "ElderHu",
+        "MantisClaw",
+        "Lemm2",
+        "killedSanctumWarrior",
+        "DesolateDive",
+        "StoreroomsStation",
+        "CrystalHeart",
+        "ShadeSoul",
+        "SoulTyrant",
+        "Xero",
+        "TollBenchBasin",
+        "BrokenVessel",
+        "MonarchWings",
+        "FailedKnight",
+        "Gorb",
+        "NoEyes",
+        "TreeQueensGardens",
+        "Galien",
+        "DreamNail2",
+        "WhitePalace",
+        "PathOfPainEntry",
+        "PathOfPain"
+    ],
+    "ordered": true,
+    "endTriggeringAutosplit": true,
+    "gameName": "Hollow Knight Category Extensions",
+    "categoryName": "PoP%",
+    "variables": {
+        "glitch": "Current Patch NMG"
+    }
+}
