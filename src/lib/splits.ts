@@ -127,6 +127,9 @@ function getName(description: string): string {
         case "Mega Moss Charger": {
             return "Massive Moss Charger";
         }
+        case "Nightmare Lantern Destroyed": {
+            return "Banishment";
+        }
         default: {
             break;
         }
