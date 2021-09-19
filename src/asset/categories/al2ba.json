@@ -1,7 +1,7 @@
 {
     "splitIds": [
         "VengefulSpirit",
-        "Greenpath",
+        "EnterGreenpath",
         "MothwingCloak",
         "Aluba",
         "MantisClaw",
@@ -11,10 +11,5 @@
     "ordered": true,
     "endTriggeringAutosplit": false,
     "gameName": "Hollow Knight Category Extensions",
-    "categoryName": "Al2ba%",
-    "variables": {
-        "platform": "PC",
-        "patch": "1.5.72.11824",
-        "glitch": "Current Patch NMG"
-    }
+    "categoryName": "Al2ba%"
 }

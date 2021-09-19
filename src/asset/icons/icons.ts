@@ -21,6 +21,7 @@ import VengefulSpirit from "./Skill/VengefulSpirit.png";
 import CityKey from "./Item/CityKey.png";
 import HasDelicateFlower from "./Item/DelicateFlower.png";
 import ElegantKey from "./Item/ElegantKey.png";
+import ElegantKeyShoptimised from "./Item/ElegantKey.png";
 import GodTuner from "./Item/GodTuner.png";
 import HuntersMark from "./Item/HuntersMark.png";
 import KingsBrand from "./Item/KingsBrand.png";
@@ -98,6 +99,7 @@ import NightmareKingGrimm from "./Boss/NightmareKingGrimm.png";
 import NoEyes from "./Boss/NoEyes.png";
 import NoEyesEssence from "./Boss/NoEyes.png";
 import Nosk from "./Boss/Nosk.png";
+import KilledOblobbles from "./Boss/Oblobbles.png";
 import MatoOroNailBros from "./Boss/MatoOroNailBros.png";
 import RadianceBoss from "./Boss/RadianceBoss.png";
 import PureVessel from "./Boss/PureVessel.png";
@@ -163,14 +165,15 @@ import Dreamer1 from "./Dreamer/Dreamer.png";
 import Dreamer2 from "./Dreamer/Dreamer.png";
 import Dreamer3 from "./Dreamer/Dreamer.png";
 import PreGrimmShop from "./Boss/TroupeMasterGrimm.png";
+import SlyShopFinished from "./NPC/SlyRescued.png";
 import CanOvercharm from "./Achievement/Charmed.png";
 import UnchainedHollowKnight from "./Boss/HollowKnightBoss.png";
 import WatcherChandelier from "./Misc/WatcherChandelier.png";
 import CityGateOpen from "./Item/CityKey.png";
+import PlayerDeath from "./Enemy/Shade.png";
 import FlowerQuest from "./Item/DelicateFlower.png";
 import FlowerRewardGiven from "./Achievement/Solace.png";
 import HappyCouplePlayerDataEvent from "./Achievement/HappyCouple.png";
-import AllCharmNotchesLemm2CP from "./Misc/Lemm.png";
 import NailsmithKilled from "./Achievement/Purity.png";
 import NailsmithSpared from "./Achievement/HappyCouple.png";
 import NightmareLantern from "./Misc/Flame.png";
@@ -198,7 +201,7 @@ import killedSanctumWarrior from "./Boss/SoulWarrior.png";
 import killedSoulTwister from "./Enemy/SoulTwister.png";
 import MossKnight from "./Enemy/MossKnight.png";
 import MushroomBrawler from "./Enemy/ShrumalOgre.png";
-import Zote1 from "./Enemy/Zote.png";
+import Zote1 from "./Boss/VengeflyKing.png";
 import Zote2 from "./Enemy/Zote.png";
 import ZoteKilled from "./Enemy/Zote.png";
 import CrossroadsStation from "./Misc/Stag.png";
@@ -244,18 +247,24 @@ import BlueLake from "./Achievement/Witness.png";
 import CrystalPeakEntry from "./Enemy/CrystalCrawler.png";
 import EnterAnyDream from "./Skill/DreamNail.png";
 import FogCanyonEntry from "./Enemy/Uoma.png";
+import TransGorgeousHusk from "./Enemy/GorgeousHusk.png";
 import EnterGreenpath from "./Enemy/Mosscreep.png";
 import EnterGreenpathWithOvercharm from "./Enemy/Mosscreep.png";
+import TransClaw from "./Skill/MantisClaw.png";
+import TransDescendingDark from "./Skill/DescendingDark.png";
 import HiveEntry from "./Enemy/Hiveling.png";
 import KingsPass from "./Enemy/Vengefly.png";
 import KingsPassEnterFromTown from "./Enemy/Vengefly.png";
 import KingdomsEdgeEntry from "./Enemy/PrimalAspid.png";
 import KingdomsEdgeOvercharmedEntry from "./Enemy/PrimalAspid.png";
-import EnterNKG from "./Boss/NightmareKingGrimm.png";
+import EnterNKG from "./Enemy/GrimmkinNightmare.png";
 import QueensGardensEntry from "./Enemy/SpinyHusk.png";
+import QueensGardensFrogsTrans from "./Enemy/SpinyHusk.png";
+import QueensGardensPostArenaTransition from "./Enemy/SpinyHusk.png";
 import EnterSanctum from "./Enemy/Folly.png";
 import EnterSanctumWithShadeSoul from "./Enemy/Folly.png";
 import WaterwaysEntry from "./Enemy/Flukefey.png";
+import WhitePalaceEntry from "./Enemy/Wingmould.png";
 import BaldurShell from "./Charm/BaldurShell.png";
 import Dashmaster from "./Charm/Dashmaster.png";
 import DeepFocus from "./Charm/DeepFocus.png";
@@ -309,9 +318,10 @@ import NotchSalubra1 from "./Item/CharmNotch.png";
 import NotchSalubra2 from "./Item/CharmNotch.png";
 import NotchSalubra3 from "./Item/CharmNotch.png";
 import NotchSalubra4 from "./Item/CharmNotch.png";
+import Lemm2 from "./Misc/Lemm.png";
+import AllCharmNotchesLemm2CP from "./Misc/Lemm.png";
 import MetGreyMourner from "./NPC/GreyMourner.png";
 import GreyMournerSeerAscended from "./NPC/GreyMourner.png";
-import Lemm2 from "./Misc/Lemm.png";
 import ElderbugFlower from "./NPC/ElderbugFlower.png";
 import BrettaRescued from "./NPC/BrettaRescued.png";
 import BrummFlame from "./Misc/FlameConsumed.png";
@@ -372,6 +382,50 @@ import Grub43 from "./NPC/Grub.png";
 import Grub44 from "./NPC/Grub.png";
 import Grub45 from "./NPC/Grub.png";
 import Grub46 from "./NPC/Grub.png";
+import GrubBasinDive from "./NPC/Grub.png";
+import GrubBasinWings from "./NPC/Grub.png";
+import GrubCityBelowLoveTower from "./NPC/Grub.png";
+import GrubCityBelowSanctum from "./NPC/Grub.png";
+import GrubCityCollectorAll from "./NPC/Grub.png";
+import GrubCityGuardHouse from "./NPC/Grub.png";
+import GrubCitySanctum from "./NPC/Grub.png";
+import GrubCitySpire from "./NPC/Grub.png";
+import GrubCliffsBaldurShell from "./NPC/Grub.png";
+import GrubCrossroadsAcid from "./NPC/Grub.png";
+import GrubCrossroadsGuarded from "./NPC/Grub.png";
+import GrubCrossroadsSpikes from "./NPC/Grub.png";
+import GrubCrossroadsVengefly from "./NPC/Grub.png";
+import GrubCrossroadsWall from "./NPC/Grub.png";
+import GrubCrystalPeaksBottomLever from "./NPC/Grub.png";
+import GrubCrystalPeaksCrown from "./NPC/Grub.png";
+import GrubCrystalPeaksCrushers from "./NPC/Grub.png";
+import GrubCrystalPeaksCrystalHeart from "./NPC/Grub.png";
+import GrubCrystalPeaksMimics from "./NPC/Grub.png";
+import GrubCrystalPeaksMound from "./NPC/Grub.png";
+import GrubCrystalPeaksSpikes from "./NPC/Grub.png";
+import GrubDeepnestBeastsDen from "./NPC/Grub.png";
+import GrubDeepnestDark from "./NPC/Grub.png";
+import GrubDeepnestMimics from "./NPC/Grub.png";
+import GrubDeepnestNosk from "./NPC/Grub.png";
+import GrubDeepnestSpikes from "./NPC/Grub.png";
+import GrubFogCanyonArchives from "./NPC/Grub.png";
+import GrubFungalBouncy from "./NPC/Grub.png";
+import GrubFungalSporeShroom from "./NPC/Grub.png";
+import GrubGreenpathCornifer from "./NPC/Grub.png";
+import GrubGreenpathHunter from "./NPC/Grub.png";
+import GrubGreenpathMossKnight from "./NPC/Grub.png";
+import GrubGreenpathVesselFragment from "./NPC/Grub.png";
+import GrubHiveExternal from "./NPC/Grub.png";
+import GrubHiveInternal from "./NPC/Grub.png";
+import GrubKingdomsEdgeCenter from "./NPC/Grub.png";
+import GrubKingdomsEdgeOro from "./NPC/Grub.png";
+import GrubQueensGardensBelowStag from "./NPC/Grub.png";
+import GrubQueensGardensUpper from "./NPC/Grub.png";
+import GrubQueensGardensWhiteLady from "./NPC/Grub.png";
+import GrubRestingGroundsCrypts from "./NPC/Grub.png";
+import GrubWaterwaysCenter from "./NPC/Grub.png";
+import GrubWaterwaysHwurmps from "./NPC/Grub.png";
+import GrubWaterwaysIsma from "./NPC/Grub.png";
 import TreeMound from "./Misc/WhisperingRoot.png";
 import TreeCity from "./Misc/WhisperingRoot.png";
 import TreePeak from "./Misc/WhisperingRoot.png";
@@ -395,6 +449,9 @@ import TramDeepnest from "./Misc/Tram.png";
 import WhitePalaceOrb1 from "./Enemy/Wingmould.png";
 import WhitePalaceOrb3 from "./Enemy/Wingmould.png";
 import WhitePalaceOrb2 from "./Enemy/Wingmould.png";
+import WhitePalaceLowerEntry from "./Enemy/Wingmould.png";
+import WhitePalaceLowerOrb from "./Enemy/Wingmould.png";
+import WhitePalaceLeftEntry from "./Enemy/Wingmould.png";
 import WhitePalaceLeftWingMid from "./Enemy/Wingmould.png";
 import WhitePalaceRightEntry from "./Enemy/Wingmould.png";
 import WhitePalaceRightClimb from "./Enemy/Wingmould.png";
@@ -412,6 +469,37 @@ import PathOfPainTransition2 from "./Enemy/Wingmould.png";
 import PathOfPainTransition3 from "./Enemy/Wingmould.png";
 import DgateKingdomsEdgeAcid from "./Skill/DreamGate.png";
 import SoulMasterEncountered from "./Boss/SoulMaster.png";
+import GodhomeBench from "./Misc/Godseeker.png";
+import Pantheon1to4Entry from "./Misc/Godseeker.png";
+import Pantheon5Entry from "./Misc/Godseeker.png";
+import Menu from "./Misc/MapQuill.png";
+import MenuClaw from "./Skill/MantisClaw.png";
+import MenuGorgeousHusk from "./Enemy/GorgeousHusk.png";
+import CorniferAtHome from "./Misc/Iselda.png";
+import AllSeals from "./Relic/HallownestSeal.png";
+import AllEggs from "./Item/RancidEgg.png";
+import SlySimpleKey from "./Item/SimpleKey.png";
+import AllBreakables from "./Charm/FragileStrengthBroken.png";
+import MetEmilitia from "./NPC/Emilitia.png";
+import mapDirtmouth from "./Misc/Map.png";
+import mapCrossroads from "./Misc/Map.png";
+import mapGreenpath from "./Misc/Map.png";
+import mapFogCanyon from "./Misc/Map.png";
+import mapRoyalGardens from "./Misc/Map.png";
+import mapFungalWastes from "./Misc/Map.png";
+import mapCity from "./Misc/Map.png";
+import mapWaterways from "./Misc/Map.png";
+import mapMines from "./Misc/Map.png";
+import mapDeepnest from "./Misc/Map.png";
+import mapCliffs from "./Misc/Map.png";
+import mapOutskirts from "./Misc/Map.png";
+import mapRestingGrounds from "./Misc/Map.png";
+import mapAbyss from "./Misc/Map.png";
+import givenGodseekerFlower from "./Item/DelicateFlower.png";
+import givenOroFlower from "./Item/DelicateFlower.png";
+import givenWhiteLadyFlower from "./Item/DelicateFlower.png";
+import givenEmilitiaFlower from "./Item/DelicateFlower.png";
+import ManualSplit from "./Misc/Knight.png";
 export default {
     AbyssShriek,
     CrystalHeart,
@@ -434,6 +522,7 @@ export default {
     CityKey,
     HasDelicateFlower,
     ElegantKey,
+    ElegantKeyShoptimised,
     GodTuner,
     HuntersMark,
     KingsBrand,
@@ -511,6 +600,7 @@ export default {
     NoEyes,
     NoEyesEssence,
     Nosk,
+    KilledOblobbles,
     MatoOroNailBros,
     RadianceBoss,
     PureVessel,
@@ -576,14 +666,15 @@ export default {
     Dreamer2,
     Dreamer3,
     PreGrimmShop,
+    SlyShopFinished,
     CanOvercharm,
     UnchainedHollowKnight,
     WatcherChandelier,
     CityGateOpen,
+    PlayerDeath,
     FlowerQuest,
     FlowerRewardGiven,
     HappyCouplePlayerDataEvent,
-    AllCharmNotchesLemm2CP,
     NailsmithKilled,
     NailsmithSpared,
     NightmareLantern,
@@ -657,8 +748,11 @@ export default {
     CrystalPeakEntry,
     EnterAnyDream,
     FogCanyonEntry,
+    TransGorgeousHusk,
     EnterGreenpath,
     EnterGreenpathWithOvercharm,
+    TransClaw,
+    TransDescendingDark,
     HiveEntry,
     KingsPass,
     KingsPassEnterFromTown,
@@ -666,9 +760,12 @@ export default {
     KingdomsEdgeOvercharmedEntry,
     EnterNKG,
     QueensGardensEntry,
+    QueensGardensFrogsTrans,
+    QueensGardensPostArenaTransition,
     EnterSanctum,
     EnterSanctumWithShadeSoul,
     WaterwaysEntry,
+    WhitePalaceEntry,
     BaldurShell,
     Dashmaster,
     DeepFocus,
@@ -722,9 +819,10 @@ export default {
     NotchSalubra2,
     NotchSalubra3,
     NotchSalubra4,
+    Lemm2,
+    AllCharmNotchesLemm2CP,
     MetGreyMourner,
     GreyMournerSeerAscended,
-    Lemm2,
     ElderbugFlower,
     BrettaRescued,
     BrummFlame,
@@ -785,6 +883,50 @@ export default {
     Grub44,
     Grub45,
     Grub46,
+    GrubBasinDive,
+    GrubBasinWings,
+    GrubCityBelowLoveTower,
+    GrubCityBelowSanctum,
+    GrubCityCollectorAll,
+    GrubCityGuardHouse,
+    GrubCitySanctum,
+    GrubCitySpire,
+    GrubCliffsBaldurShell,
+    GrubCrossroadsAcid,
+    GrubCrossroadsGuarded,
+    GrubCrossroadsSpikes,
+    GrubCrossroadsVengefly,
+    GrubCrossroadsWall,
+    GrubCrystalPeaksBottomLever,
+    GrubCrystalPeaksCrown,
+    GrubCrystalPeaksCrushers,
+    GrubCrystalPeaksCrystalHeart,
+    GrubCrystalPeaksMimics,
+    GrubCrystalPeaksMound,
+    GrubCrystalPeaksSpikes,
+    GrubDeepnestBeastsDen,
+    GrubDeepnestDark,
+    GrubDeepnestMimics,
+    GrubDeepnestNosk,
+    GrubDeepnestSpikes,
+    GrubFogCanyonArchives,
+    GrubFungalBouncy,
+    GrubFungalSporeShroom,
+    GrubGreenpathCornifer,
+    GrubGreenpathHunter,
+    GrubGreenpathMossKnight,
+    GrubGreenpathVesselFragment,
+    GrubHiveExternal,
+    GrubHiveInternal,
+    GrubKingdomsEdgeCenter,
+    GrubKingdomsEdgeOro,
+    GrubQueensGardensBelowStag,
+    GrubQueensGardensUpper,
+    GrubQueensGardensWhiteLady,
+    GrubRestingGroundsCrypts,
+    GrubWaterwaysCenter,
+    GrubWaterwaysHwurmps,
+    GrubWaterwaysIsma,
     TreeMound,
     TreeCity,
     TreePeak,
@@ -808,6 +950,9 @@ export default {
     WhitePalaceOrb1,
     WhitePalaceOrb3,
     WhitePalaceOrb2,
+    WhitePalaceLowerEntry,
+    WhitePalaceLowerOrb,
+    WhitePalaceLeftEntry,
     WhitePalaceLeftWingMid,
     WhitePalaceRightEntry,
     WhitePalaceRightClimb,
@@ -825,4 +970,35 @@ export default {
     PathOfPainTransition3,
     DgateKingdomsEdgeAcid,
     SoulMasterEncountered,
+    GodhomeBench,
+    Pantheon1to4Entry,
+    Pantheon5Entry,
+    Menu,
+    MenuClaw,
+    MenuGorgeousHusk,
+    CorniferAtHome,
+    AllSeals,
+    AllEggs,
+    SlySimpleKey,
+    AllBreakables,
+    MetEmilitia,
+    mapDirtmouth,
+    mapCrossroads,
+    mapGreenpath,
+    mapFogCanyon,
+    mapRoyalGardens,
+    mapFungalWastes,
+    mapCity,
+    mapWaterways,
+    mapMines,
+    mapDeepnest,
+    mapCliffs,
+    mapOutskirts,
+    mapRestingGrounds,
+    mapAbyss,
+    givenGodseekerFlower,
+    givenOroFlower,
+    givenWhiteLadyFlower,
+    givenEmilitiaFlower,
+    ManualSplit,
 };

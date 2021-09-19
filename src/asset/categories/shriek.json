@@ -1,14 +1,18 @@
 {
     "splitIds": [
+        "VengefulSpirit",
+        "EnterGreenpath",
+        "MothwingCloak",
+        "MantisClaw",
+        "HowlingWraiths",
+        "BlueLake",
+        "KingdomsEdgeEntry",
+        "KingsBrand",
+        "BasinEntry",
         "AbyssShriek"
     ],
     "ordered": true,
     "endTriggeringAutosplit": true,
     "gameName": "Hollow Knight Category Extensions",
-    "categoryName": "Shriek%",
-    "variables": {
-        "platform": "PC",
-        "patch": "1.5.72.11824",
-        "glitch": "Current Patch NMG"
-    }
+    "categoryName": "Shriek%"
 }

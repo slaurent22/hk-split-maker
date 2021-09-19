@@ -1,0 +1,21 @@
+{
+    "splitIds": [
+        "Dirtmouth",
+        "Grub1",
+        "AspidHunter",
+        "MaskFragment1",
+        "Grub2",
+        "Grub3",
+        "VengefulSpirit",
+        "EnterGreenpath",
+        "Grub4",
+        "Grub5",
+        "MaskFragment2",
+        "MaskFragment3",
+        "Mask1"
+    ],
+    "ordered": true,
+    "endTriggeringAutosplit": true,
+    "gameName": "Hollow Knight Category Extensions",
+    "categoryName": "4 Mask Shards 0 Geo"
+}

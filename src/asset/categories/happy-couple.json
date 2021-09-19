@@ -103,7 +103,6 @@
     "gameName": "Hollow Knight Category Extensions",
     "categoryName": "Happy Couple",
     "variables": {
-        "platform": "PC",
-        "patch": "1.5.72.11824"
+        "glitch": "Current Patch NMG"
     }
 }

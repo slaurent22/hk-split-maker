@@ -1,7 +1,7 @@
 {
     "splitIds": [
         "VengefulSpirit",
-        "Greenpath",
+        "EnterGreenpath",
         "MothwingCloak",
         "MantisClaw",
         "BlueLake",
@@ -12,10 +12,5 @@
     "ordered": true,
     "endTriggeringAutosplit": true,
     "gameName": "Hollow Knight Category Extensions",
-    "categoryName": "Myla%",
-    "variables": {
-        "platform": "PC",
-        "patch": "1.5.72.11824",
-        "glitch": "No Major Glitches"
-    }
+    "categoryName": "Myla%"
 }

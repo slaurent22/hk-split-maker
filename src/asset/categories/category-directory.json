@@ -1,17 +1,97 @@
 {
     "Hollow Knight": [
       {
-        "fileName": "112-apb",
+        "fileName": "112",
         "displayName": "112% APB"
       },
       {
+        "fileName": "107",
+        "displayName": "107% AB"
+      },
+      {
+        "fileName": "106",
+        "displayName": "106% TE"
+      },
+      {
         "fileName": "all-skills",
-        "displayName": "All Skills (1.2.2.1)"
+        "displayName": "All Skills"
+      },
+      {
+        "fileName": "all-skills-cp",
+        "displayName": "All Skills (Current Patch NMG)"
       },
       {
         "fileName": "any",
-        "displayName": "Any% (1.2.2.1)"
+        "displayName": "Any%"
+      },
+      {
+        "fileName": "any-cp-spore",
+        "displayName": "Any% (1.4.3.2) w/ Spore Shroom"
+      },
+      {
+        "fileName": "any-ss",
+        "displayName": "Any% Steel Soul"
+      },
+      {
+        "fileName": "low",
+        "displayName": "Low%"
+      },
+      {
+        "fileName": "te",
+        "displayName": "True Ending"
+      },
+      {
+        "fileName": "te-cp",
+        "displayName": "True Ending (1.4+ Shriek)"
       }
+    ],
+    "Hollow Knight: Individual Level": [
+        {
+            "fileName": "p1",
+            "displayName": "Pantheon of the Master (P1)"
+        },
+        {
+            "fileName": "p2",
+            "displayName": "Pantheon of the Artist (P2)"
+        },
+        {
+            "fileName": "p3",
+            "displayName": "Pantheon of the Sage (P3)"
+        },
+        {
+            "fileName": "p4",
+            "displayName": "Pantheon of the Knight (P4)"
+        },
+        {
+            "fileName": "p5",
+            "displayName": "Pantheon of Hallownest (P5)"
+        },
+        {
+            "fileName": "pop",
+            "displayName": "Path of Pain"
+        },
+        {
+            "fileName": "wp-1006",
+            "displayName": "White Palace (1.0.0.6)"
+        }
+    ],
+    "Hollow Knight Mods": [
+        {
+            "fileName": "all-geo-rocks",
+            "displayName": "All Geo Rocks"
+        },
+        {
+            "fileName": "fc-as-te",
+            "displayName": "Forgotten Corners AS TE"
+        },
+        {
+            "fileName": "grass",
+            "displayName": "Grass%"
+        },
+        {
+            "fileName": "kronk",
+            "displayName": "Kronk%"
+        }
     ],
     "Hollow Knight Category Extensions": [
         {
@@ -19,47 +99,51 @@
             "displayName": "0 Geo"
         },
         {
-            "fileName": "3VF",
+            "fileName": "3vf",
             "displayName": "3 Vessel Fragments"
         },
         {
-            "fileName": "4MS",
+            "fileName": "worldsoul",
+            "displayName": "Worldsoul (9 Vessel Fragments)"
+        },
+        {
+            "fileName": "4ms",
             "displayName": "4 Mask Shards"
         },
         {
-            "fileName": "4ms0geo",
-            "displayName": "4ms 0 Geo"
+            "fileName": "4ms-0geo",
+            "displayName": "4 Mask Shards 0 Geo"
         },
         {
-            "fileName": "al2ba",
-            "displayName": "Al2ba%"
+            "fileName": "16ms",
+            "displayName": "16 Mask Shards"
         },
         {
-            "fileName": "all_skulls",
-            "displayName": "16MS (1.2.2.1)"
-        },
-        {
-            "fileName": "allcharmnotches",
+            "fileName": "acn",
             "displayName": "All Charm Notches"
         },
         {
-            "fileName": "ACN",
+            "fileName": "acn-1221",
             "displayName": "All Charm Notches (1.2.2.1)"
         },
         {
-            "fileName": "allstagstations",
+            "fileName": "all-hallownest-seals",
+            "displayName": "All Hallownest Seals"
+        },
+        {
+            "fileName": "all-stag-stations",
             "displayName": "All Stag Stations"
         },
         {
-            "fileName": "allunbreakablecharms",
+            "fileName": "all-unbreakable-charms",
             "displayName": "All Unbreakable Charms"
         },
         {
-            "fileName": "allunbreakablecharms_steel_soul",
+            "fileName": "all-unbreakable-charms-ss",
             "displayName": "All Unbreakable Charms (Steel Soul)"
         },
         {
-            "fileName": "allwhisperingroots",
+            "fileName": "all-whispering-roots",
             "displayName": "All Whispering Roots"
         },
         {
@@ -67,7 +151,15 @@
             "displayName": "Aluba%"
         },
         {
-            "fileName": "eatmetoo",
+            "fileName": "al2ba",
+            "displayName": "Al2ba%"
+        },
+        {
+            "fileName": "cartographer",
+            "displayName": "Cartographer (a.k.a. Dapper Mapper)"
+        },
+        {
+            "fileName": "eat-me-too",
             "displayName": "Eat Me Too"
         },
         {
@@ -75,19 +167,27 @@
             "displayName": "Elderbug%"
         },
         {
-            "fileName": "enragedguardian",
+            "fileName": "elegy",
+            "displayName": "Elegy%"
+        },
+        {
+            "fileName": "enraged-guardian",
             "displayName": "Enraged Guardian%"
         },
         {
             "fileName": "fool",
-            "displayName": "Fool% (1.2.2.1)"
+            "displayName": "Fool%"
+        },
+        {
+            "fileName": "ggg",
+            "displayName": "Gaslight, Gatekeep, Girlboss"
         },
         {
             "fileName": "gpz",
             "displayName": "GPZ%"
         },
         {
-            "fileName": "greathopper",
+            "fileName": "great-hopper",
             "displayName": "Great Hopper%"
         },
         {
@@ -95,23 +195,23 @@
             "displayName": "Happy Couple"
         },
         {
-            "fileName": "happy-couple-jeff",
-            "displayName": "Happy Couple (jeff route)"
+            "fileName": "happy-couple-1221",
+            "displayName": "Happy Couple (1.2.2.1)"
         },
         {
             "fileName": "hiveblood",
             "displayName": "Hiveblood%"
         },
         {
-            "fileName": "LBC",
+            "fileName": "lbc",
             "displayName": "Lifeblood Core%"
         },
         {
-            "fileName": "lowAB",
+            "fileName": "low-ab",
             "displayName": "Low% All Bindings"
         },
         {
-            "fileName": "marissaaudience",
+            "fileName": "marissa-audience",
             "displayName": "Marissa Audience"
         },
         {
@@ -119,7 +219,7 @@
             "displayName": "Marmu%"
         },
         {
-            "fileName": "mrmushroomending",
+            "fileName": "mr-mushroom-ending",
             "displayName": "Mr. Mushroom Ending"
         },
         {
@@ -131,20 +231,32 @@
             "displayName": "Nice% (1.2.2.1)"
         },
         {
-            "fileName": "NKG_flame_splits",
+            "fileName": "nkg",
+            "displayName": "NKG%"
+        },
+        {
+            "fileName": "nkg-flame-splits",
             "displayName": "NKG% (with flame splits)"
         },
         {
-            "fileName": "NKG_no_flames",
-            "displayName": "NKG% (no flame splits)"
-        },
-        {
-            "fileName": "NMG",
+            "fileName": "nmg",
             "displayName": "NMG%"
         },
         {
             "fileName": "nosk",
             "displayName": "Nosk%"
+        },
+        {
+            "fileName": "pop-percent",
+            "displayName": "Path of Pain%"
+        },
+        {
+            "fileName": "p5bo",
+            "displayName": "Pantheon 5 Boss Order"
+        },
+        {
+            "fileName": "p5bo-breaks",
+            "displayName": "Pantheon 5 Boss Order (manual rest break splits)"
         },
         {
             "fileName": "shriek",
@@ -155,16 +267,12 @@
             "displayName": "Spelless"
         },
         {
-            "fileName": "spellesslow",
+            "fileName": "spelless-low",
             "displayName": "Low% Spelless"
         },
         {
-            "fileName": "spellessTE",
+            "fileName": "spelless-te",
             "displayName": "Spelless True Ending"
-        },
-        {
-            "fileName": "worldsoul",
-            "displayName": "Worldsoul (1.2.2.1)"
         },
         {
             "fileName": "zote",

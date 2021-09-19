@@ -1,7 +1,7 @@
 {
     "splitIds": [
         "VengefulSpirit",
-        "Greenpath",
+        "EnterGreenpath",
         "MothwingCloak",
         "MantisClaw",
         "DesolateDive",
@@ -17,11 +17,10 @@
     ],
     "ordered": true,
     "endTriggeringAutosplit": false,
+    "endingSplit": {
+        "name": "Hollow Knight",
+        "icon": "HollowKnightBoss"
+    },
     "gameName": "Hollow Knight Category Extensions",
-    "categoryName": "0 Geo",
-    "variables": {
-        "platform": "PC",
-        "patch": "1.5.72.11824",
-        "glitch": "No Major Glitches"
-    }
+    "categoryName": "0 Geo"
 }

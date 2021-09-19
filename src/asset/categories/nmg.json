@@ -1,0 +1,17 @@
+{
+    "splitIds": [
+        "VengefulSpirit",
+        "EnterGreenpath",
+        "MothwingCloak",
+        "MantisClaw",
+        "GorgeousHusk",
+        "DashSlash",
+        "GreatSlash",
+        "CycloneSlash",
+        "NailmastersGlory"
+    ],
+    "ordered": true,
+    "endTriggeringAutosplit": true,
+    "gameName": "Hollow Knight Category Extensions",
+    "categoryName": "NMG%"
+}

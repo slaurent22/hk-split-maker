@@ -63,7 +63,7 @@ const every = {
     "categoryName": "EVERY AUTOSPLIT",
     "variables": {
         "platform": "PC",
-        "patch": "1.4.3.2"
+        "patch": "1.5.75"
     }
 }
 
@@ -110,7 +110,11 @@ const NEW_ID_MAP = {
     "Dreamer1": "Dreamer",
     "Dreamer2": "Dreamer",
     "Dreamer3": "Dreamer",
-    "Hegemol": "Herrah"
+    "Hegemol": "Herrah",
+    "ElegantKeyShoptimised": "ElegantKey",
+    "SlySimpleKey": "SimpleKey",
+    "KilledOblobbles": "Oblobbles",
+    "ManualSplit": "Knight"
 };
 
 function getUrl(id, qualifier) {
@@ -136,6 +140,28 @@ function getUrl(id, qualifier) {
         return getUrl("CharmNotch", "Item");
     }
 
+    if (qualifier === "Item") {
+        switch (id) {
+            case "AllSeals": return getUrl("HallownestSeal", "Relic");
+            case "AllEggs":  return getUrl("RancidEgg", "Item");
+            case "mapDirtmouth":
+            case "mapCrossroads":
+            case "mapGreenpath":
+            case "mapFogCanyon":
+            case "mapRoyalGardens":
+            case "mapFungalWastes":
+            case "mapCity":
+            case "mapWaterways":
+            case "mapMines":
+            case "mapDeepnest":
+            case "mapCliffs":
+            case "mapOutskirts":
+            case "mapRestingGrounds":
+            case "mapAbyss":
+                return getUrl("Map", "Misc")
+        }
+    }
+
     if (qualifier === "Event") {
         switch (id) {
             case "PreGrimmShop":               return getUrl("TroupeMasterGrimm", "Boss");
@@ -155,6 +181,10 @@ function getUrl(id, qualifier) {
             case "SeerDeparts":                return getUrl("Ascension", "Achievement");
             case "SpiritGladeOpen":            return getUrl("Attunement", "Achievement");
             case "BeastsDenTrapBench":         return getUrl("Bench", "Misc");
+            case "PlayerDeath":                return getUrl("Shade", "Enemy");
+            case "SlyShopFinished":            return getUrl("SlyRescued", "NPC");
+            case "AllBreakables":              return getUrl("FragileStrengthBroken", "Charm");
+            case "MetEmilitia":                return getUrl("Emilitia", "NPC");
         }
     }
 
@@ -182,7 +212,7 @@ function getUrl(id, qualifier) {
             case "AspidHunter":          return getUrl("AspidHunter", "Enemy");
             case "MossKnight":           return getUrl("MossKnight", "Enemy");
             case "MushroomBrawler":      return getUrl("ShrumalOgre", "Enemy");
-            case "Zote1":                return getUrl("Zote", "Enemy");
+            case "Zote1":                return getUrl("VengeflyKing", "Boss");
             case "Zote2":                return getUrl("Zote", "Enemy");
             case "ZoteKilled":           return getUrl("Zote", "Enemy");
             case "Aluba":                return getUrl("Aluba", "Enemy");
@@ -239,11 +269,30 @@ function getUrl(id, qualifier) {
             case "KingsPassEnterFromTown":       return getUrl("Vengefly", "Enemy");
             case "KingdomsEdgeEntry":
             case "KingdomsEdgeOvercharmedEntry": return getUrl("KingdomsEdge", "Area");
-            case "EnterNKG":                     return getUrl("NightmareKingGrimm", "Boss");
+            case "EnterNKG":                     return getUrl("GrimmkinNightmare", "Enemy");
             case "QueensGardensEntry":           return getUrl("QueensGardens", "Area");
             case "EnterSanctum":
             case "EnterSanctumWithShadeSoul":    return getUrl("Folly", "Enemy");
             case "WaterwaysEntry":               return getUrl("RoyalWaterways", "Area");
+            case "TransClaw":                    return getUrl("MantisClaw", "Skill");
+            case "TransGorgeousHusk":            return getUrl("GorgeousHusk", "Enemy");
+            case "TransDescendingDark":          return getUrl("DescendingDark", "Skill");
+            case "CorniferAtHome":               return getUrl("Iselda", "Misc");
+            case "QueensGardensFrogsTrans":      return getUrl("QueensGardens", "Area");
+            case "QueensGardensPostArenaTransition": return getUrl("QueensGardens", "Area");
+            case "WhitePalaceEntry":             return getUrl("WhitePalace", "Area");
+            case "Pantheon1to4Entry":
+            case "Pantheon5Entry":
+            case "GodhomeBench":
+                return getUrl("Godhome", "Area");
+        }
+    }
+
+    if (qualifier === "Menu") {
+        switch (id) {
+            case "Menu": return getUrl("MapQuill", "Misc");
+            case "MenuClaw":                     return getUrl("MantisClaw", "Skill");
+            case "MenuGorgeousHusk":             return getUrl("GorgeousHusk", "Enemy");
         }
     }
 
@@ -253,6 +302,11 @@ function getUrl(id, qualifier) {
             case "GreyMournerSeerAscended": return getUrl("GreyMourner", "NPC");
             case "Lemm2": return getUrl("Lemm", "Misc");
             case "BrummFlame": return getUrl("FlameConsumed", "Misc");
+            case "givenGodseekerFlower":
+            case "givenOroFlower":
+            case "givenWhiteLadyFlower":
+            case "givenEmilitiaFlower":
+                return getUrl("DelicateFlower", "Item");
         }
     }
 

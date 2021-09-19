@@ -13,7 +13,7 @@ interface SplitDefinition {
     name: string;
 }
 
-function getName(description: string) {
+function getName(description: string): string {
     const match = DESCRIPTION_NAME_REGEXP.exec(description);
     if (!match) {
         throw new Error(`Invalid Description: ${description}`);
@@ -23,6 +23,43 @@ function getName(description: string) {
     }
 
     const { name, qualifier, } = match.groups;
+
+    switch (qualifier) {
+        case "Charm Notch":
+            return `${name} Notch`;
+        case "Stag Station":
+            return `${name} Stag`;
+        case "Grub": {
+            return name.substr("Rescued ".length);
+        }
+        case "Transition":
+            switch (name) {
+                case "Ancient Basin":
+                case "Crystal Peak":
+                case "Fog Canyon":
+                case "Greenpath":
+                case "Greenpath w/ Unlocked Overcharm":
+                case "Hive":
+                case "Kingdom's Edge":
+                case "Kingdom's Edge Overcharmed":
+                case "NKG Dream":
+                case "Sanctum":
+                case "Sanctum w/ Shade Soul":
+                case "Pantheon 1-4":
+                case "Pantheon 5":
+                case "Waterways Manhole": {
+                    return `Enter ${name}`;
+                }
+                default: break;
+            }
+            break;
+        case "Essence": {
+            return `${name} Essence`;
+        }
+        default: {
+            break;
+        }
+    }
 
     switch (name) {
         case "Dream Nail - Awoken": {
@@ -38,7 +75,7 @@ function getName(description: string) {
             return "Hollow Knight Scream";
         }
         case "Radiance Dream Entry": {
-            return "Hollow Knight (Dreamnailed)";
+            return "Hollow Knight";
         }
         case "Colosseum Fight 1": {
             return "Trial of the Warrior";
@@ -84,25 +121,21 @@ function getName(description: string) {
             // qualifier is the area
             return `${qualifier} Root`;
         }
+        case "Zote Rescued Vengefly King": {
+            return "Vengefly King";
+        }
+        case "Mega Moss Charger": {
+            return "Massive Moss Charger";
+        }
+        case "Nightmare Lantern Destroyed": {
+            return "Banishment";
+        }
         default: {
             break;
         }
     }
 
-    switch (qualifier) {
-        case "Charm Notch":
-            return `${name} Notch`;
-        case "Stag Station":
-            return `${name} Stag`;
-        case "Grub": {
-            return name.substr("Rescued ".length);
-        }
-        case "Essence": {
-            return `${name} Essence`;
-        }
-        default:
-            return name;
-    }
+    return name;
 }
 
 export function parseSplitsDefinitions(): Map<string, SplitDefinition> {

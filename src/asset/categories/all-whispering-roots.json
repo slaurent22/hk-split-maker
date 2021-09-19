@@ -1,0 +1,29 @@
+{
+    "splitIds": [
+        "VengefulSpirit",
+        "MothwingCloak",
+        "DreamNail",
+        "MantisClaw",
+        "TreeMantisVillage",
+        "TreeRestingGrounds",
+        "TreeWaterways",
+        "TreeCity",
+        "LumaflyLantern",
+        "TreePeak",
+        "CrystalHeart",
+        "TreeCliffs",
+        "TreeCrossroads",
+        "TreeMound",
+        "TreeLegEater",
+        "TreeGlade",
+        "TreeQueensGardens",
+        "TreeGreenpath",
+        "TreeDeepnest",
+        "TreeHive",
+        "TreeKingdomsEdge"
+    ],
+    "ordered": true,
+    "endTriggeringAutosplit": true,
+    "gameName": "Hollow Knight Category Extensions",
+    "categoryName": "All Whispering Roots"
+}

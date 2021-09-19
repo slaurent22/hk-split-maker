@@ -1,7 +1,7 @@
 {
     "splitIds": [
         "VengefulSpirit",
-        "Greenpath",
+        "EnterGreenpath",
         "MothwingCloak",
         "MantisClaw",
         "DeepnestSpa",
@@ -13,10 +13,5 @@
     "ordered": true,
     "endTriggeringAutosplit": true,
     "gameName": "Hollow Knight Category Extensions",
-    "categoryName": "Marmu%",
-    "variables": {
-        "platform": "PC",
-        "patch": "1.5.72.11824",
-        "glitch": "Current Patch NMG"
-    }
+    "categoryName": "Marmu%"
 }

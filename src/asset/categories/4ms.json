@@ -1,0 +1,19 @@
+{
+    "splitIds": [
+        "KingsPass",
+        "Grub1",
+        "MaskFragment1",
+        "Grub2",
+        "MaskFragment2",
+        "GruzMother",
+        "Grub3",
+        "Grub4",
+        "Grub5",
+        "MaskFragment3",
+        "Mask1"
+    ],
+    "ordered": true,
+    "endTriggeringAutosplit": true,
+    "gameName": "Hollow Knight Category Extensions",
+    "categoryName": "4 Mask Shards"
+}

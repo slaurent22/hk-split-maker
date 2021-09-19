@@ -19,6 +19,10 @@ npm install && npm run serve
 
 Navigate to `http://localhost:8080/` in your web browser.
 
+### Adding new Splits
+Copy the contents of `public enum SplitName` from
+[HollowKnightSplitSettings.cs](https://github.com/ShootMe/LiveSplit.HollowKnight/blob/master/HollowKnightSplitSettings.cs) into [splits.txt](./src/asset/splits.txt). Remove the commented-out lines. Run `npm run gen-files` to regenerate the core files from those.
+
 ## Future Enhancements
 
 You can see the current list of feature ideas in the [GitHub
