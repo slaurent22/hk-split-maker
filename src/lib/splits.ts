@@ -24,6 +24,43 @@ function getName(description: string): string {
 
     const { name, qualifier, } = match.groups;
 
+    switch (qualifier) {
+        case "Charm Notch":
+            return `${name} Notch`;
+        case "Stag Station":
+            return `${name} Stag`;
+        case "Grub": {
+            return name.substr("Rescued ".length);
+        }
+        case "Transition":
+            switch (name) {
+                case "Ancient Basin":
+                case "Crystal Peak":
+                case "Fog Canyon":
+                case "Greenpath":
+                case "Greenpath w/ Unlocked Overcharm":
+                case "Hive":
+                case "Kingdom's Edge":
+                case "Kingdom's Edge Overcharmed":
+                case "NKG Dream":
+                case "Sanctum":
+                case "Sanctum w/ Shade Soul":
+                case "Pantheon 1-4":
+                case "Pantheon 5":
+                case "Waterways Manhole": {
+                    return `Enter ${name}`;
+                }
+                default: break;
+            }
+            break;
+        case "Essence": {
+            return `${name} Essence`;
+        }
+        default: {
+            break;
+        }
+    }
+
     switch (name) {
         case "Dream Nail - Awoken": {
             return "Awoken Dream Nail";
@@ -95,40 +132,6 @@ function getName(description: string): string {
         }
     }
 
-    switch (qualifier) {
-        case "Charm Notch":
-            return `${name} Notch`;
-        case "Stag Station":
-            return `${name} Stag`;
-        case "Grub": {
-            return name.substr("Rescued ".length);
-        }
-        case "Transition":
-            switch (name) {
-                case "Ancient Basin":
-                case "Crystal Peak":
-                case "Fog Canyon":
-                case "Greenpath":
-                case "Greenpath w/ Unlocked Overcharm":
-                case "Hive":
-                case "Kingdom's Edge":
-                case "Kingdom's Edge Overcharmed":
-                case "NKG Dream":
-                case "Sanctum":
-                case "Sanctum w/ Shade Soul":
-                case "Waterways Manhole": {
-                    return `Enter ${name}`;
-                }
-                default: break;
-            }
-            break;
-        case "Essence": {
-            return `${name} Essence`;
-        }
-        default: {
-            break;
-        }
-    }
     return name;
 }
 

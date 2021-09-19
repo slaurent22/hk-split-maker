@@ -788,6 +788,95 @@ Grub45,
 [Description("Rescued Grub 46 (Grub)"), ToolTip("Splits when rescuing grub #46")]
 Grub46,
 
+[Description("Rescued Grub Basin Dive (Grub)"), ToolTip("Splits when rescuing the grub in Abyss_17")]
+GrubBasinDive,
+[Description("Rescued Grub Basin Wings (Grub)"), ToolTip("Splits when rescuing the grub in Abyss_19")]
+GrubBasinWings,
+[Description("Rescued Grub City Below Love Tower (Grub)"), ToolTip("Splits when rescuing the grub in Ruins2_07")]
+GrubCityBelowLoveTower,
+[Description("Rescued Grub City Below Sanctum (Grub)"), ToolTip("Splits when rescuing the grub in Ruins1_05")]
+GrubCityBelowSanctum,
+[Description("Rescued Grub City Collector (Grub)"), ToolTip("Splits when rescuing all three grubs in Ruins2_11. (On 1221, splits for right grub)")]
+GrubCityCollectorAll,
+[Description("Rescued Grub City Guard House (Grub)"), ToolTip("Splits when rescuing the grub in Ruins_House_01")]
+GrubCityGuardHouse,
+[Description("Rescued Grub City Sanctum (Grub)"), ToolTip("Splits when rescuing the grub in Ruins1_32")]
+GrubCitySanctum,
+[Description("Rescued Grub City Spire (Grub)"), ToolTip("Splits when rescuing the grub in Ruins2_03")]
+GrubCitySpire,
+[Description("Rescued Grub Cliffs Baldur Shell (Grub)"), ToolTip("Splits when rescuing the grub in Fungus1_28")]
+GrubCliffsBaldurShell,
+[Description("Rescued Grub Crossroads Acid (Grub)"), ToolTip("Splits when rescuing the grub in Crossroads_35")]
+GrubCrossroadsAcid,
+[Description("Rescued Grub Crossroads Guarded (Grub)"), ToolTip("Splits when rescuing the grub in Crossroads_48")]
+GrubCrossroadsGuarded,
+[Description("Rescued Grub Crossroads Spikes (Grub)"), ToolTip("Splits when rescuing the grub in Crossroads_31")]
+GrubCrossroadsSpikes,
+[Description("Rescued Grub Crossroads Vengefly (Grub)"), ToolTip("Splits when rescuing the grub in Crossroads_05")]
+GrubCrossroadsVengefly,
+[Description("Rescued Grub Crossroads Wall (Grub)"), ToolTip("Splits when rescuing the grub in Crossroads_03")]
+GrubCrossroadsWall,
+[Description("Rescued Grub Crystal Peaks Bottom Lever (Grub)"), ToolTip("Splits when rescuing the grub in Mines_04")]
+GrubCrystalPeaksBottomLever,
+[Description("Rescued Grub Crystal Peaks Crown (Grub)"), ToolTip("Splits when rescuing the grub in Mines_24")]
+GrubCrystalPeaksCrown,
+[Description("Rescued Grub Crystal Peaks Crushers (Grub)"), ToolTip("Splits when rescuing the grub in Mines_19")]
+GrubCrystalPeaksCrushers,
+[Description("Rescued Grub Crystal Peaks Crystal Heart (Grub)"), ToolTip("Splits when rescuing the grub in Mines_31")]
+GrubCrystalPeaksCrystalHeart,
+[Description("Rescued Grub Crystal Peaks Mimic (Grub)"), ToolTip("Splits when rescuing the grub in Mines_16")]
+GrubCrystalPeaksMimics,
+[Description("Rescued Grub Crystal Peaks Mound (Grub)"), ToolTip("Splits when rescuing the grub in Mines_35")]
+GrubCrystalPeaksMound,
+[Description("Rescued Grub Crystal Peaks Spikes (Grub)"), ToolTip("Splits when rescuing the grub in Mines_03")]
+GrubCrystalPeaksSpikes,
+[Description("Rescued Grub Deepnest Beast's Den (Grub)"), ToolTip("Splits when rescuing the grub in Deepnest_Spider_Town")]
+GrubDeepnestBeastsDen,
+[Description("Rescued Grub Deepnest Dark (Grub)"), ToolTip("Splits when rescuing the grub in Deepnest_39")]
+GrubDeepnestDark,
+[Description("Rescued Grub Deepnest Mimics (Grub)"), ToolTip("Splits when rescuing the grub in Deepnest_36")]
+GrubDeepnestMimics,
+[Description("Rescued Grub Deepnest Nosk (Grub)"), ToolTip("Splits when rescuing the grub in Deepnest_31")]
+GrubDeepnestNosk,
+[Description("Rescued Grub Deepnest Spikes (Grub)"), ToolTip("Splits when rescuing the grub in Deepnest_03")]
+GrubDeepnestSpikes,
+[Description("Rescued Grub Fog Canyon Archives (Grub)"), ToolTip("Splits when rescuing the grub in Fungus3_47")]
+GrubFogCanyonArchives,
+[Description("Rescued Grub Fungal Bouncy (Grub)"), ToolTip("Splits when rescuing the grub in Fungus2_18")]
+GrubFungalBouncy,
+[Description("Rescued Grub Fungal Spore Shroom (Grub)"), ToolTip("Splits when rescuing the grub in Fungus2_20")]
+GrubFungalSporeShroom,
+[Description("Rescued Grub Greenpath Cornifer (Grub)"), ToolTip("Splits when rescuing the grub in Fungus1_06")]
+GrubGreenpathCornifer,
+[Description("Rescued Grub Greenpath Hunter (Grub)"), ToolTip("Splits when rescuing the grub in Fungus1_07")]
+GrubGreenpathHunter,
+[Description("Rescued Grub Greenpath Moss Knight (Grub)"), ToolTip("Splits when rescuing the grub in Fungus1_21")]
+GrubGreenpathMossKnight,
+[Description("Rescued Grub Greenpath Vessel Fragment (Grub)"), ToolTip("Splits when rescuing the grub in Fungus1_13")]
+GrubGreenpathVesselFragment,
+[Description("Rescued Grub Hive External (Grub)"), ToolTip("Splits when rescuing the grub in Hive_03")]
+GrubHiveExternal,
+[Description("Rescued Grub Hive Internal (Grub)"), ToolTip("Splits when rescuing the grub in Hive_04")]
+GrubHiveInternal,
+[Description("Rescued Grub Kingdom's Edge Center (Grub)"), ToolTip("Splits when rescuing the grub in Deepnest_East_11")]
+GrubKingdomsEdgeCenter,
+[Description("Rescued Grub Kingdom's Edge Oro (Grub)"), ToolTip("Splits when rescuing the grub in Deepnest_East_14")]
+GrubKingdomsEdgeOro,
+[Description("Rescued Grub Queen's Gardens Below Stag (Grub)"), ToolTip("Splits when rescuing the grub in Fungus3_10")]
+GrubQueensGardensBelowStag,
+[Description("Rescued Grub Queen's Gardens Upper (Grub)"), ToolTip("Splits when rescuing the grub in Fungus3_22")]
+GrubQueensGardensUpper,
+[Description("Rescued Grub Queen's Gardens White Lady (Grub)"), ToolTip("Splits when rescuing the grub in Fungus3_48")]
+GrubQueensGardensWhiteLady,
+[Description("Rescued Grub Resting Grounds Crypts (Grub)"), ToolTip("Splits when rescuing the grub in RestingGrounds_10")]
+GrubRestingGroundsCrypts,
+[Description("Rescued Grub Waterways Center (Grub)"), ToolTip("Splits when rescuing the grub in Waterways_04")]
+GrubWaterwaysCenter,
+[Description("Rescued Grub Waterways Hwurmps (Grub)"), ToolTip("Splits when rescuing the grub in Waterways_14")]
+GrubWaterwaysHwurmps,
+[Description("Rescued Grub Waterways Isma (Grub)"), ToolTip("Splits when rescuing the grub in Waterways_13")]
+GrubWaterwaysIsma,
+
 [Description("Whispering Root (Ancestral Mound)"), ToolTip("Splits upon completing the whispering root in the Ancestral Mound")]
 TreeMound,
 [Description("Whispering Root (City of Tears)"), ToolTip("Splits upon completing the whispering root in the City of Tears")]
@@ -806,7 +895,7 @@ TreeMantisVillage,
 TreeGreenpath,
 [Description("Whispering Root (Hive)"), ToolTip("Splits upon completing the whispering root in the Hive")]
 TreeHive,
-[Description("Whispering Root (Howling Cliifs)"), ToolTip("Splits upon completing the whispering root in the Howling Cliifs")]
+[Description("Whispering Root (Howling Cliffs)"), ToolTip("Splits upon completing the whispering root in the Howling Cliifs")]
 TreeCliffs,
 [Description("Whispering Root (Kingdom's Edge)"), ToolTip("Splits upon completing the whispering root in the Kingdom's Edge")]
 TreeKingdomsEdge,
@@ -884,6 +973,10 @@ SoulMasterEncountered,
 
 [Description("Godhome Bench (Transition)"), ToolTip("Splits when leaving a Godhome Bench room")]
 GodhomeBench,
+[Description("Pantheon 1-4 (Transition)"), ToolTip("Splits on entry to any of pantheon 1 - 4")]
+Pantheon1to4Entry,
+[Description("Pantheon 5 (Transition)"), ToolTip("Splits on entry to pantheon 5")]
+Pantheon5Entry,
 
 [Description("Main Menu (Menu)"), ToolTip("Splits on main menu")]
 Menu,

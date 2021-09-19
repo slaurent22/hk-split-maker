@@ -382,6 +382,50 @@ import Grub43 from "./NPC/Grub.png";
 import Grub44 from "./NPC/Grub.png";
 import Grub45 from "./NPC/Grub.png";
 import Grub46 from "./NPC/Grub.png";
+import GrubBasinDive from "./NPC/Grub.png";
+import GrubBasinWings from "./NPC/Grub.png";
+import GrubCityBelowLoveTower from "./NPC/Grub.png";
+import GrubCityBelowSanctum from "./NPC/Grub.png";
+import GrubCityCollectorAll from "./NPC/Grub.png";
+import GrubCityGuardHouse from "./NPC/Grub.png";
+import GrubCitySanctum from "./NPC/Grub.png";
+import GrubCitySpire from "./NPC/Grub.png";
+import GrubCliffsBaldurShell from "./NPC/Grub.png";
+import GrubCrossroadsAcid from "./NPC/Grub.png";
+import GrubCrossroadsGuarded from "./NPC/Grub.png";
+import GrubCrossroadsSpikes from "./NPC/Grub.png";
+import GrubCrossroadsVengefly from "./NPC/Grub.png";
+import GrubCrossroadsWall from "./NPC/Grub.png";
+import GrubCrystalPeaksBottomLever from "./NPC/Grub.png";
+import GrubCrystalPeaksCrown from "./NPC/Grub.png";
+import GrubCrystalPeaksCrushers from "./NPC/Grub.png";
+import GrubCrystalPeaksCrystalHeart from "./NPC/Grub.png";
+import GrubCrystalPeaksMimics from "./NPC/Grub.png";
+import GrubCrystalPeaksMound from "./NPC/Grub.png";
+import GrubCrystalPeaksSpikes from "./NPC/Grub.png";
+import GrubDeepnestBeastsDen from "./NPC/Grub.png";
+import GrubDeepnestDark from "./NPC/Grub.png";
+import GrubDeepnestMimics from "./NPC/Grub.png";
+import GrubDeepnestNosk from "./NPC/Grub.png";
+import GrubDeepnestSpikes from "./NPC/Grub.png";
+import GrubFogCanyonArchives from "./NPC/Grub.png";
+import GrubFungalBouncy from "./NPC/Grub.png";
+import GrubFungalSporeShroom from "./NPC/Grub.png";
+import GrubGreenpathCornifer from "./NPC/Grub.png";
+import GrubGreenpathHunter from "./NPC/Grub.png";
+import GrubGreenpathMossKnight from "./NPC/Grub.png";
+import GrubGreenpathVesselFragment from "./NPC/Grub.png";
+import GrubHiveExternal from "./NPC/Grub.png";
+import GrubHiveInternal from "./NPC/Grub.png";
+import GrubKingdomsEdgeCenter from "./NPC/Grub.png";
+import GrubKingdomsEdgeOro from "./NPC/Grub.png";
+import GrubQueensGardensBelowStag from "./NPC/Grub.png";
+import GrubQueensGardensUpper from "./NPC/Grub.png";
+import GrubQueensGardensWhiteLady from "./NPC/Grub.png";
+import GrubRestingGroundsCrypts from "./NPC/Grub.png";
+import GrubWaterwaysCenter from "./NPC/Grub.png";
+import GrubWaterwaysHwurmps from "./NPC/Grub.png";
+import GrubWaterwaysIsma from "./NPC/Grub.png";
 import TreeMound from "./Misc/WhisperingRoot.png";
 import TreeCity from "./Misc/WhisperingRoot.png";
 import TreePeak from "./Misc/WhisperingRoot.png";
@@ -426,6 +470,8 @@ import PathOfPainTransition3 from "./Enemy/Wingmould.png";
 import DgateKingdomsEdgeAcid from "./Skill/DreamGate.png";
 import SoulMasterEncountered from "./Boss/SoulMaster.png";
 import GodhomeBench from "./Misc/Godseeker.png";
+import Pantheon1to4Entry from "./Misc/Godseeker.png";
+import Pantheon5Entry from "./Misc/Godseeker.png";
 import Menu from "./Misc/MapQuill.png";
 import MenuClaw from "./Skill/MantisClaw.png";
 import MenuGorgeousHusk from "./Enemy/GorgeousHusk.png";
@@ -837,6 +883,50 @@ export default {
     Grub44,
     Grub45,
     Grub46,
+    GrubBasinDive,
+    GrubBasinWings,
+    GrubCityBelowLoveTower,
+    GrubCityBelowSanctum,
+    GrubCityCollectorAll,
+    GrubCityGuardHouse,
+    GrubCitySanctum,
+    GrubCitySpire,
+    GrubCliffsBaldurShell,
+    GrubCrossroadsAcid,
+    GrubCrossroadsGuarded,
+    GrubCrossroadsSpikes,
+    GrubCrossroadsVengefly,
+    GrubCrossroadsWall,
+    GrubCrystalPeaksBottomLever,
+    GrubCrystalPeaksCrown,
+    GrubCrystalPeaksCrushers,
+    GrubCrystalPeaksCrystalHeart,
+    GrubCrystalPeaksMimics,
+    GrubCrystalPeaksMound,
+    GrubCrystalPeaksSpikes,
+    GrubDeepnestBeastsDen,
+    GrubDeepnestDark,
+    GrubDeepnestMimics,
+    GrubDeepnestNosk,
+    GrubDeepnestSpikes,
+    GrubFogCanyonArchives,
+    GrubFungalBouncy,
+    GrubFungalSporeShroom,
+    GrubGreenpathCornifer,
+    GrubGreenpathHunter,
+    GrubGreenpathMossKnight,
+    GrubGreenpathVesselFragment,
+    GrubHiveExternal,
+    GrubHiveInternal,
+    GrubKingdomsEdgeCenter,
+    GrubKingdomsEdgeOro,
+    GrubQueensGardensBelowStag,
+    GrubQueensGardensUpper,
+    GrubQueensGardensWhiteLady,
+    GrubRestingGroundsCrypts,
+    GrubWaterwaysCenter,
+    GrubWaterwaysHwurmps,
+    GrubWaterwaysIsma,
     TreeMound,
     TreeCity,
     TreePeak,
@@ -881,6 +971,8 @@ export default {
     DgateKingdomsEdgeAcid,
     SoulMasterEncountered,
     GodhomeBench,
+    Pantheon1to4Entry,
+    Pantheon5Entry,
     Menu,
     MenuClaw,
     MenuGorgeousHusk,

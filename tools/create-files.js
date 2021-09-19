@@ -274,7 +274,6 @@ function getUrl(id, qualifier) {
             case "EnterSanctum":
             case "EnterSanctumWithShadeSoul":    return getUrl("Folly", "Enemy");
             case "WaterwaysEntry":               return getUrl("RoyalWaterways", "Area");
-            case "GodhomeBench":                 return getUrl("Godhome", "Area");
             case "TransClaw":                    return getUrl("MantisClaw", "Skill");
             case "TransGorgeousHusk":            return getUrl("GorgeousHusk", "Enemy");
             case "TransDescendingDark":          return getUrl("DescendingDark", "Skill");
@@ -282,6 +281,10 @@ function getUrl(id, qualifier) {
             case "QueensGardensFrogsTrans":      return getUrl("QueensGardens", "Area");
             case "QueensGardensPostArenaTransition": return getUrl("QueensGardens", "Area");
             case "WhitePalaceEntry":             return getUrl("WhitePalace", "Area");
+            case "Pantheon1to4Entry":
+            case "Pantheon5Entry":
+            case "GodhomeBench":
+                return getUrl("Godhome", "Area");
         }
     }
 
