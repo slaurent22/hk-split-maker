@@ -147,7 +147,7 @@ export async function createSplitsXml(config: Config): Promise<string> {
                 nameTemplate = nameOverride[currentSplitIdCount];
             }
             if (nameTemplate) {
-                name = nameTemplate.replace("%s", name);
+                name = nameTemplate.replace("%s", splitDefinition.name);
             }
         }
 
