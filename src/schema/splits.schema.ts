@@ -67,7 +67,7 @@ const SPLITID_OR_ARRAY_THEREOF_SCHEMA = {
 
 const namesProperties: Record<string, unknown> = {};
 const iconsProperties: Record<string, unknown> = {};
-for (const split of SPLITS_SCHEMA.concat(SUBSPLITS_SCHEMA)) {
+for (const split of SPLITS_SCHEMA) {
     namesProperties[split.const] = overrideSchemaPropItem(split.description);
     iconsProperties[split.const] = SPLITID_OR_ARRAY_THEREOF_SCHEMA;
 }

@@ -166,26 +166,26 @@
         "-HollowKnightDreamnail"
     ],
     "names": {
-        "-ElegantKey": "%s (1U)",
-        "-GlowingWomb": "%s (2D)",
-        "-DreamGate": "%s (3D)",
-        "-CycloneSlash": "%s (2D)",
+        "ElegantKey": "%s (1U)",
+        "GlowingWomb": "%s (2D)",
+        "DreamGate": "%s (3D)",
+        "CycloneSlash": "%s (2D)",
         "LumaflyLantern": "{Crystal Peak} %s",
-        "-Flame2": [
+        "Flame2": [
             "%s (3D)",
             "%s"
         ],
-        "-GreatSlash": "%s (1U)",
+        "GreatSlash": "%s (1U)",
         "Grimmchild2": "{Greenpath} %s (2U)",
-        "-Dreamshield": "%s (2D)",
-        "-AbyssShriek": "%s (2D)",
+        "Dreamshield": "%s (2D)",
+        "AbyssShriek": "%s (2D)",
         "TroupeMasterGrimm": "%s (3D)",
         "TraitorLord": "{Queen's Gardens} %s",
         "Vessel2": "{Deepnest} %s",
         "Hiveblood": "{The Hive} %s",
         "Collector": "{Kingdom's Edge} %s",
         "WhiteDefenderEssence": "{City of Tears} %s",
-        "-WaywardCompass": "%s (3D)",
+        "WaywardCompass": "%s (3D)",
         "SlyShopFinished": "%s (3D)",
         "SeerDeparts": "%s (2U)",
         "Mask4": "{Flower Quest} %s",
@@ -193,7 +193,7 @@
         "VoidHeart": "{The Abyss} %s",
         "Kingsoul": "%s (2D)",
         "NightmareKingGrimm": "%s (3D)",
-        "-Grub46": "%s: Watcher's Spire"
+        "Grub46": "%s: Watcher's Spire"
     },
     "ordered": true,
     "endTriggeringAutosplit": false,
