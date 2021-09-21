@@ -22,5 +22,8 @@
     "ordered": true,
     "endTriggeringAutosplit": true,
     "gameName": "Hollow Knight Category Extensions",
-    "categoryName": "Cartographer"
+    "categoryName": "Cartographer",
+    "variables": {
+        "glitch": "Current Patch NMG"
+    }
 }
