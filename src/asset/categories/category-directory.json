@@ -119,6 +119,10 @@
             "displayName": "16 Mask Shards"
         },
         {
+            "fileName": "all-breakable-charms",
+            "displayName": "All Breakable Charms"
+        },
+        {
             "fileName": "acn",
             "displayName": "All Charm Notches"
         },
