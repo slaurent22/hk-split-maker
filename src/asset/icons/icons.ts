@@ -308,6 +308,9 @@ import Sprintmaster from "./Charm/Sprintmaster.png";
 import StalwartShell from "./Charm/StalwartShell.png";
 import SteadyBody from "./Charm/SteadyBody.png";
 import ThornsOfAgony from "./Charm/ThornsOfAgony.png";
+import UnbreakableGreed from "./Charm/UnbreakableGreed.png";
+import UnbreakableHeart from "./Charm/UnbreakableHeart.png";
+import UnbreakableStrength from "./Charm/UnbreakableStrength.png";
 import VoidHeart from "./Charm/VoidHeart.png";
 import WaywardCompass from "./Charm/WaywardCompass.png";
 import Weaversong from "./Charm/Weaversong.png";
@@ -480,6 +483,7 @@ import AllSeals from "./Relic/HallownestSeal.png";
 import AllEggs from "./Item/RancidEgg.png";
 import SlySimpleKey from "./Item/SimpleKey.png";
 import AllBreakables from "./Charm/FragileStrengthBroken.png";
+import AllUnbreakables from "./Charm/UnbreakableStrength.png";
 import MetEmilitia from "./NPC/Emilitia.png";
 import mapDirtmouth from "./Misc/Map.png";
 import mapCrossroads from "./Misc/Map.png";
@@ -809,6 +813,9 @@ export default {
     StalwartShell,
     SteadyBody,
     ThornsOfAgony,
+    UnbreakableGreed,
+    UnbreakableHeart,
+    UnbreakableStrength,
     VoidHeart,
     WaywardCompass,
     Weaversong,
@@ -981,6 +988,7 @@ export default {
     AllEggs,
     SlySimpleKey,
     AllBreakables,
+    AllUnbreakables,
     MetEmilitia,
     mapDirtmouth,
     mapCrossroads,

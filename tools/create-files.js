@@ -114,7 +114,8 @@ const NEW_ID_MAP = {
     "ElegantKeyShoptimised": "ElegantKey",
     "SlySimpleKey": "SimpleKey",
     "KilledOblobbles": "Oblobbles",
-    "ManualSplit": "Knight"
+    "ManualSplit": "Knight",
+    "AllUnbreakables": "UnbreakableStrength"
 };
 
 function getUrl(id, qualifier) {
