@@ -1,15 +1,16 @@
 {
     "splitIds": [
+        "FuryOfTheFallen",
         "VengefulSpirit",
         "EnterGreenpath",
         "MothwingCloak",
+        "NotchShrumalOgres",
         "MantisClaw",
-        "TramPass",
-        "HiveEntry",
-        "Hiveblood"
+        "MantisLords",
+        "AllBreakables"
     ],
     "ordered": true,
     "endTriggeringAutosplit": true,
     "gameName": "Hollow Knight Category Extensions",
-    "categoryName": "Hiveblood%"
+    "categoryName": "All Breakable Charms"
 }

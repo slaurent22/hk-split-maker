@@ -13,10 +13,11 @@
         "KingsStationStation",
         "GorgeousHusk",
         "BlackKnight",
-        "Lemm2"
+        "Lemm2",
+        "AllUnbreakables"
     ],
     "ordered": true,
-    "endTriggeringAutosplit": false,
+    "endTriggeringAutosplit": true,
     "gameName": "Hollow Knight Category Extensions",
     "categoryName": "All Unbreakable Charms"
 }

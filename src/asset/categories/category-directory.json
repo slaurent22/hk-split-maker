@@ -119,6 +119,10 @@
             "displayName": "16 Mask Shards"
         },
         {
+            "fileName": "all-breakable-charms",
+            "displayName": "All Breakable Charms"
+        },
+        {
             "fileName": "acn",
             "displayName": "All Charm Notches"
         },
@@ -233,10 +237,6 @@
         {
             "fileName": "nkg",
             "displayName": "NKG%"
-        },
-        {
-            "fileName": "nkg-flame-splits",
-            "displayName": "NKG% (with flame splits)"
         },
         {
             "fileName": "nmg",

@@ -60,7 +60,7 @@
         "MarkothEssence",
         "QuickSlash",
         "Collector",
-        "Grub46",
+        "GrubCitySpire",
         "Lurien",
         "NailUpgrade3",
         "WhiteDefenderEssence",
@@ -112,7 +112,6 @@
         "SoulEater": "[2D] %s",
         "AbyssShriek": "[2D] %s",
         "NotchGrimm": "[3D] %s",
-        "Grub46": "Grub #46 (Spire)",
         "NightmareLanternDestroyed": "[2U] %s",
         "GreyPrinceEssence": "[2U] %s",
         "GreyMournerSeerAscended": "[2U] %s",
@@ -127,10 +126,10 @@
             "Enter Xero",
             "Enter Marmu",
             "Enter Hive Knight",
-            "Enter Watcher Knight",
+            "Enter Unn Room",
             "Enter Enraged Guardian",
-            "Enter Soul Tyrant",
-            "Enter Pure Vessel"
+            "Enter White Lady Room",
+            "Enter Pale King Room"
         ]
     },
     "icons": {
