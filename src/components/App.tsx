@@ -54,8 +54,9 @@ export default class App extends Component<AppProps, AppState> {
             <div id="app">
                 <div className="alert-banner" style={alertBannerVisible ? {} : { display: "none", }}>
                     <span className="close-ab" onClick={this.handleClickCloseAlertBanner.bind(this)}>&times;</span>
-                    Interested in contributing or suggesting ideas and splits? Check out 
-                    the <a href="https://github.com/slaurent22/hk-split-maker" target="_blank" rel="noopener noreferrer">GitHub Project Site!</a>
+                    Interested in contributing or suggesting ideas and splits? Check out
+                    the <a href="https://github.com/slaurent22/hk-split-maker" target="_blank" 
+                    rel="noopener noreferrer">GitHub Project Site!</a>
                 </div>
                 <Header />
                 <Instructions />
