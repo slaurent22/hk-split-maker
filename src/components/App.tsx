@@ -18,6 +18,7 @@ interface AppState {
     splitOutput: string;
     categories?: Record<string, Array<CategoryDefinition>>;
     initialCategory: string;
+    alertBannerVisible: boolean;
 }
 export default class App extends Component<AppProps, AppState> {
 
@@ -31,6 +32,7 @@ export default class App extends Component<AppProps, AppState> {
             configInput: "",
             splitOutput: "",
             initialCategory: "",
+            alertBannerVisible: true,
         };
         this.inputEditor = React.createRef();
     }
@@ -47,11 +49,12 @@ export default class App extends Component<AppProps, AppState> {
         this.setState(newState);
     }
     public render(): ReactNode {
+        const { alertBannerVisible, } = this.state
         return (
             <div id="app">
-                <div className="alert-banner">
-                    <span className="close-ab" onClick={this.parentElement.style.display="none"}>&times;</span>
-                    Intestested in contributing or suggesting ideas and splits? Check out the <a href="https://github.com/slaurent22/hk-split-maker">Github Project Site!</a>
+                <div className="alert-banner" style={alertBannerVisible ? {} : { display: "none", }}>
+                    <span className="close-ab" onClick={this.handleClickCloseAlertBanner.bind(this)}>&times;</span>
+                    Intestested in contributing or suggesting ideas and splits? Check out the <a href="https://github.com/slaurent22/hk-split-maker" target="_blank">Github Project Site!</a>
                 </div>
                 <Header />
                 <Instructions />
@@ -101,6 +104,10 @@ export default class App extends Component<AppProps, AppState> {
                 </div>
             </div>
         );
+    }
+
+    private handleClickCloseAlertBanner() {
+        this.setState({ alertBannerVisible: false, });
     }
 
     private onConfigInputChange(value: string|undefined) {
