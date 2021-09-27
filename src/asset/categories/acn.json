@@ -21,7 +21,7 @@
         "Grimmchild",
         "NotchFogCanyon",
         "ShadeSoul",
-        "Flame1",
+        "Flame2",
         "ThornsOfAgony",
         "Flame1",
         "SoulEater",
@@ -56,10 +56,8 @@
         "ColosseumBronze": "%s [7]",
         "NotchGrimm": "%s [8]",
         "NotchSalubra4": "%s [11]",
-        "Flame1": [
-            "Crystal Peaks Flame",
-            "King's Pass Flame"
-        ]
+        "Flame2": "Crystal Peaks Flame",
+        "Flame1": "King's Pass Flame"
     },
     "ordered": true,
     "endTriggeringAutosplit": true,
