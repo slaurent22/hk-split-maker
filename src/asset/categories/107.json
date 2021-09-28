@@ -170,11 +170,16 @@
         "-HollowKnightDreamnail"
     ],
     "names": {
+        "GrubCrossroadsWall": "[1U] %s",
         "ElegantKeyShoptimised": "[1U] %s",
         "GrubRestingGroundsCrypts": "[1D] %s",
         "GlowingWomb": "[2D] %s",
         "DreamGate": "[3D] %s",
         "CycloneSlash": "[2D] %s",
+        "Flame1": [
+            "[2D] %s",
+            "%s"
+        ],
         "VesselFragment4": "{City Storerooms} %s",
         "Ore2": "{Crystal Peak} %s",
         "Grimmchild2": "{Greenpath} %s",
