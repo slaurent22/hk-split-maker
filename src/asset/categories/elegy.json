@@ -60,6 +60,13 @@
         "Collector",
         "GrubberflysElegy"
     ],
+    "names": {
+        "GrubCrossroadsGuarded": "[1D] %s",
+        "GrubCrystalPeaksMimics": "[1D] %s",
+        "GrubGreenpathMossKnight": "[2D] %s",
+        "Collector": "[2D] %s",
+        "GrubberflysElegy": "[2D] %s"
+    },
     "ordered": true,
     "endTriggeringAutosplit": true,
     "gameName": "Hollow Knight Category Extensions",
