@@ -1,0 +1,18 @@
+{
+    "splitIds": [
+        "VengeflyKingP",
+        "GruzMotherP",
+        "FalseKnightP",
+        "MassiveMossChargerP",
+        "Hornet1P",
+        "GorbP",
+        "DungDefenderP",
+        "SoulWarriorP",
+        "BroodingMawlekP",
+        "OroMatoNailBrosP"
+    ],
+    "ordered": true,
+    "endTriggeringAutosplit": true,
+    "gameName": "Hollow Knight",
+    "categoryName": "Pantheon of the Master"
+}

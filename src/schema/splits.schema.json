@@ -8,7 +8,14 @@
     "properties": {
         "names": {
             "additionalProperties": false,
-            "description": "Name overrides for the splits.",
+            "description": "Name overrides for the splits. Map each autosplit id to a string or an array of strings.",
+            "type": "object",
+            "properties": {
+            }
+        },
+        "icons": {
+            "additionalProperties": false,
+            "description": "Icon overrides for the splits. Map each autosplit id to a autosplit id or an array of autosplit ids.",
             "type": "object",
             "properties": {
             }
@@ -20,6 +27,14 @@
         "endTriggeringAutosplit": {
             "description": "Whether to end time at the last autosplit. Set this to false for full-game runs, where time ends on a final cutscene.",
             "type": "boolean"
+        },
+        "endingSplit": {
+            "description": "Info for the last split if it's a game-ending split rather than an autosplit",
+            "type": "object",
+            "properties": {
+                "name": "The name to appear in the LiveSplit UI",
+                "icon": "The autosplit name whose icon to use (e.g. RadianceBoss, HollowKnightBoss)"
+            }
         },
         "categoryName": {
             "description": "The category name on the associated speedrun.com board.",

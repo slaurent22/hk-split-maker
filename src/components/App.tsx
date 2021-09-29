@@ -18,6 +18,7 @@ interface AppState {
     splitOutput: string;
     categories?: Record<string, Array<CategoryDefinition>>;
     initialCategory: string;
+    alertBannerVisible: boolean;
 }
 export default class App extends Component<AppProps, AppState> {
 
@@ -31,6 +32,7 @@ export default class App extends Component<AppProps, AppState> {
             configInput: "",
             splitOutput: "",
             initialCategory: "",
+            alertBannerVisible: true,
         };
         this.inputEditor = React.createRef();
     }
@@ -39,16 +41,23 @@ export default class App extends Component<AppProps, AppState> {
         const hash = window.location.hash.substring(1);
         if (newState.categories) {
             const initialCategory = Object.values(newState.categories).flat().find(category => {
-                return category.fileName === hash;
+                return category.fileName.toLowerCase() === hash.toLowerCase();
             });
-            newState.initialCategory = initialCategory?.fileName || "aluba";
+            newState.initialCategory = initialCategory?.fileName || "4ms";
             await this.updateCategory(newState.initialCategory);
         }
         this.setState(newState);
     }
     public render(): ReactNode {
+        const { alertBannerVisible, } = this.state;
         return (
             <div id="app">
+                <div className="alert-banner" style={alertBannerVisible ? {} : { display: "none", }}>
+                    <span className="close-ab" onClick={this.handleClickCloseAlertBanner.bind(this)}>&times;</span>
+                    Interested in contributing or suggesting ideas and splits? Check out the&nbsp;
+                    <a href="https://github.com/slaurent22/hk-split-maker" target="_blank" rel="noopener noreferrer">
+                        GitHub Project Site!</a>
+                </div>
                 <Header />
                 <Instructions />
                 <div id="input-output">
@@ -97,6 +106,10 @@ export default class App extends Component<AppProps, AppState> {
                 </div>
             </div>
         );
+    }
+
+    private handleClickCloseAlertBanner() {
+        this.setState({ alertBannerVisible: false, });
     }
 
     private onConfigInputChange(value: string|undefined) {

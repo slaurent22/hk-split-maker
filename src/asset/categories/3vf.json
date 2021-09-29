@@ -1,0 +1,16 @@
+{
+    "splitIds": [
+        "VengefulSpirit",
+        "EnterGreenpath",
+        "MothwingCloak",
+        "MantisClaw",
+        "VesselFragment1",
+        "BlueLake",
+        "VesselFragment2",
+        "Vessel1"
+    ],
+    "ordered": true,
+    "endTriggeringAutosplit": true,
+    "gameName": "Hollow Knight Category Extensions",
+    "categoryName": "3 Vessel Fragments"
+}

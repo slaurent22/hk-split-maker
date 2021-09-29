@@ -111,7 +111,11 @@ const NEW_ID_MAP = {
     "Dreamer2": "Dreamer",
     "Dreamer3": "Dreamer",
     "Hegemol": "Herrah",
-    "ElegantKeyShoptimised": "ElegantKey"
+    "ElegantKeyShoptimised": "ElegantKey",
+    "SlySimpleKey": "SimpleKey",
+    "KilledOblobbles": "Oblobbles",
+    "ManualSplit": "Knight",
+    "AllUnbreakables": "UnbreakableStrength"
 };
 
 function getUrl(id, qualifier) {
@@ -137,6 +141,28 @@ function getUrl(id, qualifier) {
         return getUrl("CharmNotch", "Item");
     }
 
+    if (qualifier === "Item") {
+        switch (id) {
+            case "AllSeals": return getUrl("HallownestSeal", "Relic");
+            case "AllEggs":  return getUrl("RancidEgg", "Item");
+            case "mapDirtmouth":
+            case "mapCrossroads":
+            case "mapGreenpath":
+            case "mapFogCanyon":
+            case "mapRoyalGardens":
+            case "mapFungalWastes":
+            case "mapCity":
+            case "mapWaterways":
+            case "mapMines":
+            case "mapDeepnest":
+            case "mapCliffs":
+            case "mapOutskirts":
+            case "mapRestingGrounds":
+            case "mapAbyss":
+                return getUrl("Map", "Misc")
+        }
+    }
+
     if (qualifier === "Event") {
         switch (id) {
             case "PreGrimmShop":               return getUrl("TroupeMasterGrimm", "Boss");
@@ -158,6 +184,8 @@ function getUrl(id, qualifier) {
             case "BeastsDenTrapBench":         return getUrl("Bench", "Misc");
             case "PlayerDeath":                return getUrl("Shade", "Enemy");
             case "SlyShopFinished":            return getUrl("SlyRescued", "NPC");
+            case "AllBreakables":              return getUrl("FragileStrengthBroken", "Charm");
+            case "MetEmilitia":                return getUrl("Emilitia", "NPC");
         }
     }
 
@@ -185,7 +213,7 @@ function getUrl(id, qualifier) {
             case "AspidHunter":          return getUrl("AspidHunter", "Enemy");
             case "MossKnight":           return getUrl("MossKnight", "Enemy");
             case "MushroomBrawler":      return getUrl("ShrumalOgre", "Enemy");
-            case "Zote1":                return getUrl("Zote", "Enemy");
+            case "Zote1":                return getUrl("VengeflyKing", "Boss");
             case "Zote2":                return getUrl("Zote", "Enemy");
             case "ZoteKilled":           return getUrl("Zote", "Enemy");
             case "Aluba":                return getUrl("Aluba", "Enemy");
@@ -247,10 +275,17 @@ function getUrl(id, qualifier) {
             case "EnterSanctum":
             case "EnterSanctumWithShadeSoul":    return getUrl("Folly", "Enemy");
             case "WaterwaysEntry":               return getUrl("RoyalWaterways", "Area");
-            case "GodhomeBench":                 return getUrl("Godhome", "Area");
             case "TransClaw":                    return getUrl("MantisClaw", "Skill");
             case "TransGorgeousHusk":            return getUrl("GorgeousHusk", "Enemy");
             case "TransDescendingDark":          return getUrl("DescendingDark", "Skill");
+            case "CorniferAtHome":               return getUrl("Iselda", "Misc");
+            case "QueensGardensFrogsTrans":      return getUrl("QueensGardens", "Area");
+            case "QueensGardensPostArenaTransition": return getUrl("QueensGardens", "Area");
+            case "WhitePalaceEntry":             return getUrl("WhitePalace", "Area");
+            case "Pantheon1to4Entry":
+            case "Pantheon5Entry":
+            case "GodhomeBench":
+                return getUrl("Godhome", "Area");
         }
     }
 
@@ -268,6 +303,11 @@ function getUrl(id, qualifier) {
             case "GreyMournerSeerAscended": return getUrl("GreyMourner", "NPC");
             case "Lemm2": return getUrl("Lemm", "Misc");
             case "BrummFlame": return getUrl("FlameConsumed", "Misc");
+            case "givenGodseekerFlower":
+            case "givenOroFlower":
+            case "givenWhiteLadyFlower":
+            case "givenEmilitiaFlower":
+                return getUrl("DelicateFlower", "Item");
         }
     }
 

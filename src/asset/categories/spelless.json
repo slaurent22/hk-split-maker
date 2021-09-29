@@ -3,7 +3,7 @@
         "FuryOfTheFallen",
         "FalseKnight",
         "Longnail",
-        "Greenpath",
+        "EnterGreenpath",
         "MothwingCloak",
         "MegaMossCharger",
         "FragileStrength",
@@ -20,11 +20,10 @@
     ],
     "ordered": true,
     "endTriggeringAutosplit": false,
+    "endingSplit": {
+        "name": "Hollow Knight",
+        "icon": "HollowKnightBoss"
+    },
     "gameName": "Hollow Knight Category Extensions",
-    "categoryName": "Spelless",
-    "variables": {
-        "platform": "PC",
-        "patch": "1.5.75",
-        "glitch": "No Major Glitches"
-    }
+    "categoryName": "Spelless"
 }

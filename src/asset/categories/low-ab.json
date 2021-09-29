@@ -1,0 +1,21 @@
+{
+    "splitIds": [
+        "GruzMother",
+        "DreamNail",
+        "MantisClaw",
+        "Hegemol",
+        "BlackKnight",
+        "Lurien",
+        "CrystalHeart",
+        "Uumuu",
+        "Monomon"
+    ],
+    "ordered": true,
+    "endTriggeringAutosplit": false,
+    "endingSplit": {
+        "name": "Hollow Knight",
+        "icon": "HollowKnightBoss"
+    },
+    "gameName": "Hollow Knight Mods",
+    "categoryName": "Low% All Bindings"
+}

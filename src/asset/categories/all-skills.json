@@ -14,7 +14,7 @@
         "DescendingDark",
         "DreamNail",
         "Lurien",
-        "Abyss",
+        "BasinEntry",
         "MonarchWings",
         "KingsBrand",
         "CycloneSlash",
@@ -28,10 +28,10 @@
     ],
     "ordered": true,
     "endTriggeringAutosplit": false,
+    "endingSplit": {
+        "name": "Hollow Knight",
+        "icon": "HollowKnightBoss"
+    },
     "gameName": "Hollow Knight",
-    "categoryName": "All Skills",
-    "variables": {
-        "platform": "PC",
-        "patch": "1.2.2.1"
-    }
+    "categoryName": "All Skills"
 }

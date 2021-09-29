@@ -1,0 +1,29 @@
+{
+    "splitIds": [
+        "VengefulSpirit",
+        "Greenpath",
+        "MothwingCloak",
+        "MantisClaw",
+        "GruzMother",
+        "DreamNail",
+        "WatcherChandelier",
+        "BlackKnight",
+        "LumaflyLantern",
+        "CrystalHeart",
+        "Uumuu",
+        "DeepnestSpa",
+        "BeastsDenTrapBench",
+        "Hegemol"
+    ],
+    "ordered": true,
+    "endTriggeringAutosplit": false,
+    "endingSplit": {
+        "name": "Hollow Knight",
+        "icon": "HollowKnightBoss"
+    },
+    "gameName": "Hollow Knight",
+    "categoryName": "Any%",
+    "variables": {
+        "glitch": "Current Patch NMG"
+    }
+}

@@ -17,10 +17,10 @@
     ],
     "ordered": true,
     "endTriggeringAutosplit": false,
+    "endingSplit": {
+        "name": "Hollow Knight",
+        "icon": "HollowKnightBoss"
+    },
     "gameName": "Hollow Knight",
-    "categoryName": "Any%",
-    "variables": {
-        "platform": "PC",
-        "patch": "1.2.2.1"
-    }
+    "categoryName": "Any%"
 }

@@ -1,10 +1,11 @@
 body {
     background-color: #2f3136;
     color: rgb(220, 221, 222);
+    margin: 0;
 }
 
 #app {
-    padding: 10px 30px;
+    padding-bottom: 10px 30px;
 }
 
 h1,
@@ -83,6 +84,28 @@ ol {
 .hk-split-maker-monaco-editor .monaco-editor .margin,
 .hk-split-maker-monaco-editor .monaco-editor-background {
     background-color: #2f3136;
+}
+
+.alert-banner {
+    padding: 10px;
+    padding-left: 10%;
+    background-color: #010f1a;
+    color: white;
+    margin-bottom: 10px;
+}
+
+.close-ab {
+    margin-left: 10px;
+    margin-right: 1%;
+    color: white;
+    font-weight: bold;
+    float: right;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.close-ab:hover {
+    color: lightslategrey;
 }
 
 @media (max-width: 750px) {

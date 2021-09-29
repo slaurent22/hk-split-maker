@@ -1,11 +1,12 @@
 {
     "splitIds": [
         "VengefulSpirit",
-        "Greenpath",
+        "EnterGreenpath",
         "MothwingCloak",
         "MantisClaw",
         "BlueLake",
         "DreamNail",
+        "EnterSanctum",
         "DesolateDive",
         "StoreroomsStation",
         "ElderbugFlower"
@@ -13,10 +14,5 @@
     "ordered": true,
     "endTriggeringAutosplit": true,
     "gameName": "Hollow Knight Category Extensions",
-    "categoryName": "Elderbug%",
-    "variables": {
-        "platform": "PC",
-        "patch": "1.5.75",
-        "glitch": "No Major Glitches"
-    }
+    "categoryName": "Elderbug%"
 }

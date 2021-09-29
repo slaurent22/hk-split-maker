@@ -1,0 +1,17 @@
+{
+    "splitIds": [
+        "VengefulSpirit",
+        "EnterGreenpath",
+        "MothwingCloak",
+        "MantisClaw",
+        "BlueLake",
+        "GorgeousHusk",
+        "JonisBlessing",
+        "KingsBrand",
+        "LifebloodCore"
+    ],
+    "ordered": true,
+    "endTriggeringAutosplit": true,
+    "gameName": "Hollow Knight Category Extensions",
+    "categoryName": "Lifeblood Core%"
+}

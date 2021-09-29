@@ -1,0 +1,47 @@
+{
+    "splitIds": [
+        "VengefulSpirit",
+        "EnterGreenpath",
+        "MothwingCloak",
+        "BlueLake",
+        "DreamNail",
+        "ElderHuEssence",
+        "MantisClaw",
+        "SpiritGladeOpen",
+        "LumaflyLantern",
+        "CrystalHeart",
+        "GorbEssence",
+        "QueensStationStation",
+        "HowlingWraiths",
+        "NoEyesEssence",
+        "BrokenVessel",
+        "LostKinEssence",
+        "DreamGate",
+        "KingsBrand",
+        "AbyssShriek",
+        "ShadeCloak",
+        "MarkothEssence",
+        "Lurien",
+        "FailedChampionEssence",
+        "Monomon",
+        "MarmuEssence",
+        "TraitorLord",
+        "GalienEssence",
+        "Hegemol",
+        "WhitePalaceEntry",
+        "Kingsoul",
+        "VoidHeart",
+        "HollowKnightDreamnail"
+    ],
+    "ordered": true,
+    "endTriggeringAutosplit": false,
+    "endingSplit": {
+        "name": "Radiance",
+        "icon": "RadianceBoss"
+    },
+    "gameName": "Hollow Knight",
+    "categoryName": "True Ending",
+    "variables": {
+        "glitch": "Current Patch NMG"
+    }
+}

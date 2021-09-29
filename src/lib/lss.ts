@@ -5,8 +5,13 @@ import { getIconURLs, parseSplitsDefinitions } from "./splits";
 export interface Config {
     splitIds: Array<string>;
     names?: Record<string, string|Array<string>>;
+    icons?: Record<string, string|Array<string>>;
     ordered: true;
     endTriggeringAutosplit: true;
+    endingSplit?: {
+        name?: string;
+        icon?: string;
+    };
     categoryName: string;
     gameName: string;
     variables?: {
@@ -86,9 +91,11 @@ export async function createSplitsXml(config: Config): Promise<string> {
         splitIds,
         ordered,
         endTriggeringAutosplit,
+        endingSplit,
         categoryName,
         gameName,
         names,
+        icons,
     } = config;
 
     const splitDefinitions = parseSplitsDefinitions();
@@ -103,35 +110,34 @@ export async function createSplitsXml(config: Config): Promise<string> {
         }
         const currentSplitIdCount = splitIdCount.get(splitId) as number;
 
-        let rawId = splitId;
-        let manual = false;
+        let autosplitId = splitId;
         let subsplit = false;
+        let name = "";
         const manualSplitMatch = MANUAL_SPLIT_RE.exec(splitId);
         if (manualSplitMatch) {
-            const name = manualSplitMatch.groups?.name;
-            if (!name) {
+            const parsedName = manualSplitMatch.groups?.name;
+            if (!parsedName) {
                 throw new Error(`Failed to parse name out of "${splitId}"`);
             }
-            rawId = name;
-            manual = true;
+            autosplitId = "ManualSplit";
+            name = parsedName;
         }
 
-        const subSplitMatch = SUB_SPLIT_RE.exec(rawId);
+        const subSplitMatch = SUB_SPLIT_RE.exec(autosplitId);
         if (subSplitMatch) {
             if (!subSplitMatch.groups) {
                 throw new Error(`Failed to parse name out of "${splitId}"`);
             }
-            rawId = subSplitMatch.groups.name;
+            autosplitId = subSplitMatch.groups.name;
             subsplit = true;
         }
 
-        const splitDefinition = splitDefinitions.get(rawId);
-        if (!splitDefinition && !manual) {
-            throw new Error(`Failed to find a definition for split id ${rawId}`);
+        const splitDefinition = splitDefinitions.get(autosplitId);
+        if (!splitDefinition) {
+            throw new Error(`Failed to find a definition for split id ${autosplitId}`);
         }
 
-        let name = splitDefinition ? splitDefinition.name : rawId;
-        const nameOverride = names && names[splitId];
+        const nameOverride = names && names[autosplitId];
         if (nameOverride) {
             let nameTemplate = "";
             if (typeof nameOverride === "string") {
@@ -140,24 +146,45 @@ export async function createSplitsXml(config: Config): Promise<string> {
             else {
                 nameTemplate = nameOverride[currentSplitIdCount];
             }
-            name = nameTemplate.replace("%s", name);
+            if (nameTemplate) {
+                name = nameTemplate.replace("%s", splitDefinition.name);
+            }
+        }
+
+        if (!name) {
+            name = splitDefinition.name;
+        }
+
+        let iconId = autosplitId;
+        const iconOverride = icons && icons[autosplitId];
+        if (typeof iconOverride === "string") {
+            iconId = iconOverride;
+        }
+        else if (iconOverride?.length) {
+            iconId = iconOverride[currentSplitIdCount];
         }
 
         splitIdCount.set(splitId, 1 + currentSplitIdCount);
         return {
-            rawId,
-            manual,
+            autosplitId,
             subsplit,
             name,
+            iconId,
         };
     });
 
-    parsedSplitIds.forEach(({ rawId, }) => {
-        const url = allIconURLs.get(rawId);
+    parsedSplitIds.forEach(({ iconId, }) => {
+        const url = allIconURLs.get(iconId);
         if (url) {
             iconURLsToFetch.add(url);
         }
     });
+    if (!endTriggeringAutosplit && endingSplit?.icon) {
+        const url = allIconURLs.get(endingSplit.icon);
+        if (url) {
+            iconURLsToFetch.add(url);
+        }
+    }
 
     await Promise.all(
         [...iconURLsToFetch].map(async url => {
@@ -172,26 +199,32 @@ export async function createSplitsXml(config: Config): Promise<string> {
         })
     );
 
-    const segments = parsedSplitIds.map(({ rawId, subsplit, name, }) => {
-        const iconURL = allIconURLs.get(rawId);
+    const segments = parsedSplitIds.map(({ subsplit, name, iconId, }) => {
+        const iconURL = allIconURLs.get(iconId);
         let icon = "";
         if (iconURL) {
-            icon = liveSplitIconData.get(iconURL) || "";
+            icon = liveSplitIconData.get(iconURL) ?? "";
         }
         const namePrefix = subsplit ? "-" : "";
         return getSegmentNode(`${namePrefix}${name}`, icon);
     });
 
     if (!endTriggeringAutosplit) {
-        segments.push(getSegmentNode(categoryName));
+        const endingSplitName = endingSplit?.name ?? categoryName;
+        let icon = "";
+        if (endingSplit?.icon) {
+            const url = allIconURLs.get(endingSplit.icon);
+            if (url) {
+                icon = liveSplitIconData.get(url) ?? "";
+            }
+
+        }
+        segments.push(getSegmentNode(endingSplitName, icon));
     }
 
     const autosplits = parsedSplitIds
-        .filter(({ manual, }) => {
-            return !manual;
-        })
-        .map(({ rawId, }) => {
-            return { Split: rawId, };
+        .map(({ autosplitId, }) => {
+            return { Split: autosplitId, };
         });
 
     return xml({

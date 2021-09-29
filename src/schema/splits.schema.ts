@@ -1,9 +1,9 @@
 import SplitConfigSchemaSource from "../schema/splits.schema.json";
 import { parseSplitsDefinitions } from "../lib/splits";
 
-const Splits = [...parseSplitsDefinitions().values()];
+const SPLITS = [...parseSplitsDefinitions().values()];
 
-const splitsSchema = Splits.map(({ description: title, tooltip: description, id, }) => {
+const SPLITS_SCHEMA = SPLITS.map(({ description: title, tooltip: description, id, }) => {
     return {
         title,
         description,
@@ -11,7 +11,7 @@ const splitsSchema = Splits.map(({ description: title, tooltip: description, id,
     };
 });
 
-const subsplitsSchema = Splits.map(({ description: title, tooltip: description, id, }) => {
+const SUBSPLITS_SCHEMA = SPLITS.map(({ description: title, tooltip: description, id, }) => {
     return {
         title,
         description: `(subsplit) ${description}`,
@@ -19,14 +19,14 @@ const subsplitsSchema = Splits.map(({ description: title, tooltip: description, 
     };
 });
 
-const manualSplit = {
+const MANUAL_SPLIT_SCHEMA = {
     "title": "Manual Split",
     "description": "A mid-run manual split",
     "type": "string",
     "pattern": "^%.+",
 };
 
-type SplitIdItem = typeof manualSplit | {
+type SplitIdItem = typeof MANUAL_SPLIT_SCHEMA | {
     title: string;
     description: string;
     const: string;
@@ -36,49 +36,45 @@ const items = SplitConfigSchemaSource.properties.splitIds.items as {
     oneOf: Array<SplitIdItem>;
 };
 
-items.oneOf = items.oneOf.concat(splitsSchema).concat(subsplitsSchema).concat(manualSplit);
+items.oneOf = items.oneOf.concat(SPLITS_SCHEMA).concat(SUBSPLITS_SCHEMA).concat(MANUAL_SPLIT_SCHEMA);
 
-console.log(items.oneOf);
-
-
-interface NamePropItem {
+const overrideSchemaPropItem = (description: string) => ({
     oneOf: [
         {
-            type: "string";
-            description: string;
+            type: "string",
+            description,
         },
         {
-            type: "array";
-            description: string;
+            type: "array",
+            description,
             items: {
-                type: "string";
-            };
-        }
-    ];
-}
-
-const namesProperties: Record<string, NamePropItem> = {};
-for (const split of splitsSchema) {
-    namesProperties[split.const] = {
-        oneOf: [
-            {
                 type: "string",
-                description: split.description,
             },
-            {
-                type: "array",
-                description: split.description,
-                items: {
-                    type: "string",
-                },
-            }
-        ],
-    }
-    ;
+        }
+    ],
+});
+
+const SPLITID_OR_ARRAY_THEREOF_SCHEMA = {
+    oneOf: (SPLITS_SCHEMA as Array<unknown>).concat([
+        {
+            type: "array",
+            items: {
+                oneOf: SPLITS_SCHEMA,
+            },
+        }
+    ]),
+};
+
+const namesProperties: Record<string, unknown> = {};
+const iconsProperties: Record<string, unknown> = {};
+for (const split of SPLITS_SCHEMA) {
+    namesProperties[split.const] = overrideSchemaPropItem(split.description);
+    iconsProperties[split.const] = SPLITID_OR_ARRAY_THEREOF_SCHEMA;
 }
 const names = SplitConfigSchemaSource.properties.names;
 names.properties = namesProperties;
 
-console.log(names);
+const icons = SplitConfigSchemaSource.properties.icons;
+icons.properties = iconsProperties;
 
 export default SplitConfigSchemaSource;

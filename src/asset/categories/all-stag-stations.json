@@ -1,0 +1,25 @@
+{
+    "splitIds": [
+        "CrossroadsStation",
+        "VengefulSpirit",
+        "GreenpathStation",
+        "MothwingCloak",
+        "MantisClaw",
+        "QueensStationStation",
+        "GruzMother",
+        "DreamNail",
+        "GorgeousHusk",
+        "Lemm2",
+        "StoreroomsStation",
+        "TollBenchBasin",
+        "DeepnestSpa",
+        "DeepnestStation",
+        "QueensGardens",
+        "QueensGardensStation",
+        "StagnestStation"
+    ],
+    "ordered": true,
+    "endTriggeringAutosplit": true,
+    "gameName": "Hollow Knight Category Extensions",
+    "categoryName": "All Stag Stations"
+}

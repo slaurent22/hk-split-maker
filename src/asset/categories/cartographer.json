@@ -1,0 +1,29 @@
+{
+    "splitIds": [
+        "VengefulSpirit",
+        "EnterGreenpath",
+        "MothwingCloak",
+        "MantisClaw",
+        "mapCliffs",
+        "BlueLake",
+        "DreamNail",
+        "GorgeousHusk",
+        "mapCity",
+        "LumaflyLantern",
+        "CrystalHeart",
+        "mapWaterways",
+        "mapOutskirts",
+        "mapAbyss",
+        "mapFogCanyon",
+        "mapRoyalGardens",
+        "mapDeepnest",
+        "CorniferAtHome"
+    ],
+    "ordered": true,
+    "endTriggeringAutosplit": true,
+    "gameName": "Hollow Knight Category Extensions",
+    "categoryName": "Cartographer",
+    "variables": {
+        "glitch": "Current Patch NMG"
+    }
+}
