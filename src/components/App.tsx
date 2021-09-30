@@ -17,7 +17,7 @@ interface AppState {
     configInput: string;
     splitOutput: string;
     categories?: Record<string, Array<CategoryDefinition>>;
-    initialCategory: string;
+    initialCategory: CategoryDefinition;
     alertBannerVisible: boolean;
 }
 export default class App extends Component<AppProps, AppState> {
@@ -31,19 +31,27 @@ export default class App extends Component<AppProps, AppState> {
         this.state = {
             configInput: "",
             splitOutput: "",
-            initialCategory: "",
+            initialCategory: {
+                "fileName": "4ms",
+                "displayName": "4 Mask Shards",
+            },
             alertBannerVisible: true,
         };
         this.inputEditor = React.createRef();
     }
     public async componentDidMount(): Promise<void> {
-        const newState = { categories: await getCategoryDirectory(), initialCategory: "", };
+        const newState = {
+            categories: await getCategoryDirectory(),
+            initialCategory: this.state.initialCategory,
+        };
         const hash = window.location.hash.substring(1);
         if (newState.categories) {
             const initialCategory = Object.values(newState.categories).flat().find(category => {
                 return category.fileName.toLowerCase() === hash.toLowerCase();
             });
-            newState.initialCategory = initialCategory?.fileName || "4ms";
+            if (initialCategory) {
+                newState.initialCategory = initialCategory;
+            }
             await this.updateCategory(newState.initialCategory);
         }
         this.setState(newState);
@@ -74,7 +82,7 @@ export default class App extends Component<AppProps, AppState> {
                                     id="categories"
                                     onChange={this.onCategorySelect.bind(this)}
                                     data={this.state.categories}
-                                    initial={this.state.initialCategory}
+                                    defaultValue={this.state.initialCategory}
                                 />}
                                 <ArrowButton
                                     text="Generate"
@@ -124,21 +132,20 @@ export default class App extends Component<AppProps, AppState> {
         });
     }
 
-    private async updateCategory(name: string) {
-        if (name && this.inputEditor.current) {
-            const editorContent = await getCategory(name);
+    private async updateCategory(category: CategoryDefinition) {
+        if (category.fileName && this.inputEditor.current) {
+            const editorContent = await getCategory(category.fileName);
             this.inputEditor.current.setContent(editorContent);
             this.onConfigInputChange(editorContent);
             if (this.categoryHasChanged) {
-                window.location.hash = name;
+                window.location.hash = category.fileName;
             }
             this.categoryHasChanged = true;
         }
     }
-    private async onCategorySelect() {
-        const categorySelect = document.getElementById("categories") as HTMLInputElement;
-        if (categorySelect.value) {
-            await this.updateCategory(categorySelect.value);
+    private async onCategorySelect(newValue: CategoryDefinition|null) {
+        if (newValue) {
+            await this.updateCategory(newValue);
         }
     }
 
