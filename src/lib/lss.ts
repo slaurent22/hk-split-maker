@@ -53,16 +53,14 @@ function getVariableNode(name: string, value: string): xml.XmlObject {
 }
 
 function getVariablesNode(config: Config): xml.XmlObject {
-    const glitchAttrName = `${config.categoryName} Glitch`;
-    const glitch = config.variables?.glitch || "No Major Glitches";
-    const glitchVarNode = getVariableNode(glitchAttrName, glitch);
+    const variablesNode = { Variables: [] as Array<xml.XmlObject>, };
 
-    const variablesNode = {
-        Variables: [
-            glitchVarNode
-        ],
-    };
-
+    if (config.variables?.glitch) {
+        const glitchAttrName = `${config.categoryName} Glitch`;
+        variablesNode.Variables.push(
+            getVariableNode(glitchAttrName, config.variables.glitch)
+        );
+    }
     if (config.variables?.patch) {
         variablesNode.Variables.push(
             getVariableNode("Patch", config.variables.patch)
