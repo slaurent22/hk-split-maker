@@ -193,6 +193,7 @@ export default class App extends Component<AppProps, AppState> {
             // Make file name compatible:
             splitName = splitName
                 .toLowerCase()
+                .replace(/['"]/g, "") // remove ' and "
                 .replace(/[^a-z0-9]/gi, "_")  // replace non-alphanum with _
                 .replace(/^_+|_+$/g, "")  // remove outer _
                 .replace(/^_+|_+$/g, "")  // remove outer _
