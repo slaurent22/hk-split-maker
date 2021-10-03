@@ -1,4 +1,5 @@
 {
+    "categoryName": "4 Mask Shards",
     "splitIds": [
         "KingsPass",
         "Grub1",
@@ -14,6 +15,5 @@
     ],
     "ordered": true,
     "endTriggeringAutosplit": true,
-    "gameName": "Hollow Knight Category Extensions",
-    "categoryName": "4 Mask Shards"
+    "gameName": "Hollow Knight Category Extensions"
 }

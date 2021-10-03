@@ -1,4 +1,5 @@
 {
+    "categoryName": "All Skills",
     "splitIds": [
         "VengefulSpirit",
         "Greenpath",
@@ -33,7 +34,6 @@
         "icon": "HollowKnightBoss"
     },
     "gameName": "Hollow Knight",
-    "categoryName": "All Skills",
     "variables": {
         "glitch": "Current Patch NMG"
     }

@@ -1,4 +1,5 @@
 {
+    "categoryName": "Pantheon of the Master",
     "splitIds": [
         "VengeflyKingP",
         "GruzMotherP",
@@ -13,6 +14,5 @@
     ],
     "ordered": true,
     "endTriggeringAutosplit": true,
-    "gameName": "Hollow Knight",
-    "categoryName": "Pantheon of the Master"
+    "gameName": "Hollow Knight"
 }

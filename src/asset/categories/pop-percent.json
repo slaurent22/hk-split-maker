@@ -1,4 +1,5 @@
 {
+    "categoryName": "PoP%",
     "splitIds": [
         "VengefulSpirit",
         "Greenpath",
@@ -31,7 +32,6 @@
     "ordered": true,
     "endTriggeringAutosplit": true,
     "gameName": "Hollow Knight Category Extensions",
-    "categoryName": "PoP%",
     "variables": {
         "glitch": "Current Patch NMG"
     }

@@ -1,4 +1,5 @@
 {
+    "categoryName": "Marissa Audience",
     "splitIds": [
         "VengefulSpirit",
         "MothwingCloak",
@@ -14,6 +15,5 @@
     ],
     "ordered": true,
     "endTriggeringAutosplit": false,
-    "gameName": "Hollow Knight Category Extensions",
-    "categoryName": "Marissa Audience"
+    "gameName": "Hollow Knight Category Extensions"
 }

@@ -1,4 +1,5 @@
 {
+    "categoryName": "Forgotten Corners AS TE",
     "splitIds": [
         "CrystalHeart",
         "VengefulSpirit",
@@ -34,6 +35,5 @@
         "name": "Radiance",
         "icon": "RadianceBoss"
     },
-    "gameName": "Hollow Knight Mods",
-    "categoryName": "Forgotten Corners AS TE"
+    "gameName": "Hollow Knight Mods"
 }

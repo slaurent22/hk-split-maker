@@ -1,4 +1,5 @@
 {
+    "categoryName": "Enraged Guardian%",
     "splitIds": [
         "VengefulSpirit",
         "EnterGreenpath",
@@ -12,6 +13,5 @@
     ],
     "ordered": true,
     "endTriggeringAutosplit": true,
-    "gameName": "Hollow Knight Category Extensions",
-    "categoryName": "Enraged Guardian%"
+    "gameName": "Hollow Knight Category Extensions"
 }

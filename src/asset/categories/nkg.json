@@ -1,4 +1,5 @@
 {
+    "categoryName": "NKG%",
     "splitIds": [
         "VengefulSpirit",
         "EnterGreenpath",
@@ -31,6 +32,5 @@
     },
     "ordered": true,
     "endTriggeringAutosplit": true,
-    "gameName": "Hollow Knight Category Extensions",
-    "categoryName": "NKG%"
+    "gameName": "Hollow Knight Category Extensions"
 }

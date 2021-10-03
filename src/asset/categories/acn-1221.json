@@ -1,4 +1,5 @@
 {
+    "categoryName": "All Charm Notches",
     "splitIds": [
         "FuryOfTheFallen",
         "VengefulSpirit",
@@ -46,6 +47,5 @@
     ],
     "ordered": true,
     "endTriggeringAutosplit": true,
-    "gameName": "Hollow Knight Category Extensions",
-    "categoryName": "All Charm Notches"
+    "gameName": "Hollow Knight Category Extensions"
 }

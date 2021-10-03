@@ -1,4 +1,5 @@
 {
+    "categoryName": "All Geo Rocks",
     "splitIds": [
         "VengefulSpirit",
         "EnterGreenpath",
@@ -41,6 +42,5 @@
     },
     "ordered": true,
     "endTriggeringAutosplit": true,
-    "gameName": "Hollow Knight Mods",
-    "categoryName": "All Geo Rocks"
+    "gameName": "Hollow Knight Mods"
 }

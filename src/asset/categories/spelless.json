@@ -1,4 +1,5 @@
 {
+    "categoryName": "Spelless",
     "splitIds": [
         "FuryOfTheFallen",
         "FalseKnight",
@@ -25,6 +26,5 @@
         "name": "Hollow Knight",
         "icon": "HollowKnightBoss"
     },
-    "gameName": "Hollow Knight Category Extensions",
-    "categoryName": "Spelless"
+    "gameName": "Hollow Knight Category Extensions"
 }

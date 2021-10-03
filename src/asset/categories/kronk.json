@@ -1,4 +1,5 @@
 {
+    "categoryName": "Kronk%",
     "splitIds": [
         "VengefulSpirit",
         "EnterGreenpath",
@@ -64,6 +65,5 @@
     },
     "ordered": false,
     "endTriggeringAutosplit": true,
-    "gameName": "Hollow Knight Mods",
-    "categoryName": "Kronk%"
+    "gameName": "Hollow Knight Mods"
 }

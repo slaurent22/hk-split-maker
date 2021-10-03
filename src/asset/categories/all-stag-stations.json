@@ -1,4 +1,5 @@
 {
+    "categoryName": "All Stag Stations",
     "splitIds": [
         "CrossroadsStation",
         "VengefulSpirit",
@@ -20,6 +21,5 @@
     ],
     "ordered": true,
     "endTriggeringAutosplit": true,
-    "gameName": "Hollow Knight Category Extensions",
-    "categoryName": "All Stag Stations"
+    "gameName": "Hollow Knight Category Extensions"
 }

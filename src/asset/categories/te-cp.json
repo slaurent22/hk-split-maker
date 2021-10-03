@@ -1,4 +1,5 @@
 {
+    "categoryName": "True Ending",
     "splitIds": [
         "VengefulSpirit",
         "EnterGreenpath",
@@ -40,7 +41,6 @@
         "icon": "RadianceBoss"
     },
     "gameName": "Hollow Knight",
-    "categoryName": "True Ending",
     "variables": {
         "glitch": "Current Patch NMG"
     }

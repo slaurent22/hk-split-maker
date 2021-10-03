@@ -1,4 +1,5 @@
 {
+    "categoryName": "EVERY AUTOSPLIT",
     "splitIds": [
         "AbyssShriek",
         "CrystalHeart",
@@ -508,7 +509,6 @@
     "ordered": true,
     "endTriggeringAutosplit": false,
     "gameName": "Hollow Knight Category Extensions",
-    "categoryName": "EVERY AUTOSPLIT",
     "variables": {
         "platform": "PC",
         "patch": "1.5.75"

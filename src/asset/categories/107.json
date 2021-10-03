@@ -1,4 +1,5 @@
 {
+    "categoryName": "107% AB",
     "splitIds": [
         "-FuryOfTheFallen",
         "VengefulSpirit",
@@ -208,6 +209,5 @@
         "name": "{Dream No More} The Radiance",
         "icon": "RadianceBoss"
     },
-    "gameName": "Hollow Knight",
-    "categoryName": "107% AB"
+    "gameName": "Hollow Knight"
 }

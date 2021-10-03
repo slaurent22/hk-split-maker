@@ -1,4 +1,5 @@
 {
+    "categoryName": "4 Mask Shards 0 Geo",
     "splitIds": [
         "Dirtmouth",
         "Grub1",
@@ -16,6 +17,5 @@
     ],
     "ordered": true,
     "endTriggeringAutosplit": true,
-    "gameName": "Hollow Knight Category Extensions",
-    "categoryName": "4 Mask Shards 0 Geo"
+    "gameName": "Hollow Knight Category Extensions"
 }

@@ -1,4 +1,5 @@
 {
+    "categoryName": "112% APB",
     "splitIds": [
         "FuryOfTheFallen",
         "VengefulSpirit",
@@ -128,6 +129,5 @@
         "name": "Embrace the Void",
         "icon": "RadianceBoss"
     },
-    "gameName": "Hollow Knight",
-    "categoryName": "112% APB"
+    "gameName": "Hollow Knight"
 }

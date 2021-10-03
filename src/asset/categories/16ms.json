@@ -1,4 +1,5 @@
 {
+    "categoryName": "16 Mask Shards",
     "splitIds": [
         "FalseKnight",
         "EnterGreenpath",
@@ -48,6 +49,5 @@
     ],
     "ordered": true,
     "endTriggeringAutosplit": true,
-    "gameName": "Hollow Knight Category Extensions",
-    "categoryName": "16 Mask Shards"
+    "gameName": "Hollow Knight Category Extensions"
 }

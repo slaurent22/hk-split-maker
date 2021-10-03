@@ -1,4 +1,5 @@
 {
+    "categoryName": "White Palace",
     "splitIds": [
         "WhitePalaceOrb1",
         "WhitePalaceOrb3",
@@ -8,6 +9,5 @@
     ],
     "ordered": true,
     "endTriggeringAutosplit": true,
-    "gameName": "Hollow Knight",
-    "categoryName": "White Palace"
+    "gameName": "Hollow Knight"
 }

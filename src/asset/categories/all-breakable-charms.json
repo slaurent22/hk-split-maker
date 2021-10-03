@@ -1,4 +1,5 @@
 {
+    "categoryName": "All Breakable Charms",
     "splitIds": [
         "FuryOfTheFallen",
         "VengefulSpirit",
@@ -11,6 +12,5 @@
     ],
     "ordered": true,
     "endTriggeringAutosplit": true,
-    "gameName": "Hollow Knight Category Extensions",
-    "categoryName": "All Breakable Charms"
+    "gameName": "Hollow Knight Category Extensions"
 }

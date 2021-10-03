@@ -1,4 +1,5 @@
 {
+    "categoryName": "Pantheon of Hallownest",
     "splitIds": [
         "VengeflyKingP",
         "GruzMotherP",
@@ -48,6 +49,5 @@
         "name": "Absolute Radiance",
         "icon": "RadianceBoss"
     },
-    "gameName": "Hollow Knight",
-    "categoryName": "Pantheon of Hallownest"
+    "gameName": "Hollow Knight"
 }

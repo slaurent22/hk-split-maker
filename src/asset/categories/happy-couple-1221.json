@@ -1,4 +1,5 @@
 {
+    "categoryName": "Happy Couple",
     "splitIds": [
         "VengefulSpirit",
         "EnterGreenpath",
@@ -63,7 +64,6 @@
     "ordered": false,
     "endTriggeringAutosplit": true,
     "gameName": "Hollow Knight Category Extensions",
-    "categoryName": "Happy Couple",
     "variables": {
         "glitch": "No Major Glitches"
     }

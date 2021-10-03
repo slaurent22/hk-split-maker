@@ -1,4 +1,5 @@
 {
+    "categoryName": "Grass%",
     "splitIds": [
         "Dirtmouth",
         "AspidHunter",
@@ -58,6 +59,5 @@
         "name": "All Grass",
         "icon": "TreeCity"
     },
-    "gameName": "Hollow Knight Mods",
-    "categoryName": "Grass%"
+    "gameName": "Hollow Knight Mods"
 }

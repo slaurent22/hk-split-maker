@@ -1,4 +1,5 @@
 {
+    "categoryName": "Fool%",
     "splitIds": [
         "VengefulSpirit",
         "EnterGreenpath",
@@ -19,6 +20,5 @@
     ],
     "ordered": true,
     "endTriggeringAutosplit": true,
-    "gameName": "Hollow Knight Category Extensions",
-    "categoryName": "Fool%"
+    "gameName": "Hollow Knight Category Extensions"
 }

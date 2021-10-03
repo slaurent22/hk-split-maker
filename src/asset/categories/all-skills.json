@@ -1,4 +1,5 @@
 {
+    "categoryName": "All Skills",
     "splitIds": [
         "VengefulSpirit",
         "Greenpath",
@@ -32,6 +33,5 @@
         "name": "Hollow Knight",
         "icon": "HollowKnightBoss"
     },
-    "gameName": "Hollow Knight",
-    "categoryName": "All Skills"
+    "gameName": "Hollow Knight"
 }

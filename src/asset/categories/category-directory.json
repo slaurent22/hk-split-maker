@@ -1,49 +1,49 @@
 {
     "Hollow Knight": [
-      {
-        "fileName": "112",
-        "displayName": "112% APB"
-      },
-      {
-        "fileName": "107",
-        "displayName": "107% AB"
-      },
-      {
-        "fileName": "106",
-        "displayName": "106% TE"
-      },
-      {
-        "fileName": "all-skills",
-        "displayName": "All Skills"
-      },
-      {
-        "fileName": "all-skills-cp",
-        "displayName": "All Skills (Current Patch NMG)"
-      },
-      {
-        "fileName": "any",
-        "displayName": "Any%"
-      },
-      {
-        "fileName": "any-cp-spore",
-        "displayName": "Any% (1.4.3.2) w/ Spore Shroom"
-      },
-      {
-        "fileName": "any-ss",
-        "displayName": "Any% Steel Soul"
-      },
-      {
-        "fileName": "low",
-        "displayName": "Low%"
-      },
-      {
-        "fileName": "te",
-        "displayName": "True Ending"
-      },
-      {
-        "fileName": "te-cp",
-        "displayName": "True Ending (1.4+ Shriek)"
-      }
+        {
+            "fileName": "112",
+            "displayName": "112% APB"
+        },
+        {
+            "fileName": "107",
+            "displayName": "107% AB"
+        },
+        {
+            "fileName": "106",
+            "displayName": "106% TE"
+        },
+        {
+            "fileName": "all-skills",
+            "displayName": "All Skills"
+        },
+        {
+            "fileName": "all-skills-cp",
+            "displayName": "All Skills (Current Patch NMG)"
+        },
+        {
+            "fileName": "any",
+            "displayName": "Any%"
+        },
+        {
+            "fileName": "any-cp-spore",
+            "displayName": "Any% (1.4.3.2) w/ Spore Shroom"
+        },
+        {
+            "fileName": "any-ss",
+            "displayName": "Any% Steel Soul"
+        },
+        {
+            "fileName": "low",
+            "displayName": "Low%"
+        },
+        {
+            "fileName": "te",
+            "displayName": "True Ending"
+        },
+        {
+            "fileName": "te-cp",
+            "displayName": "True Ending (1.4+ Shriek)"
+        }
     ],
     "Hollow Knight: Individual Level": [
         {
