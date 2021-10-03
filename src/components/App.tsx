@@ -100,11 +100,13 @@ export default class App extends Component<AppProps, AppState> {
                     <div id="output-section" className="side">
                         <h2>Output Splits File</h2>
                         <div className="output-container">
-                            <ArrowButton
-                                id="download-button"
-                                text="Download"
-                                onClick={this.onDownload.bind(this)}
-                            />
+                            <div className="row">
+                                <ArrowButton
+                                    id="download-button"
+                                    text="Download"
+                                    onClick={this.onDownload.bind(this)}
+                                />
+                            </div>
                             <SplitOutputEditor
                                 defaultValue={this.state.splitOutput}
                                 onChange={this.onSplitOutputChange.bind(this)}
