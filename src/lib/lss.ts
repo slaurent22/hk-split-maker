@@ -103,11 +103,6 @@ export async function createSplitsXml(config: Config): Promise<string> {
 
     const splitIdCount = new Map<string, number>();
     const parsedSplitIds = splitIds.map(splitId => {
-        if (!splitIdCount.has(splitId)) {
-            splitIdCount.set(splitId, 0);
-        }
-        const currentSplitIdCount = splitIdCount.get(splitId) as number;
-
         let autosplitId = splitId;
         let subsplit = false;
         let name = "";
@@ -134,6 +129,11 @@ export async function createSplitsXml(config: Config): Promise<string> {
         if (!splitDefinition) {
             throw new Error(`Failed to find a definition for split id ${autosplitId}`);
         }
+
+        if (!splitIdCount.has(autosplitId)) {
+            splitIdCount.set(autosplitId, 0);
+        }
+        const currentSplitIdCount = splitIdCount.get(autosplitId) as number;
 
         const nameOverride = names && names[autosplitId];
         if (nameOverride) {
@@ -162,7 +162,7 @@ export async function createSplitsXml(config: Config): Promise<string> {
             iconId = iconOverride[currentSplitIdCount];
         }
 
-        splitIdCount.set(splitId, 1 + currentSplitIdCount);
+        splitIdCount.set(autosplitId, 1 + currentSplitIdCount);
         return {
             autosplitId,
             subsplit,
