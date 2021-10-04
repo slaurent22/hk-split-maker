@@ -79,6 +79,16 @@
             "displayName": "White Palace (1.0.0.6)"
         }
     ],
+    "Hollow Knight: Glitched": [
+        {
+            "fileName": "any-ag",
+            "displayName": "Any% (All Glitches)"
+        },
+        {
+            "fileName": "te-ag",
+            "displayName": "True Ending (All Glitches)"
+        }
+    ],
     "Hollow Knight Mods": [
         {
             "fileName": "all-geo-rocks",

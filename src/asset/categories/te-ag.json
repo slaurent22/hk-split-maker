@@ -1,0 +1,28 @@
+{
+    "categoryName": "True Ending",
+    "splitIds": [
+        "KingsPass",
+        "QueensGardensEntry",
+        "Dreamer2",
+        "Dreamer3",
+        "HollowKnightDreamnail"
+    ],
+    "names": {
+        "Dreamer2": "Herrah",
+        "Dreamer3": "Lurien"
+    },
+    "icons": {
+        "Dreamer2": "Hegemol",
+        "Dreamer3": "Lurien"
+    },
+    "ordered": true,
+    "endTriggeringAutosplit": false,
+    "endingSplit": {
+        "name": "Radiance",
+        "icon": "RadianceBoss"
+    },
+    "gameName": "Hollow Knight",
+    "variables": {
+        "glitch": "All Glitches"
+    }
+}
