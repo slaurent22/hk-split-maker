@@ -105,6 +105,7 @@ export default class App extends Component<AppProps, AppState> {
                                     id="download-button"
                                     text="Download"
                                     onClick={this.onDownload.bind(this)}
+                                    disabled={this.state.splitOutput.length === 0}
                                 />
                             </div>
                             <SplitOutputEditor

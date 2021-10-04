@@ -6,18 +6,21 @@ interface Props {
     id: string;
     onClick: () => void;
     text: string;
+    disabled?: boolean;
 }
 
 const ArrowButton: React.FC<Props> = ({
     id,
     onClick,
     text,
+    disabled,
 }: Props) => {
     return (
         <button
             className="arrow-button"
             onClick={onClick}
             id={id}
+            disabled={disabled ?? false}
         >
             <img
                 src={arrow}
