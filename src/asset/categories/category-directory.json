@@ -43,6 +43,10 @@
         {
             "fileName": "te-cp",
             "displayName": "True Ending (1.4+ Shriek)"
+        },
+        {
+            "fileName": "godhome-ending",
+            "displayName": "Godhome Ending"
         }
     ],
     "Hollow Knight: Individual Level": [
