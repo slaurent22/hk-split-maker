@@ -50,6 +50,9 @@ function getName(description: string): string {
                 case "Waterways Manhole": {
                     return `Enter ${name}`;
                 }
+                case "Queen's Garden - QGA/Mound Entry": {
+                    return "Enter Queen's Gardens";
+                }
                 default: break;
             }
             break;
