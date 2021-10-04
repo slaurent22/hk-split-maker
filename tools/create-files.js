@@ -56,11 +56,11 @@ function parseSplitsDefinitions() {
 const Splits = [...parseSplitsDefinitions().values()];
 
 const every = {
+    "categoryName": "EVERY AUTOSPLIT",
     "splitIds": Splits.map(({ id }) => id),
     "ordered": true,
     "endTriggeringAutosplit": false,
     "gameName": "Hollow Knight Category Extensions",
-    "categoryName": "EVERY AUTOSPLIT",
     "variables": {
         "platform": "PC",
         "patch": "1.5.75"
@@ -68,7 +68,7 @@ const every = {
 }
 
 function createEvery() {
-    const output = JSON.stringify(every, null, 4);
+    const output = JSON.stringify(every, null, 4) + "\n";
     writeFileSync(FILE.EVERY, output);
 }
 
@@ -98,7 +98,6 @@ const NEW_ID_MAP = {
     "CrystalGuardian2": "CrystalGuardian1",
     "EnragedGuardian": "CrystalGuardian1",
     "GreyPrince": "GreyPrinceZote",
-    "Sly": "SlyNailsage",
     "Hornet2": "Hornet1",
     "FailedKnight": "FalseKnight",
     "FailedChampion": "FalseKnight",
@@ -134,6 +133,11 @@ function getUrl(id, qualifier) {
         const match = id.match(/(?<name>.+)P/);
         if (match) {
             return getUrl(match.groups.name, "Boss");
+        }
+    }
+    if (qualifier === "Boss") {
+        switch (id) {
+            case "Sly": return getUrl("SlyNailsage", "Boss");
         }
     }
 
@@ -183,7 +187,7 @@ function getUrl(id, qualifier) {
             case "SpiritGladeOpen":            return getUrl("Attunement", "Achievement");
             case "BeastsDenTrapBench":         return getUrl("Bench", "Misc");
             case "PlayerDeath":                return getUrl("Shade", "Enemy");
-            case "SlyShopFinished":            return getUrl("SlyRescued", "NPC");
+            case "SlyShopFinished":            return getUrl("Sly", "Misc");
             case "AllBreakables":              return getUrl("FragileStrengthBroken", "Charm");
             case "MetEmilitia":                return getUrl("Emilitia", "NPC");
         }

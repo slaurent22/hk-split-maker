@@ -165,7 +165,7 @@ import Dreamer1 from "./Dreamer/Dreamer.png";
 import Dreamer2 from "./Dreamer/Dreamer.png";
 import Dreamer3 from "./Dreamer/Dreamer.png";
 import PreGrimmShop from "./Boss/TroupeMasterGrimm.png";
-import SlyShopFinished from "./NPC/SlyRescued.png";
+import SlyShopFinished from "./Misc/Sly.png";
 import CanOvercharm from "./Achievement/Charmed.png";
 import UnchainedHollowKnight from "./Boss/HollowKnightBoss.png";
 import WatcherChandelier from "./Misc/WatcherChandelier.png";
