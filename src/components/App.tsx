@@ -195,6 +195,17 @@ export default class App extends Component<AppProps, AppState> {
         });
     }
 
+    private buildSplitsFileName(splitsConfig: Config) {
+        const filename = (splitsConfig?.categoryName || "splits")
+            .toLowerCase() // Make file name compatible:
+            .replace(/['"]/g, "") // remove ' and "
+            .replace(/[^a-z0-9]/gi, "_")  // replace non-alphanum with _
+            .replace(/^_+|_+$/g, "")  // remove outer _
+            .replace(/^_+|_+$/g, "")  // remove outer _
+            .replace(/_{2,}/g, "_");  // join multiple _
+        return filename;
+    }
+
     private onDownload(): void {
         const output = this.state.splitOutput;
         const outBlob = new Blob([output]);
@@ -202,18 +213,9 @@ export default class App extends Component<AppProps, AppState> {
         // Guess a good file name.
         // Can be inaccurate if a new config has been entered but not processed yet.
         let splitName = "";
-        let configObject;
         try {
-            configObject = this.parseConfigInput();
-            splitName = configObject?.categoryName || "splits";
-            // Make file name compatible:
-            splitName = splitName
-                .toLowerCase()
-                .replace(/['"]/g, "") // remove ' and "
-                .replace(/[^a-z0-9]/gi, "_")  // replace non-alphanum with _
-                .replace(/^_+|_+$/g, "")  // remove outer _
-                .replace(/^_+|_+$/g, "")  // remove outer _
-                .replace(/_{2,}/g, "_");  // join multiple _
+            const splitsConfig = this.parseConfigInput();
+            splitName = this.buildSplitsFileName(splitsConfig);
         }
         catch {
             splitName = "splits";
