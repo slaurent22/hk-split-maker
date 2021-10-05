@@ -89,10 +89,11 @@ export default function BaseSelect<
     Group extends GroupBase<Option> = GroupBase<Option>
 >(props: Props<Option, IsMulti, Group>): ReactElement {
     return (
-        <Select {...props}
+        <Select
             styles={createCustomStyles<Option, IsMulti, Group>()}
             onMenuOpen={createOnMenuOpen(props.classNamePrefix ?? "BaseSelect")}
             theme={customTheme}
+            {...props}
         />
     );
 }
