@@ -7,7 +7,7 @@ interface Props {
     id: string;
     onChange: (newValue: CategoryDefinition|null) => void;
     data?: Record<string, Array<CategoryDefinition>>;
-    defaultValue: CategoryDefinition;
+    defaultValue: CategoryDefinition | null;
 }
 
 interface CategoryOption {
@@ -69,6 +69,7 @@ const CategorySelect: React.FC<Props> = ({
     id,
     onChange,
     data,
+    defaultValue,
 }: Props) => {
     if (!data) {
         return <Select id={id}></Select>;
@@ -90,6 +91,7 @@ const CategorySelect: React.FC<Props> = ({
             className ={"MyDropdown"}
             classNamePrefix={"MyDropdown"}
             placeholder="Category: Select or type to search..."
+            defaultValue={defaultValue ? defToOption(defaultValue) : undefined}
             theme={theme => ({
                 ...theme,
                 spacing: {

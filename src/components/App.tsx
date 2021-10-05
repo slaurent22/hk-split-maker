@@ -19,6 +19,7 @@ interface AppState {
     categories?: Record<string, Array<CategoryDefinition>>;
     initialCategory: CategoryDefinition;
     alertBannerVisible: boolean;
+    requestedCategoryViaURL: boolean;
 }
 export default class App extends Component<AppProps, AppState> {
 
@@ -36,6 +37,7 @@ export default class App extends Component<AppProps, AppState> {
                 "displayName": "4 Mask Shards",
             },
             alertBannerVisible: true,
+            requestedCategoryViaURL: false,
         };
         this.inputEditor = React.createRef();
     }
@@ -43,6 +45,7 @@ export default class App extends Component<AppProps, AppState> {
         const newState = {
             categories: await getCategoryDirectory(),
             initialCategory: this.state.initialCategory,
+            requestedCategoryViaURL: false,
         };
         const hash = window.location.hash.substring(1);
         if (newState.categories) {
@@ -51,6 +54,7 @@ export default class App extends Component<AppProps, AppState> {
             });
             if (initialCategory) {
                 newState.initialCategory = initialCategory;
+                newState.requestedCategoryViaURL = true;
             }
             await this.updateCategory(newState.initialCategory);
         }
@@ -82,7 +86,9 @@ export default class App extends Component<AppProps, AppState> {
                                     id="categories"
                                     onChange={this.onCategorySelect.bind(this)}
                                     data={this.state.categories}
-                                    defaultValue={this.state.initialCategory}
+                                    defaultValue={
+                                        this.state.requestedCategoryViaURL ? this.state.initialCategory : null
+                                    }
                                 />}
                                 <ArrowButton
                                     text="Generate"
