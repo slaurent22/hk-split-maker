@@ -85,6 +85,18 @@
             "displayName": "Any% (All Glitches)"
         },
         {
+            "fileName": "any-nmms",
+            "displayName": "Any% (No Main Menu Storage)"
+        },
+        {
+            "fileName": "all-skills-ag",
+            "displayName": "All Skills (All Glitches)"
+        },
+        {
+            "fileName": "low-ag",
+            "displayName": "Low% (All Glitches)"
+        },
+        {
             "fileName": "te-ag",
             "displayName": "True Ending (All Glitches)"
         }

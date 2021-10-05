@@ -1,0 +1,21 @@
+{
+    "categoryName": "Low%",
+    "splitIds": [
+        "KingsPass",
+        "DreamNail",
+        "Dreamer1",
+        "Dreamer2",
+        "Dreamer3",
+        "UnchainedHollowKnight"
+    ],
+    "ordered": true,
+    "endTriggeringAutosplit": false,
+    "endingSplit": {
+        "name": "Hollow Knight",
+        "icon": "HollowKnightBoss"
+    },
+    "gameName": "Hollow Knight",
+    "variables": {
+        "glitch": "All Glitches"
+    }
+}

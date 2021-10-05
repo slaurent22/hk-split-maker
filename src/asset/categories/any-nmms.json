@@ -1,0 +1,25 @@
+{
+    "categoryName": "Any%",
+    "splitIds": [
+        "MantisClaw",
+        "Dashmaster",
+        "MothwingCloak",
+        "VengefulSpirit",
+        "DreamNail",
+        "Lurien",
+        "ShadeSoul",
+        "Uumuu",
+        "Monomon",
+        "Hegemol"
+    ],
+    "ordered": true,
+    "endTriggeringAutosplit": false,
+    "endingSplit": {
+        "name": "Hollow Knight",
+        "icon": "HollowKnightBoss"
+    },
+    "gameName": "Hollow Knight",
+    "variables": {
+        "glitch": "No Main Menu Storage"
+    }
+}
