@@ -1,5 +1,4 @@
 import React from "react";
-import Select from "react-select";
 import type { CategoryDefinition } from "../asset/categories/category-directory.json";
 import BaseSelect from "./BaseSelect";
 
@@ -33,7 +32,7 @@ const CategorySelect: React.FC<Props> = ({
     defaultValue,
 }: Props) => {
     if (!data) {
-        return <Select id={id}></Select>;
+        return <BaseSelect id={id}></BaseSelect>;
     }
     const optGroups = Object.entries(data).map(([groupName, groupEntries]) => {
         const options = groupEntries.map(defToOption);
@@ -49,7 +48,7 @@ const CategorySelect: React.FC<Props> = ({
             onChange={newValue => onChange(newValue ? optionToDef(newValue) : null)}
             className={"CategorySelect"}
             classNamePrefix={"CategorySelect"}
-            placeholder="Category: Select or type to search..."
+            placeholder="Pre-made Category: Select or type to search..."
             defaultValue={defaultValue ? defToOption(defaultValue) : undefined}
         />
     );

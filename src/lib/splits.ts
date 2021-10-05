@@ -60,6 +60,15 @@ function getNameAndGroup(description: string): [string, string] {
         case "Essence": {
             return [`${name} Essence`, qualifier];
         }
+        case "Boss":
+            switch (name) {
+                case "Hollow Knight Practice":
+                case "Radiance Practice": {
+                    return [name, "Practice"];
+                }
+                default: break;
+            }
+            break;
         default: {
             break;
         }

@@ -11,7 +11,7 @@ function createOnMenuOpen(classNamePrefix: string) {
         setTimeout(() => {
             const selectedEl = document.getElementsByClassName(`${classNamePrefix}__option--is-selected`)[0];
             if (selectedEl) {
-                selectedEl.scrollIntoView({ behavior: "smooth", block: "center", });
+                selectedEl.scrollIntoView({ block: "center", });
             }
         }, 15);
     };
@@ -31,6 +31,10 @@ function createCustomStyles<
             fontWeight: "bold",
             fontStyle: "italic",
             color: "white",
+        }),
+        option: (provided) => ({
+            ...provided,
+            fontFamily: "sans-serif",
         }),
         control: (provided) => {
             return {
