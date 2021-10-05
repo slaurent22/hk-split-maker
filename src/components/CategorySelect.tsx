@@ -43,6 +43,16 @@ const customStyles: StylesConfig<CategoryOption> = {
     },
 };
 
+// https://stackoverflow.com/a/66710895
+const onMenuOpen = () => {
+    setTimeout(()=>{
+        const selectedEl = document.getElementsByClassName("MyDropdown__option--is-selected")[0];
+        if (selectedEl) {
+            selectedEl.scrollIntoView({ behavior: "smooth", block: "center", });
+        }
+    }, 15);
+};
+
 function defToOption({ fileName, displayName, }: CategoryDefinition): CategoryOption {
     return {
         value: fileName, label: displayName,
@@ -76,6 +86,9 @@ const CategorySelect: React.FC<Props> = ({
             options={optGroups}
             styles={customStyles}
             onChange={newValue => onChange(newValue ? optionToDef(newValue) : null)}
+            onMenuOpen={onMenuOpen}
+            className ={"MyDropdown"}
+            classNamePrefix={"MyDropdown"}
             placeholder="Category: Select or type to search..."
             theme={theme => ({
                 ...theme,
