@@ -99,6 +99,10 @@
         {
             "fileName": "te-ag",
             "displayName": "True Ending (All Glitches)"
+        },
+        {
+            "fileName": "te-nmms",
+            "displayName": "True Ending (No Main Menu Storage)"
         }
     ],
     "Hollow Knight Mods": [
