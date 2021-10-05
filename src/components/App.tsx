@@ -11,6 +11,7 @@ import SplitConfigEditor from "./SplitConfigEditor";
 import SplitOutputEditor from "./SplitOutputEditor";
 import Header from "./Header";
 import Instructions from "./Instructions";
+import AlertBanner from "./AlertBanner";
 
 type AppProps = Record<string, never>;
 interface AppState {
@@ -18,7 +19,6 @@ interface AppState {
     splitOutput: string;
     categories?: Record<string, Array<CategoryDefinition>>;
     initialCategory: CategoryDefinition;
-    alertBannerVisible: boolean;
     requestedCategoryViaURL: boolean;
 }
 export default class App extends Component<AppProps, AppState> {
@@ -36,7 +36,6 @@ export default class App extends Component<AppProps, AppState> {
                 "fileName": "4ms",
                 "displayName": "4 Mask Shards",
             },
-            alertBannerVisible: true,
             requestedCategoryViaURL: false,
         };
         this.inputEditor = React.createRef();
@@ -61,15 +60,9 @@ export default class App extends Component<AppProps, AppState> {
         this.setState(newState);
     }
     public render(): ReactNode {
-        const { alertBannerVisible, } = this.state;
         return (
             <div id="app">
-                <div className="alert-banner" style={alertBannerVisible ? {} : { display: "none", }}>
-                    <span className="close-ab" onClick={this.handleClickCloseAlertBanner.bind(this)}>&times;</span>
-                    Interested in contributing or suggesting ideas and splits? Check out the&nbsp;
-                    <a href="https://github.com/slaurent22/hk-split-maker" target="_blank" rel="noopener noreferrer">
-                        GitHub Project Site!</a>
-                </div>
+                <AlertBanner />
                 <Header />
                 <Instructions />
                 <div id="input-output">
@@ -123,10 +116,6 @@ export default class App extends Component<AppProps, AppState> {
                 </div>
             </div>
         );
-    }
-
-    private handleClickCloseAlertBanner() {
-        this.setState({ alertBannerVisible: false, });
     }
 
     private onConfigInputChange(value: string|undefined) {
