@@ -203,7 +203,16 @@ export default class App extends Component<AppProps, AppState> {
             .replace(/^_+|_+$/g, "")  // remove outer _
             .replace(/^_+|_+$/g, "")  // remove outer _
             .replace(/_{2,}/g, "_");  // join multiple _
-        return filename;
+        let suffix = "";
+        if (splitsConfig.variables?.glitch) {
+            const glitch = splitsConfig.variables?.glitch;
+            switch (glitch) {
+                case "No Main Menu Storage": suffix = "-nmms"; break;
+                case "All Glitches":         suffix = "-ag"; break;
+                default: break; // nmg categories don't need suffix
+            }
+        }
+        return `${filename}${suffix}`;
     }
 
     private onDownload(): void {
