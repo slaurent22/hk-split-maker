@@ -84,7 +84,6 @@ import GreyPrince from "./Boss/GreyPrinceZote.png";
 import GreyPrinceEssence from "./Boss/GreyPrinceZote.png";
 import GruzMother from "./Boss/GruzMother.png";
 import HiveKnight from "./Boss/HiveKnight.png";
-import HollowKnightBoss from "./Boss/HollowKnightBoss.png";
 import Hornet1 from "./Boss/Hornet1.png";
 import Hornet2 from "./Boss/Hornet1.png";
 import LostKin from "./Boss/BrokenVessel.png";
@@ -101,13 +100,15 @@ import NoEyesEssence from "./Boss/NoEyes.png";
 import Nosk from "./Boss/Nosk.png";
 import KilledOblobbles from "./Boss/Oblobbles.png";
 import MatoOroNailBros from "./Boss/MatoOroNailBros.png";
-import RadianceBoss from "./Boss/RadianceBoss.png";
 import PureVessel from "./Boss/PureVessel.png";
+import RadianceBoss from "./Boss/RadianceBoss.png";
+import HollowKnightBoss from "./Boss/HollowKnightBoss.png";
 import SheoPaintmaster from "./Boss/SheoPaintmaster.png";
 import SlyNailsage from "./Boss/SlyNailsage.png";
 import SoulMaster from "./Boss/SoulMaster.png";
 import SoulTyrant from "./Boss/SoulMaster.png";
 import SoulTyrantEssence from "./Boss/SoulMaster.png";
+import SoulTyrantEssenceWithSanctumGrub from "./Boss/SoulMaster.png";
 import TraitorLord from "./Boss/TraitorLord.png";
 import TroupeMasterGrimm from "./Boss/TroupeMasterGrimm.png";
 import Uumuu from "./Boss/Uumuu.png";
@@ -171,20 +172,26 @@ import UnchainedHollowKnight from "./Boss/HollowKnightBoss.png";
 import WatcherChandelier from "./Misc/WatcherChandelier.png";
 import CityGateOpen from "./Item/CityKey.png";
 import PlayerDeath from "./Enemy/Shade.png";
+import EndingSplit from "./Misc/Knight.png";
 import FlowerQuest from "./Item/DelicateFlower.png";
 import FlowerRewardGiven from "./Achievement/Solace.png";
 import HappyCouplePlayerDataEvent from "./Achievement/HappyCouple.png";
 import NailsmithKilled from "./Achievement/Purity.png";
-import NailsmithSpared from "./Achievement/HappyCouple.png";
 import NightmareLantern from "./Misc/Flame.png";
 import NightmareLanternDestroyed from "./Achievement/Banishment.png";
 import HollowKnightDreamnail from "./Boss/HollowKnightBoss.png";
 import SeerDeparts from "./Achievement/Ascension.png";
 import SpiritGladeOpen from "./Achievement/Attunement.png";
 import BeastsDenTrapBench from "./Misc/Bench.png";
+import ColosseumBronzeUnlocked from "./Achievement/Warrior.png";
+import ColosseumSilverUnlocked from "./Achievement/Conqueror.png";
+import ColosseumGoldUnlocked from "./Achievement/Fool.png";
 import ColosseumBronze from "./Achievement/Warrior.png";
 import ColosseumSilver from "./Achievement/Conqueror.png";
 import ColosseumGold from "./Achievement/Fool.png";
+import ColosseumBronzeExit from "./Achievement/Warrior.png";
+import ColosseumSilverExit from "./Achievement/Conqueror.png";
+import ColosseumGoldExit from "./Achievement/Fool.png";
 import Pantheon1 from "./Achievement/Brotherhood.png";
 import Pantheon2 from "./Achievement/Inspiration.png";
 import Pantheon3 from "./Achievement/Focus.png";
@@ -326,6 +333,10 @@ import AllCharmNotchesLemm2CP from "./Misc/Lemm.png";
 import MetGreyMourner from "./NPC/GreyMourner.png";
 import GreyMournerSeerAscended from "./NPC/GreyMourner.png";
 import ElderbugFlower from "./NPC/ElderbugFlower.png";
+import givenGodseekerFlower from "./Item/DelicateFlower.png";
+import givenOroFlower from "./Item/DelicateFlower.png";
+import givenWhiteLadyFlower from "./Item/DelicateFlower.png";
+import givenEmilitiaFlower from "./Item/DelicateFlower.png";
 import BrettaRescued from "./NPC/BrettaRescued.png";
 import BrummFlame from "./Misc/FlameConsumed.png";
 import LittleFool from "./NPC/LittleFool.png";
@@ -473,6 +484,7 @@ import PathOfPainTransition3 from "./Enemy/Wingmould.png";
 import DgateKingdomsEdgeAcid from "./Skill/DreamGate.png";
 import SoulMasterEncountered from "./Boss/SoulMaster.png";
 import GodhomeBench from "./Misc/Godseeker.png";
+import GodhomeLoreRoom from "./Misc/Godseeker.png";
 import Pantheon1to4Entry from "./Misc/Godseeker.png";
 import Pantheon5Entry from "./Misc/Godseeker.png";
 import Menu from "./Misc/MapQuill.png";
@@ -499,10 +511,25 @@ import mapCliffs from "./Misc/Map.png";
 import mapOutskirts from "./Misc/Map.png";
 import mapRestingGrounds from "./Misc/Map.png";
 import mapAbyss from "./Misc/Map.png";
-import givenGodseekerFlower from "./Item/DelicateFlower.png";
-import givenOroFlower from "./Item/DelicateFlower.png";
-import givenWhiteLadyFlower from "./Item/DelicateFlower.png";
-import givenEmilitiaFlower from "./Item/DelicateFlower.png";
+import OnObtainGhostMarissa from "./NPC/Marissa.png";
+import OnObtainGhostCaelifFera from "./NPC/CaelifFera.png";
+import OnObtainGhostPoggy from "./NPC/Poggy.png";
+import OnObtainGhostGravedigger from "./NPC/Gravedigger.png";
+import OnObtainGhostJoni from "./NPC/Joni.png";
+import OnObtainGhostCloth from "./NPC/Cloth.png";
+import OnObtainGhostVespa from "./NPC/Vespa.png";
+import OnObtainGhostRevek from "./NPC/Revek.png";
+import OnObtainWanderersJournal from "./Relic/WanderersJournal.png";
+import OnObtainHallownestSeal from "./Relic/HallownestSeal.png";
+import OnObtainKingsIdol from "./Relic/KingsIdol.png";
+import OnObtainArcaneEgg from "./Relic/ArcaneEgg.png";
+import OnObtainRancidEgg from "./Item/RancidEgg.png";
+import OnObtainMaskShard from "./Fragment/MaskShard.png";
+import OnObtainVesselFragment from "./Fragment/VesselFragment1.png";
+import OnObtainSimpleKey from "./Item/SimpleKey.png";
+import OnUseSimpleKey from "./Item/SimpleKey.png";
+import OnObtainGrub from "./NPC/Grub.png";
+import AnyTransition from "./Misc/Knight.png";
 import ManualSplit from "./Misc/Knight.png";
 export default {
     AbyssShriek,
@@ -589,7 +616,6 @@ export default {
     GreyPrinceEssence,
     GruzMother,
     HiveKnight,
-    HollowKnightBoss,
     Hornet1,
     Hornet2,
     LostKin,
@@ -606,13 +632,15 @@ export default {
     Nosk,
     KilledOblobbles,
     MatoOroNailBros,
-    RadianceBoss,
     PureVessel,
+    RadianceBoss,
+    HollowKnightBoss,
     SheoPaintmaster,
     SlyNailsage,
     SoulMaster,
     SoulTyrant,
     SoulTyrantEssence,
+    SoulTyrantEssenceWithSanctumGrub,
     TraitorLord,
     TroupeMasterGrimm,
     Uumuu,
@@ -676,20 +704,26 @@ export default {
     WatcherChandelier,
     CityGateOpen,
     PlayerDeath,
+    EndingSplit,
     FlowerQuest,
     FlowerRewardGiven,
     HappyCouplePlayerDataEvent,
     NailsmithKilled,
-    NailsmithSpared,
     NightmareLantern,
     NightmareLanternDestroyed,
     HollowKnightDreamnail,
     SeerDeparts,
     SpiritGladeOpen,
     BeastsDenTrapBench,
+    ColosseumBronzeUnlocked,
+    ColosseumSilverUnlocked,
+    ColosseumGoldUnlocked,
     ColosseumBronze,
     ColosseumSilver,
     ColosseumGold,
+    ColosseumBronzeExit,
+    ColosseumSilverExit,
+    ColosseumGoldExit,
     Pantheon1,
     Pantheon2,
     Pantheon3,
@@ -831,6 +865,10 @@ export default {
     MetGreyMourner,
     GreyMournerSeerAscended,
     ElderbugFlower,
+    givenGodseekerFlower,
+    givenOroFlower,
+    givenWhiteLadyFlower,
+    givenEmilitiaFlower,
     BrettaRescued,
     BrummFlame,
     LittleFool,
@@ -978,6 +1016,7 @@ export default {
     DgateKingdomsEdgeAcid,
     SoulMasterEncountered,
     GodhomeBench,
+    GodhomeLoreRoom,
     Pantheon1to4Entry,
     Pantheon5Entry,
     Menu,
@@ -1004,9 +1043,24 @@ export default {
     mapOutskirts,
     mapRestingGrounds,
     mapAbyss,
-    givenGodseekerFlower,
-    givenOroFlower,
-    givenWhiteLadyFlower,
-    givenEmilitiaFlower,
+    OnObtainGhostMarissa,
+    OnObtainGhostCaelifFera,
+    OnObtainGhostPoggy,
+    OnObtainGhostGravedigger,
+    OnObtainGhostJoni,
+    OnObtainGhostCloth,
+    OnObtainGhostVespa,
+    OnObtainGhostRevek,
+    OnObtainWanderersJournal,
+    OnObtainHallownestSeal,
+    OnObtainKingsIdol,
+    OnObtainArcaneEgg,
+    OnObtainRancidEgg,
+    OnObtainMaskShard,
+    OnObtainVesselFragment,
+    OnObtainSimpleKey,
+    OnUseSimpleKey,
+    OnObtainGrub,
+    AnyTransition,
     ManualSplit,
 };

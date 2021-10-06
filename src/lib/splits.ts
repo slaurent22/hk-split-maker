@@ -62,8 +62,8 @@ function getNameAndGroup(description: string): [string, string] {
         }
         case "Boss":
             switch (name) {
-                case "Hollow Knight Practice":
-                case "Radiance Practice": {
+                case "Segment Practice - Radiance":
+                case "Segment Practice - THK": {
                     return [name, "Practice"];
                 }
                 default: break;
