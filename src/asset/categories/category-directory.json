@@ -45,6 +45,10 @@
             "displayName": "True Ending (1.4+ Shriek)"
         },
         {
+            "fileName": "te-flukamoth",
+            "displayName": "True Ending (\"Flukamoth\")"
+        },
+        {
             "fileName": "godhome-ending",
             "displayName": "Godhome Ending"
         }
