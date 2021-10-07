@@ -2,12 +2,15 @@ import type { ReactElement } from "react";
 import React from "react";
 import type { GroupBase, OptionProps } from "react-select";
 import { components } from "react-select";
+import Tooltip from "@atlaskit/tooltip";
 import type { SplitDefinition } from "../lib/splits";
 import { parseSplitsDefinitions } from "../lib/splits";
 import BaseSelect from "./BaseSelect";
 
 export interface SplitOption {
-    value: string; label: string;
+    value: string;
+    label: string;
+    tooltip: string;
 }
 
 interface Props {
@@ -31,7 +34,9 @@ function getSelectOptionGroups(groupedSplits: Map<string, Array<SplitDefinition>
         return {
             label: groupName,
             options: splits.map(split => ({
-                value: split.id, label: split.description,
+                value: split.id,
+                label: split.description,
+                tooltip: split.tooltip,
             })),
         };
     });
@@ -42,18 +47,20 @@ function CustomSplitSelectOption<
   Group extends GroupBase<SplitOption> = GroupBase<SplitOption>
 >({ children, ...rest }: OptionProps<SplitOption, IsMulti, Group>): ReactElement {
     return (
-        <components.Option {...rest}>
-            {children}
-            <span
-                style={{
-                    fontFamily: "monospace",
-                    fontSize: "12px",
-                    marginLeft: "5px",
-                }}
-            >
-                {rest.data.value}
-            </span>
-        </components.Option>
+        <Tooltip content={rest.data.tooltip}>
+            <components.Option {...rest}>
+                {children}
+                <span
+                    style={{
+                        fontFamily: "monospace",
+                        fontSize: "12px",
+                        marginLeft: "5px",
+                    }}
+                >
+                    {rest.data.value}
+                </span>
+            </components.Option>
+        </Tooltip>
     );
 }
 
