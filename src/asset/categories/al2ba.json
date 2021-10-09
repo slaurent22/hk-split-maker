@@ -6,10 +6,19 @@
         "MothwingCloak",
         "Aluba",
         "MantisClaw",
+        "SporeShroom",
         "DeepnestSpa",
-        "QueensGardens"
+        "QueensGardens",
+        "ManualSplit"
     ],
+    "names": {
+        "Aluba": "A1uba",
+        "ManualSplit": "Al2ba (Manual Split)"
+    },
+    "icons": {
+        "ManualSplit": "Aluba"
+    },
     "ordered": true,
-    "endTriggeringAutosplit": false,
+    "endTriggeringAutosplit": true,
     "gameName": "Hollow Knight Category Extensions"
 }
