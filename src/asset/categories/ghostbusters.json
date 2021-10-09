@@ -1,0 +1,28 @@
+{
+    "categoryName": "Ghostbusters",
+    "splitIds": [
+        "VengefulSpirit",
+        "EnterGreenpath",
+        "MothwingCloak",
+        "BlueLake",
+        "DreamNail",
+        "MantisClaw",
+        "DeepnestSpa",
+        "SpiritGladeOpen",
+        "OnObtainGhostRevek",
+        "Lemm2",
+        "OnObtainGhostGravedigger",
+        "OnObtainGhostJoni",
+        "KingsBrand",
+        "OnObtainGhostMarissa",
+        "OnObtainGhostPoggy",
+        "ShadeCloak",
+        "HiveEntry",
+        "OnObtainGhostVespa",
+        "OnObtainGhostCaelifFera",
+        "OnObtainGhostCloth"
+    ],
+    "ordered": true,
+    "endTriggeringAutosplit": true,
+    "gameName": "Hollow Knight Category Extensions"
+}
