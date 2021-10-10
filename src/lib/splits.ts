@@ -69,6 +69,11 @@ function getNameAndGroup(description: string): [string, string] {
                 default: break;
             }
             break;
+        case "Obtain":
+            if (/Dream Nail/.test(name)) {
+                return [name, "Essence"];
+            }
+            return [name, "Item"];
         default: {
             break;
         }
