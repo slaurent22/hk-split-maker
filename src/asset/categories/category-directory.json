@@ -173,6 +173,10 @@
             "displayName": "All Hallownest Seals"
         },
         {
+            "fileName": "all-keys",
+            "displayName": "All Keys"
+        },
+        {
             "fileName": "all-stag-stations",
             "displayName": "All Stag Stations"
         },

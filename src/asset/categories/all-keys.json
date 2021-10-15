@@ -1,0 +1,20 @@
+{
+    "categoryName": "All Keys",
+    "splitIds": [
+        "-VengefulSpirit",
+        "-EnterGreenpath",
+        "-MothwingCloak",
+        "-MantisClaw",
+        "-BlueLake",
+        "-GorgeousHusk",
+        "-LumaflyLantern",
+        "SlyKey",
+        "-CrystalHeart",
+        "SimpleKey",
+        "ElegantKey",
+        "LoveKey"
+    ],
+    "ordered": true,
+    "endTriggeringAutosplit": true,
+    "gameName": "Hollow Knight Category Extensions"
+}
