@@ -165,6 +165,10 @@
             "displayName": "All Charm Notches (1.2.2.1)"
         },
         {
+            "fileName": "all-geo-chests",
+            "displayName": "All Geo Chests"
+        },
+        {
             "fileName": "all-hallownest-seals",
             "displayName": "All Hallownest Seals"
         },
