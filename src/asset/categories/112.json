@@ -92,10 +92,10 @@
         "GodhomeBench",
         "GodhomeBench",
         "GodhomeBench",
+        "GodhomeLoreRoom",
         "GodhomeBench",
-        "GodhomeBench",
-        "GodhomeBench",
-        "GodhomeBench"
+        "GodhomeLoreRoom",
+        "GodhomeLoreRoom"
     ],
     "names": {
         "CrystalHeart": "[2U] %s",
@@ -127,10 +127,12 @@
             "Enter Xero",
             "Enter Marmu",
             "Enter Hive Knight",
-            "Enter Unn Room",
-            "Enter Enraged Guardian",
-            "Enter White Lady Room",
-            "Enter Pale King Room"
+            "Enter Enraged Guardian"
+        ],
+        "GodhomeLoreRoom": [
+            "Enter Watcher Knights",
+            "Enter Soul Tyrant",
+            "Enter Pure Vessel"
         ]
     },
     "icons": {
@@ -143,8 +145,10 @@
             "XeroP",
             "MarmuP",
             "HiveKnightP",
+            "EnragedGuardianP"
+        ],
+        "GodhomeLoreRoom": [
             "WatcherKnightsP",
-            "EnragedGuardianP",
             "SoulTyrantP",
             "PureVesselP"
         ]
