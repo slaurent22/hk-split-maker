@@ -1,6 +1,7 @@
 {
     "categoryName": "All Hallownest Seals",
     "splitIds": [
+        "GrubCrossroadsWall",
         "VengefulSpirit",
         "EnterGreenpath",
         "GrubGreenpathMossKnight",
@@ -30,7 +31,6 @@
         "XeroEssence",
         "ShamanStone",
         "GrubCrossroadsSpikes",
-        "GrubCrossroadsWall",
         "OnObtainHallownestSeal",
         "GrubCityGuardHouse",
         "OnObtainHallownestSeal",
