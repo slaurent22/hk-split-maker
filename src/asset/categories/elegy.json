@@ -1,6 +1,7 @@
 {
     "categoryName": "Elegy%",
     "splitIds": [
+        "GrubCrossroadsWall",
         "VengefulSpirit",
         "EnterGreenpath",
         "GreenpathStation",
@@ -21,7 +22,6 @@
         "GrubRestingGroundsCrypts",
         "ShamanStone",
         "GrubCrossroadsSpikes",
-        "GrubCrossroadsWall",
         "GrubCityBelowSanctum",
         "GrubWaterwaysCenter",
         "GrubWaterwaysIsma",
