@@ -42,7 +42,7 @@ function getSelectOptionGroups(groupedSplits: Map<string, Array<SplitDefinition>
     });
 }
 
-function CustomSplitSelectOption<
+function SplitSelectOption<
   IsMulti extends boolean = false,
   Group extends GroupBase<SplitOption> = GroupBase<SplitOption>
 >({ children, ...rest }: OptionProps<SplitOption, IsMulti, Group>): ReactElement {
@@ -53,8 +53,8 @@ function CustomSplitSelectOption<
                 <span
                     style={{
                         fontFamily: "monospace",
-                        fontSize: "12px",
-                        marginLeft: "5px",
+                        fontSize: "14px",
+                        float: "right",
                     }}
                 >
                     {rest.data.value}
@@ -75,7 +75,7 @@ const SplitSelect: React.FC<Props> = ({ onChange, }: Props) => {
             classNamePrefix={"SplitSelect"}
             placeholder="Add autosplit: Select or type to search..."
             onChange={newValue => onChange(newValue ?? null)}
-            components={{ Option: CustomSplitSelectOption, }}
+            components={{ Option: SplitSelectOption, }}
         />
     );
 };
