@@ -121,7 +121,10 @@
     "Hollow Knight Mods": [
         {
             "fileName": "all-geo-rocks",
-            "displayName": "All Geo Rocks"
+            "displayName": "All Geo Rocks",
+            "data": {
+                "routeNotesURL": "https://pastebin.com/FREwbzUV"
+            }
         },
         {
             "fileName": "fc-as-te",
