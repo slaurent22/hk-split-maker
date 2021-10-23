@@ -1,4 +1,7 @@
+import type { ReactElement } from "react";
 import React from "react";
+import type { GroupBase, OptionProps, SingleValueProps } from "react-select";
+import { components } from "react-select";
 import type { CategoryDefinition } from "../asset/categories/category-directory.json";
 import BaseSelect from "./BaseSelect";
 
@@ -11,19 +14,75 @@ interface Props {
 
 interface CategoryOption {
     value: string; label: string;
-}
-
-function defToOption({ fileName, displayName, }: CategoryDefinition): CategoryOption {
-    return {
-        value: fileName, label: displayName,
+    data?: {
+        routeNotesURL?: string;
     };
 }
 
-function optionToDef({ value, label, }: CategoryOption): CategoryDefinition {
+function defToOption({ fileName, displayName, data, }: CategoryDefinition): CategoryOption {
     return {
-        fileName: value, displayName: label,
+        value: fileName, label: displayName, data,
     };
 }
+
+function optionToDef({ value, label, data, }: CategoryOption): CategoryDefinition {
+    return {
+        fileName: value, displayName: label, data,
+    };
+}
+interface RouteNotesLinkProps {
+    url: string;
+    isSelected: boolean;
+}
+function RouteNotesLink({ url, isSelected, }: RouteNotesLinkProps): ReactElement {
+    const color = isSelected ? "hsl(0, 0%, 20%)" : "hsl(0, 0%, 80%)";
+    return (
+        <a href={url} target="_blank" rel="noopener noreferrer"
+            style={{
+                float: "right", color,
+            }}
+        >
+            Route Notes
+        </a>
+    );
+}
+
+function CategorySelectOption<
+  IsMulti extends boolean = false,
+  Group extends GroupBase<CategoryOption> = GroupBase<CategoryOption>
+>({ children, ...rest }: OptionProps<CategoryOption, IsMulti, Group>): ReactElement {
+    const { data, isSelected, } = rest;
+    return (
+        <components.Option {...rest}>
+            {children}
+            {data.data?.routeNotesURL &&
+                <RouteNotesLink
+                    url={data.data.routeNotesURL}
+                    isSelected={isSelected}
+                />
+            }
+        </components.Option>
+    );
+}
+
+function CategorySelectSingleValue<
+    IsMulti extends boolean = false,
+    Group extends GroupBase<CategoryOption> = GroupBase<CategoryOption>
+>({ children, ...rest }: SingleValueProps<CategoryOption, IsMulti, Group>): ReactElement {
+    return (
+        <components.SingleValue {...rest}>
+            {children}
+            {rest.data.data?.routeNotesURL &&
+                <em
+                    style={{ float: "right", }}
+                >
+                    Notes available
+                </em>
+            }
+        </components.SingleValue>
+    );
+}
+
 
 const CategorySelect: React.FC<Props> = ({
     id,
@@ -50,6 +109,10 @@ const CategorySelect: React.FC<Props> = ({
             classNamePrefix={"CategorySelect"}
             placeholder="Pre-made Category: Select or type to search..."
             defaultValue={defaultValue ? defToOption(defaultValue) : undefined}
+            components={{
+                Option: CategorySelectOption,
+                SingleValue: CategorySelectSingleValue,
+            }}
         />
     );
 };
