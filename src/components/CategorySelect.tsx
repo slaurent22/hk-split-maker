@@ -1,7 +1,7 @@
 import type { ReactElement } from "react";
 import React from "react";
 import type { GroupBase, OptionProps, SingleValueProps } from "react-select";
-import { components } from "react-select";
+import { components, createFilter } from "react-select";
 import type { CategoryDefinition } from "../asset/categories/category-directory.json";
 import BaseSelect from "./BaseSelect";
 
@@ -16,8 +16,26 @@ interface CategoryOption {
     value: string; label: string;
     data?: {
         routeNotesURL?: string;
+        searchTerms?: Array<string>;
     };
 }
+
+interface FilterOptionOption<Option> {
+    readonly label: string;
+    readonly value: string;
+    readonly data: Option;
+}
+
+const filterConfig = {
+    stringify: (option: FilterOptionOption<CategoryOption>): string => {
+        const searchTerms = option.data.data?.searchTerms?.join(" ");
+        const defaultStringified = `${option.label} ${option.value}`;
+        if (searchTerms) {
+            return `${defaultStringified} ${searchTerms}`;
+        }
+        return defaultStringified;
+    },
+};
 
 function defToOption({ fileName, displayName, data, }: CategoryDefinition): CategoryOption {
     return {
@@ -113,6 +131,7 @@ const CategorySelect: React.FC<Props> = ({
                 Option: CategorySelectOption,
                 SingleValue: CategorySelectSingleValue,
             }}
+            filterOption={createFilter(filterConfig)}
         />
     );
 };

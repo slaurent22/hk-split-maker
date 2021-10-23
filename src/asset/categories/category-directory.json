@@ -284,13 +284,17 @@
         },
         {
             "fileName": "a1uba",
-            "displayName": "A1uba% (Aluba)"
+            "displayName": "A1uba%",
+            "data": {
+                "searchTerms": ["Aluba"]
+            }
         },
         {
             "fileName": "al2ba",
             "displayName": "Al2ba%",
             "data": {
-                "routeNotesURL": "https://pastebin.com/j3i4uV16"
+                "routeNotesURL": "https://pastebin.com/j3i4uV16",
+                "searchTerms": ["Aluba"]
             }
         },
         {

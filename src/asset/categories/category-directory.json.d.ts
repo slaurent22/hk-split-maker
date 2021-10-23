@@ -3,6 +3,7 @@ export interface CategoryDefinition {
     displayName: string;
     data?: {
         routeNotesURL?: string;
+        searchTerms?: Array<string>;
     };
 }
 declare const splits: Record<string, Array<CategoryDefinition>>;
