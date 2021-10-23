@@ -1,0 +1,15 @@
+{
+    "categoryName": "Trial of the Fool",
+    "splitIds": [
+        "ManualSplit"
+    ],
+    "names": {
+        "ManualSplit": "Fool (manual split)"
+    },
+    "icons": {
+        "ManualSplit": "ColosseumGold"
+    },
+    "ordered": true,
+    "endTriggeringAutosplit": true,
+    "gameName": "Hollow Knight"
+}

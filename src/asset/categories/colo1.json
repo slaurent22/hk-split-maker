@@ -1,0 +1,15 @@
+{
+    "categoryName": "Trial of the Warrior",
+    "splitIds": [
+        "ManualSplit"
+    ],
+    "names": {
+        "ManualSplit": "Warrior (manual split)"
+    },
+    "icons": {
+        "ManualSplit": "ColosseumBronze"
+    },
+    "ordered": true,
+    "endTriggeringAutosplit": true,
+    "gameName": "Hollow Knight"
+}

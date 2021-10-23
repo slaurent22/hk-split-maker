@@ -79,6 +79,18 @@
     ],
     "Hollow Knight: Individual Level": [
         {
+            "fileName": "colo1",
+            "displayName": "Trial of the Warrior (colo1)"
+        },
+        {
+            "fileName": "colo2",
+            "displayName": "Trial of the Conqueror (colo2)"
+        },
+        {
+            "fileName": "colo3",
+            "displayName": "Trial of the Fool (colo3)"
+        },
+        {
             "fileName": "p1",
             "displayName": "Pantheon of the Master (P1)"
         },
