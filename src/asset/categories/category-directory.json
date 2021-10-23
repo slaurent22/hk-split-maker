@@ -335,7 +335,10 @@
         },
         {
             "fileName": "fool",
-            "displayName": "Fool%"
+            "displayName": "Fool%",
+            "data": {
+                "routeNotesURL": "https://youtu.be/dQw4w9WgXcQ"
+            }
         },
         {
             "fileName": "ggg",
