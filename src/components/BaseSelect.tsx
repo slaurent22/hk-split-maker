@@ -17,6 +17,17 @@ function createOnMenuOpen(classNamePrefix: string) {
     };
 }
 
+// https://coolors.co/06080f-091d66-040e33-061f78-071752
+function getGroupColor(section: string): string {
+    switch (section) {
+        case "Main":                return "#06080f";
+        case "Glitched":            return "#091d66";
+        case "Individual Level":    return "#040e33";
+        case "Mods":                return "#061f78";
+        case "Category Extensions": return "#071752";
+        default:                    return "";
+    }
+}
 
 function createCustomStyles<
     Option,
@@ -26,11 +37,14 @@ function createCustomStyles<
     return {
         groupHeading: (provided) => ({
             ...provided,
-            fontSize: "14px",
+            fontSize: "18px",
             fontFamily: "serif",
             fontWeight: "bold",
-            fontStyle: "italic",
             color: "white",
+        }),
+        group: (provided, state) => ({
+            ...provided,
+            backgroundColor: getGroupColor(state.data.label ?? ""),
         }),
         option: (provided) => ({
             ...provided,
