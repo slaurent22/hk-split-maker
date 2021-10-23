@@ -247,6 +247,13 @@
             }
         },
         {
+            "fileName": "all-kings-idols",
+            "displayName": "All King's Idols",
+            "data": {
+                "routeNotesURL": "https://pastebin.com/DtjmS4JC"
+            }
+        },
+        {
             "fileName": "all-stag-stations",
             "displayName": "All Stag Stations",
             "data": {
