@@ -164,6 +164,13 @@
             "data": {
                 "routeNotesURL": "https://drop.rixx.de/JjBs/"
             }
+        },
+        {
+            "fileName": "low-ab",
+            "displayName": "Low% All Bindings",
+            "data": {
+                "routeNotesURL": "https://pastebin.com/iX1FkYqm"
+            }
         }
     ],
     "Hollow Knight Category Extensions": [
@@ -361,13 +368,6 @@
         {
             "fileName": "lbc",
             "displayName": "Lifeblood Core%"
-        },
-        {
-            "fileName": "low-ab",
-            "displayName": "Low% All Bindings",
-            "data": {
-                "routeNotesURL": "https://pastebin.com/iX1FkYqm"
-            }
         },
         {
             "fileName": "marissa-audience",
