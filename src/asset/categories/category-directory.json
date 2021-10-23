@@ -2,7 +2,10 @@
     "Hollow Knight": [
         {
             "fileName": "112",
-            "displayName": "112% APB"
+            "displayName": "112% APB",
+            "data": {
+                "routeNotesURL": "https://www.speedrun.com/hollowknight/guide/scqia"
+            }
         },
         {
             "fileName": "107",
@@ -13,11 +16,17 @@
         },
         {
             "fileName": "106",
-            "displayName": "106% TE"
+            "displayName": "106% TE",
+            "data": {
+                "routeNotesURL": "https://gist.github.com/cerpintext/92084996c3f122e40f016007228c9ab9"
+            }
         },
         {
             "fileName": "all-skills",
-            "displayName": "All Skills"
+            "displayName": "All Skills",
+            "data": {
+                "routeNotesURL": "https://pastebin.com/X2kivfc0"
+            }
         },
         {
             "fileName": "all-skills-cp",
@@ -40,11 +49,17 @@
         },
         {
             "fileName": "low",
-            "displayName": "Low%"
+            "displayName": "Low%",
+            "data": {
+                "routeNotesURL": "https://pastebin.com/sb5iu8VA"
+            }
         },
         {
             "fileName": "te",
-            "displayName": "True Ending"
+            "displayName": "True Ending",
+            "data": {
+                "routeNotesURL": "https://pastebin.com/Vx1d7MzE"
+            }
         },
         {
             "fileName": "te-cp",
@@ -103,7 +118,10 @@
         },
         {
             "fileName": "all-skills-ag",
-            "displayName": "All Skills (All Glitches)"
+            "displayName": "All Skills (All Glitches)",
+            "data": {
+                "routeNotesURL": "https://pastebin.com/7RD8WkqX"
+            }
         },
         {
             "fileName": "low-ag",
@@ -135,7 +153,10 @@
         },
         {
             "fileName": "grass",
-            "displayName": "Grass%"
+            "displayName": "Grass%",
+            "data": {
+                "routeNotesURL": "https://pastebin.com/jJ7Kp7fd"
+            }
         },
         {
             "fileName": "kronk",
@@ -170,7 +191,10 @@
         },
         {
             "fileName": "4ms-0geo",
-            "displayName": "4 Mask Shards 0 Geo"
+            "displayName": "4 Mask Shards 0 Geo",
+            "data": {
+                "routeNotesURL": "https://pastebin.com/9VGYYnxq"
+            }
         },
         {
             "fileName": "16ms",
@@ -340,7 +364,10 @@
         },
         {
             "fileName": "low-ab",
-            "displayName": "Low% All Bindings"
+            "displayName": "Low% All Bindings",
+            "data": {
+                "routeNotesURL": "https://pastebin.com/iX1FkYqm"
+            }
         },
         {
             "fileName": "marissa-audience",
@@ -369,7 +396,10 @@
         },
         {
             "fileName": "mylas-revenge",
-            "displayName": "Myla's Revenge"
+            "displayName": "Myla's Revenge",
+            "data": {
+                "routeNotesURL": "https://pastebin.com/6GpVtNaC"
+            }
         },
         {
             "fileName": "nice",
@@ -451,7 +481,10 @@
         },
         {
             "fileName": "spelless-te",
-            "displayName": "Spelless True Ending"
+            "displayName": "Spelless True Ending",
+            "data": {
+                "routeNotesURL": "https://pastebin.com/bKx7eWsX"
+            }
         },
         {
             "fileName": "zote",
