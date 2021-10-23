@@ -262,6 +262,13 @@
             "displayName": "All Unbreakable Charms (Steel Soul)"
         },
         {
+            "fileName": "all-wanderers-journals",
+            "displayName": "All Wanderer's Journals",
+            "data": {
+                "routeNotesURL": "https://pastebin.com/smQ1fmzM"
+            }
+        },
+        {
             "fileName": "all-whispering-roots",
             "displayName": "All Whispering Roots",
             "data": {
