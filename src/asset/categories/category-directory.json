@@ -1,5 +1,5 @@
 {
-    "Hollow Knight": [
+    "Main": [
         {
             "fileName": "112",
             "displayName": "112% APB",
@@ -77,7 +77,36 @@
             "displayName": "Godhome Ending"
         }
     ],
-    "Hollow Knight: Individual Level": [
+    "Glitched": [
+        {
+            "fileName": "any-ag",
+            "displayName": "Any% (All Glitches)"
+        },
+        {
+            "fileName": "any-nmms",
+            "displayName": "Any% (No Main Menu Storage)"
+        },
+        {
+            "fileName": "all-skills-ag",
+            "displayName": "All Skills (All Glitches)",
+            "data": {
+                "routeNotesURL": "https://pastebin.com/7RD8WkqX"
+            }
+        },
+        {
+            "fileName": "low-ag",
+            "displayName": "Low% (All Glitches)"
+        },
+        {
+            "fileName": "te-ag",
+            "displayName": "True Ending (All Glitches)"
+        },
+        {
+            "fileName": "te-nmms",
+            "displayName": "True Ending (No Main Menu Storage)"
+        }
+    ],
+    "Individual Level": [
         {
             "fileName": "colo1",
             "displayName": "Trial of the Warrior (colo1)"
@@ -119,36 +148,7 @@
             "displayName": "White Palace"
         }
     ],
-    "Hollow Knight: Glitched": [
-        {
-            "fileName": "any-ag",
-            "displayName": "Any% (All Glitches)"
-        },
-        {
-            "fileName": "any-nmms",
-            "displayName": "Any% (No Main Menu Storage)"
-        },
-        {
-            "fileName": "all-skills-ag",
-            "displayName": "All Skills (All Glitches)",
-            "data": {
-                "routeNotesURL": "https://pastebin.com/7RD8WkqX"
-            }
-        },
-        {
-            "fileName": "low-ag",
-            "displayName": "Low% (All Glitches)"
-        },
-        {
-            "fileName": "te-ag",
-            "displayName": "True Ending (All Glitches)"
-        },
-        {
-            "fileName": "te-nmms",
-            "displayName": "True Ending (No Main Menu Storage)"
-        }
-    ],
-    "Hollow Knight Mods": [
+    "Mods": [
         {
             "fileName": "all-geo-rocks",
             "displayName": "All Geo Rocks",
@@ -185,7 +185,7 @@
             }
         }
     ],
-    "Hollow Knight Category Extensions": [
+    "Category Extensions": [
         {
             "fileName": "0geo",
             "displayName": "0 Geo"
