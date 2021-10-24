@@ -13,9 +13,16 @@
         "NightmareLantern",
         "Grimmchild",
         "Lemm2",
-        "KingsStationStation"
+        "KingsStationStation",
+        "ManualSplit"
     ],
     "ordered": true,
-    "endTriggeringAutosplit": false,
+    "endTriggeringAutosplit": true,
+    "names": {
+        "ManualSplit": "Audience (manual split)"
+    },
+    "icons": {
+        "ManualSplit": "OnObtainGhostMarissa"
+    },
     "gameName": "Hollow Knight Category Extensions"
 }

@@ -61,6 +61,7 @@ function getNameAndGroup({ description, id, }: Pick<SplitDefinition, "descriptio
         case "Pantheon5Entry":
         case "WaterwaysEntry":            return [`Enter ${name}`, qualifier];
         case "QueensGardensEntry":        return ["Enter Queen's Gardens", qualifier];
+        case "PathOfPainEntry":           return ["Enter Path of Pain", qualifier];
         case "RadianceBoss":
         case "HollowKnightBoss":          return [name, "Practice"];
         default: break;
