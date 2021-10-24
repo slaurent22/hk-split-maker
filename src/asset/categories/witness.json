@@ -1,0 +1,50 @@
+{
+    "categoryName": "Witness",
+    "splitIds": [
+        "ManualSplit",
+        "-VengefulSpirit",
+        "-EnterGreenpath",
+        "-MothwingCloak",
+        "ManualSplit",
+        "ManualSplit",
+        "-NotchShrumalOgres",
+        "-MantisClaw",
+        "ManualSplit",
+        "-TramPass",
+        "ManualSplit",
+        "-TramDeepnest",
+        "ManualSplit",
+        "-Lemm2",
+        "-KingsStationStation",
+        "-SlyRescued",
+        "-DreamNail",
+        "-LumaflyLantern",
+        "ManualSplit",
+        "-CrystalHeart",
+        "ManualSplit",
+        "-Monomon",
+        "ManualSplit",
+        "-QueensStationStation",
+        "ManualSplit"
+    ],
+    "names": {
+        "ManualSplit": [
+            "Black Egg Temple",
+            "Lake of Unn",
+            "Queen's Station",
+            "Mantis Village",
+            "Deepnest",
+            "City of Tears",
+            "Crystal Peak",
+            "Fog Canyon",
+            "Teacher's Archive",
+            "Witness"
+        ]
+    },
+    "icons": {
+        "ManualSplit": "BlueLake"
+    },
+    "ordered": true,
+    "endTriggeringAutosplit": true,
+    "gameName": "Hollow Knight Category Extensions"
+}

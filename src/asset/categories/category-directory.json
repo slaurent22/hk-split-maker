@@ -217,7 +217,11 @@
         },
         {
             "fileName": "16ms",
-            "displayName": "16 Mask Shards"
+            "displayName": "16 Mask Shards",
+            "data": {
+                "routeNotesURL": "https://pastebin.com/2cRkecGU",
+                "searchTerms": ["All", "Skulls"]
+            }
         },
         {
             "fileName": "all-breakable-charms",
@@ -235,6 +239,14 @@
             "displayName": "All Charm Notches (1.2.2.1)",
             "data": {
                 "routeNotesURL": "https://pastebin.com/xAES68kr"
+            }
+        },
+        {
+            "fileName": "acnnsc",
+            "displayName": "ACN No Shop Charms",
+            "data": {
+                "routeNotesURL": "https://pastebin.com/VtCFCQrz",
+                "searchTerms": ["All", "Notches"]
             }
         },
         {
@@ -340,6 +352,14 @@
             "displayName": "Elegy%",
             "data": {
                 "routeNotesURL": "https://pastebin.com/6rVwQwLg"
+            }
+        },
+        {
+            "fileName": "empty-hall",
+            "displayName": "Empty Hall",
+            "data": {
+                "routeNotesURL": "https://pastebin.com/fH7xjsau",
+                "searchTerms": ["Godhome", "Gods"]
             }
         },
         {
@@ -526,6 +546,14 @@
             "displayName": "Spelless True Ending",
             "data": {
                 "routeNotesURL": "https://pastebin.com/bKx7eWsX"
+            }
+        },
+        {
+            "fileName": "witness",
+            "displayName": "Witness",
+            "data": {
+                "routeNotesURL": "https://pastebin.com/Eh3w66CQ",
+                "searchTerms": ["Quirrel"]
             }
         },
         {
