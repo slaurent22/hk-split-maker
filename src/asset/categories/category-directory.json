@@ -331,7 +331,8 @@
             "fileName": "elderbug",
             "displayName": "Elderbug%",
             "data": {
-                "routeNotesURL": "https://pastebin.com/TCxBpEj1"
+                "routeNotesURL": "https://pastebin.com/TCxBpEj1",
+                "searchTerms": ["Delicate", "Flower"]
             }
         },
         {
@@ -357,6 +358,14 @@
             "displayName": "Gaslight, Gatekeep, Girlboss",
             "data": {
                 "routeNotesURL": "https://pastebin.com/hVCNQkuJ"
+            }
+        },
+        {
+            "fileName": "florist",
+            "displayName": "Florist",
+            "data": {
+                "routeNotesURL": "https://pastebin.com/eXNyLRmh",
+                "searchTerms": ["Delicate", "Flower"]
             }
         },
         {
