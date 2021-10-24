@@ -1,5 +1,5 @@
 import type { ReactNode } from "react";
-import React, { Component } from "react";
+import React, { Component, Fragment } from "react";
 import type { OnChange, OnMount, Monaco } from "@monaco-editor/react";
 import Editor from "@monaco-editor/react";
 import type { editor } from "monaco-editor";
@@ -45,7 +45,7 @@ export default class SplitConfigEditor extends Component<Props, State> {
 
     public render(): ReactNode {
         return (
-            <div>
+            <Fragment>
                 <SplitSelect
                     onChange={this.onChangeSplitSelect.bind(this)}
                 />
@@ -66,7 +66,7 @@ export default class SplitConfigEditor extends Component<Props, State> {
                         onMount={this.handleMounted}
                     />
                 </div>
-            </div>
+            </Fragment>
         );
     }
     public setContent = (value: string): void => {
