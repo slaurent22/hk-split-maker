@@ -27,9 +27,20 @@ function getNameAndGroup({ description, id, }: Pick<SplitDefinition, "descriptio
 
     switch (qualifier) {
         case "Charm Notch":  return [`${name} Notch`, qualifier];
-        case "Stag Station": return [`${name} Stag`, qualifier];
-        case "Grub":         return [name.substr("Rescued ".length), qualifier];
         case "Essence":      return [`${name} Essence`, qualifier];
+        case "Fragment":     return [name, "Upgrade"];
+        case "Grub":         return [name.substr("Rescued ".length), qualifier];
+        case "Pantheon":     return [name, "Boss"];
+        case "Room":         return [name, "Transition"];
+        case "Stag Station": return [`${name} Stag`, qualifier];
+        case "Trinket":      return [name, "Item"];
+        case "Completed":
+        case "Dreamgate":
+        case "Lever":
+        case "Spot":
+        case "Tram":         return [name, "Event"];
+        case "Killed":
+        case "Mini Boss":    return [name, "Enemy"];
         case "Transition":
             switch (id) {
                 case "BasinEntry":
