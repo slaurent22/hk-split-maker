@@ -14,7 +14,7 @@ export interface SplitDefinition {
     group: string;
 }
 
-function getNameAndGroup(description: string): [string, string] {
+function getNameAndGroup({ description, id, }: Pick<SplitDefinition, "description"|"id">): [string, string] {
     const match = DESCRIPTION_NAME_REGEXP.exec(description);
     if (!match) {
         throw new Error(`Invalid Description: ${description}`);
@@ -34,24 +34,24 @@ function getNameAndGroup(description: string): [string, string] {
             return [name.substr("Rescued ".length), qualifier];
         }
         case "Transition":
-            switch (name) {
-                case "Ancient Basin":
-                case "Crystal Peak":
-                case "Fog Canyon":
-                case "Greenpath":
-                case "Greenpath w/ Unlocked Overcharm":
-                case "Hive":
-                case "Kingdom's Edge":
-                case "Kingdom's Edge Overcharmed":
-                case "NKG Dream":
-                case "Sanctum":
-                case "Sanctum w/ Shade Soul":
-                case "Pantheon 1-4":
-                case "Pantheon 5":
-                case "Waterways Manhole": {
+            switch (id) {
+                case "BasinEntry":
+                case "CrystalPeakEntry":
+                case "FogCanyonEntry":
+                case "EnterGreenpath":
+                case "EnterGreenpathWithOvercharm":
+                case "HiveEntry":
+                case "KingdomsEdgeEntry":
+                case "KingdomsEdgeOvercharmedEntry":
+                case "EnterNKG":
+                case "EnterSanctum":
+                case "EnterSanctumWithShadeSoul":
+                case "Pantheon1to4Entry":
+                case "Pantheon5Entry":
+                case "WaterwaysEntry": {
                     return [`Enter ${name}`, qualifier];
                 }
-                case "Queen's Garden - QGA/Mound Entry": {
+                case "QueensGardensEntry": {
                     return ["Enter Queen's Gardens", qualifier];
                 }
                 default: break;
@@ -61,9 +61,9 @@ function getNameAndGroup(description: string): [string, string] {
             return [`${name} Essence`, qualifier];
         }
         case "Boss":
-            switch (name) {
-                case "Segment Practice - Radiance":
-                case "Segment Practice - THK": {
+            switch (id) {
+                case "RadianceBoss":
+                case "HollowKnightBoss": {
                     return [name, "Practice"];
                 }
                 default: break;
@@ -80,72 +80,72 @@ function getNameAndGroup(description: string): [string, string] {
     }
 
     switch (name) {
-        case "Dream Nail - Awoken": {
-            return ["Awoken Dream Nail", qualifier];
-        }
-        case "Crystal Guardian 1": {
-            return ["Crystal Guardian", qualifier];
-        }
-        case "Crystal Guardian 2": {
-            return ["Enraged Guardian", qualifier];
-        }
-        case "Chains Broken - Hollow Knight": {
-            return ["Hollow Knight Scream", qualifier];
-        }
-        case "Radiance Dream Entry": {
-            return ["Hollow Knight", qualifier];
-        }
-        case "Colosseum Fight 1": {
-            return ["Trial of the Warrior", qualifier];
-        }
-        case "Colosseum Fight 2": {
-            return ["Trial of the Conqueror", qualifier];
-        }
-        case "Colosseum Fight 3": {
-            return ["Trial of the Fool", qualifier];
-        }
-        case "Pantheon 1": {
-            return ["Pantheon of the Master", qualifier];
-        }
-        case "Pantheon 2": {
-            return ["Pantheon of the Artist", qualifier];
-        }
-        case "Pantheon 3": {
-            return ["Pantheon of the Sage", qualifier];
-        }
-        case "Pantheon 4": {
-            return ["Pantheon of the Knight", qualifier];
-        }
-        case "Pantheon 5": {
-            return ["Pantheon of Hallownest", qualifier];
-        }
-        case "Aspid Hunter": {
-            return ["Aspid Arena", qualifier];
-        }
-        case "Husk Miner": {
-            return ["Myla", qualifier];
-        }
-        case "Kingsoul Fragment - Queen's": {
-            return ["Queen Fragment", qualifier];
-        }
-        case "Kingsoul Fragment - King's": {
-            return ["King Fragment", qualifier];
-        }
-        case "Relic Dealer Lemm":
-        case "Relic Dealer Lemm Shop": {
-            return [name.substr("Relic Dealer ".length), qualifier];
-        }
         case "Whispering Root": {
             // qualifier is the area
             return [`${qualifier} Root`, "Whispering Root"];
         }
-        case "Zote Rescued Vengefly King": {
-            return ["Vengefly King", qualifier];
+        default: break;
+    }
+
+    switch (id) {
+        case "DreamNail2": {
+            return ["Awoken Dream Nail", qualifier];
         }
-        case "Mega Moss Charger": {
+        case "CrystalGuardian1": {
+            return ["Crystal Guardian", qualifier];
+        }
+        case "CrystalGuardian2": {
+            return ["Enraged Guardian", qualifier];
+        }
+        case "UnchainedHollowKnight": {
+            return ["Hollow Knight Scream", qualifier];
+        }
+        case "HollowKnightDreamnail": {
+            return ["Hollow Knight", qualifier];
+        }
+        case "ColosseumBronze": {
+            return ["Trial of the Warrior", qualifier];
+        }
+        case "ColosseumSilver": {
+            return ["Trial of the Conqueror", qualifier];
+        }
+        case "ColosseumGold": {
+            return ["Trial of the Fool", qualifier];
+        }
+        case "Pantheon1": {
+            return ["Pantheon of the Master", qualifier];
+        }
+        case "Pantheon2": {
+            return ["Pantheon of the Artist", qualifier];
+        }
+        case "Pantheon3": {
+            return ["Pantheon of the Sage", qualifier];
+        }
+        case "Pantheon4": {
+            return ["Pantheon of the Knight", qualifier];
+        }
+        case "Pantheon5": {
+            return ["Pantheon of Hallownest", qualifier];
+        }
+        case "AspidHunter": {
+            return ["Aspid Arena", qualifier];
+        }
+        case "HuskMiner": {
+            return ["Myla", qualifier];
+        }
+        case "WhiteFragmentLeft": {
+            return ["Queen Fragment", qualifier];
+        }
+        case "WhiteFragmentRight": {
+            return ["King Fragment", qualifier];
+        }
+        case "Zote1": {
+            return ["Vengefly King (Zote)", qualifier];
+        }
+        case "MegaMossCharger": {
             return ["Massive Moss Charger", qualifier];
         }
-        case "Nightmare Lantern Destroyed": {
+        case "NightmareLanternDestroyed": {
             return ["Banishment", qualifier];
         }
         default: {
@@ -169,7 +169,7 @@ export function parseSplitsDefinitions(): Map<string, SplitDefinition> {
             id,
             tooltip,
         } = match.groups;
-        const [name, group] = getNameAndGroup(description);
+        const [name, group] = getNameAndGroup({ description, id, });
         definitions.set(id, {
             description,
             id,
