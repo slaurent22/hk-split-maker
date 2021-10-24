@@ -25,62 +25,6 @@ function getNameAndGroup({ description, id, }: Pick<SplitDefinition, "descriptio
 
     const { name, qualifier, } = match.groups;
 
-    switch (qualifier) {
-        case "Charm Notch":  return [`${name} Notch`, qualifier];
-        case "Essence":      return [`${name} Essence`, qualifier];
-        case "Fragment":     return [name, "Upgrade"];
-        case "Grub":         return [name.substr("Rescued ".length), qualifier];
-        case "Pantheon":     return [name, "Boss"];
-        case "Room":         return [name, "Transition"];
-        case "Stag Station": return [`${name} Stag`, qualifier];
-        case "Trinket":      return [name, "Item"];
-        case "Completed":
-        case "Dreamgate":
-        case "Lever":
-        case "Spot":
-        case "Tram":         return [name, "Event"];
-        case "Killed":
-        case "Mini Boss":    return [name, "Enemy"];
-        case "Transition":
-            switch (id) {
-                case "BasinEntry":
-                case "CrystalPeakEntry":
-                case "EnterGreenpath":
-                case "EnterGreenpathWithOvercharm":
-                case "EnterNKG":
-                case "EnterSanctum":
-                case "EnterSanctumWithShadeSoul":
-                case "FogCanyonEntry":
-                case "HiveEntry":
-                case "KingdomsEdgeEntry":
-                case "KingdomsEdgeOvercharmedEntry":
-                case "Pantheon1to4Entry":
-                case "Pantheon5Entry":
-                case "WaterwaysEntry":     return [`Enter ${name}`, qualifier];
-                case "QueensGardensEntry": return ["Enter Queen's Gardens", qualifier];
-                default: break;
-            }
-            break;
-        case "Boss":
-            switch (id) {
-                case "RadianceBoss":
-                case "HollowKnightBoss": return [name, "Practice"];
-                default: break;
-            }
-            break;
-        case "Obtain":
-            if (/Dream Nail/.test(name)) {
-                return [name, "Essence"];
-            }
-            return [name, "Item"];
-        default: break;
-    }
-
-    switch (name) {
-        case "Whispering Root": return [`${qualifier} Root`, "Whispering Root"];
-        default: break;
-    }
-
     switch (id) {
         case "AspidHunter":               return ["Aspid Arena", qualifier];
         case "ColosseumBronze":           return ["Trial of the Warrior", qualifier];
@@ -102,6 +46,52 @@ function getNameAndGroup({ description, id, }: Pick<SplitDefinition, "descriptio
         case "WhiteFragmentLeft":         return ["Queen Fragment", qualifier];
         case "WhiteFragmentRight":        return ["King Fragment", qualifier];
         case "Zote1":                     return ["Vengefly King (Zote)", qualifier];
+        case "BasinEntry":
+        case "CrystalPeakEntry":
+        case "EnterGreenpath":
+        case "EnterGreenpathWithOvercharm":
+        case "EnterNKG":
+        case "EnterSanctum":
+        case "EnterSanctumWithShadeSoul":
+        case "FogCanyonEntry":
+        case "HiveEntry":
+        case "KingdomsEdgeEntry":
+        case "KingdomsEdgeOvercharmedEntry":
+        case "Pantheon1to4Entry":
+        case "Pantheon5Entry":
+        case "WaterwaysEntry":            return [`Enter ${name}`, qualifier];
+        case "QueensGardensEntry":        return ["Enter Queen's Gardens", qualifier];
+        case "RadianceBoss":
+        case "HollowKnightBoss":          return [name, "Practice"];
+        default: break;
+    }
+
+    switch (qualifier) {
+        case "Charm Notch":  return [`${name} Notch`, qualifier];
+        case "Essence":      return [`${name} Essence`, qualifier];
+        case "Fragment":     return [name, "Upgrade"];
+        case "Grub":         return [name.substr("Rescued ".length), qualifier];
+        case "Pantheon":     return [name, "Boss"];
+        case "Room":         return [name, "Transition"];
+        case "Stag Station": return [`${name} Stag`, qualifier];
+        case "Trinket":      return [name, "Item"];
+        case "Completed":
+        case "Dreamgate":
+        case "Lever":
+        case "Spot":
+        case "Tram":         return [name, "Event"];
+        case "Killed":
+        case "Mini Boss":    return [name, "Enemy"];
+        case "Obtain":
+            if (/Dream Nail/.test(name)) {
+                return [name, "Essence"];
+            }
+            return [name, "Item"];
+        default: break;
+    }
+
+    switch (name) {
+        case "Whispering Root": return [`${qualifier} Root`, "Whispering Root"];
         default: break;
     }
 
