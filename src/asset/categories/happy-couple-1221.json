@@ -61,7 +61,7 @@
         "GreatSlash",
         "HappyCouplePlayerDataEvent"
     ],
-    "ordered": false,
+    "ordered": true,
     "endTriggeringAutosplit": true,
     "gameName": "Hollow Knight Category Extensions",
     "variables": {

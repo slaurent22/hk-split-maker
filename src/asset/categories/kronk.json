@@ -63,7 +63,7 @@
         "PathOfPainEntry": "%s (62)",
         "HuntersMark": "KRONK (63)"
     },
-    "ordered": false,
+    "ordered": true,
     "endTriggeringAutosplit": true,
     "gameName": "Hollow Knight Mods"
 }
