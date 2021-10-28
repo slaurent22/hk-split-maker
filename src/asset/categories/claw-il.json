@@ -5,12 +5,32 @@
         "Menu",
         "AnyTransition",
         "AnyTransition",
+        "AnyTransition",
+        "AnyTransition",
+        "AnyTransition",
+        "AnyTransition",
+        "AnyTransition",
+        "AnyTransition",
+        "AnyTransition",
+        "AnyTransition",
+        "AnyTransition",
+        "AnyTransition",
         "MantisClaw"
     ],
     "names": {
         "AnyTransition": [
             "Mound",
-            "Torch Room"
+            "Torch Game",
+            "Cornifer",
+            "Arena",
+            "Dash Check",
+            "Tall Room",
+            "Owen Wilshroom",
+            "Sealed Gate",
+            "Cloth",
+            "Pilgrim's Way",
+            "Epogo",
+            "Dream Tree"
         ]
     },
     "ordered": true,

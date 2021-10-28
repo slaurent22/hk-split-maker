@@ -8,11 +8,10 @@
         "AnyTransition"
     ],
     "names": {
-        "TransitionAfterSaveState": "Enter Crossroads_27",
         "AnyTransition": [
-            "Enter Grub Room",
-            "Exit Grub Room",
-            "Done"
+            "Crossroads_27 I",
+            "Grub",
+            "Crossroads_27 II"
         ]
     },
     "ordered": true,
