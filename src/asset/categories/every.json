@@ -184,6 +184,8 @@
         "SeerDeparts",
         "SpiritGladeOpen",
         "BeastsDenTrapBench",
+        "EternalOrdealUnlocked",
+        "EternalOrdealAchieved",
         "ColosseumBronzeUnlocked",
         "ColosseumSilverUnlocked",
         "ColosseumGoldUnlocked",
@@ -531,6 +533,7 @@
         "OnUseSimpleKey",
         "OnObtainGrub",
         "AnyTransition",
+        "TransitionAfterSaveState",
         "ManualSplit"
     ],
     "ordered": true,

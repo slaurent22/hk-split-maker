@@ -222,6 +222,8 @@ function getUrl(id, qualifier) {
             case "AllBreakables":              return getUrl("FragileStrengthBroken", "Charm");
             case "MetEmilitia":                return getUrl("Emilitia", "NPC");
             case "EndingSplit":                return getUrl("Knight", "Misc");
+            case "EternalOrdealUnlocked":
+            case "EternalOrdealAchieved":      return getUrl("Zote", "Enemy");
         }
     }
 
@@ -326,10 +328,12 @@ function getUrl(id, qualifier) {
             case "Pantheon5Entry":
             case "GodhomeLoreRoom":
             case "GodhomeBench":                 return getUrl("Godhome", "Area");
+            case "TransitionAfterSaveState":
             case "AnyTransition":                return getUrl("ManualSplit", "Misc");
             case "ColosseumBronzeExit":          return getUrl("ColosseumBronze", "Trial");
             case "ColosseumSilverExit":          return getUrl("ColosseumSilver", "Trial");
             case "ColosseumGoldExit":            return getUrl("ColosseumGold", "Trial");
+
         }
     }
 

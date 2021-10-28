@@ -183,6 +183,8 @@ import HollowKnightDreamnail from "./Boss/HollowKnightBoss.png";
 import SeerDeparts from "./Achievement/Ascension.png";
 import SpiritGladeOpen from "./Achievement/Attunement.png";
 import BeastsDenTrapBench from "./Misc/Bench.png";
+import EternalOrdealUnlocked from "./Enemy/Zote.png";
+import EternalOrdealAchieved from "./Enemy/Zote.png";
 import ColosseumBronzeUnlocked from "./Achievement/Warrior.png";
 import ColosseumSilverUnlocked from "./Achievement/Conqueror.png";
 import ColosseumGoldUnlocked from "./Achievement/Fool.png";
@@ -530,6 +532,7 @@ import OnObtainSimpleKey from "./Item/SimpleKey.png";
 import OnUseSimpleKey from "./Item/SimpleKey.png";
 import OnObtainGrub from "./NPC/Grub.png";
 import AnyTransition from "./Misc/Knight.png";
+import TransitionAfterSaveState from "./Misc/Knight.png";
 import ManualSplit from "./Misc/Knight.png";
 export default {
     AbyssShriek,
@@ -715,6 +718,8 @@ export default {
     SeerDeparts,
     SpiritGladeOpen,
     BeastsDenTrapBench,
+    EternalOrdealUnlocked,
+    EternalOrdealAchieved,
     ColosseumBronzeUnlocked,
     ColosseumSilverUnlocked,
     ColosseumGoldUnlocked,
@@ -1062,5 +1067,6 @@ export default {
     OnUseSimpleKey,
     OnObtainGrub,
     AnyTransition,
+    TransitionAfterSaveState,
     ManualSplit,
 };
