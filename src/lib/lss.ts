@@ -3,6 +3,7 @@ import { createLiveSplitIconData } from "./image-util";
 import { getIconURLs, parseSplitsDefinitions } from "./splits";
 
 export interface Config {
+    startTriggeringAutosplit?: string;
     splitIds: Array<string>;
     names?: Record<string, string|Array<string>>;
     icons?: Record<string, string|Array<string>>;
@@ -239,6 +240,7 @@ export async function createSplitsXml(config: Config): Promise<string> {
             { AutoSplitterSettings: [
                 { Ordered: boolRepr(ordered), },
                 { AutosplitEndRuns: boolRepr(endTriggeringAutosplit), },
+                { AutosplitStartRuns: config.startTriggeringAutosplit ?? "", },
                 { Splits: autosplits, }
             ], }
         ],

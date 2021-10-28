@@ -32,6 +32,12 @@ type SplitIdItem = typeof MANUAL_SPLIT_SCHEMA | {
     const: string;
 };
 
+const startTriggers = SplitConfigSchemaSource.properties.startTriggeringAutosplit as {
+    enum: Array<string>;
+};
+
+startTriggers.enum = startTriggers.enum.concat(SPLITS.map(({ id, }) => id));
+
 const items = SplitConfigSchemaSource.properties.splitIds.items as {
     oneOf: Array<SplitIdItem>;
 };

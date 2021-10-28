@@ -28,6 +28,10 @@
             "description": "Whether to end time at the last autosplit. Set this to false for full-game runs, where time ends on a final cutscene.",
             "type": "boolean"
         },
+        "startTriggeringAutosplit": {
+            "description": "Autosplit to use to start the timer, rather than starting on new file",
+            "enum": []
+        },
         "endingSplit": {
             "description": "Info for the last split if it's a game-ending split rather than an autosplit",
             "type": "object",
