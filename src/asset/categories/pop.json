@@ -1,5 +1,6 @@
 {
     "categoryName": "Path of Pain",
+    "startTriggeringAutosplit": "PathOfPainEntry",
     "splitIds": [
         "PathOfPainTransition1",
         "PathOfPainTransition2",

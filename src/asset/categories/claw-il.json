@@ -1,0 +1,19 @@
+{
+    "categoryName": "Claw IL",
+    "startTriggeringAutosplit": "MothwingCloak",
+    "splitIds": [
+        "Menu",
+        "AnyTransition",
+        "AnyTransition",
+        "MantisClaw"
+    ],
+    "names": {
+        "AnyTransition": [
+            "Mound",
+            "Torch Room"
+        ]
+    },
+    "ordered": true,
+    "endTriggeringAutosplit": true,
+    "gameName": "Hollow Knight"
+}

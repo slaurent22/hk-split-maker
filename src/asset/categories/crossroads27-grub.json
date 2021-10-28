@@ -1,0 +1,21 @@
+{
+    "categoryName": "Crossroads_27 w/Grub",
+    "startTriggeringAutosplit": "TransitionAfterSaveState",
+    "splitIds": [
+        "AnyTransition",
+        "GrubCrossroadsSpikes",
+        "AnyTransition",
+        "AnyTransition"
+    ],
+    "names": {
+        "TransitionAfterSaveState": "Enter Crossroads_27",
+        "AnyTransition": [
+            "Enter Grub Room",
+            "Exit Grub Room",
+            "Done"
+        ]
+    },
+    "ordered": true,
+    "endTriggeringAutosplit": true,
+    "gameName": "Hollow Knight"
+}

@@ -146,6 +146,14 @@
         {
             "fileName": "wp",
             "displayName": "White Palace"
+        },
+        {
+            "fileName": "crossroads27-grub",
+            "displayName": "Crossroads27 (w/ Grub)"
+        },
+        {
+            "fileName": "claw-il",
+            "displayName": "Claw IL"
         }
     ],
     "Mods": [
