@@ -31,7 +31,7 @@
         "-RestingGroundsStation",
         "-ShamanStone",
         "-GrubCrossroadsSpikes",
-        "-ElegantKeyShoptimised",
+        "-ElegantKey",
         "ShadeSoul",
         "SoulTyrantEssence",
         "-GrubRestingGroundsCrypts",
@@ -172,7 +172,7 @@
     ],
     "names": {
         "GrubCrossroadsWall": "[1U] %s",
-        "ElegantKeyShoptimised": "[1U] %s",
+        "ElegantKey": "[1U] %s",
         "GrubRestingGroundsCrypts": "[1D] %s",
         "GlowingWomb": "[2D] %s",
         "DreamGate": "[3D] %s",
