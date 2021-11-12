@@ -1,0 +1,22 @@
+{
+    "categoryName": "Grubsong%",
+    "splitIds": [
+        "GrubCrossroadsSpikes",
+        "GrubCrossroadsWall",
+        "GrubCrossroadsGuarded",
+        "VengefulSpirit",
+        "EnterGreenpath",
+        "GrubGreenpathMossKnight",
+        "MothwingCloak",
+        "GrubGreenpathCornifer",
+        "GrubGreenpathHunter",
+        "GrubGreenpathVesselFragment",
+        "GrubCrossroadsAcid",
+        "GrubFungalBouncy",
+        "GrubCrossroadsVengefly",
+        "Grubsong"
+    ],
+    "ordered": true,
+    "endTriggeringAutosplit": true,
+    "gameName": "Hollow Knight Category Extensions"
+}
