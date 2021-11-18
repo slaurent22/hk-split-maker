@@ -323,9 +323,10 @@
         },
         {
             "fileName": "cartographer",
-            "displayName": "Cartographer (a.k.a. Dapper Mapper)",
+            "displayName": "Cartographer",
             "data": {
-                "routeNotesURL": "https://pastebin.com/DMHJxF7x"
+                "routeNotesURL": "https://pastebin.com/DMHJxF7x",
+                "searchTerms": ["Dapper", "Mapper", "all", "maps", "Cornifer", "Iselda"]
             }
         },
         {
