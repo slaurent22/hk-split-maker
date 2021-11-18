@@ -1,9 +1,10 @@
-import type { VFC } from "react";
+import type { ReactElement } from "react";
 import React, { useEffect, useRef, useState } from "react";
 import { saveAs } from "file-saver";
-import { getCategory, getCategoryDirectory } from "../lib/categories";
+import { getCategoryConfigJSON, getCategoryDirectory } from "../lib/categories";
 import type { CategoryDefinition } from "../asset/categories/category-directory.json";
 import type { Config } from "../lib/lss";
+import CategoryAnyPercent from "../asset/categories/any.json";
 import { createSplitsXml } from "../lib/lss";
 import ArrowButton from "./ArrowButton";
 import CategorySelect from "./CategorySelect";
@@ -17,25 +18,22 @@ interface AppState {
     configInput: string;
     splitOutput: string;
     categories: Record<string, Array<CategoryDefinition>>;
-    initialCategory: CategoryDefinition;
     categoryName?: string;
-    requestedCategoryViaURL: boolean;
-    categoryHasChanged: boolean;
 }
 
-const App: VFC = () => {
+interface AppProps {
+    requestedCategoryName?: string;
+    onUpdateCategoryName: (categoryName: string) => void;
+}
+
+export default function App({ requestedCategoryName, onUpdateCategoryName, }: AppProps): ReactElement {
 
     const inputEditor = useRef<SplitConfigEditor|null>(null);
 
     const [state, setState] = useState<AppState>({
-        configInput: "",
+        configInput: JSON.stringify(CategoryAnyPercent, null, 4),
         splitOutput: "",
-        initialCategory: {
-            "fileName": "4ms",
-            "displayName": "4 Mask Shards",
-        },
-        requestedCategoryViaURL: false,
-        categoryHasChanged: false,
+        categoryName: requestedCategoryName,
         categories: getCategoryDirectory(),
     });
 
@@ -53,18 +51,16 @@ const App: VFC = () => {
         });
     };
 
-    // const updateCategory = async(category: CategoryDefinition) => {
-    //     if (category.fileName && inputEditor.current) {
-    //         const editorContent = await getCategory(category.fileName);
-    //         inputEditor.current.setContent(editorContent);
-    //         onConfigInputChange(editorContent);
-    //     }
-    // };
+    const getCategoryDefinition = (categoryName: string) => {
+        return Object.values(state.categories).flat().find(category => {
+            return category.fileName === categoryName;
+        });
+    };
 
     useEffect(() => {
         void (async() => {
-            if (state.categoryName && inputEditor.current) {
-                const editorContent = await getCategory(state.categoryName);
+            if (state.categoryName && getCategoryDefinition(state.categoryName) && inputEditor.current) {
+                const editorContent = await getCategoryConfigJSON(state.categoryName);
                 inputEditor.current.setContent(editorContent);
                 onConfigInputChange(editorContent);
             }
@@ -73,7 +69,6 @@ const App: VFC = () => {
 
     const onCategorySelect = (newValue: CategoryDefinition|null) => {
         if (newValue) {
-            // await updateCategory(newValue);
             setState({
                 ...state,
                 categoryName: newValue.fileName,
@@ -83,23 +78,8 @@ const App: VFC = () => {
 
 
     useEffect(() => {
-        const hash = window.location.hash.substring(1);
-        const initialCategory = Object.values(state.categories).flat().find(category => {
-            return category.fileName.toLowerCase() === hash.toLowerCase();
-        });
-        if (initialCategory) {
-            setState({
-                ...state,
-                initialCategory,
-                requestedCategoryViaURL: true,
-                categoryName: initialCategory.fileName,
-            });
-        }
-    }, []);
-
-    useEffect(() => {
         if (state.categoryName) {
-            window.location.hash = state.categoryName;
+            onUpdateCategoryName(state.categoryName);
         }
     }, [state.categoryName]);
 
@@ -192,9 +172,7 @@ const App: VFC = () => {
                                 id="categories"
                                 onChange={onCategorySelect}
                                 data={state.categories}
-                                defaultValue={
-                                    state.requestedCategoryViaURL ? state.initialCategory : null
-                                }
+                                defaultValue={getCategoryDefinition(requestedCategoryName ?? "") ?? null}
                             />
                             <ArrowButton
                                 text="Generate"
@@ -229,6 +207,4 @@ const App: VFC = () => {
             </div>
         </div>
     );
-};
-
-export default App;
+}

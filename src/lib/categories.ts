@@ -20,7 +20,7 @@ export function getCategoryDirectory(): Record<string, Array<CategoryDefinition>
     return CategoryDirectory;
 }
 
-export async function getCategory(fileName: string): Promise<string> {
+export async function getCategoryConfigJSON(fileName: string): Promise<string> {
     // This results in a dire warning because we're importing arbitrary data.
     // In the case of the icon files, we have a set of functions for the files.
     // It works there, but the number of split files is likely to grow, so that's not
