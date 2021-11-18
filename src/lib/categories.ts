@@ -5,6 +5,8 @@
 */
 import type { CategoryDefinition } from "../asset/categories/category-directory.json";
 
+import CategoryDirectory from "../asset/categories/category-directory.json";
+
 interface CatContent {
     splitIds: Array<string>;
     ordered: boolean;
@@ -14,9 +16,8 @@ interface CatContent {
     variables: Record<string, string>;
 }
 
-export async function getCategoryDirectory(): Promise<Record<string, Array<CategoryDefinition>>> {
-    const { default: module, } = await import("../asset/categories/category-directory.json");
-    return module;
+export function getCategoryDirectory(): Record<string, Array<CategoryDefinition>> {
+    return CategoryDirectory;
 }
 
 export async function getCategory(fileName: string): Promise<string> {

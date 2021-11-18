@@ -1,5 +1,5 @@
-import type { ReactNode } from "react";
-import React, { Component } from "react";
+import type { VFC } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import { saveAs } from "file-saver";
 import { getCategory, getCategoryDirectory } from "../lib/categories";
 import type { CategoryDefinition } from "../asset/categories/category-directory.json";
@@ -13,148 +13,104 @@ import Header from "./Header";
 import Instructions from "./Instructions";
 import AlertBanner from "./AlertBanner";
 
-type AppProps = Record<string, never>;
 interface AppState {
     configInput: string;
     splitOutput: string;
-    categories?: Record<string, Array<CategoryDefinition>>;
+    categories: Record<string, Array<CategoryDefinition>>;
     initialCategory: CategoryDefinition;
+    categoryName?: string;
     requestedCategoryViaURL: boolean;
+    categoryHasChanged: boolean;
 }
-export default class App extends Component<AppProps, AppState> {
 
-    private inputEditor: React.MutableRefObject<SplitConfigEditor|null>;
+const App: VFC = () => {
 
-    private categoryHasChanged = false;
+    const inputEditor = useRef<SplitConfigEditor|null>(null);
 
-    constructor(props: AppProps) {
-        super(props);
-        this.state = {
-            configInput: "",
-            splitOutput: "",
-            initialCategory: {
-                "fileName": "4ms",
-                "displayName": "4 Mask Shards",
-            },
-            requestedCategoryViaURL: false,
-        };
-        this.inputEditor = React.createRef();
-    }
-    public async componentDidMount(): Promise<void> {
-        const newState = {
-            categories: await getCategoryDirectory(),
-            initialCategory: this.state.initialCategory,
-            requestedCategoryViaURL: false,
-        };
-        const hash = window.location.hash.substring(1);
-        if (newState.categories) {
-            const initialCategory = Object.values(newState.categories).flat().find(category => {
-                return category.fileName.toLowerCase() === hash.toLowerCase();
-            });
-            if (initialCategory) {
-                newState.initialCategory = initialCategory;
-                newState.requestedCategoryViaURL = true;
-            }
-            await this.updateCategory(newState.initialCategory);
-        }
-        this.setState(newState);
-    }
-    public render(): ReactNode {
-        return (
-            <div id="app">
-                <AlertBanner />
-                <Header />
-                <Instructions />
-                <div id="input-output">
-                    <div id="editor-section" className="side">
-                        <h2>Input config JSON</h2>
-                        <div className="output-container">
-                            <div className="row">
-                                {/* Hacky, but useful: Only render the drop down once we have data.
-                                    Otherwise, the initial defaultValue will be empty, and never updated,
-                                    so the inital value will always be the first in the list, not Aluba.
-                                    Setting value instead of defaultValue leads to the change event
-                                    not triggering when the initial value is re-selected. */}
-                                {this.state.categories && this.state.initialCategory && <CategorySelect
-                                    id="categories"
-                                    onChange={this.onCategorySelect.bind(this)}
-                                    data={this.state.categories}
-                                    defaultValue={
-                                        this.state.requestedCategoryViaURL ? this.state.initialCategory : null
-                                    }
-                                />}
-                                <ArrowButton
-                                    text="Generate"
-                                    id="submit-button"
-                                    onClick={this.onSubmit.bind(this)}
-                                />
-                            </div>
-                            <SplitConfigEditor
-                                defaultValue={this.state.configInput}
-                                onChange={this.onConfigInputChange.bind(this)}
-                                ref={this.inputEditor}
-                            />
-                        </div>
-                    </div>
-                    <div id="output-section" className="side">
-                        <h2>Output Splits File</h2>
-                        <div className="output-container">
-                            <div className="row">
-                                <ArrowButton
-                                    id="download-button"
-                                    text="Download"
-                                    onClick={this.onDownload.bind(this)}
-                                    disabled={this.state.splitOutput.length === 0}
-                                />
-                            </div>
-                            <SplitOutputEditor
-                                defaultValue={this.state.splitOutput}
-                                onChange={this.onSplitOutputChange.bind(this)}
-                            />
-                        </div>
-                    </div>
-                </div>
-            </div>
-        );
-    }
+    const [state, setState] = useState<AppState>({
+        configInput: "",
+        splitOutput: "",
+        initialCategory: {
+            "fileName": "4ms",
+            "displayName": "4 Mask Shards",
+        },
+        requestedCategoryViaURL: false,
+        categoryHasChanged: false,
+        categories: getCategoryDirectory(),
+    });
 
-    private onConfigInputChange(value: string|undefined) {
-        this.setState({
+    const onConfigInputChange = (value: string|undefined) => {
+        setState({
+            ...state,
             configInput: value ?? "",
         });
-    }
+    };
 
-    private onSplitOutputChange(value: string|undefined) {
-        this.setState({
+    const onSplitOutputChange = (value: string|undefined) => {
+        setState({
+            ...state,
             splitOutput: value ?? "",
         });
-    }
+    };
 
-    private async updateCategory(category: CategoryDefinition) {
-        if (category.fileName && this.inputEditor.current) {
-            const editorContent = await getCategory(category.fileName);
-            this.inputEditor.current.setContent(editorContent);
-            this.onConfigInputChange(editorContent);
-            if (this.categoryHasChanged) {
-                window.location.hash = category.fileName;
+    // const updateCategory = async(category: CategoryDefinition) => {
+    //     if (category.fileName && inputEditor.current) {
+    //         const editorContent = await getCategory(category.fileName);
+    //         inputEditor.current.setContent(editorContent);
+    //         onConfigInputChange(editorContent);
+    //     }
+    // };
+
+    useEffect(() => {
+        void (async() => {
+            if (state.categoryName && inputEditor.current) {
+                const editorContent = await getCategory(state.categoryName);
+                inputEditor.current.setContent(editorContent);
+                onConfigInputChange(editorContent);
             }
-            this.categoryHasChanged = true;
-        }
-    }
-    private async onCategorySelect(newValue: CategoryDefinition|null) {
+        })();
+    }, [state.categoryName, inputEditor.current]);
+
+    const onCategorySelect = (newValue: CategoryDefinition|null) => {
         if (newValue) {
-            await this.updateCategory(newValue);
+            // await updateCategory(newValue);
+            setState({
+                ...state,
+                categoryName: newValue.fileName,
+            });
         }
-    }
+    };
 
-    private parseConfigInput() {
-        return JSON.parse(this.state.configInput) as Config;
-    }
 
-    private async onSubmit(): Promise<void> {
+    useEffect(() => {
+        const hash = window.location.hash.substring(1);
+        const initialCategory = Object.values(state.categories).flat().find(category => {
+            return category.fileName.toLowerCase() === hash.toLowerCase();
+        });
+        if (initialCategory) {
+            setState({
+                ...state,
+                initialCategory,
+                requestedCategoryViaURL: true,
+                categoryName: initialCategory.fileName,
+            });
+        }
+    }, []);
+
+    useEffect(() => {
+        if (state.categoryName) {
+            window.location.hash = state.categoryName;
+        }
+    }, [state.categoryName]);
+
+    const parseConfigInput = () => {
+        return JSON.parse(state.configInput) as Config;
+    };
+
+    const onSubmit = async() => {
         let configObject;
         try {
-            configObject = this.parseConfigInput();
+            configObject = parseConfigInput();
         }
         catch (e) {
             console.log(e);
@@ -179,12 +135,13 @@ export default class App extends Component<AppProps, AppState> {
             submitButton.disabled = false;
         }
 
-        this.setState({
+        setState({
+            ...state,
             splitOutput: output,
         });
-    }
+    };
 
-    private buildSplitsFileName(splitsConfig: Config) {
+    const buildSplitsFileName = (splitsConfig: Config) => {
         const filename = (splitsConfig?.categoryName || "splits")
             .toLowerCase() // Make file name compatible:
             .replace(/['"]/g, "") // remove ' and "
@@ -202,22 +159,76 @@ export default class App extends Component<AppProps, AppState> {
             }
         }
         return `${filename}${suffix}`;
-    }
+    };
 
-    private onDownload(): void {
-        const output = this.state.splitOutput;
+    const onDownload = (): void => {
+        const output = state.splitOutput;
         const outBlob = new Blob([output]);
 
         // Guess a good file name.
         // Can be inaccurate if a new config has been entered but not processed yet.
         let splitName = "";
         try {
-            const splitsConfig = this.parseConfigInput();
-            splitName = this.buildSplitsFileName(splitsConfig);
+            const splitsConfig = parseConfigInput();
+            splitName = buildSplitsFileName(splitsConfig);
         }
         catch {
             splitName = "splits";
         }
         saveAs(outBlob, `${splitName}.lss`);
-    }
-}
+    };
+
+    return (
+        <div id="app">
+            <AlertBanner />
+            <Header />
+            <Instructions />
+            <div id="input-output">
+                <div id="editor-section" className="side">
+                    <h2>Input config JSON</h2>
+                    <div className="output-container">
+                        <div className="row">
+                            <CategorySelect
+                                id="categories"
+                                onChange={onCategorySelect}
+                                data={state.categories}
+                                defaultValue={
+                                    state.requestedCategoryViaURL ? state.initialCategory : null
+                                }
+                            />
+                            <ArrowButton
+                                text="Generate"
+                                id="submit-button"
+                                onClick={onSubmit}
+                            />
+                        </div>
+                        <SplitConfigEditor
+                            defaultValue={state.configInput}
+                            onChange={onConfigInputChange}
+                            ref={inputEditor}
+                        />
+                    </div>
+                </div>
+                <div id="output-section" className="side">
+                    <h2>Output Splits File</h2>
+                    <div className="output-container">
+                        <div className="row">
+                            <ArrowButton
+                                id="download-button"
+                                text="Download"
+                                onClick={onDownload}
+                                disabled={state.splitOutput.length === 0}
+                            />
+                        </div>
+                        <SplitOutputEditor
+                            defaultValue={state.splitOutput}
+                            onChange={onSplitOutputChange}
+                        />
+                    </div>
+                </div>
+            </div>
+        </div>
+    );
+};
+
+export default App;
