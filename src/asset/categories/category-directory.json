@@ -540,6 +540,14 @@
             }
         },
         {
+            "fileName": "salubras-blessing",
+            "displayName": "Salubra's Blessing%",
+            "data": {
+                "routeNotesURL": "https://pastebin.com/1246ZqXH",
+                "searchTerms": ["Smooch"]
+            }
+        },
+        {
             "fileName": "save-myla",
             "displayName": "Save Myla (Dash Slash route)",
             "data": {
