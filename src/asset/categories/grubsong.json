@@ -16,6 +16,18 @@
         "GrubCrossroadsVengefly",
         "Grubsong"
     ],
+    "names": {
+        "GrubCrossroadsSpikes": "Spike Grub",
+        "GrubCrossroadsWall": "Wall Grub",
+        "GrubCrossroadsGuarded": "Guarded Grub",
+        "GrubGreenpathMossKnight": "Moss Knight Grub",
+        "GrubGreenpathCornifer": "Cornifer Grub",
+        "GrubGreenpathHunter": "Hunter Grub",
+        "GrubGreenpathVesselFragment": "Vessel Fragment Grub",
+        "GrubCrossroadsAcid": "Acid Grub",
+        "GrubFungalBouncy": "Bouncy Grub",
+        "GrubCrossroadsVengefly": "Vengefly Grub"
+    },
     "ordered": true,
     "endTriggeringAutosplit": true,
     "gameName": "Hollow Knight Category Extensions"
