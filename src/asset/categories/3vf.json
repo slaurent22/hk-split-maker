@@ -1,4 +1,5 @@
 {
+    "categoryName": "3 Vessel Fragments",
     "splitIds": [
         "VengefulSpirit",
         "EnterGreenpath",
@@ -11,6 +12,5 @@
     ],
     "ordered": true,
     "endTriggeringAutosplit": true,
-    "gameName": "Hollow Knight Category Extensions",
-    "categoryName": "3 Vessel Fragments"
+    "gameName": "Hollow Knight Category Extensions"
 }

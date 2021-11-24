@@ -1,0 +1,32 @@
+{
+    "categoryName": "All Skills",
+    "splitIds": [
+        "CycloneSlash",
+        "MothwingCloak",
+        "MantisClaw",
+        "GreatSlash",
+        "CrystalHeart",
+        "DescendingDark",
+        "DreamNail",
+        "ShadeSoul",
+        "HowlingWraiths",
+        "Dreamer1",
+        "Dreamer2",
+        "Dreamer3",
+        "DashSlash",
+        "IsmasTear",
+        "MonarchWings",
+        "AbyssShriek",
+        "ShadeCloak"
+    ],
+    "ordered": true,
+    "endTriggeringAutosplit": false,
+    "endingSplit": {
+        "name": "Hollow Knight",
+        "icon": "HollowKnightBoss"
+    },
+    "gameName": "Hollow Knight",
+    "variables": {
+        "glitch": "All Glitches"
+    }
+}

@@ -1,4 +1,5 @@
 {
+    "categoryName": "True Ending",
     "splitIds": [
         "VengefulSpirit",
         "EnterGreenpath",
@@ -24,8 +25,9 @@
         "Lurien",
         "FailedChampionEssence",
         "Monomon",
+        "TollBenchQG",
         "MarmuEssence",
-        "TraitorLord",
+        "WhiteFragmentLeft",
         "GalienEssence",
         "Hegemol",
         "WhitePalaceEntry",
@@ -40,7 +42,6 @@
         "icon": "RadianceBoss"
     },
     "gameName": "Hollow Knight",
-    "categoryName": "True Ending",
     "variables": {
         "glitch": "Current Patch NMG"
     }

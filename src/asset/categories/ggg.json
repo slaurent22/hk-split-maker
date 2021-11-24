@@ -1,4 +1,5 @@
 {
+    "categoryName": "Gaslight, Gatekeep, Girlboss",
     "splitIds": [
         "NightmareLantern",
         "CityGateOpen",
@@ -11,6 +12,5 @@
     },
     "ordered": true,
     "endTriggeringAutosplit": true,
-    "gameName": "Hollow Knight Category Extensions",
-    "categoryName": "Gaslight, Gatekeep, Girlboss"
+    "gameName": "Hollow Knight Category Extensions"
 }

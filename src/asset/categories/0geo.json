@@ -1,11 +1,12 @@
 {
+    "categoryName": "0 Geo",
     "splitIds": [
         "VengefulSpirit",
         "EnterGreenpath",
         "MothwingCloak",
         "MantisClaw",
         "DesolateDive",
-        "CrystalPeak",
+        "CrystalPeakEntry",
         "CrystalHeart",
         "DescendingDark",
         "DreamNail",
@@ -21,6 +22,5 @@
         "name": "Hollow Knight",
         "icon": "HollowKnightBoss"
     },
-    "gameName": "Hollow Knight Category Extensions",
-    "categoryName": "0 Geo"
+    "gameName": "Hollow Knight Category Extensions"
 }

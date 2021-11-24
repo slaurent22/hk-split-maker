@@ -1,0 +1,42 @@
+{
+    "categoryName": "All Geo Chests",
+    "splitIds": [
+        "-CrossroadsStation",
+        "-FalseKnight",
+        "VengefulSpirit",
+        "-SoulCatcher",
+        "EnterGreenpath",
+        "MothwingCloak",
+        "-NotchShrumalOgres",
+        "MantisClaw",
+        "MantisLords",
+        "-CityGateOpen",
+        "-CityOfTears",
+        "-EnterSanctum",
+        "-SpellTwister",
+        "DesolateDive",
+        "-StoreroomsStation",
+        "-CrystalPeak",
+        "CrystalHeart",
+        "DescendingDark",
+        "DreamNail",
+        "-WatcherChandelier",
+        "BlackKnight",
+        "-TeachersArchive",
+        "QueensGardensEntry",
+        "ManualSplit"
+    ],
+    "names": {
+        "VengefulSpirit": "{FK Chest(1)} %s",
+        "CityGateOpen": "%s (2)",
+        "StoreroomsStation": "%s (3)",
+        "DescendingDark": "%s (4)",
+        "WatcherChandelier": "Chandelier (5)",
+        "TeachersArchive": "%s (6)",
+        "QueensGardensEntry": "{MMC Chest(7)} %s",
+        "ManualSplit": "Weaver's Chest (8)"
+    },
+    "ordered": true,
+    "endTriggeringAutosplit": true,
+    "gameName": "Hollow Knight Category Extensions"
+}

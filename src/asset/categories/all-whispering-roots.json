@@ -1,6 +1,8 @@
 {
+    "categoryName": "All Whispering Roots",
     "splitIds": [
         "VengefulSpirit",
+        "EnterGreenpath",
         "MothwingCloak",
         "DreamNail",
         "MantisClaw",
@@ -24,6 +26,5 @@
     ],
     "ordered": true,
     "endTriggeringAutosplit": true,
-    "gameName": "Hollow Knight Category Extensions",
-    "categoryName": "All Whispering Roots"
+    "gameName": "Hollow Knight Category Extensions"
 }

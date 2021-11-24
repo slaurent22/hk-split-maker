@@ -1,11 +1,12 @@
 {
+    "categoryName": "All Geo Rocks",
     "splitIds": [
         "VengefulSpirit",
         "EnterGreenpath",
         "MothwingCloak",
         "MantisClaw",
         "DesolateDive",
-        "CrystalPeak",
+        "CrystalPeakEntry",
         "CrystalHeart",
         "DescendingDark",
         "DreamNail",
@@ -15,6 +16,7 @@
         "DeepnestSpa",
         "TramPass",
         "BeastsDenTrapBench",
+        "TollBenchQG",
         "QueensGardensStation",
         "KingsBrand",
         "HuntersMark"
@@ -25,7 +27,7 @@
         "MothwingCloak": "%s [24]",
         "MantisClaw": "%s [32]",
         "DesolateDive": "%s [45]",
-        "CrystalPeak": "%s [56]",
+        "CrystalPeakEntry": "%s [56]",
         "CrystalHeart": "%s [71]",
         "DescendingDark": "%s [73]",
         "DreamNail": "%s [73]",
@@ -35,12 +37,12 @@
         "DeepnestSpa": "%s [150]",
         "TramPass": "%s [158]",
         "BeastsDenTrapBench": "%s [161]",
+        "TollBenchQG": "%s [173]",
         "QueensGardensStation": "%s [181]",
         "KingsBrand": "%s [198]",
         "HuntersMark": "All Geo Rocks [207]"
     },
     "ordered": true,
     "endTriggeringAutosplit": true,
-    "gameName": "Hollow Knight Mods",
-    "categoryName": "All Geo Rocks"
+    "gameName": "Hollow Knight Mods"
 }

@@ -11,6 +11,7 @@ button.arrow-button {
     align-items: center;
     font-family: serif;
     margin: 8px;
+    height: 38px;
 }
 
 button.arrow-button .arrow-right {
@@ -33,4 +34,8 @@ button.arrow-button[disabled] {
 
 button.arrow-button[disabled] .arrow {
     filter: brightness(45%);
+}
+
+button.arrow-button:hover {
+    border-color: grey;
 }

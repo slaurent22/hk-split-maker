@@ -1,5 +1,7 @@
 {
+    "categoryName": "Elegy%",
     "splitIds": [
+        "GrubCrossroadsWall",
         "VengefulSpirit",
         "EnterGreenpath",
         "GreenpathStation",
@@ -20,7 +22,6 @@
         "GrubRestingGroundsCrypts",
         "ShamanStone",
         "GrubCrossroadsSpikes",
-        "GrubCrossroadsWall",
         "GrubCityBelowSanctum",
         "GrubWaterwaysCenter",
         "GrubWaterwaysIsma",
@@ -69,6 +70,5 @@
     },
     "ordered": true,
     "endTriggeringAutosplit": true,
-    "gameName": "Hollow Knight Category Extensions",
-    "categoryName": "Elegy%"
+    "gameName": "Hollow Knight Category Extensions"
 }

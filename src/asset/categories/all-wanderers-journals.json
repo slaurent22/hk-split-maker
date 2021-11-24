@@ -1,0 +1,48 @@
+{
+    "categoryName": "All Wanderer's Journals",
+    "splitIds": [
+        "VengefulSpirit",
+        "EnterGreenpath",
+        "OnObtainWanderersJournal",
+        "MothwingCloak",
+        "MantisClaw",
+        "OnObtainWanderersJournal",
+        "OnObtainWanderersJournal",
+        "OnObtainWanderersJournal",
+        "BlueLake",
+        "DreamNail",
+        "OnObtainWanderersJournal",
+        "EnterSanctum",
+        "DesolateDive",
+        "OnObtainWanderersJournal",
+        "OnObtainWanderersJournal",
+        "OnObtainWanderersJournal",
+        "OnObtainWanderersJournal",
+        "OnObtainWanderersJournal",
+        "OnObtainWanderersJournal",
+        "OnObtainWanderersJournal",
+        "OnObtainWanderersJournal",
+        "OnObtainWanderersJournal"
+    ],
+    "names": {
+        "OnObtainWanderersJournal": [
+            "Journal outside Greenpath Stag",
+            "Journal above Mantis Village",
+            "Journal below Shrumal Ogres",
+            "Journal below Stone Sanctuary",
+            "Journal above King's Station",
+            "Journal at City Storerooms",
+            "Journal in Crystal Peaks",
+            "Journal in Howling Cliffs",
+            "Journal below Soul Eater",
+            "Journal in Pleasure House",
+            "Journal below Broken Bridge",
+            "Journal at Kingdom's Edge Entrance",
+            "Journal at Camp Bench",
+            "Journal near Markoth"
+        ]
+    },
+    "ordered": true,
+    "endTriggeringAutosplit": true,
+    "gameName": "Hollow Knight Category Extensions"
+}

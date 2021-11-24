@@ -1,0 +1,43 @@
+{
+    "categoryName": "True Ending",
+    "splitIds": [
+        "KingsPass",
+        "MantisClaw",
+        "Dashmaster",
+        "MothwingCloak",
+        "VengefulSpirit",
+        "QueensStationStation",
+        "HowlingWraiths",
+        "DreamNail",
+        "EnterAnyDream",
+        "ShadeCloak",
+        "AbyssShriek",
+        "VoidHeart",
+        "Dreamer1",
+        "KingsStationStation",
+        "Dreamer2",
+        "Dreamer3",
+        "HollowKnightDreamnail"
+    ],
+    "names": {
+        "EnterAnyDream": "Dreamnail Lurien",
+        "Dreamer1": "Lurien",
+        "Dreamer2": "Herrah",
+        "Dreamer3": "Monomon"
+    },
+    "icons": {
+        "Dreamer1": "Lurien",
+        "Dreamer2": "Hegemol",
+        "Dreamer3": "Monomon"
+    },
+    "ordered": true,
+    "endTriggeringAutosplit": false,
+    "endingSplit": {
+        "name": "Radiance",
+        "icon": "RadianceBoss"
+    },
+    "gameName": "Hollow Knight",
+    "variables": {
+        "glitch": "No Main Menu Storage"
+    }
+}

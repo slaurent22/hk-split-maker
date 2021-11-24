@@ -1,51 +1,124 @@
 {
-    "Hollow Knight": [
-      {
-        "fileName": "112",
-        "displayName": "112% APB"
-      },
-      {
-        "fileName": "107",
-        "displayName": "107% AB"
-      },
-      {
-        "fileName": "106",
-        "displayName": "106% TE"
-      },
-      {
-        "fileName": "all-skills",
-        "displayName": "All Skills"
-      },
-      {
-        "fileName": "all-skills-cp",
-        "displayName": "All Skills (Current Patch NMG)"
-      },
-      {
-        "fileName": "any",
-        "displayName": "Any%"
-      },
-      {
-        "fileName": "any-cp-spore",
-        "displayName": "Any% (1.4.3.2) w/ Spore Shroom"
-      },
-      {
-        "fileName": "any-ss",
-        "displayName": "Any% Steel Soul"
-      },
-      {
-        "fileName": "low",
-        "displayName": "Low%"
-      },
-      {
-        "fileName": "te",
-        "displayName": "True Ending"
-      },
-      {
-        "fileName": "te-cp",
-        "displayName": "True Ending (1.4+ Shriek)"
-      }
+    "Main": [
+        {
+            "fileName": "112",
+            "displayName": "112% APB",
+            "data": {
+                "routeNotesURL": "https://pastebin.com/qznSrku9"
+            }
+        },
+        {
+            "fileName": "107",
+            "displayName": "107% AB",
+            "data": {
+                "routeNotesURL": "https://pastebin.com/bqRttPCc"
+            }
+        },
+        {
+            "fileName": "106",
+            "displayName": "106% TE",
+            "data": {
+                "routeNotesURL": "https://gist.github.com/cerpintext/92084996c3f122e40f016007228c9ab9"
+            }
+        },
+        {
+            "fileName": "all-skills",
+            "displayName": "All Skills",
+            "data": {
+                "routeNotesURL": "https://pastebin.com/X2kivfc0"
+            }
+        },
+        {
+            "fileName": "all-skills-cp",
+            "displayName": "All Skills (Current Patch NMG)",
+            "data": {
+                "routeNotesURL": "https://pastebin.com/qSGRDiBZ"
+            }
+        },
+        {
+            "fileName": "any",
+            "displayName": "Any%"
+        },
+        {
+            "fileName": "any-cp-spore",
+            "displayName": "Any% (1.4.3.2) w/ Spore Shroom"
+        },
+        {
+            "fileName": "any-ss",
+            "displayName": "Any% Steel Soul"
+        },
+        {
+            "fileName": "low",
+            "displayName": "Low%",
+            "data": {
+                "routeNotesURL": "https://pastebin.com/sb5iu8VA"
+            }
+        },
+        {
+            "fileName": "te",
+            "displayName": "True Ending",
+            "data": {
+                "routeNotesURL": "https://pastebin.com/Vx1d7MzE"
+            }
+        },
+        {
+            "fileName": "te-cp",
+            "displayName": "True Ending (1.4+ Shriek)",
+            "data": {
+                "routeNotesURL": "https://pastebin.com/AtjcrXph"
+            }
+        },
+        {
+            "fileName": "te-flukamoth",
+            "displayName": "True Ending (\"Flukamoth\")"
+        },
+        {
+            "fileName": "godhome-ending",
+            "displayName": "Godhome Ending"
+        }
     ],
-    "Hollow Knight: Individual Level": [
+    "Glitched": [
+        {
+            "fileName": "any-ag",
+            "displayName": "Any% (All Glitches)"
+        },
+        {
+            "fileName": "any-nmms",
+            "displayName": "Any% (No Main Menu Storage)"
+        },
+        {
+            "fileName": "all-skills-ag",
+            "displayName": "All Skills (All Glitches)",
+            "data": {
+                "routeNotesURL": "https://pastebin.com/7RD8WkqX"
+            }
+        },
+        {
+            "fileName": "low-ag",
+            "displayName": "Low% (All Glitches)"
+        },
+        {
+            "fileName": "te-ag",
+            "displayName": "True Ending (All Glitches)"
+        },
+        {
+            "fileName": "te-nmms",
+            "displayName": "True Ending (No Main Menu Storage)"
+        }
+    ],
+    "Individual Level": [
+        {
+            "fileName": "colo1",
+            "displayName": "Trial of the Warrior (colo1)"
+        },
+        {
+            "fileName": "colo2",
+            "displayName": "Trial of the Conqueror (colo2)"
+        },
+        {
+            "fileName": "colo3",
+            "displayName": "Trial of the Fool (colo3)"
+        },
         {
             "fileName": "p1",
             "displayName": "Pantheon of the Master (P1)"
@@ -71,36 +144,58 @@
             "displayName": "Path of Pain"
         },
         {
-            "fileName": "wp-1006",
-            "displayName": "White Palace (1.0.0.6)"
+            "fileName": "wp",
+            "displayName": "White Palace"
         }
     ],
-    "Hollow Knight Mods": [
+    "Mods": [
         {
             "fileName": "all-geo-rocks",
-            "displayName": "All Geo Rocks"
+            "displayName": "All Geo Rocks",
+            "data": {
+                "routeNotesURL": "https://pastebin.com/FREwbzUV"
+            }
         },
         {
             "fileName": "fc-as-te",
-            "displayName": "Forgotten Corners AS TE"
+            "displayName": "Forgotten Corners AS TE",
+            "data": {
+                "routeNotesURL": "https://pastebin.com/ZtVK0yYR"
+            }
         },
         {
             "fileName": "grass",
-            "displayName": "Grass%"
+            "displayName": "Grass%",
+            "data": {
+                "routeNotesURL": "https://pastebin.com/jJ7Kp7fd"
+            }
         },
         {
             "fileName": "kronk",
-            "displayName": "Kronk%"
+            "displayName": "Kronk%",
+            "data": {
+                "routeNotesURL": "https://drop.rixx.de/JjBs/"
+            }
+        },
+        {
+            "fileName": "low-ab",
+            "displayName": "Low% All Bindings",
+            "data": {
+                "routeNotesURL": "https://pastebin.com/iX1FkYqm"
+            }
         }
     ],
-    "Hollow Knight Category Extensions": [
+    "Category Extensions": [
         {
             "fileName": "0geo",
             "displayName": "0 Geo"
         },
         {
             "fileName": "3vf",
-            "displayName": "3 Vessel Fragments"
+            "displayName": "3 Vessel Fragments",
+            "data": {
+                "routeNotesURL": "https://pastebin.com/ZqDk8rQ0"
+            }
         },
         {
             "fileName": "worldsoul",
@@ -108,15 +203,25 @@
         },
         {
             "fileName": "4ms",
-            "displayName": "4 Mask Shards"
+            "displayName": "4 Mask Shards",
+            "data": {
+                "routeNotesURL": "https://pastebin.com/YZf8CZAd"
+            }
         },
         {
             "fileName": "4ms-0geo",
-            "displayName": "4 Mask Shards 0 Geo"
+            "displayName": "4 Mask Shards 0 Geo",
+            "data": {
+                "routeNotesURL": "https://pastebin.com/9VGYYnxq"
+            }
         },
         {
             "fileName": "16ms",
-            "displayName": "16 Mask Shards"
+            "displayName": "16 Mask Shards",
+            "data": {
+                "routeNotesURL": "https://pastebin.com/2cRkecGU",
+                "searchTerms": ["All", "Skulls"]
+            }
         },
         {
             "fileName": "all-breakable-charms",
@@ -124,19 +229,60 @@
         },
         {
             "fileName": "acn",
-            "displayName": "All Charm Notches"
+            "displayName": "All Charm Notches",
+            "data": {
+                "routeNotesURL": "https://pastebin.com/NU38A5Jc"
+            }
         },
         {
             "fileName": "acn-1221",
-            "displayName": "All Charm Notches (1.2.2.1)"
+            "displayName": "All Charm Notches (1.2.2.1)",
+            "data": {
+                "routeNotesURL": "https://pastebin.com/xAES68kr"
+            }
+        },
+        {
+            "fileName": "acnnsc",
+            "displayName": "ACN No Shop Charms",
+            "data": {
+                "routeNotesURL": "https://pastebin.com/VtCFCQrz",
+                "searchTerms": ["All", "Notches"]
+            }
+        },
+        {
+            "fileName": "all-geo-chests",
+            "displayName": "All Geo Chests",
+            "data": {
+                "routeNotesURL": "https://pastebin.com/UQkWAn9X"
+            }
         },
         {
             "fileName": "all-hallownest-seals",
-            "displayName": "All Hallownest Seals"
+            "displayName": "All Hallownest Seals",
+            "data": {
+                "routeNotesURL": "https://pastebin.com/9TvBf2QB"
+            }
+        },
+        {
+            "fileName": "all-keys",
+            "displayName": "All Keys",
+            "data": {
+                "routeNotesURL": "https://pastebin.com/yEQRU9zw"
+            }
+        },
+        {
+            "fileName": "all-kings-idols",
+            "displayName": "All King's Idols",
+            "data": {
+                "routeNotesURL": "https://pastebin.com/DtjmS4JC"
+            }
         },
         {
             "fileName": "all-stag-stations",
-            "displayName": "All Stag Stations"
+            "displayName": "All Stag Stations",
+            "data": {
+                "routeNotesURL": "https://pastebin.com/s0QyY7UE"
+            }
         },
         {
             "fileName": "all-unbreakable-charms",
@@ -147,20 +293,48 @@
             "displayName": "All Unbreakable Charms (Steel Soul)"
         },
         {
-            "fileName": "all-whispering-roots",
-            "displayName": "All Whispering Roots"
+            "fileName": "all-wanderers-journals",
+            "displayName": "All Wanderer's Journals",
+            "data": {
+                "routeNotesURL": "https://pastebin.com/smQ1fmzM"
+            }
         },
         {
-            "fileName": "aluba",
-            "displayName": "Aluba%"
+            "fileName": "all-whispering-roots",
+            "displayName": "All Whispering Roots",
+            "data": {
+                "routeNotesURL": "https://pastebin.com/jyQ1JnPf"
+            }
+        },
+        {
+            "fileName": "a1uba",
+            "displayName": "A1uba%",
+            "data": {
+                "searchTerms": ["Aluba"]
+            }
         },
         {
             "fileName": "al2ba",
-            "displayName": "Al2ba%"
+            "displayName": "Al2ba%",
+            "data": {
+                "routeNotesURL": "https://pastebin.com/j3i4uV16",
+                "searchTerms": ["Aluba"]
+            }
         },
         {
             "fileName": "cartographer",
-            "displayName": "Cartographer (a.k.a. Dapper Mapper)"
+            "displayName": "Cartographer",
+            "data": {
+                "routeNotesURL": "https://pastebin.com/DMHJxF7x",
+                "searchTerms": ["Dapper", "Mapper", "all", "maps", "Cornifer", "Iselda"]
+            }
+        },
+        {
+            "fileName": "clawless-shade-cloak",
+            "displayName": "Clawless Shade Cloak (CSC)",
+            "data": {
+                "routeNotesURL": "https://pastebin.com/YJA6JqB1"
+            }
         },
         {
             "fileName": "eat-me-too",
@@ -168,35 +342,95 @@
         },
         {
             "fileName": "elderbug",
-            "displayName": "Elderbug%"
+            "displayName": "Elderbug%",
+            "data": {
+                "routeNotesURL": "https://pastebin.com/TCxBpEj1",
+                "searchTerms": ["Delicate", "Flower"]
+            }
         },
         {
             "fileName": "elegy",
-            "displayName": "Elegy%"
+            "displayName": "Elegy%",
+            "data": {
+                "routeNotesURL": "https://pastebin.com/6rVwQwLg"
+            }
+        },
+        {
+            "fileName": "empty-hall",
+            "displayName": "Empty Hall",
+            "data": {
+                "routeNotesURL": "https://pastebin.com/fH7xjsau",
+                "searchTerms": ["Godhome", "Gods"]
+            }
+        },
+        {
+            "fileName": "egg",
+            "displayName": "Egg (21)"
+        },
+        {
+            "fileName": "egg-101",
+            "displayName": "Egg (101)"
         },
         {
             "fileName": "enraged-guardian",
             "displayName": "Enraged Guardian%"
         },
         {
-            "fileName": "fool",
-            "displayName": "Fool%"
+            "fileName": "fool-1221",
+            "displayName": "Fool% (1.2.2.1)",
+            "data": {
+                "routeNotesURL": "https://youtu.be/dQw4w9WgXcQ"
+            }
         },
         {
             "fileName": "ggg",
-            "displayName": "Gaslight, Gatekeep, Girlboss"
+            "displayName": "Gaslight, Gatekeep, Girlboss",
+            "data": {
+                "routeNotesURL": "https://pastebin.com/hVCNQkuJ"
+            }
+        },
+        {
+            "fileName": "grubsong",
+            "displayName": "Grubsong%",
+            "data": {
+                "routeNotesURL": "https://pastebin.com/4nK0dMSp"
+            }
+        },
+        {
+            "fileName": "florist",
+            "displayName": "Florist",
+            "data": {
+                "routeNotesURL": "https://pastebin.com/eXNyLRmh",
+                "searchTerms": ["Delicate", "Flower"]
+            }
+        },
+        {
+            "fileName": "ghostbusters",
+            "displayName": "Ghostbusters",
+            "data": {
+                "routeNotesURL": "https://pastebin.com/R60ZqPh5"
+            }
         },
         {
             "fileName": "gpz",
-            "displayName": "GPZ%"
+            "displayName": "GPZ%",
+            "data": {
+                "routeNotesURL": "https://pastebin.com/EfggmK5Q"
+            }
         },
         {
             "fileName": "great-hopper",
-            "displayName": "Great Hopper%"
+            "displayName": "Great Hopper%",
+            "data": {
+                "routeNotesURL": "https://pastebin.com/FwtGJx9m"
+            }
         },
         {
             "fileName": "happy-couple",
-            "displayName": "Happy Couple"
+            "displayName": "Happy Couple",
+            "data": {
+                "routeNotesURL": "https://pastebin.com/s0wpmmvw"
+            }
         },
         {
             "fileName": "happy-couple-1221",
@@ -204,19 +438,21 @@
         },
         {
             "fileName": "hiveblood",
-            "displayName": "Hiveblood%"
+            "displayName": "Hiveblood%",
+            "data": {
+                "routeNotesURL": "https://pastebin.com/QN4szmEy"
+            }
         },
         {
             "fileName": "lbc",
             "displayName": "Lifeblood Core%"
         },
         {
-            "fileName": "low-ab",
-            "displayName": "Low% All Bindings"
-        },
-        {
             "fileName": "marissa-audience",
-            "displayName": "Marissa Audience"
+            "displayName": "Marissa Audience",
+            "data": {
+                "routeNotesURL": "https://pastebin.com/j2NPwzMi"
+            }
         },
         {
             "fileName": "marmu",
@@ -224,19 +460,45 @@
         },
         {
             "fileName": "mr-mushroom-ending",
-            "displayName": "Mr. Mushroom Ending"
+            "displayName": "Mr. Mushroom Ending",
+            "data": {
+                "routeNotesURL": "https://pastebin.com/u2yHq1FA"
+            }
         },
         {
             "fileName": "myla",
-            "displayName": "Myla%"
+            "displayName": "Myla%",
+            "data": {
+                "routeNotesURL": "https://pastebin.com/R32n9tRe"
+            }
+        },
+        {
+            "fileName": "mylas-revenge",
+            "displayName": "Myla's Revenge",
+            "data": {
+                "routeNotesURL": "https://pastebin.com/6GpVtNaC"
+            }
         },
         {
             "fileName": "nice",
-            "displayName": "Nice% (1.2.2.1)"
+            "displayName": "Nice%",
+            "data": {
+                "routeNotesURL": "https://pastebin.com/PKM4PqKV"
+            }
+        },
+        {
+            "fileName": "nice-1221",
+            "displayName": "Nice% (1.2.2.1)",
+            "data": {
+                "routeNotesURL": "https://pastebin.com/yZ198TnD"
+            }
         },
         {
             "fileName": "nkg",
-            "displayName": "NKG%"
+            "displayName": "NKG%",
+            "data": {
+                "routeNotesURL": "https://pastebin.com/HgW2P3Cj"
+            }
         },
         {
             "fileName": "nmg",
@@ -244,27 +506,67 @@
         },
         {
             "fileName": "nosk",
-            "displayName": "Nosk%"
+            "displayName": "Nosk%",
+            "data": {
+                "routeNotesURL": "https://pastebin.com/6kFcaZUM"
+            }
         },
         {
             "fileName": "pop-percent",
-            "displayName": "Path of Pain%"
+            "displayName": "Path of Pain%",
+            "data": {
+                "routeNotesURL": "https://pastebin.com/KZSZd7XE"
+            }
         },
         {
             "fileName": "p5bo",
-            "displayName": "Pantheon 5 Boss Order"
+            "displayName": "Pantheon 5 Boss Order",
+            "data": {
+                "routeNotesURL": "https://pastebin.com/58nWJpE6"
+            }
         },
         {
             "fileName": "p5bo-breaks",
-            "displayName": "Pantheon 5 Boss Order (manual rest break splits)"
+            "displayName": "Pantheon 5 Boss Order (w/ breaks)",
+            "data": {
+                "routeNotesURL": "https://pastebin.com/58nWJpE6"
+            }
+        },
+        {
+            "fileName": "round",
+            "displayName": "Round%",
+            "data": {
+                "routeNotesURL": "https://pastebin.com/6WZT44bf"
+            }
+        },
+        {
+            "fileName": "salubras-blessing",
+            "displayName": "Salubra's Blessing%",
+            "data": {
+                "routeNotesURL": "https://pastebin.com/1246ZqXH",
+                "searchTerms": ["Smooch"]
+            }
+        },
+        {
+            "fileName": "save-myla",
+            "displayName": "Save Myla (Dash Slash route)",
+            "data": {
+                "routeNotesURL": "https://pastebin.com/RHZz4apd"
+            }
         },
         {
             "fileName": "shriek",
-            "displayName": "Shriek%"
+            "displayName": "Shriek%",
+            "data": {
+                "routeNotesURL": "https://pastebin.com/JuvF7pqZ"
+            }
         },
         {
             "fileName": "spelless",
-            "displayName": "Spelless"
+            "displayName": "Spelless",
+            "data": {
+                "routeNotesURL": "https://pastebin.com/QLp4NfEG"
+            }
         },
         {
             "fileName": "spelless-low",
@@ -272,11 +574,25 @@
         },
         {
             "fileName": "spelless-te",
-            "displayName": "Spelless True Ending"
+            "displayName": "Spelless True Ending",
+            "data": {
+                "routeNotesURL": "https://pastebin.com/bKx7eWsX"
+            }
+        },
+        {
+            "fileName": "witness",
+            "displayName": "Witness",
+            "data": {
+                "routeNotesURL": "https://pastebin.com/Eh3w66CQ",
+                "searchTerms": ["Quirrel"]
+            }
         },
         {
             "fileName": "zote",
-            "displayName": "Zote%"
+            "displayName": "Zote%",
+            "data": {
+                "routeNotesURL": "https://pastebin.com/KWYVyfn7"
+            }
         }
     ]
 }

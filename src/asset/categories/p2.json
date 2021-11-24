@@ -1,4 +1,5 @@
 {
+    "categoryName": "Pantheon of the Artist",
     "splitIds": [
         "XeroP",
         "CrystalGuardianP",
@@ -13,6 +14,5 @@
     ],
     "ordered": true,
     "endTriggeringAutosplit": true,
-    "gameName": "Hollow Knight",
-    "categoryName": "Pantheon of the Artist"
+    "gameName": "Hollow Knight"
 }

@@ -1,4 +1,5 @@
 {
+    "categoryName": "Worldsoul",
     "splitIds": [
         "VengefulSpirit",
         "EnterGreenpath",
@@ -39,6 +40,5 @@
     },
     "ordered": true,
     "endTriggeringAutosplit": true,
-    "gameName": "Hollow Knight Category Extensions",
-    "categoryName": "Worldsoul"
+    "gameName": "Hollow Knight Category Extensions"
 }

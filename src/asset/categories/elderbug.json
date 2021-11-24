@@ -1,4 +1,5 @@
 {
+    "categoryName": "Elderbug%",
     "splitIds": [
         "VengefulSpirit",
         "EnterGreenpath",
@@ -13,6 +14,5 @@
     ],
     "ordered": true,
     "endTriggeringAutosplit": true,
-    "gameName": "Hollow Knight Category Extensions",
-    "categoryName": "Elderbug%"
+    "gameName": "Hollow Knight Category Extensions"
 }

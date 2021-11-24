@@ -1,21 +1,20 @@
 {
+    "categoryName": "4 Mask Shards 0 Geo",
     "splitIds": [
-        "Dirtmouth",
-        "Grub1",
-        "AspidHunter",
+        "KingsPass",
+        "GrubCrossroadsVengefly",
         "MaskFragment1",
-        "Grub2",
-        "Grub3",
+        "GrubCrossroadsWall",
+        "GrubCrossroadsSpikes",
         "VengefulSpirit",
-        "EnterGreenpath",
-        "Grub4",
-        "Grub5",
         "MaskFragment2",
+        "EnterGreenpath",
+        "GrubGreenpathCornifer",
+        "GrubGreenpathHunter",
         "MaskFragment3",
         "Mask1"
     ],
     "ordered": true,
     "endTriggeringAutosplit": true,
-    "gameName": "Hollow Knight Category Extensions",
-    "categoryName": "4 Mask Shards 0 Geo"
+    "gameName": "Hollow Knight Category Extensions"
 }

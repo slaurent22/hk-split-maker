@@ -1,4 +1,5 @@
 {
+    "categoryName": "All Unbreakable Charms",
     "splitIds": [
         "VengefulSpirit",
         "MothwingCloak",
@@ -7,9 +8,9 @@
         "GruzMother",
         "DreamNail",
         "FragileStrength",
-        "Gorb",
-        "Xero",
-        "KingdomsEdge",
+        "GorbEssence",
+        "XeroEssence",
+        "KingdomsEdgeEntry",
         "KingsStationStation",
         "GorgeousHusk",
         "BlackKnight",
@@ -18,6 +19,5 @@
     ],
     "ordered": true,
     "endTriggeringAutosplit": true,
-    "gameName": "Hollow Knight Category Extensions",
-    "categoryName": "All Unbreakable Charms"
+    "gameName": "Hollow Knight Category Extensions"
 }

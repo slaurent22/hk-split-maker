@@ -1,4 +1,5 @@
 {
+    "categoryName": "Low% All Bindings",
     "splitIds": [
         "GruzMother",
         "DreamNail",
@@ -16,6 +17,5 @@
         "name": "Hollow Knight",
         "icon": "HollowKnightBoss"
     },
-    "gameName": "Hollow Knight Mods",
-    "categoryName": "Low% All Bindings"
+    "gameName": "Hollow Knight Mods"
 }

@@ -56,11 +56,11 @@ function parseSplitsDefinitions() {
 const Splits = [...parseSplitsDefinitions().values()];
 
 const every = {
+    "categoryName": "EVERY AUTOSPLIT",
     "splitIds": Splits.map(({ id }) => id),
     "ordered": true,
     "endTriggeringAutosplit": false,
     "gameName": "Hollow Knight Category Extensions",
-    "categoryName": "EVERY AUTOSPLIT",
     "variables": {
         "platform": "PC",
         "patch": "1.5.75"
@@ -68,7 +68,7 @@ const every = {
 }
 
 function createEvery() {
-    const output = JSON.stringify(every, null, 4);
+    const output = JSON.stringify(every, null, 4) + "\n";
     writeFileSync(FILE.EVERY, output);
 }
 
@@ -98,7 +98,6 @@ const NEW_ID_MAP = {
     "CrystalGuardian2": "CrystalGuardian1",
     "EnragedGuardian": "CrystalGuardian1",
     "GreyPrince": "GreyPrinceZote",
-    "Sly": "SlyNailsage",
     "Hornet2": "Hornet1",
     "FailedKnight": "FalseKnight",
     "FailedChampion": "FalseKnight",
@@ -115,7 +114,15 @@ const NEW_ID_MAP = {
     "SlySimpleKey": "SimpleKey",
     "KilledOblobbles": "Oblobbles",
     "ManualSplit": "Knight",
-    "AllUnbreakables": "UnbreakableStrength"
+    "AllUnbreakables": "UnbreakableStrength",
+    "SoulTyrantEssenceWithSanctumGrub": "SoulTyrantEssence",
+    "ColosseumBronzeUnlocked": "ColosseumBronze",
+    "ColosseumBronzeExit": "ColosseumBronze",
+    "ColosseumSilverUnlocked": "ColosseumSilver",
+    "ColosseumSilverExit": "ColosseumSilver",
+    "ColosseumGoldUnlocked": "ColosseumGold",
+    "ColosseumGoldExit": "ColosseumGold",
+    "GodhomeLoreRoom": "GodhomeBench"
 };
 
 function getUrl(id, qualifier) {
@@ -134,6 +141,11 @@ function getUrl(id, qualifier) {
         const match = id.match(/(?<name>.+)P/);
         if (match) {
             return getUrl(match.groups.name, "Boss");
+        }
+    }
+    if (qualifier === "Boss") {
+        switch (id) {
+            case "Sly": return getUrl("SlyNailsage", "Boss");
         }
     }
 
@@ -163,6 +175,29 @@ function getUrl(id, qualifier) {
         }
     }
 
+    if (qualifier === "Obtain") {
+        switch (id) {
+            case "OnObtainGhostMarissa":     return getUrl("Marissa", "NPC");
+            case "OnObtainGhostCaelifFera":  return getUrl("CaelifFera", "NPC");
+            case "OnObtainGhostPoggy":       return getUrl("Poggy", "NPC");
+            case "OnObtainGhostGravedigger": return getUrl("Gravedigger", "NPC");
+            case "OnObtainGhostJoni":        return getUrl("Joni", "NPC");
+            case "OnObtainGhostCloth":       return getUrl("Cloth", "NPC");
+            case "OnObtainGhostVespa":       return getUrl("Vespa", "NPC");
+            case "OnObtainGhostRevek":       return getUrl("Revek", "NPC");
+            case "OnObtainWanderersJournal": return getUrl("WanderersJournal", "Relic");
+            case "OnObtainHallownestSeal":   return getUrl("HallownestSeal", "Relic");
+            case "OnObtainKingsIdol":        return getUrl("KingsIdol", "Relic");
+            case "OnObtainArcaneEgg":        return getUrl("ArcaneEgg", "Relic");
+            case "OnObtainRancidEgg":        return getUrl("RancidEgg", "Item");
+            case "OnObtainMaskShard":        return getUrl("MaskShard", "Fragment");
+            case "OnObtainVesselFragment":   return getUrl("VesselFragment1", "Fragment");
+            case "OnObtainSimpleKey":        return getUrl("SimpleKey", "Item");
+            case "OnUseSimpleKey":           return getUrl("SimpleKey", "Item");
+            case "OnObtainGrub":             return getUrl("Grub", "NPC");
+        }
+    }
+
     if (qualifier === "Event") {
         switch (id) {
             case "PreGrimmShop":               return getUrl("TroupeMasterGrimm", "Boss");
@@ -183,16 +218,22 @@ function getUrl(id, qualifier) {
             case "SpiritGladeOpen":            return getUrl("Attunement", "Achievement");
             case "BeastsDenTrapBench":         return getUrl("Bench", "Misc");
             case "PlayerDeath":                return getUrl("Shade", "Enemy");
-            case "SlyShopFinished":            return getUrl("SlyRescued", "NPC");
+            case "SlyShopFinished":            return getUrl("Sly", "Misc");
             case "AllBreakables":              return getUrl("FragileStrengthBroken", "Charm");
             case "MetEmilitia":                return getUrl("Emilitia", "NPC");
+            case "EndingSplit":                return getUrl("Knight", "Misc");
+            case "EternalOrdealUnlocked":
+            case "EternalOrdealAchieved":      return getUrl("Zote", "Enemy");
         }
     }
 
     if (qualifier === "Trial") {
         switch (id) {
+            case "ColosseumBronzeUnlocked":
             case "ColosseumBronze": return getUrl("Warrior", "Achievement")
+            case "ColosseumSilverUnlocked":
             case "ColosseumSilver": return getUrl("Conqueror", "Achievement")
+            case "ColosseumGoldUnlocked":
             case "ColosseumGold":   return getUrl("Fool", "Achievement")
             case "Pantheon1":       return getUrl("Brotherhood", "Achievement")
             case "Pantheon2":       return getUrl("Inspiration", "Achievement")
@@ -280,12 +321,19 @@ function getUrl(id, qualifier) {
             case "TransDescendingDark":          return getUrl("DescendingDark", "Skill");
             case "CorniferAtHome":               return getUrl("Iselda", "Misc");
             case "QueensGardensFrogsTrans":      return getUrl("QueensGardens", "Area");
-            case "QueensGardensPostArenaTransition": return getUrl("QueensGardens", "Area");
+            case "QueensGardensPostArenaTransition":
+                                                 return getUrl("QueensGardens", "Area");
             case "WhitePalaceEntry":             return getUrl("WhitePalace", "Area");
             case "Pantheon1to4Entry":
             case "Pantheon5Entry":
-            case "GodhomeBench":
-                return getUrl("Godhome", "Area");
+            case "GodhomeLoreRoom":
+            case "GodhomeBench":                 return getUrl("Godhome", "Area");
+            case "TransitionAfterSaveState":
+            case "AnyTransition":                return getUrl("ManualSplit", "Misc");
+            case "ColosseumBronzeExit":          return getUrl("ColosseumBronze", "Trial");
+            case "ColosseumSilverExit":          return getUrl("ColosseumSilver", "Trial");
+            case "ColosseumGoldExit":            return getUrl("ColosseumGold", "Trial");
+
         }
     }
 

@@ -3,6 +3,7 @@ import { createLiveSplitIconData } from "./image-util";
 import { getIconURLs, parseSplitsDefinitions } from "./splits";
 
 export interface Config {
+    startTriggeringAutosplit?: string;
     splitIds: Array<string>;
     names?: Record<string, string|Array<string>>;
     icons?: Record<string, string|Array<string>>;
@@ -53,16 +54,14 @@ function getVariableNode(name: string, value: string): xml.XmlObject {
 }
 
 function getVariablesNode(config: Config): xml.XmlObject {
-    const glitchAttrName = `${config.categoryName} Glitch`;
-    const glitch = config.variables?.glitch || "No Major Glitches";
-    const glitchVarNode = getVariableNode(glitchAttrName, glitch);
+    const variablesNode = { Variables: [] as Array<xml.XmlObject>, };
 
-    const variablesNode = {
-        Variables: [
-            glitchVarNode
-        ],
-    };
-
+    if (config.variables?.glitch) {
+        const glitchAttrName = `${config.categoryName} Glitch`;
+        variablesNode.Variables.push(
+            getVariableNode(glitchAttrName, config.variables.glitch)
+        );
+    }
     if (config.variables?.patch) {
         variablesNode.Variables.push(
             getVariableNode("Patch", config.variables.patch)
@@ -105,11 +104,6 @@ export async function createSplitsXml(config: Config): Promise<string> {
 
     const splitIdCount = new Map<string, number>();
     const parsedSplitIds = splitIds.map(splitId => {
-        if (!splitIdCount.has(splitId)) {
-            splitIdCount.set(splitId, 0);
-        }
-        const currentSplitIdCount = splitIdCount.get(splitId) as number;
-
         let autosplitId = splitId;
         let subsplit = false;
         let name = "";
@@ -136,6 +130,11 @@ export async function createSplitsXml(config: Config): Promise<string> {
         if (!splitDefinition) {
             throw new Error(`Failed to find a definition for split id ${autosplitId}`);
         }
+
+        if (!splitIdCount.has(autosplitId)) {
+            splitIdCount.set(autosplitId, 0);
+        }
+        const currentSplitIdCount = splitIdCount.get(autosplitId) as number;
 
         const nameOverride = names && names[autosplitId];
         if (nameOverride) {
@@ -164,7 +163,7 @@ export async function createSplitsXml(config: Config): Promise<string> {
             iconId = iconOverride[currentSplitIdCount];
         }
 
-        splitIdCount.set(splitId, 1 + currentSplitIdCount);
+        splitIdCount.set(autosplitId, 1 + currentSplitIdCount);
         return {
             autosplitId,
             subsplit,
@@ -241,6 +240,7 @@ export async function createSplitsXml(config: Config): Promise<string> {
             { AutoSplitterSettings: [
                 { Ordered: boolRepr(ordered), },
                 { AutosplitEndRuns: boolRepr(endTriggeringAutosplit), },
+                { AutosplitStartRuns: config.startTriggeringAutosplit ?? "", },
                 { Splits: autosplits, }
             ], }
         ],

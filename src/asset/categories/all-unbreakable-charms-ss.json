@@ -1,6 +1,8 @@
 {
+    "categoryName": "All Unbreakable Charms Steel Soul",
     "splitIds": [
         "VengefulSpirit",
+        "EnterGreenpath",
         "MothwingCloak",
         "MegaMossCharger",
         "MantisClaw",
@@ -11,9 +13,9 @@
         "CrystalGuardian1",
         "CrystalHeart",
         "DreamNail",
-        "Xero",
-        "Gorb",
-        "KingdomsEdge",
+        "XeroEssence",
+        "GorbEssence",
+        "KingdomsEdgeEntry",
         "KingsStationStation",
         "GorgeousHusk",
         "BlackKnight",
@@ -22,6 +24,5 @@
     ],
     "ordered": true,
     "endTriggeringAutosplit": true,
-    "gameName": "Hollow Knight Category Extensions",
-    "categoryName": "All Unbreakable Charms Steel Soul"
+    "gameName": "Hollow Knight Category Extensions"
 }

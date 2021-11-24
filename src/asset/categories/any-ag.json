@@ -1,0 +1,27 @@
+{
+    "categoryName": "Any%",
+    "splitIds": [
+        "KingsPass",
+        "QueensGardensEntry",
+        "Dreamer2",
+        "Dreamer3"
+    ],
+    "names": {
+        "Dreamer2": "Herrah",
+        "Dreamer3": "Lurien"
+    },
+    "icons": {
+        "Dreamer2": "Hegemol",
+        "Dreamer3": "Lurien"
+    },
+    "ordered": true,
+    "endTriggeringAutosplit": false,
+    "endingSplit": {
+        "name": "Sealed Siblings",
+        "icon": "HollowKnightBoss"
+    },
+    "gameName": "Hollow Knight",
+    "variables": {
+        "glitch": "All Glitches"
+    }
+}

@@ -1,4 +1,5 @@
 {
+    "categoryName": "112% APB",
     "splitIds": [
         "FuryOfTheFallen",
         "VengefulSpirit",
@@ -12,7 +13,7 @@
         "StoreroomsStation",
         "CrystalHeart",
         "DescendingDark",
-        "Dreamshield",
+        "RestingGroundsStation",
         "ShadeSoul",
         "DungDefenderIdol",
         "TollBenchBasin",
@@ -32,7 +33,6 @@
         "HowlingWraiths",
         "MaskFragment3",
         "Flame1",
-        "SoulEater",
         "KingdomsEdgeEntry",
         "KingsBrand",
         "AbyssShriek",
@@ -50,10 +50,10 @@
         "MarmuEssence",
         "WhiteFragmentLeft",
         "Hegemol",
-        "Weaversong",
-        "TramPass",
-        "Nosk",
-        "TramDeepnest",
+        "GalienEssence",
+        "Zote2",
+        "Ore3",
+        "VesselFragment7",
         "HiveEntry",
         "Mask2",
         "Hiveblood",
@@ -64,10 +64,10 @@
         "Lurien",
         "NailUpgrade3",
         "WhiteDefenderEssence",
-        "LittleFool",
-        "ColosseumBronze",
-        "ColosseumSilver",
-        "ColosseumGold",
+        "ColosseumBronzeUnlocked",
+        "ColosseumSilverUnlocked",
+        "ColosseumGoldUnlocked",
+        "ColosseumGoldExit",
         "NightmareLanternDestroyed",
         "ShapeOfUnn",
         "GreyPrinceEssence",
@@ -80,21 +80,21 @@
         "NailUpgrade4",
         "Flukenest",
         "Pantheon1to4Entry",
-        "GorbP",
-        "OroMatoNailBrosP",
-        "MarmuP",
-        "SheoPaintmasterP",
-        "GalienP",
-        "SlyP",
-        "FailedChampionP",
-        "PureVesselP",
-        "XeroP",
-        "MarmuP",
-        "HiveKnightP",
-        "WatcherKnightsP",
-        "EnragedGuardianP",
-        "SoulTyrantP",
-        "PureVesselP"
+        "GodhomeBench",
+        "Pantheon1",
+        "GodhomeBench",
+        "Pantheon2",
+        "GodhomeBench",
+        "Pantheon3",
+        "GodhomeBench",
+        "Pantheon4",
+        "GodhomeBench",
+        "GodhomeBench",
+        "GodhomeBench",
+        "GodhomeLoreRoom",
+        "GodhomeBench",
+        "GodhomeLoreRoom",
+        "GodhomeLoreRoom"
     ],
     "names": {
         "CrystalHeart": "[2U] %s",
@@ -109,7 +109,7 @@
         "Flame1": [
             "[2U] %s"
         ],
-        "SoulEater": "[2D] %s",
+        "KingdomsEdgeEntry": "[2D] %s",
         "AbyssShriek": "[2D] %s",
         "NotchGrimm": "[3D] %s",
         "NightmareLanternDestroyed": "[2U] %s",
@@ -117,10 +117,40 @@
         "GreyMournerSeerAscended": "[2U] %s",
         "Mask4": "Flower Quest (Mask)",
         "Kingsoul": "[2D] White Palace",
-        "Pantheon1to4Entry": "Enter Pantheon 1"
+        "Pantheon1to4Entry": "Enter Pantheon 1",
+        "GodhomeBench": [
+            "Enter Gorb",
+            "Enter Marmu",
+            "Enter Galien",
+            "Enter Failed Champion",
+            "Enter Xero",
+            "Enter Marmu",
+            "Enter Hive Knight",
+            "Enter Enraged Guardian"
+        ],
+        "GodhomeLoreRoom": [
+            "Enter Watcher Knights",
+            "Enter Soul Tyrant",
+            "Enter Pure Vessel"
+        ]
     },
     "icons": {
-        "Mask4": "HasDelicateFlower"
+        "Mask4": "HasDelicateFlower",
+        "GodhomeBench": [
+            "GorbP",
+            "MarmuP",
+            "GalienP",
+            "FailedChampionP",
+            "XeroP",
+            "MarmuP",
+            "HiveKnightP",
+            "EnragedGuardianP"
+        ],
+        "GodhomeLoreRoom": [
+            "WatcherKnightsP",
+            "SoulTyrantP",
+            "PureVesselP"
+        ]
     },
     "ordered": true,
     "endTriggeringAutosplit": false,
@@ -128,6 +158,5 @@
         "name": "Embrace the Void",
         "icon": "RadianceBoss"
     },
-    "gameName": "Hollow Knight",
-    "categoryName": "112% APB"
+    "gameName": "Hollow Knight"
 }

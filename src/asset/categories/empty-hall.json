@@ -1,0 +1,28 @@
+{
+    "categoryName": "Empty Hall",
+    "splitIds": [
+        "VengefulSpirit",
+        "SoulCatcher",
+        "EnterGreenpath",
+        "FungalWastes",
+        "NotchShrumalOgres",
+        "PlayerDeath",
+        "MantisClaw",
+        "DeepnestSpa",
+        "TramPass",
+        "TramDeepnest",
+        "SlyRescued",
+        "DreamNail",
+        "Lemm2",
+        "EnterSanctum",
+        "DesolateDive",
+        "TollBenchCity",
+        "SimpleKey",
+        "SlySimpleKey",
+        "WaterwaysEntry",
+        "Godhome"
+    ],
+    "ordered": true,
+    "endTriggeringAutosplit": false,
+    "gameName": "Hollow Knight Category Extensions"
+}

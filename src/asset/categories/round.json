@@ -1,0 +1,33 @@
+{
+    "categoryName": "Round%",
+    "splitIds": [
+        "FalseKnight",
+        "EnterGreenpath",
+        "MothwingCloak",
+        "MantisClaw",
+        "EnterSanctum",
+        "SoulMaster",
+        "StoreroomsStation",
+        "CrystalHeart",
+        "DescendingDark",
+        "DreamNail",
+        "ElegantKey",
+        "BlackKnight",
+        "ShadeSoul",
+        "SoulTyrant",
+        "ElderHu",
+        "FailedKnight",
+        "Uumuu",
+        "Galien",
+        "Hegemol",
+        "WaterwaysEntry",
+        "DungDefender",
+        "WhiteDefender",
+        "LittleFool",
+        "ColosseumBronze",
+        "KilledOblobbles"
+    ],
+    "ordered": true,
+    "endTriggeringAutosplit": true,
+    "gameName": "Hollow Knight Category Extensions"
+}

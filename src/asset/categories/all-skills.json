@@ -1,11 +1,12 @@
 {
+    "categoryName": "All Skills",
     "splitIds": [
         "VengefulSpirit",
         "Greenpath",
         "MothwingCloak",
         "MantisClaw",
         "BlueLake",
-        "GorgeousHusk",
+        "MenuGorgeousHusk",
         "DashSlash",
         "ShadeSoul",
         "DesolateDive",
@@ -32,6 +33,5 @@
         "name": "Hollow Knight",
         "icon": "HollowKnightBoss"
     },
-    "gameName": "Hollow Knight",
-    "categoryName": "All Skills"
+    "gameName": "Hollow Knight"
 }

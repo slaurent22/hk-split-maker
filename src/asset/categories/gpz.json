@@ -1,16 +1,16 @@
 {
+    "categoryName": "GPZ%",
     "splitIds": [
         "VengefulSpirit",
         "EnterGreenpath",
         "Zote1",
         "MothwingCloak",
-        "ShamanStone",
         "MantisClaw",
         "BrettaRescued",
         "DeepnestSpa",
         "Zote2",
         "TramPass",
-        "NailUpgrade1",
+        "NailUpgrade2",
         "MonarchWings",
         "LittleFool",
         "ZoteKilled",
@@ -19,6 +19,5 @@
     ],
     "ordered": true,
     "endTriggeringAutosplit": true,
-    "gameName": "Hollow Knight Category Extensions",
-    "categoryName": "GPZ%"
+    "gameName": "Hollow Knight Category Extensions"
 }

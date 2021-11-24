@@ -1,4 +1,5 @@
 {
+    "categoryName": "Zote%",
     "splitIds": [
         "VengefulSpirit",
         "EnterGreenpath",
@@ -12,6 +13,5 @@
     ],
     "ordered": true,
     "endTriggeringAutosplit": true,
-    "gameName": "Hollow Knight Category Extensions",
-    "categoryName": "Zote%"
+    "gameName": "Hollow Knight Category Extensions"
 }

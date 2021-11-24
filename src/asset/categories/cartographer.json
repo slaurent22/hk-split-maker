@@ -1,4 +1,5 @@
 {
+    "categoryName": "Cartographer",
     "splitIds": [
         "VengefulSpirit",
         "EnterGreenpath",
@@ -7,7 +8,7 @@
         "mapCliffs",
         "BlueLake",
         "DreamNail",
-        "GorgeousHusk",
+        "Lemm2",
         "mapCity",
         "LumaflyLantern",
         "CrystalHeart",
@@ -21,9 +22,5 @@
     ],
     "ordered": true,
     "endTriggeringAutosplit": true,
-    "gameName": "Hollow Knight Category Extensions",
-    "categoryName": "Cartographer",
-    "variables": {
-        "glitch": "Current Patch NMG"
-    }
+    "gameName": "Hollow Knight Category Extensions"
 }

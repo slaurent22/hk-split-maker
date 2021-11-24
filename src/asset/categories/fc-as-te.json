@@ -1,4 +1,5 @@
 {
+    "categoryName": "Forgotten Corners AS TE",
     "splitIds": [
         "CrystalHeart",
         "VengefulSpirit",
@@ -7,7 +8,7 @@
         "MantisClaw",
         "DreamNail",
         "MonarchWings",
-        "Galien",
+        "GalienEssence",
         "Hegemol",
         "ShamanStone",
         "DesolateDive",
@@ -21,6 +22,7 @@
         "GreatSlash",
         "DreamNail2",
         "HowlingWraiths",
+        "WhitePalaceEntry",
         "VoidHeart",
         "KingsBrand",
         "CycloneSlash",
@@ -34,6 +36,5 @@
         "name": "Radiance",
         "icon": "RadianceBoss"
     },
-    "gameName": "Hollow Knight Mods",
-    "categoryName": "Forgotten Corners AS TE"
+    "gameName": "Hollow Knight Mods"
 }

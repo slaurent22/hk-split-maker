@@ -1,4 +1,5 @@
 {
+    "categoryName": "Pantheon of the Knight",
     "splitIds": [
         "EnragedGuardianP",
         "LostKinP",
@@ -13,6 +14,5 @@
     ],
     "ordered": true,
     "endTriggeringAutosplit": true,
-    "gameName": "Hollow Knight",
-    "categoryName": "Pantheon of the Knight"
+    "gameName": "Hollow Knight"
 }

@@ -1,0 +1,29 @@
+{
+    "categoryName": "Egg",
+    "splitIds": [
+        "OnObtainRancidEgg",
+        "OnObtainRancidEgg",
+        "OnObtainRancidEgg",
+        "OnObtainRancidEgg",
+        "OnObtainRancidEgg",
+        "OnObtainRancidEgg",
+        "OnObtainRancidEgg",
+        "OnObtainRancidEgg",
+        "OnObtainRancidEgg",
+        "OnObtainRancidEgg",
+        "OnObtainRancidEgg",
+        "OnObtainRancidEgg",
+        "OnObtainRancidEgg",
+        "OnObtainRancidEgg",
+        "OnObtainRancidEgg",
+        "OnObtainRancidEgg",
+        "OnObtainRancidEgg",
+        "OnObtainRancidEgg",
+        "OnObtainRancidEgg",
+        "OnObtainRancidEgg",
+        "OnObtainRancidEgg"
+    ],
+    "ordered": true,
+    "endTriggeringAutosplit": true,
+    "gameName": "Hollow Knight Category Extensions"
+}
