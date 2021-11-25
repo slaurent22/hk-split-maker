@@ -80,7 +80,7 @@
     "names": {
         "TransClaw": "Mantis Claw Exit",
         "CrystalHeart": "[1U] %s",
-        "ElegantKeyShoptimised": "[1U] %s",
+        "ElegantKey": "[1U] %s",
         "EnterAnyDream": [
             "Tyrant Dream Entry",
             "[2D] FC Dream Entry"
@@ -113,9 +113,10 @@
         "WhiteDefenderEssence": "White Defender",
         "SlyShopFinished": "[3D] Last Shopping",
         "GreyMournerSeerAscended": "[2D] Grey Mourner",
-        "ColosseumBronze": "Colo1",
-        "ColosseumSilver": "Colo2",
-        "ColosseumGold": "Colo3",
+        "ColosseumBronzeUnlocked": "Colos Opened",
+        "ColosseumSilverUnlocked": "Colo 1",
+        "ColosseumGoldUnlocked": "Colo 2",
+        "ColosseumGoldExit": "Colo 3",
         "NailUpgrade4": "Pure Nail",
         "Kingsoul": "[2D] White Palace",
         "NightmareKingGrimm": "[3D] %s",
