@@ -42,7 +42,7 @@ function getNameAndGroup({ description, id, }: Pick<SplitDefinition, "descriptio
         case "Pantheon3":                 return ["Pantheon of the Sage", qualifier];
         case "Pantheon4":                 return ["Pantheon of the Knight", qualifier];
         case "Pantheon5":                 return ["Pantheon of Hallownest", qualifier];
-        case "UnchainedHollowKnight":     return ["Hollow Knight Scream", qualifier];
+        case "UnchainedHollowKnight":     return ["THK Scream", qualifier];
         case "WhiteFragmentLeft":         return ["Queen Fragment", qualifier];
         case "WhiteFragmentRight":        return ["King Fragment", qualifier];
         case "Zote1":                     return ["Vengefly King (Zote)", qualifier];

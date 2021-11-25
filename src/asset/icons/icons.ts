@@ -168,7 +168,7 @@ import Dreamer3 from "./Dreamer/Dreamer.png";
 import PreGrimmShop from "./Boss/TroupeMasterGrimm.png";
 import SlyShopFinished from "./Misc/Sly.png";
 import CanOvercharm from "./Achievement/Charmed.png";
-import UnchainedHollowKnight from "./Boss/HollowKnightBoss.png";
+import UnchainedHollowKnight from "./Misc/BlackEgg.png";
 import WatcherChandelier from "./Misc/WatcherChandelier.png";
 import CityGateOpen from "./Item/CityKey.png";
 import PlayerDeath from "./Enemy/Shade.png";

@@ -202,7 +202,7 @@ function getUrl(id, qualifier) {
         switch (id) {
             case "PreGrimmShop":               return getUrl("TroupeMasterGrimm", "Boss");
             case "CanOvercharm":               return getUrl("Charmed", "Achievement");
-            case "UnchainedHollowKnight":      return getUrl("HollowKnightBoss", "Boss");
+            case "UnchainedHollowKnight":      return getUrl("BlackEgg", "Misc");
             case "WatcherChandelier":          return getUrl("WatcherChandelier", "Misc");
             case "CityGateOpen":               return getUrl("CityKey", "Item");
             case "FlowerQuest":                return getUrl("DelicateFlower", "Item");
