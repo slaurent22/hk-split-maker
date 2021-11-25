@@ -6,7 +6,8 @@
         "MothwingCloak",
         "MantisClaw",
         "BlueLake",
-        "GorgeousHusk",
+        "TransGorgeousHusk",
+        "EnterSanctum",
         "DesolateDive",
         "KingsStationStation",
         "CrystalHeart",
@@ -27,6 +28,9 @@
         "AbyssShriek",
         "UnchainedHollowKnight"
     ],
+    "names": {
+        "TransGorgeousHusk": "Gorgeous Husk"
+    },
     "ordered": true,
     "endTriggeringAutosplit": false,
     "endingSplit": {
