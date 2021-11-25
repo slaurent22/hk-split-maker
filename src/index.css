@@ -94,6 +94,14 @@ ol {
     margin-bottom: 10px;
 }
 
+.footer {
+    padding: 10px;
+    color: white;
+    margin-top: 10px;
+    font-size: small;
+    text-align: right;
+}
+
 .close-ab {
     margin-left: 10px;
     margin-right: 1%;

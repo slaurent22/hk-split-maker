@@ -4,8 +4,14 @@
 /* eslint-disable no-undef */
 
 const path = require("path");
+const child_process = require("child_process");
+const webpack = require("webpack");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
 const MonacoWebpackPlugin = require("monaco-editor-webpack-plugin");
+
+function git(command) {
+    return child_process.execSync(`git ${command}`, { encoding: "utf8", }).trim();
+}
 
 module.exports = {
     entry: {
@@ -45,7 +51,10 @@ module.exports = {
             title: "HK Split Maker",
             favicon: "./src/asset/image/favicon.png",
         }),
-        new MonacoWebpackPlugin()
+        new MonacoWebpackPlugin(),
+        new webpack.EnvironmentPlugin({
+            GIT_VERSION: git("describe --always"),
+        })
     ],
     resolve: {
         extensions: [".tsx", ".ts", ".js"],

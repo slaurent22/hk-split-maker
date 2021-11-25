@@ -13,7 +13,7 @@ import SplitOutputEditor from "./SplitOutputEditor";
 import Header from "./Header";
 import Instructions from "./Instructions";
 import AlertBanner from "./AlertBanner";
-
+import Footer from "./Footer";
 interface AppState {
     configInput: string;
     splitOutput: string;
@@ -205,6 +205,7 @@ export default function App({ requestedCategoryName, onUpdateCategoryName, }: Ap
                     </div>
                 </div>
             </div>
+            <Footer />
         </div>
     );
 }
