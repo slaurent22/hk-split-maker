@@ -17,6 +17,9 @@
   },
   "author": "",
   "license": "ISC",
+  "engines": {
+    "node": "16.x"
+  },
   "devDependencies": {
     "@types/file-saver": "^2.0.2",
     "@types/node": "^15.6.0",
