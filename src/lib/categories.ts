@@ -3,9 +3,7 @@
   Since the name "splits" is taken, we'll call the complete configuration "category".
   Not entirely true in terms of LiveSplit naming, but close enough.
 */
-import type { CategoryDefinition } from "../asset/categories/category-directory.json";
-
-import CategoryDirectory from "../asset/categories/category-directory.json";
+import CategoryDirectory, { CategoryDefinition } from "../asset/categories/category-directory.json";
 
 interface CatContent {
     splitIds: Array<string>;

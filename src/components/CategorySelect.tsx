@@ -1,8 +1,6 @@
-import type { ReactElement } from "react";
-import React from "react";
-import type { GroupBase, OptionProps, SingleValueProps } from "react-select";
-import { components, createFilter } from "react-select";
-import type { CategoryDefinition } from "../asset/categories/category-directory.json";
+import React, { ReactElement } from "react";
+import { GroupBase, OptionProps, SingleValueProps, components, createFilter } from "react-select";
+import { CategoryDefinition } from "../asset/categories/category-directory.json";
 import BaseSelect from "./BaseSelect";
 
 interface Props {

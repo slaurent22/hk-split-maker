@@ -1,11 +1,9 @@
-import type { ReactElement } from "react";
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState, ReactElement } from "react";
 import { saveAs } from "file-saver";
 import { getCategoryConfigJSON, getCategoryDirectory } from "../lib/categories";
-import type { CategoryDefinition } from "../asset/categories/category-directory.json";
-import type { Config } from "../lib/lss";
+import { CategoryDefinition } from "../asset/categories/category-directory.json";
+import { Config, createSplitsXml } from "../lib/lss";
 import CategoryAnyPercent from "../asset/categories/any.json";
-import { createSplitsXml } from "../lib/lss";
 import ArrowButton from "./ArrowButton";
 import CategorySelect from "./CategorySelect";
 import SplitConfigEditor from "./SplitConfigEditor";

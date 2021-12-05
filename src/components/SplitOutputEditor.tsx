@@ -1,6 +1,5 @@
 import React from "react";
-import type { OnChange } from "@monaco-editor/react";
-import Editor from "@monaco-editor/react";
+import Editor, { OnChange } from "@monaco-editor/react";
 
 interface Props {
     defaultValue: string;

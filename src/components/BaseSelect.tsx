@@ -1,8 +1,6 @@
 /* eslint-disable @typescript-eslint/no-unsafe-return */
-import type { ReactElement } from "react";
-import React from "react";
-import type { GroupBase, Props, StylesConfig, Theme } from "react-select";
-import Select from "react-select";
+import React, { ReactElement } from "react";
+import Select, { GroupBase, Props, StylesConfig, Theme } from "react-select";
 
 function createOnMenuOpen(classNamePrefix: string) {
     // https://stackoverflow.com/a/66710895

@@ -30,7 +30,7 @@
         "@typescript-eslint/comma-dangle": ["warn", {"arrays": "never","objects": "always","imports": "never","exports": "never","functions": "never", "enums": "always"}],
         "@typescript-eslint/comma-spacing": "warn",
         "@typescript-eslint/consistent-type-definitions": ["warn", "interface"],
-        "@typescript-eslint/consistent-type-imports": ["warn", {"prefer": "type-imports"}],
+        "@typescript-eslint/consistent-type-imports": ["warn", {"prefer": "no-type-imports"}],
         "@typescript-eslint/default-param-last": "warn",
         "@typescript-eslint/dot-notation": "warn",
         "@typescript-eslint/explicit-member-accessibility": ["warn", { "overrides": { "constructors": "no-public" } }],

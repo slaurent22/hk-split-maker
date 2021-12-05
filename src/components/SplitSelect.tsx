@@ -1,10 +1,7 @@
-import type { ReactElement } from "react";
-import React from "react";
-import type { GroupBase, OptionProps } from "react-select";
-import { components } from "react-select";
+import React, { ReactElement } from "react";
+import { GroupBase, OptionProps, components } from "react-select";
 import Tooltip from "@atlaskit/tooltip";
-import type { SplitDefinition } from "../lib/splits";
-import { parseSplitsDefinitions } from "../lib/splits";
+import { SplitDefinition, parseSplitsDefinitions } from "../lib/splits";
 import BaseSelect from "./BaseSelect";
 
 export interface SplitOption {

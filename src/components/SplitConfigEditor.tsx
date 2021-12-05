@@ -1,13 +1,9 @@
-import type { ReactElement } from "react";
-import React, { Fragment, useEffect, useRef } from "react";
-import type { OnChange, Monaco } from "@monaco-editor/react";
-import Editor, { useMonaco } from "@monaco-editor/react";
-import type { editor } from "monaco-editor";
-import { Uri } from "monaco-editor";
+import React, { Fragment, useEffect, useRef, ReactElement } from "react";
+import Editor, { useMonaco, OnChange, Monaco } from "@monaco-editor/react";
+import { editor, Uri } from "monaco-editor";
 import SplitConfigSchema from "../schema/splits.schema";
-import type { Config } from "../lib/lss";
-import type { SplitOption } from "./SplitSelect";
-import SplitSelect from "./SplitSelect";
+import { Config } from "../lib/lss";
+import SplitSelect, { SplitOption } from "./SplitSelect";
 
 interface Props {
     defaultValue: string;
