@@ -1,5 +1,5 @@
 import type { ReactElement } from "react";
-import React, { useEffect, useRef, useState } from "react";
+import React, { useEffect, useState } from "react";
 import { saveAs } from "file-saver";
 import { getCategoryConfigJSON, getCategoryDirectory } from "../lib/categories";
 import type { CategoryDefinition } from "../asset/categories/category-directory.json";
@@ -27,8 +27,6 @@ interface AppProps {
 }
 
 export default function App({ requestedCategoryName, onUpdateCategoryName, }: AppProps): ReactElement {
-
-    const inputEditor = useRef<SplitConfigEditor|null>(null);
 
     const [state, setState] = useState<AppState>({
         configInput: JSON.stringify(CategoryAnyPercent, null, 4),
@@ -59,13 +57,12 @@ export default function App({ requestedCategoryName, onUpdateCategoryName, }: Ap
 
     useEffect(() => {
         void (async() => {
-            if (state.categoryName && getCategoryDefinition(state.categoryName) && inputEditor.current) {
+            if (state.categoryName && getCategoryDefinition(state.categoryName)) {
                 const editorContent = await getCategoryConfigJSON(state.categoryName);
-                inputEditor.current.setContent(editorContent);
                 onConfigInputChange(editorContent);
             }
         })();
-    }, [state.categoryName, inputEditor.current]);
+    }, [state.categoryName]);
 
     const onCategorySelect = (newValue: CategoryDefinition|null) => {
         if (newValue) {
@@ -183,7 +180,6 @@ export default function App({ requestedCategoryName, onUpdateCategoryName, }: Ap
                         <SplitConfigEditor
                             defaultValue={state.configInput}
                             onChange={onConfigInputChange}
-                            ref={inputEditor}
                         />
                     </div>
                 </div>
