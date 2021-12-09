@@ -116,12 +116,6 @@ const NEW_ID_MAP = {
     "ManualSplit": "Knight",
     "AllUnbreakables": "UnbreakableStrength",
     "SoulTyrantEssenceWithSanctumGrub": "SoulTyrantEssence",
-    "ColosseumBronzeUnlocked": "ColosseumBronze",
-    "ColosseumBronzeExit": "ColosseumBronze",
-    "ColosseumSilverUnlocked": "ColosseumSilver",
-    "ColosseumSilverExit": "ColosseumSilver",
-    "ColosseumGoldUnlocked": "ColosseumGold",
-    "ColosseumGoldExit": "ColosseumGold",
     "GodhomeLoreRoom": "GodhomeBench"
 };
 
@@ -229,11 +223,11 @@ function getUrl(id, qualifier) {
 
     if (qualifier === "Trial") {
         switch (id) {
-            case "ColosseumBronzeUnlocked":
-            case "ColosseumBronze": return getUrl("Warrior", "Achievement")
+            case "ColosseumBronzeUnlocked": return getUrl("LittleFool", "NPC");
             case "ColosseumSilverUnlocked":
-            case "ColosseumSilver": return getUrl("Conqueror", "Achievement")
+            case "ColosseumBronze": return getUrl("Warrior", "Achievement")
             case "ColosseumGoldUnlocked":
+            case "ColosseumSilver": return getUrl("Conqueror", "Achievement");
             case "ColosseumGold":   return getUrl("Fool", "Achievement")
             case "Pantheon1":       return getUrl("Brotherhood", "Achievement")
             case "Pantheon2":       return getUrl("Inspiration", "Achievement")
