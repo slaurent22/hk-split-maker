@@ -36,6 +36,14 @@
             }
         },
         {
+            "fileName": "all-skills-emilitia",
+            "displayName": "All Skills (Emilitia)",
+            "data": {
+                "routeNotesURL": "https://pastebin.com/T2xs1RkG",
+                "searchTerms": ["Eternal"]
+            }
+        },
+        {
             "fileName": "any",
             "displayName": "Any%"
         },
@@ -394,7 +402,8 @@
             "fileName": "ggg",
             "displayName": "Gaslight, Gatekeep, Girlboss",
             "data": {
-                "routeNotesURL": "https://pastebin.com/hVCNQkuJ"
+                "routeNotesURL": "https://pastebin.com/hVCNQkuJ",
+                "searchTerms": ["City Crest", "Nightmare Lantern", "Eternal Emilitia"]
             }
         },
         {
