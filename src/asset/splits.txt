@@ -168,6 +168,8 @@ GorbEssence,
 GreyPrince,
 [Description("Grey Prince Zote (Essence)"), ToolTip("Splits when getting Grey Prince Zote essence")]
 GreyPrinceEssence,
+[Description("Grey Prince Zote Level (Boss)"), ToolTip("Splits each time defeating Grey Prince Zote in Bretta's dream")]
+OnDefeatGPZ,
 [Description("Gruz Mother (Boss)"), ToolTip("Splits when killing Gruz Mother")]
 GruzMother,
 [Description("Hive Knight (Boss)"), ToolTip("Splits when killing Hive Knight")]
@@ -190,7 +192,7 @@ MarkothEssence,
 Marmu,
 [Description("Marmu (Essence)"), ToolTip("Splits when absorbing essence from Marmu")]
 MarmuEssence,
-[Description("Mega Moss Charger (Boss)"), ToolTip("Splits when killing Mega Moss Charger")]
+[Description("Massive Moss Charger (Boss)"), ToolTip("Splits when killing Massive Moss Charger")]
 MegaMossCharger,
 [Description("Nightmare King Grimm (Boss)"), ToolTip("Splits when killing Nightmare King Grimm")]
 NightmareKingGrimm,
@@ -234,6 +236,8 @@ BlackKnight,
 WhiteDefender,
 [Description("White Defender (Essence)"), ToolTip("Splits when getting White Defender essence")]
 WhiteDefenderEssence,
+[Description("White Defender Level (Boss)"), ToolTip("Splits each time defeating White Defender in Dung Defender's dream")]
+OnDefeatWhiteDefender,
 [Description("Xero (Boss)"), ToolTip("Splits when killing Xero")]
 Xero,
 [Description("Xero (Essence)"), ToolTip("Splits when absorbing essence from Xero")]
@@ -381,7 +385,10 @@ BeastsDenTrapBench,
 EternalOrdealUnlocked,
 [Description("Eternal Ordeal Achieved (Event)"), ToolTip("Splits when achieving the ordeal (57th Zote killed)")]
 EternalOrdealAchieved,
-
+[Description("Riding Stag (Event)"), ToolTip("Splits while riding the stag")]
+RidingStag,
+[Description("Saved Cloth (Event)"), ToolTip("Splits when saving Cloth in Ancient Basin")]
+SavedCloth,
 [Description("Colosseum Unlocked 1 (Trial)"), ToolTip("Splits when the knight unlocks the trial at Little Fool")]
 ColosseumBronzeUnlocked,
 [Description("Colosseum Unlocked 2 (Trial)"), ToolTip("Splits when the knight unlocks the trial at Little Fool")]
@@ -524,12 +531,16 @@ WhitePalaceSecretRoom,
 BasinEntry,
 [Description("Blue Lake (Transition)"), ToolTip("Splits on transition to Blue Lake from Gruz Mother scene (requires Ordered Splits)")]
 BlueLake,
-[Description("Crystal Peak (Transition)"), ToolTip("Splits on transition to the room where the dive and toll entrances meet")]
+[Description("Crystal Peak Entry (Transition)"), ToolTip("Splits on transition to the room where the dive and toll entrances meet, or the room right of Dirtmouth")]
 CrystalPeakEntry,
+[Description("Crystal Mound Exit (Transition)"), ToolTip("Splits on transition from Crystal Mound")]
+CrystalMoundExit,
 [Description("Enter Any Dream (Transition)"), ToolTip("Splits when entering any dream world")]
 EnterAnyDream,
-[Description("Fog Canyon (Transition)"), ToolTip("Splits on transition to Fog Canyon")]
+[Description("Fog Canyon (Transition)"), ToolTip("Splits on transition to East Fog Canyon")]
 FogCanyonEntry,
+[Description("Fungal Wastes Entry (Transition)"), ToolTip("Splits on transition to Fungal Wastes (scene below Crossroads, right of QS, left of Waterways or with Spore Shroom")]
+FungalWastesEntry,
 [Description("Gorgeous Husk Killed (Transition)"), ToolTip("Splits on transition after Gorgeous Husk defeated")]
 TransGorgeousHusk,
 [Description("Greenpath (Transition)"), ToolTip("Splits when entering Greenpath")]
@@ -552,7 +563,7 @@ KingdomsEdgeEntry,
 KingdomsEdgeOvercharmedEntry,
 [Description("NKG Dream (Transition)"), ToolTip("Splits on transition to NKG dream")]
 EnterNKG,
-[Description("Queen's Garden - QGA/Mound Entry (Transition)"), ToolTip("Splits on transition to QG scene following QGA")]
+[Description("Queen's Garden Entry (Transition)"), ToolTip("Splits on transition to QG scene following QGA or above Deepnest")]
 QueensGardensEntry,
 [Description("Queen's Garden - Frogs (Transition)"), ToolTip("Splits on transition to QG frogs scene")]
 QueensGardensFrogsTrans,
@@ -828,8 +839,10 @@ GrubBasinWings,
 GrubCityBelowLoveTower,
 [Description("Rescued Grub City Below Sanctum (Grub)"), ToolTip("Splits when rescuing the grub in Ruins1_05")]
 GrubCityBelowSanctum,
-[Description("Rescued Grub City Collector (Grub)"), ToolTip("Splits when rescuing all three grubs in Ruins2_11. (On 1221, splits for right grub)")]
+[Description("Rescued Grub City Collector All (Grub)"), ToolTip("Splits when rescuing all three grubs in Ruins2_11. (On 1221, splits for right grub)")]
 GrubCityCollectorAll,
+[Description("Rescued Grub City Collector (Grub)"), ToolTip("Splits when rescuing any grub in Ruins2_11")]
+GrubCityCollector,
 [Description("Rescued Grub City Guard House (Grub)"), ToolTip("Splits when rescuing the grub in Ruins_House_01")]
 GrubCityGuardHouse,
 [Description("Rescued Grub City Sanctum (Grub)"), ToolTip("Splits when rescuing the grub in Ruins1_32")]
@@ -939,6 +952,55 @@ TreeRestingGrounds,
 TreeWaterways,
 [Description("Whispering Root (Spirits' Glade)"), ToolTip("Splits upon completing the whispering root in the Spirits' Glade")]
 TreeGlade,
+
+[Description("100 Essence (Essence)"), ToolTip("Essence")]
+Essence100,
+[Description("200 Essence (Essence)"), ToolTip("Essence")]
+Essence200,
+[Description("300 Essence (Essence)"), ToolTip("Essence")]
+Essence300,
+[Description("400 Essence (Essence)"), ToolTip("Essence")]
+Essence400,
+[Description("500 Essence (Essence)"), ToolTip("Essence")]
+Essence500,
+[Description("600 Essence (Essence)"), ToolTip("Essence")]
+Essence600,
+[Description("700 Essence (Essence)"), ToolTip("Essence")]
+Essence700,
+[Description("800 Essence (Essence)"), ToolTip("Essence")]
+Essence800,
+[Description("900 Essence (Essence)"), ToolTip("Essence")]
+Essence900,
+[Description("1000 Essence (Essence)"), ToolTip("Essence")]
+Essence1000,
+[Description("1100 Essence (Essence)"), ToolTip("Essence")]
+Essence1100,
+[Description("1200 Essence (Essence)"), ToolTip("Essence")]
+Essence1200,
+[Description("1300 Essence (Essence)"), ToolTip("Essence")]
+Essence1300,
+[Description("1400 Essence (Essence)"), ToolTip("Essence")]
+Essence1400,
+[Description("1500 Essence (Essence)"), ToolTip("Essence")]
+Essence1500,
+[Description("1600 Essence (Essence)"), ToolTip("Essence")]
+Essence1600,
+[Description("1700 Essence (Essence)"), ToolTip("Essence")]
+Essence1700,
+[Description("1800 Essence (Essence)"), ToolTip("Essence")]
+Essence1800,
+[Description("1900 Essence (Essence)"), ToolTip("Essence")]
+Essence1900,
+[Description("2000 Essence (Essence)"), ToolTip("Essence")]
+Essence2000,
+[Description("2100 Essence (Essence)"), ToolTip("Essence")]
+Essence2100,
+[Description("2200 Essence (Essence)"), ToolTip("Essence")]
+Essence2200,
+[Description("2300 Essence (Essence)"), ToolTip("Essence")]
+Essence2300,
+[Description("2400 Essence (Essence)"), ToolTip("Essence")]
+Essence2400,
 
 [Description("Queen's Garden Bench (Toll)"), ToolTip("Splits when buying Queen's Garden toll bench")]
 TollBenchQG,
@@ -1100,6 +1162,8 @@ OnObtainSimpleKey,
 OnUseSimpleKey,
 [Description("Grub (Obtain)"), ToolTip("Splits when obtaining a Grub")]
 OnObtainGrub,
+[Description("Pale Ore (Obtain)"), ToolTip("Splits when obtaining a Pale Ore")]
+OnObtainPaleOre,
 
 [Description("Any Transition (Transition)"), ToolTip("Splits when the knight enters a transition (only one will split per transition)")]
 AnyTransition,

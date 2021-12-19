@@ -69,7 +69,12 @@ function getNameAndGroup({ description, id, }: Pick<SplitDefinition, "descriptio
 
     switch (qualifier) {
         case "Charm Notch":  return [`${name} Notch`, qualifier];
-        case "Essence":      return [`${name} Essence`, qualifier];
+        case "Essence": {
+            if (name.includes("Essence")) {
+                return [name, qualifier];
+            }
+            return [`${name} Essence`, qualifier];
+        }
         case "Fragment":     return [name, "Upgrade"];
         case "Grub":         return [name.substr("Rescued ".length), qualifier];
         case "Pantheon":     return [name, "Boss"];

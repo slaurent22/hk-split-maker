@@ -116,7 +116,9 @@ const NEW_ID_MAP = {
     "ManualSplit": "Knight",
     "AllUnbreakables": "UnbreakableStrength",
     "SoulTyrantEssenceWithSanctumGrub": "SoulTyrantEssence",
-    "GodhomeLoreRoom": "GodhomeBench"
+    "GodhomeLoreRoom": "GodhomeBench",
+    "OnDefeatGPZ": "GreyPrinceZote",
+    "OnDefeatWhiteDefender": "WhiteDefender"
 };
 
 function getUrl(id, qualifier) {
@@ -125,9 +127,14 @@ function getUrl(id, qualifier) {
     }
 
     if (qualifier === "Essence") {
-        const match = id.match(/(?<name>.+)Essence/);
-        if (match) {
-            return getUrl(match.groups.name, "Boss");
+        const boss = id.match(/(?<name>.+)Essence/);
+        if (boss) {
+            return getUrl(boss.groups.name, "Boss");
+        }
+
+        const count = id.match(/Essence\d\d\d\d{0,1}/)
+        if (count) {
+            return getUrl("DreamGate", "Skill");
         }
     }
 
@@ -189,6 +196,7 @@ function getUrl(id, qualifier) {
             case "OnObtainSimpleKey":        return getUrl("SimpleKey", "Item");
             case "OnUseSimpleKey":           return getUrl("SimpleKey", "Item");
             case "OnObtainGrub":             return getUrl("Grub", "NPC");
+            case "OnObtainPaleOre":          return getUrl("PaleOre", "Item");
         }
     }
 
@@ -218,6 +226,8 @@ function getUrl(id, qualifier) {
             case "EndingSplit":                return getUrl("Knight", "Misc");
             case "EternalOrdealUnlocked":
             case "EternalOrdealAchieved":      return getUrl("Zote", "Enemy");
+            case "SavedCloth":                 return getUrl("Cloth", "NPC");
+            case "RidingStag":                 return getUrl("Stag", "Misc");
         }
     }
 
@@ -295,11 +305,13 @@ function getUrl(id, qualifier) {
         switch (id) {
             case "BasinEntry":                   return getUrl("Abyss", "Area");
             case "BlueLake":                     return getUrl("Witness", "Achievement");
+            case "CrystalMoundExit":             return getUrl("DescendingDark", "Skill");
             case "CrystalPeakEntry":             return getUrl("CrystalPeak", "Area");
             case "EnterAnyDream":                return getUrl("DreamNail", "Skill");
             case "FogCanyonEntry":               return getUrl("FogCanyon", "Area");
             case "EnterGreenpath":
             case "EnterGreenpathWithOvercharm":  return getUrl("Greenpath", "Area");
+            case "FungalWastesEntry":            return getUrl("FungalWastes", "Area");
             case "HiveEntry":                    return getUrl("Hive", "Area");
             case "KingsPass":
             case "KingsPassEnterFromTown":       return getUrl("Vengefly", "Enemy");

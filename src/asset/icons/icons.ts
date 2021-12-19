@@ -82,6 +82,7 @@ import Gorb from "./Boss/Gorb.png";
 import GorbEssence from "./Boss/Gorb.png";
 import GreyPrince from "./Boss/GreyPrinceZote.png";
 import GreyPrinceEssence from "./Boss/GreyPrinceZote.png";
+import OnDefeatGPZ from "./Boss/GreyPrinceZote.png";
 import GruzMother from "./Boss/GruzMother.png";
 import HiveKnight from "./Boss/HiveKnight.png";
 import Hornet1 from "./Boss/Hornet1.png";
@@ -115,6 +116,7 @@ import Uumuu from "./Boss/Uumuu.png";
 import BlackKnight from "./Boss/WatcherKnights.png";
 import WhiteDefender from "./Boss/WhiteDefender.png";
 import WhiteDefenderEssence from "./Boss/WhiteDefender.png";
+import OnDefeatWhiteDefender from "./Boss/WhiteDefender.png";
 import Xero from "./Boss/Xero.png";
 import XeroEssence from "./Boss/Xero.png";
 import VengeflyKingP from "./Boss/VengeflyKing.png";
@@ -185,6 +187,8 @@ import SpiritGladeOpen from "./Achievement/Attunement.png";
 import BeastsDenTrapBench from "./Misc/Bench.png";
 import EternalOrdealUnlocked from "./Enemy/Zote.png";
 import EternalOrdealAchieved from "./Enemy/Zote.png";
+import RidingStag from "./Misc/Stag.png";
+import SavedCloth from "./NPC/Cloth.png";
 import ColosseumBronzeUnlocked from "./NPC/LittleFool.png";
 import ColosseumSilverUnlocked from "./Achievement/Warrior.png";
 import ColosseumGoldUnlocked from "./Achievement/Conqueror.png";
@@ -254,8 +258,10 @@ import WhitePalaceSecretRoom from "./Enemy/Kingsmould.png";
 import BasinEntry from "./Enemy/ShadowCreeper.png";
 import BlueLake from "./Achievement/Witness.png";
 import CrystalPeakEntry from "./Enemy/CrystalCrawler.png";
+import CrystalMoundExit from "./Skill/DescendingDark.png";
 import EnterAnyDream from "./Skill/DreamNail.png";
 import FogCanyonEntry from "./Enemy/Uoma.png";
+import FungalWastesEntry from "./Enemy/Ambloom.png";
 import TransGorgeousHusk from "./Enemy/GorgeousHusk.png";
 import EnterGreenpath from "./Enemy/Mosscreep.png";
 import EnterGreenpathWithOvercharm from "./Enemy/Mosscreep.png";
@@ -403,6 +409,7 @@ import GrubBasinWings from "./NPC/Grub.png";
 import GrubCityBelowLoveTower from "./NPC/Grub.png";
 import GrubCityBelowSanctum from "./NPC/Grub.png";
 import GrubCityCollectorAll from "./NPC/Grub.png";
+import GrubCityCollector from "./NPC/Grub.png";
 import GrubCityGuardHouse from "./NPC/Grub.png";
 import GrubCitySanctum from "./NPC/Grub.png";
 import GrubCitySpire from "./NPC/Grub.png";
@@ -457,6 +464,30 @@ import TreeQueensGardens from "./Misc/WhisperingRoot.png";
 import TreeRestingGrounds from "./Misc/WhisperingRoot.png";
 import TreeWaterways from "./Misc/WhisperingRoot.png";
 import TreeGlade from "./Misc/WhisperingRoot.png";
+import Essence100 from "./Skill/DreamGate.png";
+import Essence200 from "./Skill/DreamGate.png";
+import Essence300 from "./Skill/DreamGate.png";
+import Essence400 from "./Skill/DreamGate.png";
+import Essence500 from "./Skill/DreamGate.png";
+import Essence600 from "./Skill/DreamGate.png";
+import Essence700 from "./Skill/DreamGate.png";
+import Essence800 from "./Skill/DreamGate.png";
+import Essence900 from "./Skill/DreamGate.png";
+import Essence1000 from "./Skill/DreamGate.png";
+import Essence1100 from "./Skill/DreamGate.png";
+import Essence1200 from "./Skill/DreamGate.png";
+import Essence1300 from "./Skill/DreamGate.png";
+import Essence1400 from "./Skill/DreamGate.png";
+import Essence1500 from "./Skill/DreamGate.png";
+import Essence1600 from "./Skill/DreamGate.png";
+import Essence1700 from "./Skill/DreamGate.png";
+import Essence1800 from "./Skill/DreamGate.png";
+import Essence1900 from "./Skill/DreamGate.png";
+import Essence2000 from "./Skill/DreamGate.png";
+import Essence2100 from "./Skill/DreamGate.png";
+import Essence2200 from "./Skill/DreamGate.png";
+import Essence2300 from "./Skill/DreamGate.png";
+import Essence2400 from "./Skill/DreamGate.png";
 import TollBenchQG from "./Misc/Bench.png";
 import TollBenchCity from "./Misc/Bench.png";
 import TollBenchBasin from "./Misc/Bench.png";
@@ -531,6 +562,7 @@ import OnObtainVesselFragment from "./Fragment/VesselFragment1.png";
 import OnObtainSimpleKey from "./Item/SimpleKey.png";
 import OnUseSimpleKey from "./Item/SimpleKey.png";
 import OnObtainGrub from "./NPC/Grub.png";
+import OnObtainPaleOre from "./Item/PaleOre.png";
 import AnyTransition from "./Misc/Knight.png";
 import TransitionAfterSaveState from "./Misc/Knight.png";
 import ManualSplit from "./Misc/Knight.png";
@@ -617,6 +649,7 @@ export default {
     GorbEssence,
     GreyPrince,
     GreyPrinceEssence,
+    OnDefeatGPZ,
     GruzMother,
     HiveKnight,
     Hornet1,
@@ -650,6 +683,7 @@ export default {
     BlackKnight,
     WhiteDefender,
     WhiteDefenderEssence,
+    OnDefeatWhiteDefender,
     Xero,
     XeroEssence,
     VengeflyKingP,
@@ -720,6 +754,8 @@ export default {
     BeastsDenTrapBench,
     EternalOrdealUnlocked,
     EternalOrdealAchieved,
+    RidingStag,
+    SavedCloth,
     ColosseumBronzeUnlocked,
     ColosseumSilverUnlocked,
     ColosseumGoldUnlocked,
@@ -789,8 +825,10 @@ export default {
     BasinEntry,
     BlueLake,
     CrystalPeakEntry,
+    CrystalMoundExit,
     EnterAnyDream,
     FogCanyonEntry,
+    FungalWastesEntry,
     TransGorgeousHusk,
     EnterGreenpath,
     EnterGreenpathWithOvercharm,
@@ -938,6 +976,7 @@ export default {
     GrubCityBelowLoveTower,
     GrubCityBelowSanctum,
     GrubCityCollectorAll,
+    GrubCityCollector,
     GrubCityGuardHouse,
     GrubCitySanctum,
     GrubCitySpire,
@@ -992,6 +1031,30 @@ export default {
     TreeRestingGrounds,
     TreeWaterways,
     TreeGlade,
+    Essence100,
+    Essence200,
+    Essence300,
+    Essence400,
+    Essence500,
+    Essence600,
+    Essence700,
+    Essence800,
+    Essence900,
+    Essence1000,
+    Essence1100,
+    Essence1200,
+    Essence1300,
+    Essence1400,
+    Essence1500,
+    Essence1600,
+    Essence1700,
+    Essence1800,
+    Essence1900,
+    Essence2000,
+    Essence2100,
+    Essence2200,
+    Essence2300,
+    Essence2400,
     TollBenchQG,
     TollBenchCity,
     TollBenchBasin,
@@ -1066,6 +1129,7 @@ export default {
     OnObtainSimpleKey,
     OnUseSimpleKey,
     OnObtainGrub,
+    OnObtainPaleOre,
     AnyTransition,
     TransitionAfterSaveState,
     ManualSplit,
