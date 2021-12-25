@@ -8,12 +8,19 @@
             }
         },
         {
-            "fileName": "107",
-            "displayName": "107% AB",
+            "fileName": "107-early-gpz",
+            "displayName": "107% AB (Early GPZ)",
+            "data": {
+                "routeNotesURL": "https://pastebin.com/2KZrBXik"
+            }
+        },
+        {
+            "fileName": "107-late-gpz",
+            "displayName": "107% AB (Late GPZ)",
             "data": {
                 "routeNotesURL": "https://pastebin.com/bqRttPCc"
             }
-        },
+        };
         {
             "fileName": "106",
             "displayName": "106% TE",
