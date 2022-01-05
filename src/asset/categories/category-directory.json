@@ -573,6 +573,14 @@
             }
         },
         {
+            "fileName": "sbico",
+            "displayName": "Salubra's Blessing% ICO",
+            "data": {
+                "routeNotesURL": "https://pastebin.com/9YKFHHiG",
+                "searchTerms": ["Smooch", "Intended Charm Order"]
+            }
+        },
+        {
             "fileName": "save-myla",
             "displayName": "Save Myla (Dash Slash route)",
             "data": {
