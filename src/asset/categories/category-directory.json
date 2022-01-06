@@ -573,6 +573,22 @@
             }
         },
         {
+            "fileName": "sbaco",
+            "displayName": "Salubra's Blessing% ACO",
+            "data": {
+                "routeNotesURL": "https://pastebin.com/1xMa3mBR",
+                "searchTerms": ["Smooch", "Alphabetical Charm Order"]
+            }
+        },
+        {
+            "fileName": "sbcmo",
+            "displayName": "Salubra's Blessing% CMO",
+            "data": {
+                "routeNotesURL": "https://pastebin.com/Q17WZ3Ra",
+                "searchTerms": ["Smooch", "Charm Menu Order"]
+            }
+        },
+        {
             "fileName": "sbico",
             "displayName": "Salubra's Blessing% ICO",
             "data": {
