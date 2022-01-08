@@ -8,17 +8,17 @@ const hash = window.location.hash.substring(1);
 const initialCategoryName = hash.toLowerCase();
 
 function onUpdateCategoryName(categoryName: string) {
-    window.location.hash = categoryName;
+  window.location.hash = categoryName;
 }
 
 const root = document.createElement("div");
 document.body.appendChild(root);
 ReactDOM.render(
-    <React.StrictMode>
-        <App
-            requestedCategoryName={initialCategoryName}
-            onUpdateCategoryName={onUpdateCategoryName}
-        />
-    </React.StrictMode>,
-    root
+  <React.StrictMode>
+    <App
+      requestedCategoryName={initialCategoryName}
+      onUpdateCategoryName={onUpdateCategoryName}
+    />
+  </React.StrictMode>,
+  root
 );

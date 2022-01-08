@@ -7,23 +7,23 @@ interface Props {
 }
 
 const SplitOutputEditor: React.FC<Props> = ({
-    defaultValue, onChange,
+  defaultValue, onChange,
 }: Props) => {
-    return (
-        <div className="hk-split-maker-monaco-editor">
-            <Editor
-                defaultLanguage="xml"
-                theme="vs-dark"
-                value={defaultValue}
-                onChange={onChange}
-                options={({
-                    minimap: {
-                        enabled: false,
-                    },
-                })}
-            />
-        </div>
-    );
+  return (
+    <div className="hk-split-maker-monaco-editor">
+      <Editor
+        defaultLanguage="xml"
+        theme="vs-dark"
+        value={defaultValue}
+        onChange={onChange}
+        options={({
+          minimap: {
+            enabled: false,
+          },
+        })}
+      />
+    </div>
+  );
 };
 
 export default SplitOutputEditor;
