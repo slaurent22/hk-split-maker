@@ -6,10 +6,9 @@ const {
 } = require("fs");
 
 const FILE = {
-    // DIRECTORY: "./src/asset/icons/icon-directory.json",
-    EVERY: "./src/asset/categories/every.json",
-    SPLITS: "./src/asset/splits.txt",
-    ICONS: "./src/asset/icons/icons.ts"
+    EVERY: "./src/asset/hollowknight/categories/every.json",
+    SPLITS: "./src/asset/hollowknight/splits.txt",
+    ICONS: "./src/asset/hollowknight/icons/icons.ts"
 }
 
 // TODO: figure out good way to have tools and web share common code

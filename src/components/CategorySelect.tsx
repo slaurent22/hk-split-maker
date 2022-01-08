@@ -1,6 +1,6 @@
 import React, { ReactElement } from "react";
 import { GroupBase, OptionProps, SingleValueProps, components, createFilter } from "react-select";
-import { CategoryDefinition } from "../asset/categories/category-directory.json";
+import { CategoryDefinition } from "../asset/hollowknight/categories/category-directory.json";
 import BaseSelect from "./BaseSelect";
 
 interface Props {

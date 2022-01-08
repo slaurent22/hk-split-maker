@@ -1,9 +1,9 @@
 import React, { useEffect, useState, ReactElement } from "react";
 import { saveAs } from "file-saver";
 import { getCategoryConfigJSON, getCategoryDirectory } from "../lib/categories";
-import { CategoryDefinition } from "../asset/categories/category-directory.json";
+import { CategoryDefinition } from "../asset/hollowknight/categories/category-directory.json";
 import { Config, createSplitsXml } from "../lib/lss";
-import CategoryAnyPercent from "../asset/categories/any.json";
+import CategoryAnyPercent from "../asset/hollowknight/categories/any.json";
 import ArrowButton from "./ArrowButton";
 import CategorySelect from "./CategorySelect";
 import SplitConfigEditor from "./SplitConfigEditor";

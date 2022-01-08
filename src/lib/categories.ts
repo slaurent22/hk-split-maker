@@ -3,7 +3,7 @@
   Since the name "splits" is taken, we'll call the complete configuration "category".
   Not entirely true in terms of LiveSplit naming, but close enough.
 */
-import CategoryDirectory, { CategoryDefinition } from "../asset/categories/category-directory.json";
+import CategoryDirectory, { CategoryDefinition } from "../asset/hollowknight/categories/category-directory.json";
 
 interface CatContent {
   splitIds: Array<string>;
@@ -25,6 +25,7 @@ export async function getCategoryConfigJSON(fileName: string): Promise<string> {
   // a feasible option here.
   // The real solution is to figure out webpack aliases or require contexts.
 
-  const { default: module, } = await import(`../asset/categories/${fileName}.json`) as Record<string, CatContent>;
+  const { default: module, } =
+    await import(`../asset/hollowknight/categories/${fileName}.json`) as Record<string, CatContent>;
   return JSON.stringify(module, null, 4);
 }
