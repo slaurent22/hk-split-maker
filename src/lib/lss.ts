@@ -1,6 +1,6 @@
 import xml from "../external-lib/xml.js";
 import { createLiveSplitIconData } from "./image-util";
-import { getIconURLs, parseSplitsDefinitions } from "./splits";
+import { getIconURLs, parseSplitsDefinitions } from "./hollowknight-splits";
 
 export interface Config {
   startTriggeringAutosplit?: string;

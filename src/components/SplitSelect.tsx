@@ -1,7 +1,7 @@
 import React, { ReactElement } from "react";
 import { GroupBase, OptionProps, components } from "react-select";
 import Tooltip from "@atlaskit/tooltip";
-import { SplitDefinition, parseSplitsDefinitions } from "../lib/splits";
+import { SplitDefinition, parseSplitsDefinitions } from "../lib/hollowknight-splits";
 import BaseSelect from "./BaseSelect";
 
 export interface SplitOption {

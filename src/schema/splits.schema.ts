@@ -1,5 +1,5 @@
 import SplitConfigSchemaSource from "../schema/splits.schema.json";
-import { parseSplitsDefinitions } from "../lib/splits";
+import { parseSplitsDefinitions } from "../lib/hollowknight-splits";
 
 const SPLITS = [...parseSplitsDefinitions().values()];
 

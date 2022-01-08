@@ -136,9 +136,3 @@ export function getIconURLs(): Map<string, string> {
   }
   return result;
 }
-
-// export async function getIconData(name: string): Promise<Map<string, string>> {
-//     assertIsIconClass(name);
-//     const icons = await Icons[name]();
-//     return new Map(Object.entries(icons));
-// }
