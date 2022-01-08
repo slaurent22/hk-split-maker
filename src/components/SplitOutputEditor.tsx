@@ -2,8 +2,8 @@ import React from "react";
 import Editor, { OnChange } from "@monaco-editor/react";
 
 interface Props {
-    defaultValue: string;
-    onChange: OnChange;
+  defaultValue: string;
+  onChange: OnChange;
 }
 
 const SplitOutputEditor: React.FC<Props> = ({

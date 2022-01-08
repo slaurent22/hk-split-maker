@@ -28,9 +28,9 @@ function getGroupColor(section: string): string {
 }
 
 function createCustomStyles<
-    Option,
-    IsMulti extends boolean = false,
-    Group extends GroupBase<Option> = GroupBase<Option>
+  Option,
+  IsMulti extends boolean = false,
+  Group extends GroupBase<Option> = GroupBase<Option>
 >(): StylesConfig<Option, IsMulti, Group> {
   return {
     groupHeading: (provided) => ({
@@ -100,9 +100,9 @@ function customTheme(theme: Theme): Theme {
 
 
 export default function BaseSelect<
-    Option,
-    IsMulti extends boolean = false,
-    Group extends GroupBase<Option> = GroupBase<Option>
+  Option,
+  IsMulti extends boolean = false,
+  Group extends GroupBase<Option> = GroupBase<Option>
 >(props: Props<Option, IsMulti, Group>): ReactElement {
   return (
     <Select

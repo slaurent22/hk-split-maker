@@ -3,10 +3,10 @@ import arrow from "../asset/image/arrow.png";
 import "./ArrowButton.css";
 
 interface Props {
-    id: string;
-    onClick: () => void;
-    text: string;
-    disabled?: boolean;
+  id: string;
+  onClick: () => void;
+  text: string;
+  disabled?: boolean;
 }
 
 const ArrowButton: React.FC<Props> = ({

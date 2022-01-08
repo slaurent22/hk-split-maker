@@ -7,11 +7,11 @@ const SPLITS_DEFINITIONS_REGEXP =
 export const DESCRIPTION_NAME_REGEXP = /(?<name>.+)\s+\((?<qualifier>.+)\)/;
 
 export interface SplitDefinition {
-    description: string;
-    tooltip: string;
-    id: string;
-    name: string;
-    group: string;
+  description: string;
+  tooltip: string;
+  id: string;
+  name: string;
+  group: string;
 }
 
 function getNameAndGroup({ description, id, }: Pick<SplitDefinition, "description"|"id">): [string, string] {

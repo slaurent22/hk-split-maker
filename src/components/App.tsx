@@ -13,15 +13,15 @@ import Instructions from "./Instructions";
 import AlertBanner from "./AlertBanner";
 import Footer from "./Footer";
 interface AppState {
-    configInput: string;
-    splitOutput: string;
-    categories: Record<string, Array<CategoryDefinition>>;
-    categoryName?: string;
+  configInput: string;
+  splitOutput: string;
+  categories: Record<string, Array<CategoryDefinition>>;
+  categoryName?: string;
 }
 
 interface AppProps {
-    requestedCategoryName?: string;
-    onUpdateCategoryName: (categoryName: string) => void;
+  requestedCategoryName?: string;
+  onUpdateCategoryName: (categoryName: string) => void;
 }
 
 export default function App({ requestedCategoryName, onUpdateCategoryName, }: AppProps): ReactElement {

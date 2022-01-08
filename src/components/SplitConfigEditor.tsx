@@ -6,8 +6,8 @@ import { Config } from "../lib/lss";
 import SplitSelect, { SplitOption } from "./SplitSelect";
 
 interface Props {
-    defaultValue: string;
-    onChange: OnChange;
+  defaultValue: string;
+  onChange: OnChange;
 }
 
 const { $id: schemaId, } = SplitConfigSchema;

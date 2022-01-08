@@ -3,23 +3,23 @@ import { createLiveSplitIconData } from "./image-util";
 import { getIconURLs, parseSplitsDefinitions } from "./splits";
 
 export interface Config {
-    startTriggeringAutosplit?: string;
-    splitIds: Array<string>;
-    names?: Record<string, string|Array<string>>;
-    icons?: Record<string, string|Array<string>>;
-    ordered: true;
-    endTriggeringAutosplit: true;
-    endingSplit?: {
-        name?: string;
-        icon?: string;
-    };
-    categoryName: string;
-    gameName: string;
-    variables?: {
-        platform?: string;
-        patch?: string;
-        glitch?: string;
-    };
+  startTriggeringAutosplit?: string;
+  splitIds: Array<string>;
+  names?: Record<string, string|Array<string>>;
+  icons?: Record<string, string|Array<string>>;
+  ordered: true;
+  endTriggeringAutosplit: true;
+  endingSplit?: {
+    name?: string;
+    icon?: string;
+  };
+  categoryName: string;
+  gameName: string;
+  variables?: {
+    platform?: string;
+    patch?: string;
+    glitch?: string;
+  };
 }
 
 const MANUAL_SPLIT_RE = /%(?<name>.+)/;

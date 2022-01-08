@@ -6,12 +6,12 @@
 import CategoryDirectory, { CategoryDefinition } from "../asset/categories/category-directory.json";
 
 interface CatContent {
-    splitIds: Array<string>;
-    ordered: boolean;
-    endTriggeringAutosplit: boolean;
-    gameName: string;
-    categoryName: string;
-    variables: Record<string, string>;
+  splitIds: Array<string>;
+  ordered: boolean;
+  endTriggeringAutosplit: boolean;
+  gameName: string;
+  categoryName: string;
+  variables: Record<string, string>;
 }
 
 export function getCategoryDirectory(): Record<string, Array<CategoryDefinition>> {

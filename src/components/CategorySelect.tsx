@@ -4,24 +4,24 @@ import { CategoryDefinition } from "../asset/categories/category-directory.json"
 import BaseSelect from "./BaseSelect";
 
 interface Props {
-    id: string;
-    onChange: (newValue: CategoryDefinition|null) => void;
-    data?: Record<string, Array<CategoryDefinition>>;
-    defaultValue: CategoryDefinition | null;
+  id: string;
+  onChange: (newValue: CategoryDefinition|null) => void;
+  data?: Record<string, Array<CategoryDefinition>>;
+  defaultValue: CategoryDefinition | null;
 }
 
 interface CategoryOption {
-    value: string; label: string;
-    data?: {
-        routeNotesURL?: string;
-        searchTerms?: Array<string>;
-    };
+  value: string; label: string;
+  data?: {
+    routeNotesURL?: string;
+    searchTerms?: Array<string>;
+  };
 }
 
 interface FilterOptionOption<Option> {
-    readonly label: string;
-    readonly value: string;
-    readonly data: Option;
+  readonly label: string;
+  readonly value: string;
+  readonly data: Option;
 }
 
 const filterConfig = {
@@ -47,8 +47,8 @@ function optionToDef({ value, label, data, }: CategoryOption): CategoryDefinitio
   };
 }
 interface RouteNotesLinkProps {
-    url: string;
-    isSelected: boolean;
+  url: string;
+  isSelected: boolean;
 }
 function RouteNotesLink({ url, isSelected, }: RouteNotesLinkProps): ReactElement {
   const color = isSelected ? "hsl(0, 0%, 20%)" : "hsl(0, 0%, 80%)";
@@ -82,8 +82,8 @@ function CategorySelectOption<
 }
 
 function CategorySelectSingleValue<
-    IsMulti extends boolean = false,
-    Group extends GroupBase<CategoryOption> = GroupBase<CategoryOption>
+  IsMulti extends boolean = false,
+  Group extends GroupBase<CategoryOption> = GroupBase<CategoryOption>
 >({ children, ...rest }: SingleValueProps<CategoryOption, IsMulti, Group>): ReactElement {
   return (
     <components.SingleValue {...rest}>

@@ -5,13 +5,13 @@ import { SplitDefinition, parseSplitsDefinitions } from "../lib/splits";
 import BaseSelect from "./BaseSelect";
 
 export interface SplitOption {
-    value: string;
-    label: string;
-    tooltip: string;
+  value: string;
+  label: string;
+  tooltip: string;
 }
 
 interface Props {
-    onChange: (newValue: SplitOption|null) => void;
+  onChange: (newValue: SplitOption|null) => void;
 }
 
 function groupSplits(splitDefinitions: Map<string, SplitDefinition>) {
