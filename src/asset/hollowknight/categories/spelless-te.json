@@ -1,5 +1,5 @@
 {
-    "categoryName": "Spelless True Ending",
+    "categoryName": "Spelless TE",
     "splitIds": [
         "FuryOfTheFallen",
         "FalseKnight",
@@ -9,29 +9,32 @@
         "MegaMossCharger",
         "MantisClaw",
         "DreamNail",
+        "CycloneSlash",
+        "GorbEssence",
         "ElderHuEssence",
-        "SporeShroom",
-        "GalienEssence",
         "XeroEssence",
+        "GorgeousHusk",
+        "Ore1",
         "NailUpgrade2",
         "LumaflyLantern",
         "CrystalHeart",
         "TollBenchBasin",
         "BrokenVessel",
         "MonarchWings",
-        "GorbEssence",
+        "FailedChampionEssence",
         "DreamGate",
         "KingsBrand",
         "ShadeCloak",
         "MarkothEssence",
-        "BlackKnight",
-        "FailedChampionEssence",
-        "Uumuu",
+        "Lurien",
+        "Monomon",
         "NoEyesEssence",
+        "TollBenchQG",
         "MarmuEssence",
         "WhiteFragmentLeft",
+        "GalienEssence",
         "Hegemol",
-        "DreamNail2",
+        "WhitePalaceEntry",
         "Kingsoul",
         "VoidHeart",
         "HollowKnightDreamnail"
@@ -39,8 +42,8 @@
     "ordered": true,
     "endTriggeringAutosplit": false,
     "endingSplit": {
-        "name": "Hollow Knight",
-        "icon": "HollowKnightBoss"
+        "name": "Radiance",
+        "icon": "RadianceBoss"
     },
     "gameName": "Hollow Knight Category Extensions"
 }
