@@ -1,0 +1,30 @@
+{
+    "categoryName": "Spelless",
+    "splitIds": [
+        "SlyRescued",
+        "FalseKnight",
+        "LumaflyLantern",
+        "Dreamshield",
+        "EnterGreenpath",
+        "MothwingCloak",
+        "MegaMossCharger",
+        "FragileStrength",
+        "MantisClaw",
+        "CrystalHeart",
+        "GorgeousHusk",
+        "NailUpgrade1",
+        "BlackKnight",
+        "FogCanyonEntry",
+        "Uumuu",
+        "SporeShroom",
+        "BeastsDenTrapBench",
+        "Hegemol"
+    ],
+    "ordered": true,
+    "endTriggeringAutosplit": false,
+    "endingSplit": {
+        "name": "Hollow Knight",
+        "icon": "HollowKnightBoss"
+    },
+    "gameName": "Hollow Knight Category Extensions"
+}
