@@ -617,6 +617,13 @@
                 "routeNotesURL": "https://pastebin.com/QLp4NfEG"
             }
         },
+         {
+            "fileName": "spelless-dreamshield",
+            "displayName": "Spelless (Dreamshield)",
+            "data": {
+                "routeNotesURL": "https://pastebin.com/ZsLAeKAD"
+            }
+        },
         {
             "fileName": "spelless-low",
             "displayName": "Low% Spelless"
@@ -626,6 +633,13 @@
             "displayName": "Spelless True Ending",
             "data": {
                 "routeNotesURL": "https://pastebin.com/bKx7eWsX"
+            }
+        },
+        {
+            "fileName": "spelless-te-dreamshield",
+            "displayName": "Spelless True Ending (Dreamshield)",
+            "data": {
+                "routeNotesURL": "https://pastebin.com/Quwr2dTM"
             }
         },
         {
