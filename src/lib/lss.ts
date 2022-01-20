@@ -5,8 +5,8 @@ import { getIconURLs, parseSplitsDefinitions } from "./hollowknight-splits";
 export interface Config {
   startTriggeringAutosplit?: string;
   splitIds: Array<string>;
-  names?: Record<string, string|Array<string>>;
-  icons?: Record<string, string|Array<string>>;
+  names?: Record<string, string | Array<string>>;
+  icons?: Record<string, string | Array<string>>;
   ordered: true;
   endTriggeringAutosplit: true;
   endingSplit?: {

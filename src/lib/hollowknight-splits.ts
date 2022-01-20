@@ -13,7 +13,7 @@ export interface SplitDefinition {
   group: string;
 }
 
-function getNameAndGroup({ description, id, }: Pick<SplitDefinition, "description"|"id">): [string, string] {
+function getNameAndGroup({ description, id, }: Pick<SplitDefinition, "description" | "id">): [string, string] {
   const match = DESCRIPTION_NAME_REGEXP.exec(description);
   if (!match) {
     throw new Error(`Invalid Description: ${description}`);

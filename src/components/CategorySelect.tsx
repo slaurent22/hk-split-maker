@@ -5,7 +5,7 @@ import BaseSelect from "./BaseSelect";
 
 interface Props {
   id: string;
-  onChange: (newValue: CategoryDefinition|null) => void;
+  onChange: (newValue: CategoryDefinition | null) => void;
   data?: Record<string, Array<CategoryDefinition>>;
   defaultValue: CategoryDefinition | null;
 }

@@ -33,14 +33,14 @@ export default function App({ requestedCategoryName, onUpdateCategoryName, }: Ap
     categories: getCategoryDirectory(),
   });
 
-  const onConfigInputChange = (value: string|undefined) => {
+  const onConfigInputChange = (value: string | undefined) => {
     setState({
       ...state,
       configInput: value ?? "",
     });
   };
 
-  const onSplitOutputChange = (value: string|undefined) => {
+  const onSplitOutputChange = (value: string | undefined) => {
     setState({
       ...state,
       splitOutput: value ?? "",
@@ -62,7 +62,7 @@ export default function App({ requestedCategoryName, onUpdateCategoryName, }: Ap
     })();
   }, [state.categoryName]);
 
-  const onCategorySelect = (newValue: CategoryDefinition|null) => {
+  const onCategorySelect = (newValue: CategoryDefinition | null) => {
     if (newValue) {
       setState({
         ...state,
