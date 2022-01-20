@@ -22,8 +22,18 @@ module.exports = {
     rules: [
       {
         test: /\.tsx?$/,
-        use: "ts-loader",
+        use: {
+          loader: "babel-loader",
+          options: {
+            presets: [
+              "@babel/preset-typescript",
+              "@babel/preset-react",
+              "@babel/preset-env"
+            ],
+          },
+        },
         exclude: /node_modules/,
+
       },
       {
         test: /\.txt$/,
