@@ -22,7 +22,30 @@ module.exports = {
     rules: [
       {
         test: /\.tsx?$/,
-        use: "ts-loader",
+        loader: "babel-loader",
+        options: {
+          targets: "defaults",
+          presets: [
+            ["@babel/preset-env", {
+              targets: "defaults",
+              bugfixes: true,
+              useBuiltIns: "usage",
+              corejs: {
+                version: require("./package-lock.json")
+                  .packages["node_modules/core-js"].version,
+                proposals: true,
+              },
+              forceAllTransforms: true,
+            }],
+            ["@babel/preset-typescript", {
+              allowDeclareFields: true,
+            }],
+            ["@babel/preset-react", {
+              runtime: "classic",
+              useBuiltIns: true,
+            }]
+          ],
+        },
         exclude: /node_modules/,
       },
       {

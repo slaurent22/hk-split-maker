@@ -11,7 +11,7 @@ export interface SplitOption {
 }
 
 interface Props {
-  onChange: (newValue: SplitOption|null) => void;
+  onChange: (newValue: SplitOption | null) => void;
 }
 
 function groupSplits(splitDefinitions: Map<string, SplitDefinition>) {

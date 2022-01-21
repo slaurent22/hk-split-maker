@@ -32,12 +32,12 @@ export default function SplitConfigEditor(props: Props): ReactElement {
     }
   }, [monaco]);
 
-  const editorRef = useRef<editor.IStandaloneCodeEditor|null>(null);
+  const editorRef = useRef<editor.IStandaloneCodeEditor | null>(null);
   const handleEditorDidMount = (editorInstance: editor.IStandaloneCodeEditor) => {
     editorRef.current = editorInstance;
   };
 
-  const onChangeSplitSelect = (split: SplitOption|null) => {
+  const onChangeSplitSelect = (split: SplitOption | null) => {
     if (!split || !editorRef?.current) {
       return;
     }

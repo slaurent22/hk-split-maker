@@ -12,7 +12,7 @@
     "noImplicitAny": true,
     "outDir": "./dist/",
     "strict": true,
-    "target": "es5",
+    "target": "es2020",
     "resolveJsonModule": true,
     "sourceMap": true,
     "preserveValueImports": true
