@@ -1,0 +1,22 @@
+{
+    "categoryName": "White Defender%",
+    "splitIds": [
+        "VengefulSpirit",
+        "EnterGreenpath",
+        "MothwingCloak",
+        "MantisClaw",
+        "BlueLake",
+        "DreamNail",
+        "GorgeousHusk",
+        "EnterSanctum",
+        "DesolateDive",
+        "TollBenchCity",
+        "SlySimpleKey",
+        "DungDefender",
+        "Godhome",
+        "WhiteDefender"
+    ],
+    "ordered": true,
+    "endTriggeringAutosplit": true,
+    "gameName": "Hollow Knight Category Extensions"
+}
