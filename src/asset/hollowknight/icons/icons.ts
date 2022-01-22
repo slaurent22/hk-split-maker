@@ -69,6 +69,7 @@ import CrystalGuardian1 from "./Boss/CrystalGuardian1.png";
 import CrystalGuardian2 from "./Boss/CrystalGuardian1.png";
 import DungDefender from "./Boss/DungDefender.png";
 import DungDefenderIdol from "./Relic/KingsIdol.png";
+import GladeIdol from "./Relic/KingsIdol.png";
 import ElderHu from "./Boss/ElderHu.png";
 import ElderHuEssence from "./Boss/ElderHu.png";
 import FalseKnight from "./Boss/FalseKnight.png";
@@ -167,13 +168,16 @@ import Monomon from "./Dreamer/Monomon.png";
 import Dreamer1 from "./Dreamer/Dreamer.png";
 import Dreamer2 from "./Dreamer/Dreamer.png";
 import Dreamer3 from "./Dreamer/Dreamer.png";
-import PreGrimmShop from "./Boss/TroupeMasterGrimm.png";
+import PreGrimmShop from "./Misc/Sly.png";
+import PreGrimmShopTrans from "./Misc/Sly.png";
 import SlyShopFinished from "./Misc/Sly.png";
 import CanOvercharm from "./Achievement/Charmed.png";
 import UnchainedHollowKnight from "./Misc/BlackEgg.png";
 import WatcherChandelier from "./Misc/WatcherChandelier.png";
 import CityGateOpen from "./Item/CityKey.png";
+import CityGateAndMantisLords from "./Item/CityKey.png";
 import PlayerDeath from "./Enemy/Shade.png";
+import ShadeKilled from "./Enemy/Shade.png";
 import EndingSplit from "./Misc/Knight.png";
 import FlowerQuest from "./Item/DelicateFlower.png";
 import FlowerRewardGiven from "./Achievement/Solace.png";
@@ -189,12 +193,16 @@ import EternalOrdealUnlocked from "./Enemy/Zote.png";
 import EternalOrdealAchieved from "./Enemy/Zote.png";
 import RidingStag from "./Misc/Stag.png";
 import SavedCloth from "./NPC/Cloth.png";
+import MineLiftOpened from "./Enemy/CrystalCrawler.png";
 import ColosseumBronzeUnlocked from "./NPC/LittleFool.png";
 import ColosseumSilverUnlocked from "./Achievement/Warrior.png";
 import ColosseumGoldUnlocked from "./Achievement/Conqueror.png";
 import ColosseumBronze from "./Achievement/Warrior.png";
 import ColosseumSilver from "./Achievement/Conqueror.png";
 import ColosseumGold from "./Achievement/Fool.png";
+import ColosseumBronzeEntry from "./Achievement/Warrior.png";
+import ColosseumSilverEntry from "./Achievement/Conqueror.png";
+import ColosseumGoldEntry from "./Achievement/Fool.png";
 import ColosseumBronzeExit from "./Achievement/Warrior.png";
 import ColosseumSilverExit from "./Achievement/Conqueror.png";
 import ColosseumGoldExit from "./Achievement/Fool.png";
@@ -263,9 +271,11 @@ import EnterAnyDream from "./Skill/DreamNail.png";
 import FogCanyonEntry from "./Enemy/Uoma.png";
 import FungalWastesEntry from "./Enemy/Ambloom.png";
 import TransGorgeousHusk from "./Enemy/GorgeousHusk.png";
+import EnterGodhome from "./Misc/Godseeker.png";
 import EnterGreenpath from "./Enemy/Mosscreep.png";
 import EnterGreenpathWithOvercharm from "./Enemy/Mosscreep.png";
 import TransClaw from "./Skill/MantisClaw.png";
+import TransVS from "./Skill/VengefulSpirit.png";
 import TransDescendingDark from "./Skill/DescendingDark.png";
 import HiveEntry from "./Enemy/Hiveling.png";
 import KingsPass from "./Enemy/Vengefly.png";
@@ -488,6 +498,15 @@ import Essence2100 from "./Skill/DreamGate.png";
 import Essence2200 from "./Skill/DreamGate.png";
 import Essence2300 from "./Skill/DreamGate.png";
 import Essence2400 from "./Skill/DreamGate.png";
+import BenchAny from "./Misc/Bench.png";
+import BenchCrossroadsStag from "./Misc/Bench.png";
+import BenchGreenpathStag from "./Misc/Bench.png";
+import BenchQueensStation from "./Misc/Bench.png";
+import BenchStorerooms from "./Misc/Bench.png";
+import BenchKingsStation from "./Misc/Bench.png";
+import BenchHiddenStation from "./Misc/Bench.png";
+import BenchRGStag from "./Misc/Bench.png";
+import BenchQGStag from "./Misc/Bench.png";
 import TollBenchQG from "./Misc/Bench.png";
 import TollBenchCity from "./Misc/Bench.png";
 import TollBenchBasin from "./Misc/Bench.png";
@@ -516,6 +535,13 @@ import PathOfPainTransition2 from "./Enemy/Wingmould.png";
 import PathOfPainTransition3 from "./Enemy/Wingmould.png";
 import DgateKingdomsEdgeAcid from "./Skill/DreamGate.png";
 import SoulMasterEncountered from "./Boss/SoulMaster.png";
+import EnterHornet1 from "./Boss/Hornet1.png";
+import EnterSoulMaster from "./Boss/SoulMaster.png";
+import EnterHornet2 from "./Boss/Hornet1.png";
+import EnterHiveKnight from "./Boss/HiveKnight.png";
+import EnterTMG from "./Boss/TroupeMasterGrimm.png";
+import VengeflyKingTrans from "./Boss/VengeflyKing.png";
+import MegaMossChargerTrans from "./Boss/MassiveMossCharger.png";
 import GodhomeBench from "./Misc/Godseeker.png";
 import GodhomeLoreRoom from "./Misc/Godseeker.png";
 import Pantheon1to4Entry from "./Misc/Godseeker.png";
@@ -555,6 +581,7 @@ import OnObtainGhostRevek from "./NPC/Revek.png";
 import OnObtainWanderersJournal from "./Relic/WanderersJournal.png";
 import OnObtainHallownestSeal from "./Relic/HallownestSeal.png";
 import OnObtainKingsIdol from "./Relic/KingsIdol.png";
+import ArcaneEgg8 from "./Relic/ArcaneEgg.png";
 import OnObtainArcaneEgg from "./Relic/ArcaneEgg.png";
 import OnObtainRancidEgg from "./Item/RancidEgg.png";
 import OnObtainMaskShard from "./Fragment/MaskShard.png";
@@ -636,6 +663,7 @@ export default {
     CrystalGuardian2,
     DungDefender,
     DungDefenderIdol,
+    GladeIdol,
     ElderHu,
     ElderHuEssence,
     FalseKnight,
@@ -735,12 +763,15 @@ export default {
     Dreamer2,
     Dreamer3,
     PreGrimmShop,
+    PreGrimmShopTrans,
     SlyShopFinished,
     CanOvercharm,
     UnchainedHollowKnight,
     WatcherChandelier,
     CityGateOpen,
+    CityGateAndMantisLords,
     PlayerDeath,
+    ShadeKilled,
     EndingSplit,
     FlowerQuest,
     FlowerRewardGiven,
@@ -756,12 +787,16 @@ export default {
     EternalOrdealAchieved,
     RidingStag,
     SavedCloth,
+    MineLiftOpened,
     ColosseumBronzeUnlocked,
     ColosseumSilverUnlocked,
     ColosseumGoldUnlocked,
     ColosseumBronze,
     ColosseumSilver,
     ColosseumGold,
+    ColosseumBronzeEntry,
+    ColosseumSilverEntry,
+    ColosseumGoldEntry,
     ColosseumBronzeExit,
     ColosseumSilverExit,
     ColosseumGoldExit,
@@ -830,9 +865,11 @@ export default {
     FogCanyonEntry,
     FungalWastesEntry,
     TransGorgeousHusk,
+    EnterGodhome,
     EnterGreenpath,
     EnterGreenpathWithOvercharm,
     TransClaw,
+    TransVS,
     TransDescendingDark,
     HiveEntry,
     KingsPass,
@@ -1055,6 +1092,15 @@ export default {
     Essence2200,
     Essence2300,
     Essence2400,
+    BenchAny,
+    BenchCrossroadsStag,
+    BenchGreenpathStag,
+    BenchQueensStation,
+    BenchStorerooms,
+    BenchKingsStation,
+    BenchHiddenStation,
+    BenchRGStag,
+    BenchQGStag,
     TollBenchQG,
     TollBenchCity,
     TollBenchBasin,
@@ -1083,6 +1129,13 @@ export default {
     PathOfPainTransition3,
     DgateKingdomsEdgeAcid,
     SoulMasterEncountered,
+    EnterHornet1,
+    EnterSoulMaster,
+    EnterHornet2,
+    EnterHiveKnight,
+    EnterTMG,
+    VengeflyKingTrans,
+    MegaMossChargerTrans,
     GodhomeBench,
     GodhomeLoreRoom,
     Pantheon1to4Entry,
@@ -1122,6 +1175,7 @@ export default {
     OnObtainWanderersJournal,
     OnObtainHallownestSeal,
     OnObtainKingsIdol,
+    ArcaneEgg8,
     OnObtainArcaneEgg,
     OnObtainRancidEgg,
     OnObtainMaskShard,

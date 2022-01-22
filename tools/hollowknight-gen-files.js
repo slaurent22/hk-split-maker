@@ -121,7 +121,7 @@ const NEW_ID_MAP = {
 };
 
 function getUrl(id, qualifier) {
-    if (id === "DungDefenderIdol") {
+    if (id === "DungDefenderIdol" || id === "GladeIdol") {
         return getUrl("KingsIdol", "Relic");
     }
 
@@ -188,6 +188,7 @@ function getUrl(id, qualifier) {
             case "OnObtainWanderersJournal": return getUrl("WanderersJournal", "Relic");
             case "OnObtainHallownestSeal":   return getUrl("HallownestSeal", "Relic");
             case "OnObtainKingsIdol":        return getUrl("KingsIdol", "Relic");
+            case "ArcaneEgg8":
             case "OnObtainArcaneEgg":        return getUrl("ArcaneEgg", "Relic");
             case "OnObtainRancidEgg":        return getUrl("RancidEgg", "Item");
             case "OnObtainMaskShard":        return getUrl("MaskShard", "Fragment");
@@ -201,11 +202,12 @@ function getUrl(id, qualifier) {
 
     if (qualifier === "Event") {
         switch (id) {
-            case "PreGrimmShop":               return getUrl("TroupeMasterGrimm", "Boss");
+            case "PreGrimmShop":               return getUrl("Sly", "Misc");
             case "CanOvercharm":               return getUrl("Charmed", "Achievement");
             case "UnchainedHollowKnight":      return getUrl("BlackEgg", "Misc");
             case "WatcherChandelier":          return getUrl("WatcherChandelier", "Misc");
             case "CityGateOpen":               return getUrl("CityKey", "Item");
+            case "CityGateAndMantisLords":     return getUrl("CityKey", "Item");
             case "FlowerQuest":                return getUrl("DelicateFlower", "Item");
             case "FlowerRewardGiven":          return getUrl("Solace", "Achievement");
             case "HappyCouplePlayerDataEvent": return getUrl("HappyCouple", "Achievement");
@@ -219,6 +221,7 @@ function getUrl(id, qualifier) {
             case "SpiritGladeOpen":            return getUrl("Attunement", "Achievement");
             case "BeastsDenTrapBench":         return getUrl("Bench", "Misc");
             case "PlayerDeath":                return getUrl("Shade", "Enemy");
+            case "ShadeKilled":                return getUrl("Shade", "Enemy");
             case "SlyShopFinished":            return getUrl("Sly", "Misc");
             case "AllBreakables":              return getUrl("FragileStrengthBroken", "Charm");
             case "MetEmilitia":                return getUrl("Emilitia", "NPC");
@@ -227,6 +230,7 @@ function getUrl(id, qualifier) {
             case "EternalOrdealAchieved":      return getUrl("Zote", "Enemy");
             case "SavedCloth":                 return getUrl("Cloth", "NPC");
             case "RidingStag":                 return getUrl("Stag", "Misc");
+            case "MineLiftOpened":             return getUrl("CrystalCrawler", "Enemy");
         }
     }
 
@@ -324,11 +328,13 @@ function getUrl(id, qualifier) {
             case "TransClaw":                    return getUrl("MantisClaw", "Skill");
             case "TransGorgeousHusk":            return getUrl("GorgeousHusk", "Enemy");
             case "TransDescendingDark":          return getUrl("DescendingDark", "Skill");
+            case "TransVS":                      return getUrl("VengefulSpirit", "Skill");
             case "CorniferAtHome":               return getUrl("Iselda", "Misc");
             case "QueensGardensFrogsTrans":      return getUrl("QueensGardens", "Area");
             case "QueensGardensPostArenaTransition":
                                                  return getUrl("QueensGardens", "Area");
             case "WhitePalaceEntry":             return getUrl("WhitePalace", "Area");
+            case "EnterGodhome":
             case "Pantheon1to4Entry":
             case "Pantheon5Entry":
             case "GodhomeLoreRoom":
@@ -338,6 +344,18 @@ function getUrl(id, qualifier) {
             case "ColosseumBronzeExit":          return getUrl("ColosseumBronze", "Trial");
             case "ColosseumSilverExit":          return getUrl("ColosseumSilver", "Trial");
             case "ColosseumGoldExit":            return getUrl("ColosseumGold", "Trial");
+            case "ColosseumBronzeEntry":         return getUrl("ColosseumBronze", "Trial");
+            case "ColosseumSilverEntry":         return getUrl("ColosseumSilver", "Trial");
+            case "ColosseumGoldEntry":           return getUrl("ColosseumGold", "Trial");
+            case "EnterHornet1":                 return getUrl("Hornet1", "Boss");
+            case "EnterSoulMaster":              return getUrl("SoulMaster", "Boss");
+            case "EnterHornet2":                 return getUrl("Hornet2", "Boss");
+            case "EnterHiveKnight":              return getUrl("HiveKnight", "Boss");
+            case "EnterTMG":                     return getUrl("TroupeMasterGrimm", "Boss");
+            case "VengeflyKingTrans":            return getUrl("VengeflyKing", "Boss");
+            case "MegaMossChargerTrans":         return getUrl("MassiveMossCharger", "Boss");
+            case "PreGrimmShopTrans":
+            case "SlyShopFinished":              return getUrl("Sly", "Misc");
 
         }
     }
@@ -380,7 +398,7 @@ function getUrl(id, qualifier) {
         return getUrl("Tram", "Misc");
     }
 
-    if (qualifier === "Toll") {
+    if (qualifier === "Toll" || qualifier === "Bench") {
         return getUrl("Bench", "Misc");
     }
 

@@ -78,7 +78,6 @@ function getNameAndGroup({ description, id, }: Pick<SplitDefinition, "descriptio
     case "Pantheon":     return [name, "Boss"];
     case "Room":         return [name, "Transition"];
     case "Stag Station": return [`${name} Stag`, qualifier];
-    case "Trinket":      return [name, "Item"];
     case "Completed":
     case "Dreamgate":
     case "Lever":
