@@ -643,6 +643,13 @@
             }
         },
         {
+            "fileName": "white-defender",
+            "displayName": "White Defender%",
+            "data": {
+                "routeNotesURL": "https://pastebin.com/JibM2SL3",
+            }
+        },
+        {
             "fileName": "witness",
             "displayName": "Witness",
             "data": {
