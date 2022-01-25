@@ -4,7 +4,7 @@
         "VengefulSpirit",
         "SoulCatcher",
         "EnterGreenpath",
-        "FungalWastes",
+        "FungalWastesEntry",
         "NotchShrumalOgres",
         "PlayerDeath",
         "MantisClaw",
@@ -20,7 +20,7 @@
         "SimpleKey",
         "SlySimpleKey",
         "WaterwaysEntry",
-        "Godhome"
+        "EnterGodhome"
     ],
     "ordered": true,
     "endTriggeringAutosplit": false,
