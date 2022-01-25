@@ -195,7 +195,7 @@ function getUrl(id, qualifier) {
             case "OnObtainVesselFragment":   return getUrl("VesselFragment1", "Fragment");
             case "OnObtainSimpleKey":        return getUrl("SimpleKey", "Item");
             case "OnUseSimpleKey":           return getUrl("SimpleKey", "Item");
-            case "OnObtainGrub":             return getUrl("Grub", "NPC");
+            case "OnObtainGrub":             return getUrl("Grub", "Misc");
             case "OnObtainPaleOre":          return getUrl("PaleOre", "Item");
         }
     }
@@ -391,7 +391,7 @@ function getUrl(id, qualifier) {
     }
 
     if (qualifier === "Grub") {
-        return getUrl("Grub", "NPC")
+        return getUrl("Grub", "Misc")
     }
 
     if (qualifier === "Tram") {
