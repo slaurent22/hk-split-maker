@@ -220,10 +220,17 @@
             "displayName": "0 Geo"
         },
         {
-            "fileName": "3vf",
-            "displayName": "3 Vessel Fragments",
+            "fileName": "3vf-kings-station",
+            "displayName": "3 Vessel Fragments (King's Station)",
             "data": {
                 "routeNotesURL": "https://pastebin.com/ZqDk8rQ0"
+            }
+        },
+        {
+            "fileName": "3vf-stag-nest",
+            "displayName": "3 Vessel Fragments (Stag Nest)",
+            "data": {
+                "routeNotesURL": "https://pastebin.com/4mE0UWtG"
             }
         },
         {
