@@ -231,6 +231,8 @@ function getUrl(id, qualifier) {
             case "SavedCloth":                 return getUrl("Cloth", "NPC");
             case "RidingStag":                 return getUrl("Stag", "Misc");
             case "MineLiftOpened":             return getUrl("CrystalCrawler", "Enemy");
+            case "AbyssDoor":                  return getUrl("KingsBrand", "Item");
+            case "AbyssLighthouse":            return getUrl("Shade", "Enemy");
         }
     }
 
@@ -356,7 +358,7 @@ function getUrl(id, qualifier) {
             case "MegaMossChargerTrans":         return getUrl("MassiveMossCharger", "Boss");
             case "PreGrimmShopTrans":
             case "SlyShopFinished":              return getUrl("Sly", "Misc");
-
+            case "LumaflyLanternTransition":     return getUrl("LumaflyLantern", "Item");
         }
     }
 
@@ -420,6 +422,14 @@ function getUrl(id, qualifier) {
 
     if (id === "SoulMasterEncountered") {
         return getUrl("SoulMaster", "Boss");
+    }
+
+    if (qualifier === "Old Dreamer Timing") {
+        switch (id) {
+            case "HegemolDreamer": return getUrl("Hegemol", "Dreamer");
+            case "LurienDreamer": return getUrl("Lurien", "Dreamer");
+            case "MonomonDreamer": return getUrl("Monomon", "Dreamer");
+        }
     }
 
     const newId = NEW_ID_MAP[id] || id;

@@ -173,10 +173,16 @@
         GruzMother,
         [Description("Hive Knight (Boss)"), ToolTip("Splits when killing Hive Knight")]
         HiveKnight,
+        [Description("Enter Hive Knight (Transition)"), ToolTip("Splits when entering Hive Knight boss arena transition")]
+        EnterHiveKnight,
         [Description("Hornet 1 (Boss)"), ToolTip("Splits when killing Hornet for the first time")]
         Hornet1,
+        [Description("Enter Hornet 1 (Transition)"), ToolTip("Splits when entering Hornet 1 boss arena transition")]
+        EnterHornet1,
         [Description("Hornet 2 (Boss)"), ToolTip("Splits when killing Hornet for the second time")]
         Hornet2,
+        [Description("Enter Hornet 2 (Transition)"), ToolTip("Splits when entering Hornet 2 boss arena transition")]
+        EnterHornet2,
         [Description("Lost Kin (Boss)"), ToolTip("Splits when killing Lost Kin (Broken Vessel Dream)")]
         LostKin,
         [Description("Lost Kin (Essence)"), ToolTip("Splits when getting Lost Kin essence (Broken Vessel Dream)")]
@@ -217,6 +223,10 @@
         SlyNailsage,
         [Description("Soul Master (Boss)"), ToolTip("Splits when killing Soul Master")]
         SoulMaster,
+        [Description("Enter Soul Master (Transition)"), ToolTip("Splits when entering Soul Master boss arena transition")]
+        EnterSoulMaster,
+        [Description("Soul Master Encountered (Practice)"), ToolTip("Splits when Soul Master is activated the first time as the gate closes")]
+        SoulMasterEncountered,
         [Description("Soul Tyrant (Boss)"), ToolTip("Splits when killing Soul Tyrant (Soul Master Dream)")]
         SoulTyrant,
         [Description("Soul Tyrant (Essence)"), ToolTip("Splits when getting Soul Tyrant essence (Soul Master Dream)")]
@@ -227,6 +237,8 @@
         TraitorLord,
         [Description("Troupe Master Grimm (Boss)"), ToolTip("Splits when killing Troupe Master Grimm")]
         TroupeMasterGrimm,
+        [Description("Enter Troupe Master Grimm (Transition)"), ToolTip("Splits when entering Grimm tent with requirements to trigger Troupe Master Grimm boss")]
+        EnterTMG,
         [Description("Uumuu (Boss)"), ToolTip("Splits when killing Uumuu")]
         Uumuu,
         [Description("Watcher Knight (Boss)"), ToolTip("Splits when killing Watcher Knight")]
@@ -337,6 +349,14 @@
         Lurien,
         [Description("Monomon the Teacher (Dreamer)"), ToolTip("Splits when you see the mask for Monomon (After killing Uumuu)")]
         Monomon,
+
+        [Description("Herrah (Old Dreamer Timing)"), ToolTip("Matches the old legacy split. Splits when Herrah is registered as defeated (In Spider Area)")]
+        HegemolDreamer,
+        [Description("Lurien (Old Dreamer Timing)"), ToolTip("Matches the old legacy split. Splits when Lurien is registered as defeated (After killing Watcher Knight)")]
+        LurienDreamer,
+        [Description("Monomon (Old Dreamer Timing)"), ToolTip("Matches the old legacy split. Splits when Monomon is registered as defeated (After killing Uumuu)")]
+        MonomonDreamer,
+
         [Description("First Dreamer (Dreamer)"), ToolTip("Splits when you see the mask for the first dreamer killed")]
         Dreamer1,
         [Description("Second Dreamer (Dreamer)"), ToolTip("Splits when you see the mask for the second dreamer killed")]
@@ -350,6 +370,10 @@
         PreGrimmShopTrans,
         [Description("1xx% Sly Final Shop (Transition)"), ToolTip("Splits on leaving Sly's shop after having bough Sprintmaster and Vessel Frag 8")]
         SlyShopFinished,
+        [Description("Abyss Door (Event)"), ToolTip("Splits on the Abyss door opening")]
+        AbyssDoor,
+        [Description("Abyss Lighthouse (Event)"), ToolTip("Splits on the Abyss Lighthouse being lit")]
+        AbyssLighthouse,
         [Description("Can Overcharm (Event)"), ToolTip("Splits when overcharming is enabled")]
         CanOvercharm,
         [Description("Chains Broken - Hollow Knight (Event)"), ToolTip("Splits at the end of the first Hollow Knight scream after the chains are broken")]
@@ -360,12 +384,14 @@
         CityGateOpen,
         [Description("City Gate w/ Mantis Lords defeated (Event)"), ToolTip("to make sure you don't forget mantis lords")]
         CityGateAndMantisLords,
+        [Description("Credits Roll (Event)"), ToolTip("Splits on any credits rolling")]
+        EndingSplit,
         [Description("Death (Event)"), ToolTip("Splits when player hp is 0")]
         PlayerDeath,
         [Description("Shade Killed (Event)"), ToolTip("Splits when the shade is killed")]
         ShadeKilled,
-        [Description("Ending (Event)"), ToolTip("Splits on any credits rolling")]
-        EndingSplit,
+        [Description("Shop Lumafly Lantern (Transition)"), ToolTip("Splits on transition after Lantern has been acquired")]
+        LumaflyLanternTransition,
         [Description("Flower Quest (Event)"), ToolTip("Splits when placing the flower at the grave of the Traitors' Child")]
         FlowerQuest,
         [Description("Flower Quest Reward (Event)"), ToolTip("Splits when Grey Mourner gives you the Flower Quest reward")]
@@ -1094,24 +1120,6 @@
 
         [Description("Kingdom's Edge Acid (Dreamgate)"), ToolTip("Splits when placing Dreamgate by KE Acid (hopefully)")]
         DgateKingdomsEdgeAcid,
-
-        [Description("Soul Master Encountered (Practice)"), ToolTip("Splits when Soul Master is activated the first time and the gate closes")]
-        SoulMasterEncountered,
-        [Description("Enter Hornet 1 (Transition)"), ToolTip("Splits when entering Hornet 1 boss arena transition")]
-        EnterHornet1,
-        [Description("Enter Soul Master (Transition)"), ToolTip("Splits when entering Soul Master boss arena transition")]
-        EnterSoulMaster,
-        [Description("Enter Hornet 2 (Transition)"), ToolTip("Splits when entering Hornet 2 boss arena transition")]
-        EnterHornet2,
-        [Description("Enter Hive Knight (Transition)"), ToolTip("Splits when entering Hive Knight boss arena transition")]
-        EnterHiveKnight,
-        [Description("Enter Troupe Master Grimm (Transition)"), ToolTip("Splits when entering Grimm tent with requirements to trigger Troupe Master Grimm boss")]
-        EnterTMG,
-
-        [Description("Vengefly King Killed (Transition)"), ToolTip("Splits on transition after Vengefly King in Greenpath killed")]
-        VengeflyKingTrans,
-        [Description("Massive Moss Charger Killed (Transition)"), ToolTip("Splits on transition after Massive Moss Charger is killed")]
-        MegaMossChargerTrans,
 
         [Description("Godhome Bench (Transition)"), ToolTip("Splits when leaving a Godhome Bench room")]
         GodhomeBench,

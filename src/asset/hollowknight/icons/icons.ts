@@ -86,8 +86,11 @@ import GreyPrinceEssence from "./Boss/GreyPrinceZote.png";
 import OnDefeatGPZ from "./Boss/GreyPrinceZote.png";
 import GruzMother from "./Boss/GruzMother.png";
 import HiveKnight from "./Boss/HiveKnight.png";
+import EnterHiveKnight from "./Boss/HiveKnight.png";
 import Hornet1 from "./Boss/Hornet1.png";
+import EnterHornet1 from "./Boss/Hornet1.png";
 import Hornet2 from "./Boss/Hornet1.png";
+import EnterHornet2 from "./Boss/Hornet1.png";
 import LostKin from "./Boss/BrokenVessel.png";
 import LostKinEssence from "./Boss/BrokenVessel.png";
 import MantisLords from "./Boss/MantisLords.png";
@@ -108,11 +111,14 @@ import HollowKnightBoss from "./Boss/HollowKnightBoss.png";
 import SheoPaintmaster from "./Boss/SheoPaintmaster.png";
 import SlyNailsage from "./Boss/SlyNailsage.png";
 import SoulMaster from "./Boss/SoulMaster.png";
+import EnterSoulMaster from "./Boss/SoulMaster.png";
+import SoulMasterEncountered from "./Boss/SoulMaster.png";
 import SoulTyrant from "./Boss/SoulMaster.png";
 import SoulTyrantEssence from "./Boss/SoulMaster.png";
 import SoulTyrantEssenceWithSanctumGrub from "./Boss/SoulMaster.png";
 import TraitorLord from "./Boss/TraitorLord.png";
 import TroupeMasterGrimm from "./Boss/TroupeMasterGrimm.png";
+import EnterTMG from "./Boss/TroupeMasterGrimm.png";
 import Uumuu from "./Boss/Uumuu.png";
 import BlackKnight from "./Boss/WatcherKnights.png";
 import WhiteDefender from "./Boss/WhiteDefender.png";
@@ -165,20 +171,26 @@ import NightmareKingGrimmP from "./Boss/NightmareKingGrimm.png";
 import Hegemol from "./Dreamer/Herrah.png";
 import Lurien from "./Dreamer/Lurien.png";
 import Monomon from "./Dreamer/Monomon.png";
+import HegemolDreamer from "./Dreamer/Herrah.png";
+import LurienDreamer from "./Dreamer/Lurien.png";
+import MonomonDreamer from "./Dreamer/Monomon.png";
 import Dreamer1 from "./Dreamer/Dreamer.png";
 import Dreamer2 from "./Dreamer/Dreamer.png";
 import Dreamer3 from "./Dreamer/Dreamer.png";
 import PreGrimmShop from "./Misc/Sly.png";
 import PreGrimmShopTrans from "./Misc/Sly.png";
 import SlyShopFinished from "./Misc/Sly.png";
+import AbyssDoor from "./Item/KingsBrand.png";
+import AbyssLighthouse from "./Enemy/Shade.png";
 import CanOvercharm from "./Achievement/Charmed.png";
 import UnchainedHollowKnight from "./Misc/BlackEgg.png";
 import WatcherChandelier from "./Misc/WatcherChandelier.png";
 import CityGateOpen from "./Item/CityKey.png";
 import CityGateAndMantisLords from "./Item/CityKey.png";
+import EndingSplit from "./Misc/Knight.png";
 import PlayerDeath from "./Enemy/Shade.png";
 import ShadeKilled from "./Enemy/Shade.png";
-import EndingSplit from "./Misc/Knight.png";
+import LumaflyLanternTransition from "./Item/LumaflyLantern.png";
 import FlowerQuest from "./Item/DelicateFlower.png";
 import FlowerRewardGiven from "./Achievement/Solace.png";
 import HappyCouplePlayerDataEvent from "./Achievement/HappyCouple.png";
@@ -534,14 +546,6 @@ import PathOfPainTransition1 from "./Enemy/Wingmould.png";
 import PathOfPainTransition2 from "./Enemy/Wingmould.png";
 import PathOfPainTransition3 from "./Enemy/Wingmould.png";
 import DgateKingdomsEdgeAcid from "./Skill/DreamGate.png";
-import SoulMasterEncountered from "./Boss/SoulMaster.png";
-import EnterHornet1 from "./Boss/Hornet1.png";
-import EnterSoulMaster from "./Boss/SoulMaster.png";
-import EnterHornet2 from "./Boss/Hornet1.png";
-import EnterHiveKnight from "./Boss/HiveKnight.png";
-import EnterTMG from "./Boss/TroupeMasterGrimm.png";
-import VengeflyKingTrans from "./Boss/VengeflyKing.png";
-import MegaMossChargerTrans from "./Boss/MassiveMossCharger.png";
 import GodhomeBench from "./Misc/Godseeker.png";
 import GodhomeLoreRoom from "./Misc/Godseeker.png";
 import Pantheon1to4Entry from "./Misc/Godseeker.png";
@@ -680,8 +684,11 @@ export default {
     OnDefeatGPZ,
     GruzMother,
     HiveKnight,
+    EnterHiveKnight,
     Hornet1,
+    EnterHornet1,
     Hornet2,
+    EnterHornet2,
     LostKin,
     LostKinEssence,
     MantisLords,
@@ -702,11 +709,14 @@ export default {
     SheoPaintmaster,
     SlyNailsage,
     SoulMaster,
+    EnterSoulMaster,
+    SoulMasterEncountered,
     SoulTyrant,
     SoulTyrantEssence,
     SoulTyrantEssenceWithSanctumGrub,
     TraitorLord,
     TroupeMasterGrimm,
+    EnterTMG,
     Uumuu,
     BlackKnight,
     WhiteDefender,
@@ -759,20 +769,26 @@ export default {
     Hegemol,
     Lurien,
     Monomon,
+    HegemolDreamer,
+    LurienDreamer,
+    MonomonDreamer,
     Dreamer1,
     Dreamer2,
     Dreamer3,
     PreGrimmShop,
     PreGrimmShopTrans,
     SlyShopFinished,
+    AbyssDoor,
+    AbyssLighthouse,
     CanOvercharm,
     UnchainedHollowKnight,
     WatcherChandelier,
     CityGateOpen,
     CityGateAndMantisLords,
+    EndingSplit,
     PlayerDeath,
     ShadeKilled,
-    EndingSplit,
+    LumaflyLanternTransition,
     FlowerQuest,
     FlowerRewardGiven,
     HappyCouplePlayerDataEvent,
@@ -1128,14 +1144,6 @@ export default {
     PathOfPainTransition2,
     PathOfPainTransition3,
     DgateKingdomsEdgeAcid,
-    SoulMasterEncountered,
-    EnterHornet1,
-    EnterSoulMaster,
-    EnterHornet2,
-    EnterHiveKnight,
-    EnterTMG,
-    VengeflyKingTrans,
-    MegaMossChargerTrans,
     GodhomeBench,
     GodhomeLoreRoom,
     Pantheon1to4Entry,
