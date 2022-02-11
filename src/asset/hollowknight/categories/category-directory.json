@@ -8,15 +8,29 @@
             }
         },
         {
-            "fileName": "107-early-gpz",
-            "displayName": "107% AB (Early GPZ)",
+            "fileName": "107-early-gpz-comsob",
+            "displayName": "107% AB (Early GPZ; comsob splits)",
             "data": {
                 "routeNotesURL": "https://pastebin.com/2KZrBXik"
             }
         },
         {
-            "fileName": "107-late-gpz",
-            "displayName": "107% AB (Late GPZ)",
+            "fileName": "107-early-gpz-everything",
+            "displayName": "107% AB (Early GPZ; all splits)",
+            "data": {
+                "routeNotesURL": "https://pastebin.com/2KZrBXik"
+            }
+        },
+        {
+            "fileName": "107-late-gpz-comsob",
+            "displayName": "107% AB (Late GPZ; comsob splits)",
+            "data": {
+                "routeNotesURL": "https://pastebin.com/bqRttPCc"
+            }
+        },
+        {
+            "fileName": "107-late-gpz-everything",
+            "displayName": "107% AB (Late GPZ; all splits)",
             "data": {
                 "routeNotesURL": "https://pastebin.com/bqRttPCc"
             }
