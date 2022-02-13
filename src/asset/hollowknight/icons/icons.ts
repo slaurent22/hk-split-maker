@@ -597,6 +597,8 @@ import OnObtainPaleOre from "./Item/PaleOre.png";
 import AnyTransition from "./Misc/Knight.png";
 import TransitionAfterSaveState from "./Misc/Knight.png";
 import ManualSplit from "./Misc/Knight.png";
+import VengeflyKingTrans from "./Boss/VengeflyKing.png";
+import MegaMossChargerTrans from "./Boss/MassiveMossCharger.png";
 export default {
     AbyssShriek,
     CrystalHeart,
@@ -1195,4 +1197,6 @@ export default {
     AnyTransition,
     TransitionAfterSaveState,
     ManualSplit,
+    VengeflyKingTrans,
+    MegaMossChargerTrans,
 };

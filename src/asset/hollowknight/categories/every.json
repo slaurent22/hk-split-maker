@@ -597,7 +597,9 @@
         "OnObtainPaleOre",
         "AnyTransition",
         "TransitionAfterSaveState",
-        "ManualSplit"
+        "ManualSplit",
+        "VengeflyKingTrans",
+        "MegaMossChargerTrans"
     ],
     "ordered": true,
     "endTriggeringAutosplit": false,
