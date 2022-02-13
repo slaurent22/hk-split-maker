@@ -1,0 +1,25 @@
+{
+    "categoryName": "8 Mask Shards",
+    "splitIds": [
+        "VengefulSpirit",
+        "EnterGreenpath",
+        "MothwingCloak",
+        "MantisClaw",
+        "BrettaRescued",
+        "SlyRescued",
+        "MaskFragment2",
+        "MegaMossChargerTrans",
+        "MaskFragment3",
+        "Mask1",
+        "Mask2"
+    ],
+    "names": {
+        "MaskFragment2": "Stone Sanctuary Shard",
+        "MaskFragment3": "Queen's Station Shard",
+        "Mask1": "Brooding Mawlek Shard",
+        "Mask2": "8 Mask Shards"
+    },
+    "ordered": true,
+    "endTriggeringAutosplit": true,
+    "gameName": "Hollow Knight Category Extensions"
+}

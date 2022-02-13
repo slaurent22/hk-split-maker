@@ -252,6 +252,13 @@
             }
         },
         {
+            "fileName": "8ms",
+            "displayName": "8 Mask Shards",
+            "data": {
+                "routeNotesURL": "https://pastebin.com/ptWLryuc"
+            }
+        },
+        {
             "fileName": "16ms",
             "displayName": "16 Mask Shards",
             "data": {
