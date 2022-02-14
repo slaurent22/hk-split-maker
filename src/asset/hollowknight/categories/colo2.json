@@ -1,5 +1,6 @@
 {
     "categoryName": "Trial of the Conqueror",
+    "startTriggeringAutosplit": "ColosseumSilverEntry",
     "splitIds": [
         "ManualSplit"
     ],
