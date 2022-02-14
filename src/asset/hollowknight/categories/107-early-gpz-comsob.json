@@ -42,6 +42,7 @@
         "MarkothEssence",
         "QuickSlash",
         "NotchGrimm",
+        "WaterwaysEntry",
         "BrettaRescued",
         "MantisLords",
         "MaskFragment5",
@@ -100,7 +101,7 @@
         "MaskFragment5": "Fungal Core Shard",
         "Ore3": "Nosk Pale Ore",
         "Vessel2": "Deepnest Fragment",
-        "Grub46": "Spire Grub (Grub 46)",
+        "Grub46": "(Grub 46) Spire Grub",
         "ColosseumBronzeUnlocked": "Begin Colosseum Trials",
         "ColosseumSilverUnlocked": "Trial of the Warrior",
         "ColosseumGoldUnlocked": "Trial of the Conqueror",
@@ -111,6 +112,9 @@
         "Mask4": "Flower Quest",
         "Kingsoul": "[2D] White Palace",
         "NightmareKingGrimm": "[3U] %s"
+    },
+    "icons": {
+        "Mask4": "HasDelicateFlower"
     },
     "ordered": true,
     "endTriggeringAutosplit": false,
