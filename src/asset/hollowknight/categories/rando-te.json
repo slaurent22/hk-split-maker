@@ -1,7 +1,7 @@
 {
     "categoryName": "Randomizer TE",
+    "startTriggeringAutosplit": "RandoWake",
     "splitIds": [
-        "RandoWake",
         "HollowKnightDreamnail"
     ],
     "ordered": true,
