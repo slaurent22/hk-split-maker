@@ -14,10 +14,12 @@
         "Mask2"
     ],
     "names": {
+        "SlyRescued": "Shard + Sly (250)",
+        "MegaMossChargerTrans": "MMC Exit (550)",
         "MaskFragment2": "Stone Sanctuary Shard",
         "MaskFragment3": "Queen's Station Shard",
         "Mask1": "Brooding Mawlek Shard",
-        "Mask2": "8 Mask Shards"
+        "Mask2": "8 Mask Shards (650)"
     },
     "ordered": true,
     "endTriggeringAutosplit": true,

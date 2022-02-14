@@ -1,36 +1,43 @@
 {
     "Main": [
         {
-            "fileName": "112",
-            "displayName": "112% APB",
+            "fileName": "112-comsob",
+            "displayName": "112% APB (comsob splits)",
+            "data": {
+                "routeNotesURL": "https://pastebin.com/qznSrku9"
+            }
+        },
+        {
+            "fileName": "112-everything",
+            "displayName": "112% APB (all splits)",
             "data": {
                 "routeNotesURL": "https://pastebin.com/qznSrku9"
             }
         },
         {
             "fileName": "107-early-gpz-comsob",
-            "displayName": "107% AB (Early GPZ; comsob splits)",
+            "displayName": "107% AB (early GPZ; comsob splits)",
             "data": {
                 "routeNotesURL": "https://pastebin.com/2KZrBXik"
             }
         },
         {
             "fileName": "107-early-gpz-everything",
-            "displayName": "107% AB (Early GPZ; all splits)",
+            "displayName": "107% AB (early GPZ; all splits)",
             "data": {
                 "routeNotesURL": "https://pastebin.com/2KZrBXik"
             }
         },
         {
             "fileName": "107-late-gpz-comsob",
-            "displayName": "107% AB (Late GPZ; comsob splits)",
+            "displayName": "107% AB (late GPZ; comsob splits)",
             "data": {
                 "routeNotesURL": "https://pastebin.com/bqRttPCc"
             }
         },
         {
             "fileName": "107-late-gpz-everything",
-            "displayName": "107% AB (Late GPZ; all splits)",
+            "displayName": "107% AB (late GPZ; all splits)",
             "data": {
                 "routeNotesURL": "https://pastebin.com/bqRttPCc"
             }
