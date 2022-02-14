@@ -1,5 +1,6 @@
 {
     "categoryName": "Trial of the Fool",
+    "startTriggeringAutosplit": "ColosseumGoldEntry",
     "splitIds": [
         "ManualSplit"
     ],

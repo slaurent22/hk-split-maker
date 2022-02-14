@@ -1,5 +1,6 @@
 {
     "categoryName": "Trial of the Warrior",
+    "startTriggeringAutosplit": "ColosseumBronzeEntry",
     "splitIds": [
         "ManualSplit"
     ],
