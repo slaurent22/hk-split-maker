@@ -15,14 +15,12 @@ export interface SplitDefinition {
 
 function getNameAndGroup({ description, id, }: Pick<SplitDefinition, "description" | "id">): [string, string] {
   const match = DESCRIPTION_NAME_REGEXP.exec(description);
-  if (!match) {
-    throw new Error(`Invalid Description: ${description}`);
-  }
-  if (!match.groups) {
-    throw new Error("RegExp match must have groups");
-  }
+  let name = description;
+  let qualifier = "Other";
 
-  const { name, qualifier, } = match.groups;
+  if (match && match.groups) {
+    ({ name, qualifier, } = match.groups);
+  }
 
   switch (id) {
     case "AspidHunter":               return ["Aspid Arena", qualifier];
@@ -124,7 +122,7 @@ export function parseSplitsDefinitions(): Map<string, SplitDefinition> {
     definitions.set(id, {
       description,
       id,
-      tooltip,
+      tooltip: tooltip.replace("\\n", ".\n"),
       name,
       group,
     });

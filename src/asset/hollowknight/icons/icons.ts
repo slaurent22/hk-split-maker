@@ -65,6 +65,7 @@ import Vessel3 from "./Upgrade/Vessel1.png";
 import BrokenVessel from "./Boss/BrokenVessel.png";
 import BroodingMawlek from "./Boss/BroodingMawlek.png";
 import Collector from "./Boss/Collector.png";
+import TransCollector from "./Boss/Collector.png";
 import CrystalGuardian1 from "./Boss/CrystalGuardian1.png";
 import CrystalGuardian2 from "./Boss/CrystalGuardian1.png";
 import DungDefender from "./Boss/DungDefender.png";
@@ -99,6 +100,7 @@ import MarkothEssence from "./Boss/Markoth.png";
 import Marmu from "./Boss/Marmu.png";
 import MarmuEssence from "./Boss/Marmu.png";
 import MegaMossCharger from "./Boss/MassiveMossCharger.png";
+import MegaMossChargerTrans from "./Boss/MassiveMossCharger.png";
 import NightmareKingGrimm from "./Boss/NightmareKingGrimm.png";
 import NoEyes from "./Boss/NoEyes.png";
 import NoEyesEssence from "./Boss/NoEyes.png";
@@ -235,6 +237,7 @@ import killedSoulTwister from "./Enemy/SoulTwister.png";
 import MossKnight from "./Enemy/MossKnight.png";
 import MushroomBrawler from "./Enemy/ShrumalOgre.png";
 import Zote1 from "./Boss/VengeflyKing.png";
+import VengeflyKingTrans from "./Boss/VengeflyKing.png";
 import Zote2 from "./Enemy/Zote.png";
 import ZoteKilled from "./Enemy/Zote.png";
 import CrossroadsStation from "./Misc/Stag.png";
@@ -275,6 +278,7 @@ import RoyalWaterways from "./Enemy/Flukefey.png";
 import TeachersArchive from "./Enemy/ChargedLumafly.png";
 import WhitePalace from "./Enemy/Wingmould.png";
 import WhitePalaceSecretRoom from "./Enemy/Kingsmould.png";
+import AncestralMound from "./Misc/Knight.png";
 import BasinEntry from "./Enemy/ShadowCreeper.png";
 import BlueLake from "./Achievement/Witness.png";
 import CrystalPeakEntry from "./Enemy/CrystalCrawler.png";
@@ -594,11 +598,65 @@ import OnObtainSimpleKey from "./Item/SimpleKey.png";
 import OnUseSimpleKey from "./Item/SimpleKey.png";
 import OnObtainGrub from "./Misc/Grub.png";
 import OnObtainPaleOre from "./Item/PaleOre.png";
+import Bronze1a from "./Misc/Knight.png";
+import Bronze1b from "./Misc/Knight.png";
+import Bronze1c from "./Misc/Knight.png";
+import Bronze2 from "./Misc/Knight.png";
+import Bronze3a from "./Misc/Knight.png";
+import Bronze3b from "./Misc/Knight.png";
+import Bronze4 from "./Misc/Knight.png";
+import Bronze5 from "./Misc/Knight.png";
+import Bronze6 from "./Misc/Knight.png";
+import Bronze7 from "./Misc/Knight.png";
+import Bronze8a from "./Misc/Knight.png";
+import Bronze8b from "./Misc/Knight.png";
+import Bronze9 from "./Misc/Knight.png";
+import Bronze10 from "./Misc/Knight.png";
+import Bronze11a from "./Misc/Knight.png";
+import Bronze11b from "./Misc/Knight.png";
+import BronzeEnd from "./Achievement/Warrior.png";
+import Silver1 from "./Misc/Knight.png";
+import Silver2 from "./Misc/Knight.png";
+import Silver3 from "./Misc/Knight.png";
+import Silver4 from "./Misc/Knight.png";
+import Silver5 from "./Misc/Knight.png";
+import Silver6 from "./Misc/Knight.png";
+import Silver7 from "./Misc/Knight.png";
+import Silver8 from "./Misc/Knight.png";
+import Silver9 from "./Misc/Knight.png";
+import Silver10 from "./Misc/Knight.png";
+import Silver11 from "./Misc/Knight.png";
+import Silver12 from "./Misc/Knight.png";
+import Silver13 from "./Misc/Knight.png";
+import Silver14 from "./Misc/Knight.png";
+import Silver15 from "./Misc/Knight.png";
+import Silver16 from "./Misc/Knight.png";
+import SilverEnd from "./Achievement/Conqueror.png";
+import Gold1 from "./Misc/Knight.png";
+import Gold3 from "./Misc/Knight.png";
+import Gold4 from "./Misc/Knight.png";
+import Gold5 from "./Misc/Knight.png";
+import Gold6 from "./Misc/Knight.png";
+import Gold7 from "./Misc/Knight.png";
+import Gold8 from "./Misc/Knight.png";
+import Gold9a from "./Misc/Knight.png";
+import Gold9b from "./Misc/Knight.png";
+import Gold10 from "./Misc/Knight.png";
+import Gold11 from "./Misc/Knight.png";
+import Gold12a from "./Misc/Knight.png";
+import Gold12b from "./Misc/Knight.png";
+import Gold14a from "./Misc/Knight.png";
+import Gold14b from "./Misc/Knight.png";
+import Gold15 from "./Misc/Knight.png";
+import Gold16 from "./Misc/Knight.png";
+import Gold17a from "./Misc/Knight.png";
+import Gold17b from "./Misc/Knight.png";
+import Gold17c from "./Misc/Knight.png";
+import GoldEnd from "./Achievement/Fool.png";
 import AnyTransition from "./Misc/Knight.png";
 import TransitionAfterSaveState from "./Misc/Knight.png";
 import ManualSplit from "./Misc/Knight.png";
-import VengeflyKingTrans from "./Boss/VengeflyKing.png";
-import MegaMossChargerTrans from "./Boss/MassiveMossCharger.png";
+import RandoWake from "./Misc/Knight.png";
 export default {
     AbyssShriek,
     CrystalHeart,
@@ -665,6 +723,7 @@ export default {
     BrokenVessel,
     BroodingMawlek,
     Collector,
+    TransCollector,
     CrystalGuardian1,
     CrystalGuardian2,
     DungDefender,
@@ -699,6 +758,7 @@ export default {
     Marmu,
     MarmuEssence,
     MegaMossCharger,
+    MegaMossChargerTrans,
     NightmareKingGrimm,
     NoEyes,
     NoEyesEssence,
@@ -835,6 +895,7 @@ export default {
     MossKnight,
     MushroomBrawler,
     Zote1,
+    VengeflyKingTrans,
     Zote2,
     ZoteKilled,
     CrossroadsStation,
@@ -875,6 +936,7 @@ export default {
     TeachersArchive,
     WhitePalace,
     WhitePalaceSecretRoom,
+    AncestralMound,
     BasinEntry,
     BlueLake,
     CrystalPeakEntry,
@@ -1194,9 +1256,63 @@ export default {
     OnUseSimpleKey,
     OnObtainGrub,
     OnObtainPaleOre,
+    Bronze1a,
+    Bronze1b,
+    Bronze1c,
+    Bronze2,
+    Bronze3a,
+    Bronze3b,
+    Bronze4,
+    Bronze5,
+    Bronze6,
+    Bronze7,
+    Bronze8a,
+    Bronze8b,
+    Bronze9,
+    Bronze10,
+    Bronze11a,
+    Bronze11b,
+    BronzeEnd,
+    Silver1,
+    Silver2,
+    Silver3,
+    Silver4,
+    Silver5,
+    Silver6,
+    Silver7,
+    Silver8,
+    Silver9,
+    Silver10,
+    Silver11,
+    Silver12,
+    Silver13,
+    Silver14,
+    Silver15,
+    Silver16,
+    SilverEnd,
+    Gold1,
+    Gold3,
+    Gold4,
+    Gold5,
+    Gold6,
+    Gold7,
+    Gold8,
+    Gold9a,
+    Gold9b,
+    Gold10,
+    Gold11,
+    Gold12a,
+    Gold12b,
+    Gold14a,
+    Gold14b,
+    Gold15,
+    Gold16,
+    Gold17a,
+    Gold17b,
+    Gold17c,
+    GoldEnd,
     AnyTransition,
     TransitionAfterSaveState,
     ManualSplit,
-    VengeflyKingTrans,
-    MegaMossChargerTrans,
+    RandoWake,
 };

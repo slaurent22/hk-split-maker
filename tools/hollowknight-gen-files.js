@@ -28,25 +28,27 @@ function parseSplitsDefinitions() {
         const {
             description,
             id,
-            tooltip,
         } = match.groups;
 
         const desMatch = DESCRIPTION_NAME_REGEXP.exec(description);
         if (!desMatch) {
-            throw new Error(`Invalid Description: ${description}`);
+            // throw new Error(`Invalid Description: ${description}`);
+            definitions.set(id, {
+                id,
+                qualifier: "Other",
+            });
         }
-        if (!desMatch.groups) {
-            throw new Error("RegExp match must have groups");
+        else {
+            if (!desMatch.groups) {
+                throw new Error("RegExp match must have groups");
+            }
+            const { qualifier, } = desMatch.groups;
+            definitions.set(id, {
+                id,
+                qualifier,
+            });
         }
 
-        const { name, qualifier, } = desMatch.groups;
-
-
-
-        definitions.set(id, {
-            id,
-            qualifier,
-        });
     }
 
     return definitions;
@@ -121,6 +123,12 @@ const NEW_ID_MAP = {
 };
 
 function getUrl(id, qualifier) {
+    switch (id) {
+        case "BronzeEnd": return getUrl("ColosseumBronze", "Trial");
+        case "SilverEnd": return getUrl("ColosseumSilver", "Trial");
+        case "GoldEnd": return getUrl("ColosseumGold", "Trial");
+    }
+
     if (id === "DungDefenderIdol" || id === "GladeIdol") {
         return getUrl("KingsIdol", "Relic");
     }
@@ -233,6 +241,7 @@ function getUrl(id, qualifier) {
             case "MineLiftOpened":             return getUrl("CrystalCrawler", "Enemy");
             case "AbyssDoor":                  return getUrl("KingsBrand", "Item");
             case "AbyssLighthouse":            return getUrl("Shade", "Enemy");
+            case "RandoWake":                  return getUrl("ManualSplit", "Misc");
         }
     }
 
@@ -359,6 +368,8 @@ function getUrl(id, qualifier) {
             case "PreGrimmShopTrans":
             case "SlyShopFinished":              return getUrl("Sly", "Misc");
             case "LumaflyLanternTransition":     return getUrl("LumaflyLantern", "Item");
+            case "TransCollector":               return getUrl("Collector", "Boss");
+            case "AncestralMound":               return getUrl("ManualSplit", "Misc");
         }
     }
 
@@ -430,8 +441,12 @@ function getUrl(id, qualifier) {
             case "LurienDreamer": return getUrl("Lurien", "Dreamer");
             case "MonomonDreamer": return getUrl("Monomon", "Dreamer");
         }
+
     }
 
+    if (qualifier === "Other") {
+        return getUrl("ManualSplit", "Misc");
+    }
     const newId = NEW_ID_MAP[id] || id;
     return `./${qualifier}/${newId}.png`;
 }
