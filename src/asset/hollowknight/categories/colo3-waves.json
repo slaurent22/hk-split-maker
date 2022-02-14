@@ -1,0 +1,29 @@
+{
+    "categoryName": "Trial of the Fool",
+    "splitIds": [
+        "Gold1",
+        "Gold3",
+        "Gold4",
+        "Gold5",
+        "Gold6",
+        "Gold7",
+        "Gold8",
+        "Gold9a",
+        "Gold9b",
+        "Gold10",
+        "Gold11",
+        "Gold12a",
+        "Gold12b",
+        "Gold14a",
+        "Gold14b",
+        "Gold15",
+        "Gold16",
+        "Gold17a",
+        "Gold17b",
+        "Gold17c",
+        "GoldEnd"
+    ],
+    "ordered": true,
+    "endTriggeringAutosplit": true,
+    "gameName": "Hollow Knight"
+}

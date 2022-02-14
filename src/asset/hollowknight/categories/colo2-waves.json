@@ -1,0 +1,25 @@
+{
+    "categoryName": "Trial of the Conqueror",
+    "splitIds": [
+        "Silver1",
+        "Silver2",
+        "Silver3",
+        "Silver4",
+        "Silver5",
+        "Silver6",
+        "Silver7",
+        "Silver8",
+        "Silver9",
+        "Silver10",
+        "Silver11",
+        "Silver12",
+        "Silver13",
+        "Silver14",
+        "Silver15",
+        "Silver16",
+        "SilverEnd"
+    ],
+    "ordered": true,
+    "endTriggeringAutosplit": true,
+    "gameName": "Hollow Knight"
+}

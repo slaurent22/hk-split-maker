@@ -141,12 +141,24 @@
             "displayName": "Trial of the Warrior (colo1)"
         },
         {
+            "fileName": "colo1-waves",
+            "displayName": "Colo 1 w/ Autosplit Waves"
+        },
+        {
             "fileName": "colo2",
             "displayName": "Trial of the Conqueror (colo2)"
         },
         {
+            "fileName": "colo2-waves",
+            "displayName": "Colo 2 w/ Autosplit Waves"
+        },
+        {
             "fileName": "colo3",
             "displayName": "Trial of the Fool (colo3)"
+        },
+        {
+            "fileName": "colo3-waves",
+            "displayName": "Colo 3 w/ Autosplit Waves"
         },
         {
             "fileName": "p1",
@@ -212,6 +224,10 @@
             "data": {
                 "routeNotesURL": "https://pastebin.com/iX1FkYqm"
             }
+        },
+        {
+            "fileName": "rando-te",
+            "displayName": "Randomizer TE (add splits as desired)"
         }
     ],
     "Category Extensions": [

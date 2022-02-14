@@ -1,0 +1,14 @@
+{
+    "categoryName": "Randomizer TE",
+    "splitIds": [
+        "RandoWake",
+        "HollowKnightDreamnail"
+    ],
+    "ordered": true,
+    "endTriggeringAutosplit": false,
+    "endingSplit": {
+        "name": "Radiance",
+        "icon": "RadianceBoss"
+    },
+    "gameName": "Hollow Knight Mods"
+}
