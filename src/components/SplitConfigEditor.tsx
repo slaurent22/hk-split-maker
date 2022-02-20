@@ -1,6 +1,7 @@
 import React, { useEffect, useRef, useState, ReactElement } from "react";
 import Editor, { useMonaco, Monaco } from "@monaco-editor/react";
 import { editor, Uri } from "monaco-editor";
+import { TiDelete } from "react-icons/ti";
 import { Tab, Tabs, TabList, TabPanel } from "react-tabs";
 import SplitConfigSchema from "../schema/splits.schema";
 import { Config } from "../lib/lss";
@@ -127,20 +128,38 @@ export default function SplitConfigEditor(props: Props): ReactElement {
         {parsedConfig.splitIds &&
           <ul>
             {parsedConfig.splitIds.map((splitId, index) =>
-              <SplitSelect key={index} value={getSplitOption(splitId)} onChange={val => {
-                if (!parsedConfig.splitIds || !val) {
-                  return;
-                }
-                const newConfig = {
-                  ...parsedConfig,
-                  splitIds: [
-                    ...parsedConfig.splitIds.slice(0, index),
-                    val.value,
-                    ...parsedConfig.splitIds.slice(index + 1)
-                  ],
-                };
-                onChange(JSON.stringify(newConfig, null, 4));
-              }}></SplitSelect>
+              <div key={index} style={{
+                display: "flex",
+                alignItems: "center",
+              }}>
+                <SplitSelect value={getSplitOption(splitId)} onChange={val => {
+                  if (!parsedConfig.splitIds || !val) {
+                    return;
+                  }
+                  const newConfig = {
+                    ...parsedConfig,
+                    splitIds: [
+                      ...parsedConfig.splitIds.slice(0, index),
+                      val.value,
+                      ...parsedConfig.splitIds.slice(index + 1)
+                    ],
+                  };
+                  onChange(JSON.stringify(newConfig, null, 4));
+                }} />
+                <TiDelete size="1.5em" style={{ cursor: "pointer", }}onClick={() => {
+                  if (!parsedConfig.splitIds) {
+                    return;
+                  }
+                  const newConfig = {
+                    ...parsedConfig,
+                    splitIds: [
+                      ...parsedConfig.splitIds.slice(0, index),
+                      ...parsedConfig.splitIds.slice(index + 1)
+                    ],
+                  };
+                  onChange(JSON.stringify(newConfig, null, 4));
+                }} />
+              </div>
             )}
           </ul>
         }
