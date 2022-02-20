@@ -1,5 +1,5 @@
 import React, { ReactElement } from "react";
-import { GroupBase, OptionProps, components } from "react-select";
+import { GroupBase, OptionProps, components, PropsValue } from "react-select";
 import Tooltip from "@atlaskit/tooltip";
 import { SplitDefinition, parseSplitsDefinitions } from "../lib/hollowknight-splits";
 import BaseSelect from "./BaseSelect";
@@ -11,6 +11,7 @@ export interface SplitOption {
 }
 
 interface Props {
+  value?: PropsValue<SplitOption>;
   onChange: (newValue: SplitOption | null) => void;
 }
 
@@ -62,7 +63,7 @@ function SplitSelectOption<
 }
 
 
-const SplitSelect: React.FC<Props> = ({ onChange, }: Props) => {
+const SplitSelect: React.FC<Props> = ({ onChange, value, }: Props) => {
   const options = getSelectOptionGroups(groupSplits(parseSplitsDefinitions()));
   return (
     <BaseSelect<SplitOption>
@@ -73,6 +74,7 @@ const SplitSelect: React.FC<Props> = ({ onChange, }: Props) => {
       placeholder="Add autosplit: Select or type to search..."
       onChange={newValue => onChange(newValue ?? null)}
       components={{ Option: SplitSelectOption, }}
+      value={value}
     />
   );
 };
