@@ -1,7 +1,7 @@
 import React, { useEffect, useRef, useState, ReactElement } from "react";
 import Editor, { useMonaco, Monaco } from "@monaco-editor/react";
 import { editor, Uri } from "monaco-editor";
-import { TiDelete } from "react-icons/ti";
+import { TiDelete, TiPlus } from "react-icons/ti";
 import { Tab, Tabs, TabList, TabPanel } from "react-tabs";
 import SplitConfigSchema from "../schema/splits.schema";
 import { Config } from "../lib/lss";
@@ -161,8 +161,31 @@ export default function SplitConfigEditor(props: Props): ReactElement {
                 }} />
               </div>
             )}
+            <div style={{
+              display: "flex",
+              alignItems: "center",
+              marginTop: "8px",
+              marginBottom: "8px",
+            }}>
+              <TiPlus size="1.5em" style={{ cursor: "pointer", }} onClick={() => {
+                if (!parsedConfig.splitIds) {
+                  return;
+                }
+                const newConfig = {
+                  ...parsedConfig,
+                  splitIds: [
+                    ...parsedConfig.splitIds,
+                    "AbyssShriek"
+                  ],
+                };
+                onChange(JSON.stringify(newConfig, null, 4));
+              }}/><span style={{
+                fontSize: "18px",
+              }}>Add autosplit</span>
+            </div>
           </ul>
         }
+
       </TabPanel>
     </Tabs>
   );
