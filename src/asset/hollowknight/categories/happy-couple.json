@@ -1,6 +1,7 @@
 {
     "categoryName": "Happy Couple",
     "splitIds": [
+        "GrubCrossroadsWall",
         "VengefulSpirit",
         "EnterGreenpath",
         "GreenpathStation",
@@ -12,7 +13,6 @@
         "EnterSanctum",
         "DesolateDive",
         "GrubCitySanctum",
-        "GrubCrossroadsWall",
         "GrubCrossroadsGuarded",
         "GrubCrystalPeaksSpikes",
         "SlyKey",
