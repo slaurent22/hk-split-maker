@@ -1,13 +1,17 @@
-import React, { Fragment, useEffect, useRef, ReactElement } from "react";
-import Editor, { useMonaco, OnChange, Monaco } from "@monaco-editor/react";
+import React, { useEffect, useRef, useState, ReactElement } from "react";
+import Editor, { useMonaco, Monaco } from "@monaco-editor/react";
 import { editor, Uri } from "monaco-editor";
+import { TiDelete, TiPlus } from "react-icons/ti";
+import { Tab, Tabs, TabList, TabPanel } from "react-tabs";
 import SplitConfigSchema from "../schema/splits.schema";
 import { Config } from "../lib/lss";
+import { parseSplitsDefinitions } from "../lib/hollowknight-splits";
 import SplitSelect, { SplitOption } from "./SplitSelect";
+import "react-tabs/style/react-tabs.css";
 
 interface Props {
   defaultValue: string;
-  onChange: OnChange;
+  onChange: (value: string | undefined) => void;
 }
 
 const { $id: schemaId, } = SplitConfigSchema;
@@ -24,6 +28,20 @@ function handleEditorWillMount(monaco: Monaco) {
   });
 }
 
+const splitDefinitions = parseSplitsDefinitions();
+function getSplitOption(splitId: string) {
+  // todo: consolidate with other similar functions
+  const split = splitDefinitions.get(splitId);
+  if (!split) {
+    return undefined;
+  }
+  return {
+    value: split.id,
+    label: split.description,
+    tooltip: split.tooltip,
+  };
+}
+
 export default function SplitConfigEditor(props: Props): ReactElement {
   const monaco = useMonaco();
   useEffect(() => {
@@ -36,6 +54,19 @@ export default function SplitConfigEditor(props: Props): ReactElement {
   const handleEditorDidMount = (editorInstance: editor.IStandaloneCodeEditor) => {
     editorRef.current = editorInstance;
   };
+
+  const [splitConfig, setSplitConfig] = useState(props.defaultValue);
+  const onChange = (value: string | undefined) => {
+    if (value) {
+      setSplitConfig(value);
+      props.onChange(value);
+    }
+  };
+
+  useEffect(() => {
+    // lol wut
+    setSplitConfig(props.defaultValue);
+  }, [props.defaultValue]);
 
   const onChangeSplitSelect = (split: SplitOption | null) => {
     if (!split || !editorRef?.current) {
@@ -56,28 +87,106 @@ export default function SplitConfigEditor(props: Props): ReactElement {
     }
   };
 
+  let parsedConfig: Partial<Config> = {};
+  try {
+    parsedConfig = JSON.parse(splitConfig) as Config;
+  }
+  catch (e) {
+    console.error(e);
+  }
+
   return (
-    <Fragment>
-      <SplitSelect
-        onChange={onChangeSplitSelect}
-      />
-      <div className="hk-split-maker-monaco-editor">
-        <Editor
-          defaultLanguage="json"
-          defaultValue={props.defaultValue}
-          value={props.defaultValue}
-          onChange={props.onChange}
-          theme="vs-dark"
-          options={({
-            minimap: {
-              enabled: false,
-            },
-          })}
-          path={modelUri.toString()}
-          beforeMount={handleEditorWillMount}
-          onMount={handleEditorDidMount}
+    <Tabs>
+      <TabList>
+        <Tab>JSON</Tab>
+        <Tab>UI (Beta)</Tab>
+      </TabList>
+
+      <TabPanel>
+        <SplitSelect
+          onChange={onChangeSplitSelect}
         />
-      </div>
-    </Fragment>
+        <div className="hk-split-maker-monaco-editor">
+          <Editor
+            defaultLanguage="json"
+            defaultValue={props.defaultValue}
+            value={splitConfig}
+            onChange={onChange}
+            theme="vs-dark"
+            options={({
+              minimap: {
+                enabled: false,
+              },
+            })}
+            path={modelUri.toString()}
+            beforeMount={handleEditorWillMount}
+            onMount={handleEditorDidMount}
+          />
+        </div>
+      </TabPanel>
+      <TabPanel>
+        {parsedConfig.splitIds &&
+          <ul>
+            {parsedConfig.splitIds.map((splitId, index) =>
+              <div key={index} style={{
+                display: "flex",
+                alignItems: "center",
+              }}>
+                <SplitSelect value={getSplitOption(splitId)} onChange={val => {
+                  if (!parsedConfig.splitIds || !val) {
+                    return;
+                  }
+                  const newConfig = {
+                    ...parsedConfig,
+                    splitIds: [
+                      ...parsedConfig.splitIds.slice(0, index),
+                      val.value,
+                      ...parsedConfig.splitIds.slice(index + 1)
+                    ],
+                  };
+                  onChange(JSON.stringify(newConfig, null, 4));
+                }} />
+                <TiDelete size="1.5em" style={{ cursor: "pointer", }}onClick={() => {
+                  if (!parsedConfig.splitIds) {
+                    return;
+                  }
+                  const newConfig = {
+                    ...parsedConfig,
+                    splitIds: [
+                      ...parsedConfig.splitIds.slice(0, index),
+                      ...parsedConfig.splitIds.slice(index + 1)
+                    ],
+                  };
+                  onChange(JSON.stringify(newConfig, null, 4));
+                }} />
+              </div>
+            )}
+            <div style={{
+              display: "flex",
+              alignItems: "center",
+              marginTop: "8px",
+              marginBottom: "8px",
+            }}>
+              <TiPlus size="1.5em" style={{ cursor: "pointer", }} onClick={() => {
+                if (!parsedConfig.splitIds) {
+                  return;
+                }
+                const newConfig = {
+                  ...parsedConfig,
+                  splitIds: [
+                    ...parsedConfig.splitIds,
+                    "AbyssShriek"
+                  ],
+                };
+                onChange(JSON.stringify(newConfig, null, 4));
+              }}/><span style={{
+                fontSize: "18px",
+              }}>Add autosplit</span>
+            </div>
+          </ul>
+        }
+
+      </TabPanel>
+    </Tabs>
   );
 }
