@@ -3,6 +3,7 @@ import Editor, { useMonaco, Monaco } from "@monaco-editor/react";
 import { editor, Uri } from "monaco-editor";
 import { TiDelete, TiPlus } from "react-icons/ti";
 import { Tab, Tabs, TabList, TabPanel } from "react-tabs";
+import JSON5 from "json5";
 import SplitConfigSchema from "../schema/splits.schema";
 import { Config } from "../lib/lss";
 import { parseSplitsDefinitions } from "../lib/hollowknight-splits";
@@ -78,7 +79,7 @@ export default function SplitConfigEditor(props: Props): ReactElement {
       return;
     }
     try {
-      const currentConfig = JSON.parse(currentValue) as Config;
+      const currentConfig = JSON5.parse<Config>(currentValue);
       currentConfig.splitIds.push(split.value);
       editorRef.current.setValue(JSON.stringify(currentConfig, null, 4) + "\n");
     }
@@ -89,7 +90,7 @@ export default function SplitConfigEditor(props: Props): ReactElement {
 
   let parsedConfig: Partial<Config> = {};
   try {
-    parsedConfig = JSON.parse(splitConfig) as Config;
+    parsedConfig = JSON5.parse(splitConfig);
   }
   catch (e) {
     console.error(e);
