@@ -1,11 +1,11 @@
 import React, { useEffect, useRef, useState, ReactElement } from "react";
 import Editor, { useMonaco, Monaco } from "@monaco-editor/react";
 import { editor, Uri } from "monaco-editor";
-import { TiDelete, TiPlus } from "react-icons/ti";
+import { TiDelete, TiPlus, TiChevronRight } from "react-icons/ti";
 import { Tab, Tabs, TabList, TabPanel } from "react-tabs";
 import JSON5 from "json5";
 import SplitConfigSchema from "../schema/splits.schema";
-import { Config } from "../lib/lss";
+import { Config, SUB_SPLIT_RE } from "../lib/lss";
 import { parseSplitsDefinitions } from "../lib/hollowknight-splits";
 import SplitSelect, { SplitOption } from "./SplitSelect";
 import "react-tabs/style/react-tabs.css";
@@ -31,8 +31,18 @@ function handleEditorWillMount(monaco: Monaco) {
 
 const splitDefinitions = parseSplitsDefinitions();
 function getSplitOption(splitId: string) {
+  let autosplitId = splitId;
+  let subsplit = false;
+  const subSplitMatch = SUB_SPLIT_RE.exec(autosplitId);
+  if (subSplitMatch) {
+    if (!subSplitMatch.groups) {
+      throw new Error(`Failed to parse name out of "${splitId}"`);
+    }
+    autosplitId = subSplitMatch.groups.name;
+    subsplit = true;
+  }
   // todo: consolidate with other similar functions
-  const split = splitDefinitions.get(splitId);
+  const split = splitDefinitions.get(autosplitId);
   if (!split) {
     return undefined;
   }
@@ -40,6 +50,7 @@ function getSplitOption(splitId: string) {
     value: split.id,
     label: split.description,
     tooltip: split.tooltip,
+    subsplit,
   };
 }
 
@@ -128,12 +139,14 @@ export default function SplitConfigEditor(props: Props): ReactElement {
       <TabPanel>
         {parsedConfig.splitIds &&
           <ul>
-            {parsedConfig.splitIds.map((splitId, index) =>
-              <div key={index} style={{
+            {parsedConfig.splitIds.map((splitId, index) => {
+              const value = getSplitOption(splitId);
+              return <div key={index} style={{
                 display: "flex",
                 alignItems: "center",
               }}>
-                <SplitSelect value={getSplitOption(splitId)} onChange={val => {
+                {value?.subsplit && <TiChevronRight size="1.5em" />}
+                <SplitSelect value={value} onChange={val => {
                   if (!parsedConfig.splitIds || !val) {
                     return;
                   }
@@ -141,7 +154,7 @@ export default function SplitConfigEditor(props: Props): ReactElement {
                     ...parsedConfig,
                     splitIds: [
                       ...parsedConfig.splitIds.slice(0, index),
-                      val.value,
+                      `${value?.subsplit ? "-" : ""}${val.value}`,
                       ...parsedConfig.splitIds.slice(index + 1)
                     ],
                   };
@@ -160,7 +173,8 @@ export default function SplitConfigEditor(props: Props): ReactElement {
                   };
                   onChange(JSON.stringify(newConfig, null, 4));
                 }} />
-              </div>
+              </div>;
+            }
             )}
             <div style={{
               display: "flex",

@@ -23,7 +23,7 @@ export interface Config {
 }
 
 const MANUAL_SPLIT_RE = /%(?<name>.+)/;
-const SUB_SPLIT_RE = /-(?<name>.+)/;
+export const SUB_SPLIT_RE = /-(?<name>.+)/;
 
 function boolRepr(bool: boolean): string {
   return bool ? "True" : "False";
