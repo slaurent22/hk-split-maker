@@ -293,6 +293,8 @@ import EnterGreenpathWithOvercharm from "./Enemy/Mosscreep.png";
 import TransClaw from "./Skill/MantisClaw.png";
 import TransVS from "./Skill/VengefulSpirit.png";
 import TransDescendingDark from "./Skill/DescendingDark.png";
+import TransTear from "./Skill/IsmasTear.png";
+import TransTearWithGrub from "./Skill/IsmasTear.png";
 import HiveEntry from "./Enemy/Hiveling.png";
 import KingsPass from "./Enemy/Vengefly.png";
 import KingsPassEnterFromTown from "./Enemy/Vengefly.png";
@@ -304,6 +306,7 @@ import QueensGardensFrogsTrans from "./Enemy/SpinyHusk.png";
 import QueensGardensPostArenaTransition from "./Enemy/SpinyHusk.png";
 import EnterSanctum from "./Enemy/Folly.png";
 import EnterSanctumWithShadeSoul from "./Enemy/Folly.png";
+import EnterLoveTower from "./Boss/Collector.png";
 import WaterwaysEntry from "./Enemy/Flukefey.png";
 import WhitePalaceEntry from "./Enemy/Wingmould.png";
 import BaldurShell from "./Charm/BaldurShell.png";
@@ -598,6 +601,7 @@ import OnObtainSimpleKey from "./Item/SimpleKey.png";
 import OnUseSimpleKey from "./Item/SimpleKey.png";
 import OnObtainGrub from "./Misc/Grub.png";
 import OnObtainPaleOre from "./Item/PaleOre.png";
+import OnObtainWhiteFragment from "./Charm/WhiteFragmentLeft.png";
 import Bronze1a from "./Misc/Knight.png";
 import Bronze1b from "./Misc/Knight.png";
 import Bronze1c from "./Misc/Knight.png";
@@ -951,6 +955,8 @@ export default {
     TransClaw,
     TransVS,
     TransDescendingDark,
+    TransTear,
+    TransTearWithGrub,
     HiveEntry,
     KingsPass,
     KingsPassEnterFromTown,
@@ -962,6 +968,7 @@ export default {
     QueensGardensPostArenaTransition,
     EnterSanctum,
     EnterSanctumWithShadeSoul,
+    EnterLoveTower,
     WaterwaysEntry,
     WhitePalaceEntry,
     BaldurShell,
@@ -1256,6 +1263,7 @@ export default {
     OnUseSimpleKey,
     OnObtainGrub,
     OnObtainPaleOre,
+    OnObtainWhiteFragment,
     Bronze1a,
     Bronze1b,
     Bronze1c,

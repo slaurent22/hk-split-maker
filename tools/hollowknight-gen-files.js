@@ -205,6 +205,7 @@ function getUrl(id, qualifier) {
             case "OnUseSimpleKey":           return getUrl("SimpleKey", "Item");
             case "OnObtainGrub":             return getUrl("Grub", "Misc");
             case "OnObtainPaleOre":          return getUrl("PaleOre", "Item");
+            case "OnObtainWhiteFragment":    return getUrl("WhiteFragmentLeft", "Charm");
         }
     }
 
@@ -340,6 +341,8 @@ function getUrl(id, qualifier) {
             case "TransGorgeousHusk":            return getUrl("GorgeousHusk", "Enemy");
             case "TransDescendingDark":          return getUrl("DescendingDark", "Skill");
             case "TransVS":                      return getUrl("VengefulSpirit", "Skill");
+            case "TransTear":
+            case "TransTearWithGrub":            return getUrl("IsmasTear", "Skill");
             case "CorniferAtHome":               return getUrl("Iselda", "Misc");
             case "QueensGardensFrogsTrans":      return getUrl("QueensGardens", "Area");
             case "QueensGardensPostArenaTransition":
@@ -363,6 +366,7 @@ function getUrl(id, qualifier) {
             case "EnterHornet2":                 return getUrl("Hornet2", "Boss");
             case "EnterHiveKnight":              return getUrl("HiveKnight", "Boss");
             case "EnterTMG":                     return getUrl("TroupeMasterGrimm", "Boss");
+            case "EnterLoveTower":               return getUrl("Collector", "Boss");
             case "VengeflyKingTrans":            return getUrl("VengeflyKing", "Boss");
             case "MegaMossChargerTrans":         return getUrl("MassiveMossCharger", "Boss");
             case "PreGrimmShopTrans":
