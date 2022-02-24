@@ -1,5 +1,6 @@
 import React, { useEffect, useState, ReactElement } from "react";
 import { saveAs } from "file-saver";
+import JSON5 from "json5";
 import { getCategoryConfigJSON, getCategoryDirectory } from "../lib/categories";
 import { CategoryDefinition } from "../asset/hollowknight/categories/category-directory.json";
 import { Config, createSplitsXml } from "../lib/lss";
@@ -79,7 +80,7 @@ export default function App({ requestedCategoryName, onUpdateCategoryName, }: Ap
   }, [state.categoryName]);
 
   const parseConfigInput = () => {
-    return JSON.parse(state.configInput) as Config;
+    return JSON5.parse<Config>(state.configInput);
   };
 
   const onSubmit = async() => {
