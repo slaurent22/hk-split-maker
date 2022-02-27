@@ -116,6 +116,15 @@ ol {
     color: lightslategrey;
 }
 
+.autosplits-sortable-ghost-class {
+    background-color: white;
+}
+
+.autosplits-sortable-drag-class {
+    cursor: "grabbing";
+    background-color: white;
+}
+
 @media (max-width: 750px) {
     #input-output {
         flex-direction: column;
