@@ -1,0 +1,37 @@
+{
+    "categoryName": "12 Mask Shards",
+    "splitIds": [
+        "VengefulSpirit",
+        "EnterGreenpath",
+        "MothwingCloak",
+        "MantisClaw",
+        "BrettaRescued",
+        "OnObtainMaskShard",
+        "MegaMossChargerTrans",
+        "OnObtainMaskShard",
+        "DeepnestSpa",
+        "HiveEntry",
+        "OnObtainMaskShard",
+        "OnObtainKingsIdol",
+        "BlueLake",
+        "Lemm2",
+        "OnObtainMaskShard",
+        "SlyKey",
+        "MaskFragment9",
+        "Mask3"
+    ],
+    "names": {
+        "OnObtainMaskShard": [
+            "Stone Sanctuary Shard",
+            "Queen's Station Shard",
+            "Hive Shard",
+            "Waterways Shard"
+        ],
+        "OnObtainKingsIdol": "Cliffs Idol",
+        "MaskFragment9": "Mawlek Shard",
+        "Mask3": "12 Mask Shards (2800)"
+    },
+    "ordered": true,
+    "endTriggeringAutosplit": true,
+    "gameName": "Hollow Knight Category Extensions"
+}
