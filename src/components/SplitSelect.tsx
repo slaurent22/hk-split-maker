@@ -1,7 +1,7 @@
 import React, { ReactElement } from "react";
 import { GroupBase, OptionProps, components, PropsValue } from "react-select";
 import Tooltip from "@atlaskit/tooltip";
-import { SplitDefinition, parseSplitsDefinitions } from "../lib/hollowknight-splits";
+import { getSelectOptionGroups } from "../lib/hollowknight-splits";
 import BaseSelect from "./BaseSelect";
 
 export interface SplitOption {
@@ -13,31 +13,6 @@ export interface SplitOption {
 interface Props {
   value?: PropsValue<SplitOption>;
   onChange: (newValue: SplitOption | null) => void;
-}
-
-function groupSplits(splitDefinitions: Map<string, SplitDefinition>) {
-  const groupedSplits = new Map<string, Array<SplitDefinition>>();
-  for (const split of splitDefinitions.values()) {
-    if (!groupedSplits.has(split.group)) {
-      groupedSplits.set(split.group, []);
-    }
-    const group = groupedSplits.get(split.group) as Array<SplitDefinition>;
-    group.push(split);
-  }
-  return groupedSplits;
-}
-
-function getSelectOptionGroups(groupedSplits: Map<string, Array<SplitDefinition>>) {
-  return [...groupedSplits].map(([groupName, splits]) => {
-    return {
-      label: groupName,
-      options: splits.map(split => ({
-        value: split.id,
-        label: split.description,
-        tooltip: split.tooltip,
-      })),
-    };
-  });
 }
 
 function SplitSelectOption<
@@ -64,7 +39,7 @@ function SplitSelectOption<
 
 
 const SplitSelect: React.FC<Props> = ({ onChange, value, }: Props) => {
-  const options = getSelectOptionGroups(groupSplits(parseSplitsDefinitions()));
+  const options = getSelectOptionGroups();
   return (
     <BaseSelect<SplitOption>
       id={"id"}
