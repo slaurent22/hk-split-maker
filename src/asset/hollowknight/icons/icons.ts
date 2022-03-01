@@ -281,6 +281,7 @@ import WhitePalaceSecretRoom from "./Enemy/Kingsmould.png";
 import AncestralMound from "./Misc/Knight.png";
 import BasinEntry from "./Enemy/ShadowCreeper.png";
 import BlueLake from "./Achievement/Witness.png";
+import CatacombsEntry from "./Enemy/EntombedHusk.png";
 import CrystalPeakEntry from "./Enemy/CrystalCrawler.png";
 import CrystalMoundExit from "./Skill/DescendingDark.png";
 import EnterAnyDream from "./Skill/DreamNail.png";
@@ -943,6 +944,7 @@ export default {
     AncestralMound,
     BasinEntry,
     BlueLake,
+    CatacombsEntry,
     CrystalPeakEntry,
     CrystalMoundExit,
     EnterAnyDream,

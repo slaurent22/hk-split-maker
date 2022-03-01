@@ -320,6 +320,7 @@ function getUrl(id, qualifier) {
         switch (id) {
             case "BasinEntry":                   return getUrl("Abyss", "Area");
             case "BlueLake":                     return getUrl("Witness", "Achievement");
+            case "CatacombsEntry":               return getUrl("EntombedHusk", "Enemy");
             case "CrystalMoundExit":             return getUrl("DescendingDark", "Skill");
             case "CrystalPeakEntry":             return getUrl("CrystalPeak", "Area");
             case "EnterAnyDream":                return getUrl("DreamNail", "Skill");
