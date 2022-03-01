@@ -271,6 +271,13 @@
             }
         },
         {
+            "fileName": "8ms-fc-stag",
+            "displayName": "8 Mask Shards (FC Stag Route)",
+            "data": {
+                "routeNotesURL": "https://pastebin.com/fTb71NVd"
+            }
+        },
+        {
             "fileName": "12ms",
             "displayName": "12 Mask Shards",
             "data": {

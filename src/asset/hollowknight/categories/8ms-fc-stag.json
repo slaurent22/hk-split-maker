@@ -10,15 +10,17 @@
         "MegaMossChargerTrans",
         "MaskFragment2",
         "SlyRescued",
-        "Mask1",
+        "MaskFragment5",
+        "MaskFragment6",
         "Mask2"
     ],
     "names": {
         "MaskFragment1": "Stone Sanctuary Shard",
-        "MegaMossChargerTrans": "MMC Exit (500)",
+        "MegaMossChargerTrans": "MMC Exit (550)",
         "MaskFragment2": "Queen's Station Shard",
-        "SlyRescued": "Shard + Sly",
-        "Mask1": "Brooding Mawlek Shard",
+        "SlyRescued": "Shard/Stag/Sly",
+        "MaskFragment5": "Grubfather Shard",
+        "MaskFragment6": "Brooding Mawlek Shard",
         "Mask2": "8 Mask Shards (650)"
     },
     "ordered": true,
