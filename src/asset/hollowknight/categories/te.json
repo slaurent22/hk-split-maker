@@ -13,7 +13,7 @@
         "LumaflyLantern",
         "CrystalHeart",
         "WatcherChandelier",
-        "Lurien",
+        "EnterAnyDream",
         "TollBenchBasin",
         "LostKinEssence",
         "FailedChampionEssence",
@@ -21,18 +21,32 @@
         "ShadeCloak",
         "MarkothEssence",
         "GorbEssence",
-        "Monomon",
+        "EnterAnyDream",
         "NoEyesEssence",
         "TollBenchQG",
         "MarmuEssence",
         "WhiteFragmentLeft",
         "GalienEssence",
-        "Hegemol",
+        "EnterAnyDream",
         "WhitePalaceEntry",
         "WhiteFragmentRight",
         "VoidHeart",
         "HollowKnightDreamnail"
     ],
+    "names": {
+        "EnterAnyDream": [
+            "Lurien",
+            "Monomon",
+            "Herrah"
+        ]
+    },
+    "icons": {
+        "EnterAnyDream": [
+            "Lurien",
+            "Monomon",
+            "Hegemol"
+        ]
+    },
     "ordered": true,
     "endTriggeringAutosplit": false,
     "endingSplit": {

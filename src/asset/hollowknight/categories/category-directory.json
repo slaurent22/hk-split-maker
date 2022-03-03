@@ -77,11 +77,15 @@
         },
         {
             "fileName": "any",
-            "displayName": "Any%"
+            "displayName": "Any% (1.2.2.1)"
+        },
+        {
+            "fileName": "any-cp",
+            "displayName": "Any% (1.4+ QGA)"
         },
         {
             "fileName": "any-cp-spore",
-            "displayName": "Any% (1.4.3.2) w/ Spore Shroom"
+            "displayName": "Any% (1.4+) w/ Spore Shroom"
         },
         {
             "fileName": "any-ss",
