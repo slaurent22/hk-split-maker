@@ -18,9 +18,9 @@
         "EnterAnyDream",
         "SoulTyrantEssence",
         "Flukenest",
-        "DungDefenderIdol",
+        "TransTearWithGrub",
         "BrokenVessel",
-        "GrubBasinWings",
+        "Grub14",
         "EnterAnyDream",
         "FailedChampionEssence",
         "CycloneSlash",
@@ -52,7 +52,7 @@
         "LoveKey",
         "TollBenchQG",
         "MarmuEssence",
-        "GrubQueensGardensWhiteLady",
+        "Grub32",
         "Hegemol",
         "GalienEssence",
         "Zote2",
@@ -84,6 +84,7 @@
     "names": {
         "CrystalHeart": "[1U] %s",
         "ElegantKey": "[1U] %s",
+        "Grub14": "(Grub 14) Wings Grub",
         "EnterAnyDream": [
             "Enter Soul Tyrant",
             "[2D] Enter Failed Champion"
@@ -99,6 +100,7 @@
         "AbyssShriek": "[2D] %s",
         "NotchGrimm": "[3U] Troupe Master Grimm",
         "MaskFragment5": "Fungal Core Shard",
+        "Grub32": "(Grub 32) White Lady Grub",
         "Ore3": "Nosk Pale Ore",
         "Vessel2": "Deepnest Fragment",
         "Grub46": "(Grub 46) Spire Grub",
