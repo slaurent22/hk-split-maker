@@ -618,6 +618,13 @@
             }
         },
         {
+            "fileName": "pure-snail",
+            "displayName": "Pure Snail",
+            "data": {
+                "routeNotesURL": "https://pastebin.com/iwSCLW0s"
+            }
+        },
+        {
             "fileName": "p5bo",
             "displayName": "Pantheon 5 Boss Order",
             "data": {
