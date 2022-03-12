@@ -62,8 +62,5 @@
     },
     "ordered": true,
     "endTriggeringAutosplit": true,
-    "gameName": "Hollow Knight Category Extensions",
-    "variables": {
-        "glitch": "Current Patch NMG"
-    }
+    "gameName": "Hollow Knight Category Extensions"
 }

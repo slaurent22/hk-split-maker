@@ -35,8 +35,5 @@
         "name": "Hollow Knight",
         "icon": "HollowKnightBoss"
     },
-    "gameName": "Hollow Knight",
-    "variables": {
-        "glitch": "Current Patch NMG"
-    }
+    "gameName": "Hollow Knight"
 }

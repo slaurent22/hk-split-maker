@@ -61,8 +61,8 @@
             }
         },
         {
-            "fileName": "all-skills-cp",
-            "displayName": "All Skills (Current Patch NMG)",
+            "fileName": "all-skills-lp",
+            "displayName": "All Skills (Latest Patch NMG)",
             "data": {
                 "routeNotesURL": "https://pastebin.com/qSGRDiBZ"
             }
@@ -80,11 +80,11 @@
             "displayName": "Any% (1.2.2.1)"
         },
         {
-            "fileName": "any-cp",
+            "fileName": "any-lp",
             "displayName": "Any% (1.4+ QGA)"
         },
         {
-            "fileName": "any-cp-spore",
+            "fileName": "any-lp-spore",
             "displayName": "Any% (1.4+) w/ Spore Shroom"
         },
         {
@@ -106,8 +106,8 @@
             }
         },
         {
-            "fileName": "te-cp",
-            "displayName": "True Ending (SCSBCPTE)",
+            "fileName": "te-lp",
+            "displayName": "True Ending (SCSB)",
             "data": {
                 "routeNotesURL": "https://pastebin.com/bfru1T23",
                 "searchTerms": ["soul catcher", "steady body"]

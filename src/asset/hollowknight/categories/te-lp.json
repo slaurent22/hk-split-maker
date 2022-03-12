@@ -40,8 +40,5 @@
         "name": "Radiance",
         "icon": "RadianceBoss"
     },
-    "gameName": "Hollow Knight",
-    "variables": {
-        "glitch": "Current Patch NMG"
-    }
+    "gameName": "Hollow Knight"
 }
