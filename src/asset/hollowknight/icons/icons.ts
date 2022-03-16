@@ -197,6 +197,7 @@ import FlowerQuest from "./Item/DelicateFlower.png";
 import FlowerRewardGiven from "./Achievement/Solace.png";
 import HappyCouplePlayerDataEvent from "./Achievement/HappyCouple.png";
 import NailsmithKilled from "./Achievement/Purity.png";
+import NailsmithChoice from "./Achievement/Purity.png";
 import NightmareLantern from "./Misc/Flame.png";
 import NightmareLanternDestroyed from "./Achievement/Banishment.png";
 import HollowKnightDreamnail from "./Boss/HollowKnightBoss.png";
@@ -208,6 +209,7 @@ import EternalOrdealAchieved from "./Enemy/Zote.png";
 import RidingStag from "./Misc/Stag.png";
 import SavedCloth from "./NPC/Cloth.png";
 import MineLiftOpened from "./Enemy/CrystalCrawler.png";
+import PureSnail from "./Misc/PureSnail.png";
 import ColosseumBronzeUnlocked from "./NPC/LittleFool.png";
 import ColosseumSilverUnlocked from "./Achievement/Warrior.png";
 import ColosseumGoldUnlocked from "./Achievement/Conqueror.png";
@@ -860,6 +862,7 @@ export default {
     FlowerRewardGiven,
     HappyCouplePlayerDataEvent,
     NailsmithKilled,
+    NailsmithChoice,
     NightmareLantern,
     NightmareLanternDestroyed,
     HollowKnightDreamnail,
@@ -871,6 +874,7 @@ export default {
     RidingStag,
     SavedCloth,
     MineLiftOpened,
+    PureSnail,
     ColosseumBronzeUnlocked,
     ColosseumSilverUnlocked,
     ColosseumGoldUnlocked,

@@ -75,6 +75,7 @@ function getNameAndGroup({ description, id, }: Pick<SplitDefinition, "descriptio
     case "Hegemol":                   return ["Herrah", qualifier];
     case "Lurien":                    return ["Lurien", qualifier];
     case "Monomon":                   return ["Monomon", qualifier];
+    case "PureSnail":                 return ["Pure Snail", qualifier];
     default: break;
   }
 

@@ -16,14 +16,8 @@
         "IsmasTear",
         "ShapeOfUnn",
         "NotchFogCanyon",
-        "ManualSplit"
+        "PureSnail"
     ],
-    "names": {
-        "ManualSplit": "Pure Snail"
-    },
-    "icons": {
-        "ManualSplit": "ShapeOfUnn"
-    },
     "ordered": true,
     "endTriggeringAutosplit": true,
     "gameName": "Hollow Knight Category Extensions"

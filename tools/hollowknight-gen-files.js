@@ -221,6 +221,7 @@ function getUrl(id, qualifier) {
             case "FlowerRewardGiven":          return getUrl("Solace", "Achievement");
             case "HappyCouplePlayerDataEvent": return getUrl("HappyCouple", "Achievement");
             case "AllCharmNotchesLemm2CP":     return getUrl("Lemm", "Misc");
+            case "NailsmithChoice":
             case "NailsmithKilled":            return getUrl("Purity", "Achievement");
             case "NailsmithSpared":            return getUrl("HappyCouple", "Achievement");
             case "NightmareLantern":           return getUrl("Flame", "Misc");
@@ -243,6 +244,7 @@ function getUrl(id, qualifier) {
             case "AbyssDoor":                  return getUrl("KingsBrand", "Item");
             case "AbyssLighthouse":            return getUrl("Shade", "Enemy");
             case "RandoWake":                  return getUrl("ManualSplit", "Misc");
+            case "PureSnail":                  return getUrl("PureSnail", "Misc");
         }
     }
 

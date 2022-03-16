@@ -66,37 +66,37 @@
         [Description("Tram Pass (Item)"), ToolTip("Splits when obtaining the Tram Pass")]
         TramPass,
 
-        [Description("Mask Fragment 1 (Fragment)"), ToolTip("Splits when getting 1st Mask fragment")]
+        [Description("Mask Shard 1 (Fragment)"), ToolTip("Splits when getting 1st Mask Shard")]
         MaskFragment1,
-        [Description("Mask Fragment 2 (Fragment)"), ToolTip("Splits when getting 2nd Mask fragment")]
+        [Description("Mask Shard 2 (Fragment)"), ToolTip("Splits when getting 2nd Mask Shard")]
         MaskFragment2,
-        [Description("Mask Fragment 3 (Fragment)"), ToolTip("Splits when getting 3rd Mask fragment")]
+        [Description("Mask Shard 3 (Fragment)"), ToolTip("Splits when getting 3rd Mask Shard")]
         MaskFragment3,
-        [Description("Mask Fragment 4 (Upgrade)"), ToolTip("Splits when getting 4th Mask fragment (6 HP)")]
+        [Description("Mask Upgrade 4 (Upgrade)"), ToolTip("Splits when getting 1 extra Mask (6 base HP)")]
         Mask1,
-        [Description("Mask Fragment 5 (Fragment)"), ToolTip("Splits when getting 5th Mask fragment")]
+        [Description("Mask Shard 5 (Fragment)"), ToolTip("Splits when getting 5th Mask Shard")]
         MaskFragment5,
-        [Description("Mask Fragment 6 (Fragment)"), ToolTip("Splits when getting 6th Mask fragment")]
+        [Description("Mask Shard 6 (Fragment)"), ToolTip("Splits when getting 6th Mask Shard")]
         MaskFragment6,
-        [Description("Mask Fragment 7 (Fragment)"), ToolTip("Splits when getting 7th Mask fragment")]
+        [Description("Mask Shard 7 (Fragment)"), ToolTip("Splits when getting 7th Mask Shard")]
         MaskFragment7,
-        [Description("Mask Fragment 8 (Upgrade)"), ToolTip("Splits when getting 8th Mask fragment (7 HP)")]
+        [Description("Mask Upgrade 8 (Upgrade)"), ToolTip("Splits when getting 2 extra Masks (7 base HP)")]
         Mask2,
-        [Description("Mask Fragment 9 (Fragment)"), ToolTip("Splits when getting 9th Mask fragment")]
+        [Description("Mask Shard 9 (Fragment)"), ToolTip("Splits when getting 9th Mask Shard")]
         MaskFragment9,
-        [Description("Mask Fragment 10 (Fragment)"), ToolTip("Splits when getting 10th Mask fragment")]
+        [Description("Mask Shard 10 (Fragment)"), ToolTip("Splits when getting 10th Mask Shard")]
         MaskFragment10,
-        [Description("Mask Fragment 11 (Fragment)"), ToolTip("Splits when getting 11th Mask fragment")]
+        [Description("Mask Shard 11 (Fragment)"), ToolTip("Splits when getting 11th Mask Shard")]
         MaskFragment11,
-        [Description("Mask Fragment 12 (Upgrade)"), ToolTip("Splits when getting 12th Mask fragment (8 HP)")]
+        [Description("Mask Upgrade 12 (Upgrade)"), ToolTip("Splits when getting 3 extra Masks (8 base HP)")]
         Mask3,
-        [Description("Mask Fragment 13 (Fragment)"), ToolTip("Splits when getting 13th Mask fragment")]
+        [Description("Mask Shard 13 (Fragment)"), ToolTip("Splits when getting 13th Mask Shard")]
         MaskFragment13,
-        [Description("Mask Fragment 14 (Fragment)"), ToolTip("Splits when getting 14th Mask fragment")]
+        [Description("Mask Shard 14 (Fragment)"), ToolTip("Splits when getting 14th Mask Shard")]
         MaskFragment14,
-        [Description("Mask Fragment 15 (Fragment)"), ToolTip("Splits when getting 15th Mask fragment")]
+        [Description("Mask Shard 15 (Fragment)"), ToolTip("Splits when getting 15th Mask Shard")]
         MaskFragment15,
-        [Description("Mask Fragment 16 (Upgrade)"), ToolTip("Splits when getting 16th Mask fragment (9 HP)")]
+        [Description("Mask Upgrade 16 (Upgrade)"), ToolTip("Splits when getting 4 extra Masks (9 base HP)")]
         Mask4,
         [Description("Nail 1 (Upgrade)"), ToolTip("Splits upon upgrading to the Sharpened Nail")]
         NailUpgrade1,
@@ -106,23 +106,23 @@
         NailUpgrade3,
         [Description("Nail 4 (Upgrade)"), ToolTip("Splits upon upgrading to the Pure Nail")]
         NailUpgrade4,
-        [Description("Vessel Fragment 1 (Fragment)"), ToolTip("Splits when getting 1st Vessel fragment")]
+        [Description("Vessel Fragment 1 (Fragment)"), ToolTip("Splits when getting 1st Soul Vessel Fragment")]
         VesselFragment1,
-        [Description("Vessel Fragment 2 (Fragment)"), ToolTip("Splits when getting 2nd Vessel fragment")]
+        [Description("Vessel Fragment 2 (Fragment)"), ToolTip("Splits when getting 2nd Soul Vessel Fragment")]
         VesselFragment2,
-        [Description("Vessel Fragment 3 (Upgrade)"), ToolTip("Splits when getting 3rd Vessel fragment (1 extra Soul Vessel)")]
+        [Description("Soul Vessel 1 (Upgrade)"), ToolTip("Splits when upgrading to 1 Soul Vessel (3 Soul Vessel Fragments)")]
         Vessel1,
-        [Description("Vessel Fragment 4 (Fragment)"), ToolTip("Splits when getting 4th Vessel fragment")]
+        [Description("Vessel Fragment 4 (Fragment)"), ToolTip("Splits when getting 4th Soul Vessel Fragment")]
         VesselFragment4,
-        [Description("Vessel Fragment 5 (Fragment)"), ToolTip("Splits when getting 5th Vessel fragment")]
+        [Description("Vessel Fragment 5 (Fragment)"), ToolTip("Splits when getting 5th Soul Vessel Fragment")]
         VesselFragment5,
-        [Description("Vessel Fragment 6 (Upgrade)"), ToolTip("Splits when getting 6th Vessel fragment (2 extra Soul Vessels)")]
+        [Description("Soul Vessel 2 (Upgrade)"), ToolTip("Splits when upgrading to 2 Soul Vessels (6 Soul Vessel Fragments)")]
         Vessel2,
-        [Description("Vessel Fragment 7 (Fragment)"), ToolTip("Splits when getting 7th Vessel fragment")]
+        [Description("Vessel Fragment 7 (Fragment)"), ToolTip("Splits when getting 7th Soul Vessel Fragment")]
         VesselFragment7,
-        [Description("Vessel Fragment 8 (Fragment)"), ToolTip("Splits when getting 8th Vessel fragment")]
+        [Description("Vessel Fragment 8 (Fragment)"), ToolTip("Splits when getting 8th Soul Vessel Fragment")]
         VesselFragment8,
-        [Description("Vessel Fragment 9 (Upgrade)"), ToolTip("Splits when getting 9th Vessel fragment (3 extra Soul Vessels)")]
+        [Description("Soul Vessel 3 (Upgrade)"), ToolTip("Splits when upgrading to 3 Soul Vessels (9 Soul Vessel Fragments")]
         Vessel3,
 
         [Description("Broken Vessel (Boss)"), ToolTip("Splits when killing Broken Vessel")]
@@ -404,11 +404,13 @@
         HappyCouplePlayerDataEvent,
         [Description("Nailsmith Killed (Event)"), ToolTip("Splits when Nailsmith is killed")]
         NailsmithKilled,
+        [Description("Nailsmith Killed/Spared (Event)"), ToolTip("Splits when Nailsmith is killed\nSkips when nailsmith is spared (requires ordered splits)")]
+        NailsmithChoice,
         [Description("Nightmare Lantern Lit (Event)"), ToolTip("Splits when initially lighting the Nightmare Lantern")]
         NightmareLantern,
         [Description("Nightmare Lantern Destroyed (Event)"), ToolTip("Splits when destroying the Nightmare Lantern")]
         NightmareLanternDestroyed,
-        [Description("Radiance Dream Entry (Event)"), ToolTip("Splits upon entering the Radiance dream\nSkips upon killing the Hollow Knight")]
+        [Description("Radiance Dream Entry (Event)"), ToolTip("Splits upon entering the Radiance dream\nSkips upon killing the Hollow Knight (requires ordered splits)")]
         HollowKnightDreamnail,
         [Description("Seer Departs (Event)"), ToolTip("Splits when the Seer Departs after bringing back 2400 essence")]
         SeerDeparts,
@@ -426,6 +428,8 @@
         SavedCloth,
         [Description("Crystal Peak Lift Opened (Event)"), ToolTip("Splits when opening the lever for the lift between Dirtmouth and Crystal Peak")]
         MineLiftOpened,
+        [Description("Shape of Unn Synergies / Pure Snail (Event)"), ToolTip("Splits when recovering health with Spore Shroom, Quick Focus, Baldur Shell and Shape of Unn equipped")]
+        PureSnail,
         [Description("Colosseum Unlocked 1 (Trial)"), ToolTip("Splits when the knight unlocks the Trial of the Warrior at Little Fool")]
         ColosseumBronzeUnlocked,
         [Description("Colosseum Unlocked 2 (Trial)"), ToolTip("Splits when the knight unlocks the Trial of the Conqueror at Little Fool")]
@@ -1226,15 +1230,15 @@
         OnObtainArcaneEgg,
         [Description("Rancid Egg (Obtain)"), ToolTip("Splits when obtaining a Rancid Egg")]
         OnObtainRancidEgg,
-        [Description("Mask Shard (Obtain)"), ToolTip("Splits when obtaining a Mask Shard (splits on upgrade for full mask)")]
+        [Description("Mask Shard (Obtain)"), ToolTip("Splits when obtaining a Mask Shard or upgrade for complete Mask")]
         OnObtainMaskShard,
-        [Description("Vessel Fragment (Obtain)"), ToolTip("Splits when obtaining a Vessel Fragment (splits on upgrade for full vessel)")]
+        [Description("Vessel Fragment (Obtain)"), ToolTip("Splits when obtaining a Vessel Fragment or on upgrade for full Soul Vessel")]
         OnObtainVesselFragment,
         [Description("Simple Key (Obtain)"), ToolTip("Splits when obtaining a Simple Key")]
         OnObtainSimpleKey,
         [Description("Use Simple Key (Obtain)"), ToolTip("Splits when using a Simple Key")]
         OnUseSimpleKey,
-        [Description("Grub (Obtain)"), ToolTip("Splits when obtaining a Grub")]
+        [Description("Grub (Obtain)"), ToolTip("Splits when saving a Grub")]
         OnObtainGrub,
         [Description("Pale Ore (Obtain)"), ToolTip("Splits when obtaining a Pale Ore")]
         OnObtainPaleOre,
