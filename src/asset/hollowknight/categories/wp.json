@@ -1,5 +1,6 @@
 {
     "categoryName": "White Palace",
+    "startTriggeringAutosplit": "WhitePalaceEntry",
     "splitIds": [
         "WhitePalaceOrb1",
         "WhitePalaceOrb3",
