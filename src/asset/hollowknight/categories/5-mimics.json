@@ -1,0 +1,20 @@
+{
+    "categoryName": "5 Mimics",
+    "splitIds": [
+        "VengefulSpirit",
+        "EnterGreenpath",
+        "MothwingCloak",
+        "MantisClaw",
+        "Mimic3",
+        "BlueLake",
+        "Lemm2",
+        "CrystalHeart",
+        "Mimic4",
+        "LittleFool",
+        "ColosseumBronze",
+        "Mimic5"
+    ],
+    "ordered": true,
+    "endTriggeringAutosplit": true,
+    "gameName": "Hollow Knight Category Extensions"
+}

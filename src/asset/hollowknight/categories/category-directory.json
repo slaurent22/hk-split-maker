@@ -313,6 +313,13 @@
             }
         },
         {
+            "fileName": "5-mimics",
+            "displayName": "5 Mimics",
+            "data": {
+                "routeNotesURL": "https://pastebin.com/0KVWK3cg"
+            }
+        },
+        {
             "fileName": "all-breakable-charms",
             "displayName": "All Breakable Charms"
         },

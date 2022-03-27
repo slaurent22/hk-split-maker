@@ -428,7 +428,7 @@
         SavedCloth,
         [Description("Crystal Peak Lift Opened (Event)"), ToolTip("Splits when opening the lever for the lift between Dirtmouth and Crystal Peak")]
         MineLiftOpened,
-        [Description("Shape of Unn Synergies / Pure Snail (Event)"), ToolTip("Splits when recovering health with Spore Shroom, Quick Focus, Baldur Shell and Shape of Unn equipped")]
+        [Description("Shape of Unn Synergies / Pure Snail (Event)"), ToolTip("Splits when recovering health with Spore Shroom, Quick Focus, Baldur Shell, and Shape of Unn equipped")]
         PureSnail,
         [Description("Colosseum Unlocked 1 (Trial)"), ToolTip("Splits when the knight unlocks the Trial of the Warrior at Little Fool")]
         ColosseumBronzeUnlocked,
@@ -983,6 +983,17 @@
         GrubWaterwaysHwurmps,
         [Description("Rescued Grub Waterways Isma (Grub)"), ToolTip("Splits when rescuing the grub in Waterways_13")]
         GrubWaterwaysIsma,
+
+        [Description("Mimic 1 (Killed)"), ToolTip("Splits when rescuing mimic #1")]
+        Mimic1,
+        [Description("Mimic 2 (Killed)"), ToolTip("Splits when rescuing mimic #2")]
+        Mimic2,
+        [Description("Mimic 3 (Killed)"), ToolTip("Splits when rescuing mimic #3")]
+        Mimic3,
+        [Description("Mimic 4 (Killed)"), ToolTip("Splits when rescuing mimic #4")]
+        Mimic4,
+        [Description("Mimic 5 (Killed)"), ToolTip("Splits when rescuing mimic #5")]
+        Mimic5,
 
         [Description("Whispering Root (Ancestral Mound)"), ToolTip("Splits upon completing the whispering root in the Ancestral Mound")]
         TreeMound,
