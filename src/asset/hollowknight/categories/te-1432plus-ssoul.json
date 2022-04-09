@@ -1,0 +1,43 @@
+﻿{
+    "categoryName": "True Ending",
+    "splitIds": [
+        "VengefulSpirit",
+        "EnterGreenpath",
+        "MothwingCloak",
+        "BlueLake",
+        "DreamNail",
+        "ElderHuEssence",
+        "MantisClaw",
+        "SpiritGladeOpen",
+        "TransGorgeousHusk",
+        "LumaflyLantern",
+        "CrystalHeart",
+        "WatcherChandelier",
+        "Lurien",
+        "TollBenchBasin",
+        "LostKinEssence",
+        "FailedChampionEssence",
+        "KingsBrand",
+        "ShadeCloak",
+        "MarkothEssence",
+        "GorbEssence",
+        "Monomon",
+        "NoEyesEssence",
+        "TollBenchQG",
+        "MarmuEssence",
+        "WhiteFragmentLeft",
+        "GalienEssence",
+        "Hegemol",
+        "WhitePalaceEntry",
+        "WhiteFragmentRight",
+        "VoidHeart",
+        "HollowKnightDreamnail"
+    ],
+    "ordered": true,
+    "endTriggeringAutosplit": false,
+    "endingSplit": {
+        "name": "Radiance",
+        "icon": "RadianceBoss"
+    },
+    "gameName": "Hollow Knight"
+}
