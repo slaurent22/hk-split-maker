@@ -1,4 +1,4 @@
-{
+﻿{
     "Main": [
         {
             "fileName": "112-comsob",
@@ -106,11 +106,19 @@
             }
         },
         {
-            "fileName": "te-1432plus",
+            "fileName": "te-1432plus-scsb",
             "displayName": "True Ending (1.4.3.2+ SCSB)",
             "data": {
                 "routeNotesURL": "https://pastebin.com/bfru1T23",
-                "searchTerms": ["soul catcher", "steady body"]
+                "searchTerms": ["soul catcher", "steady body", "cpte"]
+            }
+        },
+        {
+            "fileName": "te-1432plus-ssoul",
+            "displayName": "True Ending (1.4.3.2+ Shade Soul)",
+            "data": {
+                "routeNotesURL": "https://pastebin.com/C0Jmpk6c",
+                "searchTerms": ["ssoul", "cpte"]
             }
         },
         {
