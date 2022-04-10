@@ -89,7 +89,10 @@
         },
         {
             "fileName": "any-ss",
-            "displayName": "Any% Steel Soul"
+            "displayName": "Any% Steel Soul",
+            "data": {
+                "routeNotesURL": "https://pastebin.com/B9QT22zE"
+            }
         },
         {
             "fileName": "low",
