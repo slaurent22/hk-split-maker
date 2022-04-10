@@ -33,5 +33,8 @@
         "name": "Hollow Knight",
         "icon": "HollowKnightBoss"
     },
-    "gameName": "Hollow Knight"
+    "gameName": "Hollow Knight",
+    "variables": {
+        "All Skills Glitch": "No Major Glitches"
+    }
 }

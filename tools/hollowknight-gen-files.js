@@ -61,11 +61,7 @@ const every = {
     "splitIds": Splits.map(({ id }) => id),
     "ordered": true,
     "endTriggeringAutosplit": false,
-    "gameName": "Hollow Knight Category Extensions",
-    "variables": {
-        "platform": "PC",
-        "patch": "1.5.75"
-    }
+    "gameName": "Hollow Knight Category Extensions"
 }
 
 function createEvery() {

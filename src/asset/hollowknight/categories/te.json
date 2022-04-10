@@ -53,5 +53,8 @@
         "name": "Radiance",
         "icon": "RadianceBoss"
     },
-    "gameName": "Hollow Knight"
+    "gameName": "Hollow Knight",
+    "variables": {
+        "True Ending Glitch": "No Major Glitches"
+    }
 }

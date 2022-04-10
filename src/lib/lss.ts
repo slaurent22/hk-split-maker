@@ -15,11 +15,7 @@ export interface Config {
   };
   categoryName: string;
   gameName: string;
-  variables?: {
-    platform?: string;
-    patch?: string;
-    glitch?: string;
-  };
+  variables?: Record<string, string>;
 }
 
 const MANUAL_SPLIT_RE = /%(?<name>.+)/;
@@ -56,16 +52,12 @@ function getVariableNode(name: string, value: string): xml.XmlObject {
 function getVariablesNode(config: Config): xml.XmlObject {
   const variablesNode = { Variables: [] as Array<xml.XmlObject>, };
 
-  if (config.variables?.glitch) {
-    const glitchAttrName = `${config.categoryName} Glitch`;
-    variablesNode.Variables.push(
-      getVariableNode(glitchAttrName, config.variables.glitch)
-    );
-  }
-  if (config.variables?.patch) {
-    variablesNode.Variables.push(
-      getVariableNode("Patch", config.variables.patch)
-    );
+  if (config.variables) {
+    for (const [key, value] of Object.entries(config.variables)) {
+      variablesNode.Variables.push(
+        getVariableNode(key, value)
+      );
+    }
   }
 
   return variablesNode;
