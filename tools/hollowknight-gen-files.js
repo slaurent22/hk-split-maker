@@ -285,6 +285,11 @@ function getUrl(id, qualifier) {
             case "MenderBug":            return getUrl("MenderBug", "Enemy");
             case "killedSanctumWarrior": return getUrl("SoulWarrior", "Boss");
             case "killedSoulTwister":    return getUrl("SoulTwister", "Enemy");
+            case "Mimic1":
+            case "Mimic2":
+            case "Mimic3":
+            case "Mimic4":
+            case "Mimic5":               return getUrl("Mimic", "Enemy");
         }
     }
 

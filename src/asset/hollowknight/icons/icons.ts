@@ -481,6 +481,11 @@ import GrubRestingGroundsCrypts from "./Misc/Grub.png";
 import GrubWaterwaysCenter from "./Misc/Grub.png";
 import GrubWaterwaysHwurmps from "./Misc/Grub.png";
 import GrubWaterwaysIsma from "./Misc/Grub.png";
+import Mimic1 from "./Enemy/Mimic.png";
+import Mimic2 from "./Enemy/Mimic.png";
+import Mimic3 from "./Enemy/Mimic.png";
+import Mimic4 from "./Enemy/Mimic.png";
+import Mimic5 from "./Enemy/Mimic.png";
 import TreeMound from "./Misc/WhisperingRoot.png";
 import TreeCity from "./Misc/WhisperingRoot.png";
 import TreePeak from "./Misc/WhisperingRoot.png";
@@ -1146,6 +1151,11 @@ export default {
     GrubWaterwaysCenter,
     GrubWaterwaysHwurmps,
     GrubWaterwaysIsma,
+    Mimic1,
+    Mimic2,
+    Mimic3,
+    Mimic4,
+    Mimic5,
     TreeMound,
     TreeCity,
     TreePeak,
