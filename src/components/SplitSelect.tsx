@@ -18,7 +18,10 @@ interface Props {
 function SplitSelectOption<
   IsMulti extends boolean = false,
   Group extends GroupBase<SplitOption> = GroupBase<SplitOption>
->({ children, ...rest }: OptionProps<SplitOption, IsMulti, Group>): ReactElement {
+>({
+  children,
+  ...rest
+}: OptionProps<SplitOption, IsMulti, Group>): ReactElement {
   return (
     <Tooltip content={rest.data.tooltip}>
       <components.Option {...rest}>
@@ -37,18 +40,17 @@ function SplitSelectOption<
   );
 }
 
-
-const SplitSelect: React.FC<Props> = ({ onChange, value, }: Props) => {
+const SplitSelect: React.FC<Props> = ({ onChange, value }: Props) => {
   const options = getSelectOptionGroups();
   return (
     <BaseSelect<SplitOption>
       id={"id"}
       options={options}
-      className ={"SplitSelect"}
+      className={"SplitSelect"}
       classNamePrefix={"SplitSelect"}
       placeholder="Add autosplit: Select or type to search..."
-      onChange={newValue => onChange(newValue ?? null)}
-      components={{ Option: SplitSelectOption, }}
+      onChange={(newValue) => onChange(newValue ?? null)}
+      components={{ Option: SplitSelectOption }}
       value={value}
     />
   );

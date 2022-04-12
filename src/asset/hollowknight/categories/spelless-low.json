@@ -1,22 +1,22 @@
 {
-    "categoryName": "Low% Spelless",
-    "splitIds": [
-        "GruzMother",
-        "Mask1",
-        "DreamNail",
-        "MantisClaw",
-        "Hegemol",
-        "BlackKnight",
-        "Lurien",
-        "CrystalHeart",
-        "Uumuu",
-        "Monomon"
-    ],
-    "ordered": true,
-    "endTriggeringAutosplit": false,
-    "endingSplit": {
-        "name": "Hollow Knight",
-        "icon": "HollowKnightBoss"
-    },
-    "gameName": "Hollow Knight Category Extensions"
+  "categoryName": "Low% Spelless",
+  "splitIds": [
+    "GruzMother",
+    "Mask1",
+    "DreamNail",
+    "MantisClaw",
+    "Hegemol",
+    "BlackKnight",
+    "Lurien",
+    "CrystalHeart",
+    "Uumuu",
+    "Monomon"
+  ],
+  "ordered": true,
+  "endTriggeringAutosplit": false,
+  "endingSplit": {
+    "name": "Hollow Knight",
+    "icon": "HollowKnightBoss"
+  },
+  "gameName": "Hollow Knight Category Extensions"
 }

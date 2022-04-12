@@ -1,18 +1,18 @@
 {
-    "categoryName": "Pantheon of the Artist",
-    "splitIds": [
-        "XeroP",
-        "CrystalGuardianP",
-        "SoulMasterP",
-        "OblobblesP",
-        "MantisLordsP",
-        "MarmuP",
-        "NoskP",
-        "FlukemarmP",
-        "BrokenVesselP",
-        "SheoPaintmasterP"
-    ],
-    "ordered": true,
-    "endTriggeringAutosplit": true,
-    "gameName": "Hollow Knight"
+  "categoryName": "Pantheon of the Artist",
+  "splitIds": [
+    "XeroP",
+    "CrystalGuardianP",
+    "SoulMasterP",
+    "OblobblesP",
+    "MantisLordsP",
+    "MarmuP",
+    "NoskP",
+    "FlukemarmP",
+    "BrokenVesselP",
+    "SheoPaintmasterP"
+  ],
+  "ordered": true,
+  "endTriggeringAutosplit": true,
+  "gameName": "Hollow Knight"
 }

@@ -1,31 +1,31 @@
 {
-    "categoryName": "4 Mask Shards",
-    "splitIds": [
-        "KingsPass",
-        "Grub1",
-        "MaskFragment1",
-        "Grub2",
-        "MaskFragment2",
-        "GruzMother",
-        "SlyRescued",
-        "Grub3",
-        "Grub4",
-        "Grub5",
-        "MaskFragment3",
-        "Mask1"
-    ],
-    "names": {
-        "Grub1": "%s - Vengefly Pogo",
-        "MaskFragment1": "Shard 1 - Mawlek",
-        "Grub2": "%s - Acid",
-        "MaskFragment2": "Shard 2 - Goams",
-        "Grub3": "%s - Spikes",
-        "Grub4": "%s - Wall",
-        "Grub5": "%s - Guarded",
-        "MaskFragment3": "Shard 3 - Grubfather",
-        "Mask1": "Shard 4 - Sly"
-    },
-    "ordered": true,
-    "endTriggeringAutosplit": true,
-    "gameName": "Hollow Knight Category Extensions"
+  "categoryName": "4 Mask Shards",
+  "splitIds": [
+    "KingsPass",
+    "Grub1",
+    "MaskFragment1",
+    "Grub2",
+    "MaskFragment2",
+    "GruzMother",
+    "SlyRescued",
+    "Grub3",
+    "Grub4",
+    "Grub5",
+    "MaskFragment3",
+    "Mask1"
+  ],
+  "names": {
+    "Grub1": "%s - Vengefly Pogo",
+    "MaskFragment1": "Shard 1 - Mawlek",
+    "Grub2": "%s - Acid",
+    "MaskFragment2": "Shard 2 - Goams",
+    "Grub3": "%s - Spikes",
+    "Grub4": "%s - Wall",
+    "Grub5": "%s - Guarded",
+    "MaskFragment3": "Shard 3 - Grubfather",
+    "Mask1": "Shard 4 - Sly"
+  },
+  "ordered": true,
+  "endTriggeringAutosplit": true,
+  "gameName": "Hollow Knight Category Extensions"
 }

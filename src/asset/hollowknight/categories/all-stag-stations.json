@@ -1,25 +1,25 @@
 {
-    "categoryName": "All Stag Stations",
-    "splitIds": [
-        "CrossroadsStation",
-        "VengefulSpirit",
-        "EnterGreenpath",
-        "GreenpathStation",
-        "MothwingCloak",
-        "MantisClaw",
-        "QueensStationStation",
-        "BlueLake",
-        "DreamNail",
-        "Lemm2",
-        "StoreroomsStation",
-        "TollBenchBasin",
-        "DeepnestSpa",
-        "DeepnestStation",
-        "QueensGardensEntry",
-        "QueensGardensStation",
-        "StagnestStation"
-    ],
-    "ordered": true,
-    "endTriggeringAutosplit": true,
-    "gameName": "Hollow Knight Category Extensions"
+  "categoryName": "All Stag Stations",
+  "splitIds": [
+    "CrossroadsStation",
+    "VengefulSpirit",
+    "EnterGreenpath",
+    "GreenpathStation",
+    "MothwingCloak",
+    "MantisClaw",
+    "QueensStationStation",
+    "BlueLake",
+    "DreamNail",
+    "Lemm2",
+    "StoreroomsStation",
+    "TollBenchBasin",
+    "DeepnestSpa",
+    "DeepnestStation",
+    "QueensGardensEntry",
+    "QueensGardensStation",
+    "StagnestStation"
+  ],
+  "ordered": true,
+  "endTriggeringAutosplit": true,
+  "gameName": "Hollow Knight Category Extensions"
 }

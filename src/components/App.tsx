@@ -25,8 +25,10 @@ interface AppProps {
   onUpdateCategoryName: (categoryName: string) => void;
 }
 
-export default function App({ requestedCategoryName, onUpdateCategoryName, }: AppProps): ReactElement {
-
+export default function App({
+  requestedCategoryName,
+  onUpdateCategoryName,
+}: AppProps): ReactElement {
   const [state, setState] = useState<AppState>({
     configInput: JSON.stringify(CategoryAnyPercent, null, 4),
     splitOutput: "",
@@ -49,13 +51,15 @@ export default function App({ requestedCategoryName, onUpdateCategoryName, }: Ap
   };
 
   const getCategoryDefinition = (categoryName: string) => {
-    return Object.values(state.categories).flat().find(category => {
-      return category.fileName === categoryName;
-    });
+    return Object.values(state.categories)
+      .flat()
+      .find((category) => {
+        return category.fileName === categoryName;
+      });
   };
 
   useEffect(() => {
-    void (async() => {
+    void (async () => {
       if (state.categoryName && getCategoryDefinition(state.categoryName)) {
         const editorContent = await getCategoryConfigJSON(state.categoryName);
         onConfigInputChange(editorContent);
@@ -72,7 +76,6 @@ export default function App({ requestedCategoryName, onUpdateCategoryName, }: Ap
     }
   };
 
-
   useEffect(() => {
     if (state.categoryName) {
       onUpdateCategoryName(state.categoryName);
@@ -83,31 +86,32 @@ export default function App({ requestedCategoryName, onUpdateCategoryName, }: Ap
     return JSON5.parse<Config>(state.configInput);
   };
 
-  const onSubmit = async() => {
+  const onSubmit = async () => {
     let configObject;
     try {
       configObject = parseConfigInput();
-    }
-    catch (e) {
+    } catch (e) {
       console.log(e);
       alert("Failed to parse config as JSON");
       return;
     }
     let output = "";
 
-    const submitButton = document.getElementById("submit-button") as HTMLInputElement;
+    const submitButton = document.getElementById(
+      "submit-button"
+    ) as HTMLInputElement;
     submitButton.disabled = true;
 
     try {
       // todo: runtime schema validation
       output = await createSplitsXml(configObject);
-    }
-    catch (e) {
+    } catch (e) {
       console.error(e);
-      alert("Failed to create splits. The error has been logged to console.error");
+      alert(
+        "Failed to create splits. The error has been logged to console.error"
+      );
       return;
-    }
-    finally {
+    } finally {
       submitButton.disabled = false;
     }
 
@@ -121,17 +125,22 @@ export default function App({ requestedCategoryName, onUpdateCategoryName, }: Ap
     const filename = (splitsConfig?.categoryName || "splits")
       .toLowerCase() // Make file name compatible:
       .replace(/['"]/g, "") // remove ' and "
-      .replace(/[^a-z0-9]/gi, "_")  // replace non-alphanum with _
-      .replace(/^_+|_+$/g, "")  // remove outer _
-      .replace(/^_+|_+$/g, "")  // remove outer _
-      .replace(/_{2,}/g, "_");  // join multiple _
+      .replace(/[^a-z0-9]/gi, "_") // replace non-alphanum with _
+      .replace(/^_+|_+$/g, "") // remove outer _
+      .replace(/^_+|_+$/g, "") // remove outer _
+      .replace(/_{2,}/g, "_"); // join multiple _
     let suffix = "";
     if (splitsConfig.variables?.glitch) {
       const glitch = splitsConfig.variables?.glitch;
       switch (glitch) {
-        case "No Main Menu Storage": suffix = "-nmms"; break;
-        case "All Glitches":         suffix = "-ag"; break;
-        default: break; // nmg categories don't need suffix
+        case "No Main Menu Storage":
+          suffix = "-nmms";
+          break;
+        case "All Glitches":
+          suffix = "-ag";
+          break;
+        default:
+          break; // nmg categories don't need suffix
       }
     }
     return `${filename}${suffix}`;
@@ -147,8 +156,7 @@ export default function App({ requestedCategoryName, onUpdateCategoryName, }: Ap
     try {
       const splitsConfig = parseConfigInput();
       splitName = buildSplitsFileName(splitsConfig);
-    }
-    catch {
+    } catch {
       splitName = "splits";
     }
     saveAs(outBlob, `${splitName}.lss`);
@@ -168,7 +176,9 @@ export default function App({ requestedCategoryName, onUpdateCategoryName, }: Ap
                 id="categories"
                 onChange={onCategorySelect}
                 data={state.categories}
-                defaultValue={getCategoryDefinition(requestedCategoryName ?? "") ?? null}
+                defaultValue={
+                  getCategoryDefinition(requestedCategoryName ?? "") ?? null
+                }
               />
               <ArrowButton
                 text="Generate"

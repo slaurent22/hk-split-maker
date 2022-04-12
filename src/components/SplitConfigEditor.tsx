@@ -16,17 +16,19 @@ interface Props {
   onChange: (value: string | undefined) => void;
 }
 
-const { $id: schemaId, } = SplitConfigSchema;
+const { $id: schemaId } = SplitConfigSchema;
 
 const modelUri = Uri.parse(schemaId);
 function handleEditorWillMount(monaco: Monaco) {
   monaco.languages.json.jsonDefaults.setDiagnosticsOptions({
     validate: true,
-    schemas: [{
-      uri: schemaId,
-      fileMatch: [modelUri.toString()],
-      schema: SplitConfigSchema,
-    }],
+    schemas: [
+      {
+        uri: schemaId,
+        fileMatch: [modelUri.toString()],
+        schema: SplitConfigSchema,
+      },
+    ],
   });
 }
 
@@ -62,42 +64,60 @@ interface SingleAutosplitSelectProps {
   onChange: (newConfig: string) => void;
 }
 
-function SingleAutosplitSelect({ splitId, index, parsedConfig, onChange, }: SingleAutosplitSelectProps) {
+function SingleAutosplitSelect({
+  splitId,
+  index,
+  parsedConfig,
+  onChange,
+}: SingleAutosplitSelectProps) {
   const value = getSplitOption(splitId);
-  return <div style={{
-    display: "flex",
-    alignItems: "center",
-  }}>
-    <span style={{ cursor: "grab", }}><TiArrowMove size="1.5em" /></span>
-    {value?.subsplit && <TiChevronRight size="1.5em" />}
-    <SplitSelect value={value} onChange={val => {
-      if (!parsedConfig.splitIds || !val) {
-        return;
-      }
-      const newConfig = {
-        ...parsedConfig,
-        splitIds: [
-          ...parsedConfig.splitIds.slice(0, index),
-          `${value?.subsplit ? "-" : ""}${val.value}`,
-          ...parsedConfig.splitIds.slice(index + 1)
-        ],
-      };
-      onChange(JSON.stringify(newConfig, null, 4));
-    }} />
-    <TiDelete size="1.5em" style={{ cursor: "pointer", }}onClick={() => {
-      if (!parsedConfig.splitIds) {
-        return;
-      }
-      const newConfig = {
-        ...parsedConfig,
-        splitIds: [
-          ...parsedConfig.splitIds.slice(0, index),
-          ...parsedConfig.splitIds.slice(index + 1)
-        ],
-      };
-      onChange(JSON.stringify(newConfig, null, 4));
-    }} />
-  </div>;
+  return (
+    <div
+      style={{
+        display: "flex",
+        alignItems: "center",
+      }}
+    >
+      <span style={{ cursor: "grab" }}>
+        <TiArrowMove size="1.5em" />
+      </span>
+      {value?.subsplit && <TiChevronRight size="1.5em" />}
+      <SplitSelect
+        value={value}
+        onChange={(val) => {
+          if (!parsedConfig.splitIds || !val) {
+            return;
+          }
+          const newConfig = {
+            ...parsedConfig,
+            splitIds: [
+              ...parsedConfig.splitIds.slice(0, index),
+              `${value?.subsplit ? "-" : ""}${val.value}`,
+              ...parsedConfig.splitIds.slice(index + 1),
+            ],
+          };
+          onChange(JSON.stringify(newConfig, null, 4));
+        }}
+      />
+      <TiDelete
+        size="1.5em"
+        style={{ cursor: "pointer" }}
+        onClick={() => {
+          if (!parsedConfig.splitIds) {
+            return;
+          }
+          const newConfig = {
+            ...parsedConfig,
+            splitIds: [
+              ...parsedConfig.splitIds.slice(0, index),
+              ...parsedConfig.splitIds.slice(index + 1),
+            ],
+          };
+          onChange(JSON.stringify(newConfig, null, 4));
+        }}
+      />
+    </div>
+  );
 }
 
 interface AddAutosplitProps {
@@ -105,34 +125,46 @@ interface AddAutosplitProps {
   onChange: (newConfig: string) => void;
 }
 
-function AddAutosplit({ parsedConfig, onChange, }: AddAutosplitProps) {
-  return <div style={{
-    display: "flex",
-    alignItems: "center",
-    marginTop: "8px",
-    marginBottom: "8px",
-  }}>
-    <TiPlus size="1.5em" style={{ cursor: "pointer", }} onClick={() => {
-      if (!parsedConfig.splitIds) {
-        return;
-      }
-      const newConfig = {
-        ...parsedConfig,
-        splitIds: [
-          ...parsedConfig.splitIds,
-          "AbyssShriek"
-        ],
-      };
-      onChange(JSON.stringify(newConfig, null, 4));
-    }}/><span style={{
-      fontSize: "18px",
-    }}>Add autosplit</span>
-  </div>;
+function AddAutosplit({ parsedConfig, onChange }: AddAutosplitProps) {
+  return (
+    <div
+      style={{
+        display: "flex",
+        alignItems: "center",
+        marginTop: "8px",
+        marginBottom: "8px",
+      }}
+    >
+      <TiPlus
+        size="1.5em"
+        style={{ cursor: "pointer" }}
+        onClick={() => {
+          if (!parsedConfig.splitIds) {
+            return;
+          }
+          const newConfig = {
+            ...parsedConfig,
+            splitIds: [...parsedConfig.splitIds, "AbyssShriek"],
+          };
+          onChange(JSON.stringify(newConfig, null, 4));
+        }}
+      />
+      <span
+        style={{
+          fontSize: "18px",
+        }}
+      >
+        Add autosplit
+      </span>
+    </div>
+  );
 }
 
 type SplitIdItemInterface = ItemInterface & { splitId: string };
 
-function getItemInterfaceArr(splitIds: Array<string>): Array<SplitIdItemInterface> {
+function getItemInterfaceArr(
+  splitIds: Array<string>
+): Array<SplitIdItemInterface> {
   return splitIds.map((splitId, index) => {
     return {
       id: index,
@@ -150,7 +182,9 @@ export default function SplitConfigEditor(props: Props): ReactElement {
   }, [monaco]);
 
   const editorRef = useRef<editor.IStandaloneCodeEditor | null>(null);
-  const handleEditorDidMount = (editorInstance: editor.IStandaloneCodeEditor) => {
+  const handleEditorDidMount = (
+    editorInstance: editor.IStandaloneCodeEditor
+  ) => {
     editorRef.current = editorInstance;
   };
 
@@ -180,8 +214,7 @@ export default function SplitConfigEditor(props: Props): ReactElement {
       const currentConfig = JSON5.parse<Config>(currentValue);
       currentConfig.splitIds.push(split.value);
       editorRef.current.setValue(JSON.stringify(currentConfig, null, 4) + "\n");
-    }
-    catch (e) {
+    } catch (e) {
       console.error("Failed to parse config from editor:", e);
     }
   };
@@ -189,8 +222,7 @@ export default function SplitConfigEditor(props: Props): ReactElement {
   let parsedConfig: Partial<Config> = {};
   try {
     parsedConfig = JSON5.parse(splitConfig);
-  }
-  catch (e) {
+  } catch (e) {
     console.error(e);
   }
 
@@ -202,9 +234,7 @@ export default function SplitConfigEditor(props: Props): ReactElement {
       </TabList>
 
       <TabPanel>
-        <SplitSelect
-          onChange={onChangeSplitSelect}
-        />
+        <SplitSelect onChange={onChangeSplitSelect} />
         <div className="hk-split-maker-monaco-editor">
           <Editor
             defaultLanguage="json"
@@ -212,11 +242,11 @@ export default function SplitConfigEditor(props: Props): ReactElement {
             value={splitConfig}
             onChange={onChange}
             theme="vs-dark"
-            options={({
+            options={{
               minimap: {
                 enabled: false,
               },
-            })}
+            }}
             path={modelUri.toString()}
             beforeMount={handleEditorWillMount}
             onMount={handleEditorDidMount}
@@ -224,31 +254,31 @@ export default function SplitConfigEditor(props: Props): ReactElement {
         </div>
       </TabPanel>
       <TabPanel>
-        {parsedConfig.splitIds &&
+        {parsedConfig.splitIds && (
           <ReactSortable
             ghostClass="autosplits-sortable-ghost-class"
             dragClass="autosplits-sortable-drag-class"
-            list={getItemInterfaceArr(parsedConfig.splitIds)} setList={
-              (items: Array<SplitIdItemInterface>) => {
-                const newConfig = {
-                  ...parsedConfig,
-                  splitIds: items.map(({ splitId, }) => splitId),
-                };
-                onChange(JSON.stringify(newConfig, null, 4));
-              }
-            }>
-            {parsedConfig.splitIds.map((splitId, index) =>
+            list={getItemInterfaceArr(parsedConfig.splitIds)}
+            setList={(items: Array<SplitIdItemInterface>) => {
+              const newConfig = {
+                ...parsedConfig,
+                splitIds: items.map(({ splitId }) => splitId),
+              };
+              onChange(JSON.stringify(newConfig, null, 4));
+            }}
+          >
+            {parsedConfig.splitIds.map((splitId, index) => (
               <SingleAutosplitSelect
                 key={index}
                 splitId={splitId}
                 index={index}
                 parsedConfig={parsedConfig}
-                onChange={onChange}/>
-            )}
+                onChange={onChange}
+              />
+            ))}
             <AddAutosplit parsedConfig={parsedConfig} onChange={onChange} />
           </ReactSortable>
-        }
-
+        )}
       </TabPanel>
     </Tabs>
   );

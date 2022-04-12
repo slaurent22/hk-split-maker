@@ -1,26 +1,26 @@
 {
-    "categoryName": "Mr. Mushroom Ending",
-    "splitIds": [
-        "VengefulSpirit",
-        "EnterGreenpath",
-        "MothwingCloak",
-        "MantisClaw",
-        "BlueLake",
-        "DreamNail",
-        "BlackKnight",
-        "LumaflyLantern",
-        "CrystalHeart",
-        "Uumuu",
-        "SporeShroom",
-        "Hegemol",
-        "MrMushroom1",
-        "MrMushroom7"
-    ],
-    "ordered": true,
-    "endTriggeringAutosplit": false,
-    "endingSplit": {
-        "name": "Hollow Knight",
-        "icon": "HollowKnightBoss"
-    },
-    "gameName": "Hollow Knight Category Extensions"
+  "categoryName": "Mr. Mushroom Ending",
+  "splitIds": [
+    "VengefulSpirit",
+    "EnterGreenpath",
+    "MothwingCloak",
+    "MantisClaw",
+    "BlueLake",
+    "DreamNail",
+    "BlackKnight",
+    "LumaflyLantern",
+    "CrystalHeart",
+    "Uumuu",
+    "SporeShroom",
+    "Hegemol",
+    "MrMushroom1",
+    "MrMushroom7"
+  ],
+  "ordered": true,
+  "endTriggeringAutosplit": false,
+  "endingSplit": {
+    "name": "Hollow Knight",
+    "icon": "HollowKnightBoss"
+  },
+  "gameName": "Hollow Knight Category Extensions"
 }

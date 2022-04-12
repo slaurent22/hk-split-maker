@@ -1,18 +1,18 @@
 {
-    "categoryName": "Elderbug%",
-    "splitIds": [
-        "VengefulSpirit",
-        "EnterGreenpath",
-        "MothwingCloak",
-        "MantisClaw",
-        "BlueLake",
-        "DreamNail",
-        "EnterSanctum",
-        "DesolateDive",
-        "StoreroomsStation",
-        "ElderbugFlower"
-    ],
-    "ordered": true,
-    "endTriggeringAutosplit": true,
-    "gameName": "Hollow Knight Category Extensions"
+  "categoryName": "Elderbug%",
+  "splitIds": [
+    "VengefulSpirit",
+    "EnterGreenpath",
+    "MothwingCloak",
+    "MantisClaw",
+    "BlueLake",
+    "DreamNail",
+    "EnterSanctum",
+    "DesolateDive",
+    "StoreroomsStation",
+    "ElderbugFlower"
+  ],
+  "ordered": true,
+  "endTriggeringAutosplit": true,
+  "gameName": "Hollow Knight Category Extensions"
 }

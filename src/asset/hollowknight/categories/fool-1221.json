@@ -1,24 +1,24 @@
 {
-    "categoryName": "Fool%",
-    "splitIds": [
-        "VengefulSpirit",
-        "EnterGreenpath",
-        "MothwingCloak",
-        "NotchShrumalOgres",
-        "MantisClaw",
-        "CycloneSlash",
-        "BlueLake",
-        "GorgeousHusk",
-        "DashSlash",
-        "NailUpgrade1",
-        "ShadeSoul",
-        "SpellTwister",
-        "LittleFool",
-        "ColosseumBronze",
-        "ColosseumSilver",
-        "ColosseumGold"
-    ],
-    "ordered": true,
-    "endTriggeringAutosplit": true,
-    "gameName": "Hollow Knight Category Extensions"
+  "categoryName": "Fool%",
+  "splitIds": [
+    "VengefulSpirit",
+    "EnterGreenpath",
+    "MothwingCloak",
+    "NotchShrumalOgres",
+    "MantisClaw",
+    "CycloneSlash",
+    "BlueLake",
+    "GorgeousHusk",
+    "DashSlash",
+    "NailUpgrade1",
+    "ShadeSoul",
+    "SpellTwister",
+    "LittleFool",
+    "ColosseumBronze",
+    "ColosseumSilver",
+    "ColosseumGold"
+  ],
+  "ordered": true,
+  "endTriggeringAutosplit": true,
+  "gameName": "Hollow Knight Category Extensions"
 }

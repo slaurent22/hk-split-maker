@@ -1,26 +1,26 @@
 {
-    "categoryName": "0 Geo",
-    "splitIds": [
-        "VengefulSpirit",
-        "EnterGreenpath",
-        "MothwingCloak",
-        "MantisClaw",
-        "DesolateDive",
-        "CrystalPeakEntry",
-        "CrystalHeart",
-        "DescendingDark",
-        "DreamNail",
-        "Uumuu",
-        "BeastsDenTrapBench",
-        "Hegemol",
-        "TramPass",
-        "BlackKnight"
-    ],
-    "ordered": true,
-    "endTriggeringAutosplit": false,
-    "endingSplit": {
-        "name": "Hollow Knight",
-        "icon": "HollowKnightBoss"
-    },
-    "gameName": "Hollow Knight Category Extensions"
+  "categoryName": "0 Geo",
+  "splitIds": [
+    "VengefulSpirit",
+    "EnterGreenpath",
+    "MothwingCloak",
+    "MantisClaw",
+    "DesolateDive",
+    "CrystalPeakEntry",
+    "CrystalHeart",
+    "DescendingDark",
+    "DreamNail",
+    "Uumuu",
+    "BeastsDenTrapBench",
+    "Hegemol",
+    "TramPass",
+    "BlackKnight"
+  ],
+  "ordered": true,
+  "endTriggeringAutosplit": false,
+  "endingSplit": {
+    "name": "Hollow Knight",
+    "icon": "HollowKnightBoss"
+  },
+  "gameName": "Hollow Knight Category Extensions"
 }

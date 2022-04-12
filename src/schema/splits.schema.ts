@@ -3,46 +3,56 @@ import { parseSplitsDefinitions } from "../lib/hollowknight-splits";
 
 const SPLITS = [...parseSplitsDefinitions().values()];
 
-const SPLITS_SCHEMA = SPLITS.map(({ description: title, tooltip: description, id, }) => {
-  return {
-    title,
-    description,
-    const: id,
-  };
-});
+const SPLITS_SCHEMA = SPLITS.map(
+  ({ description: title, tooltip: description, id }) => {
+    return {
+      title,
+      description,
+      const: id,
+    };
+  }
+);
 
-const SUBSPLITS_SCHEMA = SPLITS.map(({ description: title, tooltip: description, id, }) => {
-  return {
-    title,
-    description: `(subsplit) ${description}`,
-    const: `-${id}`,
-  };
-});
+const SUBSPLITS_SCHEMA = SPLITS.map(
+  ({ description: title, tooltip: description, id }) => {
+    return {
+      title,
+      description: `(subsplit) ${description}`,
+      const: `-${id}`,
+    };
+  }
+);
 
 const MANUAL_SPLIT_SCHEMA = {
-  "title": "Manual Split",
-  "description": "A mid-run manual split",
-  "type": "string",
-  "pattern": "^%.+",
+  title: "Manual Split",
+  description: "A mid-run manual split",
+  type: "string",
+  pattern: "^%.+",
 };
 
-type SplitIdItem = typeof MANUAL_SPLIT_SCHEMA | {
-  title: string;
-  description: string;
-  const: string;
-};
+type SplitIdItem =
+  | typeof MANUAL_SPLIT_SCHEMA
+  | {
+      title: string;
+      description: string;
+      const: string;
+    };
 
-const startTriggers = SplitConfigSchemaSource.properties.startTriggeringAutosplit as {
+const startTriggers = SplitConfigSchemaSource.properties
+  .startTriggeringAutosplit as {
   enum: Array<string>;
 };
 
-startTriggers.enum = startTriggers.enum.concat(SPLITS.map(({ id, }) => id));
+startTriggers.enum = startTriggers.enum.concat(SPLITS.map(({ id }) => id));
 
 const items = SplitConfigSchemaSource.properties.splitIds.items as {
   oneOf: Array<SplitIdItem>;
 };
 
-items.oneOf = items.oneOf.concat(SPLITS_SCHEMA).concat(SUBSPLITS_SCHEMA).concat(MANUAL_SPLIT_SCHEMA);
+items.oneOf = items.oneOf
+  .concat(SPLITS_SCHEMA)
+  .concat(SUBSPLITS_SCHEMA)
+  .concat(MANUAL_SPLIT_SCHEMA);
 
 const overrideSchemaPropItem = (description: string) => ({
   oneOf: [
@@ -56,7 +66,7 @@ const overrideSchemaPropItem = (description: string) => ({
       items: {
         type: "string",
       },
-    }
+    },
   ],
 });
 
@@ -67,7 +77,7 @@ const SPLITID_OR_ARRAY_THEREOF_SCHEMA = {
       items: {
         oneOf: SPLITS_SCHEMA,
       },
-    }
+    },
   ]),
 };
 
