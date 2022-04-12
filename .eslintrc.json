@@ -53,14 +53,11 @@
         "allowNullish": true
       }
     ],
-    "@typescript-eslint/space-before-function-paren": ["warn", "never"],
     "accessor-pairs": "error",
     "default-case-last": "error",
     "default-case": "error",
-    "eol-last": "warn",
     "grouped-accessor-pairs": "warn",
     "import/order": "warn",
-    "linebreak-style": ["warn", "unix"],
     "no-await-in-loop": "error",
     "no-eval": "error",
     "no-implicit-coercion": "error",
@@ -74,7 +71,6 @@
     "no-return-assign": "error",
     "no-return-await": "error",
     "no-self-compare": "error",
-    "no-trailing-spaces": "warn",
     "no-undef-init": "error",
     "no-unmodified-loop-condition": "error",
     "no-unused-vars": "off",
@@ -85,7 +81,6 @@
     "prefer-const": "error",
     "radix": "error",
     "react/no-unescaped-entities": ["warn", { "forbid": [">", "\\", "}"] }],
-    "wrap-iife": "warn",
     "yoda": "warn"
   },
   "overrides": [
