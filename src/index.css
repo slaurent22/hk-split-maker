@@ -1,146 +1,146 @@
 body {
-    background-color: #2f3136;
-    color: rgb(220 221 222);
-    margin: 0;
+  background-color: #2f3136;
+  color: rgb(220 221 222);
+  margin: 0;
 }
 
 #app {
-    padding-bottom: 10px 30px;
+  padding-bottom: 10px 30px;
 }
 
 h1,
 h2 {
-    color: white;
-    font-variant: small-caps;
-    text-align: center;
+  color: white;
+  font-variant: small-caps;
+  text-align: center;
 }
 
 a {
-    color: #00b0f4;
+  color: #00b0f4;
 }
 
 #logo {
-    height: auto;
-    width: 90%;
-    max-width: 600px;
+  height: auto;
+  width: 90%;
+  max-width: 600px;
 }
 
 ol {
-    max-width: 1024px;
-    margin-left: auto;
-    margin-right: auto;
+  max-width: 1024px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .centered {
-    text-align: center;
+  text-align: center;
 }
 
 #input-output {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-evenly;
-    width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  width: 100%;
 }
 
 #input-output .side {
-    display: block;
-    width: 600px;
+  display: block;
+  width: 600px;
 }
 
 #editor-section {
-    margin-right: 20px;
+  margin-right: 20px;
 }
 
 #output-section {
-    margin-left: 20px;
+  margin-left: 20px;
 }
 
 .output-container {
-    display: block;
-    width: 100%;
+  display: block;
+  width: 100%;
 }
 
 #submit-button {
-    margin-left: auto;
-    margin-right: 0;
+  margin-left: auto;
+  margin-right: 0;
 }
 
 #download-button {
-    margin-left: 0;
+  margin-left: 0;
 }
 
 .row {
-    display: flex;
-    flex-wrap: wrap;
+  display: flex;
+  flex-wrap: wrap;
 }
 
 .hk-split-maker-monaco-editor {
-    height: 400px;
-    min-width: 100%;
-    border: 1px solid #ccc;
+  height: 400px;
+  min-width: 100%;
+  border: 1px solid #ccc;
 }
 
 .hk-split-maker-monaco-editor .monaco-editor,
 .hk-split-maker-monaco-editor .monaco-editor .margin,
 .hk-split-maker-monaco-editor .monaco-editor-background {
-    background-color: #2f3136;
+  background-color: #2f3136;
 }
 
 .alert-banner {
-    padding: 10px;
-    padding-left: 10%;
-    background-color: #010f1a;
-    color: white;
-    margin-bottom: 10px;
+  padding: 10px;
+  padding-left: 10%;
+  background-color: #010f1a;
+  color: white;
+  margin-bottom: 10px;
 }
 
 .footer {
-    padding: 10px;
-    color: white;
-    margin-top: 10px;
-    font-size: small;
-    text-align: right;
+  padding: 10px;
+  color: white;
+  margin-top: 10px;
+  font-size: small;
+  text-align: right;
 }
 
 .close-ab {
-    margin-left: 10px;
-    margin-right: 1%;
-    color: white;
-    font-weight: bold;
-    float: right;
-    cursor: pointer;
-    transition: 0.3s;
+  margin-left: 10px;
+  margin-right: 1%;
+  color: white;
+  font-weight: bold;
+  float: right;
+  cursor: pointer;
+  transition: 0.3s;
 }
 
 .close-ab:hover {
-    color: lightslategrey;
+  color: lightslategrey;
 }
 
 .autosplits-sortable-ghost-class {
-    background-color: white;
+  background-color: white;
 }
 
 .autosplits-sortable-drag-class {
-    cursor: "grabbing";
-    background-color: white;
+  cursor: "grabbing";
+  background-color: white;
 }
 
 @media (max-width: 750px) {
-    #input-output {
-        flex-direction: column;
-    }
+  #input-output {
+    flex-direction: column;
+  }
 
-    #input-output .side {
-        width: 100%;
-        min-width: 0;
-    }
+  #input-output .side {
+    width: 100%;
+    min-width: 0;
+  }
 
-    .output-container {
-        width: 100%;
-    }
+  .output-container {
+    width: 100%;
+  }
 
-    #editor-section,
-    #output-section {
-        margin: 0;
-    }
+  #editor-section,
+  #output-section {
+    margin: 0;
+  }
 }

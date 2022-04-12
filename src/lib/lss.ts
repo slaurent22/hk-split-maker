@@ -174,7 +174,7 @@ export async function createSplitsXml(config: Config): Promise<string> {
   }
 
   await Promise.all(
-    [...iconURLsToFetch].map(async(url) => {
+    [...iconURLsToFetch].map(async (url) => {
       try {
         const iconData = await createLiveSplitIconData(url);
         liveSplitIconData.set(url, iconData);

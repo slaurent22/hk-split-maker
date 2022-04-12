@@ -78,8 +78,14 @@
     "xml-formatter": "^2.4.0"
   },
   "lint-staged": {
-    "*.{js,jsx,ts,tsx}": ["eslint --cache --fix", "prettier --write"],
-    "*.css": ["stylelint --fix", "prettier --write"],
+    "*.{js,jsx,ts,tsx}": [
+      "eslint --cache --fix",
+      "prettier --write"
+    ],
+    "*.css": [
+      "stylelint --fix",
+      "prettier --write"
+    ],
     "*.md": "prettier --write"
   }
 }

@@ -59,7 +59,7 @@ export default function App({
   };
 
   useEffect(() => {
-    void (async() => {
+    void (async () => {
       if (state.categoryName && getCategoryDefinition(state.categoryName)) {
         const editorContent = await getCategoryConfigJSON(state.categoryName);
         onConfigInputChange(editorContent);
@@ -86,7 +86,7 @@ export default function App({
     return JSON5.parse<Config>(state.configInput);
   };
 
-  const onSubmit = async() => {
+  const onSubmit = async () => {
     let configObject;
     try {
       configObject = parseConfigInput();
