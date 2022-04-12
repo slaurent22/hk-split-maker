@@ -169,7 +169,7 @@ export default function App({
       <Instructions />
       <div id="input-output">
         <div id="editor-section" className="side">
-          <h2>Input config JSON</h2>
+          <h2>Input Configuration</h2>
           <div className="output-container">
             <div className="row">
               <CategorySelect
