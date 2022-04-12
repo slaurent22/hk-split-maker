@@ -1,28 +1,28 @@
 {
-    "categoryName": "Any%",
-    "splitIds": [
-        "KingsPass",
-        "MantisClaw",
-        "Dashmaster",
-        "MothwingCloak",
-        "VengefulSpirit",
-        "DreamNail",
-        "Lurien",
-        "EnterSanctumWithShadeSoul",
-        "TeachersArchive",
-        "Uumuu",
-        "Monomon",
-        "Hegemol",
-        "UnchainedHollowKnight"
-    ],
-    "ordered": true,
-    "endTriggeringAutosplit": false,
-    "endingSplit": {
-        "name": "Hollow Knight",
-        "icon": "HollowKnightBoss"
-    },
-    "gameName": "Hollow Knight",
-    "variables": {
-        "Any% Glitch": "No Main Menu Storage"
-    }
+  "categoryName": "Any%",
+  "splitIds": [
+    "KingsPass",
+    "MantisClaw",
+    "Dashmaster",
+    "MothwingCloak",
+    "VengefulSpirit",
+    "DreamNail",
+    "Lurien",
+    "EnterSanctumWithShadeSoul",
+    "TeachersArchive",
+    "Uumuu",
+    "Monomon",
+    "Hegemol",
+    "UnchainedHollowKnight"
+  ],
+  "ordered": true,
+  "endTriggeringAutosplit": false,
+  "endingSplit": {
+    "name": "Hollow Knight",
+    "icon": "HollowKnightBoss"
+  },
+  "gameName": "Hollow Knight",
+  "variables": {
+    "Any% Glitch": "No Main Menu Storage"
+  }
 }

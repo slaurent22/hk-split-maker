@@ -27,9 +27,7 @@ const ArrowButton: React.FC<Props> = ({
         alt="decorative arrow"
         className="arrow arrow-left"
       ></img>
-      <span className="button-text">
-        {text}
-      </span>
+      <span className="button-text">{text}</span>
       <img
         src={arrow}
         alt="decorative arrow"

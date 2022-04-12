@@ -1,44 +1,44 @@
 {
-    "categoryName": "All Skills",
-    "splitIds": [
-        "VengefulSpirit",
-        "EnterGreenpath",
-        "MothwingCloak",
-        "MantisClaw",
-        "BlueLake",
-        "TransGorgeousHusk",
-        "EnterSanctum",
-        "DesolateDive",
-        "KingsStationStation",
-        "CrystalHeart",
-        "DescendingDark",
-        "DreamNail",
-        "CycloneSlash",
-        "ShadeSoul",
-        "Lurien",
-        "TollBenchBasin",
-        "MonarchWings",
-        "Monomon",
-        "GreatSlash",
-        "HowlingWraiths",
-        "Hegemol",
-        "DashSlash",
-        "KingsBrand",
-        "ShadeCloak",
-        "AbyssShriek",
-        "UnchainedHollowKnight"
-    ],
-    "names": {
-        "TransGorgeousHusk": "Gorgeous Husk"
-    },
-    "ordered": true,
-    "endTriggeringAutosplit": false,
-    "endingSplit": {
-        "name": "Hollow Knight",
-        "icon": "HollowKnightBoss"
-    },
-    "gameName": "Hollow Knight",
-    "variables": {
-        "All Skills Glitch": "Current Patch NMG"
-    }
+  "categoryName": "All Skills",
+  "splitIds": [
+    "VengefulSpirit",
+    "EnterGreenpath",
+    "MothwingCloak",
+    "MantisClaw",
+    "BlueLake",
+    "TransGorgeousHusk",
+    "EnterSanctum",
+    "DesolateDive",
+    "KingsStationStation",
+    "CrystalHeart",
+    "DescendingDark",
+    "DreamNail",
+    "CycloneSlash",
+    "ShadeSoul",
+    "Lurien",
+    "TollBenchBasin",
+    "MonarchWings",
+    "Monomon",
+    "GreatSlash",
+    "HowlingWraiths",
+    "Hegemol",
+    "DashSlash",
+    "KingsBrand",
+    "ShadeCloak",
+    "AbyssShriek",
+    "UnchainedHollowKnight"
+  ],
+  "names": {
+    "TransGorgeousHusk": "Gorgeous Husk"
+  },
+  "ordered": true,
+  "endTriggeringAutosplit": false,
+  "endingSplit": {
+    "name": "Hollow Knight",
+    "icon": "HollowKnightBoss"
+  },
+  "gameName": "Hollow Knight",
+  "variables": {
+    "All Skills Glitch": "Current Patch NMG"
+  }
 }

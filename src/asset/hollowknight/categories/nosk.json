@@ -1,14 +1,14 @@
 {
-    "categoryName": "Nosk%",
-    "splitIds": [
-        "VengefulSpirit",
-        "EnterGreenpath",
-        "MothwingCloak",
-        "MantisClaw",
-        "DeepnestSpa",
-        "Nosk"
-    ],
-    "ordered": true,
-    "endTriggeringAutosplit": true,
-    "gameName": "Hollow Knight Category Extensions"
+  "categoryName": "Nosk%",
+  "splitIds": [
+    "VengefulSpirit",
+    "EnterGreenpath",
+    "MothwingCloak",
+    "MantisClaw",
+    "DeepnestSpa",
+    "Nosk"
+  ],
+  "ordered": true,
+  "endTriggeringAutosplit": true,
+  "gameName": "Hollow Knight Category Extensions"
 }

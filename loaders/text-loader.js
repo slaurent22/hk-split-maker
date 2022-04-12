@@ -1,4 +1,3 @@
-
 // eslint-disable-next-line no-undef
 module.exports = function(source) {
   // const sourceLines = source.split("\n");

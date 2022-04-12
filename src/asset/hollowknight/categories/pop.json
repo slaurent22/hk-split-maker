@@ -1,13 +1,13 @@
 {
-    "categoryName": "Path of Pain",
-    "startTriggeringAutosplit": "PathOfPainEntry",
-    "splitIds": [
-        "PathOfPainTransition1",
-        "PathOfPainTransition2",
-        "PathOfPainTransition3",
-        "PathOfPain"
-    ],
-    "ordered": true,
-    "endTriggeringAutosplit": true,
-    "gameName": "Hollow Knight"
+  "categoryName": "Path of Pain",
+  "startTriggeringAutosplit": "PathOfPainEntry",
+  "splitIds": [
+    "PathOfPainTransition1",
+    "PathOfPainTransition2",
+    "PathOfPainTransition3",
+    "PathOfPain"
+  ],
+  "ordered": true,
+  "endTriggeringAutosplit": true,
+  "gameName": "Hollow Knight"
 }

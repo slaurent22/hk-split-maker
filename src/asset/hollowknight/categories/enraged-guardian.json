@@ -1,17 +1,17 @@
 {
-    "categoryName": "Enraged Guardian%",
-    "splitIds": [
-        "VengefulSpirit",
-        "EnterGreenpath",
-        "MothwingCloak",
-        "MantisClaw",
-        "BlueLake",
-        "GorgeousHusk",
-        "LumaflyLantern",
-        "CrystalGuardian1",
-        "CrystalGuardian2"
-    ],
-    "ordered": true,
-    "endTriggeringAutosplit": true,
-    "gameName": "Hollow Knight Category Extensions"
+  "categoryName": "Enraged Guardian%",
+  "splitIds": [
+    "VengefulSpirit",
+    "EnterGreenpath",
+    "MothwingCloak",
+    "MantisClaw",
+    "BlueLake",
+    "GorgeousHusk",
+    "LumaflyLantern",
+    "CrystalGuardian1",
+    "CrystalGuardian2"
+  ],
+  "ordered": true,
+  "endTriggeringAutosplit": true,
+  "gameName": "Hollow Knight Category Extensions"
 }

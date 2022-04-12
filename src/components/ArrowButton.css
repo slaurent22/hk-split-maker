@@ -1,41 +1,41 @@
 button.arrow-button {
-    background: none;
-    color: white;
-    font-weight: bold;
-    font-variant: small-caps;
-    font-size: 20px;
-    border: 1px solid white;
-    border-radius: 3px;
-    cursor: pointer;
-    display: flex;
-    align-items: center;
-    font-family: serif;
-    margin: 8px;
-    height: 38px;
+  background: none;
+  color: white;
+  font-weight: bold;
+  font-variant: small-caps;
+  font-size: 20px;
+  border: 1px solid white;
+  border-radius: 3px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  font-family: serif;
+  margin: 8px;
+  height: 38px;
 }
 
 button.arrow-button .arrow-right {
-    transform: rotate(180deg);
+  transform: rotate(180deg);
 }
 
 button.arrow-button .arrow {
-    height: 24px;
+  height: 24px;
 }
 
 button.arrow-button .button-text {
-    margin: 0 8px;
+  margin: 0 8px;
 }
 
 button.arrow-button[disabled] {
-    color: grey;
-    border-color: grey;
-    cursor: default;
+  color: grey;
+  border-color: grey;
+  cursor: default;
 }
 
 button.arrow-button[disabled] .arrow {
-    filter: brightness(45%);
+  filter: brightness(45%);
 }
 
 button.arrow-button:hover {
-    border-color: grey;
+  border-color: grey;
 }

@@ -1,27 +1,27 @@
 {
-    "categoryName": "8 Mask Shards",
-    "splitIds": [
-        "VengefulSpirit",
-        "EnterGreenpath",
-        "MothwingCloak",
-        "MantisClaw",
-        "BrettaRescued",
-        "MaskFragment1",
-        "MegaMossChargerTrans",
-        "MaskFragment2",
-        "SlyRescued",
-        "Mask1",
-        "Mask2"
-    ],
-    "names": {
-        "MaskFragment1": "Stone Sanctuary Shard",
-        "MegaMossChargerTrans": "MMC Exit (500)",
-        "MaskFragment2": "Queen's Station Shard",
-        "SlyRescued": "Shard + Sly",
-        "Mask1": "Brooding Mawlek Shard",
-        "Mask2": "Shard 8 (650)"
-    },
-    "ordered": true,
-    "endTriggeringAutosplit": true,
-    "gameName": "Hollow Knight Category Extensions"
+  "categoryName": "8 Mask Shards",
+  "splitIds": [
+    "VengefulSpirit",
+    "EnterGreenpath",
+    "MothwingCloak",
+    "MantisClaw",
+    "BrettaRescued",
+    "MaskFragment1",
+    "MegaMossChargerTrans",
+    "MaskFragment2",
+    "SlyRescued",
+    "Mask1",
+    "Mask2"
+  ],
+  "names": {
+    "MaskFragment1": "Stone Sanctuary Shard",
+    "MegaMossChargerTrans": "MMC Exit (500)",
+    "MaskFragment2": "Queen's Station Shard",
+    "SlyRescued": "Shard + Sly",
+    "Mask1": "Brooding Mawlek Shard",
+    "Mask2": "Shard 8 (650)"
+  },
+  "ordered": true,
+  "endTriggeringAutosplit": true,
+  "gameName": "Hollow Knight Category Extensions"
 }

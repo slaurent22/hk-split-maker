@@ -10,7 +10,7 @@ const HtmlWebpackPlugin = require("html-webpack-plugin");
 const MonacoWebpackPlugin = require("monaco-editor-webpack-plugin");
 
 function git(command) {
-  return child_process.execSync(`git ${command}`, { encoding: "utf8", }).trim();
+  return child_process.execSync(`git ${command}`, { encoding: "utf8" }).trim();
 }
 
 module.exports = {
@@ -26,24 +26,34 @@ module.exports = {
         options: {
           targets: "defaults",
           presets: [
-            ["@babel/preset-env", {
-              targets: "defaults",
-              bugfixes: true,
-              useBuiltIns: "usage",
-              corejs: {
-                version: require("./package-lock.json")
-                  .packages["node_modules/core-js"].version,
-                proposals: true,
+            [
+              "@babel/preset-env",
+              {
+                targets: "defaults",
+                bugfixes: true,
+                useBuiltIns: "usage",
+                corejs: {
+                  version: require("./package-lock.json").packages[
+                    "node_modules/core-js"
+                  ].version,
+                  proposals: true,
+                },
+                forceAllTransforms: true,
               },
-              forceAllTransforms: true,
-            }],
-            ["@babel/preset-typescript", {
-              allowDeclareFields: true,
-            }],
-            ["@babel/preset-react", {
-              runtime: "classic",
-              useBuiltIns: true,
-            }]
+            ],
+            [
+              "@babel/preset-typescript",
+              {
+                allowDeclareFields: true,
+              },
+            ],
+            [
+              "@babel/preset-react",
+              {
+                runtime: "classic",
+                useBuiltIns: true,
+              },
+            ],
           ],
         },
         exclude: /node_modules/,
@@ -53,7 +63,7 @@ module.exports = {
         use: [
           {
             loader: path.resolve("loaders/text-loader.js"),
-          }
+          },
         ],
       },
       {
@@ -63,10 +73,11 @@ module.exports = {
       {
         test: /\.(png|svg|jpg|jpeg|gif)$/i,
         type: "asset/resource",
-      }, {
+      },
+      {
         test: /\.ttf$/,
         use: ["file-loader"],
-      }
+      },
     ],
   },
   plugins: [
@@ -100,8 +111,9 @@ module.exports = {
         },
         og_description: {
           property: "og:description",
-          content: "Generate and download LiveSplit files for Hollow Knight speedrunning. " +
-                                "Many categories included, or customize your own!",
+          content:
+            "Generate and download LiveSplit files for Hollow Knight speedrunning. " +
+            "Many categories included, or customize your own!",
         },
         og_image: {
           property: "og:image",
@@ -112,7 +124,7 @@ module.exports = {
     new MonacoWebpackPlugin(),
     new webpack.EnvironmentPlugin({
       GIT_VERSION: git("describe --always"),
-    })
+    }),
   ],
   resolve: {
     extensions: [".tsx", ".ts", ".js"],

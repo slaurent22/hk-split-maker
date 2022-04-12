@@ -1,16 +1,14 @@
 {
-    "categoryName": "Trial of the Conqueror",
-    "startTriggeringAutosplit": "ColosseumSilverEntry",
-    "splitIds": [
-        "ManualSplit"
-    ],
-    "names": {
-        "ManualSplit": "Conqueror (manual split)"
-    },
-    "icons": {
-        "ManualSplit": "ColosseumSilver"
-    },
-    "ordered": true,
-    "endTriggeringAutosplit": true,
-    "gameName": "Hollow Knight"
+  "categoryName": "Trial of the Conqueror",
+  "startTriggeringAutosplit": "ColosseumSilverEntry",
+  "splitIds": ["ManualSplit"],
+  "names": {
+    "ManualSplit": "Conqueror (manual split)"
+  },
+  "icons": {
+    "ManualSplit": "ColosseumSilver"
+  },
+  "ordered": true,
+  "endTriggeringAutosplit": true,
+  "gameName": "Hollow Knight"
 }

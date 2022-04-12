@@ -1,5 +1,11 @@
 import React, { ReactElement } from "react";
-import { GroupBase, OptionProps, SingleValueProps, components, createFilter } from "react-select";
+import {
+  GroupBase,
+  OptionProps,
+  SingleValueProps,
+  components,
+  createFilter,
+} from "react-select";
 import { CategoryDefinition } from "../asset/hollowknight/categories/category-directory.json";
 import BaseSelect from "./BaseSelect";
 
@@ -11,7 +17,8 @@ interface Props {
 }
 
 interface CategoryOption {
-  value: string; label: string;
+  value: string;
+  label: string;
   data?: {
     routeNotesURL?: string;
     searchTerms?: Array<string>;
@@ -35,30 +42,49 @@ const filterConfig = {
   },
 };
 
-function defToOption({ fileName, displayName, data, }: CategoryDefinition): CategoryOption {
+function defToOption({
+  fileName,
+  displayName,
+  data,
+}: CategoryDefinition): CategoryOption {
   return {
-    value: fileName, label: displayName, data,
+    value: fileName,
+    label: displayName,
+    data,
   };
 }
 
-function optionToDef({ value, label, data, }: CategoryOption): CategoryDefinition {
+function optionToDef({
+  value,
+  label,
+  data,
+}: CategoryOption): CategoryDefinition {
   return {
-    fileName: value, displayName: label, data,
+    fileName: value,
+    displayName: label,
+    data,
   };
 }
 interface RouteNotesLinkProps {
   url: string;
   isSelected: boolean;
 }
-function RouteNotesLink({ url, isSelected, }: RouteNotesLinkProps): ReactElement {
+function RouteNotesLink({
+  url,
+  isSelected,
+}: RouteNotesLinkProps): ReactElement {
   const color = isSelected ? "hsl(0, 0%, 20%)" : "hsl(0, 0%, 80%)";
   return (
-    <a href={url} target="_blank" rel="noopener noreferrer"
+    <a
+      href={url}
+      target="_blank"
+      rel="noopener noreferrer"
       style={{
-        float: "right", color,
+        float: "right",
+        color,
       }}
     >
-            Route Notes
+      Route Notes
     </a>
   );
 }
@@ -66,17 +92,17 @@ function RouteNotesLink({ url, isSelected, }: RouteNotesLinkProps): ReactElement
 function CategorySelectOption<
   IsMulti extends boolean = false,
   Group extends GroupBase<CategoryOption> = GroupBase<CategoryOption>
->({ children, ...rest }: OptionProps<CategoryOption, IsMulti, Group>): ReactElement {
-  const { data, isSelected, } = rest;
+>({
+  children,
+  ...rest
+}: OptionProps<CategoryOption, IsMulti, Group>): ReactElement {
+  const { data, isSelected } = rest;
   return (
     <components.Option {...rest}>
       {children}
-      {data.data?.routeNotesURL &&
-                <RouteNotesLink
-                  url={data.data.routeNotesURL}
-                  isSelected={isSelected}
-                />
-      }
+      {data.data?.routeNotesURL && (
+        <RouteNotesLink url={data.data.routeNotesURL} isSelected={isSelected} />
+      )}
     </components.Option>
   );
 }
@@ -84,21 +110,19 @@ function CategorySelectOption<
 function CategorySelectSingleValue<
   IsMulti extends boolean = false,
   Group extends GroupBase<CategoryOption> = GroupBase<CategoryOption>
->({ children, ...rest }: SingleValueProps<CategoryOption, IsMulti, Group>): ReactElement {
+>({
+  children,
+  ...rest
+}: SingleValueProps<CategoryOption, IsMulti, Group>): ReactElement {
   return (
     <components.SingleValue {...rest}>
       {children}
-      {rest.data.data?.routeNotesURL &&
-                <em
-                  style={{ float: "right", }}
-                >
-                    Notes available
-                </em>
-      }
+      {rest.data.data?.routeNotesURL && (
+        <em style={{ float: "right" }}>Notes available</em>
+      )}
     </components.SingleValue>
   );
 }
-
 
 const CategorySelect: React.FC<Props> = ({
   id,
@@ -120,7 +144,7 @@ const CategorySelect: React.FC<Props> = ({
     <BaseSelect<CategoryOption>
       id={id}
       options={optGroups}
-      onChange={newValue => onChange(newValue ? optionToDef(newValue) : null)}
+      onChange={(newValue) => onChange(newValue ? optionToDef(newValue) : null)}
       className={"CategorySelect"}
       classNamePrefix={"CategorySelect"}
       placeholder="Pre-made Category: Select or type to search..."

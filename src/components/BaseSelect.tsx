@@ -7,9 +7,11 @@ function createOnMenuOpen(classNamePrefix: string) {
   // workaround for scrolling to selected item
   return () => {
     setTimeout(() => {
-      const selectedEl = document.getElementsByClassName(`${classNamePrefix}__option--is-selected`)[0];
+      const selectedEl = document.getElementsByClassName(
+        `${classNamePrefix}__option--is-selected`
+      )[0];
       if (selectedEl) {
-        selectedEl.scrollIntoView({ block: "center", });
+        selectedEl.scrollIntoView({ block: "center" });
       }
     }, 15);
   };
@@ -18,12 +20,18 @@ function createOnMenuOpen(classNamePrefix: string) {
 // https://coolors.co/06080f-091d66-040e33-061f78-071752
 function getGroupColor(section: string): string {
   switch (section) {
-    case "Main":                return "#06080f";
-    case "Glitched":            return "#091d66";
-    case "Individual Level":    return "#040e33";
-    case "Mods":                return "#061f78";
-    case "Category Extensions": return "#071752";
-    default:                    return "";
+    case "Main":
+      return "#06080f";
+    case "Glitched":
+      return "#091d66";
+    case "Individual Level":
+      return "#040e33";
+    case "Mods":
+      return "#061f78";
+    case "Category Extensions":
+      return "#071752";
+    default:
+      return "";
   }
 }
 
@@ -97,7 +105,6 @@ function customTheme(theme: Theme): Theme {
     },
   };
 }
-
 
 export default function BaseSelect<
   Option,

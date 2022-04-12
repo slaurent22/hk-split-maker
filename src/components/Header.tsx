@@ -6,11 +6,7 @@ const Header: React.FC = () => {
     <div id="app">
       <header>
         <h1>
-          <img
-            id="logo"
-            src={logo}
-            alt="HK Split Maker logo"
-          ></img>
+          <img id="logo" src={logo} alt="HK Split Maker logo"></img>
         </h1>
       </header>
     </div>

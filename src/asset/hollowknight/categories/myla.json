@@ -1,16 +1,16 @@
 {
-    "categoryName": "Myla%",
-    "splitIds": [
-        "VengefulSpirit",
-        "EnterGreenpath",
-        "MothwingCloak",
-        "MantisClaw",
-        "BlueLake",
-        "Lemm2",
-        "CrystalHeart",
-        "HuskMiner"
-    ],
-    "ordered": true,
-    "endTriggeringAutosplit": true,
-    "gameName": "Hollow Knight Category Extensions"
+  "categoryName": "Myla%",
+  "splitIds": [
+    "VengefulSpirit",
+    "EnterGreenpath",
+    "MothwingCloak",
+    "MantisClaw",
+    "BlueLake",
+    "Lemm2",
+    "CrystalHeart",
+    "HuskMiner"
+  ],
+  "ordered": true,
+  "endTriggeringAutosplit": true,
+  "gameName": "Hollow Knight Category Extensions"
 }

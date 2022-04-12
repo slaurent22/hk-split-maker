@@ -1,17 +1,17 @@
 {
-    "categoryName": "Zote%",
-    "splitIds": [
-        "VengefulSpirit",
-        "EnterGreenpath",
-        "Zote1",
-        "MothwingCloak",
-        "MantisClaw",
-        "Zote2",
-        "TramPass",
-        "LittleFool",
-        "ZoteKilled"
-    ],
-    "ordered": true,
-    "endTriggeringAutosplit": true,
-    "gameName": "Hollow Knight Category Extensions"
+  "categoryName": "Zote%",
+  "splitIds": [
+    "VengefulSpirit",
+    "EnterGreenpath",
+    "Zote1",
+    "MothwingCloak",
+    "MantisClaw",
+    "Zote2",
+    "TramPass",
+    "LittleFool",
+    "ZoteKilled"
+  ],
+  "ordered": true,
+  "endTriggeringAutosplit": true,
+  "gameName": "Hollow Knight Category Extensions"
 }
