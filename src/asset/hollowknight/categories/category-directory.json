@@ -206,6 +206,10 @@
     {
       "fileName": "wp",
       "displayName": "White Palace"
+    },
+    {
+      "fileName": "room-timer",
+      "displayName": "Room Timer"
     }
   ],
   "Mods": [
