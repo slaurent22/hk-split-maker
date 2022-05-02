@@ -76,6 +76,22 @@
       }
     },
     {
+      "fileName": "all-bosses-base-game",
+      "displayName": "All Bosses (Base Game)"
+    },
+    {
+      "fileName": "all-bosses-hidden-dreams",
+      "displayName": "All Bosses (Hidden Dreams)"
+    },
+    {
+      "fileName": "all-bosses-grimm-troupe",
+      "displayName": "All Bosses (Grimm Troupe)"
+    },
+    {
+      "fileName": "all-bosses-lifeblood",
+      "displayName": "All Bosses (Lifeblood)"
+    },
+    {
       "fileName": "any",
       "displayName": "Any% (1.2.2.1)"
     },
