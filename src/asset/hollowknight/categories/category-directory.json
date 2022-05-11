@@ -97,11 +97,17 @@
     },
     {
       "fileName": "any-1432plus",
-      "displayName": "Any% (1.4.3.2+ QGA)"
+      "displayName": "Any% (1.4.3.2+ QGA)",
+      "data": {
+        "routeNotesURL": "https://pastebin.com/zKke8sDC"
+      }
     },
     {
       "fileName": "any-1432plus-spore",
-      "displayName": "Any% (1.4.3.2+ Spore Shroom)"
+      "displayName": "Any% (1.4.3.2+ Spore Shroom)",
+      "data": {
+        "routeNotesURL": "https://pastebin.com/zKke8sDC"
+      }
     },
     {
       "fileName": "any-isma",
