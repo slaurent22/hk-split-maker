@@ -1,0 +1,31 @@
+{
+  "categoryName": "Any%",
+  "splitIds": [
+    "VengefulSpirit",
+    "EnterGreenpath",
+    "MothwingCloak",
+    "MantisClaw",
+    "BlueLake",
+    "DreamNail",
+    "BasinEntry",
+    "MonarchWings",
+    "IsmasTear",
+    "WatcherChandelier",
+    "BlackKnight",
+    "FogCanyonEntry",
+    "Uumuu",
+    "QueensGardensEntry",
+    "Hegemol",
+    "UnchainedHollowKnight"
+  ],
+  "ordered": true,
+  "endTriggeringAutosplit": false,
+  "endingSplit": {
+    "name": "Hollow Knight",
+    "icon": "HollowKnightBoss"
+  },
+  "gameName": "Hollow Knight",
+  "variables": {
+    "Any% Glitch": "Current Patch NMG"
+  }
+}

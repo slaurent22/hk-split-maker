@@ -104,6 +104,14 @@
       "displayName": "Any% (1.4.3.2+ Spore Shroom)"
     },
     {
+      "fileName": "any-isma",
+      "displayName": "Any% (1.4.3.2+ Isma's Tear)",
+      "data": {
+        "routeNotesURL": "https://pastebin.com/Nv7i1DSM",
+        "searchTerms": ["stallball", "slopeball", "magalore", "mag isma"]
+      }
+    },
+    {
       "fileName": "any-ss",
       "displayName": "Any% Steel Soul",
       "data": {
