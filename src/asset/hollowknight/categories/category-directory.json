@@ -576,6 +576,10 @@
       }
     },
     {
+      "fileName": "godhome",
+      "displayName": "Godhome (Godseeker mode)"
+    },
+    {
       "fileName": "happy-couple",
       "displayName": "Happy Couple",
       "data": {
