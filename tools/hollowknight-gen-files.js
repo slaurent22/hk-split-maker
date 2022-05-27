@@ -57,7 +57,7 @@ const every = {
 };
 
 function createEvery() {
-  const output = JSON.stringify(every, null, 4) + "\n";
+  const output = JSON.stringify(every, null, 2) + "\n";
   writeFileSync(FILE.EVERY, output);
 }
 
@@ -492,6 +492,8 @@ function getUrl(id, qualifier) {
         return getUrl("ColosseumSilver", "Trial");
       case "ColosseumGoldEntry":
         return getUrl("ColosseumGold", "Trial");
+      case "EnterBroodingMawlek":
+        return getUrl("BroodingMawlek", "Boss");
       case "EnterHornet1":
         return getUrl("Hornet1", "Boss");
       case "EnterSoulMaster":
@@ -616,7 +618,7 @@ function createIconImports() {
   // console.log(output);
   output += "export default {\n";
   for (const { id } of Splits) {
-    output += `    ${id},\n`;
+    output += `  ${id},\n`;
   }
   output += "};\n";
 

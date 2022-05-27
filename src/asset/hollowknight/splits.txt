@@ -129,6 +129,8 @@
         BrokenVessel,
         [Description("Brooding Mawlek (Boss)"), ToolTip("Splits when killing Brooding Mawlek")]
         BroodingMawlek,
+        [Description("Enter Brooding Mawlek (Transition)"), ToolTip("Splits when entering the Brooding Mawlek arena transition in Forgotten Crossroads")]
+        EnterBroodingMawlek,
         [Description("Collector (Boss)"), ToolTip("Splits when killing Collector")]
         Collector,
         [Description("Collector Defeated (Transition)"), ToolTip("Splits on transition after defeating the Collector")]

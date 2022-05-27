@@ -64,6 +64,7 @@ import VesselFragment8 from "./Fragment/VesselFragment1.png";
 import Vessel3 from "./Upgrade/Vessel1.png";
 import BrokenVessel from "./Boss/BrokenVessel.png";
 import BroodingMawlek from "./Boss/BroodingMawlek.png";
+import EnterBroodingMawlek from "./Boss/BroodingMawlek.png";
 import Collector from "./Boss/Collector.png";
 import TransCollector from "./Boss/Collector.png";
 import CrystalGuardian1 from "./Boss/CrystalGuardian1.png";
@@ -734,6 +735,7 @@ export default {
   Vessel3,
   BrokenVessel,
   BroodingMawlek,
+  EnterBroodingMawlek,
   Collector,
   TransCollector,
   CrystalGuardian1,
