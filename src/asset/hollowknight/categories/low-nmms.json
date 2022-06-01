@@ -1,0 +1,30 @@
+{
+  "categoryName": "Low%",
+  "splitIds": [
+    "CrossroadsStation",
+    "QueensStationStation",
+    "GreenpathStation",
+    "BlueLake",
+    "DreamNail",
+    "KingsStationStation",
+    "MaskFragment1",
+    "EnterAnyDream",
+    "Dreamer3"
+  ],
+  "names": {
+    "EnterAnyDream": "Enter Lurien"
+  },
+  "icons": {
+    "Dreamer3": "Lurien"
+  },
+  "ordered": true,
+  "endTriggeringAutosplit": false,
+  "endingSplit": {
+    "name": "Hollow Knight",
+    "icon": "HollowKnightBoss"
+  },
+  "gameName": "Hollow Knight",
+  "variables": {
+    "Low% Glitch": "No Main Menu Storage"
+  }
+}

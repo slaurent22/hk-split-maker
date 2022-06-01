@@ -183,6 +183,10 @@
       "displayName": "Low% (All Glitches)"
     },
     {
+      "fileName": "low-nmms",
+      "displayName": "Low% (No Main Menu Storage)"
+    },
+    {
       "fileName": "te-ag",
       "displayName": "True Ending (All Glitches)"
     },
