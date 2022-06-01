@@ -1,18 +1,13 @@
 {
   "categoryName": "Any%",
-  "splitIds": ["KingsPass", "QueensGardensEntry", "Dreamer2", "Dreamer3"],
-  "names": {
-    "Dreamer2": "Herrah",
-    "Dreamer3": "Lurien"
-  },
+  "splitIds": ["KingsPass", "CrossroadsStation", "Dreamer3"],
   "icons": {
-    "Dreamer2": "Hegemol",
-    "Dreamer3": "Lurien"
+    "KingsPass": "VoidHeart"
   },
   "ordered": true,
   "endTriggeringAutosplit": false,
   "endingSplit": {
-    "name": "Sealed Siblings",
+    "name": "Hollow Knight",
     "icon": "HollowKnightBoss"
   },
   "gameName": "Hollow Knight",
