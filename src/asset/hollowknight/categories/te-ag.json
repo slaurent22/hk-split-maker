@@ -2,18 +2,12 @@
   "categoryName": "True Ending",
   "splitIds": [
     "KingsPass",
-    "QueensGardensEntry",
-    "Dreamer2",
+    "CrossroadsStation",
     "Dreamer3",
     "HollowKnightDreamnail"
   ],
-  "names": {
-    "Dreamer2": "Herrah",
-    "Dreamer3": "Lurien"
-  },
   "icons": {
-    "Dreamer2": "Hegemol",
-    "Dreamer3": "Lurien"
+    "KingsPass": "VoidHeart"
   },
   "ordered": true,
   "endTriggeringAutosplit": false,
