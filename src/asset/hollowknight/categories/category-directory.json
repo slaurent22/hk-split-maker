@@ -165,34 +165,53 @@
   "Glitched": [
     {
       "fileName": "any-ag",
-      "displayName": "Any% (All Glitches)"
+      "displayName": "Any% (All Glitches)",
+      "data": {
+        "searchTerms": ["ag"]
+      }
     },
     {
       "fileName": "any-nmms",
-      "displayName": "Any% (No Main Menu Storage)"
+      "displayName": "Any% (No Main Menu Storage)",
+      "data": {
+        "searchTerms": ["nmms"]
+      }
     },
     {
       "fileName": "all-skills-ag",
       "displayName": "All Skills (All Glitches)",
       "data": {
-        "routeNotesURL": "https://pastebin.com/7RD8WkqX"
+        "routeNotesURL": "https://pastebin.com/7RD8WkqX",
+        "searchTerms": ["ag"]
       }
     },
     {
       "fileName": "low-ag",
-      "displayName": "Low% (All Glitches)"
+      "displayName": "Low% (All Glitches)",
+      "data": {
+        "searchTerms": ["low", "ag"]
+      }
     },
     {
       "fileName": "low-nmms",
-      "displayName": "Low% (No Main Menu Storage)"
+      "displayName": "Low% (No Main Menu Storage)",
+      "data": {
+        "searchTerms": ["low", "nmms"]
+      }
     },
     {
       "fileName": "te-ag",
-      "displayName": "True Ending (All Glitches)"
+      "displayName": "True Ending (All Glitches)",
+      "data": {
+        "searchTerms": ["te", "ag"]
+      }
     },
     {
       "fileName": "te-nmms",
-      "displayName": "True Ending (No Main Menu Storage)"
+      "displayName": "True Ending (No Main Menu Storage)",
+      "data": {
+        "searchTerms": ["te", "nmms"]
+      }
     }
   ],
   "Individual Level": [
