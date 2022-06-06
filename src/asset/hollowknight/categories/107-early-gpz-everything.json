@@ -192,17 +192,10 @@
       "Fungal Core Flame"
     ],
     "Vessel1": "Storerooms Fragment",
-    "Flame2": [
-      "Greenpath Flame",
-      "Kingdom's Edge Flame"
-    ],
+    "Flame2": ["Greenpath Flame", "Kingdom's Edge Flame"],
     "VesselFragment4": "Greenpath Fragment",
     "MaskFragment1": "No Eyes Shard",
-    "Flame3": [
-    "Peak Flame",
-      "King's Pass Flame",
-      "Hive Flame"
-    ],
+    "Flame3": ["Peak Flame", "King's Pass Flame", "Hive Flame"],
     "MaskFragment2": "Enraged Guardian",
     "Ore2": "Crown Pale Ore",
     "Xero": "[2U] %s",
