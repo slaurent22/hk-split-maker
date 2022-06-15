@@ -152,6 +152,7 @@
     "ColosseumBronze",
     "ColosseumSilver",
     "ColosseumGold",
+    "WaywardCompass",
     "MaskFragment9",
     "GreyPrinceEssence",
     "Dreamshield",
@@ -176,7 +177,6 @@
     "NailmastersGlory",
     "SlyShopFinished",
     "NightmareKingGrimm",
-    "WaywardCompass",
     "HollowKnightDreamnail"
   ],
   "names": {
@@ -213,7 +213,8 @@
     "VesselFragment7": "Deepnest Fragment",
     "Ore4": "Basin Pale Ore",
     "Mask2": "Hive Shard",
-    "MaskFragment9": "[3U] Bretta Shard",
+    "WaywardCompass": "[3U] %s",
+    "MaskFragment9": "Bretta Shard",
     "SlyShopFinished": "Sly",
     "Dreamshield": "[2U] %s",
     "NotchSalubra2": "Salubra",

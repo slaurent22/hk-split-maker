@@ -1,6 +1,34 @@
 {
   "Main": [
     {
+      "fileName": "106",
+      "displayName": "106% TE",
+      "data": {
+        "routeNotesURL": "https://gist.github.com/cerpintext/92084996c3f122e40f016007228c9ab9"
+      }
+    },
+    {
+      "fileName": "107-comsob",
+      "displayName": "107% AB (comsob splits)",
+      "data": {
+        "routeNotesURL": "https://pastebin.com/2KZrBXik"
+      }
+    },
+    {
+      "fileName": "107-everything",
+      "displayName": "107% AB (all splits)",
+      "data": {
+        "routeNotesURL": "https://pastebin.com/2KZrBXik"
+      }
+    },
+    {
+      "fileName": "107-late-gpz",
+      "displayName": "107% AB (late GPZ)",
+      "data": {
+        "routeNotesURL": "https://pastebin.com/bqRttPCc"
+      }
+    },
+    {
       "fileName": "112-comsob",
       "displayName": "112% APB (comsob splits)",
       "data": {
@@ -15,42 +43,10 @@
       }
     },
     {
-      "fileName": "112-late-flukes",
-      "displayName": "112% APB (late Flukenest)"
-    },
-    {
-      "fileName": "107-early-gpz-comsob",
-      "displayName": "107% AB (early GPZ; comsob splits)",
+      "fileName": "112-late-flukenest",
+      "displayName": "112% APB (late Flukenest)",
       "data": {
-        "routeNotesURL": "https://pastebin.com/2KZrBXik"
-      }
-    },
-    {
-      "fileName": "107-early-gpz-everything",
-      "displayName": "107% AB (early GPZ; all splits)",
-      "data": {
-        "routeNotesURL": "https://pastebin.com/2KZrBXik"
-      }
-    },
-    {
-      "fileName": "107-late-gpz-comsob",
-      "displayName": "107% AB (late GPZ; comsob splits)",
-      "data": {
-        "routeNotesURL": "https://pastebin.com/bqRttPCc"
-      }
-    },
-    {
-      "fileName": "107-late-gpz-everything",
-      "displayName": "107% AB (late GPZ; all splits)",
-      "data": {
-        "routeNotesURL": "https://pastebin.com/bqRttPCc"
-      }
-    },
-    {
-      "fileName": "106",
-      "displayName": "106% TE",
-      "data": {
-        "routeNotesURL": "https://gist.github.com/cerpintext/92084996c3f122e40f016007228c9ab9"
+        "routeNotesURL": "https://pastebin.com/zRM0B2tP"
       }
     },
     {
