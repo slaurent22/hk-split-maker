@@ -383,6 +383,13 @@
       }
     },
     {
+      "fileName": "100-completion",
+      "displayName": "100% Completion",
+      "data": {
+        "routeNotesURL": "https://pastebin.com/dcNJnwbX"
+      }
+    },
+    {
       "fileName": "all-breakable-charms",
       "displayName": "All Breakable Charms"
     },
