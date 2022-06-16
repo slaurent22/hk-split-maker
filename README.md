@@ -14,7 +14,7 @@ Use the [HK Split Maker web UI](https://hksplitmaker.com/)!
 For development or local use, clone the repository and install/build manually via [Node.js](https://nodejs.org/en/).
 
 ```sh
-npm install && npm run serve
+npm install --legacy-peer-deps && npm run serve
 ```
 
 Navigate to `http://localhost:8080/` in your web browser.
