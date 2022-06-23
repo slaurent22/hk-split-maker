@@ -7,6 +7,7 @@ import {
   createFilter,
 } from "react-select";
 import { CategoryDefinition } from "../asset/hollowknight/categories/category-directory.json";
+import Schy from "../asset/image/schy.png";
 import BaseSelect from "./BaseSelect";
 
 interface Props {
@@ -89,6 +90,10 @@ function RouteNotesLink({
   );
 }
 
+function SchyPicture(): ReactElement {
+  return <img src={Schy} width="7%" height="7%" />;
+}
+
 function CategorySelectOption<
   IsMulti extends boolean = false,
   Group extends GroupBase<CategoryOption> = GroupBase<CategoryOption>
@@ -100,6 +105,7 @@ function CategorySelectOption<
   return (
     <components.Option {...rest}>
       {children}
+      {rest.data.value === "pop" && <SchyPicture />}
       {data.data?.routeNotesURL && (
         <RouteNotesLink url={data.data.routeNotesURL} isSelected={isSelected} />
       )}
@@ -117,6 +123,7 @@ function CategorySelectSingleValue<
   return (
     <components.SingleValue {...rest}>
       {children}
+      {rest.data.value === "pop" && <SchyPicture />}
       {rest.data.data?.routeNotesURL && (
         <em style={{ float: "right" }}>Notes available</em>
       )}
