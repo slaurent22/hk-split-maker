@@ -50,6 +50,29 @@
       }
     },
     {
+      "fileName": "all-achievements",
+      "displayName": "All Achievements",
+      "data": {
+        "routeNotesURL": ""
+      }
+    },
+    {
+      "fileName": "all-bosses-base-game",
+      "displayName": "All Bosses (Base Game)"
+    },
+    {
+      "fileName": "all-bosses-hidden-dreams",
+      "displayName": "All Bosses (Hidden Dreams)"
+    },
+    {
+      "fileName": "all-bosses-grimm-troupe",
+      "displayName": "All Bosses (Grimm Troupe)"
+    },
+    {
+      "fileName": "all-bosses-lifeblood",
+      "displayName": "All Bosses (Lifeblood)"
+    },
+    {
       "fileName": "all-skills",
       "displayName": "All Skills",
       "data": {
@@ -70,22 +93,6 @@
         "routeNotesURL": "https://pastebin.com/T2xs1RkG",
         "searchTerms": ["Eternal"]
       }
-    },
-    {
-      "fileName": "all-bosses-base-game",
-      "displayName": "All Bosses (Base Game)"
-    },
-    {
-      "fileName": "all-bosses-hidden-dreams",
-      "displayName": "All Bosses (Hidden Dreams)"
-    },
-    {
-      "fileName": "all-bosses-grimm-troupe",
-      "displayName": "All Bosses (Grimm Troupe)"
-    },
-    {
-      "fileName": "all-bosses-lifeblood",
-      "displayName": "All Bosses (Lifeblood)"
     },
     {
       "fileName": "any",
@@ -128,6 +135,10 @@
       }
     },
     {
+      "fileName": "godhome-ending",
+      "displayName": "Godhome Ending"
+    },
+    {
       "fileName": "low",
       "displayName": "Low%",
       "data": {
@@ -152,20 +163,17 @@
     {
       "fileName": "te-flukamoth",
       "displayName": "True Ending (\"Flukamoth\")"
-    },
-    {
-      "fileName": "all-achievements",
-      "displayName": "All Achievements",
-      "data": {
-        "routeNotesURL": ""
-      }
-    },
-    {
-      "fileName": "godhome-ending",
-      "displayName": "Godhome Ending"
     }
   ],
   "Glitched": [
+    {
+      "fileName": "all-skills-ag",
+      "displayName": "All Skills (All Glitches)",
+      "data": {
+        "routeNotesURL": "https://pastebin.com/7RD8WkqX",
+        "searchTerms": ["ag"]
+      }
+    },
     {
       "fileName": "any-ag",
       "displayName": "Any% (All Glitches)",
@@ -178,14 +186,6 @@
       "displayName": "Any% (No Main Menu Storage)",
       "data": {
         "searchTerms": ["nmms"]
-      }
-    },
-    {
-      "fileName": "all-skills-ag",
-      "displayName": "All Skills (All Glitches)",
-      "data": {
-        "routeNotesURL": "https://pastebin.com/7RD8WkqX",
-        "searchTerms": ["ag"]
       }
     },
     {
