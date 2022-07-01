@@ -154,6 +154,13 @@
       "displayName": "True Ending (\"Flukamoth\")"
     },
     {
+      "fileName": "all-achievements",
+      "displayName": "All Achievements",
+      "data": {
+        "routeNotesURL": ""
+      }
+    },
+    {
       "fileName": "godhome-ending",
       "displayName": "Godhome Ending"
     }
