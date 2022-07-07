@@ -8,6 +8,13 @@
       }
     },
     {
+      "fileName": "106-comfy",
+      "displayName": "106% TE (Comfy Route)",
+      "data": {
+        "routeNotesURL": "https://gist.github.com/cerpintext/92084996c3f122e40f016007228c9ab9"
+      }
+    },
+    {
       "fileName": "107-comsob",
       "displayName": "107% AB (comsob splits)",
       "data": {
