@@ -5,9 +5,9 @@
     "EnterGreenpath",
     "MothwingCloak",
     "BlueLake",
-    "DreamNail",
+    "RestingGroundsStation",
     "MantisClaw",
-    "Galien",
+    "GalienEssence",
     "TramPass",
     "SavedCloth",
     "HiveKnight",
@@ -16,6 +16,7 @@
     "KingsStationStation",
     "QueensGardensEntry",
     "OnObtainGhostCaelifFera",
+    "QueensGardensPostArenaTransition",
     "TraitorLord",
     "OnObtainGhostJoni",
     "SpiritGladeOpen",
@@ -23,6 +24,9 @@
     "OnObtainGhostMarissa",
     "OnObtainGhostPoggy"
   ],
+  "names": {
+    "Menu": "Glade Cleared (Main Menu)"
+  },
   "ordered": true,
   "endTriggeringAutosplit": true,
   "gameName": "Hollow Knight Category Extensions"
