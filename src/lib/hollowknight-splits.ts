@@ -77,14 +77,12 @@ function getNameAndGroup({
       return ["Vengefly King (Zote)", qualifier];
     case "BasinEntry":
     case "EnterGreenpath":
-    case "EnterGreenpathWithOvercharm":
     case "EnterNKG":
     case "EnterSanctum":
     case "EnterSanctumWithShadeSoul":
     case "FogCanyonEntry":
     case "HiveEntry":
     case "KingdomsEdgeEntry":
-    case "KingdomsEdgeOvercharmedEntry":
     case "Pantheon1to4Entry":
     case "Pantheon5Entry":
     case "WaterwaysEntry":
@@ -108,6 +106,10 @@ function getNameAndGroup({
       return ["Monomon", qualifier];
     case "PureSnail":
       return ["Pure Snail", qualifier];
+    case "QueensGardensPostArenaTransition":
+      return ["QG Arena Exit", qualifier];
+    case "SoulTyrantEssenceWithSanctumGrub":
+      return ["S. Tyrant w/ Sanctum Grub", qualifier];
     default:
       break;
   }
