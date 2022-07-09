@@ -409,17 +409,17 @@
     "PureVesselP": ["{Pantheon of the Knight} Pure Vessel", "Pure Vessel"],
     "EndingSplit": [
       "The Hollow Knight",
-      "{Pantheon of Hallownest} Absolute Radiance",
+      "{Embrace the Void} Absolute Radiance",
       "Sealed Siblings",
       "Dream No More"
     ]
   },
   "icons": {
     "EndingSplit": [
-      "HollowKnightBoss",
-      "RadianceBoss",
-      "HollowKnightBoss",
-      "RadianceBoss"
+      "TheHollowKnight",
+      "Pantheon5",
+      "SealedSiblings",
+      "DreamNoMore"
     ]
   },
   "ordered": true,

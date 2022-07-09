@@ -670,6 +670,9 @@ import AnyTransition from "./Misc/Knight.png";
 import TransitionAfterSaveState from "./Misc/Knight.png";
 import ManualSplit from "./Misc/Knight.png";
 import RandoWake from "./Misc/Knight.png";
+import TheHollowKnight from "./Achievement/TheHollowKnight.png";
+import SealedSiblings from "./Achievement/SealedSiblings.png";
+import DreamNoMore from "./Achievement/DreamNoMore.png";
 export default {
   AbyssShriek,
   CrystalHeart,
@@ -1341,4 +1344,7 @@ export default {
   TransitionAfterSaveState,
   ManualSplit,
   RandoWake,
+  TheHollowKnight,
+  SealedSiblings,
+  DreamNoMore,
 };

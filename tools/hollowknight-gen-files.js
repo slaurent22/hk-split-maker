@@ -615,11 +615,19 @@ function createIconImports() {
     output += `import ${id} from "${getUrl(id, qualifier)}";\n`;
   }
 
+  // non-split icons
+  output += `import TheHollowKnight from "./Achievement/TheHollowKnight.png";\n`;
+  output += `import SealedSiblings from "./Achievement/SealedSiblings.png";\n`;
+  output += `import DreamNoMore from "./Achievement/DreamNoMore.png";\n`;
+
   // console.log(output);
   output += "export default {\n";
   for (const { id } of Splits) {
     output += `  ${id},\n`;
   }
+  output += `  TheHollowKnight,\n`;
+  output += `  SealedSiblings,\n`;
+  output += `  DreamNoMore,\n`;
   output += "};\n";
 
   // console.log(output);

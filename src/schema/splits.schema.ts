@@ -70,22 +70,11 @@ const overrideSchemaPropItem = (description: string) => ({
   ],
 });
 
-const SPLITID_OR_ARRAY_THEREOF_SCHEMA = {
-  oneOf: (SPLITS_SCHEMA as Array<unknown>).concat([
-    {
-      type: "array",
-      items: {
-        oneOf: SPLITS_SCHEMA,
-      },
-    },
-  ]),
-};
-
 const namesProperties: Record<string, unknown> = {};
 const iconsProperties: Record<string, unknown> = {};
 for (const split of SPLITS_SCHEMA) {
   namesProperties[split.const] = overrideSchemaPropItem(split.description);
-  iconsProperties[split.const] = SPLITID_OR_ARRAY_THEREOF_SCHEMA;
+  iconsProperties[split.const] = overrideSchemaPropItem(split.description);
 }
 const names = SplitConfigSchemaSource.properties.names;
 names.properties = namesProperties;
