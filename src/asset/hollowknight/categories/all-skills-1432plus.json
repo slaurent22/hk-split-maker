@@ -29,7 +29,12 @@
     "UnchainedHollowKnight"
   ],
   "names": {
-    "TransGorgeousHusk": "Gorgeous Husk"
+    "CrystalHeart": "[1U] %s",
+    "CycloneSlash": "[1D] %s",
+    "Monomon": "[1D] %s",
+    "KingsBrand": "[2U] %s",
+    "ShadeCloak": "[3D] %s",
+    "UnchainedHollowKnight": "[1D] %s"
   },
   "ordered": true,
   "endTriggeringAutosplit": false,
