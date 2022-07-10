@@ -110,6 +110,10 @@ function getNameAndGroup({
       return ["QG Arena Exit", qualifier];
     case "SoulTyrantEssenceWithSanctumGrub":
       return ["S. Tyrant w/ Sanctum Grub", qualifier];
+    case "TransDescendingDark":
+      return ["Descending Dark Exit", qualifier];
+    case "TransTear":
+      return ["Isma's Tear Exit", qualifier];
     default:
       break;
   }
