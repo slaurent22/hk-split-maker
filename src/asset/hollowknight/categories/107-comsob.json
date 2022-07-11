@@ -107,7 +107,7 @@
     "GreyPrinceEssence": "[3U] %s",
     "GreyMournerSeerAscended": "[2U] %s",
     "Grub46": "(Grub 46) White Lady Grub",
-    "WhitePalaceEntry": "[3U, 2D]",
+    "WhitePalaceEntry": "[3U, 2D] %s",
     "Kingsoul": "White Palace",
     "SlyShopFinished": "[3U] Sly"
   },
