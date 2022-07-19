@@ -283,7 +283,10 @@
     },
     {
       "fileName": "room-timer",
-      "displayName": "Room Timer"
+      "displayName": "Room Timer",
+      "data": {
+        "searchTerms": ["Abyss Climb"]
+      }
     }
   ],
   "Mods": [
