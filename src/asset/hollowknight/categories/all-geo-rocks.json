@@ -28,7 +28,7 @@
     "TollBenchQG",
     "QueensGardensPostArenaTransition",
     "QueensGardensStation",
-    "KingdomsEdge",
+    "KingdomsEdgeEntry",
     "EnterHornet2",
     "KingsBrand",
     "HuntersMark"
@@ -61,7 +61,7 @@
     "TollBenchQG": "%s [169]",
     "QueensGardensPostArenaTransition": "%s [176]",
     "QueensGardensStation": "%s [177]",
-    "KingdomsEdge": "%s [190]",
+    "KingdomsEdgeEntry": "%s [190]",
     "EnterHornet2": "%s [194]",
     "KingsBrand": "%s [194]",
     "HuntersMark": "All Geo Rocks [207]"
