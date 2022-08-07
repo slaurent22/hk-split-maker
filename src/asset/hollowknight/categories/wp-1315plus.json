@@ -21,7 +21,11 @@
   "names": {
     "WhitePalaceLowerEntry": ["Palace Grounds", "Lower Orb Room"],
     "WhitePalaceLowerOrb": "Lower Entry",
-    "WhitePalaceAtrium": ["Lower Entry to Hub", "Left Atrium 2", "Right Atrium"],
+    "WhitePalaceAtrium": [
+      "Lower Entry to Hub",
+      "Left Atrium 2",
+      "Right Atrium"
+    ],
     "WhitePalaceLeftEntry": "Hub to Left Atrium",
     "WhitePalaceLeftWingMid": "Left Atrium 1",
     "WhitePalaceRightEntry": "Hub to Right Atrium",
