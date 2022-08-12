@@ -1,4 +1,10 @@
-import React, { useEffect, useState, ReactElement } from "react";
+import React, {
+  useEffect,
+  useState,
+  ReactElement,
+  lazy,
+  Suspense,
+} from "react";
 import { saveAs } from "file-saver";
 import JSON5 from "json5";
 import { getCategoryConfigJSON, getCategoryDirectory } from "../lib/categories";
@@ -6,9 +12,6 @@ import { CategoryDefinition } from "../asset/hollowknight/categories/category-di
 import { Config, createSplitsXml } from "../lib/lss";
 import CategoryAnyPercent from "../asset/hollowknight/categories/any.json";
 import ArrowButton from "./ArrowButton";
-import CategorySelect from "./CategorySelect";
-import SplitConfigEditor from "./SplitConfigEditor";
-import SplitOutputEditor from "./SplitOutputEditor";
 import Header from "./Header";
 import Instructions from "./Instructions";
 import AlertBanner from "./AlertBanner";
@@ -24,6 +27,10 @@ interface AppProps {
   requestedCategoryName?: string;
   onUpdateCategoryName: (categoryName: string) => void;
 }
+
+const CategorySelect = lazy(() => import("./CategorySelect"));
+const SplitConfigEditor = lazy(() => import("./SplitConfigEditor"));
+const SplitOutputEditor = lazy(() => import("./SplitOutputEditor"));
 
 export default function App({
   requestedCategoryName,
@@ -172,24 +179,28 @@ export default function App({
           <h2>Input Configuration</h2>
           <div className="output-container">
             <div className="row">
-              <CategorySelect
-                id="categories"
-                onChange={onCategorySelect}
-                data={state.categories}
-                defaultValue={
-                  getCategoryDefinition(requestedCategoryName ?? "") ?? null
-                }
-              />
+              <Suspense fallback={<div>Loading category select...</div>}>
+                <CategorySelect
+                  id="categories"
+                  onChange={onCategorySelect}
+                  data={state.categories}
+                  defaultValue={
+                    getCategoryDefinition(requestedCategoryName ?? "") ?? null
+                  }
+                />
+              </Suspense>
               <ArrowButton
                 text="Generate"
                 id="submit-button"
                 onClick={onSubmit}
               />
             </div>
-            <SplitConfigEditor
-              defaultValue={state.configInput}
-              onChange={onConfigInputChange}
-            />
+            <Suspense fallback={<div>Loading split config editor...</div>}>
+              <SplitConfigEditor
+                defaultValue={state.configInput}
+                onChange={onConfigInputChange}
+              />
+            </Suspense>
           </div>
         </div>
         <div id="output-section" className="side">
@@ -203,10 +214,12 @@ export default function App({
                 disabled={state.splitOutput.length === 0}
               />
             </div>
-            <SplitOutputEditor
-              defaultValue={state.splitOutput}
-              onChange={onSplitOutputChange}
-            />
+            <Suspense fallback={<div>Loading split output editor...</div>}>
+              <SplitOutputEditor
+                defaultValue={state.splitOutput}
+                onChange={onSplitOutputChange}
+              />
+            </Suspense>
           </div>
         </div>
       </div>
