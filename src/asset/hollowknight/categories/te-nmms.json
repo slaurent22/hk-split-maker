@@ -1,35 +1,19 @@
 {
   "categoryName": "True Ending",
   "splitIds": [
-    "KingsPass",
+    "AncestralMound",
+    "EnterGreenpath",
+    "MothwingCloak",
     "MantisClaw",
     "Dashmaster",
-    "MothwingCloak",
-    "VengefulSpirit",
-    "QueensStationStation",
-    "HowlingWraiths",
+    "BlueLake",
     "DreamNail",
-    "EnterAnyDream",
-    "ShadeCloak",
-    "AbyssShriek",
+    "DreamGate",
+    "ShadeSoul",
     "VoidHeart",
-    "Dreamer1",
-    "KingsStationStation",
-    "Dreamer2",
     "Dreamer3",
     "HollowKnightDreamnail"
   ],
-  "names": {
-    "EnterAnyDream": "Dreamnail Lurien",
-    "Dreamer1": "Lurien",
-    "Dreamer2": "Herrah",
-    "Dreamer3": "Monomon"
-  },
-  "icons": {
-    "Dreamer1": "Lurien",
-    "Dreamer2": "Hegemol",
-    "Dreamer3": "Monomon"
-  },
   "ordered": true,
   "endTriggeringAutosplit": false,
   "endingSplit": {
