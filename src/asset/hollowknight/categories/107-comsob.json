@@ -86,10 +86,7 @@
   "names": {
     "CrystalHeart": "[1U] %s",
     "ElegantKey": "[1U] %s",
-    "EnterAnyDream": [
-      "Enter Soul Tyrant",
-      "[2D] Enter Failed Champion"
-    ],
+    "EnterAnyDream": ["Enter Soul Tyrant", "[2D] Enter Failed Champion"],
     "MaskFragment1": "Waterways Mask",
     "CycloneSlash": "[2D, 2D] %s",
     "Vessel1": "[2D] Storerooms Fragment",
