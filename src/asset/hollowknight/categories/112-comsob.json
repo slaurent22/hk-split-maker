@@ -115,6 +115,7 @@
     "VesselFragment5": "King's Station Fragment",
     "AbyssShriek": "[2D] %s",
     "EnterTMG": "[3D] %s",
+    "NotchGrimm": "Troupe Master Grimm",
     "MaskFragment5": "Brooding Mawlek",
     "MaskFragment6": "Fungal Core Shard",
     "Ore3": "Nosk Pale Ore",
@@ -126,8 +127,7 @@
     "MaskFragment9": "[2U, 2U] Bretta Shard",
     "GreyMournerSeerAscended": "[3D] %s",
     "Grub46": "(Grub 46) White Lady Grub",
-    "WhitePalaceEntry": "[3D, 1U] %s",
-    "Kingsoul": "White Palace",
+    "WhitePalaceEntry": "[3D, 1U] White Palace",
     "Pantheon1to4Entry": "Enter Pantheon 1",
     "GodhomeBench": [
       "Enter Gorb",
