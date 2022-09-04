@@ -156,11 +156,7 @@
       "HiveKnightP",
       "EnragedGuardianP"
     ],
-    "GodhomeLoreRoom": [
-      "WatcherKnightsP",
-      "SoulTyrantP",
-      "PureVesselP"
-    ]
+    "GodhomeLoreRoom": ["WatcherKnightsP", "SoulTyrantP", "PureVesselP"]
   },
   "ordered": true,
   "endTriggeringAutosplit": false,
