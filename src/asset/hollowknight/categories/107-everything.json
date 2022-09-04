@@ -201,7 +201,11 @@
     "DreamGate": "[2D] %s",
     "CycloneSlash": "{Cyclone Slash} [2D] %s",
     "VesselFragment2": "Stag Nest Fragment",
-    "Flame1": ["[2D] Storerooms Flame", "King's Pass Flame", "Fungal Core Flame"],
+    "Flame1": [
+      "[2D] Storerooms Flame",
+      "King's Pass Flame",
+      "Fungal Core Flame"
+    ],
     "Vessel1": "Storerooms Fragment",
     "Flame2": ["Greenpath Flame", "Resting Grounds Flame"],
     "VesselFragment4": "Greenpath Fragment",
