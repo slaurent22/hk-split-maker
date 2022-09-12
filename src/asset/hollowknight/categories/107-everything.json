@@ -237,7 +237,7 @@
     "WhitePalaceEntry": "{White Palace} [2D] White Palace",
     "VesselFragment8": "Basin Fragment",
     "NailmastersGlory": "[3U] %s",
-    "Vessel3": "Sly",
+    "Vessel3": "Sly"
   },
   "ordered": true,
   "endTriggeringAutosplit": false,
