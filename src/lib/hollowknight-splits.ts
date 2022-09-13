@@ -76,7 +76,10 @@ function getNameAndGroup({
     case "Zote1":
       return ["Vengefly King (Zote)", qualifier];
     case "BasinEntry":
+    case "EnterCrown":
+    case "EnterDeepnest":
     case "EnterGreenpath":
+    case "EnterJunkPit":
     case "EnterNKG":
     case "EnterSanctum":
     case "EnterSanctumWithShadeSoul":

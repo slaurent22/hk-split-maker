@@ -146,6 +146,10 @@ function getUrl(id, qualifier) {
     switch (id) {
       case "Sly":
         return getUrl("SlyNailsage", "Boss");
+      case "SoulMasterEncountered":
+        return getUrl("SoulMaster", "Boss");
+      case "UumuuEncountered":
+        return getUrl("Uumuu", "Boss");
     }
   }
 
@@ -220,6 +224,27 @@ function getUrl(id, qualifier) {
         return getUrl("PaleOre", "Item");
       case "OnObtainWhiteFragment":
         return getUrl("WhiteFragmentLeft", "Charm");
+      case "MaskShardMawlek":
+      case "MaskShardGrubfather":
+      case "MaskShardGoam":
+      case "MaskShardQueensStation":
+      case "MaskShardBretta":
+      case "MaskShardStoneSanctuary":
+      case "MaskShardWaterways":
+      case "MaskShardFungalCore":
+      case "MaskShardEnragedGuardian":
+      case "MaskShardHive":
+      case "MaskShardSeer":
+      case "MaskShardFlower":
+        return getUrl("MaskShard", "Fragment");
+      case "VesselFragGreenpath":
+      case "VesselFragCrossroadsLift":
+      case "VesselFragKingsStation":
+      case "VesselFragGarpedes":
+      case "VesselFragStagNest":
+      case "VesselFragSeer":
+      case "VesselFragFountain":
+        return getUrl("VesselFragment1", "Fragment");
     }
   }
 
@@ -428,6 +453,10 @@ function getUrl(id, qualifier) {
         return getUrl("CrystalPeak", "Area");
       case "EnterAnyDream":
         return getUrl("DreamNail", "Skill");
+      case "EnterCrown":
+        return getUrl("CrystallisedHusk", "Enemy");
+      case "EnterDeepnest":
+        return getUrl("Deepnest", "Area");
       case "FogCanyonEntry":
         return getUrl("FogCanyon", "Area");
       case "EnterGreenpath":
@@ -450,6 +479,7 @@ function getUrl(id, qualifier) {
       case "EnterSanctum":
       case "EnterSanctumWithShadeSoul":
         return getUrl("Folly", "Enemy");
+      case "EnterJunkPit":
       case "WaterwaysEntry":
         return getUrl("RoyalWaterways", "Area");
       case "TransClaw":
@@ -510,6 +540,10 @@ function getUrl(id, qualifier) {
         return getUrl("VengeflyKing", "Boss");
       case "MegaMossChargerTrans":
         return getUrl("MassiveMossCharger", "Boss");
+      case "ElderHuTrans":
+        return getUrl("ElderHu", "Boss");
+      case "BlackKnightTrans":
+        return getUrl("BlackKnight", "Boss");
       case "PreGrimmShopTrans":
       case "SlyShopFinished":
         return getUrl("Sly", "Misc");
@@ -584,10 +618,6 @@ function getUrl(id, qualifier) {
 
   if (id === "DgateKingdomsEdgeAcid") {
     return getUrl("DreamGate", "Skill");
-  }
-
-  if (id === "SoulMasterEncountered") {
-    return getUrl("SoulMaster", "Boss");
   }
 
   if (qualifier === "Old Dreamer Timing") {

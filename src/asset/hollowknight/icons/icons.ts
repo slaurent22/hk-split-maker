@@ -62,6 +62,25 @@ import Vessel2 from "./Upgrade/Vessel1.png";
 import VesselFragment7 from "./Fragment/VesselFragment1.png";
 import VesselFragment8 from "./Fragment/VesselFragment1.png";
 import Vessel3 from "./Upgrade/Vessel1.png";
+import MaskShardMawlek from "./Fragment/MaskShard.png";
+import MaskShardGrubfather from "./Fragment/MaskShard.png";
+import MaskShardGoam from "./Fragment/MaskShard.png";
+import MaskShardQueensStation from "./Fragment/MaskShard.png";
+import MaskShardBretta from "./Fragment/MaskShard.png";
+import MaskShardStoneSanctuary from "./Fragment/MaskShard.png";
+import MaskShardWaterways from "./Fragment/MaskShard.png";
+import MaskShardFungalCore from "./Fragment/MaskShard.png";
+import MaskShardEnragedGuardian from "./Fragment/MaskShard.png";
+import MaskShardHive from "./Fragment/MaskShard.png";
+import MaskShardSeer from "./Fragment/MaskShard.png";
+import MaskShardFlower from "./Fragment/MaskShard.png";
+import VesselFragGreenpath from "./Fragment/VesselFragment1.png";
+import VesselFragCrossroadsLift from "./Fragment/VesselFragment1.png";
+import VesselFragKingsStation from "./Fragment/VesselFragment1.png";
+import VesselFragGarpedes from "./Fragment/VesselFragment1.png";
+import VesselFragStagNest from "./Fragment/VesselFragment1.png";
+import VesselFragSeer from "./Fragment/VesselFragment1.png";
+import VesselFragFountain from "./Fragment/VesselFragment1.png";
 import BrokenVessel from "./Boss/BrokenVessel.png";
 import BroodingMawlek from "./Boss/BroodingMawlek.png";
 import EnterBroodingMawlek from "./Boss/BroodingMawlek.png";
@@ -74,6 +93,7 @@ import DungDefenderIdol from "./Relic/KingsIdol.png";
 import GladeIdol from "./Relic/KingsIdol.png";
 import ElderHu from "./Boss/ElderHu.png";
 import ElderHuEssence from "./Boss/ElderHu.png";
+import ElderHuTrans from "./Boss/ElderHu.png";
 import FalseKnight from "./Boss/FalseKnight.png";
 import FailedKnight from "./Boss/FalseKnight.png";
 import FailedChampionEssence from "./Boss/FalseKnight.png";
@@ -123,7 +143,9 @@ import TraitorLord from "./Boss/TraitorLord.png";
 import TroupeMasterGrimm from "./Boss/TroupeMasterGrimm.png";
 import EnterTMG from "./Boss/TroupeMasterGrimm.png";
 import Uumuu from "./Boss/Uumuu.png";
+import UumuuEncountered from "./Boss/Uumuu.png";
 import BlackKnight from "./Boss/WatcherKnights.png";
+import BlackKnightTrans from "./Boss/WatcherKnights.png";
 import WhiteDefender from "./Boss/WhiteDefender.png";
 import WhiteDefenderEssence from "./Boss/WhiteDefender.png";
 import OnDefeatWhiteDefender from "./Boss/WhiteDefender.png";
@@ -287,6 +309,7 @@ import BlueLake from "./Achievement/Witness.png";
 import CatacombsEntry from "./Enemy/EntombedHusk.png";
 import CrystalPeakEntry from "./Enemy/CrystalCrawler.png";
 import CrystalMoundExit from "./Skill/DescendingDark.png";
+import EnterDeepnest from "./Enemy/Dirtcarver.png";
 import EnterAnyDream from "./Skill/DreamNail.png";
 import FogCanyonEntry from "./Enemy/Uoma.png";
 import FungalWastesEntry from "./Enemy/Ambloom.png";
@@ -294,11 +317,13 @@ import TransGorgeousHusk from "./Enemy/GorgeousHusk.png";
 import EnterGodhome from "./Misc/Godseeker.png";
 import EnterGreenpath from "./Enemy/Mosscreep.png";
 import EnterGreenpathWithOvercharm from "./Enemy/Mosscreep.png";
+import EnterCrown from "./Enemy/CrystallisedHusk.png";
 import TransClaw from "./Skill/MantisClaw.png";
 import TransVS from "./Skill/VengefulSpirit.png";
 import TransDescendingDark from "./Skill/DescendingDark.png";
 import TransTear from "./Skill/IsmasTear.png";
 import TransTearWithGrub from "./Skill/IsmasTear.png";
+import EnterJunkPit from "./Enemy/Flukefey.png";
 import HiveEntry from "./Enemy/Hiveling.png";
 import KingsPass from "./Enemy/Vengefly.png";
 import KingsPassEnterFromTown from "./Enemy/Vengefly.png";
@@ -531,6 +556,8 @@ import BenchCrossroadsStag from "./Misc/Bench.png";
 import BenchGreenpathStag from "./Misc/Bench.png";
 import BenchQueensStation from "./Misc/Bench.png";
 import BenchStorerooms from "./Misc/Bench.png";
+import BenchSpire from "./Misc/Bench.png";
+import BenchSpireGHS from "./Misc/Bench.png";
 import BenchKingsStation from "./Misc/Bench.png";
 import BenchHiddenStation from "./Misc/Bench.png";
 import BenchRGStag from "./Misc/Bench.png";
@@ -651,6 +678,7 @@ import Gold4 from "./Misc/Knight.png";
 import Gold5 from "./Misc/Knight.png";
 import Gold6 from "./Misc/Knight.png";
 import Gold7 from "./Misc/Knight.png";
+import Gold8a from "./Misc/Knight.png";
 import Gold8 from "./Misc/Knight.png";
 import Gold9a from "./Misc/Knight.png";
 import Gold9b from "./Misc/Knight.png";
@@ -736,6 +764,25 @@ export default {
   VesselFragment7,
   VesselFragment8,
   Vessel3,
+  MaskShardMawlek,
+  MaskShardGrubfather,
+  MaskShardGoam,
+  MaskShardQueensStation,
+  MaskShardBretta,
+  MaskShardStoneSanctuary,
+  MaskShardWaterways,
+  MaskShardFungalCore,
+  MaskShardEnragedGuardian,
+  MaskShardHive,
+  MaskShardSeer,
+  MaskShardFlower,
+  VesselFragGreenpath,
+  VesselFragCrossroadsLift,
+  VesselFragKingsStation,
+  VesselFragGarpedes,
+  VesselFragStagNest,
+  VesselFragSeer,
+  VesselFragFountain,
   BrokenVessel,
   BroodingMawlek,
   EnterBroodingMawlek,
@@ -748,6 +795,7 @@ export default {
   GladeIdol,
   ElderHu,
   ElderHuEssence,
+  ElderHuTrans,
   FalseKnight,
   FailedKnight,
   FailedChampionEssence,
@@ -797,7 +845,9 @@ export default {
   TroupeMasterGrimm,
   EnterTMG,
   Uumuu,
+  UumuuEncountered,
   BlackKnight,
+  BlackKnightTrans,
   WhiteDefender,
   WhiteDefenderEssence,
   OnDefeatWhiteDefender,
@@ -961,6 +1011,7 @@ export default {
   CatacombsEntry,
   CrystalPeakEntry,
   CrystalMoundExit,
+  EnterDeepnest,
   EnterAnyDream,
   FogCanyonEntry,
   FungalWastesEntry,
@@ -968,11 +1019,13 @@ export default {
   EnterGodhome,
   EnterGreenpath,
   EnterGreenpathWithOvercharm,
+  EnterCrown,
   TransClaw,
   TransVS,
   TransDescendingDark,
   TransTear,
   TransTearWithGrub,
+  EnterJunkPit,
   HiveEntry,
   KingsPass,
   KingsPassEnterFromTown,
@@ -1205,6 +1258,8 @@ export default {
   BenchGreenpathStag,
   BenchQueensStation,
   BenchStorerooms,
+  BenchSpire,
+  BenchSpireGHS,
   BenchKingsStation,
   BenchHiddenStation,
   BenchRGStag,
@@ -1325,6 +1380,7 @@ export default {
   Gold5,
   Gold6,
   Gold7,
+  Gold8a,
   Gold8,
   Gold9a,
   Gold9b,
