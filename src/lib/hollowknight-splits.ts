@@ -75,14 +75,17 @@ function getNameAndGroup({
       return ["King Fragment", qualifier];
     case "Zote1":
       return ["Vengefly King (Zote)", qualifier];
+    case "AncestralMound":
     case "BasinEntry":
     case "EnterCrown":
     case "EnterDeepnest":
+    case "EnterGodhome":
     case "EnterGreenpath":
     case "EnterJunkPit":
     case "EnterNKG":
     case "EnterSanctum":
     case "EnterSanctumWithShadeSoul":
+    case "EnterLoveTower":
     case "FogCanyonEntry":
     case "HiveEntry":
     case "KingdomsEdgeEntry":
@@ -115,8 +118,24 @@ function getNameAndGroup({
       return ["S. Tyrant w/ Sanctum Grub", qualifier];
     case "TransDescendingDark":
       return ["Descending Dark Exit", qualifier];
+    case "TransClaw":
+      return ["Mantis Claw Exit", qualifier];
+    case "TransVS":
+      return ["Vengeful Spirit Exit", qualifier];
     case "TransTear":
       return ["Isma's Tear Exit", qualifier];
+    case "ElderHuTrans":
+      return ["Elder Hu Exit", qualifier];
+    case "MegaMossChargerTrans":
+      return ["Massive Moss Charger Exit", qualifier];
+    case "BlackKnightTrans":
+      return ["Watcher Knight Exit", qualifier];
+    case "VengeflyKingTrans":
+      return ["Vengefly King Exit", qualifier];
+    case "TransGorgeousHusk":
+      return ["Gorgeous Husk Exit", qualifier];
+    case "TransCollector":
+      return ["Collector Exit", qualifier];
     default:
       break;
   }
