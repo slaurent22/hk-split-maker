@@ -1,0 +1,24 @@
+{
+  "categoryName": "Myla Flower",
+  "splitIds": [
+    "VengefulSpirit",
+    "EnterGreenpath",
+    "MothwingCloak",
+    "MantisClaw",
+    "RestingGroundsStation",
+    "EnterSanctum",
+    "DesolateDive",
+    "CrystalPeakEntry",
+    "CrystalHeart",
+    "ManualSplit"
+  ],
+  "names": {
+    "ManualSplit": "Myla Flower (Manual Split)"
+  },
+  "icons": {
+    "ManualSplit": "HasDelicateFlower"
+  },
+  "ordered": true,
+  "endTriggeringAutosplit": true,
+  "gameName": "Hollow Knight Mods"
+}
