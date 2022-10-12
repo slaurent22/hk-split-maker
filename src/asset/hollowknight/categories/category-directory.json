@@ -337,7 +337,10 @@
   "Category Extensions": [
     {
       "fileName": "0geo",
-      "displayName": "0 Geo"
+      "displayName": "0 Geo",
+      "data": {
+        "routeNotesURL": "https://pastebin.com/ExnadfJn"
+      }
     },
     {
       "fileName": "3vf-kings-station",
@@ -415,8 +418,11 @@
       }
     },
     {
-      "fileName": "all-breakable-charms",
-      "displayName": "All Breakable Charms"
+      "fileName": "all-broken-charms",
+      "displayName": "All Broken Charms",
+      "data": {
+        "routeNotesURL": "https://pastebin.com/8sAnv8Um"
+      }
     },
     {
       "fileName": "acn",
