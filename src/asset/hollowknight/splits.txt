@@ -291,9 +291,9 @@
         Uumuu,
         [Description("Uumuu Encountered (Boss)"), ToolTip("Splits Uumuu is activated the first time as the gate closes")]
         UumuuEncountered,
-        [Description("Watcher Knight (Boss)"), ToolTip("Splits when killing Watcher Knight")]
+        [Description("Watcher Knight (Boss)"), ToolTip("Splits when killing Watcher Knights")]
         BlackKnight,
-        [Description("Watcher Knight Killed (Transition)"), ToolTip("Splits on the transition after killing Watcher Knight")]
+        [Description("Watcher Knight Killed (Transition)"), ToolTip("Splits on the transition after killing Watcher Knights")]
         BlackKnightTrans,
         [Description("White Defender (Boss)"), ToolTip("Splits when killing White Defender")]
         WhiteDefender,
@@ -637,6 +637,8 @@
         CrystalMoundExit,
         [Description("Deepnest (Transition)"), ToolTip("Splits on transition into Deepnest")]
         EnterDeepnest,
+        [Description("Dirtmouth (Transition)"), ToolTip("Splits on any transition into Dirtmouth Town")]
+        EnterDirtmouth,
         [Description("Enter Any Dream (Transition)"), ToolTip("Splits when entering any dream world")]
         EnterAnyDream,
         [Description("Fog Canyon (Transition)"), ToolTip("Splits on transition to East Fog Canyon")]
@@ -653,6 +655,9 @@
         EnterGreenpathWithOvercharm,
         [Description("Hallownest's Crown (Transition)"), ToolTip("Splits on transition into the room with the Whispering Root at the base of Hallownest's Crown")]
         EnterCrown,
+        [Description("Rafters (Transition)"), ToolTip("Splits on any transition into the City Rafters room")]
+        EnterRafters,
+
         [Description("Has Claw (Transition)"), ToolTip("Splits on transition after Mantis Claw acquired")]
         TransClaw,
         [Description("Has Fireball (Transition)"), ToolTip("Splits on transition after Vengeful Spirit acquired")]

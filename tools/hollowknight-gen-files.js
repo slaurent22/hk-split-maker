@@ -457,6 +457,10 @@ function getUrl(id, qualifier) {
         return getUrl("CrystallisedHusk", "Enemy");
       case "EnterDeepnest":
         return getUrl("Deepnest", "Area");
+      case "EnterDirtmouth":
+        return getUrl("Dirtmouth", "Area");
+      case "EnterRafters":
+        return getUrl("WingedSentry", "Enemy");
       case "FogCanyonEntry":
         return getUrl("FogCanyon", "Area");
       case "EnterGreenpath":

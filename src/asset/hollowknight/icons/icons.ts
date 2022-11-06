@@ -310,6 +310,7 @@ import CatacombsEntry from "./Enemy/EntombedHusk.png";
 import CrystalPeakEntry from "./Enemy/CrystalCrawler.png";
 import CrystalMoundExit from "./Skill/DescendingDark.png";
 import EnterDeepnest from "./Enemy/Dirtcarver.png";
+import EnterDirtmouth from "./NPC/Elderbug.png";
 import EnterAnyDream from "./Skill/DreamNail.png";
 import FogCanyonEntry from "./Enemy/Uoma.png";
 import FungalWastesEntry from "./Enemy/Ambloom.png";
@@ -318,6 +319,7 @@ import EnterGodhome from "./Misc/Godseeker.png";
 import EnterGreenpath from "./Enemy/Mosscreep.png";
 import EnterGreenpathWithOvercharm from "./Enemy/Mosscreep.png";
 import EnterCrown from "./Enemy/CrystallisedHusk.png";
+import EnterRafters from "./Enemy/WingedSentry.png";
 import TransClaw from "./Skill/MantisClaw.png";
 import TransVS from "./Skill/VengefulSpirit.png";
 import TransDescendingDark from "./Skill/DescendingDark.png";
@@ -1012,6 +1014,7 @@ export default {
   CrystalPeakEntry,
   CrystalMoundExit,
   EnterDeepnest,
+  EnterDirtmouth,
   EnterAnyDream,
   FogCanyonEntry,
   FungalWastesEntry,
@@ -1020,6 +1023,7 @@ export default {
   EnterGreenpath,
   EnterGreenpathWithOvercharm,
   EnterCrown,
+  EnterRafters,
   TransClaw,
   TransVS,
   TransDescendingDark,

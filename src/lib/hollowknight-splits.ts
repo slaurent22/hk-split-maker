@@ -79,10 +79,12 @@ function getNameAndGroup({
     case "BasinEntry":
     case "EnterCrown":
     case "EnterDeepnest":
+    case "EnterDirtmouth":
     case "EnterGodhome":
     case "EnterGreenpath":
     case "EnterJunkPit":
     case "EnterNKG":
+    case "EnterRafters":
     case "EnterSanctum":
     case "EnterSanctumWithShadeSoul":
     case "EnterLoveTower":
