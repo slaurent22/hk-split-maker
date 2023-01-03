@@ -30,23 +30,23 @@
     },
     {
       "fileName": "112-comsob",
-      "displayName": "112% APB (comsob splits)",
+      "displayName": "112% APB (comsob splits, 10 notches)",
       "data": {
         "routeNotesURL": "https://pastebin.com/ixT0Hm2p"
       }
     },
     {
-      "fileName": "112-everything",
-      "displayName": "112% APB (all splits)",
+      "fileName": "112-everything-10-notch",
+      "displayName": "112% APB (all splits, 10 notches)",
       "data": {
         "routeNotesURL": "https://pastebin.com/ixT0Hm2p"
       }
     },
     {
-      "fileName": "112-late-flukenest",
-      "displayName": "112% APB (late Flukenest)",
+      "fileName": "112-everything-11-notch",
+      "displayName": "112% APB (all splits, 11 notches)",
       "data": {
-        "routeNotesURL": "https://pastebin.com/zRM0B2tP"
+        "routeNotesURL": "https://pastebin.com/9LzcvewF"
       }
     },
     {
