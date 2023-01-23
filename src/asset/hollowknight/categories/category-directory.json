@@ -179,6 +179,14 @@
       }
     },
     {
+      "fileName": "all-bosses-hidden-dreams-nmms",
+      "displayName": "All Bosses (Hidden Dreams, NMMS)"
+    },
+    {
+      "fileName": "all-bosses-grimm-troupe-nmms",
+      "displayName": "All Bosses (Grimm Troupe, NMMS)"
+    },
+    {
       "fileName": "any-ag",
       "displayName": "Any% (All Glitches)",
       "data": {
