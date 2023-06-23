@@ -2,12 +2,24 @@
 
 Write a small configuration for Hollow Knight splits and a produce a full LiveSplit file. List your triggers once, and get both the autosplitter settings and the segment list from that list!
 
+The configuration is as simple as this. List the autosplit triggers once and add some metadata.
+
 ![JSON Configuration for Aluba%](./doc/img/aluba.json.PNG)
+
+The resulting splits have icons!
+
 ![LiveSplit screenshot of the generated Aluba% Splits](./doc/img/aluba.lss.PNG)
+
+The autosplits are ordered and correct.
+
+![LiveSplit screenshot of the generated Aluba% Splits' settings](./doc/img/aluba.autosplits.PNG)
 
 ## Use
 
 Use the [HK Split Maker web UI](https://hksplitmaker.com/)!
+You can load a builtin category or customize your own.
+Once the configuration is loaded or written, click Generate then Download.
+Open the resulting lss file with LiveSplit.
 
 ## Development
 
