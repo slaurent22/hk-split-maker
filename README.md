@@ -34,7 +34,7 @@ Navigate to `http://localhost:8080/` in your web browser.
 ### Adding new Splits
 
 Copy the contents of `public enum SplitName` from
-[HollowKnightSplitSettings.cs](https://github.com/ShootMe/LiveSplit.HollowKnight/blob/master/HollowKnightSplitSettings.cs) into [splits.txt](./src/asset/splits.txt). Remove the commented-out lines. Run `npm run gen-files` to regenerate the core files from those.
+[HollowKnightSplitSettings.cs](https://github.com/ShootMe/LiveSplit.HollowKnight/blob/master/HollowKnightSplitSettings.cs) into [splits.txt](./src/asset/hollowknight/splits.txt). Remove the commented-out lines. Run `npm run gen-files` to regenerate the core files from those.
 
 ## Future Enhancements
 
