@@ -4,15 +4,15 @@ Write a small configuration for Hollow Knight splits and a produce a full LiveSp
 
 The configuration is as simple as this. List the autosplit triggers once and add some metadata.
 
-![JSON Configuration for Aluba%](./doc/img/aluba.json.PNG)
+![JSON Configuration for Aluba%](./doc/img/aluba.json.png)
 
 The resulting splits have icons!
 
-![LiveSplit screenshot of the generated Aluba% Splits](./doc/img/aluba.lss.PNG)
+![LiveSplit screenshot of the generated Aluba% Splits](./doc/img/aluba.lss.png)
 
 The autosplits are ordered and correct.
 
-![LiveSplit screenshot of the generated Aluba% Splits' settings](./doc/img/aluba.autosplits.PNG)
+![LiveSplit screenshot of the generated Aluba% Splits' settings](./doc/img/aluba.autosplits.png)
 
 ## Use
 
