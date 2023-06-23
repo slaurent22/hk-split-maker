@@ -147,6 +147,7 @@ function getUrl(id, qualifier) {
       case "Sly":
         return getUrl("SlyNailsage", "Boss");
       case "SoulMasterEncountered":
+      case "SoulMasterPhase1":
         return getUrl("SoulMaster", "Boss");
       case "UumuuEncountered":
         return getUrl("Uumuu", "Boss");
@@ -224,6 +225,8 @@ function getUrl(id, qualifier) {
         return getUrl("PaleOre", "Item");
       case "OnObtainWhiteFragment":
         return getUrl("WhiteFragmentLeft", "Charm");
+      case "OnObtainCharmNotch":
+        return getUrl("CharmNotch", "Item");
       case "MaskShardMawlek":
       case "MaskShardGrubfather":
       case "MaskShardGoam":
@@ -316,6 +319,8 @@ function getUrl(id, qualifier) {
         return getUrl("ManualSplit", "Misc");
       case "PureSnail":
         return getUrl("PureSnail", "Misc");
+      case "OnGhostCoinsIncremented":
+        return getUrl("Knight", "Misc");
     }
   }
 
@@ -528,6 +533,8 @@ function getUrl(id, qualifier) {
         return getUrl("ColosseumGold", "Trial");
       case "EnterBroodingMawlek":
         return getUrl("BroodingMawlek", "Boss");
+      case "EnterNosk":
+        return getUrl("Nosk", "Boss");
       case "EnterHornet1":
         return getUrl("Hornet1", "Boss");
       case "EnterSoulMaster":
@@ -548,6 +555,8 @@ function getUrl(id, qualifier) {
         return getUrl("ElderHu", "Boss");
       case "BlackKnightTrans":
         return getUrl("BlackKnight", "Boss");
+      case "BrokenVesselTrans":
+        return getUrl("BrokenVessel", "Boss");
       case "PreGrimmShopTrans":
       case "SlyShopFinished":
         return getUrl("Sly", "Misc");
@@ -557,6 +566,8 @@ function getUrl(id, qualifier) {
         return getUrl("Collector", "Boss");
       case "AncestralMound":
         return getUrl("ManualSplit", "Misc");
+      case "SalubraExit":
+        return getUrl("SalubrasBlessing", "Item");
     }
   }
 
@@ -568,6 +579,8 @@ function getUrl(id, qualifier) {
         return getUrl("MantisClaw", "Skill");
       case "MenuGorgeousHusk":
         return getUrl("GorgeousHusk", "Enemy");
+      case "MenuIsmasTear":
+        return getUrl("IsmasTear", "Skill");
     }
   }
 

@@ -82,6 +82,7 @@ import VesselFragStagNest from "./Fragment/VesselFragment1.png";
 import VesselFragSeer from "./Fragment/VesselFragment1.png";
 import VesselFragFountain from "./Fragment/VesselFragment1.png";
 import BrokenVessel from "./Boss/BrokenVessel.png";
+import BrokenVesselTrans from "./Boss/BrokenVessel.png";
 import BroodingMawlek from "./Boss/BroodingMawlek.png";
 import EnterBroodingMawlek from "./Boss/BroodingMawlek.png";
 import Collector from "./Boss/Collector.png";
@@ -126,6 +127,7 @@ import NightmareKingGrimm from "./Boss/NightmareKingGrimm.png";
 import NoEyes from "./Boss/NoEyes.png";
 import NoEyesEssence from "./Boss/NoEyes.png";
 import Nosk from "./Boss/Nosk.png";
+import EnterNosk from "./Boss/Nosk.png";
 import KilledOblobbles from "./Boss/Oblobbles.png";
 import MatoOroNailBros from "./Boss/MatoOroNailBros.png";
 import PureVessel from "./Boss/PureVessel.png";
@@ -134,6 +136,7 @@ import HollowKnightBoss from "./Boss/HollowKnightBoss.png";
 import SheoPaintmaster from "./Boss/SheoPaintmaster.png";
 import SlyNailsage from "./Boss/SlyNailsage.png";
 import SoulMaster from "./Boss/SoulMaster.png";
+import SoulMasterPhase1 from "./Boss/SoulMaster.png";
 import EnterSoulMaster from "./Boss/SoulMaster.png";
 import SoulMasterEncountered from "./Boss/SoulMaster.png";
 import SoulTyrant from "./Boss/SoulMaster.png";
@@ -320,6 +323,7 @@ import EnterGreenpath from "./Enemy/Mosscreep.png";
 import EnterGreenpathWithOvercharm from "./Enemy/Mosscreep.png";
 import EnterCrown from "./Enemy/CrystallisedHusk.png";
 import EnterRafters from "./Enemy/WingedSentry.png";
+import SalubraExit from "./Item/SalubrasBlessing.png";
 import TransClaw from "./Skill/MantisClaw.png";
 import TransVS from "./Skill/VengefulSpirit.png";
 import TransDescendingDark from "./Skill/DescendingDark.png";
@@ -598,6 +602,7 @@ import Pantheon5Entry from "./Misc/Godseeker.png";
 import Menu from "./Misc/MapQuill.png";
 import MenuClaw from "./Skill/MantisClaw.png";
 import MenuGorgeousHusk from "./Enemy/GorgeousHusk.png";
+import MenuIsmasTear from "./Skill/IsmasTear.png";
 import CorniferAtHome from "./Misc/Iselda.png";
 import AllSeals from "./Relic/HallownestSeal.png";
 import AllEggs from "./Item/RancidEgg.png";
@@ -632,6 +637,7 @@ import OnObtainHallownestSeal from "./Relic/HallownestSeal.png";
 import OnObtainKingsIdol from "./Relic/KingsIdol.png";
 import ArcaneEgg8 from "./Relic/ArcaneEgg.png";
 import OnObtainArcaneEgg from "./Relic/ArcaneEgg.png";
+import OnObtainCharmNotch from "./Item/CharmNotch.png";
 import OnObtainRancidEgg from "./Item/RancidEgg.png";
 import OnObtainMaskShard from "./Fragment/MaskShard.png";
 import OnObtainVesselFragment from "./Fragment/VesselFragment1.png";
@@ -700,6 +706,7 @@ import AnyTransition from "./Misc/Knight.png";
 import TransitionAfterSaveState from "./Misc/Knight.png";
 import ManualSplit from "./Misc/Knight.png";
 import RandoWake from "./Misc/Knight.png";
+import OnGhostCoinsIncremented from "./Misc/Knight.png";
 import TheHollowKnight from "./Achievement/TheHollowKnight.png";
 import SealedSiblings from "./Achievement/SealedSiblings.png";
 import DreamNoMore from "./Achievement/DreamNoMore.png";
@@ -786,6 +793,7 @@ export default {
   VesselFragSeer,
   VesselFragFountain,
   BrokenVessel,
+  BrokenVesselTrans,
   BroodingMawlek,
   EnterBroodingMawlek,
   Collector,
@@ -830,6 +838,7 @@ export default {
   NoEyes,
   NoEyesEssence,
   Nosk,
+  EnterNosk,
   KilledOblobbles,
   MatoOroNailBros,
   PureVessel,
@@ -838,6 +847,7 @@ export default {
   SheoPaintmaster,
   SlyNailsage,
   SoulMaster,
+  SoulMasterPhase1,
   EnterSoulMaster,
   SoulMasterEncountered,
   SoulTyrant,
@@ -1024,6 +1034,7 @@ export default {
   EnterGreenpathWithOvercharm,
   EnterCrown,
   EnterRafters,
+  SalubraExit,
   TransClaw,
   TransVS,
   TransDescendingDark,
@@ -1302,6 +1313,7 @@ export default {
   Menu,
   MenuClaw,
   MenuGorgeousHusk,
+  MenuIsmasTear,
   CorniferAtHome,
   AllSeals,
   AllEggs,
@@ -1336,6 +1348,7 @@ export default {
   OnObtainKingsIdol,
   ArcaneEgg8,
   OnObtainArcaneEgg,
+  OnObtainCharmNotch,
   OnObtainRancidEgg,
   OnObtainMaskShard,
   OnObtainVesselFragment,
@@ -1404,6 +1417,7 @@ export default {
   TransitionAfterSaveState,
   ManualSplit,
   RandoWake,
+  OnGhostCoinsIncremented,
   TheHollowKnight,
   SealedSiblings,
   DreamNoMore,
