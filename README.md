@@ -31,13 +31,21 @@ npm install --legacy-peer-deps && npm run serve
 
 Navigate to `http://localhost:8080/` in your web browser.
 
-### Adding new Splits
+### Adding New and Updated Autosplits
 
-Copy the contents of `public enum SplitName` from
-[HollowKnightSplitSettings.cs](https://github.com/ShootMe/LiveSplit.HollowKnight/blob/master/HollowKnightSplitSettings.cs) into [splits.txt](./src/asset/hollowknight/splits.txt). Remove the commented-out lines. Run `npm run gen-files` to regenerate the core files from those.
+1. Copy the contents of `public enum SplitName` from
+   [HollowKnightSplitSettings.cs](https://github.com/ShootMe/LiveSplit.HollowKnight/blob/master/HollowKnightSplitSettings.cs) into [splits.txt](./src/asset/hollowknight/splits.txt).
+2. Remove the commented-out lines. At this point, `git diff` should only list the new (or updated) autosplits.
+3. Update [hollowknight-gen-files.js](./tools/hollowknight-gen-files.js) to ensure each new autosplit is mapped to an icon. Optionally, add new icons to the [icons/](./src/asset/hollowknight/icons) directory.
+4. Run `npm run gen-files` to regenerate the core files from these updates.
+5. Run `npm run serve` to make sure the application runs.
+6. You can use [every.json](./src/asset/hollowknight/categories/every.json) as a test case, or construct a new test case containing the new splits.
+7. Ensure the generated splits have the correct autosplits.
+
+For an example of this process, see https://github.com/slaurent22/hk-split-maker/pull/125
 
 ## Future Enhancements
 
 You can see the current list of feature ideas in the [GitHub
-issues](https://github.com/slaurent22/hk-split-maker/issues?q=is%3Aissue+is%3Aopen+sort%3Aupdated-desc). More ideas are
+issues](https://github.com/slaurent22/hk-split-maker/issues). More ideas are
 welcome!
