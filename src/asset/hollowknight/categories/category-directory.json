@@ -150,6 +150,13 @@
       }
     },
     {
+      "fileName": "low-te-dropless",
+      "displayName": "Low% True Ending Dropless",
+      "data": {
+        "routeNotesURL": "https://pastebin.com/pSCAkfgW"
+      }
+    },
+    {
       "fileName": "te",
       "displayName": "True Ending",
       "data": {
