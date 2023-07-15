@@ -14,7 +14,6 @@
     "strict": true,
     "target": "es2020",
     "resolveJsonModule": true,
-    "sourceMap": true,
-    "preserveValueImports": true
+    "sourceMap": true
   }
 }
