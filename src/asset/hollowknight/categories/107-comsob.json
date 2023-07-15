@@ -109,7 +109,6 @@
     "WhitePalaceEntry": "[3U, 2D] White Palace",
     "EnterNKG": "[3U] Enter NKG"
   },
-  "ordered": true,
   "endTriggeringAutosplit": false,
   "endingSplit": {
     "name": "Dream No More",

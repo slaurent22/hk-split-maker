@@ -36,7 +36,6 @@
     "ShadeCloak": "[3D] %s",
     "UnchainedHollowKnight": "[1D] %s"
   },
-  "ordered": true,
   "endTriggeringAutosplit": false,
   "endingSplit": {
     "name": "Hollow Knight",

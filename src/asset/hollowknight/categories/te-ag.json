@@ -9,7 +9,6 @@
   "icons": {
     "KingsPass": "VoidHeart"
   },
-  "ordered": true,
   "endTriggeringAutosplit": false,
   "endingSplit": {
     "name": "Radiance",

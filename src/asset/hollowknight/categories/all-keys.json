@@ -19,7 +19,6 @@
   "names": {
     "OnObtainSimpleKey": ["Basin Key", "Pale Lurker Key", "Storerooms Key"]
   },
-  "ordered": true,
   "endTriggeringAutosplit": true,
   "gameName": "Hollow Knight Category Extensions"
 }

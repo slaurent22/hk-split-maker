@@ -28,7 +28,6 @@
     "GrubFungalBouncy": "Bouncy Grub",
     "GrubCrossroadsVengefly": "Vengefly Grub"
   },
-  "ordered": true,
   "endTriggeringAutosplit": true,
   "gameName": "Hollow Knight Category Extensions"
 }

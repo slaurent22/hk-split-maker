@@ -13,7 +13,6 @@
     "PathOfPainTransition3": "Room 3",
     "PathOfPain": "Room 4"
   },
-  "ordered": true,
   "endTriggeringAutosplit": true,
   "gameName": "Hollow Knight"
 }

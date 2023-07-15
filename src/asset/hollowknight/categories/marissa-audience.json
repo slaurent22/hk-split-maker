@@ -16,7 +16,6 @@
     "KingsStationStation",
     "ManualSplit"
   ],
-  "ordered": true,
   "endTriggeringAutosplit": true,
   "names": {
     "ManualSplit": "Audience (manual split)"

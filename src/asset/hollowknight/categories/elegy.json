@@ -68,7 +68,6 @@
     "Collector": "[2U] %s",
     "GrubberflysElegy": "[1D] %s"
   },
-  "ordered": true,
   "endTriggeringAutosplit": true,
   "gameName": "Hollow Knight Category Extensions"
 }

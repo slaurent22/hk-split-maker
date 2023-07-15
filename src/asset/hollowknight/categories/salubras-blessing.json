@@ -143,7 +143,6 @@
     "LifebloodCore": "[1U, 2U] %s",
     "Kingsoul": "[2U] White Palace"
   },
-  "ordered": true,
   "endTriggeringAutosplit": true,
   "gameName": "Hollow Knight Category Extensions"
 }

@@ -19,7 +19,6 @@
     "QueensGardensStation",
     "StagnestStation"
   ],
-  "ordered": true,
   "endTriggeringAutosplit": true,
   "gameName": "Hollow Knight Category Extensions"
 }

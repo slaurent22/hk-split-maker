@@ -156,7 +156,6 @@
     ],
     "GodhomeLoreRoom": ["WatcherKnightsP", "SoulTyrantP", "PureVesselP"]
   },
-  "ordered": true,
   "endTriggeringAutosplit": false,
   "endingSplit": {
     "name": "{Embrace the Void} Absolute Radiance",

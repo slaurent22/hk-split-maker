@@ -30,7 +30,6 @@
     "Flame3": "Resting Grounds Flame",
     "Flame2": "Hive Flame"
   },
-  "ordered": true,
   "endTriggeringAutosplit": true,
   "gameName": "Hollow Knight Category Extensions"
 }

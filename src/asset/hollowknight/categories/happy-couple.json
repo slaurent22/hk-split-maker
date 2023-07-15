@@ -69,7 +69,6 @@
     "Ore5": "Crown Pale Ore",
     "Ore6": "Grubfather Pale Ore"
   },
-  "ordered": true,
   "endTriggeringAutosplit": true,
   "gameName": "Hollow Knight Category Extensions"
 }

@@ -8,7 +8,6 @@
   "icons": {
     "ManualSplit": "ColosseumGold"
   },
-  "ordered": true,
   "endTriggeringAutosplit": true,
   "gameName": "Hollow Knight"
 }

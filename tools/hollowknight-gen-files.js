@@ -51,7 +51,6 @@ const Splits = [...parseSplitsDefinitions().values()];
 const every = {
   categoryName: "EVERY AUTOSPLIT",
   splitIds: Splits.map(({ id }) => id),
-  ordered: true,
   endTriggeringAutosplit: false,
   gameName: "Hollow Knight Category Extensions",
 };

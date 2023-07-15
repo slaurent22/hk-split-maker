@@ -9,7 +9,7 @@ import CategoryDirectory, {
 
 interface CatContent {
   splitIds: Array<string>;
-  ordered: boolean;
+  ordered?: boolean;
   endTriggeringAutosplit: boolean;
   gameName: string;
   categoryName: string;

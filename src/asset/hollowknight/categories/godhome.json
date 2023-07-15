@@ -92,7 +92,6 @@
     "SlyP": ["{Pantheon of the Sage} Sly", "Sly"],
     "PureVesselP": ["{Pantheon of the Knight} Pure Vessel", "Pure Vessel"]
   },
-  "ordered": true,
   "endTriggeringAutosplit": false,
   "endingSplit": {
     "name": "Absolute Radiance",

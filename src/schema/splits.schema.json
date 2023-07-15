@@ -61,11 +61,5 @@
       }
     }
   },
-  "required": [
-    "ordered",
-    "endTriggeringAutosplit",
-    "categoryName",
-    "gameName",
-    "splitIds"
-  ]
+  "required": ["endTriggeringAutosplit", "categoryName", "gameName", "splitIds"]
 }

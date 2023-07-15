@@ -2,7 +2,6 @@
   "categoryName": "Randomizer TE",
   "startTriggeringAutosplit": "RandoWake",
   "splitIds": ["HollowKnightDreamnail"],
-  "ordered": true,
   "endTriggeringAutosplit": false,
   "endingSplit": {
     "name": "Radiance",

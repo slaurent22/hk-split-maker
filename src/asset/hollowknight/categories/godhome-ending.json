@@ -144,7 +144,6 @@
     "SlyP": ["{Pantheon 3} %s", "%s"],
     "PureVesselP": ["{Pantheon 4} %s", "%s"]
   },
-  "ordered": true,
   "endTriggeringAutosplit": false,
   "endingSplit": {
     "name": "{Embrace the Void} Radiance",

@@ -190,7 +190,6 @@
     "WaywardCompass": "99%",
     "Mask3": "100%"
   },
-  "ordered": true,
   "endTriggeringAutosplit": false,
   "endingSplit": {
     "name": "Completion",

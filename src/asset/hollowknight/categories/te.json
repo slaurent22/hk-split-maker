@@ -39,7 +39,6 @@
   "icons": {
     "EnterAnyDream": ["Lurien", "Monomon", "Hegemol"]
   },
-  "ordered": true,
   "endTriggeringAutosplit": false,
   "endingSplit": {
     "name": "Radiance",

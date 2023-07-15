@@ -7,7 +7,7 @@ export interface Config {
   splitIds: Array<string>;
   names?: Record<string, string | Array<string>>;
   icons?: Record<string, string | Array<string>>;
-  ordered: true;
+  ordered?: boolean;
   endTriggeringAutosplit: true;
   endingSplit?: {
     name?: string;
@@ -76,7 +76,7 @@ function getMetadataNode(config: Config): xml.XmlObject {
 export async function createSplitsXml(config: Config): Promise<string> {
   const {
     splitIds,
-    ordered,
+    ordered = true,
     endTriggeringAutosplit,
     endingSplit,
     categoryName,

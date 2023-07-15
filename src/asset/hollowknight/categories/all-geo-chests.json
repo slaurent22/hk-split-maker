@@ -36,7 +36,6 @@
     "QueensGardensEntry": "{MMC Chest(7)} %s",
     "ManualSplit": "Weaver's Chest (8)"
   },
-  "ordered": true,
   "endTriggeringAutosplit": true,
   "gameName": "Hollow Knight Category Extensions"
 }

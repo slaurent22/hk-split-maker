@@ -43,7 +43,6 @@
     "WhitePalaceEntry",
     "EnterGodhome"
   ],
-  "ordered": true,
   "endTriggeringAutosplit": false,
   "endingSplit": {
     "name": "All Grass",

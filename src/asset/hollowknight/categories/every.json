@@ -709,7 +709,6 @@
     "RandoWake",
     "OnGhostCoinsIncremented"
   ],
-  "ordered": true,
   "endTriggeringAutosplit": false,
   "gameName": "Hollow Knight Category Extensions"
 }

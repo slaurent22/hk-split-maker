@@ -23,7 +23,6 @@
     "OnObtainRancidEgg",
     "OnObtainRancidEgg"
   ],
-  "ordered": true,
   "endTriggeringAutosplit": true,
   "gameName": "Hollow Knight Category Extensions"
 }
