@@ -1,4 +1,5 @@
 import React, { useEffect, useRef, useState, ReactElement } from "react";
+import Tooltip from "@atlaskit/tooltip";
 import Editor, { useMonaco, Monaco } from "@monaco-editor/react";
 import { editor, Uri } from "monaco-editor";
 import { ItemInterface, ReactSortable } from "react-sortablejs";
@@ -57,6 +58,56 @@ function getSplitOption(splitId: string) {
   };
 }
 
+function SubsplitIndicator() {
+  return (
+    <Tooltip content="This is a subsplit">
+      <TiChevronRight size="1.5em" />
+    </Tooltip>
+  );
+}
+
+function MoveAnchor() {
+  return (
+    <span style={{ cursor: "grab" }}>
+      <TiArrowMove size="1.5em" />
+    </span>
+  );
+}
+
+interface DeleteAutosplitProps {
+  index: number;
+  onChange: (newConfig: string) => void;
+  parsedConfig: Partial<Config>;
+}
+
+function DeleteAutosplit({
+  index,
+  onChange,
+  parsedConfig,
+}: DeleteAutosplitProps) {
+  return (
+    <Tooltip content="Delete this autosplit">
+      <TiDelete
+        size="1.5em"
+        style={{ cursor: "pointer" }}
+        onClick={() => {
+          if (!parsedConfig.splitIds) {
+            return;
+          }
+          const newConfig = {
+            ...parsedConfig,
+            splitIds: [
+              ...parsedConfig.splitIds.slice(0, index),
+              ...parsedConfig.splitIds.slice(index + 1),
+            ],
+          };
+          onChange(JSON.stringify(newConfig, null, 4));
+        }}
+      />
+    </Tooltip>
+  );
+}
+
 interface SingleAutosplitSelectProps {
   splitId: string;
   index: number;
@@ -78,10 +129,8 @@ function SingleAutosplitSelect({
         alignItems: "center",
       }}
     >
-      <span style={{ cursor: "grab" }}>
-        <TiArrowMove size="1.5em" />
-      </span>
-      {value?.subsplit && <TiChevronRight size="1.5em" />}
+      <MoveAnchor />
+      {value?.subsplit && <SubsplitIndicator />}
       <SplitSelect
         value={value}
         onChange={(val) => {
@@ -99,22 +148,10 @@ function SingleAutosplitSelect({
           onChange(JSON.stringify(newConfig, null, 4));
         }}
       />
-      <TiDelete
-        size="1.5em"
-        style={{ cursor: "pointer" }}
-        onClick={() => {
-          if (!parsedConfig.splitIds) {
-            return;
-          }
-          const newConfig = {
-            ...parsedConfig,
-            splitIds: [
-              ...parsedConfig.splitIds.slice(0, index),
-              ...parsedConfig.splitIds.slice(index + 1),
-            ],
-          };
-          onChange(JSON.stringify(newConfig, null, 4));
-        }}
+      <DeleteAutosplit
+        index={index}
+        onChange={onChange}
+        parsedConfig={parsedConfig}
       />
     </div>
   );
