@@ -108,6 +108,38 @@ function DeleteAutosplit({
   );
 }
 
+interface AddAutosplitProps {
+  index: number;
+  parsedConfig: Partial<Config>;
+  onChange: (newConfig: string) => void;
+}
+
+function AddAutosplit({ parsedConfig, onChange, index }: AddAutosplitProps) {
+  return (
+    <div style={{ alignItems: "center", display: "flex" }}>
+      <TiPlus
+        size="1em"
+        style={{ cursor: "pointer" }}
+        onClick={(val) => {
+          if (!parsedConfig.splitIds || !val) {
+            return;
+          }
+          const newConfig = {
+            ...parsedConfig,
+            splitIds: [
+              ...parsedConfig.splitIds.slice(0, index + 1),
+              "AbyssShriek",
+              ...parsedConfig.splitIds.slice(index + 1),
+            ],
+          };
+          onChange(JSON.stringify(newConfig, null, 4));
+        }}
+      />
+      <span>Add autosplit</span>
+    </div>
+  );
+}
+
 interface SingleAutosplitSelectProps {
   splitId: string;
   index: number;
@@ -160,38 +192,6 @@ function SingleAutosplitSelect({
         parsedConfig={parsedConfig}
         onChange={onChange}
       />
-    </div>
-  );
-}
-
-interface AddAutosplitProps {
-  index: number;
-  parsedConfig: Partial<Config>;
-  onChange: (newConfig: string) => void;
-}
-
-function AddAutosplit({ parsedConfig, onChange, index }: AddAutosplitProps) {
-  return (
-    <div style={{ alignItems: "center", display: "flex" }}>
-      <TiPlus
-        size="1em"
-        style={{ cursor: "pointer" }}
-        onClick={(val) => {
-          if (!parsedConfig.splitIds || !val) {
-            return;
-          }
-          const newConfig = {
-            ...parsedConfig,
-            splitIds: [
-              ...parsedConfig.splitIds.slice(0, index + 1),
-              "AbyssShriek",
-              ...parsedConfig.splitIds.slice(index + 1),
-            ],
-          };
-          onChange(JSON.stringify(newConfig, null, 4));
-        }}
-      />
-      <span>Add autosplit</span>
     </div>
   );
 }
