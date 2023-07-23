@@ -223,6 +223,43 @@ function SingleAutosplitSelect({
   );
 }
 
+interface EndTriggeringAutosplitProps {
+  parsedConfig: Partial<Config>;
+  onChange: (newConfig: string) => void;
+}
+function EndTriggeringAutosplit({
+  onChange,
+  parsedConfig,
+}: EndTriggeringAutosplitProps) {
+  const message = parsedConfig.endTriggeringAutosplit
+    ? "Time will end on last autosplit"
+    : "Time will end on game-ending/credits";
+  return (
+    <>
+      <div style={{ fontSize: "1.5em", margin: "5px" }}>
+        <input
+          id="end-triggering-autosplit"
+          type="checkbox"
+          onChange={() => {
+            const newConfig = {
+              ...parsedConfig,
+              endTriggeringAutosplit: !parsedConfig.endTriggeringAutosplit,
+            };
+            onChange(JSON.stringify(newConfig, null, 4));
+          }}
+          checked={parsedConfig.endTriggeringAutosplit ?? false}
+        />
+        <label htmlFor="end-triggering-autosplit">
+          End-triggering autosplit
+        </label>
+      </div>
+      <div>
+        <span style={{ fontStyle: "italic" }}>{message}</span>
+      </div>
+    </>
+  );
+}
+
 type SplitIdItemInterface = ItemInterface & { splitId: string };
 
 function getItemInterfaceArr(
@@ -347,6 +384,10 @@ export default function SplitConfigEditor(props: Props): ReactElement {
         ) : (
           <AddFirstAutosplit onChange={onChange} parsedConfig={parsedConfig} />
         )}
+        <EndTriggeringAutosplit
+          onChange={onChange}
+          parsedConfig={parsedConfig}
+        />
       </TabPanel>
     </Tabs>
   );
