@@ -123,76 +123,75 @@ function SingleAutosplitSelect({
 }: SingleAutosplitSelectProps) {
   const value = getSplitOption(splitId);
   return (
-    <div
-      style={{
-        display: "flex",
-        alignItems: "center",
-      }}
-    >
-      <MoveAnchor />
-      {value?.subsplit && <SubsplitIndicator />}
-      <SplitSelect
-        value={value}
-        onChange={(val) => {
-          if (!parsedConfig.splitIds || !val) {
-            return;
-          }
-          const newConfig = {
-            ...parsedConfig,
-            splitIds: [
-              ...parsedConfig.splitIds.slice(0, index),
-              `${value?.subsplit ? "-" : ""}${val.value}`,
-              ...parsedConfig.splitIds.slice(index + 1),
-            ],
-          };
-          onChange(JSON.stringify(newConfig, null, 4));
+    <div>
+      <div
+        style={{
+          display: "flex",
+          alignItems: "center",
         }}
-      />
-      <DeleteAutosplit
+      >
+        <MoveAnchor />
+        {value?.subsplit && <SubsplitIndicator />}
+        <SplitSelect
+          value={value}
+          onChange={(val) => {
+            if (!parsedConfig.splitIds || !val) {
+              return;
+            }
+            const newConfig = {
+              ...parsedConfig,
+              splitIds: [
+                ...parsedConfig.splitIds.slice(0, index),
+                `${value?.subsplit ? "-" : ""}${val.value}`,
+                ...parsedConfig.splitIds.slice(index + 1),
+              ],
+            };
+            onChange(JSON.stringify(newConfig, null, 4));
+          }}
+        />
+        <DeleteAutosplit
+          index={index}
+          onChange={onChange}
+          parsedConfig={parsedConfig}
+        />
+      </div>
+      <AddAutosplit
         index={index}
-        onChange={onChange}
         parsedConfig={parsedConfig}
+        onChange={onChange}
       />
     </div>
   );
 }
 
 interface AddAutosplitProps {
+  index: number;
   parsedConfig: Partial<Config>;
   onChange: (newConfig: string) => void;
 }
 
-function AddAutosplit({ parsedConfig, onChange }: AddAutosplitProps) {
+function AddAutosplit({ parsedConfig, onChange, index }: AddAutosplitProps) {
   return (
-    <div
-      style={{
-        display: "flex",
-        alignItems: "center",
-        marginTop: "8px",
-        marginBottom: "8px",
-      }}
-    >
+    <div style={{ alignItems: "center", display: "flex" }}>
       <TiPlus
-        size="1.5em"
+        size="1em"
         style={{ cursor: "pointer" }}
-        onClick={() => {
-          if (!parsedConfig.splitIds) {
+        onClick={(val) => {
+          if (!parsedConfig.splitIds || !val) {
             return;
           }
           const newConfig = {
             ...parsedConfig,
-            splitIds: [...parsedConfig.splitIds, "AbyssShriek"],
+            splitIds: [
+              ...parsedConfig.splitIds.slice(0, index + 1),
+              "AbyssShriek",
+              ...parsedConfig.splitIds.slice(index + 1),
+            ],
           };
           onChange(JSON.stringify(newConfig, null, 4));
         }}
       />
-      <span
-        style={{
-          fontSize: "18px",
-        }}
-      >
-        Add autosplit
-      </span>
+      <span>Add autosplit</span>
     </div>
   );
 }
@@ -313,7 +312,6 @@ export default function SplitConfigEditor(props: Props): ReactElement {
                 onChange={onChange}
               />
             ))}
-            <AddAutosplit parsedConfig={parsedConfig} onChange={onChange} />
           </ReactSortable>
         )}
       </TabPanel>
