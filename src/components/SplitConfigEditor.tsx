@@ -120,8 +120,8 @@ function AddAutosplit({ parsedConfig, onChange, index }: AddAutosplitProps) {
       <TiPlus
         size="1em"
         style={{ cursor: "pointer" }}
-        onClick={(val) => {
-          if (!parsedConfig.splitIds || !val) {
+        onClick={() => {
+          if (!parsedConfig.splitIds) {
             return;
           }
           const newConfig = {
@@ -136,6 +136,33 @@ function AddAutosplit({ parsedConfig, onChange, index }: AddAutosplitProps) {
         }}
       />
       <span>Add autosplit</span>
+    </div>
+  );
+}
+
+interface AddFirstAutosplitProps {
+  parsedConfig: Partial<Config>;
+  onChange: (newConfig: string) => void;
+}
+
+function AddFirstAutosplit({ parsedConfig, onChange }: AddFirstAutosplitProps) {
+  return (
+    <div style={{ alignItems: "center", display: "flex" }}>
+      <TiPlus
+        size="1.5em"
+        style={{ cursor: "pointer" }}
+        onClick={() => {
+          if (!parsedConfig) {
+            return;
+          }
+          const newConfig = {
+            ...parsedConfig,
+            splitIds: ["AbyssShriek"],
+          };
+          onChange(JSON.stringify(newConfig, null, 4));
+        }}
+      />
+      <span style={{ fontSize: "1.5em" }}>Add autosplit</span>
     </div>
   );
 }
@@ -207,6 +234,10 @@ function getItemInterfaceArr(
       splitId,
     };
   });
+}
+
+function hasSplits(parsedConfig: Partial<Config>): parsedConfig is Config {
+  return parsedConfig.splitIds ? parsedConfig.splitIds.length > 0 : false;
 }
 
 export default function SplitConfigEditor(props: Props): ReactElement {
@@ -290,7 +321,7 @@ export default function SplitConfigEditor(props: Props): ReactElement {
         </div>
       </TabPanel>
       <TabPanel>
-        {parsedConfig.splitIds && (
+        {hasSplits(parsedConfig) ? (
           <ReactSortable
             ghostClass="autosplits-sortable-ghost-class"
             dragClass="autosplits-sortable-drag-class"
@@ -313,6 +344,8 @@ export default function SplitConfigEditor(props: Props): ReactElement {
               />
             ))}
           </ReactSortable>
+        ) : (
+          <AddFirstAutosplit onChange={onChange} parsedConfig={parsedConfig} />
         )}
       </TabPanel>
     </Tabs>
