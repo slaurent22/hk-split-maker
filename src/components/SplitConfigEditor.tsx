@@ -76,7 +76,7 @@ function MoveAnchor() {
 
 interface DeleteAutosplitProps {
   index: number;
-  onChange: (newConfig: string) => void;
+  onChange: (newConfig: Partial<Config>) => void;
   parsedConfig: Partial<Config>;
 }
 
@@ -94,14 +94,13 @@ function DeleteAutosplit({
           if (!parsedConfig.splitIds) {
             return;
           }
-          const newConfig = {
+          onChange({
             ...parsedConfig,
             splitIds: [
               ...parsedConfig.splitIds.slice(0, index),
               ...parsedConfig.splitIds.slice(index + 1),
             ],
-          };
-          onChange(JSON.stringify(newConfig, null, 4));
+          });
         }}
       />
     </Tooltip>
@@ -111,7 +110,7 @@ function DeleteAutosplit({
 interface AddAutosplitProps {
   index: number;
   parsedConfig: Partial<Config>;
-  onChange: (newConfig: string) => void;
+  onChange: (newConfig: Partial<Config>) => void;
 }
 
 function AddAutosplit({ parsedConfig, onChange, index }: AddAutosplitProps) {
@@ -124,15 +123,14 @@ function AddAutosplit({ parsedConfig, onChange, index }: AddAutosplitProps) {
           if (!parsedConfig.splitIds) {
             return;
           }
-          const newConfig = {
+          onChange({
             ...parsedConfig,
             splitIds: [
               ...parsedConfig.splitIds.slice(0, index + 1),
               "AbyssShriek",
               ...parsedConfig.splitIds.slice(index + 1),
             ],
-          };
-          onChange(JSON.stringify(newConfig, null, 4));
+          });
         }}
       />
       <span>Add autosplit</span>
@@ -142,7 +140,7 @@ function AddAutosplit({ parsedConfig, onChange, index }: AddAutosplitProps) {
 
 interface AddFirstAutosplitProps {
   parsedConfig: Partial<Config>;
-  onChange: (newConfig: string) => void;
+  onChange: (newConfig: Partial<Config>) => void;
 }
 
 function AddFirstAutosplit({ parsedConfig, onChange }: AddFirstAutosplitProps) {
@@ -155,11 +153,10 @@ function AddFirstAutosplit({ parsedConfig, onChange }: AddFirstAutosplitProps) {
           if (!parsedConfig) {
             return;
           }
-          const newConfig = {
+          onChange({
             ...parsedConfig,
             splitIds: ["AbyssShriek"],
-          };
-          onChange(JSON.stringify(newConfig, null, 4));
+          });
         }}
       />
       <span style={{ fontSize: "1.5em" }}>Add autosplit</span>
@@ -171,7 +168,7 @@ interface SingleAutosplitSelectProps {
   splitId: string;
   index: number;
   parsedConfig: Partial<Config>;
-  onChange: (newConfig: string) => void;
+  onChange: (newConfig: Partial<Config>) => void;
 }
 
 function SingleAutosplitSelect({
@@ -197,15 +194,14 @@ function SingleAutosplitSelect({
             if (!parsedConfig.splitIds || !val) {
               return;
             }
-            const newConfig = {
+            onChange({
               ...parsedConfig,
               splitIds: [
                 ...parsedConfig.splitIds.slice(0, index),
                 `${value?.subsplit ? "-" : ""}${val.value}`,
                 ...parsedConfig.splitIds.slice(index + 1),
               ],
-            };
-            onChange(JSON.stringify(newConfig, null, 4));
+            });
           }}
         />
         <DeleteAutosplit
@@ -225,7 +221,7 @@ function SingleAutosplitSelect({
 
 interface EndTriggeringAutosplitProps {
   parsedConfig: Partial<Config>;
-  onChange: (newConfig: string) => void;
+  onChange: (newConfig: Partial<Config>) => void;
 }
 function EndTriggeringAutosplit({
   onChange,
@@ -241,11 +237,10 @@ function EndTriggeringAutosplit({
           id="end-triggering-autosplit"
           type="checkbox"
           onChange={() => {
-            const newConfig = {
+            onChange({
               ...parsedConfig,
               endTriggeringAutosplit: !parsedConfig.endTriggeringAutosplit,
-            };
-            onChange(JSON.stringify(newConfig, null, 4));
+            });
           }}
           checked={parsedConfig.endTriggeringAutosplit ?? false}
         />
@@ -298,6 +293,10 @@ export default function SplitConfigEditor(props: Props): ReactElement {
       setSplitConfig(value);
       props.onChange(value);
     }
+  };
+
+  const onChangeParsedConfig = (value: Partial<Config>) => {
+    onChange(JSON.stringify(value, null, 4));
   };
 
   useEffect(() => {
@@ -368,7 +367,7 @@ export default function SplitConfigEditor(props: Props): ReactElement {
                 ...parsedConfig,
                 splitIds: items.map(({ splitId }) => splitId),
               };
-              onChange(JSON.stringify(newConfig, null, 4));
+              onChangeParsedConfig(newConfig);
             }}
           >
             {parsedConfig.splitIds.map((splitId, index) => (
@@ -377,15 +376,18 @@ export default function SplitConfigEditor(props: Props): ReactElement {
                 splitId={splitId}
                 index={index}
                 parsedConfig={parsedConfig}
-                onChange={onChange}
+                onChange={onChangeParsedConfig}
               />
             ))}
           </ReactSortable>
         ) : (
-          <AddFirstAutosplit onChange={onChange} parsedConfig={parsedConfig} />
+          <AddFirstAutosplit
+            onChange={onChangeParsedConfig}
+            parsedConfig={parsedConfig}
+          />
         )}
         <EndTriggeringAutosplit
-          onChange={onChange}
+          onChange={onChangeParsedConfig}
           parsedConfig={parsedConfig}
         />
       </TabPanel>

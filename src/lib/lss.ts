@@ -8,7 +8,7 @@ export interface Config {
   names?: Record<string, string | Array<string>>;
   icons?: Record<string, string | Array<string>>;
   ordered?: boolean;
-  endTriggeringAutosplit: true;
+  endTriggeringAutosplit: boolean;
   endingSplit?: {
     name?: string;
     icon?: string;
