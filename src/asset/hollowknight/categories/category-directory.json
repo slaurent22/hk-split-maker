@@ -99,10 +99,6 @@
       "displayName": "Any% (1.2.2.1)"
     },
     {
-      "fileName": "any-rafters",
-      "displayName": "Any% (1.2.2.1 Rafters)"
-    },
-    {
       "fileName": "any-1432plus",
       "displayName": "Any% (1.4.3.2+ QGA)",
       "data": {
@@ -118,13 +114,13 @@
     },
     {
       "fileName": "any-1432plus-spore",
-      "displayName": "Any% (1.4.3.2+ Spore Shroom)",
+      "displayName": "Any% (1.4.3.2+ Spore Shroom/Deepnest)",
       "data": {
         "routeNotesURL": "https://pastebin.com/zKke8sDC"
       }
     },
     {
-      "fileName": "any-isma",
+      "fileName": "any-1432plus-isma",
       "displayName": "Any% (1.4.3.2+ Isma's Tear)",
       "data": {
         "routeNotesURL": "https://pastebin.com/5wu2bjkP",
