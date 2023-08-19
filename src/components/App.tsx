@@ -92,7 +92,6 @@ export default function App(): ReactElement {
     );
     if (confirmed) {
       const condensed = JSON.stringify(JSON.parse(state.configInput));
-      console.log({ btoa: btoa(condensed), atob: atob(btoa(condensed)) });
       setQuery({ builtin: null, config: btoa(condensed) });
       alert("Copy the URL from your browser's URL bar!");
     }
