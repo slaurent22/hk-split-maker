@@ -1,0 +1,29 @@
+button.hksm-button {
+  background: none;
+  color: white;
+  font-weight: bold;
+  font-variant: small-caps;
+  font-size: 20px;
+  border: 1px solid white;
+  border-radius: 3px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  font-family: serif;
+  margin: 8px;
+  height: 38px;
+}
+
+button.hksm-button:hover {
+  border-color: grey;
+}
+
+button.hksm-button .button-text {
+  margin: 0 8px;
+}
+
+button.hksm-button[disabled] {
+  color: grey;
+  border-color: grey;
+  cursor: default;
+}
