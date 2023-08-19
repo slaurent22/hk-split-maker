@@ -1,5 +1,6 @@
 import React from "react";
 import arrow from "../asset/image/arrow.png";
+import HKSMButton from "./HKSMButton";
 import "./ArrowButton.css";
 
 interface Props {
@@ -16,7 +17,7 @@ const ArrowButton: React.FC<Props> = ({
   disabled,
 }: Props) => {
   return (
-    <button
+    <HKSMButton
       className="arrow-button"
       onClick={onClick}
       id={id}
@@ -33,7 +34,7 @@ const ArrowButton: React.FC<Props> = ({
         alt="decorative arrow"
         className="arrow arrow-right"
       ></img>
-    </button>
+    </HKSMButton>
   );
 };
 

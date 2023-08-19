@@ -17,11 +17,13 @@ import Header from "./Header";
 import Instructions from "./Instructions";
 import AlertBanner from "./AlertBanner";
 import Footer from "./Footer";
+import ShareButton from "./ShareButton";
 interface AppState {
   configInput: string;
   splitOutput: string;
   categories: Record<string, Array<CategoryDefinition>>;
   categoryName?: string;
+  shareButtonDisabled: boolean;
 }
 
 const CategorySelect = lazy(() => import("./CategorySelect"));
@@ -33,32 +35,47 @@ function updateQuery(path: string) {
 }
 
 export default function App(): ReactElement {
-  const [query, setQuery] = useQueryString(window.location, updateQuery) as [
-    QueryStringResult[0],
-    QueryStringResult[1]
-  ];
+  const [query, setQuery] = useQueryString(
+    window.location,
+    updateQuery,
+    {},
+    { skipNull: true }
+  ) as [QueryStringResult[0], QueryStringResult[1]];
   const builtin = query.builtin as string;
+  const config = query.config;
+  // eslint-disable-next-line @typescript-eslint/no-unsafe-assignment
+  const initialConfig = config
+    ? JSON.parse(atob(config as string))
+    : CategoryAnyPercent;
   const [state, setState] = useState<AppState>({
-    configInput: JSON.stringify(CategoryAnyPercent, null, 4),
+    configInput: JSON.stringify(initialConfig, null, 4),
     splitOutput: "",
     categoryName: builtin,
     categories: getCategoryDirectory(),
+    shareButtonDisabled: true,
   });
 
   useEffect(() => {
     if (window.location.hash) {
-      setQuery({ builtin: window.location.hash.substring(1) });
+      setQuery({ builtin: window.location.hash.substring(1), config: null });
     }
   }, [window.location.hash]);
 
   const onUpdateCategoryName = (categoryName: string) => {
-    setQuery({ builtin: categoryName });
+    setQuery({ builtin: categoryName, config: null });
   };
 
-  const onConfigInputChange = (value: string | undefined) => {
+  const onConfigInputChange = (
+    value: string | undefined,
+    loadedFromBuiltin = false
+  ) => {
+    if (!loadedFromBuiltin) {
+      setQuery({ builtin: null, config: null });
+    }
     setState({
       ...state,
       configInput: value ?? "",
+      shareButtonDisabled: loadedFromBuiltin,
     });
   };
 
@@ -67,6 +84,18 @@ export default function App(): ReactElement {
       ...state,
       splitOutput: value ?? "",
     });
+  };
+
+  const onShare = () => {
+    const confirmed = confirm(
+      "This will create a disgusting URL. Only use for custom configurations. Proceed?"
+    );
+    if (confirmed) {
+      const condensed = JSON.stringify(JSON.parse(state.configInput));
+      console.log({ btoa: btoa(condensed), atob: atob(btoa(condensed)) });
+      setQuery({ builtin: null, config: btoa(condensed) });
+      alert("Copy the URL from your browser's URL bar!");
+    }
   };
 
   const getCategoryDefinition = (categoryName: string) => {
@@ -81,7 +110,7 @@ export default function App(): ReactElement {
     void (async () => {
       if (state.categoryName && getCategoryDefinition(state.categoryName)) {
         const editorContent = await getCategoryConfigJSON(state.categoryName);
-        onConfigInputChange(editorContent);
+        onConfigInputChange(editorContent, true);
       }
     })();
   }, [state.categoryName]);
@@ -203,6 +232,11 @@ export default function App(): ReactElement {
                 text="Generate"
                 id="submit-button"
                 onClick={onSubmit}
+              />
+              <ShareButton
+                id="share-button"
+                onClick={onShare}
+                disabled={state.shareButtonDisabled}
               />
             </div>
             <Suspense fallback={<div>Loading split config editor...</div>}>
