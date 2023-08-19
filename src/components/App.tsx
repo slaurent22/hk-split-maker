@@ -45,6 +45,12 @@ export default function App(): ReactElement {
     categories: getCategoryDirectory(),
   });
 
+  useEffect(() => {
+    if (window.location.hash) {
+      setQuery({ builtin: window.location.hash.substring(1) });
+    }
+  }, [window.location.hash]);
+
   const onUpdateCategoryName = (categoryName: string) => {
     setQuery({ builtin: categoryName });
   };
