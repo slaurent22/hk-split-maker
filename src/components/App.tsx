@@ -7,6 +7,7 @@ import React, {
 } from "react";
 import { saveAs } from "file-saver";
 import JSON5 from "json5";
+import useQueryString, { QueryStringResult } from "use-query-string";
 import { getCategoryConfigJSON, getCategoryDirectory } from "../lib/categories";
 import { CategoryDefinition } from "../asset/hollowknight/categories/category-directory.json";
 import { Config, createSplitsXml } from "../lib/lss";
@@ -23,25 +24,30 @@ interface AppState {
   categoryName?: string;
 }
 
-interface AppProps {
-  requestedCategoryName?: string;
-  onUpdateCategoryName: (categoryName: string) => void;
-}
-
 const CategorySelect = lazy(() => import("./CategorySelect"));
 const SplitConfigEditor = lazy(() => import("./SplitConfigEditor"));
 const SplitOutputEditor = lazy(() => import("./SplitOutputEditor"));
 
-export default function App({
-  requestedCategoryName,
-  onUpdateCategoryName,
-}: AppProps): ReactElement {
+function updateQuery(path: string) {
+  window.history.pushState(null, document.title, path);
+}
+
+export default function App(): ReactElement {
+  const [query, setQuery] = useQueryString(window.location, updateQuery) as [
+    QueryStringResult[0],
+    QueryStringResult[1]
+  ];
+  const builtin = query.builtin as string;
   const [state, setState] = useState<AppState>({
     configInput: JSON.stringify(CategoryAnyPercent, null, 4),
     splitOutput: "",
-    categoryName: requestedCategoryName,
+    categoryName: builtin,
     categories: getCategoryDirectory(),
   });
+
+  const onUpdateCategoryName = (categoryName: string) => {
+    setQuery({ builtin: categoryName });
+  };
 
   const onConfigInputChange = (value: string | undefined) => {
     setState({
@@ -184,9 +190,7 @@ export default function App({
                   id="categories"
                   onChange={onCategorySelect}
                   data={state.categories}
-                  defaultValue={
-                    getCategoryDefinition(requestedCategoryName ?? "") ?? null
-                  }
+                  defaultValue={getCategoryDefinition(builtin ?? "") ?? null}
                 />
               </Suspense>
               <ArrowButton

@@ -74,6 +74,7 @@
     "react-sortablejs": "^6.1.1",
     "react-tabs": "^3.2.3",
     "sortablejs": "^1.14.0",
+    "use-query-string": "^2.4.1",
     "xml": "^1.0.1",
     "xml-formatter": "^2.4.0"
   },
