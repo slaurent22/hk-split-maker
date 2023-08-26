@@ -1,19 +1,12 @@
 {
   "categoryName": "Any%",
   "splitIds": [
-    "KingsPass",
-    "MantisClaw",
-    "Dashmaster",
+    "mapCrossroads",
+    "TransClaw",
     "MothwingCloak",
-    "VengefulSpirit",
     "DreamNail",
-    "Lurien",
-    "EnterSanctumWithShadeSoul",
-    "TeachersArchive",
-    "Uumuu",
-    "Monomon",
-    "Hegemol",
-    "UnchainedHollowKnight"
+    "DreamGate",
+    "Dreamer3"
   ],
   "endTriggeringAutosplit": false,
   "endingSplit": {
