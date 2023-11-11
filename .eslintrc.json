@@ -8,6 +8,7 @@
     "plugin:@typescript-eslint/recommended",
     "plugin:@typescript-eslint/recommended-requiring-type-checking",
     "plugin:react/recommended",
+    "plugin:deprecation/recommended",
     "prettier"
   ],
   "parser": "@typescript-eslint/parser",
@@ -16,7 +17,7 @@
     "sourceType": "module",
     "project": "./tsconfig.json"
   },
-  "plugins": ["@typescript-eslint", "import", "react"],
+  "plugins": ["@typescript-eslint", "import", "react", "deprecation"],
   "settings": {
     "react": {
       "version": "detect"

@@ -43,6 +43,7 @@
     "del-cli": "^4.0.1",
     "eslint": "^7.27.0",
     "eslint-config-prettier": "^8.5.0",
+    "eslint-plugin-deprecation": "^2.0.0",
     "eslint-plugin-import": "^2.23.3",
     "eslint-plugin-react": "^7.24.0",
     "file-loader": "^6.2.0",

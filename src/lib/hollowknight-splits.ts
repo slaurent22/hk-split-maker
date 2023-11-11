@@ -154,7 +154,7 @@ function getNameAndGroup({
     case "Fragment":
       return [name, "Upgrade"];
     case "Grub":
-      return [name.substr("Rescued ".length), qualifier];
+      return [name.substring("Rescued ".length), qualifier];
     case "Pantheon":
       return [name, "Boss"];
     case "Room":
