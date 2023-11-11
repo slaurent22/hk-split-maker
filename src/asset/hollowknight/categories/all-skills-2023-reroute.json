@@ -11,23 +11,28 @@
     "DashSlash",
     "ShadeSoul",
     "DesolateDive",
-    "Lurien",
+    "BlackKnightTrans",
     "KingsStationStation",
     "CrystalHeart",
     "DescendingDark",
     "MenuIsmasTear",
     "KingsBrand",
-    "Abyss",
+    "BasinEntry",
     "MonarchWings",
     "ShadeCloak",
     "CycloneSlash",
-    "Monomon",
+    "EnterAnyDream",
     "GreatSlash",
     "HowlingWraiths",
     "Hegemol",
-    "AbyssShriek",
-    "UnchainedHollowKnight"
+    "AbyssShriek"
   ],
+  "names": {
+    "EnterAnyDream": "Enter Monomon"
+  },
+  "icons": {
+    "EnterAnyDream": "Monomon"
+  },
   "endTriggeringAutosplit": false,
   "endingSplit": {
     "name": "Hollow Knight",
