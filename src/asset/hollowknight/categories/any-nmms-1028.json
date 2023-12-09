@@ -1,0 +1,26 @@
+{
+  "categoryName": "Any%",
+  "splitIds": [
+    "KingsPass",
+    "MantisClaw",
+    "Dashmaster",
+    "MothwingCloak",
+    "VengefulSpirit",
+    "GruzMother",
+    "DreamNail",
+    "LurienDreamer",
+    "EnterSanctumWithShadeSoul",
+    "TeachersArchive",
+    "Uumuu",
+    "HegemolDreamer"
+  ],
+  "endTriggeringAutosplit": false,
+  "endingSplit": {
+    "name": "Hollow Knight",
+    "icon": "HollowKnightBoss"
+  },
+  "gameName": "Hollow Knight",
+  "variables": {
+    "Any% Glitch": "No Main Menu Storage"
+  }
+}
