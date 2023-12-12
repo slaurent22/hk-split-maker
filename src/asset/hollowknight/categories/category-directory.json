@@ -81,7 +81,10 @@
     },
     {
       "fileName": "all-skills-2023-reroute",
-      "displayName": "All Skills (2023 Reroute)"
+      "displayName": "All Skills (2023 Reroute)",
+      "data": {
+        "routeNotesURL": "https://pastebin.com/BdT76Erg"
+      }
     },
     {
       "fileName": "all-skills-1432plus",
