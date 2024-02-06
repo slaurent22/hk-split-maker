@@ -15,11 +15,11 @@
     "DreamNail",
     "CycloneSlash",
     "ShadeSoul",
-    "BlackKnight",
+    "BlackKnightTrans",
     "TransTear",
     "MonarchWings",
-    "Monomon",
     "GreatSlash",
+    "Monomon",
     "HowlingWraiths",
     "Hegemol",
     "KingsBrand",
@@ -29,9 +29,10 @@
     "UnchainedHollowKnight"
   ],
   "names": {
-    "CrystalHeart": "[1U] %s",
+    "CrystalHeart": "[2U] %s",
     "CycloneSlash": "[1D] %s",
-    "Monomon": "[1D] %s",
+    "GreatSlash": "[3U} %s",
+    "Monomon": "[2U] %s",
     "KingsBrand": "[2U] %s",
     "ShadeCloak": "[3D] %s",
     "UnchainedHollowKnight": "[1D] %s"
