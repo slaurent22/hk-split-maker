@@ -1,20 +1,22 @@
 {
-  "categoryName": "Any%",
-  "splitIds": [
-    "mapCrossroads",
-    "TransClaw",
-    "MothwingCloak",
-    "DreamNail",
-    "DreamGate",
-    "Dreamer3"
-  ],
-  "endTriggeringAutosplit": false,
-  "endingSplit": {
-    "name": "Hollow Knight",
-    "icon": "HollowKnightBoss"
-  },
-  "gameName": "Hollow Knight",
-  "variables": {
-    "Any% Glitch": "No Main Menu Storage"
-  }
+    "categoryName": "Any%",
+    "splitIds": [
+        "KingsPass",
+        "FungalWastesEntry",
+        "MenuClaw",
+        "MothwingCloak",
+        "BlueLake",
+        "DreamNail",
+        "DreamGate",
+        "Dreamer3",
+    ],
+    "endTriggeringAutosplit": false,
+    "endingSplit": {
+        "name": "Hollow Knight",
+        "icon": "HollowKnightBoss"
+    },
+    "gameName": "Hollow Knight",
+    "variables": {
+        "Any% Glitch": "No Main Menu Storage"
+    }
 }
