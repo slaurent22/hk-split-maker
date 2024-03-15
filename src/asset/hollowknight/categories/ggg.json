@@ -1,11 +1,11 @@
 {
-  "categoryName": "Gaslight, Gatekeep, Girlboss",
-  "splitIds": ["NightmareLantern", "CityGateOpen", "MetEmilitia"],
-  "names": {
-    "NightmareLantern": "Gaslight",
-    "CityGateOpen": "Gatekeep",
-    "MetEmilitia": "Girlboss"
-  },
-  "endTriggeringAutosplit": true,
-  "gameName": "Hollow Knight Category Extensions"
+    "categoryName": "Gaslight, Gatekeep, Girlboss",
+    "splitIds": ["NightmareLantern", "CityGateOpen", "MetEmilitia"],
+    "names": {
+        "NightmareLantern": "Gaslight",
+        "CityGateOpen": "Gatekeep",
+        "MetEmilitia": "Girlboss"
+    },
+    "endTriggeringAutosplit": true,
+    "gameName": "Hollow Knight Category Extensions"
 }

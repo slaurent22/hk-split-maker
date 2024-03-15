@@ -1,27 +1,27 @@
 {
-  "categoryName": "Marissa Audience",
-  "splitIds": [
-    "VengefulSpirit",
-    "EnterGreenpath",
-    "MothwingCloak",
-    "MantisClaw",
-    "SporeShroom",
-    "Weaversong",
-    "GlowingWomb",
-    "BlueLake",
-    "DreamNail",
-    "NightmareLantern",
-    "Grimmchild",
-    "Lemm2",
-    "KingsStationStation",
-    "ManualSplit"
-  ],
-  "endTriggeringAutosplit": true,
-  "names": {
-    "ManualSplit": "Audience (manual split)"
-  },
-  "icons": {
-    "ManualSplit": "OnObtainGhostMarissa"
-  },
-  "gameName": "Hollow Knight Category Extensions"
+    "categoryName": "Marissa Audience",
+    "splitIds": [
+        "VengefulSpirit",
+        "EnterGreenpath",
+        "MothwingCloak",
+        "MantisClaw",
+        "SporeShroom",
+        "Weaversong",
+        "GlowingWomb",
+        "BlueLake",
+        "DreamNail",
+        "NightmareLantern",
+        "Grimmchild",
+        "Lemm2",
+        "KingsStationStation",
+        "ManualSplit"
+    ],
+    "endTriggeringAutosplit": true,
+    "names": {
+        "ManualSplit": "Audience (manual split)"
+    },
+    "icons": {
+        "ManualSplit": "OnObtainGhostMarissa"
+    },
+    "gameName": "Hollow Knight Category Extensions"
 }

@@ -1,17 +1,17 @@
 {
-  "categoryName": "Pantheon of the Master",
-  "splitIds": [
-    "VengeflyKingP",
-    "GruzMotherP",
-    "FalseKnightP",
-    "MassiveMossChargerP",
-    "Hornet1P",
-    "GorbP",
-    "DungDefenderP",
-    "SoulWarriorP",
-    "BroodingMawlekP",
-    "OroMatoNailBrosP"
-  ],
-  "endTriggeringAutosplit": true,
-  "gameName": "Hollow Knight"
+    "categoryName": "Pantheon of the Master",
+    "splitIds": [
+        "VengeflyKingP",
+        "GruzMotherP",
+        "FalseKnightP",
+        "MassiveMossChargerP",
+        "Hornet1P",
+        "GorbP",
+        "DungDefenderP",
+        "SoulWarriorP",
+        "BroodingMawlekP",
+        "OroMatoNailBrosP"
+    ],
+    "endTriggeringAutosplit": true,
+    "gameName": "Hollow Knight"
 }

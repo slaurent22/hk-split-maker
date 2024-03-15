@@ -1,13 +1,13 @@
 {
-  "categoryName": "Trial of the Warrior",
-  "startTriggeringAutosplit": "ColosseumBronzeEntry",
-  "splitIds": ["ManualSplit"],
-  "names": {
-    "ManualSplit": "Warrior (manual split)"
-  },
-  "icons": {
-    "ManualSplit": "ColosseumBronze"
-  },
-  "endTriggeringAutosplit": true,
-  "gameName": "Hollow Knight"
+    "categoryName": "Trial of the Warrior",
+    "startTriggeringAutosplit": "ColosseumBronzeEntry",
+    "splitIds": ["ManualSplit"],
+    "names": {
+        "ManualSplit": "Warrior (manual split)"
+    },
+    "icons": {
+        "ManualSplit": "ColosseumBronze"
+    },
+    "endTriggeringAutosplit": true,
+    "gameName": "Hollow Knight"
 }

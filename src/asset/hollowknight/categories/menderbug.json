@@ -1,6 +1,6 @@
 {
-  "categoryName": "Menderbug%",
-  "splitIds": ["KingsPass", "MenderBug"],
-  "endTriggeringAutosplit": true,
-  "gameName": "Hollow Knight"
+    "categoryName": "Menderbug%",
+    "splitIds": ["KingsPass", "MenderBug"],
+    "endTriggeringAutosplit": true,
+    "gameName": "Hollow Knight"
 }

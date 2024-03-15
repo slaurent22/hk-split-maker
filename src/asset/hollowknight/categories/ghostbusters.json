@@ -1,32 +1,32 @@
 {
-  "categoryName": "Ghostbusters",
-  "splitIds": [
-    "VengefulSpirit",
-    "EnterGreenpath",
-    "MothwingCloak",
-    "BlueLake",
-    "RestingGroundsStation",
-    "MantisClaw",
-    "GalienEssence",
-    "TramPass",
-    "SavedCloth",
-    "HiveKnight",
-    "KingsBrand",
-    "ShadeCloak",
-    "KingsStationStation",
-    "QueensGardensEntry",
-    "OnObtainGhostCaelifFera",
-    "QueensGardensPostArenaTransition",
-    "TraitorLord",
-    "OnObtainGhostJoni",
-    "SpiritGladeOpen",
-    "Menu",
-    "OnObtainGhostMarissa",
-    "OnObtainGhostPoggy"
-  ],
-  "names": {
-    "Menu": "Glade Cleared (Main Menu)"
-  },
-  "endTriggeringAutosplit": true,
-  "gameName": "Hollow Knight Category Extensions"
+    "categoryName": "Ghostbusters",
+    "splitIds": [
+        "VengefulSpirit",
+        "EnterGreenpath",
+        "MothwingCloak",
+        "BlueLake",
+        "RestingGroundsStation",
+        "MantisClaw",
+        "GalienEssence",
+        "TramPass",
+        "SavedCloth",
+        "HiveKnight",
+        "KingsBrand",
+        "ShadeCloak",
+        "KingsStationStation",
+        "QueensGardensEntry",
+        "OnObtainGhostCaelifFera",
+        "QueensGardensPostArenaTransition",
+        "TraitorLord",
+        "OnObtainGhostJoni",
+        "SpiritGladeOpen",
+        "Menu",
+        "OnObtainGhostMarissa",
+        "OnObtainGhostPoggy"
+    ],
+    "names": {
+        "Menu": "Glade Cleared (Main Menu)"
+    },
+    "endTriggeringAutosplit": true,
+    "gameName": "Hollow Knight Category Extensions"
 }

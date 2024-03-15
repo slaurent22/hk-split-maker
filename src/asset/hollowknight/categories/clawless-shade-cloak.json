@@ -1,14 +1,14 @@
 {
-  "categoryName": "Clawless Shade Cloak",
-  "splitIds": [
-    "VengefulSpirit",
-    "EnterGreenpath",
-    "MothwingCloak",
-    "KingdomsEdgeEntry",
-    "EnterHornet2",
-    "KingsBrand",
-    "ShadeCloak"
-  ],
-  "endTriggeringAutosplit": true,
-  "gameName": "Hollow Knight Category Extensions"
+    "categoryName": "Clawless Shade Cloak",
+    "splitIds": [
+        "VengefulSpirit",
+        "EnterGreenpath",
+        "MothwingCloak",
+        "KingdomsEdgeEntry",
+        "EnterHornet2",
+        "KingsBrand",
+        "ShadeCloak"
+    ],
+    "endTriggeringAutosplit": true,
+    "gameName": "Hollow Knight Category Extensions"
 }

@@ -1,13 +1,13 @@
 {
-  "categoryName": "Trial of the Fool",
-  "startTriggeringAutosplit": "ColosseumGoldEntry",
-  "splitIds": ["ManualSplit"],
-  "names": {
-    "ManualSplit": "Fool (manual split)"
-  },
-  "icons": {
-    "ManualSplit": "ColosseumGold"
-  },
-  "endTriggeringAutosplit": true,
-  "gameName": "Hollow Knight"
+    "categoryName": "Trial of the Fool",
+    "startTriggeringAutosplit": "ColosseumGoldEntry",
+    "splitIds": ["ManualSplit"],
+    "names": {
+        "ManualSplit": "Fool (manual split)"
+    },
+    "icons": {
+        "ManualSplit": "ColosseumGold"
+    },
+    "endTriggeringAutosplit": true,
+    "gameName": "Hollow Knight"
 }

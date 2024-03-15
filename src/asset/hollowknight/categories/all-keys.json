@@ -1,24 +1,24 @@
 {
-  "categoryName": "All Keys",
-  "splitIds": [
-    "VengefulSpirit",
-    "EnterGreenpath",
-    "MothwingCloak",
-    "MantisClaw",
-    "BlueLake",
-    "GorgeousHusk",
-    "LumaflyLantern",
-    "SlyKey",
-    "CrystalHeart",
-    "OnObtainSimpleKey",
-    "OnObtainSimpleKey",
-    "OnObtainSimpleKey",
-    "ElegantKey",
-    "LoveKey"
-  ],
-  "names": {
-    "OnObtainSimpleKey": ["Basin Key", "Pale Lurker Key", "Storerooms Key"]
-  },
-  "endTriggeringAutosplit": true,
-  "gameName": "Hollow Knight Category Extensions"
+    "categoryName": "All Keys",
+    "splitIds": [
+        "VengefulSpirit",
+        "EnterGreenpath",
+        "MothwingCloak",
+        "MantisClaw",
+        "BlueLake",
+        "GorgeousHusk",
+        "LumaflyLantern",
+        "SlyKey",
+        "CrystalHeart",
+        "OnObtainSimpleKey",
+        "OnObtainSimpleKey",
+        "OnObtainSimpleKey",
+        "ElegantKey",
+        "LoveKey"
+    ],
+    "names": {
+        "OnObtainSimpleKey": ["Basin Key", "Pale Lurker Key", "Storerooms Key"]
+    },
+    "endTriggeringAutosplit": true,
+    "gameName": "Hollow Knight Category Extensions"
 }

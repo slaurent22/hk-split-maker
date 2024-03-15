@@ -1,65 +1,70 @@
 {
-  "$schema": "https://json-schema.org/draft/2020-12/schema",
-  "$id": "https://hksplitmaker.com/splits.schema.json",
-  "title": "HK Splits",
-  "description": "A Hollow Knight LiveSplit Configuration",
-  "type": "object",
-  "additionalProperties": false,
-  "properties": {
-    "names": {
-      "additionalProperties": false,
-      "description": "Name overrides for the splits. Map each autosplit id to a string or an array of strings.",
-      "type": "object",
-      "properties": {}
+    "$schema": "https://json-schema.org/draft/2020-12/schema",
+    "$id": "https://hksplitmaker.com/splits.schema.json",
+    "title": "HK Splits",
+    "description": "A Hollow Knight LiveSplit Configuration",
+    "type": "object",
+    "additionalProperties": false,
+    "properties": {
+        "names": {
+            "additionalProperties": false,
+            "description": "Name overrides for the splits. Map each autosplit id to a string or an array of strings.",
+            "type": "object",
+            "properties": {}
+        },
+        "icons": {
+            "additionalProperties": false,
+            "description": "Icon overrides for the splits. Map each autosplit id to a autosplit id or an array of autosplit ids.",
+            "type": "object",
+            "properties": {}
+        },
+        "ordered": {
+            "description": "Ordered splits improve performance and are required for certain splits (e.g. KingsPass).",
+            "type": "boolean"
+        },
+        "endTriggeringAutosplit": {
+            "description": "Whether to end time at the last autosplit. Set this to false for full-game runs, where time ends on a final cutscene.",
+            "type": "boolean"
+        },
+        "startTriggeringAutosplit": {
+            "description": "Autosplit to use to start the timer, rather than starting on new file",
+            "enum": []
+        },
+        "endingSplit": {
+            "description": "Info for the last split if it's a game-ending split rather than an autosplit",
+            "type": "object",
+            "properties": {
+                "name": "The name to appear in the LiveSplit UI",
+                "icon": "The autosplit name whose icon to use (e.g. RadianceBoss, HollowKnightBoss)"
+            }
+        },
+        "categoryName": {
+            "description": "The category name on the associated speedrun.com board.",
+            "type": "string"
+        },
+        "gameName": {
+            "description": "The game name on the associated speedrun.com board.",
+            "enum": [
+                "Hollow Knight",
+                "Hollow Knight Category Extensions",
+                "Hollow Knight Mods"
+            ]
+        },
+        "variables": {
+            "description": "Additional Info",
+            "type": "object"
+        },
+        "splitIds": {
+            "type": "array",
+            "items": {
+                "oneOf": []
+            }
+        }
     },
-    "icons": {
-      "additionalProperties": false,
-      "description": "Icon overrides for the splits. Map each autosplit id to a autosplit id or an array of autosplit ids.",
-      "type": "object",
-      "properties": {}
-    },
-    "ordered": {
-      "description": "Ordered splits improve performance and are required for certain splits (e.g. KingsPass).",
-      "type": "boolean"
-    },
-    "endTriggeringAutosplit": {
-      "description": "Whether to end time at the last autosplit. Set this to false for full-game runs, where time ends on a final cutscene.",
-      "type": "boolean"
-    },
-    "startTriggeringAutosplit": {
-      "description": "Autosplit to use to start the timer, rather than starting on new file",
-      "enum": []
-    },
-    "endingSplit": {
-      "description": "Info for the last split if it's a game-ending split rather than an autosplit",
-      "type": "object",
-      "properties": {
-        "name": "The name to appear in the LiveSplit UI",
-        "icon": "The autosplit name whose icon to use (e.g. RadianceBoss, HollowKnightBoss)"
-      }
-    },
-    "categoryName": {
-      "description": "The category name on the associated speedrun.com board.",
-      "type": "string"
-    },
-    "gameName": {
-      "description": "The game name on the associated speedrun.com board.",
-      "enum": [
-        "Hollow Knight",
-        "Hollow Knight Category Extensions",
-        "Hollow Knight Mods"
-      ]
-    },
-    "variables": {
-      "description": "Additional Info",
-      "type": "object"
-    },
-    "splitIds": {
-      "type": "array",
-      "items": {
-        "oneOf": []
-      }
-    }
-  },
-  "required": ["endTriggeringAutosplit", "categoryName", "gameName", "splitIds"]
+    "required": [
+        "endTriggeringAutosplit",
+        "categoryName",
+        "gameName",
+        "splitIds"
+    ]
 }

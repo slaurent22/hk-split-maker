@@ -1,67 +1,67 @@
 {
-  "categoryName": "True Ending",
-  "splitIds": [
-    "VengefulSpirit",
-    "EnterGreenpath",
-    "MothwingCloak",
-    "BlueLake",
-    "DreamNail",
-    "ElderHuEssence",
-    "MenuClaw",
-    "SpiritGladeOpen",
-    "TransGorgeousHusk",
-    "LumaflyLantern",
-    "CrystalHeart",
-    "WatcherChandelier",
-    "EnterAnyDream",
-    "TollBenchBasin",
-    "LostKinEssence",
-    "EnterAnyDream",
-    "FailedChampionEssence",
-    "KingsBrand",
-    "ShadeCloak",
-    "MarkothEssence",
-    "GorbEssence",
-    "EnterAnyDream",
-    "NoEyesEssence",
-    "TollBenchQG",
-    "MarmuEssence",
-    "WhiteFragmentLeft",
-    "GalienEssence",
-    "EnterAnyDream",
-    "WhitePalaceLowerEntry",
-    "WhiteFragmentRight",
-    "VoidHeart",
-    "HollowKnightDreamnail"
-  ],
-  "names": {
-    "EnterAnyDream": [
-      "Lurien",
-      "[1U 2U] Enter Failed Champ",
-      "Monomon",
-      "Herrah"
+    "categoryName": "True Ending",
+    "splitIds": [
+        "VengefulSpirit",
+        "EnterGreenpath",
+        "MothwingCloak",
+        "BlueLake",
+        "DreamNail",
+        "ElderHuEssence",
+        "MenuClaw",
+        "SpiritGladeOpen",
+        "TransGorgeousHusk",
+        "LumaflyLantern",
+        "CrystalHeart",
+        "WatcherChandelier",
+        "EnterAnyDream",
+        "TollBenchBasin",
+        "LostKinEssence",
+        "EnterAnyDream",
+        "FailedChampionEssence",
+        "KingsBrand",
+        "ShadeCloak",
+        "MarkothEssence",
+        "GorbEssence",
+        "EnterAnyDream",
+        "NoEyesEssence",
+        "TollBenchQG",
+        "MarmuEssence",
+        "WhiteFragmentLeft",
+        "GalienEssence",
+        "EnterAnyDream",
+        "WhitePalaceLowerEntry",
+        "WhiteFragmentRight",
+        "VoidHeart",
+        "HollowKnightDreamnail"
     ],
-    "ElderHuEssence": "[1U] %s",
-    "TransGorgeousHusk": "[1U] %s",
-    "LumaflyLantern": "[2U] %s",
-    "CrystalHeart": "[1D] %s",
-    "WatcherChandelier": "[2D] %s",
-    "KingsBrand": "[1U] %s",
-    "ShadeCloak": "[2D] %s",
-    "GorbEssence": "[2U] %s",
-    "WhitePalaceLowerEntry": "[1U 2D] %s",
-    "HollowKnightDreamnail": "[1D] %s"
-  },
-  "icons": {
-    "EnterAnyDream": ["Lurien", "EnterAnyDream", "Monomon", "Hegemol"]
-  },
-  "endTriggeringAutosplit": false,
-  "endingSplit": {
-    "name": "Radiance",
-    "icon": "RadianceBoss"
-  },
-  "gameName": "Hollow Knight",
-  "variables": {
-    "True Ending Glitch": "No Major Glitches"
-  }
+    "names": {
+        "EnterAnyDream": [
+            "Lurien",
+            "[1U 2U] Enter Failed Champ",
+            "Monomon",
+            "Herrah"
+        ],
+        "ElderHuEssence": "[1U] %s",
+        "TransGorgeousHusk": "[1U] %s",
+        "LumaflyLantern": "[2U] %s",
+        "CrystalHeart": "[1D] %s",
+        "WatcherChandelier": "[2D] %s",
+        "KingsBrand": "[1U] %s",
+        "ShadeCloak": "[2D] %s",
+        "GorbEssence": "[2U] %s",
+        "WhitePalaceLowerEntry": "[1U 2D] %s",
+        "HollowKnightDreamnail": "[1D] %s"
+    },
+    "icons": {
+        "EnterAnyDream": ["Lurien", "EnterAnyDream", "Monomon", "Hegemol"]
+    },
+    "endTriggeringAutosplit": false,
+    "endingSplit": {
+        "name": "Radiance",
+        "icon": "RadianceBoss"
+    },
+    "gameName": "Hollow Knight",
+    "variables": {
+        "True Ending Glitch": "No Major Glitches"
+    }
 }

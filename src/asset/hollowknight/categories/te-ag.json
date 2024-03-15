@@ -1,21 +1,21 @@
 {
-  "categoryName": "True Ending",
-  "splitIds": [
-    "KingsPass",
-    "CrossroadsStation",
-    "Dreamer3",
-    "HollowKnightDreamnail"
-  ],
-  "icons": {
-    "KingsPass": "VoidHeart"
-  },
-  "endTriggeringAutosplit": false,
-  "endingSplit": {
-    "name": "Radiance",
-    "icon": "RadianceBoss"
-  },
-  "gameName": "Hollow Knight",
-  "variables": {
-    "True Ending Glitch": "All Glitches"
-  }
+    "categoryName": "True Ending",
+    "splitIds": [
+        "KingsPass",
+        "CrossroadsStation",
+        "Dreamer3",
+        "HollowKnightDreamnail"
+    ],
+    "icons": {
+        "KingsPass": "VoidHeart"
+    },
+    "endTriggeringAutosplit": false,
+    "endingSplit": {
+        "name": "Radiance",
+        "icon": "RadianceBoss"
+    },
+    "gameName": "Hollow Knight",
+    "variables": {
+        "True Ending Glitch": "All Glitches"
+    }
 }

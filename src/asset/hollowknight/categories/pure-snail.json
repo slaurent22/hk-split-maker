@@ -1,25 +1,25 @@
 {
-  "categoryName": "Pure Snail",
-  "splitIds": [
-    "VengefulSpirit",
-    "EnterGreenpath",
-    "GreenpathStation",
-    "MothwingCloak",
-    "NotchShrumalOgres",
-    "MantisClaw",
-    "SporeShroom",
-    "BlueLake",
-    "KingsStationStation",
-    "BaldurShell",
-    "GorgeousHusk",
-    "Lemm2",
-    "LumaflyLantern",
-    "CrystalHeart",
-    "IsmasTear",
-    "ShapeOfUnn",
-    "NotchFogCanyon",
-    "PureSnail"
-  ],
-  "endTriggeringAutosplit": true,
-  "gameName": "Hollow Knight Category Extensions"
+    "categoryName": "Pure Snail",
+    "splitIds": [
+        "VengefulSpirit",
+        "EnterGreenpath",
+        "GreenpathStation",
+        "MothwingCloak",
+        "NotchShrumalOgres",
+        "MantisClaw",
+        "SporeShroom",
+        "BlueLake",
+        "KingsStationStation",
+        "BaldurShell",
+        "GorgeousHusk",
+        "Lemm2",
+        "LumaflyLantern",
+        "CrystalHeart",
+        "IsmasTear",
+        "ShapeOfUnn",
+        "NotchFogCanyon",
+        "PureSnail"
+    ],
+    "endTriggeringAutosplit": true,
+    "gameName": "Hollow Knight Category Extensions"
 }

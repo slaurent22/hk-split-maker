@@ -1,20 +1,20 @@
 {
-  "categoryName": "Low%",
-  "splitIds": [
-    "KingsPass",
-    "FogCanyonEntry",
-    "Dreamer1",
-    "Dreamer2",
-    "Dreamer3",
-    "UnchainedHollowKnight"
-  ],
-  "endTriggeringAutosplit": false,
-  "endingSplit": {
-    "name": "Hollow Knight",
-    "icon": "HollowKnightBoss"
-  },
-  "gameName": "Hollow Knight",
-  "variables": {
-    "Low% Glitch": "All Glitches"
-  }
+    "categoryName": "Low%",
+    "splitIds": [
+        "KingsPass",
+        "FogCanyonEntry",
+        "Dreamer1",
+        "Dreamer2",
+        "Dreamer3",
+        "UnchainedHollowKnight"
+    ],
+    "endTriggeringAutosplit": false,
+    "endingSplit": {
+        "name": "Hollow Knight",
+        "icon": "HollowKnightBoss"
+    },
+    "gameName": "Hollow Knight",
+    "variables": {
+        "Low% Glitch": "All Glitches"
+    }
 }

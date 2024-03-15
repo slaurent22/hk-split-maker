@@ -1,25 +1,25 @@
 {
-  "categoryName": "Cartographer",
-  "splitIds": [
-    "VengefulSpirit",
-    "EnterGreenpath",
-    "MothwingCloak",
-    "MantisClaw",
-    "mapCliffs",
-    "BlueLake",
-    "DreamNail",
-    "Lemm2",
-    "mapCity",
-    "LumaflyLantern",
-    "CrystalHeart",
-    "mapWaterways",
-    "mapOutskirts",
-    "mapAbyss",
-    "mapFogCanyon",
-    "mapRoyalGardens",
-    "mapDeepnest",
-    "CorniferAtHome"
-  ],
-  "endTriggeringAutosplit": true,
-  "gameName": "Hollow Knight Category Extensions"
+    "categoryName": "Cartographer",
+    "splitIds": [
+        "VengefulSpirit",
+        "EnterGreenpath",
+        "MothwingCloak",
+        "MantisClaw",
+        "mapCliffs",
+        "BlueLake",
+        "DreamNail",
+        "Lemm2",
+        "mapCity",
+        "LumaflyLantern",
+        "CrystalHeart",
+        "mapWaterways",
+        "mapOutskirts",
+        "mapAbyss",
+        "mapFogCanyon",
+        "mapRoyalGardens",
+        "mapDeepnest",
+        "CorniferAtHome"
+    ],
+    "endTriggeringAutosplit": true,
+    "gameName": "Hollow Knight Category Extensions"
 }

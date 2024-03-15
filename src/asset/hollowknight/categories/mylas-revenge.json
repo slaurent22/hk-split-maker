@@ -1,20 +1,20 @@
 {
-  "categoryName": "Myla's Revenge",
-  "splitIds": [
-    "VengefulSpirit",
-    "EnterGreenpath",
-    "MothwingCloak",
-    "FungalWastesEntry",
-    "MantisClaw",
-    "Lemm2",
-    "StoreroomsStation",
-    "LumaflyLantern",
-    "CrystalHeart",
-    "PlayerDeath"
-  ],
-  "names": {
-    "PlayerDeath": "Myla's Revenge"
-  },
-  "endTriggeringAutosplit": true,
-  "gameName": "Hollow Knight Category Extensions"
+    "categoryName": "Myla's Revenge",
+    "splitIds": [
+        "VengefulSpirit",
+        "EnterGreenpath",
+        "MothwingCloak",
+        "FungalWastesEntry",
+        "MantisClaw",
+        "Lemm2",
+        "StoreroomsStation",
+        "LumaflyLantern",
+        "CrystalHeart",
+        "PlayerDeath"
+    ],
+    "names": {
+        "PlayerDeath": "Myla's Revenge"
+    },
+    "endTriggeringAutosplit": true,
+    "gameName": "Hollow Knight Category Extensions"
 }

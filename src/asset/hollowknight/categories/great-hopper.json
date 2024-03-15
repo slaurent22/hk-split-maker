@@ -1,6 +1,6 @@
 {
-  "categoryName": "Great Hopper%",
-  "splitIds": ["VengefulSpirit", "BlueLake", "GreatHopper"],
-  "endTriggeringAutosplit": true,
-  "gameName": "Hollow Knight Category Extensions"
+    "categoryName": "Great Hopper%",
+    "splitIds": ["VengefulSpirit", "BlueLake", "GreatHopper"],
+    "endTriggeringAutosplit": true,
+    "gameName": "Hollow Knight Category Extensions"
 }

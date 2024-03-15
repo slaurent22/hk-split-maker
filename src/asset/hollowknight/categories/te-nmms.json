@@ -1,26 +1,26 @@
 {
-  "categoryName": "True Ending",
-  "splitIds": [
-    "AncestralMound",
-    "EnterGreenpath",
-    "MothwingCloak",
-    "MantisClaw",
-    "Dashmaster",
-    "BlueLake",
-    "DreamNail",
-    "DreamGate",
-    "ShadeSoul",
-    "VoidHeart",
-    "Dreamer3",
-    "HollowKnightDreamnail"
-  ],
-  "endTriggeringAutosplit": false,
-  "endingSplit": {
-    "name": "Radiance",
-    "icon": "RadianceBoss"
-  },
-  "gameName": "Hollow Knight",
-  "variables": {
-    "True Ending Glitch": "No Main Menu Storage"
-  }
+    "categoryName": "True Ending",
+    "splitIds": [
+        "AncestralMound",
+        "EnterGreenpath",
+        "MothwingCloak",
+        "MantisClaw",
+        "Dashmaster",
+        "BlueLake",
+        "DreamNail",
+        "DreamGate",
+        "ShadeSoul",
+        "VoidHeart",
+        "Dreamer3",
+        "HollowKnightDreamnail"
+    ],
+    "endTriggeringAutosplit": false,
+    "endingSplit": {
+        "name": "Radiance",
+        "icon": "RadianceBoss"
+    },
+    "gameName": "Hollow Knight",
+    "variables": {
+        "True Ending Glitch": "No Main Menu Storage"
+    }
 }

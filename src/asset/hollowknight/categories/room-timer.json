@@ -1,10 +1,10 @@
 {
-  "categoryName": "Room Timer",
-  "startTriggeringAutosplit": "TransitionAfterSaveState",
-  "splitIds": ["TransitionAfterSaveState"],
-  "names": {
-    "TransitionAfterSaveState": ["Exit Room"]
-  },
-  "endTriggeringAutosplit": true,
-  "gameName": "Hollow Knight Category Extensions"
+    "categoryName": "Room Timer",
+    "startTriggeringAutosplit": "TransitionAfterSaveState",
+    "splitIds": ["TransitionAfterSaveState"],
+    "names": {
+        "TransitionAfterSaveState": ["Exit Room"]
+    },
+    "endTriggeringAutosplit": true,
+    "gameName": "Hollow Knight Category Extensions"
 }

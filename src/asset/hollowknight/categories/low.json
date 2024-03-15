@@ -1,27 +1,27 @@
 {
-  "categoryName": "Low%",
-  "splitIds": [
-    "VengefulSpirit",
-    "EnterGreenpath",
-    "FungalWastesEntry",
-    "TransClaw",
-    "DeepnestSpa",
-    "TramPass",
-    "DreamNail",
-    "WatcherChandelier",
-    "BlackKnightTrans",
-    "Lemm2",
-    "LumaflyLantern",
-    "CrystalHeart",
-    "Uumuu",
-    "BeastsDenTrapBench",
-    "Hegemol",
-    "UnchainedHollowKnight"
-  ],
-  "endTriggeringAutosplit": false,
-  "endingSplit": {
-    "name": "Hollow Knight",
-    "icon": "HollowKnightBoss"
-  },
-  "gameName": "Hollow Knight"
+    "categoryName": "Low%",
+    "splitIds": [
+        "VengefulSpirit",
+        "EnterGreenpath",
+        "FungalWastesEntry",
+        "TransClaw",
+        "DeepnestSpa",
+        "TramPass",
+        "DreamNail",
+        "WatcherChandelier",
+        "BlackKnightTrans",
+        "Lemm2",
+        "LumaflyLantern",
+        "CrystalHeart",
+        "Uumuu",
+        "BeastsDenTrapBench",
+        "Hegemol",
+        "UnchainedHollowKnight"
+    ],
+    "endTriggeringAutosplit": false,
+    "endingSplit": {
+        "name": "Hollow Knight",
+        "icon": "HollowKnightBoss"
+    },
+    "gameName": "Hollow Knight"
 }

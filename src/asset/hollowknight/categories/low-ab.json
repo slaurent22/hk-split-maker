@@ -1,20 +1,20 @@
 {
-  "categoryName": "Low% All Bindings",
-  "splitIds": [
-    "GruzMother",
-    "DreamNail",
-    "MantisClaw",
-    "Hegemol",
-    "BlackKnight",
-    "Lurien",
-    "CrystalHeart",
-    "Uumuu",
-    "Monomon"
-  ],
-  "endTriggeringAutosplit": false,
-  "endingSplit": {
-    "name": "Hollow Knight",
-    "icon": "HollowKnightBoss"
-  },
-  "gameName": "Hollow Knight Mods"
+    "categoryName": "Low% All Bindings",
+    "splitIds": [
+        "GruzMother",
+        "DreamNail",
+        "MantisClaw",
+        "Hegemol",
+        "BlackKnight",
+        "Lurien",
+        "CrystalHeart",
+        "Uumuu",
+        "Monomon"
+    ],
+    "endTriggeringAutosplit": false,
+    "endingSplit": {
+        "name": "Hollow Knight",
+        "icon": "HollowKnightBoss"
+    },
+    "gameName": "Hollow Knight Mods"
 }

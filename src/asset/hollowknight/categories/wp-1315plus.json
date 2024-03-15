@@ -1,41 +1,41 @@
 {
-  "categoryName": "White Palace IL (1.3.1.5+)",
-  "startTriggeringAutosplit": "WhitePalaceEntry",
-  "splitIds": [
-    "WhitePalaceLowerEntry",
-    "WhitePalaceLowerOrb",
-    "WhitePalaceLowerEntry",
-    "WhitePalaceAtrium",
-    "WhitePalaceLeftEntry",
-    "WhitePalaceLeftWingMid",
-    "WhitePalaceAtrium",
-    "WhitePalaceRightEntry",
-    "WhitePalaceAtrium",
-    "WhitePalaceTopEntry",
-    "WhitePalaceTopClimb",
-    "WhitePalaceTopLeverRoom",
-    "WhitePalaceTopLastPlats",
-    "WhitePalaceThroneRoom",
-    "Kingsoul"
-  ],
-  "names": {
-    "WhitePalaceLowerEntry": ["Palace Grounds", "Lower Orb Room"],
-    "WhitePalaceLowerOrb": "Lower Entry",
-    "WhitePalaceAtrium": [
-      "Lower Entry to Hub",
-      "Left Atrium 2",
-      "Right Atrium"
+    "categoryName": "White Palace IL (1.3.1.5+)",
+    "startTriggeringAutosplit": "WhitePalaceEntry",
+    "splitIds": [
+        "WhitePalaceLowerEntry",
+        "WhitePalaceLowerOrb",
+        "WhitePalaceLowerEntry",
+        "WhitePalaceAtrium",
+        "WhitePalaceLeftEntry",
+        "WhitePalaceLeftWingMid",
+        "WhitePalaceAtrium",
+        "WhitePalaceRightEntry",
+        "WhitePalaceAtrium",
+        "WhitePalaceTopEntry",
+        "WhitePalaceTopClimb",
+        "WhitePalaceTopLeverRoom",
+        "WhitePalaceTopLastPlats",
+        "WhitePalaceThroneRoom",
+        "Kingsoul"
     ],
-    "WhitePalaceLeftEntry": "Hub to Left Atrium",
-    "WhitePalaceLeftWingMid": "Left Atrium 1",
-    "WhitePalaceRightEntry": "Hub to Right Atrium",
-    "WhitePalaceTopEntry": "Hub to Balcony",
-    "WhitePalaceTopClimb": "Balcony 1",
-    "WhitePalaceTopLeverRoom": "Balcony 2",
-    "WhitePalaceTopLastPlats": "Balcony 3",
-    "WhitePalaceThroneRoom": "Balcony 4",
-    "Kingsoul": "Throne Room"
-  },
-  "endTriggeringAutosplit": true,
-  "gameName": "Hollow Knight"
+    "names": {
+        "WhitePalaceLowerEntry": ["Palace Grounds", "Lower Orb Room"],
+        "WhitePalaceLowerOrb": "Lower Entry",
+        "WhitePalaceAtrium": [
+            "Lower Entry to Hub",
+            "Left Atrium 2",
+            "Right Atrium"
+        ],
+        "WhitePalaceLeftEntry": "Hub to Left Atrium",
+        "WhitePalaceLeftWingMid": "Left Atrium 1",
+        "WhitePalaceRightEntry": "Hub to Right Atrium",
+        "WhitePalaceTopEntry": "Hub to Balcony",
+        "WhitePalaceTopClimb": "Balcony 1",
+        "WhitePalaceTopLeverRoom": "Balcony 2",
+        "WhitePalaceTopLastPlats": "Balcony 3",
+        "WhitePalaceThroneRoom": "Balcony 4",
+        "Kingsoul": "Throne Room"
+    },
+    "endTriggeringAutosplit": true,
+    "gameName": "Hollow Knight"
 }

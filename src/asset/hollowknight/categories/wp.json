@@ -1,13 +1,13 @@
 {
-  "categoryName": "White Palace",
-  "startTriggeringAutosplit": "WhitePalaceEntry",
-  "splitIds": [
-    "WhitePalaceOrb1",
-    "WhitePalaceOrb3",
-    "WhitePalaceOrb2",
-    "WhitePalaceTopLeverRoom",
-    "Kingsoul"
-  ],
-  "endTriggeringAutosplit": true,
-  "gameName": "Hollow Knight"
+    "categoryName": "White Palace",
+    "startTriggeringAutosplit": "WhitePalaceEntry",
+    "splitIds": [
+        "WhitePalaceOrb1",
+        "WhitePalaceOrb3",
+        "WhitePalaceOrb2",
+        "WhitePalaceTopLeverRoom",
+        "Kingsoul"
+    ],
+    "endTriggeringAutosplit": true,
+    "gameName": "Hollow Knight"
 }

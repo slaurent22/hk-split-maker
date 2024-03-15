@@ -1,17 +1,17 @@
 {
-  "categoryName": "Pantheon of the Sage",
-  "splitIds": [
-    "HiveKnightP",
-    "ElderHuP",
-    "CollectorP",
-    "GodTamerP",
-    "TroupeMasterGrimmP",
-    "GalienP",
-    "GreyPrinceZoteP",
-    "UumuuP",
-    "Hornet2P",
-    "SlyP"
-  ],
-  "endTriggeringAutosplit": true,
-  "gameName": "Hollow Knight"
+    "categoryName": "Pantheon of the Sage",
+    "splitIds": [
+        "HiveKnightP",
+        "ElderHuP",
+        "CollectorP",
+        "GodTamerP",
+        "TroupeMasterGrimmP",
+        "GalienP",
+        "GreyPrinceZoteP",
+        "UumuuP",
+        "Hornet2P",
+        "SlyP"
+    ],
+    "endTriggeringAutosplit": true,
+    "gameName": "Hollow Knight"
 }

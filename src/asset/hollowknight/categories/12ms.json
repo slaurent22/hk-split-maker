@@ -1,22 +1,22 @@
 {
-  "categoryName": "12 Mask Shards",
-  "splitIds": [
-    "VengefulSpirit",
-    "EnterGreenpath",
-    "MothwingCloak",
-    "FungalWastesEntry",
-    "MantisClaw",
-    "Lemm2",
-    "LumaflyLantern",
-    "KingsStationStation",
-    "MonarchWings",
-    "Mask1",
-    "Mask3"
-  ],
-  "names": {
-    "Mask1": "Fungal Core Shard",
-    "Mask3": "12 Mask Shards"
-  },
-  "endTriggeringAutosplit": true,
-  "gameName": "Hollow Knight Category Extensions"
+    "categoryName": "12 Mask Shards",
+    "splitIds": [
+        "VengefulSpirit",
+        "EnterGreenpath",
+        "MothwingCloak",
+        "FungalWastesEntry",
+        "MantisClaw",
+        "Lemm2",
+        "LumaflyLantern",
+        "KingsStationStation",
+        "MonarchWings",
+        "Mask1",
+        "Mask3"
+    ],
+    "names": {
+        "Mask1": "Fungal Core Shard",
+        "Mask3": "12 Mask Shards"
+    },
+    "endTriggeringAutosplit": true,
+    "gameName": "Hollow Knight Category Extensions"
 }

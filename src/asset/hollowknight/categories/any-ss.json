@@ -1,27 +1,27 @@
 {
-  "categoryName": "Any% Steel Soul",
-  "splitIds": [
-    "VengefulSpirit",
-    "EnterGreenpath",
-    "MothwingCloak",
-    "MantisClaw",
-    "TramPass",
-    "KingsStationStation",
-    "GruzMother",
-    "DreamNail",
-    "BeastsDenTrapBench",
-    "Hegemol",
-    "WatcherChandelier",
-    "BlackKnight",
-    "LumaflyLantern",
-    "CrystalHeart",
-    "Uumuu",
-    "UnchainedHollowKnight"
-  ],
-  "endTriggeringAutosplit": false,
-  "endingSplit": {
-    "name": "Hollow Knight",
-    "icon": "HollowKnightBoss"
-  },
-  "gameName": "Hollow Knight"
+    "categoryName": "Any% Steel Soul",
+    "splitIds": [
+        "VengefulSpirit",
+        "EnterGreenpath",
+        "MothwingCloak",
+        "MantisClaw",
+        "TramPass",
+        "KingsStationStation",
+        "GruzMother",
+        "DreamNail",
+        "BeastsDenTrapBench",
+        "Hegemol",
+        "WatcherChandelier",
+        "BlackKnight",
+        "LumaflyLantern",
+        "CrystalHeart",
+        "Uumuu",
+        "UnchainedHollowKnight"
+    ],
+    "endTriggeringAutosplit": false,
+    "endingSplit": {
+        "name": "Hollow Knight",
+        "icon": "HollowKnightBoss"
+    },
+    "gameName": "Hollow Knight"
 }

@@ -1,20 +1,20 @@
 {
-  "categoryName": "Eternal Ordeal% 1mg",
-  "splitIds": [
-    "VengefulSpirit",
-    "EnterGreenpath",
-    "MothwingCloak",
-    "MantisClaw",
-    "EnterSanctum",
-    "DesolateDive",
-    "CrystalHeart",
-    "DreamNail",
-    "ShadeSoul",
-    "MonarchWings",
-    "Flukenest",
-    "EternalOrdealUnlocked",
-    "EternalOrdealAchieved"
-  ],
-  "endTriggeringAutosplit": true,
-  "gameName": "Hollow Knight Category Extensions"
+    "categoryName": "Eternal Ordeal% 1mg",
+    "splitIds": [
+        "VengefulSpirit",
+        "EnterGreenpath",
+        "MothwingCloak",
+        "MantisClaw",
+        "EnterSanctum",
+        "DesolateDive",
+        "CrystalHeart",
+        "DreamNail",
+        "ShadeSoul",
+        "MonarchWings",
+        "Flukenest",
+        "EternalOrdealUnlocked",
+        "EternalOrdealAchieved"
+    ],
+    "endTriggeringAutosplit": true,
+    "gameName": "Hollow Knight Category Extensions"
 }

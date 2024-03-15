@@ -1,29 +1,29 @@
 {
-  "categoryName": "Spelless",
-  "splitIds": [
-    "FuryOfTheFallen",
-    "FalseKnight",
-    "Longnail",
-    "EnterGreenpath",
-    "MothwingCloak",
-    "MegaMossCharger",
-    "FragileStrength",
-    "MantisClaw",
-    "DreamNail",
-    "GorgeousHusk",
-    "NailUpgrade1",
-    "BlackKnight",
-    "LumaflyLantern",
-    "CrystalHeart",
-    "Uumuu",
-    "SporeShroom",
-    "BeastsDenTrapBench",
-    "Hegemol"
-  ],
-  "endTriggeringAutosplit": false,
-  "endingSplit": {
-    "name": "Hollow Knight",
-    "icon": "HollowKnightBoss"
-  },
-  "gameName": "Hollow Knight Category Extensions"
+    "categoryName": "Spelless",
+    "splitIds": [
+        "FuryOfTheFallen",
+        "FalseKnight",
+        "Longnail",
+        "EnterGreenpath",
+        "MothwingCloak",
+        "MegaMossCharger",
+        "FragileStrength",
+        "MantisClaw",
+        "DreamNail",
+        "GorgeousHusk",
+        "NailUpgrade1",
+        "BlackKnight",
+        "LumaflyLantern",
+        "CrystalHeart",
+        "Uumuu",
+        "SporeShroom",
+        "BeastsDenTrapBench",
+        "Hegemol"
+    ],
+    "endTriggeringAutosplit": false,
+    "endingSplit": {
+        "name": "Hollow Knight",
+        "icon": "HollowKnightBoss"
+    },
+    "gameName": "Hollow Knight Category Extensions"
 }

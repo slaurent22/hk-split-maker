@@ -1,49 +1,49 @@
 {
-  "categoryName": "All Skills",
-  "splitIds": [
-    "VengefulSpirit",
-    "EnterGreenpath",
-    "MothwingCloak",
-    "MantisClaw",
-    "BlueLake",
-    "TransGorgeousHusk",
-    "EnterSanctum",
-    "DesolateDive",
-    "KingsStationStation",
-    "CrystalHeart",
-    "TransDescendingDark",
-    "DreamNail",
-    "CycloneSlash",
-    "ShadeSoul",
-    "BlackKnightTrans",
-    "TransTear",
-    "MonarchWings",
-    "GreatSlash",
-    "Monomon",
-    "HowlingWraiths",
-    "Hegemol",
-    "KingsBrand",
-    "DashSlash",
-    "ShadeCloak",
-    "AbyssShriek",
-    "UnchainedHollowKnight"
-  ],
-  "names": {
-    "CrystalHeart": "[2U] %s",
-    "CycloneSlash": "[1D] %s",
-    "GreatSlash": "[3U] %s",
-    "Monomon": "[2U] %s",
-    "KingsBrand": "[2U] %s",
-    "ShadeCloak": "[3D] %s",
-    "UnchainedHollowKnight": "[1D] %s"
-  },
-  "endTriggeringAutosplit": false,
-  "endingSplit": {
-    "name": "Hollow Knight",
-    "icon": "HollowKnightBoss"
-  },
-  "gameName": "Hollow Knight",
-  "variables": {
-    "All Skills Glitch": "1.4.3.2+ NMG"
-  }
+    "categoryName": "All Skills",
+    "splitIds": [
+        "VengefulSpirit",
+        "EnterGreenpath",
+        "MothwingCloak",
+        "MantisClaw",
+        "BlueLake",
+        "TransGorgeousHusk",
+        "EnterSanctum",
+        "DesolateDive",
+        "KingsStationStation",
+        "CrystalHeart",
+        "TransDescendingDark",
+        "DreamNail",
+        "CycloneSlash",
+        "ShadeSoul",
+        "BlackKnightTrans",
+        "TransTear",
+        "MonarchWings",
+        "GreatSlash",
+        "Monomon",
+        "HowlingWraiths",
+        "Hegemol",
+        "KingsBrand",
+        "DashSlash",
+        "ShadeCloak",
+        "AbyssShriek",
+        "UnchainedHollowKnight"
+    ],
+    "names": {
+        "CrystalHeart": "[2U] %s",
+        "CycloneSlash": "[1D] %s",
+        "GreatSlash": "[3U] %s",
+        "Monomon": "[2U] %s",
+        "KingsBrand": "[2U] %s",
+        "ShadeCloak": "[3D] %s",
+        "UnchainedHollowKnight": "[1D] %s"
+    },
+    "endTriggeringAutosplit": false,
+    "endingSplit": {
+        "name": "Hollow Knight",
+        "icon": "HollowKnightBoss"
+    },
+    "gameName": "Hollow Knight",
+    "variables": {
+        "All Skills Glitch": "1.4.3.2+ NMG"
+    }
 }

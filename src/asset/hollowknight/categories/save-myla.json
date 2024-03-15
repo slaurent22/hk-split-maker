@@ -1,24 +1,24 @@
 {
-  "categoryName": "Save Myla",
-  "splitIds": [
-    "VengefulSpirit",
-    "EnterGreenpath",
-    "MothwingCloak",
-    "MantisClaw",
-    "BlueLake",
-    "DreamNail",
-    "DashSlash",
-    "Lurien",
-    "BasinEntry",
-    "MonarchWings",
-    "IsmasTear",
-    "Monomon",
-    "Hegemol"
-  ],
-  "endTriggeringAutosplit": false,
-  "endingSplit": {
-    "name": "Hollow Knight",
-    "icon": "HollowKnightBoss"
-  },
-  "gameName": "Hollow Knight Category Extensions"
+    "categoryName": "Save Myla",
+    "splitIds": [
+        "VengefulSpirit",
+        "EnterGreenpath",
+        "MothwingCloak",
+        "MantisClaw",
+        "BlueLake",
+        "DreamNail",
+        "DashSlash",
+        "Lurien",
+        "BasinEntry",
+        "MonarchWings",
+        "IsmasTear",
+        "Monomon",
+        "Hegemol"
+    ],
+    "endTriggeringAutosplit": false,
+    "endingSplit": {
+        "name": "Hollow Knight",
+        "icon": "HollowKnightBoss"
+    },
+    "gameName": "Hollow Knight Category Extensions"
 }

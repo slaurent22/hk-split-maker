@@ -1,17 +1,17 @@
 {
-  "categoryName": "Pantheon of the Knight",
-  "splitIds": [
-    "EnragedGuardianP",
-    "LostKinP",
-    "NoEyesP",
-    "TraitorLordP",
-    "WhiteDefenderP",
-    "FailedChampionP",
-    "MarkothP",
-    "WatcherKnightsP",
-    "SoulTyrantP",
-    "PureVesselP"
-  ],
-  "endTriggeringAutosplit": true,
-  "gameName": "Hollow Knight"
+    "categoryName": "Pantheon of the Knight",
+    "splitIds": [
+        "EnragedGuardianP",
+        "LostKinP",
+        "NoEyesP",
+        "TraitorLordP",
+        "WhiteDefenderP",
+        "FailedChampionP",
+        "MarkothP",
+        "WatcherKnightsP",
+        "SoulTyrantP",
+        "PureVesselP"
+    ],
+    "endTriggeringAutosplit": true,
+    "gameName": "Hollow Knight"
 }

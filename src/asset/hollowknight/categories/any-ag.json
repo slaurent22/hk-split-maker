@@ -1,16 +1,16 @@
 {
-  "categoryName": "Any%",
-  "splitIds": ["KingsPass", "CrossroadsStation", "Dreamer3"],
-  "icons": {
-    "KingsPass": "VoidHeart"
-  },
-  "endTriggeringAutosplit": false,
-  "endingSplit": {
-    "name": "Hollow Knight",
-    "icon": "HollowKnightBoss"
-  },
-  "gameName": "Hollow Knight",
-  "variables": {
-    "Any% Glitch": "All Glitches"
-  }
+    "categoryName": "Any%",
+    "splitIds": ["KingsPass", "CrossroadsStation", "Dreamer3"],
+    "icons": {
+        "KingsPass": "VoidHeart"
+    },
+    "endTriggeringAutosplit": false,
+    "endingSplit": {
+        "name": "Hollow Knight",
+        "icon": "HollowKnightBoss"
+    },
+    "gameName": "Hollow Knight",
+    "variables": {
+        "Any% Glitch": "All Glitches"
+    }
 }
