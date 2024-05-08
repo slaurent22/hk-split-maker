@@ -66,6 +66,13 @@
             "displayName": "All Bosses (Lifeblood)"
         },
         {
+            "fileName": "all-bosses-lp",
+            "displayName": "All Bosses (1.4.3.2+)",
+            "data": {
+                "routeNotesURL": "https://pastebin.com/fMhC3FuN"
+            }
+        },
+        {
             "fileName": "all-skills",
             "displayName": "All Skills",
             "data": {
