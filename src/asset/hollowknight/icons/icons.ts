@@ -361,6 +361,7 @@ import Grimmchild from "./Charm/Grimmchild.png";
 import Grimmchild2 from "./Charm/Grimmchild2.png";
 import Grimmchild3 from "./Charm/Grimmchild3.png";
 import Grimmchild4 from "./Charm/Grimmchild4.png";
+import CarefreeMelody from "./Charm/CarefreeMelody.png";
 import GrubberflysElegy from "./Charm/GrubberflysElegy.png";
 import Grubsong from "./Charm/Grubsong.png";
 import HeavyBlow from "./Charm/HeavyBlow.png";
@@ -1072,6 +1073,7 @@ export default {
   Grimmchild2,
   Grimmchild3,
   Grimmchild4,
+  CarefreeMelody,
   GrubberflysElegy,
   Grubsong,
   HeavyBlow,
