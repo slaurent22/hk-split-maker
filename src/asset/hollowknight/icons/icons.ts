@@ -222,6 +222,7 @@ import LumaflyLanternTransition from "./Item/LumaflyLantern.png";
 import FlowerQuest from "./Item/DelicateFlower.png";
 import FlowerRewardGiven from "./Achievement/Solace.png";
 import HappyCouplePlayerDataEvent from "./Achievement/HappyCouple.png";
+import WhiteDefenderStatueUnlocked from "./Misc/Stinky.png";
 import NailsmithKilled from "./Achievement/Purity.png";
 import NailsmithChoice from "./Achievement/Purity.png";
 import NightmareLantern from "./Misc/Flame.png";
@@ -308,6 +309,7 @@ import WhitePalace from "./Enemy/Wingmould.png";
 import WhitePalaceSecretRoom from "./Enemy/Kingsmould.png";
 import AncestralMound from "./Misc/Knight.png";
 import BasinEntry from "./Enemy/ShadowCreeper.png";
+import EnterBeastDen from "./Misc/Bench.png";
 import BlueLake from "./Achievement/Witness.png";
 import CatacombsEntry from "./Enemy/EntombedHusk.png";
 import CrystalPeakEntry from "./Enemy/CrystalCrawler.png";
@@ -327,6 +329,7 @@ import SalubraExit from "./Item/SalubrasBlessing.png";
 import TransClaw from "./Skill/MantisClaw.png";
 import TransVS from "./Skill/VengefulSpirit.png";
 import TransDescendingDark from "./Skill/DescendingDark.png";
+import TransShadeSoul from "./Skill/ShadeSoul.png";
 import TransTear from "./Skill/IsmasTear.png";
 import TransTearWithGrub from "./Skill/IsmasTear.png";
 import EnterJunkPit from "./Enemy/Flukefey.png";
@@ -417,6 +420,9 @@ import SlyRescued from "./NPC/SlyRescued.png";
 import Flame1 from "./Misc/FlameConsumed.png";
 import Flame2 from "./Misc/FlameConsumed.png";
 import Flame3 from "./Misc/FlameConsumed.png";
+import TransFlame1 from "./Misc/FlameConsumed.png";
+import TransFlame2 from "./Misc/FlameConsumed.png";
+import TransFlame3 from "./Misc/FlameConsumed.png";
 import Ore1 from "./Item/PaleOre.png";
 import Ore2 from "./Item/PaleOre.png";
 import Ore3 from "./Item/PaleOre.png";
@@ -604,6 +610,7 @@ import Menu from "./Misc/MapQuill.png";
 import MenuClaw from "./Skill/MantisClaw.png";
 import MenuGorgeousHusk from "./Enemy/GorgeousHusk.png";
 import MenuIsmasTear from "./Skill/IsmasTear.png";
+import MenuShadeSoul from "./Skill/ShadeSoul.png";
 import CorniferAtHome from "./Misc/Iselda.png";
 import AllSeals from "./Relic/HallownestSeal.png";
 import AllEggs from "./Item/RancidEgg.png";
@@ -934,6 +941,7 @@ export default {
   FlowerQuest,
   FlowerRewardGiven,
   HappyCouplePlayerDataEvent,
+  WhiteDefenderStatueUnlocked,
   NailsmithKilled,
   NailsmithChoice,
   NightmareLantern,
@@ -1020,6 +1028,7 @@ export default {
   WhitePalaceSecretRoom,
   AncestralMound,
   BasinEntry,
+  EnterBeastDen,
   BlueLake,
   CatacombsEntry,
   CrystalPeakEntry,
@@ -1039,6 +1048,7 @@ export default {
   TransClaw,
   TransVS,
   TransDescendingDark,
+  TransShadeSoul,
   TransTear,
   TransTearWithGrub,
   EnterJunkPit,
@@ -1129,6 +1139,9 @@ export default {
   Flame1,
   Flame2,
   Flame3,
+  TransFlame1,
+  TransFlame2,
+  TransFlame3,
   Ore1,
   Ore2,
   Ore3,
@@ -1316,6 +1329,7 @@ export default {
   MenuClaw,
   MenuGorgeousHusk,
   MenuIsmasTear,
+  MenuShadeSoul,
   CorniferAtHome,
   AllSeals,
   AllEggs,
