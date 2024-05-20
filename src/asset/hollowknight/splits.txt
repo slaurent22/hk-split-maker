@@ -456,6 +456,8 @@
         FlowerRewardGiven,
         [Description("Happy Couple (Event)"), ToolTip("Splits when talking to Nailsmith in Sheo's hut for the first time")]
         HappyCouplePlayerDataEvent,
+        [Description("Stinky (Event)"), ToolTip("Splits when seeing the Dung Defender's statue of the Knight")]
+        WhiteDefenderStatueUnlocked,
         [Description("Nailsmith Killed (Event)"), ToolTip("Splits when Nailsmith is killed")]
         NailsmithKilled,
         [Description("Nailsmith Killed/Spared (Event)"), ToolTip("Splits when Nailsmith is killed\nSkips when nailsmith is spared (requires ordered splits)")]
@@ -633,6 +635,8 @@
         AncestralMound,
         [Description("Ancient Basin (Transition)"), ToolTip("Splits on transition to Ancient Basin")]
         BasinEntry,
+        [Description("Beast Den (Transition)"), ToolTip("Splits on transition into Beast Den")]
+        EnterBeastDen,
         [Description("Blue Lake (Transition)"), ToolTip("Splits on transition to Blue Lake from either side")]
         BlueLake,
         [Description("Catacombs Entry (Transition)"), ToolTip("Splits on entry to the catacombs below Resting Grounds")]
@@ -647,7 +651,7 @@
         EnterDirtmouth,
         [Description("Enter Any Dream (Transition)"), ToolTip("Splits when entering any dream world")]
         EnterAnyDream,
-        [Description("Fog Canyon (Transition)"), ToolTip("Splits on transition to East Fog Canyon")]
+        [Description("Fog Canyon (Transition)"), ToolTip("Splits on transition to Fog Canyon\n(Room below Greenpath, left of Queen's Station, right of Overgrown Mound, or below Crossroads)")]
         FogCanyonEntry,
         [Description("Fungal Wastes Entry (Transition)"), ToolTip("Splits on transition to Fungal Wastes\n(Room below Crossroads, right of Queen's Station, left of Waterways or Spore Shroom room)")]
         FungalWastesEntry,
@@ -672,6 +676,8 @@
         TransVS,
         [Description("Has Descending Dark (Transition)"), ToolTip("Splits on transition after Descending Dark acquired")]
         TransDescendingDark,
+        [Description("Has Shade Soul (Transition)"), ToolTip("Splits on transition after Shade Soul acquired")]
+        TransShadeSoul,
         [Description("Has Isma's Tear (Transition)"), ToolTip("Splits on transition after Isma's Tear acquired")]
         TransTear,
         [Description("Isma's Tear with Grub (Transition)"), ToolTip("Splits on transition after collecting Isma's Tear and saving the grub in Isma's Grove")]
@@ -702,7 +708,7 @@
         EnterSanctumWithShadeSoul,
         [Description("Tower of Love (Transition)"), ToolTip("Splits when entering the Tower of Love")]
         EnterLoveTower,
-        [Description("Waterways Manhole (Transition)"), ToolTip("Splits on transition to Waterways through the Simple Key manhole")]
+        [Description("Waterways (Transition)"), ToolTip("Splits on transition to Waterways\n(Simple Key manhole or right of Spike-tunnel)")]
         WaterwaysEntry,
         [Description("White Palace Entry (Transition)"), ToolTip("Splits when entering the first White Palace scene")]
         WhitePalaceEntry,
@@ -855,6 +861,13 @@
         Flame2,
         [Description("Grimm Flame 3 (Flame)"), ToolTip("Splits after obtaining the third flame.")]
         Flame3,
+
+        [Description("Grimm Flame 1 (Transition)"), ToolTip("Splits on transition after obtaining the first flame on current Grimmchild cycle.")]
+        TransFlame1,
+        [Description("Grimm Flame 2 (Transition)"), ToolTip("Splits on transition after obtaining the second flame on current Grimmchild cycle.")]
+        TransFlame2,
+        [Description("Grimm Flame 3 (Transition)"), ToolTip("Splits on transition after obtaining the third flame on current Grimmchild cycle.")]
+        TransFlame3,
 
         [Description("Pale Ore 1 (Ore)"), ToolTip("Splits after obtaining the first pale ore.")]
         Ore1,
@@ -1242,6 +1255,8 @@
         MenuGorgeousHusk,
         [Description("Main Menu w/ Isma's Tear (Menu)"), ToolTip("Splits on transition to the main menu after Isma's Tear acquired")]
         MenuIsmasTear,
+        [Description("Main Menu w/ Shade Soul (Menu)"), ToolTip("Splits on transition to the main menu after Shade Soul acquired")]
+        MenuShadeSoul,
 
         [Description("Cornifer at Home (Transition)"), ToolTip("Splits when entering Iselda's hut while Cornifer is sleeping")]
         CorniferAtHome,
