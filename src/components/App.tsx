@@ -4,13 +4,14 @@ import React, {
   ReactElement,
   lazy,
   Suspense,
+  ChangeEvent,
 } from "react";
 import { saveAs } from "file-saver";
 import JSON5 from "json5";
 import useQueryString, { QueryStringResult } from "use-query-string";
 import { getCategoryConfigJSON, getCategoryDirectory } from "../lib/categories";
 import { CategoryDefinition } from "../asset/hollowknight/categories/category-directory.json";
-import { Config, createSplitsXml } from "../lib/lss";
+import { Config, createSplitsXml, importSplitsXml } from "../lib/lss";
 import CategoryAnyPercent from "../asset/hollowknight/categories/any.json";
 import ArrowButton from "./ArrowButton";
 import Header from "./Header";
@@ -133,13 +134,20 @@ export default function App(): ReactElement {
     return JSON5.parse<Config>(state.configInput);
   };
 
-  const onImport = async () => {
-    // TODO: file select
-    // TODO: xml parse
-    // TODO: GameName, CategoryName -> gameName, categoryName
-    // TODO: Metadata Variables -> variables
-    // TODO: AutoSplitterSettings -> startTriggeringAutosplit, splitIds, endTriggeringAutosplit
-    // TODO: Segments Segment Name -> names
+  const onImport = (e: ChangeEvent<HTMLInputElement>) => {
+    // file select
+    if (!e.target.files) {
+      return;
+    }
+    const file = e.target.files[0];
+    const reader = new FileReader();
+    reader.onload = (e: ProgressEvent<FileReader>) => {
+      const str = e.target?.result;
+      if (typeof str === "string") {
+        console.log(importSplitsXml(str));
+      }
+    };
+    reader.readAsText(file);
   };
 
   const onSubmit = async () => {
@@ -228,10 +236,10 @@ export default function App(): ReactElement {
           <h2>Input Configuration</h2>
           <div className="output-container">
             <div className="row">
-              <ArrowButton
-                text="Import Splits"
+              <input
+                type="file"
                 id="import-button"
-                onClick={onImport}
+                onChange={onImport}
               />
               <ArrowButton
                 text="Generate"
