@@ -219,25 +219,26 @@ export default function App(): ReactElement {
           <h2>Input Configuration</h2>
           <div className="output-container">
             <div className="row">
-              <Suspense fallback={<div>Loading category select...</div>}>
-                <CategorySelect
-                  id="categories"
-                  onChange={onCategorySelect}
-                  data={state.categories}
-                  defaultValue={getCategoryDefinition(builtin ?? "") ?? null}
-                />
-              </Suspense>
               <ArrowButton
                 text="Generate"
                 id="submit-button"
                 onClick={onSubmit}
               />
               <ShareButton
+                text="Share"
                 id="share-button"
                 onClick={onShare}
                 disabled={state.shareButtonDisabled}
               />
             </div>
+            <Suspense fallback={<div>Loading category select...</div>}>
+              <CategorySelect
+                id="categories"
+                onChange={onCategorySelect}
+                data={state.categories}
+                defaultValue={getCategoryDefinition(builtin ?? "") ?? null}
+              />
+            </Suspense>
             <Suspense fallback={<div>Loading split config editor...</div>}>
               <SplitConfigEditor
                 defaultValue={state.configInput}
