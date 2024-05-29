@@ -245,34 +245,34 @@ export function importSplitsXml(str: string) : Config {
   const parser = new DOMParser();
   const xmlDoc = parser.parseFromString(str, "text/xml");
   // GameName, CategoryName -> gameName, categoryName
-  const gameName = xmlDoc.getElementsByTagName("GameName")[0].textContent || "";
-  const categoryName = xmlDoc.getElementsByTagName("CategoryName")[0].textContent || "";
+  const gameName = xmlDoc.getElementsByTagName("GameName")[0].textContent?.trim() || "";
+  const categoryName = xmlDoc.getElementsByTagName("CategoryName")[0].textContent?.trim() || "";
   // Metadata Variables -> variables
   const variablesVariables = xmlDoc.getElementsByTagName("Variables")[0].getElementsByTagName("Variable");
   var variables: Record<string, string> = {};
   for (var i = 0; i < variablesVariables.length; i++) {
     const variableName = variablesVariables[i].getAttribute("name");
     if (variableName) {
-      variables[variableName] = variablesVariables[i].textContent || "";
+      variables[variableName] = variablesVariables[i].textContent?.trim() || "";
     }
   }
   // AutoSplitterSettings -> startTriggeringAutosplit, splitIds, endTriggeringAutosplit
   const autoSplitterSettings = xmlDoc.getElementsByTagName("AutoSplitterSettings")[0];
-  const ordered = autoSplitterSettings.getElementsByTagName("Ordered")[0].textContent != "False";
-  const startTriggeringAutosplit = autoSplitterSettings.getElementsByTagName("AutosplitStartRuns")[0].textContent || undefined;
+  const ordered = autoSplitterSettings.getElementsByTagName("Ordered")[0].textContent?.trim() != "False";
+  const startTriggeringAutosplit = autoSplitterSettings.getElementsByTagName("AutosplitStartRuns")[0].textContent?.trim() || "";
   var splitIds: string[] = [];
   autoSplitterSettings.getElementsByTagName("Splits")[0].childNodes.forEach((c) => {
     if (c.nodeName === "Split") {
-      splitIds.push(c.textContent || "");
+      splitIds.push(c.textContent?.trim() || "");
     }
   });
-  const endTriggeringAutosplit = autoSplitterSettings.getElementsByTagName("AutosplitEndRuns")[0].textContent != "False";
+  const endTriggeringAutosplit = autoSplitterSettings.getElementsByTagName("AutosplitEndRuns")[0].textContent?.trim() != "False";
   // Segments Segment Name -> names, endingSplit name
   const segments = xmlDoc.getElementsByTagName("Segments")[0].getElementsByTagName("Segment");
   var names: Record<string, Array<string>> = {};
   var endingSplit: { name?: string; } = {};
   for (var i = 0; i < segments.length; i++) {
-    let segmentName = segments[i].getElementsByTagName("Name")[0].textContent || "";
+    let segmentName = segments[i].getElementsByTagName("Name")[0].textContent?.trim() || "";
     if (i < splitIds.length) {
       if (!names[splitIds[i]]) {
         names[splitIds[i]] = [];
@@ -286,7 +286,7 @@ export function importSplitsXml(str: string) : Config {
     gameName,
     categoryName,
     ordered,
-    startTriggeringAutosplit,
+    startTriggeringAutosplit: startTriggeringAutosplit === "" ? undefined : startTriggeringAutosplit,
     splitIds,
     endTriggeringAutosplit,
     names,

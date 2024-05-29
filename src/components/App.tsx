@@ -144,7 +144,11 @@ export default function App(): ReactElement {
     reader.onload = (e: ProgressEvent<FileReader>) => {
       const str = e.target?.result;
       if (typeof str === "string") {
-        console.log(importSplitsXml(str));
+        const jsonConfig = importSplitsXml(str);
+        setState({
+          ...state,
+          configInput: JSON.stringify(jsonConfig, null, 4),
+        });
       }
     };
     reader.readAsText(file);
