@@ -133,6 +133,15 @@ export default function App(): ReactElement {
     return JSON5.parse<Config>(state.configInput);
   };
 
+  const onImport = async () => {
+    // TODO: file select
+    // TODO: xml parse
+    // TODO: GameName, CategoryName -> gameName, categoryName
+    // TODO: Metadata Variables -> variables
+    // TODO: AutoSplitterSettings -> startTriggeringAutosplit, splitIds, endTriggeringAutosplit
+    // TODO: Segments Segment Name -> names
+  };
+
   const onSubmit = async () => {
     let configObject;
     try {
@@ -219,6 +228,11 @@ export default function App(): ReactElement {
           <h2>Input Configuration</h2>
           <div className="output-container">
             <div className="row">
+              <ArrowButton
+                text="Import Splits"
+                id="import-button"
+                onClick={onImport}
+              />
               <ArrowButton
                 text="Generate"
                 id="submit-button"
