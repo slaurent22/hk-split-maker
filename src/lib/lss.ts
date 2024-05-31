@@ -274,31 +274,63 @@ export function importSplitsXml(str: string) : Config {
   if (0 < startTriggeringAutosplitStr.length) {
     startTriggeringAutosplit = startTriggeringAutosplitStr;
   }
-  var splitIds: string[] = [];
+  // autosplitIds vs splitIds: autosplitIds do not contain "-" for subsplits, splitIds can
+  var autosplitIds: string[] = [];
   autoSplitterSettings.getElementsByTagName("Splits")[0].childNodes.forEach((c) => {
     if (c.nodeName === "Split") {
-      splitIds.push(c.textContent?.trim() || "");
+      autosplitIds.push(c.textContent?.trim() || "");
     }
   });
   const endTriggeringAutosplit = autoSplitterSettings.getElementsByTagName("AutosplitEndRuns")[0].textContent?.trim() == "True";
   // Segments Segment Name -> names, endingSplit name
   const segments = xmlDoc.getElementsByTagName("Segments")[0].getElementsByTagName("Segment");
-  var names: Record<string, Array<string>> = {};
+  // subsplitNames vs names: names do not contain "-" for subsplits, subsplitNames can
+  var subsplitNames: Record<string, Array<string>> = {};
   var endingSplitName: string = "";
   for (var i = 0; i < segments.length; i++) {
     let segmentName = segments[i].getElementsByTagName("Name")[0].textContent?.trim() || "";
-    if (i < splitIds.length) {
-      if (!names[splitIds[i]]) {
-        names[splitIds[i]] = [];
+    if (i < autosplitIds.length) {
+      if (!subsplitNames[autosplitIds[i]]) {
+        subsplitNames[autosplitIds[i]] = [];
       }
-      names[splitIds[i]].push(segmentName);
-    } else if (i === splitIds.length) {
+      subsplitNames[autosplitIds[i]].push(segmentName);
+    } else if (i === autosplitIds.length) {
       endingSplitName = segmentName;
     }
   }
   var endingSplit: { name?: string; } | undefined = undefined;
   if (0 < endingSplitName.length) {
     endingSplit = { name: endingSplitName };
+  }
+  // Deal with "-" subsplit markers
+  var splitIds: string[] = [];
+  for (var i = 0; i < autosplitIds.length; i++) {
+    splitIds.push(autosplitIds[i]);
+  }
+  var names: Record<string, string | string[]> = {};
+  for (var i = 0; i < autosplitIds.length; i++) {
+    const autosplitId = autosplitIds[i];
+    const subNames = subsplitNames[autosplitId];
+    var supNames = [];
+    for (var j = 0; j < subNames.length; j++) {
+      const subName = subNames[j];
+      var supName = "";
+      // TODO: this k thing isn't working, figure out what to replace it with
+      const k = supNames.length;
+      if (subName.startsWith("-")) {
+        supName = subName.substring(1);
+        if (j === k) {
+          splitIds[i] = "-" + autosplitId;
+        }
+      } else {
+        supName = subName;
+        if (j === k) {
+          splitIds[i] = "" + autosplitId;
+        }
+      }
+      supNames.push(supName);
+    }
+    names[autosplitId] = supNames;
   }
   return {
     gameName,
