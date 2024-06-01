@@ -252,14 +252,20 @@ export function importSplitsXml(str: string): Config {
   const parser = new DOMParser();
   const xmlDoc = parser.parseFromString(str, "text/xml");
   // GameName, CategoryName -> gameName, categoryName
-  const gameName =
-    xmlDoc.getElementsByTagName("GameName")[0].textContent?.trim() || "";
-  const categoryName =
-    xmlDoc.getElementsByTagName("CategoryName")[0].textContent?.trim() || "";
+  const xmlDocGameName = xmlDoc.getElementsByTagName("GameName")[0];
+  if (!xmlDocGameName) {
+    throw new Error(`Failed to import splits: missing GameName`);
+  }
+  const gameName = xmlDocGameName.textContent?.trim() || "";
+  const xmlDocCategoryName = xmlDoc.getElementsByTagName("CategoryName")[0];
+  if (!xmlDocCategoryName) {
+    throw new Error(`Failed to import splits: missing CategoryName`);
+  }
+  const categoryName = xmlDocCategoryName.textContent?.trim() || "";
   // Metadata Variables -> variables
-  const xmlDocVariables = xmlDoc
-    .getElementsByTagName("Variables")[0]
-    .getElementsByTagName("Variable");
+  const xmlDocVariables0 = xmlDoc.getElementsByTagName("Variables")[0];
+  const xmlDocVariables =
+    xmlDocVariables0 && xmlDocVariables0.getElementsByTagName("Variable");
   const potentialVariables: Record<string, string> = {};
   let hasVariables = false;
   if (xmlDocVariables && xmlDocVariables.length > 0) {
@@ -276,47 +282,58 @@ export function importSplitsXml(str: string): Config {
   const autoSplitterSettings = xmlDoc.getElementsByTagName(
     "AutoSplitterSettings"
   )[0];
-  const orderedStr = autoSplitterSettings
-    .getElementsByTagName("Ordered")[0]
-    .textContent?.trim();
+  if (!autoSplitterSettings) {
+    throw new Error(`Failed to import splits: missing AutoSplitterSettings`);
+  }
+  const xmlDocOrdered = autoSplitterSettings.getElementsByTagName("Ordered")[0];
+  const orderedStr = xmlDocOrdered && xmlDocOrdered.textContent?.trim();
   let ordered: boolean | undefined;
   if (orderedStr === "True") {
     ordered = true;
   } else if (orderedStr === "False") {
     ordered = false;
   }
+  const autosplitStartRuns =
+    autoSplitterSettings.getElementsByTagName("AutosplitStartRuns")[0];
   const autoStart =
-    autoSplitterSettings
-      .getElementsByTagName("AutosplitStartRuns")[0]
-      .textContent?.trim() || "";
+    (autosplitStartRuns && autosplitStartRuns.textContent?.trim()) || "";
   // autosplitIds vs splitIds: autosplitIds do not contain "-" for subsplits, splitIds can
   const parsedSplitIds: ParsedSplitId[] = [];
-  autoSplitterSettings
-    .getElementsByTagName("Splits")[0]
-    .childNodes.forEach((c) => {
-      if (c.nodeName === "Split") {
-        const autosplitId = c.textContent?.trim() || "";
-        parsedSplitIds.push({
-          autosplitId,
-          subsplit: false,
-          name: "",
-          iconId: "",
-        });
-      }
-    });
+  const xmlDocSplits = autoSplitterSettings.getElementsByTagName("Splits")[0];
+  if (!xmlDocSplits) {
+    throw new Error(
+      `Failed to import splits: missing AutoSplitterSettings Splits`
+    );
+  }
+  xmlDocSplits.childNodes.forEach((c) => {
+    if (c.nodeName === "Split") {
+      const autosplitId = c.textContent?.trim() || "";
+      parsedSplitIds.push({
+        autosplitId,
+        subsplit: false,
+        name: "",
+        iconId: "",
+      });
+    }
+  });
+  const autosplitEndRuns =
+    autoSplitterSettings.getElementsByTagName("AutosplitEndRuns")[0];
   const endTriggeringAutosplit =
-    autoSplitterSettings
-      .getElementsByTagName("AutosplitEndRuns")[0]
-      .textContent?.trim() == "True";
+    autosplitEndRuns && autosplitEndRuns.textContent?.trim() == "True";
   // Segments Segment Name -> names, endingSplit name
-  const segments = xmlDoc
-    .getElementsByTagName("Segments")[0]
-    .getElementsByTagName("Segment");
+  const xmlDocSegments0 = xmlDoc.getElementsByTagName("Segments")[0];
+  if (!xmlDocSegments0) {
+    throw new Error(`Failed to import splits: missing Segments`);
+  }
+  const segments = xmlDocSegments0.getElementsByTagName("Segment");
   // subsplitNames vs names: names do not contain "-" for subsplits, subsplitNames can
   let endName = "";
   for (let i = 0; i < segments.length; i++) {
-    const subsegmentName =
-      segments[i].getElementsByTagName("Name")[0].textContent?.trim() || "";
+    const xmlDocName = segments[i].getElementsByTagName("Name")[0];
+    if (!xmlDocName) {
+      throw new Error(`Failed to import splits: missing Segment Name`);
+    }
+    const subsegmentName = xmlDocName.textContent?.trim() || "";
     if (i < parsedSplitIds.length) {
       if (subsegmentName.startsWith("-")) {
         parsedSplitIds[i].subsplit = true;

@@ -145,11 +145,19 @@ export default function App(): ReactElement {
     reader.onload = (pe: ProgressEvent<FileReader>) => {
       const fileContents = pe.target?.result;
       if (typeof fileContents === "string") {
-        const jsonConfig = importSplitsXml(fileContents);
-        setState({
-          ...state,
-          configInput: JSON.stringify(jsonConfig, null, 4),
-        });
+        try {
+          const jsonConfig = importSplitsXml(fileContents);
+          setState({
+            ...state,
+            configInput: JSON.stringify(jsonConfig, null, 4),
+          });
+        } catch (e) {
+          console.error(e);
+          alert(
+            "Failed to import splits. The error has been logged to console.error"
+          );
+          return;
+        }
       }
     };
     reader.readAsText(file);
