@@ -1,11 +1,11 @@
-button.arrow-button .arrow-right {
+.arrow-button .arrow-right {
   transform: rotate(180deg);
 }
 
-button.arrow-button .arrow {
+.arrow-button .arrow {
   height: 24px;
 }
 
-button.arrow-button[disabled] .arrow {
+.arrow-button[disabled] .arrow {
   filter: brightness(45%);
 }

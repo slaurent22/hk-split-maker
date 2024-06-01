@@ -19,6 +19,8 @@ import Instructions from "./Instructions";
 import AlertBanner from "./AlertBanner";
 import Footer from "./Footer";
 import ShareButton from "./ShareButton";
+import arrow from "../asset/image/arrow.png";
+import classNames from "classnames";
 interface AppState {
   configInput: string;
   splitOutput: string;
@@ -240,11 +242,14 @@ export default function App(): ReactElement {
           <h2>Input Configuration</h2>
           <div className="output-container">
             <div className="row">
-              <input
-                type="file"
-                id="import-button"
-                onChange={onImport}
-              />
+              <label htmlFor="import-input">
+                <input type="file" id="import-input" onChange={onImport}/>
+                <div className={classNames("hksm-button", "arrow-button")}>
+                  <img src={arrow} alt="decorative arrow" className="arrow arrow-left"/>
+                  <span className="button-text">Import Splits</span>
+                  <img src={arrow} alt="decorative arrow" className="arrow arrow-right"/>
+                </div>
+              </label>
               <ArrowButton
                 text="Generate"
                 id="submit-button"
