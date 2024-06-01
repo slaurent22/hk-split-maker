@@ -324,11 +324,19 @@ export function importSplitsXml(str: string) : Config {
       uniqueAutosplitIds.push(autosplitId);
     }
   });
+  const splitDefinitions = parseSplitsDefinitions();
   var names: Record<string, string | string[]> = {};
   for (var i = 0; i < uniqueAutosplitIds.length; i++) {
     const a = uniqueAutosplitIds[i];
     const aNames = parsedSplitIds.filter(({autosplitId}) => autosplitId === a).map(({name}) => name);
-    names[a] = aNames;
+    const splitDefinition = splitDefinitions.get(a);
+    if (splitDefinition && aNames.every((aName) => aName === splitDefinition.name)) {
+      // do nothing
+    } else if (aNames.length === 1) {
+      names[a] = aNames[0];
+    } else {
+      names[a] = aNames;
+    }
   }
   return {
     gameName,
