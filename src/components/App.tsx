@@ -9,7 +9,6 @@ import React, {
 import { saveAs } from "file-saver";
 import JSON5 from "json5";
 import useQueryString, { QueryStringResult } from "use-query-string";
-import classNames from "classnames";
 import { getCategoryConfigJSON, getCategoryDirectory } from "../lib/categories";
 import { CategoryDefinition } from "../asset/hollowknight/categories/category-directory.json";
 import { Config, createSplitsXml, importSplitsXml } from "../lib/lss";
@@ -144,9 +143,9 @@ export default function App(): ReactElement {
     const file = ce.target.files[0];
     const reader = new FileReader();
     reader.onload = (pe: ProgressEvent<FileReader>) => {
-      const str = pe.target?.result;
-      if (typeof str === "string") {
-        const jsonConfig = importSplitsXml(str);
+      const fileContents = pe.target?.result;
+      if (typeof fileContents === "string") {
+        const jsonConfig = importSplitsXml(fileContents);
         setState({
           ...state,
           configInput: JSON.stringify(jsonConfig, null, 4),
@@ -244,7 +243,7 @@ export default function App(): ReactElement {
             <div className="row">
               <label htmlFor="import-input">
                 <input type="file" id="import-input" onChange={onImport} />
-                <div className={classNames("hksm-button", "arrow-button")}>
+                <div className="hksm-button arrow-button">
                   <img
                     src={arrow}
                     alt="decorative arrow"
@@ -264,7 +263,6 @@ export default function App(): ReactElement {
                 onClick={onSubmit}
               />
               <ShareButton
-                text="Share"
                 id="share-button"
                 onClick={onShare}
                 disabled={state.shareButtonDisabled}
