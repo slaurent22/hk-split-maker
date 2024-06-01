@@ -243,11 +243,19 @@ export default function App(): ReactElement {
           <div className="output-container">
             <div className="row">
               <label htmlFor="import-input">
-                <input type="file" id="import-input" onChange={onImport}/>
+                <input type="file" id="import-input" onChange={onImport} />
                 <div className={classNames("hksm-button", "arrow-button")}>
-                  <img src={arrow} alt="decorative arrow" className="arrow arrow-left"/>
+                  <img
+                    src={arrow}
+                    alt="decorative arrow"
+                    className="arrow arrow-left"
+                  />
                   <span className="button-text">Import Splits</span>
-                  <img src={arrow} alt="decorative arrow" className="arrow arrow-right"/>
+                  <img
+                    src={arrow}
+                    alt="decorative arrow"
+                    className="arrow arrow-right"
+                  />
                 </div>
               </label>
               <ArrowButton

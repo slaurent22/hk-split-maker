@@ -9,7 +9,12 @@ interface Props {
   disabled?: boolean;
 }
 
-const ShareButton: React.FC<Props> = ({ text, id, onClick, disabled }: Props) => {
+const ShareButton: React.FC<Props> = ({
+  text,
+  id,
+  onClick,
+  disabled,
+}: Props) => {
   return (
     <HKSMButton onClick={onClick} id={id} disabled={disabled ?? false}>
       <span className="button-text">{text}</span>
