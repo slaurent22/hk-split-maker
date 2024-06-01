@@ -13,7 +13,6 @@ import { getCategoryConfigJSON, getCategoryDirectory } from "../lib/categories";
 import { CategoryDefinition } from "../asset/hollowknight/categories/category-directory.json";
 import { Config, createSplitsXml, importSplitsXml } from "../lib/lss";
 import CategoryAnyPercent from "../asset/hollowknight/categories/any.json";
-import arrow from "../asset/image/arrow.png";
 import ArrowButton from "./ArrowButton";
 import Header from "./Header";
 import Instructions from "./Instructions";
@@ -135,6 +134,10 @@ export default function App(): ReactElement {
     return JSON5.parse<Config>(state.configInput);
   };
 
+  const onImportButton = () => {
+    document.getElementById("import-input")?.click();
+  };
+
   const onImport = (ce: ChangeEvent<HTMLInputElement>) => {
     // file select
     if (!ce.target.files) {
@@ -249,22 +252,12 @@ export default function App(): ReactElement {
           <h2>Input Configuration</h2>
           <div className="output-container">
             <div className="row">
-              <label htmlFor="import-input">
-                <input type="file" id="import-input" onChange={onImport} />
-                <div className="hksm-button arrow-button" id="import-div">
-                  <img
-                    src={arrow}
-                    alt="decorative arrow"
-                    className="arrow arrow-left"
-                  />
-                  <span className="button-text">Import Splits</span>
-                  <img
-                    src={arrow}
-                    alt="decorative arrow"
-                    className="arrow arrow-right"
-                  />
-                </div>
-              </label>
+              <input type="file" id="import-input" onChange={onImport} />
+              <ArrowButton
+                text="Import Splits"
+                id="import-button"
+                onClick={onImportButton}
+              />
               <ArrowButton
                 text="Generate"
                 id="submit-button"
