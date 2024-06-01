@@ -18,6 +18,13 @@ export interface Config {
   variables?: Record<string, string>;
 }
 
+interface ParsedSplitId {
+    autosplitId: string;
+    subsplit: boolean;
+    name: string;
+    iconId: string;
+}
+
 const MANUAL_SPLIT_RE = /%(?<name>.+)/;
 export const SUB_SPLIT_RE = /-(?<name>.+)/;
 
@@ -91,7 +98,7 @@ export async function createSplitsXml(config: Config): Promise<string> {
   const liveSplitIconData = new Map<string, string>();
 
   const splitIdCount = new Map<string, number>();
-  const parsedSplitIds = splitIds.map((splitId) => {
+  const parsedSplitIds: ParsedSplitId[] = splitIds.map((splitId) => {
     let autosplitId = splitId;
     let subsplit = false;
     let name = "";
