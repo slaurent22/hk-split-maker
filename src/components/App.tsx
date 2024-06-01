@@ -251,7 +251,7 @@ export default function App(): ReactElement {
             <div className="row">
               <label htmlFor="import-input">
                 <input type="file" id="import-input" onChange={onImport} />
-                <div className="hksm-button arrow-button">
+                <div className="hksm-button arrow-button" id="import-div">
                   <img
                     src={arrow}
                     alt="decorative arrow"
