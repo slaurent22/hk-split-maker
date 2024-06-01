@@ -9,18 +9,18 @@ import React, {
 import { saveAs } from "file-saver";
 import JSON5 from "json5";
 import useQueryString, { QueryStringResult } from "use-query-string";
+import classNames from "classnames";
 import { getCategoryConfigJSON, getCategoryDirectory } from "../lib/categories";
 import { CategoryDefinition } from "../asset/hollowknight/categories/category-directory.json";
 import { Config, createSplitsXml, importSplitsXml } from "../lib/lss";
 import CategoryAnyPercent from "../asset/hollowknight/categories/any.json";
+import arrow from "../asset/image/arrow.png";
 import ArrowButton from "./ArrowButton";
 import Header from "./Header";
 import Instructions from "./Instructions";
 import AlertBanner from "./AlertBanner";
 import Footer from "./Footer";
 import ShareButton from "./ShareButton";
-import arrow from "../asset/image/arrow.png";
-import classNames from "classnames";
 interface AppState {
   configInput: string;
   splitOutput: string;
