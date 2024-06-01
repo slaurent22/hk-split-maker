@@ -256,10 +256,11 @@ export function importSplitsXml(str: string) : Config {
   const categoryName = xmlDoc.getElementsByTagName("CategoryName")[0].textContent?.trim() || "";
   // Metadata Variables -> variables
   const variablesVariables = xmlDoc.getElementsByTagName("Variables")[0].getElementsByTagName("Variable");
-  var variables: Record<string, string> | undefined = undefined;
-  if (variablesVariables && 0 < variablesVariables.length) {
-    var vs: Record<string, string> = {};
-    for (var i = 0; i < variablesVariables.length; i++) {
+  let variables: Record<string, string> | undefined;
+  if (variablesVariables && variablesVariables.length > 0) {
+    // vs is mutated as an object, but not as a variable
+    const vs: Record<string, string> = {};
+    for (let i = 0; i < variablesVariables.length; i++) {
       const variableName = variablesVariables[i].getAttribute("name");
       if (variableName) {
         vs[variableName] = variablesVariables[i].textContent?.trim() || "";
@@ -270,19 +271,20 @@ export function importSplitsXml(str: string) : Config {
   // AutoSplitterSettings -> startTriggeringAutosplit, splitIds, endTriggeringAutosplit
   const autoSplitterSettings = xmlDoc.getElementsByTagName("AutoSplitterSettings")[0];
   const orderedStr = autoSplitterSettings.getElementsByTagName("Ordered")[0].textContent?.trim();
-  var ordered : boolean | undefined = undefined;
+  let ordered : boolean | undefined;
   if (orderedStr === "True") {
     ordered = true;
   } else if (orderedStr === "False") {
     ordered = false;
   }
   const startTriggeringAutosplitStr = autoSplitterSettings.getElementsByTagName("AutosplitStartRuns")[0].textContent?.trim() || "";
-  var startTriggeringAutosplit: string | undefined;
-  if (0 < startTriggeringAutosplitStr.length) {
+  let startTriggeringAutosplit: string | undefined;
+  if (startTriggeringAutosplitStr.length > 0) {
     startTriggeringAutosplit = startTriggeringAutosplitStr;
   }
   // autosplitIds vs splitIds: autosplitIds do not contain "-" for subsplits, splitIds can
-  var parsedSplitIds: ParsedSplitId[] = [];
+  // parsedSplitIds is mutated as an object, but not as a variable
+  const parsedSplitIds: ParsedSplitId[] = [];
   autoSplitterSettings.getElementsByTagName("Splits")[0].childNodes.forEach((c) => {
     if (c.nodeName === "Split") {
       const autosplitId = c.textContent?.trim() || "";
@@ -293,8 +295,8 @@ export function importSplitsXml(str: string) : Config {
   // Segments Segment Name -> names, endingSplit name
   const segments = xmlDoc.getElementsByTagName("Segments")[0].getElementsByTagName("Segment");
   // subsplitNames vs names: names do not contain "-" for subsplits, subsplitNames can
-  var endingSplitName: string = "";
-  for (var i = 0; i < segments.length; i++) {
+  let endingSplitName = "";
+  for (let i = 0; i < segments.length; i++) {
     const subsegmentName = segments[i].getElementsByTagName("Name")[0].textContent?.trim() || "";
     if (i < parsedSplitIds.length) {
       if (subsegmentName.startsWith("-")) {
@@ -309,25 +311,27 @@ export function importSplitsXml(str: string) : Config {
       endingSplitName = subsegmentName;
     }
   }
-  var endingSplit: { name?: string; } | undefined = undefined;
-  if (0 < endingSplitName.length) {
+  let endingSplit: { name?: string; } | undefined;
+  if (endingSplitName.length > 0) {
     endingSplit = { name: endingSplitName };
   }
   // Deal with "-" subsplit markers
-  var splitIds: string[] = parsedSplitIds.map(({autosplitId, subsplit}) => {
+  const splitIds: string[] = parsedSplitIds.map(({autosplitId, subsplit}) => {
     const namePrefix = subsplit ? "-" : "";
     return `${namePrefix}${autosplitId}`;
   });
-  var uniqueAutosplitIds: string[] = [];
+  // uniqueAutosplitIds is mutated as an object, but not as a variable
+  const uniqueAutosplitIds: string[] = [];
   parsedSplitIds.forEach(({autosplitId}) => {
     if (!uniqueAutosplitIds.includes(autosplitId)) {
       uniqueAutosplitIds.push(autosplitId);
     }
   });
   const splitDefinitions = parseSplitsDefinitions();
-  var ns: Record<string, string | string[]> = {};
-  var anyNames = false;
-  for (var i = 0; i < uniqueAutosplitIds.length; i++) {
+  // ns is mutated as an object, but not as a variable
+  const ns: Record<string, string | string[]> = {};
+  let anyNames = false;
+  for (let i = 0; i < uniqueAutosplitIds.length; i++) {
     const a = uniqueAutosplitIds[i];
     const aNames = parsedSplitIds.filter(({autosplitId}) => autosplitId === a).map(({name}) => name);
     const splitDefinition = splitDefinitions.get(a);

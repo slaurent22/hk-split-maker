@@ -136,15 +136,15 @@ export default function App(): ReactElement {
     return JSON5.parse<Config>(state.configInput);
   };
 
-  const onImport = (e: ChangeEvent<HTMLInputElement>) => {
+  const onImport = (ce: ChangeEvent<HTMLInputElement>) => {
     // file select
-    if (!e.target.files) {
+    if (!ce.target.files) {
       return;
     }
-    const file = e.target.files[0];
+    const file = ce.target.files[0];
     const reader = new FileReader();
-    reader.onload = (e: ProgressEvent<FileReader>) => {
-      const str = e.target?.result;
+    reader.onload = (pe: ProgressEvent<FileReader>) => {
+      const str = pe.target?.result;
       if (typeof str === "string") {
         const jsonConfig = importSplitsXml(str);
         setState({
