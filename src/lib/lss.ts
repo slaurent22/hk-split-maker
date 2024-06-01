@@ -325,7 +325,8 @@ export function importSplitsXml(str: string) : Config {
     }
   });
   const splitDefinitions = parseSplitsDefinitions();
-  var names: Record<string, string | string[]> = {};
+  var ns: Record<string, string | string[]> = {};
+  var anyNames = false;
   for (var i = 0; i < uniqueAutosplitIds.length; i++) {
     const a = uniqueAutosplitIds[i];
     const aNames = parsedSplitIds.filter(({autosplitId}) => autosplitId === a).map(({name}) => name);
@@ -333,11 +334,14 @@ export function importSplitsXml(str: string) : Config {
     if (splitDefinition && aNames.every((aName) => aName === splitDefinition.name)) {
       // do nothing
     } else if (aNames.length === 1) {
-      names[a] = aNames[0];
+      ns[a] = aNames[0];
+      anyNames = true;
     } else {
-      names[a] = aNames;
+      ns[a] = aNames;
+      anyNames = true;
     }
   }
+  const names = anyNames ? ns : undefined;
   return {
     gameName,
     categoryName,
