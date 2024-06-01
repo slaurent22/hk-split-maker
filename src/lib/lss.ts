@@ -352,12 +352,9 @@ export function importSplitsXml(str: string): Config {
     const namePrefix = subsplit ? "-" : "";
     return `${namePrefix}${autosplitId}`;
   });
-  const uniqueAutosplitIds: string[] = [];
-  parsedSplitIds.forEach(({ autosplitId }) => {
-    if (!uniqueAutosplitIds.includes(autosplitId)) {
-      uniqueAutosplitIds.push(autosplitId);
-    }
-  });
+  const uniqueAutosplitIds: Set<string> = new Set(
+    parsedSplitIds.map(({ autosplitId }) => autosplitId)
+  );
   const splitDefinitions = parseSplitsDefinitions();
   const potentialNameOverrides: Record<string, string | string[]> = {};
   let hasNameOverrides = false;
