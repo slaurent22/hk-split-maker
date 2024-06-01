@@ -260,16 +260,17 @@ export function importSplitsXml(str: string): Config {
   const xmlDocVariables = xmlDoc
     .getElementsByTagName("Variables")[0]
     .getElementsByTagName("Variable");
-  let variables: Record<string, string> | undefined;
+  const potentialVariables: Record<string, string> = {};
+  let hasVariables = false;
   if (xmlDocVariables && xmlDocVariables.length > 0) {
-    const vs: Record<string, string> = {};
     for (let i = 0; i < xmlDocVariables.length; i++) {
       const variableName = xmlDocVariables[i].getAttribute("name");
       if (variableName) {
-        vs[variableName] = xmlDocVariables[i].textContent?.trim() || "";
+        potentialVariables[variableName] =
+          xmlDocVariables[i].textContent?.trim() || "";
+        hasVariables = true;
       }
     }
-    variables = vs;
   }
   // AutoSplitterSettings -> startTriggeringAutosplit, splitIds, endTriggeringAutosplit
   const autoSplitterSettings = xmlDoc.getElementsByTagName(
@@ -284,14 +285,10 @@ export function importSplitsXml(str: string): Config {
   } else if (orderedStr === "False") {
     ordered = false;
   }
-  const startTriggeringAutosplitStr =
+  const autoStart =
     autoSplitterSettings
       .getElementsByTagName("AutosplitStartRuns")[0]
       .textContent?.trim() || "";
-  let startTriggeringAutosplit: string | undefined;
-  if (startTriggeringAutosplitStr.length > 0) {
-    startTriggeringAutosplit = startTriggeringAutosplitStr;
-  }
   // autosplitIds vs splitIds: autosplitIds do not contain "-" for subsplits, splitIds can
   const parsedSplitIds: ParsedSplitId[] = [];
   autoSplitterSettings
@@ -316,7 +313,7 @@ export function importSplitsXml(str: string): Config {
     .getElementsByTagName("Segments")[0]
     .getElementsByTagName("Segment");
   // subsplitNames vs names: names do not contain "-" for subsplits, subsplitNames can
-  let endingSplitName = "";
+  let endName = "";
   for (let i = 0; i < segments.length; i++) {
     const subsegmentName =
       segments[i].getElementsByTagName("Name")[0].textContent?.trim() || "";
@@ -330,12 +327,8 @@ export function importSplitsXml(str: string): Config {
       }
     } else if (i === parsedSplitIds.length) {
       // endingSplit cannot be a subsplit
-      endingSplitName = subsegmentName;
+      endName = subsegmentName;
     }
-  }
-  let endingSplit: { name?: string } | undefined;
-  if (endingSplitName.length > 0) {
-    endingSplit = { name: endingSplitName };
   }
   // Deal with "-" subsplit markers
   const splitIds: string[] = parsedSplitIds.map(({ autosplitId, subsplit }) => {
@@ -369,16 +362,15 @@ export function importSplitsXml(str: string): Config {
       hasNameOverrides = true;
     }
   });
-  const names = hasNameOverrides ? potentialNameOverrides : undefined;
   return {
     gameName,
     categoryName,
-    variables,
+    variables: hasVariables ? potentialVariables : undefined,
     ordered,
-    startTriggeringAutosplit,
+    startTriggeringAutosplit: autoStart.length > 0 ? autoStart : undefined,
     splitIds,
     endTriggeringAutosplit,
-    names,
-    endingSplit,
+    names: hasNameOverrides ? potentialNameOverrides : undefined,
+    endingSplit: endName.length > 0 ? { name: endName } : undefined,
   };
 }
