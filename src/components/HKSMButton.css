@@ -1,4 +1,4 @@
-.hksm-button {
+button.hksm-button {
   background: none;
   color: white;
   font-weight: bold;
@@ -14,15 +14,15 @@
   height: 38px;
 }
 
-.hksm-button:hover {
+button.hksm-button:hover {
   border-color: grey;
 }
 
-.hksm-button .button-text {
+button.hksm-button .button-text {
   margin: 0 8px;
 }
 
-.hksm-button[disabled] {
+button.hksm-button[disabled] {
   color: grey;
   border-color: grey;
   cursor: default;
