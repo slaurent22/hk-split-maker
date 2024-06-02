@@ -287,11 +287,8 @@ export function importSplitsXml(str: string): Config {
   }
   const xmlDocOrdered = autoSplitterSettings.getElementsByTagName("Ordered")[0];
   const orderedStr = xmlDocOrdered && xmlDocOrdered.textContent?.trim();
-  let ordered: boolean | undefined;
-  if (orderedStr === "True") {
-    ordered = true;
-  } else if (orderedStr === "False") {
-    ordered = false;
+  if (orderedStr != "True") {
+    throw new Error(`Failed to import splits: Ordered must be True to import`);
   }
   const autosplitStartRuns =
     autoSplitterSettings.getElementsByTagName("AutosplitStartRuns")[0];
@@ -380,7 +377,7 @@ export function importSplitsXml(str: string): Config {
     gameName,
     categoryName,
     variables: hasVariables ? potentialVariables : undefined,
-    ordered,
+    ordered: true,
     startTriggeringAutosplit: autoStart.length > 0 ? autoStart : undefined,
     splitIds,
     endTriggeringAutosplit,
