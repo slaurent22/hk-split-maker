@@ -18,6 +18,13 @@ export interface Config {
   variables?: Record<string, string>;
 }
 
+interface ParsedSplitId {
+  autosplitId: string;
+  subsplit: boolean;
+  name: string;
+  iconId: string;
+}
+
 const MANUAL_SPLIT_RE = /%(?<name>.+)/;
 export const SUB_SPLIT_RE = /-(?<name>.+)/;
 
@@ -91,7 +98,7 @@ export async function createSplitsXml(config: Config): Promise<string> {
   const liveSplitIconData = new Map<string, string>();
 
   const splitIdCount = new Map<string, number>();
-  const parsedSplitIds = splitIds.map((splitId) => {
+  const parsedSplitIds: ParsedSplitId[] = splitIds.map((splitId) => {
     let autosplitId = splitId;
     let subsplit = false;
     let name = "";
@@ -238,4 +245,143 @@ export async function createSplitsXml(config: Config): Promise<string> {
       indent: "  ",
     }
   );
+}
+
+export function importSplitsXml(str: string): Config {
+  // xml parse
+  const parser = new DOMParser();
+  const xmlDoc = parser.parseFromString(str, "text/xml");
+  // GameName, CategoryName -> gameName, categoryName
+  const xmlDocGameName = xmlDoc.getElementsByTagName("GameName")[0];
+  if (!xmlDocGameName) {
+    throw new Error(`Failed to import splits: missing GameName`);
+  }
+  const gameName = xmlDocGameName.textContent?.trim() || "";
+  const xmlDocCategoryName = xmlDoc.getElementsByTagName("CategoryName")[0];
+  if (!xmlDocCategoryName) {
+    throw new Error(`Failed to import splits: missing CategoryName`);
+  }
+  const categoryName = xmlDocCategoryName.textContent?.trim() || "";
+  // Metadata Variables -> variables
+  const xmlDocVariables0 = xmlDoc.getElementsByTagName("Variables")[0];
+  const xmlDocVariables =
+    xmlDocVariables0 && xmlDocVariables0.getElementsByTagName("Variable");
+  const potentialVariables: Record<string, string> = {};
+  let hasVariables = false;
+  if (xmlDocVariables && xmlDocVariables.length > 0) {
+    for (let i = 0; i < xmlDocVariables.length; i++) {
+      const variableName = xmlDocVariables[i].getAttribute("name");
+      if (variableName) {
+        potentialVariables[variableName] =
+          xmlDocVariables[i].textContent?.trim() || "";
+        hasVariables = true;
+      }
+    }
+  }
+  // AutoSplitterSettings -> startTriggeringAutosplit, splitIds, endTriggeringAutosplit
+  const autoSplitterSettings = xmlDoc.getElementsByTagName(
+    "AutoSplitterSettings"
+  )[0];
+  if (!autoSplitterSettings) {
+    throw new Error(`Failed to import splits: missing AutoSplitterSettings`);
+  }
+  const xmlDocOrdered = autoSplitterSettings.getElementsByTagName("Ordered")[0];
+  const orderedStr = xmlDocOrdered && xmlDocOrdered.textContent?.trim();
+  if (orderedStr != "True") {
+    throw new Error(`Failed to import splits: Ordered must be True to import`);
+  }
+  const autosplitStartRuns =
+    autoSplitterSettings.getElementsByTagName("AutosplitStartRuns")[0];
+  const autoStart =
+    (autosplitStartRuns && autosplitStartRuns.textContent?.trim()) || "";
+  // autosplitIds vs splitIds: autosplitIds do not contain "-" for subsplits, splitIds can
+  const parsedSplitIds: ParsedSplitId[] = [];
+  const xmlDocSplits = autoSplitterSettings.getElementsByTagName("Splits")[0];
+  if (!xmlDocSplits) {
+    throw new Error(
+      `Failed to import splits: missing AutoSplitterSettings Splits`
+    );
+  }
+  xmlDocSplits.childNodes.forEach((c) => {
+    if (c.nodeName === "Split") {
+      const autosplitId = c.textContent?.trim() || "";
+      parsedSplitIds.push({
+        autosplitId,
+        subsplit: false,
+        name: "",
+        iconId: "",
+      });
+    }
+  });
+  const autosplitEndRuns =
+    autoSplitterSettings.getElementsByTagName("AutosplitEndRuns")[0];
+  const endTriggeringAutosplit =
+    autosplitEndRuns && autosplitEndRuns.textContent?.trim() == "True";
+  // Segments Segment Name -> names, endingSplit name
+  const xmlDocSegments0 = xmlDoc.getElementsByTagName("Segments")[0];
+  if (!xmlDocSegments0) {
+    throw new Error(`Failed to import splits: missing Segments`);
+  }
+  const segments = xmlDocSegments0.getElementsByTagName("Segment");
+  // subsplitNames vs names: names do not contain "-" for subsplits, subsplitNames can
+  let endName = "";
+  for (let i = 0; i < segments.length; i++) {
+    const xmlDocName = segments[i].getElementsByTagName("Name")[0];
+    if (!xmlDocName) {
+      throw new Error(`Failed to import splits: missing Segment Name`);
+    }
+    const subsegmentName = xmlDocName.textContent?.trim() || "";
+    if (i < parsedSplitIds.length) {
+      if (subsegmentName.startsWith("-")) {
+        parsedSplitIds[i].subsplit = true;
+        parsedSplitIds[i].name = subsegmentName.substring(1);
+      } else {
+        parsedSplitIds[i].subsplit = false;
+        parsedSplitIds[i].name = subsegmentName;
+      }
+    } else if (i === parsedSplitIds.length) {
+      // endingSplit cannot be a subsplit
+      endName = subsegmentName;
+    }
+  }
+  // Deal with "-" subsplit markers
+  const splitIds: string[] = parsedSplitIds.map(({ autosplitId, subsplit }) => {
+    const namePrefix = subsplit ? "-" : "";
+    return `${namePrefix}${autosplitId}`;
+  });
+  const uniqueAutosplitIds: Set<string> = new Set(
+    parsedSplitIds.map(({ autosplitId }) => autosplitId)
+  );
+  const splitDefinitions = parseSplitsDefinitions();
+  const potentialNameOverrides: Record<string, string | string[]> = {};
+  let hasNameOverrides = false;
+  uniqueAutosplitIds.forEach((uniqueAutosplitId) => {
+    const splitNames = parsedSplitIds
+      .filter(({ autosplitId }) => autosplitId === uniqueAutosplitId)
+      .map(({ name }) => name);
+    const splitDefinition = splitDefinitions.get(uniqueAutosplitId);
+    if (
+      splitDefinition &&
+      splitNames.every((aName) => aName === splitDefinition.name)
+    ) {
+      // do nothing
+    } else if (splitNames.length === 1) {
+      potentialNameOverrides[uniqueAutosplitId] = splitNames[0];
+      hasNameOverrides = true;
+    } else {
+      potentialNameOverrides[uniqueAutosplitId] = splitNames;
+      hasNameOverrides = true;
+    }
+  });
+  return {
+    gameName,
+    categoryName,
+    variables: hasVariables ? potentialVariables : undefined,
+    ordered: true,
+    startTriggeringAutosplit: autoStart.length > 0 ? autoStart : undefined,
+    splitIds,
+    endTriggeringAutosplit,
+    names: hasNameOverrides ? potentialNameOverrides : undefined,
+    endingSplit: endName.length > 0 ? { name: endName } : undefined,
+  };
 }

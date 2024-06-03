@@ -11,6 +11,7 @@ interface Props {
 const ShareButton: React.FC<Props> = ({ id, onClick, disabled }: Props) => {
   return (
     <HKSMButton onClick={onClick} id={id} disabled={disabled ?? false}>
+      <span className="button-text">Share</span>
       <TiArrowForwardOutline size="1.5em" />
     </HKSMButton>
   );

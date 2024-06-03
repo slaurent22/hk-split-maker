@@ -4,13 +4,14 @@ import React, {
   ReactElement,
   lazy,
   Suspense,
+  ChangeEvent,
 } from "react";
 import { saveAs } from "file-saver";
 import JSON5 from "json5";
 import useQueryString, { QueryStringResult } from "use-query-string";
 import { getCategoryConfigJSON, getCategoryDirectory } from "../lib/categories";
 import { CategoryDefinition } from "../asset/hollowknight/categories/category-directory.json";
-import { Config, createSplitsXml } from "../lib/lss";
+import { Config, createSplitsXml, importSplitsXml } from "../lib/lss";
 import CategoryAnyPercent from "../asset/hollowknight/categories/any.json";
 import ArrowButton from "./ArrowButton";
 import Header from "./Header";
@@ -133,6 +134,38 @@ export default function App(): ReactElement {
     return JSON5.parse<Config>(state.configInput);
   };
 
+  const onImportButton = () => {
+    document.getElementById("import-input")?.click();
+  };
+
+  const onImport = (ce: ChangeEvent<HTMLInputElement>) => {
+    // file select
+    if (!ce.target.files) {
+      return;
+    }
+    const file = ce.target.files[0];
+    const reader = new FileReader();
+    reader.onload = (pe: ProgressEvent<FileReader>) => {
+      const fileContents = pe.target?.result;
+      if (typeof fileContents === "string") {
+        try {
+          const jsonConfig = importSplitsXml(fileContents);
+          setState({
+            ...state,
+            configInput: JSON.stringify(jsonConfig, null, 4),
+          });
+        } catch (e) {
+          console.error(e);
+          alert(
+            "Failed to import splits. The error has been logged to console.error"
+          );
+          return;
+        }
+      }
+    };
+    reader.readAsText(file);
+  };
+
   const onSubmit = async () => {
     let configObject;
     try {
@@ -219,14 +252,12 @@ export default function App(): ReactElement {
           <h2>Input Configuration</h2>
           <div className="output-container">
             <div className="row">
-              <Suspense fallback={<div>Loading category select...</div>}>
-                <CategorySelect
-                  id="categories"
-                  onChange={onCategorySelect}
-                  data={state.categories}
-                  defaultValue={getCategoryDefinition(builtin ?? "") ?? null}
-                />
-              </Suspense>
+              <input type="file" id="import-input" onChange={onImport} />
+              <ArrowButton
+                text="Import Splits"
+                id="import-button"
+                onClick={onImportButton}
+              />
               <ArrowButton
                 text="Generate"
                 id="submit-button"
@@ -238,6 +269,14 @@ export default function App(): ReactElement {
                 disabled={state.shareButtonDisabled}
               />
             </div>
+            <Suspense fallback={<div>Loading category select...</div>}>
+              <CategorySelect
+                id="categories"
+                onChange={onCategorySelect}
+                data={state.categories}
+                defaultValue={getCategoryDefinition(builtin ?? "") ?? null}
+              />
+            </Suspense>
             <Suspense fallback={<div>Loading split config editor...</div>}>
               <SplitConfigEditor
                 defaultValue={state.configInput}
