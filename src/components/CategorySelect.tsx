@@ -125,7 +125,7 @@ function CategorySelectSingleValue<
       {children}
       {rest.data.value === "pop" && <SchyPicture />}
       {rest.data.data?.routeNotesURL && (
-        <em style={{ float: "right" }}>Notes available</em>
+        <em style={{ float: "right" }}>Open for route notes</em>
       )}
     </components.SingleValue>
   );
