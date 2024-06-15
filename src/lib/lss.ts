@@ -374,14 +374,13 @@ export function importSplitsXml(str: string): Config {
     }
   });
   return {
-    gameName,
     categoryName,
-    variables: hasVariables ? potentialVariables : undefined,
-    ordered: true,
     startTriggeringAutosplit: autoStart.length > 0 ? autoStart : undefined,
     splitIds,
-    endTriggeringAutosplit,
     names: hasNameOverrides ? potentialNameOverrides : undefined,
+    endTriggeringAutosplit,
     endingSplit: endName.length > 0 ? { name: endName } : undefined,
+    gameName,
+    variables: hasVariables ? potentialVariables : undefined,
   };
 }
