@@ -1,6 +1,10 @@
 import xml from "../external-lib/xml.js";
 import { createLiveSplitIconData } from "./image-util";
-import { getIconURLs, parseSplitsDefinitions } from "./hollowknight-splits";
+import {
+  SplitDefinition,
+  getIconURLs,
+  parseSplitsDefinitions,
+} from "./hollowknight-splits";
 
 export interface Config {
   startTriggeringAutosplit?: string;
@@ -142,7 +146,10 @@ export async function createSplitsXml(config: Config): Promise<string> {
         nameTemplate = nameOverride[currentSplitIdCount];
       }
       if (nameTemplate) {
-        name = nameTemplate.replace("%s", splitDefinition.name);
+        name = nameTemplate.replace(
+          new RegExp("%s", "g"),
+          splitDefinition.name
+        );
       }
     }
 
@@ -245,6 +252,16 @@ export async function createSplitsXml(config: Config): Promise<string> {
       indent: "  ",
     }
   );
+}
+
+function transformNameOverrideForImport(
+  nameOverride: string,
+  splitDefinition?: SplitDefinition
+): string {
+  if (splitDefinition?.name && nameOverride.includes(splitDefinition?.name)) {
+    return nameOverride.replace(new RegExp(splitDefinition.name, "g"), "%s");
+  }
+  return nameOverride;
 }
 
 export function importSplitsXml(str: string): Config {
@@ -366,10 +383,19 @@ export function importSplitsXml(str: string): Config {
     ) {
       // do nothing
     } else if (splitNames.length === 1) {
-      potentialNameOverrides[uniqueAutosplitId] = splitNames[0];
+      potentialNameOverrides[uniqueAutosplitId] =
+        transformNameOverrideForImport(splitNames[0], splitDefinition);
       hasNameOverrides = true;
     } else {
-      potentialNameOverrides[uniqueAutosplitId] = splitNames;
+      const nameOverrides = [...splitNames];
+      nameOverrides.forEach((nameOverride, index) => {
+        nameOverrides[index] = transformNameOverrideForImport(
+          nameOverride,
+          splitDefinition
+        );
+      });
+
+      potentialNameOverrides[uniqueAutosplitId] = nameOverrides;
       hasNameOverrides = true;
     }
   });
