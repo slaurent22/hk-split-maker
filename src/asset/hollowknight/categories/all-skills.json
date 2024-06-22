@@ -6,27 +6,33 @@
         "MothwingCloak",
         "MenuClaw",
         "BlueLake",
+        "DreamNail",
         "MenuGorgeousHusk",
         "DashSlash",
         "ShadeSoul",
         "DesolateDive",
+        "BlackKnightTrans",
         "KingsStationStation",
         "CrystalHeart",
         "DescendingDark",
-        "DreamNail",
-        "Lurien",
+        "MenuIsmasTear",
+        "KingsBrand",
         "BasinEntry",
         "MonarchWings",
-        "KingsBrand",
+        "ShadeCloak",
         "CycloneSlash",
-        "Monomon",
+        "EnterAnyDream",
         "GreatSlash",
         "HowlingWraiths",
         "Hegemol",
-        "ShadeCloak",
-        "AbyssShriek",
-        "UnchainedHollowKnight"
+        "AbyssShriek"
     ],
+    "names": {
+        "EnterAnyDream": "Enter Monomon"
+    },
+    "icons": {
+        "EnterAnyDream": "Monomon"
+    },
     "endTriggeringAutosplit": false,
     "endingSplit": {
         "name": "Hollow Knight",

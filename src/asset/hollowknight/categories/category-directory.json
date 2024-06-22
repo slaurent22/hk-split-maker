@@ -76,14 +76,14 @@
             "fileName": "all-skills",
             "displayName": "All Skills",
             "data": {
-                "routeNotesURL": "https://pastebin.com/X2kivfc0"
+                "routeNotesURL": "https://pastebin.com/BdT76Erg"
             }
         },
         {
-            "fileName": "all-skills-2023-reroute",
-            "displayName": "All Skills (2023 Reroute)",
+            "fileName": "all-skills-old-route",
+            "displayName": "All Skills (Old Route)",
             "data": {
-                "routeNotesURL": "https://pastebin.com/BdT76Erg"
+                "routeNotesURL": "https://pastebin.com/X2kivfc0"
             }
         },
         {
