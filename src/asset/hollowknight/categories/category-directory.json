@@ -161,13 +161,6 @@
             }
         },
         {
-            "fileName": "low-te-dropless",
-            "displayName": "Low% True Ending Dropless",
-            "data": {
-                "routeNotesURL": "https://pastebin.com/pSCAkfgW"
-            }
-        },
-        {
             "fileName": "te",
             "displayName": "True Ending",
             "data": {
@@ -712,6 +705,13 @@
         {
             "fileName": "lbc",
             "displayName": "Lifeblood Core%"
+        },
+        {
+            "fileName": "low-te-dropless",
+            "displayName": "Low% True Ending Dropless",
+            "data": {
+                "routeNotesURL": "https://pastebin.com/pSCAkfgW"
+            }
         },
         {
             "fileName": "marissa-audience",
