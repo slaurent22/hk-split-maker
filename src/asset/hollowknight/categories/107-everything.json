@@ -211,7 +211,7 @@
         "MaskFragment3": "No Eyes Shard",
         "Vessel2": "King's Station Fragment",
         "AbyssShriek": "[2D] %s",
-        "EnterTMG": "[3D] %s",
+        "EnterTMG": "{Enter Grimm} [3D] Enter Grimm",
         "NotchGrimm": "Troupe Master Grimm",
         "OnObtainRancidEgg": "Grubfather (4 tosses after egg)",
         "MaskFragment5": "Brooding Mawlek Shard",
@@ -233,7 +233,7 @@
         "MaskFragment11": "Crossroads Shard",
         "Grub46": "(Grub 46) White Lady Grub",
         "Mask3": "Grey Mourner Shard",
-        "GrubberflysElegy": "[3D] %s",
+        "GrubberflysElegy": "{Grubberfly's Elegy} [3D] %s",
         "WhitePalaceEntry": "{White Palace} [2D] Enter White Palace",
         "VesselFragment8": "Basin Fragment",
         "Vessel3": "Sly"
