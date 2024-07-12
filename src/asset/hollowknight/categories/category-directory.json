@@ -8,21 +8,17 @@
             }
         },
         {
-            "fileName": "107-reroute",
-            "displayName": "107% AB (new route)"
-        },
-        {
             "fileName": "107-comsob",
             "displayName": "107% AB (comsob splits)",
             "data": {
-                "routeNotesURL": "https://pastebin.com/WxVp46sq"
+                "routeNotesURL": "https://pastebin.com/6qmm9gwv"
             }
         },
         {
             "fileName": "107-everything",
             "displayName": "107% AB (all splits)",
             "data": {
-                "routeNotesURL": "https://pastebin.com/WxVp46sq"
+                "routeNotesURL": "hhttps://pastebin.com/6qmm9gwv"
             }
         },
         {
