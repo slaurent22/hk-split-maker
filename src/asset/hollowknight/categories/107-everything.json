@@ -236,7 +236,7 @@
         "GrubberflysElegy": "{Grubberfly's Elegy} [3D] %s",
         "WhitePalaceEntry": "{White Palace} [2D] Enter White Palace",
         "VesselFragment8": "Basin Fragment",
-        "Vessel3": "Sly"
+        "Vessel3": "Sly",
         "EnterNKG": "Enter NKG"
     },
     "endTriggeringAutosplit": false,
