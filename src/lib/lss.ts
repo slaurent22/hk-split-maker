@@ -32,6 +32,31 @@ interface ParsedSplitId {
 const MANUAL_SPLIT_RE = /%(?<name>.+)/;
 export const SUB_SPLIT_RE = /-(?<name>.+)/;
 
+export function buildSplitsFileName(splitsConfig: Config): string {
+  const filename = (splitsConfig?.categoryName || "splits")
+    .toLowerCase() // Make file name compatible:
+    .replace(/['"]/g, "") // remove ' and "
+    .replace(/[^a-z0-9]/gi, "_") // replace non-alphanum with _
+    .replace(/^_+|_+$/g, "") // remove outer _
+    .replace(/^_+|_+$/g, "") // remove outer _
+    .replace(/_{2,}/g, "_"); // join multiple _
+  let suffix = "";
+  if (splitsConfig.variables?.glitch) {
+    const glitch = splitsConfig.variables?.glitch;
+    switch (glitch) {
+      case "No Main Menu Storage":
+        suffix = "-nmms";
+        break;
+      case "All Glitches":
+        suffix = "-ag";
+        break;
+      default:
+        break; // nmg categories don't need suffix
+    }
+  }
+  return `${filename}${suffix}`;
+}
+
 function boolRepr(bool: boolean): string {
   return bool ? "True" : "False";
 }

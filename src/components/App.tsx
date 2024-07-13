@@ -11,7 +11,12 @@ import JSON5 from "json5";
 import useQueryString, { QueryStringResult } from "use-query-string";
 import { getCategoryConfigJSON, getCategoryDirectory } from "../lib/categories";
 import { CategoryDefinition } from "../asset/hollowknight/categories/category-directory.json";
-import { Config, createSplitsXml, importSplitsXml } from "../lib/lss";
+import {
+  Config,
+  createSplitsXml,
+  importSplitsXml,
+  buildSplitsFileName,
+} from "../lib/lss";
 import CategoryAnyPercent from "../asset/hollowknight/categories/any.json";
 import ArrowButton from "./ArrowButton";
 import Header from "./Header";
@@ -199,31 +204,6 @@ export default function App(): ReactElement {
       ...state,
       splitOutput: output,
     });
-  };
-
-  const buildSplitsFileName = (splitsConfig: Config) => {
-    const filename = (splitsConfig?.categoryName || "splits")
-      .toLowerCase() // Make file name compatible:
-      .replace(/['"]/g, "") // remove ' and "
-      .replace(/[^a-z0-9]/gi, "_") // replace non-alphanum with _
-      .replace(/^_+|_+$/g, "") // remove outer _
-      .replace(/^_+|_+$/g, "") // remove outer _
-      .replace(/_{2,}/g, "_"); // join multiple _
-    let suffix = "";
-    if (splitsConfig.variables?.glitch) {
-      const glitch = splitsConfig.variables?.glitch;
-      switch (glitch) {
-        case "No Main Menu Storage":
-          suffix = "-nmms";
-          break;
-        case "All Glitches":
-          suffix = "-ag";
-          break;
-        default:
-          break; // nmg categories don't need suffix
-      }
-    }
-    return `${filename}${suffix}`;
   };
 
   const onDownload = (): void => {
