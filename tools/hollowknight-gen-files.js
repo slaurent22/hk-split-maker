@@ -375,6 +375,8 @@ function getUrl(id, qualifier) {
         return getUrl("HuskMiner", "Enemy");
       case "GreatHopper":
         return getUrl("GreatHopper", "Enemy");
+      case "GreatHuskSentry":
+        return getUrl("GreatHuskSentry", "Enemy");
       case "GorgeousHusk":
         return getUrl("GorgeousHusk", "Enemy");
       case "MenderBug":
@@ -567,6 +569,8 @@ function getUrl(id, qualifier) {
         return getUrl("ManualSplit", "Misc");
       case "SalubraExit":
         return getUrl("SalubrasBlessing", "Item");
+      case "SpireBenchExit":
+        return getUrl("Bench", "Misc");
     }
   }
 
