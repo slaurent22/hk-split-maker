@@ -259,6 +259,7 @@ import AspidHunter from "./Enemy/AspidHunter.png";
 import Aluba from "./Enemy/Aluba.png";
 import HuskMiner from "./Enemy/HuskMiner.png";
 import GreatHopper from "./Enemy/GreatHopper.png";
+import GreatHuskSentry from "./Enemy/GreatHuskSentry.png";
 import GorgeousHusk from "./Enemy/GorgeousHusk.png";
 import MenderBug from "./Enemy/MenderBug.png";
 import killedSanctumWarrior from "./Boss/SoulWarrior.png";
@@ -326,6 +327,7 @@ import EnterGreenpathWithOvercharm from "./Enemy/Mosscreep.png";
 import EnterCrown from "./Enemy/CrystallisedHusk.png";
 import EnterRafters from "./Enemy/WingedSentry.png";
 import SalubraExit from "./Item/SalubrasBlessing.png";
+import SpireBenchExit from "./Misc/Bench.png";
 import TransClaw from "./Skill/MantisClaw.png";
 import TransVS from "./Skill/VengefulSpirit.png";
 import TransDescendingDark from "./Skill/DescendingDark.png";
@@ -978,6 +980,7 @@ export default {
   Aluba,
   HuskMiner,
   GreatHopper,
+  GreatHuskSentry,
   GorgeousHusk,
   MenderBug,
   killedSanctumWarrior,
@@ -1045,6 +1048,7 @@ export default {
   EnterCrown,
   EnterRafters,
   SalubraExit,
+  SpireBenchExit,
   TransClaw,
   TransVS,
   TransDescendingDark,
