@@ -257,6 +257,8 @@ import Pantheon5 from "./Achievement/EmbraceTheVoid.png";
 import PathOfPain from "./Item/SealOfBinding.png";
 import AspidHunter from "./Enemy/AspidHunter.png";
 import Aluba from "./Enemy/Aluba.png";
+import RollerHuntersNotes from "./Enemy/Baldur.png";
+import Maggots from "./Enemy/Maggot.png";
 import HuskMiner from "./Enemy/HuskMiner.png";
 import GreatHopper from "./Enemy/GreatHopper.png";
 import GreatHuskSentry from "./Enemy/GreatHuskSentry.png";
@@ -603,6 +605,7 @@ import PathOfPainEntry from "./Enemy/Wingmould.png";
 import PathOfPainTransition1 from "./Enemy/Wingmould.png";
 import PathOfPainTransition2 from "./Enemy/Wingmould.png";
 import PathOfPainTransition3 from "./Enemy/Wingmould.png";
+import PathOfPainRoom4DDark from "./Enemy/Wingmould.png";
 import DgateKingdomsEdgeAcid from "./Skill/DreamGate.png";
 import GodhomeBench from "./Misc/Godseeker.png";
 import GodhomeLoreRoom from "./Misc/Godseeker.png";
@@ -978,6 +981,8 @@ export default {
   PathOfPain,
   AspidHunter,
   Aluba,
+  RollerHuntersNotes,
+  Maggots,
   HuskMiner,
   GreatHopper,
   GreatHuskSentry,
@@ -1324,6 +1329,7 @@ export default {
   PathOfPainTransition1,
   PathOfPainTransition2,
   PathOfPainTransition3,
+  PathOfPainRoom4DDark,
   DgateKingdomsEdgeAcid,
   GodhomeBench,
   GodhomeLoreRoom,

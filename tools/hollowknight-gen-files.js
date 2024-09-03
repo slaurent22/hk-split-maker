@@ -371,6 +371,10 @@ function getUrl(id, qualifier) {
         return getUrl("Zote", "Enemy");
       case "Aluba":
         return getUrl("Aluba", "Enemy");
+      case "RollerHuntersNotes":
+        return getUrl("Baldur", "Enemy");
+      case "Maggots":
+        return getUrl("Maggot", "Enemy");
       case "HuskMiner":
         return getUrl("HuskMiner", "Enemy");
       case "GreatHopper":
