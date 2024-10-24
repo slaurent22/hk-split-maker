@@ -869,6 +869,13 @@
             }
         },
         {
+            "fileName": "stinky",
+            "displayName": "Stinky% Comfy",
+            "data": {
+                "routeNotesURL": "https://pastebin.com/xY2pJxyf"
+            }
+        },
+        {
             "fileName": "spelless",
             "displayName": "Spelless",
             "data": {
