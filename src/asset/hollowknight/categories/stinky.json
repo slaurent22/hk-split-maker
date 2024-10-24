@@ -1,0 +1,47 @@
+{
+    "categoryName": "Stinky",
+    "splitIds": [
+        "VengefulSpirit",
+        "EnterGreenpath",
+        "MothwingCloak",
+        "MantisClaw",
+        "CityGateOpen",
+        "NailUpgrade1",
+        "EnterSanctum",
+        "DesolateDive",
+        "SimpleKey",
+        "StoreroomsStation",
+        "CrystalHeart",
+        "DreamNail",
+        "ShamanStone",
+        "ElegantKey",
+        "ShadeSoul",
+        "WaterwaysEntry",
+        "Flukenest",
+        "DungDefender",
+        "Lurien",
+        "KingsStationStation",
+        "Monomon",
+        "QueensGardensEntry",
+        "BeastsDenTrapBench",
+        "Hegemol",
+        "EnterAnyDream",
+        "WhiteDefender",
+        "OnDefeatWhiteDefender",
+        "OnDefeatWhiteDefender",
+        "OnDefeatWhiteDefender",
+        "WhiteDefenderStatueUnlocked"
+    ],
+    "names": {
+        "EnterAnyDream": "Enter White Defender",
+        "WhiteDefender": "%s 1",
+        "OnDefeatWhiteDefender": [
+            "White Defender 2",
+            "White Defender 3",
+            "White Defender 4"
+        ],
+        "WhiteDefenderStatueUnlocked": "%s Statue"
+    },
+    "endTriggeringAutosplit": true,
+    "gameName": "Hollow Knight Category Extensions"
+}
