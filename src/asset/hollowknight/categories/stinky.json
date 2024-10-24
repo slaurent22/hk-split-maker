@@ -33,10 +33,6 @@
         "WhiteDefenderStatueUnlocked"
     ],
     "names": {
-        "EnterSanctum": "Enter Sanctum",
-        "SimpleKey": "Simple Key",
-        "StoreroomsStation": "Storeroom Stag",
-        "BlackKnightTrans": "Watcher Knights Transition",
         "EnterAnyDream": "Enter White Defender",
         "WhiteDefender": "%s 1",
         "OnDefeatWhiteDefender": [
