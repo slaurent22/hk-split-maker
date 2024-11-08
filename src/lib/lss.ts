@@ -22,6 +22,14 @@ export interface Config {
   variables?: Record<string, string>;
 }
 
+interface ParsedAutoSplitterSettings {
+  startTriggeringAutosplit?: string;
+  // autosplitIds vs splitIds: autosplitIds do not contain "-" for subsplits, splitIds can
+  autosplitIds: Array<string>;
+  ordered?: boolean;
+  endTriggeringAutosplit: boolean;
+}
+
 interface ParsedSplitId {
   autosplitId: string;
   subsplit: boolean;
@@ -289,6 +297,69 @@ function transformNameOverrideForImport(
   return nameOverride;
 }
 
+function parseAutoSplitterSettings(
+  autoSplitterSettings: Element
+): ParsedAutoSplitterSettings {
+  const xmlDocSplits = autoSplitterSettings.getElementsByTagName("Splits")[0];
+  const xmlDocCustomSettings =
+    autoSplitterSettings.getElementsByTagName("CustomSettings")[0];
+  if (xmlDocSplits) {
+    // Default autosplitter
+    const xmlDocOrdered =
+      autoSplitterSettings.getElementsByTagName("Ordered")[0];
+    const autosplitStartRuns =
+      autoSplitterSettings.getElementsByTagName("AutosplitStartRuns")[0];
+    const autosplitEndRuns =
+      autoSplitterSettings.getElementsByTagName("AutosplitEndRuns")[0];
+    const orderedStr = xmlDocOrdered && xmlDocOrdered.textContent?.trim();
+    const autoStart =
+      (autosplitStartRuns && autosplitStartRuns.textContent?.trim()) || "";
+    // autosplitIds vs splitIds: autosplitIds do not contain "-" for subsplits, splitIds can
+    const autosplitIds: Array<string> = [];
+    xmlDocSplits.childNodes.forEach((c) => {
+      if (c.nodeName === "Split") {
+        const autosplitId = c.textContent?.trim() || "";
+        autosplitIds.push(autosplitId);
+      }
+    });
+    const endTriggeringAutosplit =
+      autosplitEndRuns && autosplitEndRuns.textContent?.trim() == "True";
+    return {
+      ordered: orderedStr == "True",
+      startTriggeringAutosplit: autoStart.length > 0 ? autoStart : undefined,
+      autosplitIds,
+      endTriggeringAutosplit,
+    };
+  } else if (xmlDocCustomSettings) {
+    // WASM autosplitter
+    const xmlDocSettings = xmlDocCustomSettings.getElementsByTagName("Setting");
+    const autostartsplitIds: Array<string> = [];
+    for (let i = 0; i < xmlDocSettings.length; i++) {
+      if (xmlDocSettings[i].getAttribute("id") == "splits") {
+        const xmlDocSplitsSettings =
+          xmlDocSettings[i].getElementsByTagName("Setting");
+        for (let j = 0; j < xmlDocSplitsSettings.length; j++) {
+          autostartsplitIds.push(
+            xmlDocSplitsSettings[j].getAttribute("value") || ""
+          );
+        }
+      }
+    }
+    const autostartId = autostartsplitIds[0];
+    return {
+      ordered: true,
+      startTriggeringAutosplit:
+        autostartId == "LegacyStart" ? undefined : autostartId,
+      autosplitIds: autostartsplitIds.slice(1),
+      endTriggeringAutosplit: true,
+    };
+  } else {
+    throw new Error(
+      `Failed to import splits: missing AutoSplitterSettings Splits`
+    );
+  }
+}
+
 export function importSplitsXml(str: string): Config {
   // xml parse
   const parser = new DOMParser();
@@ -327,38 +398,25 @@ export function importSplitsXml(str: string): Config {
   if (!autoSplitterSettings) {
     throw new Error(`Failed to import splits: missing AutoSplitterSettings`);
   }
-  const xmlDocOrdered = autoSplitterSettings.getElementsByTagName("Ordered")[0];
-  const orderedStr = xmlDocOrdered && xmlDocOrdered.textContent?.trim();
-  if (orderedStr != "True") {
+  const {
+    ordered,
+    startTriggeringAutosplit,
+    autosplitIds,
+    endTriggeringAutosplit,
+  } = parseAutoSplitterSettings(autoSplitterSettings);
+  if (!ordered) {
     throw new Error(`Failed to import splits: Ordered must be True to import`);
   }
-  const autosplitStartRuns =
-    autoSplitterSettings.getElementsByTagName("AutosplitStartRuns")[0];
-  const autoStart =
-    (autosplitStartRuns && autosplitStartRuns.textContent?.trim()) || "";
   // autosplitIds vs splitIds: autosplitIds do not contain "-" for subsplits, splitIds can
   const parsedSplitIds: ParsedSplitId[] = [];
-  const xmlDocSplits = autoSplitterSettings.getElementsByTagName("Splits")[0];
-  if (!xmlDocSplits) {
-    throw new Error(
-      `Failed to import splits: missing AutoSplitterSettings Splits`
-    );
-  }
-  xmlDocSplits.childNodes.forEach((c) => {
-    if (c.nodeName === "Split") {
-      const autosplitId = c.textContent?.trim() || "";
-      parsedSplitIds.push({
-        autosplitId,
-        subsplit: false,
-        name: "",
-        iconId: "",
-      });
-    }
+  autosplitIds.forEach((autosplitId) => {
+    parsedSplitIds.push({
+      autosplitId,
+      subsplit: false,
+      name: "",
+      iconId: "",
+    });
   });
-  const autosplitEndRuns =
-    autoSplitterSettings.getElementsByTagName("AutosplitEndRuns")[0];
-  const endTriggeringAutosplit =
-    autosplitEndRuns && autosplitEndRuns.textContent?.trim() == "True";
   // Segments Segment Name -> names, endingSplit name
   const xmlDocSegments0 = xmlDoc.getElementsByTagName("Segments")[0];
   if (!xmlDocSegments0) {
@@ -426,7 +484,7 @@ export function importSplitsXml(str: string): Config {
   });
   return {
     categoryName,
-    startTriggeringAutosplit: autoStart.length > 0 ? autoStart : undefined,
+    startTriggeringAutosplit,
     splitIds,
     names: hasNameOverrides ? potentialNameOverrides : undefined,
     endTriggeringAutosplit,
