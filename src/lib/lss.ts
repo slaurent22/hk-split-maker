@@ -311,9 +311,6 @@ function parseAutoSplitterSettings(
       autoSplitterSettings.getElementsByTagName("AutosplitStartRuns")[0];
     const autosplitEndRuns =
       autoSplitterSettings.getElementsByTagName("AutosplitEndRuns")[0];
-    const orderedStr = xmlDocOrdered && xmlDocOrdered.textContent?.trim();
-    const autoStart =
-      (autosplitStartRuns && autosplitStartRuns.textContent?.trim()) || "";
     // autosplitIds vs splitIds: autosplitIds do not contain "-" for subsplits, splitIds can
     const autosplitIds: Array<string> = [];
     xmlDocSplits.childNodes.forEach((c) => {
@@ -322,14 +319,36 @@ function parseAutoSplitterSettings(
         autosplitIds.push(autosplitId);
       }
     });
-    const endTriggeringAutosplit =
-      autosplitEndRuns && autosplitEndRuns.textContent?.trim() == "True";
-    return {
-      ordered: orderedStr == "True",
-      startTriggeringAutosplit: autoStart.length > 0 ? autoStart : undefined,
-      autosplitIds,
-      endTriggeringAutosplit,
-    };
+    if (xmlDocOrdered || autosplitStartRuns || autosplitEndRuns) {
+      // Default autosplitter version <= 3
+      const orderedStr = xmlDocOrdered && xmlDocOrdered.textContent?.trim();
+      const autoStart =
+        (autosplitStartRuns && autosplitStartRuns.textContent?.trim()) || "";
+      const endTriggeringAutosplit =
+        autosplitEndRuns && autosplitEndRuns.textContent?.trim() == "True";
+      return {
+        ordered: orderedStr == "True",
+        startTriggeringAutosplit: autoStart.length > 0 ? autoStart : undefined,
+        autosplitIds,
+        endTriggeringAutosplit,
+      };
+    } else {
+      // Default autosplitter version >= 4
+      const autoStart = autosplitIds[0] || "LegacyStart";
+      const autoEnd = autosplitIds[autosplitIds.length - 1] || "LegacyEnd";
+      const startTriggeringAutosplit =
+        autoStart != "LegacyStart" ? autoStart : undefined;
+      const endTriggeringAutosplit = autoEnd != "LegacyEnd";
+      return {
+        ordered: true,
+        startTriggeringAutosplit,
+        autosplitIds: autosplitIds.slice(
+          1,
+          endTriggeringAutosplit ? autosplitIds.length : autosplitIds.length - 1
+        ),
+        endTriggeringAutosplit,
+      };
+    }
   } else if (xmlDocCustomSettings) {
     // WASM autosplitter
     const xmlDocSettings = xmlDocCustomSettings.getElementsByTagName("Setting");
