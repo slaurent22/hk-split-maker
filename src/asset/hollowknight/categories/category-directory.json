@@ -777,6 +777,11 @@
             }
         },
         {
+            "fileName": "nkg-nmms",
+            "displayName": "NKG% (No Main Menu Storage)",
+            "data": {}
+        },
+        {
             "fileName": "nmg",
             "displayName": "NMG%"
         },

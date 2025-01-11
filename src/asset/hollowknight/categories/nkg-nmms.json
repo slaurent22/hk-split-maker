@@ -1,0 +1,19 @@
+{
+    "categoryName": "NKG%",
+    "splitIds": [
+        "KingsPass",
+        "FungalWastesEntry",
+        "MenuClaw",
+        "MothwingCloak",
+        "BlueLake",
+        "DreamNail",
+        "DreamGate",
+        "NightmareLantern",
+        "NightmareKingGrimm"
+    ],
+    "endTriggeringAutosplit": true,
+    "gameName": "Hollow Knight Category Extensions",
+    "variables": {
+        "NKG% Glitch": "No Main Menu Storage"
+    }
+}
