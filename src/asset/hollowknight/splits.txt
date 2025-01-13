@@ -12,7 +12,7 @@
         DesolateDive,
         [Description("Dream Nail (Skill)"), ToolTip("Splits when obtaining Dream Nail")]
         DreamNail,
-        [Description("Dream Nail - Awoken (Skill)"), ToolTip("Splits when Awkening the Dream Nail")]
+        [Description("Dream Nail - Awoken (Skill)"), ToolTip("Splits when Awakening the Dream Nail")]
         DreamNail2,
         [Description("Dream Gate (Skill)"), ToolTip("Splits when obtaining Dream Gate")]
         DreamGate,
@@ -137,7 +137,7 @@
         MaskShardBretta,
         [Description("Stone Sanctuary Mask Shard (Obtain)"), ToolTip("Splits when getting the Mask Shard in Stone Sanctuary")]
         MaskShardStoneSanctuary,
-        [Description("Waterways Mask Shard (Obtain)"), ToolTip("Splits when getting the Mask Shard in Royal Wayerways")]
+        [Description("Waterways Mask Shard (Obtain)"), ToolTip("Splits when getting the Mask Shard in Royal Waterways")]
         MaskShardWaterways,
         [Description("Fungal Core Mask Shard (Obtain)"), ToolTip("Splits when getting the Mask Shard below Fungal Core")]
         MaskShardFungalCore,
@@ -259,7 +259,7 @@
         Nosk,
         [Description("Nosk (Transition)"), ToolTip("Splits when entering Nosk boss arena transition")]
         EnterNosk,
-        [Description("Oblobbles (Boss)"), ToolTip("Splits when 2 Oblobbles are deafeated (ideally the first pair you encounter in Colo 2)")]
+        [Description("Oblobbles (Boss)"), ToolTip("Splits when 2 Oblobbles are defeated (ideally the first pair you encounter in Colo 2)")]
         KilledOblobbles,
         [Description("Oro & Mato Nail Bros (Boss)"), ToolTip("Splits when defeating Brothers Oro & Mato")]
         MatoOroNailBros,
@@ -680,7 +680,7 @@
 
         [Description("Has Claw (Transition)"), ToolTip("Splits on transition after Mantis Claw acquired")]
         TransClaw,
-        [Description("Has Fireball (Transition)"), ToolTip("Splits on transition after Vengeful Spirit acquired")]
+        [Description("Has Vengeful Spirit (Transition)"), ToolTip("Splits on transition after Vengeful Spirit acquired")]
         TransVS,
         [Description("Has Descending Dark (Transition)"), ToolTip("Splits on transition after Descending Dark acquired")]
         TransDescendingDark,
