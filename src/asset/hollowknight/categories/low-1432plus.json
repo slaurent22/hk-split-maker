@@ -1,0 +1,26 @@
+{
+    "categoryName": "Low%",
+    "splitIds": [
+        "VengefulSpirit",
+        "FungalWastesEntry",
+        "TransClaw",
+        "DeepnestSpa",
+        "Menu",
+        "DreamNail",
+        "WatcherChandelier",
+        "BlackKnightTrans",
+        "Lemm2",
+        "LumaflyLantern",
+        "CrystalHeart",
+        "Uumuu",
+        "BeastsDenTrapBench",
+        "Hegemol",
+        "UnchainedHollowKnight"
+    ],
+    "endTriggeringAutosplit": false,
+    "endingSplit": {
+        "name": "Hollow Knight",
+        "icon": "HollowKnightBoss"
+    },
+    "gameName": "Hollow Knight"
+}
