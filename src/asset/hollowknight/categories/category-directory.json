@@ -462,6 +462,13 @@
             }
         },
         {
+            "fileName": "all-dream-bosses-1432plus",
+            "displayName": "All Dream Bosses (1.4.3.2+, flukes)",
+            "data": {
+                "routeNotesURL": "https://pastebin.com/JxhZDmpi"
+            }
+        },
+        {
             "fileName": "acn",
             "displayName": "All Charm Notches",
             "data": {
