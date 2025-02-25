@@ -105,6 +105,13 @@
             }
         },
         {
+            "fileName": "any-fury",
+            "displayName": "Any% (1.2.2.1 Fury/iBaldur)",
+            "data": {
+                "routeNotesURL": "https://pastebin.com/pHY57siy"
+            }
+        },
+        {
             "fileName": "any-1432plus",
             "displayName": "Any% (1.4.3.2+ QGA)",
             "data": {
