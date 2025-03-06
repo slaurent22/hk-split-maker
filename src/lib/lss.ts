@@ -291,6 +291,9 @@ function transformNameOverrideForImport(
   nameOverride: string,
   splitDefinition?: SplitDefinition
 ): string {
+  if (nameOverride === "") {
+    return "%s";
+  }
   if (splitDefinition?.name && nameOverride.includes(splitDefinition?.name)) {
     return nameOverride.replace(new RegExp(splitDefinition.name, "g"), "%s");
   }
@@ -366,15 +369,11 @@ export function importSplitsXml(str: string): Config {
   const xmlDoc = parser.parseFromString(str, "text/xml");
   // GameName, CategoryName -> gameName, categoryName
   const xmlDocGameName = xmlDoc.getElementsByTagName("GameName")[0];
-  if (!xmlDocGameName) {
-    throw new Error(`Failed to import splits: missing GameName`);
-  }
-  const gameName = xmlDocGameName.textContent?.trim() || "";
+  const gameName =
+    (xmlDocGameName && xmlDocGameName.textContent?.trim()) || "Hollow Knight";
   const xmlDocCategoryName = xmlDoc.getElementsByTagName("CategoryName")[0];
-  if (!xmlDocCategoryName) {
-    throw new Error(`Failed to import splits: missing CategoryName`);
-  }
-  const categoryName = xmlDocCategoryName.textContent?.trim() || "";
+  const categoryName =
+    (xmlDocCategoryName && xmlDocCategoryName.textContent?.trim()) || "";
   // Metadata Variables -> variables
   const xmlDocVariables0 = xmlDoc.getElementsByTagName("Variables")[0];
   const xmlDocVariables =
@@ -392,11 +391,30 @@ export function importSplitsXml(str: string): Config {
     }
   }
   // AutoSplitterSettings -> startTriggeringAutosplit, splitIds, endTriggeringAutosplit
-  const autoSplitterSettings = xmlDoc.getElementsByTagName(
+  let autoSplitterSettings = xmlDoc.getElementsByTagName(
     "AutoSplitterSettings"
   )[0];
   if (!autoSplitterSettings) {
-    throw new Error(`Failed to import splits: missing AutoSplitterSettings`);
+    const xmlDocComponents0 = xmlDoc.getElementsByTagName("Components")[0];
+    const xmlDocComponents =
+      (xmlDocComponents0 &&
+        xmlDocComponents0.getElementsByTagName("Component")) ||
+      [];
+    for (let i = 0; i < xmlDocComponents.length; i++) {
+      const xmlDocComponent = xmlDocComponents[i];
+      const xmlDocPath = xmlDocComponent.getElementsByTagName("Path")[0];
+      if (
+        xmlDocPath &&
+        xmlDocPath.textContent?.trim() === "LiveSplit.AutoSplittingRuntime.dll"
+      ) {
+        autoSplitterSettings =
+          xmlDocComponent.getElementsByTagName("Settings")[0];
+        break;
+      }
+    }
+    if (!autoSplitterSettings) {
+      throw new Error(`Failed to import splits: missing AutoSplitterSettings`);
+    }
   }
   const {
     ordered,
@@ -419,18 +437,13 @@ export function importSplitsXml(str: string): Config {
   });
   // Segments Segment Name -> names, endingSplit name
   const xmlDocSegments0 = xmlDoc.getElementsByTagName("Segments")[0];
-  if (!xmlDocSegments0) {
-    throw new Error(`Failed to import splits: missing Segments`);
-  }
-  const segments = xmlDocSegments0.getElementsByTagName("Segment");
+  const segments =
+    (xmlDocSegments0 && xmlDocSegments0.getElementsByTagName("Segment")) || [];
   // subsplitNames vs names: names do not contain "-" for subsplits, subsplitNames can
   let endName = "";
   for (let i = 0; i < segments.length; i++) {
     const xmlDocName = segments[i].getElementsByTagName("Name")[0];
-    if (!xmlDocName) {
-      throw new Error(`Failed to import splits: missing Segment Name`);
-    }
-    const subsegmentName = xmlDocName.textContent?.trim() || "";
+    const subsegmentName = (xmlDocName && xmlDocName.textContent?.trim()) || "";
     if (i < parsedSplitIds.length) {
       if (subsegmentName.startsWith("-")) {
         parsedSplitIds[i].subsplit = true;
@@ -462,7 +475,9 @@ export function importSplitsXml(str: string): Config {
     const splitDefinition = splitDefinitions.get(uniqueAutosplitId);
     if (
       splitDefinition &&
-      splitNames.every((aName) => aName === splitDefinition.name)
+      splitNames.every(
+        (aName) => aName === "" || aName === splitDefinition.name
+      )
     ) {
       // do nothing
     } else if (splitNames.length === 1) {
