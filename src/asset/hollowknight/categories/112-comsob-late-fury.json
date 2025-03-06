@@ -151,6 +151,23 @@
             "Enter Hive Knight",
             "Enter Enraged Guardian"
         ],
+        "GodhomeLoreRoom": [
+            "Enter Watcher Knights",
+            "Enter Soul Tyrant",
+            "Enter Pure Vessel"
+        ]
+    },
+    "icons": {
+        "GodhomeBench": [
+            "GorbP",
+            "MarmuP",
+            "GalienP",
+            "FailedChampionP",
+            "XeroP",
+            "MarmuP",
+            "HiveKnightP",
+            "EnragedGuardianP"
+        ],
         "GodhomeLoreRoom": ["WatcherKnightsP", "SoulTyrantP", "PureVesselP"]
     },
     "endTriggeringAutosplit": false,
