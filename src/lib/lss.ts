@@ -291,6 +291,9 @@ function transformNameOverrideForImport(
   nameOverride: string,
   splitDefinition?: SplitDefinition
 ): string {
+  if (nameOverride === "") {
+    return "%s";
+  }
   if (splitDefinition?.name && nameOverride.includes(splitDefinition?.name)) {
     return nameOverride.replace(new RegExp(splitDefinition.name, "g"), "%s");
   }
@@ -366,7 +369,8 @@ export function importSplitsXml(str: string): Config {
   const xmlDoc = parser.parseFromString(str, "text/xml");
   // GameName, CategoryName -> gameName, categoryName
   const xmlDocGameName = xmlDoc.getElementsByTagName("GameName")[0];
-  const gameName = (xmlDocGameName && xmlDocGameName.textContent?.trim()) || "";
+  const gameName =
+    (xmlDocGameName && xmlDocGameName.textContent?.trim()) || "Hollow Knight";
   const xmlDocCategoryName = xmlDoc.getElementsByTagName("CategoryName")[0];
   const categoryName =
     (xmlDocCategoryName && xmlDocCategoryName.textContent?.trim()) || "";
@@ -471,7 +475,9 @@ export function importSplitsXml(str: string): Config {
     const splitDefinition = splitDefinitions.get(uniqueAutosplitId);
     if (
       splitDefinition &&
-      splitNames.every((aName) => aName === splitDefinition.name)
+      splitNames.every(
+        (aName) => aName === "" || aName === splitDefinition.name
+      )
     ) {
       // do nothing
     } else if (splitNames.length === 1) {
