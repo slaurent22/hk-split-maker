@@ -387,11 +387,30 @@ export function importSplitsXml(str: string): Config {
     }
   }
   // AutoSplitterSettings -> startTriggeringAutosplit, splitIds, endTriggeringAutosplit
-  const autoSplitterSettings = xmlDoc.getElementsByTagName(
+  let autoSplitterSettings = xmlDoc.getElementsByTagName(
     "AutoSplitterSettings"
   )[0];
   if (!autoSplitterSettings) {
-    throw new Error(`Failed to import splits: missing AutoSplitterSettings`);
+    const xmlDocComponents0 = xmlDoc.getElementsByTagName("Components")[0];
+    const xmlDocComponents =
+      (xmlDocComponents0 &&
+        xmlDocComponents0.getElementsByTagName("Component")) ||
+      [];
+    for (let i = 0; i < xmlDocComponents.length; i++) {
+      const xmlDocComponent = xmlDocComponents[i];
+      const xmlDocPath = xmlDocComponent.getElementsByTagName("Path")[0];
+      if (
+        xmlDocPath &&
+        xmlDocPath.textContent?.trim() === "LiveSplit.AutoSplittingRuntime.dll"
+      ) {
+        autoSplitterSettings =
+          xmlDocComponent.getElementsByTagName("Settings")[0];
+        break;
+      }
+    }
+    if (!autoSplitterSettings) {
+      throw new Error(`Failed to import splits: missing AutoSplitterSettings`);
+    }
   }
   const {
     ordered,
