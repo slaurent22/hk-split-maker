@@ -366,15 +366,10 @@ export function importSplitsXml(str: string): Config {
   const xmlDoc = parser.parseFromString(str, "text/xml");
   // GameName, CategoryName -> gameName, categoryName
   const xmlDocGameName = xmlDoc.getElementsByTagName("GameName")[0];
-  if (!xmlDocGameName) {
-    throw new Error(`Failed to import splits: missing GameName`);
-  }
-  const gameName = xmlDocGameName.textContent?.trim() || "";
+  const gameName = (xmlDocGameName && xmlDocGameName.textContent?.trim()) || "";
   const xmlDocCategoryName = xmlDoc.getElementsByTagName("CategoryName")[0];
-  if (!xmlDocCategoryName) {
-    throw new Error(`Failed to import splits: missing CategoryName`);
-  }
-  const categoryName = xmlDocCategoryName.textContent?.trim() || "";
+  const categoryName =
+    (xmlDocCategoryName && xmlDocCategoryName.textContent?.trim()) || "";
   // Metadata Variables -> variables
   const xmlDocVariables0 = xmlDoc.getElementsByTagName("Variables")[0];
   const xmlDocVariables =
@@ -419,18 +414,13 @@ export function importSplitsXml(str: string): Config {
   });
   // Segments Segment Name -> names, endingSplit name
   const xmlDocSegments0 = xmlDoc.getElementsByTagName("Segments")[0];
-  if (!xmlDocSegments0) {
-    throw new Error(`Failed to import splits: missing Segments`);
-  }
-  const segments = xmlDocSegments0.getElementsByTagName("Segment");
+  const segments =
+    (xmlDocSegments0 && xmlDocSegments0.getElementsByTagName("Segment")) || [];
   // subsplitNames vs names: names do not contain "-" for subsplits, subsplitNames can
   let endName = "";
   for (let i = 0; i < segments.length; i++) {
     const xmlDocName = segments[i].getElementsByTagName("Name")[0];
-    if (!xmlDocName) {
-      throw new Error(`Failed to import splits: missing Segment Name`);
-    }
-    const subsegmentName = xmlDocName.textContent?.trim() || "";
+    const subsegmentName = (xmlDocName && xmlDocName.textContent?.trim()) || "";
     if (i < parsedSplitIds.length) {
       if (subsegmentName.startsWith("-")) {
         parsedSplitIds[i].subsplit = true;
