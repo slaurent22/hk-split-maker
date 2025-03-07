@@ -22,24 +22,17 @@
             }
         },
         {
-            "fileName": "112-comsob",
-            "displayName": "112% APB (comsob splits, 10 notches)",
+            "fileName": "112-comsob-late-fury",
+            "displayName": "112% APB (comsob splits)",
             "data": {
-                "routeNotesURL": "https://pastebin.com/ixT0Hm2p"
+                "routeNotesURL": "https://pastebin.com/mMfMLDjA"
             }
         },
         {
-            "fileName": "112-everything-10-notch",
-            "displayName": "112% APB (all splits, 10 notches)",
+            "fileName": "112-everything-late-fury",
+            "displayName": "112% APB (all splits)",
             "data": {
-                "routeNotesURL": "https://pastebin.com/ixT0Hm2p"
-            }
-        },
-        {
-            "fileName": "112-everything-11-notch",
-            "displayName": "112% APB (all splits, 11 notches)",
-            "data": {
-                "routeNotesURL": "https://pastebin.com/9LzcvewF"
+                "routeNotesURL": "https://pastebin.com/mMfMLDjA"
             }
         },
         {
