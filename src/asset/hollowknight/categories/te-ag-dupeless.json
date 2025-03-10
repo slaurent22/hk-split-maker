@@ -1,0 +1,23 @@
+{
+    "categoryName": "True Ending (Dupeless)",
+    "splitIds": [
+        "KingsPass",
+        "QueensGardensEntry",
+        "Dreamer2",
+        "Dreamer3",
+        "HollowKnightDreamnail"
+    ],
+    "names": {
+        "Dreamer2": "Herrah",
+        "Dreamer3": "Lurien"
+    },
+    "endTriggeringAutosplit": false,
+    "endingSplit": {
+        "name": "Radiance",
+        "icon": "RadianceBoss"
+    },
+    "gameName": "Hollow Knight",
+    "variables": {
+        "True Ending Glitch": "All Glitches"
+    }
+}

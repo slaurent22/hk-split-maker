@@ -247,6 +247,13 @@
             }
         },
         {
+            "fileName": "te-ag-dupeless",
+            "displayName": "True Ending (All Glitches, Dupeless)",
+            "data": {
+                "searchTerms": ["te", "ag"]
+            }
+        },
+        {
             "fileName": "te-nmms",
             "displayName": "True Ending (No Main Menu Storage)",
             "data": {
