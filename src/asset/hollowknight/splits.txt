@@ -1,3 +1,23 @@
+        [Description("Start New Game (Start)"), ToolTip("Splits when starting a new game, including Normal, Steel Soul, and Godseeker mode")]
+        StartNewGame,
+        [Description("Start Pantheon (Start)"), ToolTip("Splits when starting a Pantheon run")]
+        StartPantheon,
+        [Description("Rando Wake (Start)"), ToolTip("Splits when gaining control after waking up in Rando")]
+        RandoWake,
+
+        [Description("Credits Roll (Ending)"), ToolTip("Splits on any credits rolling")]
+        EndingSplit,
+        [Description("The Hollow Knight (Ending)"), ToolTip("Splits on The Hollow Knight ending")]
+        EndingA,
+        [Description("Sealed Siblings (Ending)"), ToolTip("Splits on Sealed Siblings ending")]
+        EndingB,
+        [Description("Dream No More (Ending)"), ToolTip("Splits on Dream No More ending")]
+        EndingC,
+        [Description("Embrace the Void (Ending)"), ToolTip("Splits on Embrace the Void ending")]
+        EndingD,
+        [Description("Delicate Flower (Ending)"), ToolTip("Splits on Delicate Flower ending")]
+        EndingE,
+
         [Description("Abyss Shriek (Skill)"), ToolTip("Splits when obtaining Abyss Shriek")]
         AbyssShriek,
         [Description("Crystal Heart (Skill)"), ToolTip("Splits when obtaining Crystal Heart")]
@@ -12,7 +32,7 @@
         DesolateDive,
         [Description("Dream Nail (Skill)"), ToolTip("Splits when obtaining Dream Nail")]
         DreamNail,
-        [Description("Dream Nail - Awoken (Skill)"), ToolTip("Splits when Awkening the Dream Nail")]
+        [Description("Dream Nail - Awoken (Skill)"), ToolTip("Splits when Awakening the Dream Nail")]
         DreamNail2,
         [Description("Dream Gate (Skill)"), ToolTip("Splits when obtaining Dream Gate")]
         DreamGate,
@@ -98,6 +118,8 @@
         MaskFragment15,
         [Description("Mask Upgrade 16 (Upgrade)"), ToolTip("Splits when getting 4 extra Masks (9 base HP)")]
         Mask4,
+        [Description("Mask Upgrade 20 (Upgrade)"), ToolTip("(Glitched Only) Splits when getting 5 extra Masks (10 base HP)")]
+        Mask5,
         [Description("Nail 1 (Upgrade)"), ToolTip("Splits upon upgrading to the Sharpened Nail")]
         NailUpgrade1,
         [Description("Nail 2 (Upgrade)"), ToolTip("Splits upon upgrading to the Channeled Nail")]
@@ -122,7 +144,7 @@
         VesselFragment7,
         [Description("Vessel Fragment 8 (Fragment)"), ToolTip("Splits when getting 8th Soul Vessel Fragment")]
         VesselFragment8,
-        [Description("Soul Vessel 3 (Upgrade)"), ToolTip("Splits when upgrading to 3 Soul Vessels (9 Soul Vessel Fragments")]
+        [Description("Soul Vessel 3 (Upgrade)"), ToolTip("Splits when upgrading to 3 Soul Vessels (9 Soul Vessel Fragments)")]
         Vessel3,
 
         [Description("Brooding Mawlek Mask Shard (Obtain)"), ToolTip("Splits when getting the Mask Shard from Brooding Mawlek")]
@@ -137,7 +159,7 @@
         MaskShardBretta,
         [Description("Stone Sanctuary Mask Shard (Obtain)"), ToolTip("Splits when getting the Mask Shard in Stone Sanctuary")]
         MaskShardStoneSanctuary,
-        [Description("Waterways Mask Shard (Obtain)"), ToolTip("Splits when getting the Mask Shard in Royal Wayerways")]
+        [Description("Waterways Mask Shard (Obtain)"), ToolTip("Splits when getting the Mask Shard in Royal Waterways")]
         MaskShardWaterways,
         [Description("Fungal Core Mask Shard (Obtain)"), ToolTip("Splits when getting the Mask Shard below Fungal Core")]
         MaskShardFungalCore,
@@ -259,7 +281,7 @@
         Nosk,
         [Description("Nosk (Transition)"), ToolTip("Splits when entering Nosk boss arena transition")]
         EnterNosk,
-        [Description("Oblobbles (Boss)"), ToolTip("Splits when 2 Oblobbles are deafeated (ideally the first pair you encounter in Colo 2)")]
+        [Description("Oblobbles (Boss)"), ToolTip("Splits when 2 Oblobbles are defeated (ideally the first pair you encounter in Colo 2)")]
         KilledOblobbles,
         [Description("Oro & Mato Nail Bros (Boss)"), ToolTip("Splits when defeating Brothers Oro & Mato")]
         MatoOroNailBros,
@@ -281,6 +303,8 @@
         EnterSoulMaster,
         [Description("Soul Master Encountered (Boss)"), ToolTip("Splits when Soul Master is activated the first time as the gate closes")]
         SoulMasterEncountered,
+        [Description("Soul Sanctum Hallownest Seal (Item)"), ToolTip("Splits when the Hallownest Seal in Soul Sanctum is collected")]
+        SoulSanctumSeal,
         [Description("Soul Tyrant (Boss)"), ToolTip("Splits when killing Soul Tyrant")]
         SoulTyrant,
         [Description("Soul Tyrant (Essence)"), ToolTip("Splits when getting Soul Tyrant essence")]
@@ -400,6 +424,8 @@
         NoskHornetP,
         [Description("Nightmare King Grimm (Pantheon)"), ToolTip("Splits after killing Nightmare King Grimm in Pantheon 5")]
         NightmareKingGrimmP,
+        [Description("Absolute Radiance (Ending)"), ToolTip("Splits after killing Absolute Radiance in Pantheon 5")]
+        RadianceP,
 
         [Description("Herrah the Beast (Dreamer)"), ToolTip("Splits when you see the mask for Herrah")]
         Hegemol,
@@ -408,11 +434,11 @@
         [Description("Monomon the Teacher (Dreamer)"), ToolTip("Splits when you see the mask for Monomon")]
         Monomon,
 
-        [Description("Herrah (Old Dreamer Timing)"), ToolTip("Matches the old legacy split. Splits when Herrah is registered as defeated (In Spider Area)")]
+        [Description("Herrah (Old Dreamer Timing)"), ToolTip("For Dreamer Quit-outs on older patches. Splits when Herrah is registered as defeated (In Spider Area)")]
         HegemolDreamer,
-        [Description("Lurien (Old Dreamer Timing)"), ToolTip("Matches the old legacy split. Splits when Lurien is registered as defeated (After killing Watcher Knight)")]
+        [Description("Lurien (Old Dreamer Timing)"), ToolTip("For Dreamer Quit-outs on older patches. Splits when Lurien is registered as defeated (After killing Watcher Knight)")]
         LurienDreamer,
-        [Description("Monomon (Old Dreamer Timing)"), ToolTip("Matches the old legacy split. Splits when Monomon is registered as defeated (After killing Uumuu)")]
+        [Description("Monomon (Old Dreamer Timing)"), ToolTip("For Dreamer Quit-outs on older patches. Splits when Monomon is registered as defeated (After killing Uumuu)")]
         MonomonDreamer,
 
         [Description("First Dreamer (Dreamer)"), ToolTip("Splits when you see the mask for the first dreamer killed")]
@@ -442,8 +468,6 @@
         CityGateOpen,
         [Description("City Gate w/ Mantis Lords defeated (Event)"), ToolTip("To make sure you don't forget Mantis Lords")]
         CityGateAndMantisLords,
-        [Description("Credits Roll (Event)"), ToolTip("Splits on any credits rolling")]
-        EndingSplit,
         [Description("Death (Event)"), ToolTip("Splits when player HP is 0")]
         PlayerDeath,
         [Description("Shade Killed (Event)"), ToolTip("Splits when the Shade is killed")]
@@ -480,6 +504,8 @@
         EternalOrdealAchieved,
         [Description("Riding Stag (Event)"), ToolTip("Splits while riding the stag")]
         RidingStag,
+        [Description("Stag Position Updated (Event)"), ToolTip("Splits when the stag is called")]
+        StagMoved,
         [Description("Saved Cloth (Event)"), ToolTip("Splits when saving Cloth in Ancient Basin")]
         SavedCloth,
         [Description("Crystal Peak Lift Opened (Event)"), ToolTip("Splits when opening the lever for the lift between Dirtmouth and Crystal Peak")]
@@ -645,6 +671,16 @@
         EnterBeastDen,
         [Description("Blue Lake (Transition)"), ToolTip("Splits on transition to Blue Lake from either side")]
         BlueLake,
+        [Description("Bretta House (Transition)"), ToolTip("Splits on transition to Bretta's House")]
+        BrettaHouse,
+        [Description("Modded: Bretta House Bubbles (Transition)"), ToolTip("Splits on transition to the fourth room of Bretta's House C-Side ('Scattered and Lost' mod)")]
+        BrettaHouseBubbles,
+        [Description("Modded: Bretta House Bumpers (Transition)"), ToolTip("Splits on transition to the third room of Bretta's House C-Side ('Scattered and Lost' mod)")]
+        BrettaHouseBumpers,
+        [Description("Modded: Bretta House Switches (Transition)"), ToolTip("Splits on transition to the second room of Bretta's House C-Side ('Scattered and Lost' mod)")]
+        BrettaHouseSwitches,
+        [Description("Modded: Bretta House Zippers (Transition)"), ToolTip("Splits on transition to the first room of Bretta's House C-Side ('Scattered and Lost' mod)")]
+        BrettaHouseZippers,
         [Description("Catacombs Entry (Transition)"), ToolTip("Splits on entry to the catacombs below Resting Grounds")]
         CatacombsEntry,
         [Description("Crystal Peak Entry (Transition)"), ToolTip("Splits on transition to the room where the dive and toll entrances meet, or the room right of Dirtmouth")]
@@ -680,12 +716,14 @@
 
         [Description("Has Claw (Transition)"), ToolTip("Splits on transition after Mantis Claw acquired")]
         TransClaw,
-        [Description("Has Fireball (Transition)"), ToolTip("Splits on transition after Vengeful Spirit acquired")]
+        [Description("Has Vengeful Spirit (Transition)"), ToolTip("Splits on transition after Vengeful Spirit acquired")]
         TransVS,
+        [Description("Has Shade Soul (Transition)"), ToolTip("Splits on transition after Shade Soul acquired (Room Dupe safe)")]
+        TransShadeSoul,
         [Description("Has Descending Dark (Transition)"), ToolTip("Splits on transition after Descending Dark acquired")]
         TransDescendingDark,
-        [Description("Has Shade Soul (Transition)"), ToolTip("Splits on transition after Shade Soul acquired")]
-        TransShadeSoul,
+        [Description("Has Map Crossroads (Transition)"), ToolTip("Splits on transition after Crossroads Map acquired")]
+        TransMapCrossroads,
         [Description("Has Isma's Tear (Transition)"), ToolTip("Splits on transition after Isma's Tear acquired")]
         TransTear,
         [Description("Isma's Tear with Grub (Transition)"), ToolTip("Splits on transition after collecting Isma's Tear and saving the grub in Isma's Grove")]
@@ -716,10 +754,12 @@
         EnterSanctumWithShadeSoul,
         [Description("Tower of Love (Transition)"), ToolTip("Splits when entering the Tower of Love")]
         EnterLoveTower,
-        [Description("Waterways (Transition)"), ToolTip("Splits on transition to Waterways\n(Simple Key manhole or right of Spike-tunnel)")]
+        [Description("Waterways (Transition)"), ToolTip("Splits on transition to Waterways\n(Simple Key manhole or Spike-tunnel)")]
         WaterwaysEntry,
         [Description("White Palace Entry (Transition)"), ToolTip("Splits when entering the first White Palace scene")]
         WhitePalaceEntry,
+        [Description("City Toll Bench Room (Transition)"), ToolTip("Splits when entering the city toll bench room")]
+        EnterCityTollBenchRoom,
 
         [Description("Baldur Shell (Charm)"), ToolTip("Splits when obtaining the Baldur Shell charm")]
         BaldurShell,
@@ -1477,9 +1517,9 @@
         AnyTransition,
         [Description("Transition excluding Save State (Transition)"), ToolTip("Splits when the knight enters a transition (excludes save states and Sly's basement)")]
         TransitionAfterSaveState,
+        [Description("Transition excluding discontinuities (Transition)"), ToolTip("Splits when the knight enters a transition (excludes discontinuities including save states, deaths, and dreamgates)")]
+        TransitionExcludingDiscontinuities,
         [Description("Manual Split (Misc)"), ToolTip("Never splits. Use this when you need to manually split while using ordered splits")]
         ManualSplit,
-        [Description("Rando Wake (Event)"), ToolTip("Splits when gaining control after waking up in Rando")]
-        RandoWake,
         [Description("Ghost Coins Incremented (Event)"), ToolTip("Splits when the ghostCoins PlayerData is updated. Unused by unmodded game, intended for use with mods.")]
         OnGhostCoinsIncremented,
