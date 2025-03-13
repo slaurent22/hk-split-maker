@@ -56,7 +56,7 @@ const every = {
 };
 
 function createEvery() {
-  const output = JSON.stringify(every, null, 2) + "\n";
+  const output = JSON.stringify(every, null, 4) + "\n";
   writeFileSync(FILE.EVERY, output);
 }
 
