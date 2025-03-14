@@ -294,6 +294,7 @@ import RestingGroundsStation from "./Misc/Stag.png";
 import DeepnestStation from "./Misc/Stag.png";
 import HiddenStationStation from "./Misc/Stag.png";
 import StagnestStation from "./Misc/Stag.png";
+import StagnestStationBuy from "./Misc/Stag.png";
 import MrMushroom1 from "./NPC/MrMushroom.png";
 import MrMushroom2 from "./NPC/MrMushroom.png";
 import MrMushroom3 from "./NPC/MrMushroom.png";
@@ -1037,6 +1038,7 @@ export default {
   DeepnestStation,
   HiddenStationStation,
   StagnestStation,
+  StagnestStationBuy,
   MrMushroom1,
   MrMushroom2,
   MrMushroom3,
