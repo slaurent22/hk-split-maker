@@ -21,7 +21,7 @@
     "author": "",
     "license": "ISC",
     "engines": {
-        "node": ">=18.x"
+        "node": ">=20.19.0"
     },
     "devDependencies": {
         "@babel/core": "^7.16.10",
