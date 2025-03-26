@@ -69,6 +69,10 @@
             }
         },
         {
+            "fileName": "all-skills-fury",
+            "displayName": "All Skills (1.2.2.1 Fury/iBaldur)"
+        },
+        {
             "fileName": "all-skills-old-route",
             "displayName": "All Skills (Old Route)",
             "data": {

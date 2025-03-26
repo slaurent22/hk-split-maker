@@ -1,0 +1,45 @@
+{
+    "categoryName": "All Skills",
+    "splitIds": [
+        "FuryOfTheFallen",
+        "PlayerDeath",
+        "EnterGreenpath",
+        "MothwingCloak",
+        "MenuClaw",
+        "CycloneSlash",
+        "BlueLake",
+        "DreamNail",
+        "Menu",
+        "DashSlash",
+        "ShadeSoul",
+        "DesolateDive",
+        "BlackKnightTrans",
+        "KingsStationStation",
+        "CrystalHeart",
+        "DescendingDark",
+        "MenuIsmasTear",
+        "KingsBrand",
+        "BasinEntry",
+        "MonarchWings",
+        "ShadeCloak",
+        "HiddenStationStation",
+        "EnterAnyDream",
+        "GreatSlash",
+        "HowlingWraiths",
+        "Hegemol",
+        "AbyssShriek"
+    ],
+    "names": {
+        "Menu": "Lemm Quitout",
+        "EnterAnyDream": "Enter Monomon"
+    },
+    "endTriggeringAutosplit": false,
+    "endingSplit": {
+        "name": "Hollow Knight",
+        "icon": "HollowKnightBoss"
+    },
+    "gameName": "Hollow Knight",
+    "variables": {
+        "All Skills Glitch": "No Major Glitches"
+    }
+}
