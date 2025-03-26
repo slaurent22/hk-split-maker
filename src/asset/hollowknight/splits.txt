@@ -5,13 +5,13 @@
         [Description("Rando Wake (Start)"), ToolTip("Splits when gaining control after waking up in Rando")]
         RandoWake,
 
-        [Description("Credits Roll (Ending)"), ToolTip("Splits on any credits rolling")]
+        [Description("Credits Roll (Ending)"), ToolTip("Splits on any credits rolling, any ending")]
         EndingSplit,
         [Description("The Hollow Knight (Ending)"), ToolTip("Splits on The Hollow Knight ending")]
         EndingA,
         [Description("Sealed Siblings (Ending)"), ToolTip("Splits on Sealed Siblings ending")]
         EndingB,
-        [Description("Dream No More (Ending)"), ToolTip("Splits on Dream No More ending")]
+        [Description("Dream No More (Ending)"), ToolTip("Splits on Dream No More ending, True Ending")]
         EndingC,
         [Description("Embrace the Void (Ending)"), ToolTip("Splits on Embrace the Void ending")]
         EndingD,
@@ -424,7 +424,7 @@
         NoskHornetP,
         [Description("Nightmare King Grimm (Pantheon)"), ToolTip("Splits after killing Nightmare King Grimm in Pantheon 5")]
         NightmareKingGrimmP,
-        [Description("Absolute Radiance (Ending)"), ToolTip("Splits after killing Absolute Radiance in Pantheon 5")]
+        [Description("Absolute Radiance (Ending)"), ToolTip("Splits after killing Absolute Radiance in Pantheon 5, Godhome Ending")]
         RadianceP,
 
         [Description("Herrah the Beast (Dreamer)"), ToolTip("Splits when you see the mask for Herrah")]
