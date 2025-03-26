@@ -7,6 +7,7 @@
         "TransClaw",
         "DeepnestSpa",
         "TramPass",
+        "DeepnestStation",
         "DreamNail",
         "WatcherChandelier",
         "BlackKnightTrans",
@@ -15,7 +16,7 @@
         "CrystalHeart",
         "Uumuu",
         "BeastsDenTrapBench",
-        "Hegemol",
+        "HegemolDreamer",
         "UnchainedHollowKnight"
     ],
     "endTriggeringAutosplit": false,
