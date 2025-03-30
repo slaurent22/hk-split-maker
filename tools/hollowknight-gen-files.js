@@ -56,7 +56,7 @@ const every = {
 };
 
 function createEvery() {
-  const output = JSON.stringify(every, null, 2) + "\n";
+  const output = JSON.stringify(every, null, 4) + "\n";
   writeFileSync(FILE.EVERY, output);
 }
 
@@ -66,6 +66,7 @@ const NEW_ID_MAP = {
   Mask2: "Mask1",
   Mask3: "Mask1",
   Mask4: "Mask1",
+  Mask5: "Mask1",
   MaskFragment5: "MaskFragment1",
   MaskFragment9: "MaskFragment1",
   MaskFragment13: "MaskFragment1",
@@ -123,6 +124,31 @@ function getUrl(id, qualifier) {
     return getUrl("KingsIdol", "Relic");
   }
 
+  if (qualifier === "Start") {
+    switch (id) {
+      case "StartNewGame":
+      case "RandoWake":
+        return getUrl("ManualSplit", "Misc");
+      case "StartPantheon":
+        return getUrl("Godhome", "Area");
+    }
+  }
+
+  if (qualifier === "Ending") {
+    switch (id) {
+      case "EndingSplit":
+        return getUrl("Knight", "Misc");
+      case "EndingA":
+      case "EndingB":
+        return getUrl("HollowKnightBoss", "Boss");
+      case "EndingC":
+      case "EndingD":
+      case "EndingE":
+      case "RadianceP":
+        return getUrl("RadianceBoss", "Boss");
+    }
+  }
+
   if (qualifier === "Essence") {
     const boss = id.match(/(?<name>.+)Essence/);
     if (boss) {
@@ -160,6 +186,7 @@ function getUrl(id, qualifier) {
   if (qualifier === "Item") {
     switch (id) {
       case "AllSeals":
+      case "SoulSanctumSeal":
         return getUrl("HallownestSeal", "Relic");
       case "AllEggs":
         return getUrl("RancidEgg", "Item");
@@ -299,14 +326,13 @@ function getUrl(id, qualifier) {
         return getUrl("FragileStrengthBroken", "Charm");
       case "MetEmilitia":
         return getUrl("Emilitia", "NPC");
-      case "EndingSplit":
-        return getUrl("Knight", "Misc");
       case "EternalOrdealUnlocked":
       case "EternalOrdealAchieved":
         return getUrl("Zote", "Enemy");
       case "SavedCloth":
         return getUrl("Cloth", "NPC");
       case "RidingStag":
+      case "StagMoved":
         return getUrl("Stag", "Misc");
       case "MineLiftOpened":
         return getUrl("CrystalCrawler", "Enemy");
@@ -314,12 +340,14 @@ function getUrl(id, qualifier) {
         return getUrl("KingsBrand", "Item");
       case "AbyssLighthouse":
         return getUrl("Shade", "Enemy");
-      case "RandoWake":
-        return getUrl("ManualSplit", "Misc");
       case "PureSnail":
         return getUrl("PureSnail", "Misc");
       case "OnGhostCoinsIncremented":
         return getUrl("Knight", "Misc");
+      case "WhiteDefenderStatueUnlocked":
+        return getUrl("Stinky", "Misc");
+      case "PathOfPainRoom4DDark":
+        return getUrl("Wingmould", "Enemy");
     }
   }
 
@@ -455,6 +483,12 @@ function getUrl(id, qualifier) {
         return getUrl("Abyss", "Area");
       case "BlueLake":
         return getUrl("Witness", "Achievement");
+      case "BrettaHouse":
+      case "BrettaHouseBubbles":
+      case "BrettaHouseBumpers":
+      case "BrettaHouseSwitches":
+      case "BrettaHouseZippers":
+        return getUrl("BrettaRescued", "NPC");
       case "CatacombsEntry":
         return getUrl("EntombedHusk", "Enemy");
       case "CrystalMoundExit":
@@ -463,6 +497,8 @@ function getUrl(id, qualifier) {
         return getUrl("CrystalPeak", "Area");
       case "EnterAnyDream":
         return getUrl("DreamNail", "Skill");
+      case "EnterBeastDen":
+        return getUrl("Bench", "Misc");
       case "EnterCrown":
         return getUrl("CrystallisedHusk", "Enemy");
       case "EnterDeepnest":
@@ -504,9 +540,17 @@ function getUrl(id, qualifier) {
         return getUrl("DescendingDark", "Skill");
       case "TransVS":
         return getUrl("VengefulSpirit", "Skill");
+      case "TransShadeSoul":
+        return getUrl("ShadeSoul", "Skill");
+      case "TransMapCrossroads":
+        return getUrl("Map", "Misc");
       case "TransTear":
       case "TransTearWithGrub":
         return getUrl("IsmasTear", "Skill");
+      case "TransFlame1":
+      case "TransFlame2":
+      case "TransFlame3":
+        return getUrl("FlameConsumed", "Misc");
       case "CorniferAtHome":
         return getUrl("Iselda", "Misc");
       case "QueensGardensFrogsTrans":
@@ -522,8 +566,11 @@ function getUrl(id, qualifier) {
       case "GodhomeBench":
         return getUrl("Godhome", "Area");
       case "TransitionAfterSaveState":
+      case "TransitionExcludingDiscontinuities":
       case "AnyTransition":
         return getUrl("ManualSplit", "Misc");
+      case "EnterCityTollBenchRoom":
+        return getUrl("Bench", "Misc");
       case "ColosseumBronzeExit":
         return getUrl("ColosseumBronze", "Trial");
       case "ColosseumSilverExit":
@@ -586,6 +633,8 @@ function getUrl(id, qualifier) {
         return getUrl("MantisClaw", "Skill");
       case "MenuGorgeousHusk":
         return getUrl("GorgeousHusk", "Enemy");
+      case "MenuShadeSoul":
+        return getUrl("ShadeSoul", "Skill");
       case "MenuIsmasTear":
         return getUrl("IsmasTear", "Skill");
     }
