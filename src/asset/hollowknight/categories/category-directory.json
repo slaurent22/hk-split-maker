@@ -172,6 +172,10 @@
             }
         },
         {
+            "fileName": "te-fury",
+            "displayName": "True Ending (1.2.2.1 Fury/iBaldur)"
+        },
+        {
             "fileName": "te-1432plus",
             "displayName": "True Ending (1.4.3.2+ SCSB)",
             "data": {

@@ -1,0 +1,67 @@
+{
+    "categoryName": "True Ending",
+    "splitIds": [
+        "FuryOfTheFallen",
+        "PlayerDeath",
+        "EnterGreenpath",
+        "MothwingCloak",
+        "MenuClaw",
+        "BlueLake",
+        "DreamNail",
+        "OnObtainKingsIdol",
+        "TransGorgeousHusk",
+        "LumaflyLantern",
+        "CrystalHeart",
+        "MenuShadeSoul",
+        "EnterAnyDream",
+        "TollBenchBasin",
+        "LostKinEssence",
+        "EnterAnyDream",
+        "FailedChampionEssence",
+        "KingsBrand",
+        "ShadeCloak",
+        "MarkothEssence",
+        "ElderHuEssence",
+        "EnterAnyDream",
+        "NoEyesEssence",
+        "TollBenchQG",
+        "MarmuEssence",
+        "WhiteFragmentLeft",
+        "GalienEssence",
+        "EnterAnyDream",
+        "WhitePalaceLowerEntry",
+        "WhiteFragmentRight",
+        "VoidHeart",
+        "HollowKnightDreamnail"
+    ],
+    "names": {
+        "PlayerDeath": "Baldur %s",
+        "MenuClaw": "Mantis Claw",
+        "OnObtainKingsIdol": "[1D] Cliffs Idol",
+        "TransGorgeousHusk": "[1U] Gorgeous Husk",
+        "LumaflyLantern": "[2U] %s",
+        "CrystalHeart": "[1D] %s",
+        "MenuShadeSoul": "[2D] Shade Soul",
+        "EnterAnyDream": [
+            "Lurien",
+            "[1U 2U] Enter Failed Champ",
+            "Monomon",
+            "Herrah"
+        ],
+        "KingsBrand": "[1U] %s",
+        "ShadeCloak": "[2D] %s",
+        "ElderHuEssence": "[2U] %s",
+        "WhitePalaceLowerEntry": "[1U 2D] Enter White Palace",
+        "WhiteFragmentRight": "Kingsoul",
+        "HollowKnightDreamnail": "[1D] %s"
+    },
+    "endTriggeringAutosplit": false,
+    "endingSplit": {
+        "name": "Radiance",
+        "icon": "RadianceBoss"
+    },
+    "gameName": "Hollow Knight",
+    "variables": {
+        "True Ending Glitch": "No Major Glitches"
+    }
+}
