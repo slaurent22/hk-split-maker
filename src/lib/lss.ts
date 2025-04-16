@@ -20,6 +20,7 @@ export interface Config {
   categoryName: string;
   gameName: string;
   variables?: Record<string, string>;
+  offset?: string;
 }
 
 interface ParsedAutoSplitterSettings {
@@ -127,6 +128,7 @@ export async function createSplitsXml(config: Config): Promise<string> {
     gameName,
     names,
     icons,
+    offset,
   } = config;
 
   const splitDefinitions = parseSplitsDefinitions();
@@ -266,7 +268,7 @@ export async function createSplitsXml(config: Config): Promise<string> {
         { GameName: gameName },
         { CategoryName: categoryName },
         getMetadataNode(config),
-        { Offset: "00:00:00" },
+        { Offset: offset ?? "00:00:00" },
         { AttemptCount: "0" },
         { AttemptHistory: "" },
         { Segments: segments },

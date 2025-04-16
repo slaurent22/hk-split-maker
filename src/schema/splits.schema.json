@@ -59,6 +59,10 @@
             "items": {
                 "oneOf": []
             }
+        },
+        "offset": {
+            "description": "When time should start (formatted like 00:00:00 or 00:00:00.0000000)",
+            "type": "string"
         }
     },
     "required": [
