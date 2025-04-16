@@ -304,6 +304,18 @@ function transformNameOverrideForImport(
   return nameOverride;
 }
 
+function getTextContent(element: Element | ChildNode): string | undefined {
+  return element.textContent?.trim();
+}
+
+function getTextContentByTagName(
+  element: Element | Document,
+  tagName: string
+): string | undefined {
+  const elementByTagName = element.getElementsByTagName(tagName)[0];
+  return getTextContent(elementByTagName);
+}
+
 function parseAutoSplitterSettings(
   autoSplitterSettings: Element
 ): ParsedAutoSplitterSettings {
@@ -312,25 +324,22 @@ function parseAutoSplitterSettings(
     autoSplitterSettings.getElementsByTagName("CustomSettings")[0];
   if (xmlDocSplits) {
     // Default autosplitter
-    const xmlDocOrdered =
-      autoSplitterSettings.getElementsByTagName("Ordered")[0];
-    const autosplitStartRuns =
-      autoSplitterSettings.getElementsByTagName("AutosplitStartRuns")[0];
-    const autosplitEndRuns =
-      autoSplitterSettings.getElementsByTagName("AutosplitEndRuns")[0];
-    const orderedStr = xmlDocOrdered && xmlDocOrdered.textContent?.trim();
+    const autosplitEndRuns = getTextContentByTagName(
+      autoSplitterSettings,
+      "AutosplitEndRuns"
+    );
+    const orderedStr = getTextContentByTagName(autoSplitterSettings, "Ordered");
     const autoStart =
-      (autosplitStartRuns && autosplitStartRuns.textContent?.trim()) || "";
+      getTextContentByTagName(autoSplitterSettings, "AutosplitStartRuns") || "";
     // autosplitIds vs splitIds: autosplitIds do not contain "-" for subsplits, splitIds can
     const autosplitIds: Array<string> = [];
     xmlDocSplits.childNodes.forEach((c) => {
       if (c.nodeName === "Split") {
-        const autosplitId = c.textContent?.trim() || "";
+        const autosplitId = getTextContent(c) || "";
         autosplitIds.push(autosplitId);
       }
     });
-    const endTriggeringAutosplit =
-      autosplitEndRuns && autosplitEndRuns.textContent?.trim() == "True";
+    const endTriggeringAutosplit = autosplitEndRuns == "True";
     return {
       ordered: orderedStr == "True",
       startTriggeringAutosplit: autoStart.length > 0 ? autoStart : undefined,
@@ -372,14 +381,10 @@ export function importSplitsXml(str: string): Config {
   const parser = new DOMParser();
   const xmlDoc = parser.parseFromString(str, "text/xml");
   // GameName, CategoryName -> gameName, categoryName
-  const xmlDocGameName = xmlDoc.getElementsByTagName("GameName")[0];
   const gameName =
-    (xmlDocGameName && xmlDocGameName.textContent?.trim()) || "Hollow Knight";
-  const xmlDocCategoryName = xmlDoc.getElementsByTagName("CategoryName")[0];
-  const categoryName =
-    (xmlDocCategoryName && xmlDocCategoryName.textContent?.trim()) || "";
-  const xmlDocOffset = xmlDoc.getElementsByTagName("Offset")[0];
-  const offset = xmlDocOffset && xmlDocOffset.textContent?.trim();
+    getTextContentByTagName(xmlDoc, "GameName") || "Hollow Knight";
+  const categoryName = getTextContentByTagName(xmlDoc, "CategoryName") || "";
+  const offset = getTextContentByTagName(xmlDoc, "Offset");
   // Metadata Variables -> variables
   const xmlDocVariables0 = xmlDoc.getElementsByTagName("Variables")[0];
   const xmlDocVariables =
@@ -391,7 +396,7 @@ export function importSplitsXml(str: string): Config {
       const variableName = xmlDocVariables[i].getAttribute("name");
       if (variableName) {
         potentialVariables[variableName] =
-          xmlDocVariables[i].textContent?.trim() || "";
+          getTextContent(xmlDocVariables[i]) || "";
         hasVariables = true;
       }
     }
@@ -408,11 +413,8 @@ export function importSplitsXml(str: string): Config {
       [];
     for (let i = 0; i < xmlDocComponents.length; i++) {
       const xmlDocComponent = xmlDocComponents[i];
-      const xmlDocPath = xmlDocComponent.getElementsByTagName("Path")[0];
-      if (
-        xmlDocPath &&
-        xmlDocPath.textContent?.trim() === "LiveSplit.AutoSplittingRuntime.dll"
-      ) {
+      const path = getTextContentByTagName(xmlDocComponent, "Path");
+      if (path === "LiveSplit.AutoSplittingRuntime.dll") {
         autoSplitterSettings =
           xmlDocComponent.getElementsByTagName("Settings")[0];
         break;
@@ -448,8 +450,7 @@ export function importSplitsXml(str: string): Config {
   // subsplitNames vs names: names do not contain "-" for subsplits, subsplitNames can
   let endName = "";
   for (let i = 0; i < segments.length; i++) {
-    const xmlDocName = segments[i].getElementsByTagName("Name")[0];
-    const subsegmentName = (xmlDocName && xmlDocName.textContent?.trim()) || "";
+    const subsegmentName = getTextContentByTagName(segments[i], "Name") || "";
     if (i < parsedSplitIds.length) {
       if (subsegmentName.startsWith("-")) {
         parsedSplitIds[i].subsplit = true;
