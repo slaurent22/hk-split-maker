@@ -38,6 +38,8 @@ interface ParsedSplitId {
   iconId: string;
 }
 
+const DEFAULT_OFFSET = "00:00:00";
+
 const MANUAL_SPLIT_RE = /%(?<name>.+)/;
 export const SUB_SPLIT_RE = /-(?<name>.+)/;
 
@@ -268,7 +270,7 @@ export async function createSplitsXml(config: Config): Promise<string> {
         { GameName: gameName },
         { CategoryName: categoryName },
         getMetadataNode(config),
-        { Offset: offset ?? "00:00:00" },
+        { Offset: offset ?? DEFAULT_OFFSET },
         { AttemptCount: "0" },
         { AttemptHistory: "" },
         { Segments: segments },
@@ -376,6 +378,8 @@ export function importSplitsXml(str: string): Config {
   const xmlDocCategoryName = xmlDoc.getElementsByTagName("CategoryName")[0];
   const categoryName =
     (xmlDocCategoryName && xmlDocCategoryName.textContent?.trim()) || "";
+  const xmlDocOffset = xmlDoc.getElementsByTagName("Offset")[0];
+  const offset = xmlDocOffset && xmlDocOffset.textContent?.trim();
   // Metadata Variables -> variables
   const xmlDocVariables0 = xmlDoc.getElementsByTagName("Variables")[0];
   const xmlDocVariables =
@@ -499,7 +503,7 @@ export function importSplitsXml(str: string): Config {
       hasNameOverrides = true;
     }
   });
-  return {
+  let config: Config = {
     categoryName,
     startTriggeringAutosplit,
     splitIds,
@@ -509,4 +513,8 @@ export function importSplitsXml(str: string): Config {
     gameName,
     variables: hasVariables ? potentialVariables : undefined,
   };
+  if (offset && offset !== DEFAULT_OFFSET) {
+    config = { offset, ...config };
+  }
+  return config;
 }
