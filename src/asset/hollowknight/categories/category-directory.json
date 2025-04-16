@@ -955,12 +955,26 @@
             "displayName": "Who% (All Glitches)"
         },
         {
+            "fileName": "who-nmms-1028",
+            "displayName": "Who% (No Main Menu Storage, 1028)"
+        },
+        {
+            "fileName": "who-nmms-itemless",
+            "displayName": "Who% (No Main Menu Storage, itemless stagclip)"
+        },
+        {
             "fileName": "who-cdash",
-            "displayName": "Who% (Crystal Heart)"
+            "displayName": "Who% (Crystal Heart)",
+            "data": {
+                "routeNotesURL": "https://pastebin.com/eJXi1DEH"
+            }
         },
         {
             "fileName": "who-wings",
-            "displayName": "Who% (Monarch Wings)"
+            "displayName": "Who% (Monarch Wings)",
+            "data": {
+                "routeNotesURL": "https://pastebin.com/eJXi1DEH"
+            }
         },
         {
             "fileName": "witness",

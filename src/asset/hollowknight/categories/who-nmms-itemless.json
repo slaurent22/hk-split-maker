@@ -1,0 +1,9 @@
+{
+    "categoryName": "Who%",
+    "splitIds": ["FungalWastesEntry", "QueensStationStation", "Grub1"],
+    "names": {
+        "Grub1": "Grub Queen's Gardens Upper"
+    },
+    "endTriggeringAutosplit": true,
+    "gameName": "Hollow Knight Category Extensions"
+}
