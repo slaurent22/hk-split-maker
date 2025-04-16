@@ -951,6 +951,18 @@
             }
         },
         {
+            "fileName": "who-ag",
+            "displayName": "Who% (All Glitches)"
+        },
+        {
+            "fileName": "who-cdash",
+            "displayName": "Who% (Crystal Heart)"
+        },
+        {
+            "fileName": "who-wings",
+            "displayName": "Who% (Monarch Wings)"
+        },
+        {
             "fileName": "witness",
             "displayName": "Witness",
             "data": {

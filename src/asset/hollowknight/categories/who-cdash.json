@@ -1,0 +1,18 @@
+{
+    "categoryName": "Who%",
+    "splitIds": [
+        "VengefulSpirit",
+        "EnterGreenpath",
+        "MothwingCloak",
+        "MantisClaw",
+        "BlueLake",
+        "TransGorgeousHusk",
+        "LumaflyLantern",
+        "CrystalHeart",
+        "QueensGardensEntry",
+        "QueensGardensPostArenaTransition",
+        "GrubQueensGardensUpper"
+    ],
+    "endTriggeringAutosplit": true,
+    "gameName": "Hollow Knight Category Extensions"
+}
