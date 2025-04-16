@@ -1,0 +1,52 @@
+{
+    "categoryName": "Any%",
+    "splitIds": [
+        "VengefulSpirit",
+        "EnterGreenpath",
+        "NotchShrumalOgres",
+        "MantisClaw",
+        "GruzMother",
+        "DreamNail",
+        "LumaflyLantern",
+        "SlyKey",
+        "Sprintmaster",
+        "GrubCityGuardHouse",
+        "Grubsong",
+        "CrystalHeart",
+        "BlackKnightTrans",
+        "Uumuu",
+        "Hegemol",
+        "UnchainedHollowKnight"
+    ],
+    "names": {
+        "NotchShrumalOgres": "Mothwing Cloak",
+        "LumaflyLantern": "Chandelier",
+        "SlyKey": "Watcher Knight Exit",
+        "Sprintmaster": "Enter Rafters",
+        "GrubCityGuardHouse": "Lumafly Lantern",
+        "Grubsong": "Crystal Heart",
+        "CrystalHeart": "Uumuu",
+        "BlackKnightTrans": "Enter Queen's Gardens",
+        "Uumuu": "Trap Bench"
+    },
+    "icons": {
+        "NotchShrumalOgres": "MothwingCloak",
+        "LumaflyLantern": "WatcherChandelier",
+        "SlyKey": "BlackKnightTrans",
+        "Sprintmaster": "EnterRafters",
+        "GrubCityGuardHouse": "LumaflyLantern",
+        "Grubsong": "CrystalHeart",
+        "CrystalHeart": "Uumuu",
+        "BlackKnightTrans": "QueensGardensEntry",
+        "Uumuu": "BeastsDenTrapBench"
+    },
+    "endTriggeringAutosplit": false,
+    "endingSplit": {
+        "name": "Hollow Knight",
+        "icon": "HollowKnightBoss"
+    },
+    "gameName": "Hollow Knight",
+    "variables": {
+        "Any% Glitch": "1.4.3.2+ NMG"
+    }
+}
