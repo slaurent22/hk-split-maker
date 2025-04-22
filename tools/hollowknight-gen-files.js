@@ -480,6 +480,7 @@ function getUrl(id, qualifier) {
   if (qualifier === "Transition") {
     switch (id) {
       case "BasinEntry":
+      case "BasinSpikePitExit":
         return getUrl("Abyss", "Area");
       case "BlueLake":
         return getUrl("Witness", "Achievement");
@@ -501,12 +502,16 @@ function getUrl(id, qualifier) {
         return getUrl("Bench", "Misc");
       case "EnterCrown":
         return getUrl("CrystallisedHusk", "Enemy");
+      case "EnterCrossroads":
+        return getUrl("ForgottenCrossroads", "Area");
       case "EnterDeepnest":
         return getUrl("Deepnest", "Area");
       case "EnterDirtmouth":
         return getUrl("Dirtmouth", "Area");
       case "EnterRafters":
         return getUrl("WingedSentry", "Enemy");
+      case "LemmShopExit":
+        return getUrl("Lemm", "Misc");
       case "FogCanyonEntry":
         return getUrl("FogCanyon", "Area");
       case "EnterGreenpath":
@@ -631,10 +636,28 @@ function getUrl(id, qualifier) {
         return getUrl("MapQuill", "Misc");
       case "MenuClaw":
         return getUrl("MantisClaw", "Skill");
+      case "MenuCloak":
+        return getUrl("MothwingCloak", "Skill");
+      case "MenuDashmaster":
+        return getUrl("Dashmaster", "Charm");
+      case "MenuDreamNail":
+        return getUrl("DreamNail", "Skill");
+      case "MenuDreamGate":
+        return getUrl("DreamGate", "Skill");
+      case "MenuDreamer3":
+        return getUrl("Dreamer", "Dreamer");
       case "MenuGorgeousHusk":
         return getUrl("GorgeousHusk", "Enemy");
       case "MenuShadeSoul":
         return getUrl("ShadeSoul", "Skill");
+      case "MenuVoidHeart":
+        return getUrl("VoidHeart", "Charm");
+      case "MenuHegemol":
+        return getUrl("Herrah", "Dreamer");
+      case "MenuLurien":
+        return getUrl("Lurien", "Dreamer");
+      case "MenuMonomon":
+        return getUrl("Monomon", "Dreamer");
       case "MenuIsmasTear":
         return getUrl("IsmasTear", "Skill");
     }
