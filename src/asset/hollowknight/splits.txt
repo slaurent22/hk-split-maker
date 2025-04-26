@@ -669,6 +669,8 @@
         AncestralMound,
         [Description("Ancient Basin (Transition)"), ToolTip("Splits on transition to Ancient Basin")]
         BasinEntry,
+        [Description("Basin Spike Pit Exit (Transition)"), ToolTip("Splits on transition after crossing the Spike Pit from Basin Toll Bench towards Broken Vessel")]
+        BasinSpikePitExit,
         [Description("Beast Den (Transition)"), ToolTip("Splits on transition into Beast Den")]
         EnterBeastDen,
         [Description("Blue Lake (Transition)"), ToolTip("Splits on transition to Blue Lake from either side")]
@@ -689,6 +691,8 @@
         CrystalPeakEntry,
         [Description("Crystal Mound Exit (Transition)"), ToolTip("Splits on transition from Crystal Mound")]
         CrystalMoundExit,
+        [Description("Crossroads (Transition)"), ToolTip("Splits on transition through the Well from Dirtmouth to Crossroads")]
+        EnterCrossroads,
         [Description("Deepnest (Transition)"), ToolTip("Splits on transition into Deepnest")]
         EnterDeepnest,
         [Description("Dirtmouth (Transition)"), ToolTip("Splits on any transition into Dirtmouth Town")]
@@ -711,6 +715,8 @@
         EnterCrown,
         [Description("Rafters (Transition)"), ToolTip("Splits on any transition into the City Rafters room")]
         EnterRafters,
+        [Description("Lemm Shop Exit (Transition)"), ToolTip("Splits on transition after talking to Lemm in the shop")]
+        LemmShopExit,
         [Description("Salubra Exit (Transition)"), ToolTip("Splits on the transition out of Salubra's Hut")]
         SalubraExit,
         [Description("Spire Bench Exit (Transition)"), ToolTip("Splits on the transition out of the bench room in Watcher's Spire")]
@@ -1303,12 +1309,31 @@
         Menu,
         [Description("Main Menu w/ Claw (Menu)"), ToolTip("Splits on transition to the main menu after Mantis Claw acquired")]
         MenuClaw,
+        [Description("Main Menu w/ Mothwing Cloak (Menu)"), ToolTip("Splits on transition to the main menu after Mothwing Cloak acquired")]
+        MenuCloak,
+        [Description("Main Menu w/ Dashmaster (Menu)"), ToolTip("Splits on transition to the main menu after Dashmaster acquired")]
+        MenuDashmaster,
+        [Description("Main Menu w/ Dream Nail (Menu)"), ToolTip("Splits on transition to the main menu after Dream Nail acquired")]
+        MenuDreamNail,
+        [Description("Main Menu w/ Dream Gate (Menu)"), ToolTip("Splits on transition to the main menu after Dream Gate acquired")]
+        MenuDreamGate,
+        [Description("Main Menu w/ 3 Dreamers (Menu)"), ToolTip("Splits on transition to the main menu after 3 Dreamers acquired")]
+        MenuDreamer3,
         [Description("Main Menu w/ Ghusk (Menu)"), ToolTip("Splits on transition to the main menu after Gorgeous Husk defeated")]
         MenuGorgeousHusk,
         [Description("Main Menu w/ Isma's Tear (Menu)"), ToolTip("Splits on transition to the main menu after Isma's Tear acquired")]
         MenuIsmasTear,
         [Description("Main Menu w/ Shade Soul (Menu)"), ToolTip("Splits on transition to the main menu after Shade Soul acquired")]
         MenuShadeSoul,
+        [Description("Main Menu w/ Void Heart (Menu)"), ToolTip("Splits on transition to the main menu after Void Heart acquired")]
+        MenuVoidHeart,
+
+        [Description("Main Menu w/ Herrah (Menu)"), ToolTip("For Dreamer Quit-outs on older patches. Splits on transition to the main menu after Herrah is registered as defeated")]
+        MenuHegemol,
+        [Description("Main Menu w/ Lurien (Menu)"), ToolTip("For Dreamer Quit-outs on older patches. Splits on transition to the main menu after Lurien is registered as defeated")]
+        MenuLurien,
+        [Description("Main Menu w/ Monomon (Menu)"), ToolTip("For Dreamer Quit-outs on older patches. Splits on transition to the main menu after Monomon is registered as defeated")]
+        MenuMonomon,
 
         [Description("Cornifer at Home (Transition)"), ToolTip("Splits when entering Iselda's hut while Cornifer is sleeping")]
         CorniferAtHome,

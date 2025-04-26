@@ -325,6 +325,7 @@ import WhitePalace from "./Enemy/Wingmould.png";
 import WhitePalaceSecretRoom from "./Enemy/Kingsmould.png";
 import AncestralMound from "./Misc/Knight.png";
 import BasinEntry from "./Enemy/ShadowCreeper.png";
+import BasinSpikePitExit from "./Enemy/ShadowCreeper.png";
 import EnterBeastDen from "./Misc/Bench.png";
 import BlueLake from "./Achievement/Witness.png";
 import BrettaHouse from "./NPC/BrettaRescued.png";
@@ -335,6 +336,7 @@ import BrettaHouseZippers from "./NPC/BrettaRescued.png";
 import CatacombsEntry from "./Enemy/EntombedHusk.png";
 import CrystalPeakEntry from "./Enemy/CrystalCrawler.png";
 import CrystalMoundExit from "./Skill/DescendingDark.png";
+import EnterCrossroads from "./Enemy/Tiktik.png";
 import EnterDeepnest from "./Enemy/Dirtcarver.png";
 import EnterDirtmouth from "./NPC/Elderbug.png";
 import EnterAnyDream from "./Skill/DreamNail.png";
@@ -346,6 +348,7 @@ import EnterGreenpath from "./Enemy/Mosscreep.png";
 import EnterGreenpathWithOvercharm from "./Enemy/Mosscreep.png";
 import EnterCrown from "./Enemy/CrystallisedHusk.png";
 import EnterRafters from "./Enemy/WingedSentry.png";
+import LemmShopExit from "./Misc/Lemm.png";
 import SalubraExit from "./Item/SalubrasBlessing.png";
 import SpireBenchExit from "./Misc/Bench.png";
 import TransClaw from "./Skill/MantisClaw.png";
@@ -633,9 +636,18 @@ import Pantheon1to4Entry from "./Misc/Godseeker.png";
 import Pantheon5Entry from "./Misc/Godseeker.png";
 import Menu from "./Misc/MapQuill.png";
 import MenuClaw from "./Skill/MantisClaw.png";
+import MenuCloak from "./Skill/MothwingCloak.png";
+import MenuDashmaster from "./Charm/Dashmaster.png";
+import MenuDreamNail from "./Skill/DreamNail.png";
+import MenuDreamGate from "./Skill/DreamGate.png";
+import MenuDreamer3 from "./Dreamer/Dreamer.png";
 import MenuGorgeousHusk from "./Enemy/GorgeousHusk.png";
 import MenuIsmasTear from "./Skill/IsmasTear.png";
 import MenuShadeSoul from "./Skill/ShadeSoul.png";
+import MenuVoidHeart from "./Charm/VoidHeart.png";
+import MenuHegemol from "./Dreamer/Herrah.png";
+import MenuLurien from "./Dreamer/Lurien.png";
+import MenuMonomon from "./Dreamer/Monomon.png";
 import CorniferAtHome from "./Misc/Iselda.png";
 import AllSeals from "./Relic/HallownestSeal.png";
 import AllEggs from "./Item/RancidEgg.png";
@@ -1069,6 +1081,7 @@ export default {
   WhitePalaceSecretRoom,
   AncestralMound,
   BasinEntry,
+  BasinSpikePitExit,
   EnterBeastDen,
   BlueLake,
   BrettaHouse,
@@ -1079,6 +1092,7 @@ export default {
   CatacombsEntry,
   CrystalPeakEntry,
   CrystalMoundExit,
+  EnterCrossroads,
   EnterDeepnest,
   EnterDirtmouth,
   EnterAnyDream,
@@ -1090,6 +1104,7 @@ export default {
   EnterGreenpathWithOvercharm,
   EnterCrown,
   EnterRafters,
+  LemmShopExit,
   SalubraExit,
   SpireBenchExit,
   TransClaw,
@@ -1377,9 +1392,18 @@ export default {
   Pantheon5Entry,
   Menu,
   MenuClaw,
+  MenuCloak,
+  MenuDashmaster,
+  MenuDreamNail,
+  MenuDreamGate,
+  MenuDreamer3,
   MenuGorgeousHusk,
   MenuIsmasTear,
   MenuShadeSoul,
+  MenuVoidHeart,
+  MenuHegemol,
+  MenuLurien,
+  MenuMonomon,
   CorniferAtHome,
   AllSeals,
   AllEggs,
