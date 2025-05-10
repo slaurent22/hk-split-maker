@@ -194,6 +194,14 @@
     ],
     "Glitched": [
         {
+            "fileName": "112-ag",
+            "displayName": "112% APB (All Glitches)",
+            "data": {
+                "routeNotesURL": "https://pastebin.com/Gz0NMk98",
+                "searchTerms": ["112", "ag"]
+            }
+        },
+        {
             "fileName": "all-skills-ag",
             "displayName": "All Skills (All Glitches)",
             "data": {

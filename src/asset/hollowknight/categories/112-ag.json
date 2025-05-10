@@ -1,0 +1,80 @@
+{
+    "categoryName": "112% APB",
+    "splitIds": [
+        "FungalWastesEntry",
+        "MenuClaw",
+        "MothwingCloak",
+        "DreamNail",
+        "SeerDeparts",
+        "NightmareLantern",
+        "Grimmchild",
+        "TransFlame3",
+        "Grimmchild2",
+        "TransFlame3",
+        "NightmareKingGrimm",
+        "CatacombsEntry",
+        "Lurien",
+        "Collector",
+        "KingsBrand",
+        "LittleFool",
+        "ColosseumSilverUnlocked",
+        "ColosseumGoldUnlocked",
+        "ColosseumGold",
+        "FalseKnight",
+        "Monomon",
+        "MantisLords",
+        "HegemolDreamer",
+        "Pantheon1to4Entry",
+        "-GodhomeBench",
+        "Pantheon1",
+        "-GodhomeBench",
+        "Pantheon2",
+        "-GodhomeBench",
+        "Pantheon3",
+        "-GodhomeBench",
+        "Pantheon4",
+        "Pantheon5Entry",
+        "-GodhomeBench",
+        "-GodhomeBench",
+        "-GodhomeBench",
+        "-GodhomeLoreRoom",
+        "-GodhomeBench",
+        "-GodhomeLoreRoom",
+        "-GodhomeLoreRoom",
+        "RadianceP",
+        "UnchainedHollowKnight"
+    ],
+    "names": {
+        "TransFlame3": ["Grimmkin Novice Exit", "Grimmkin Master Exit"],
+        "ColosseumSilverUnlocked": "Trail of the Warrior",
+        "ColosseumGoldUnlocked": "Trail of the Conqueror",
+        "ColosseumGold": "Trail of the Fool",
+        "Pantheon1to4Entry": "Enter Pantheon 1",
+        "GodhomeBench": [
+            "Enter Gorb",
+            "Enter Marmu",
+            "Enter Galien",
+            "Enter Failed Champion",
+            "Enter Xero",
+            "Enter Marmu",
+            "Enter Hive Knight",
+            "Enter Enraged Guardian"
+        ],
+        "GodhomeLoreRoom": [
+            "Enter Watcher Knights",
+            "Enter Soul Tyrant",
+            "Enter Pure Vessel"
+        ],
+        "RadianceP": "Pantheon of Hallownest",
+        "UnchainedHollowKnight": "Hollow Knight Scream"
+    },
+    "endTriggeringAutosplit": false,
+    "endingSplit": {
+        "name": "Hollow Knight",
+        "icon": "HollowKnightBoss"
+    },
+    "gameName": "Hollow Knight",
+    "variables": {
+        "112% Glitch": "All Glitches"
+    }
+}
