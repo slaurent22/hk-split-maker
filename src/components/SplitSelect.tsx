@@ -1,5 +1,11 @@
 import React, { ReactElement } from "react";
-import { GroupBase, OptionProps, components, PropsValue } from "react-select";
+import {
+  GroupBase,
+  OptionProps,
+  components,
+  PropsValue,
+  CSSObjectWithLabel,
+} from "react-select";
 import Tooltip from "@atlaskit/tooltip";
 import { getSelectOptionGroups } from "../lib/hollowknight-splits";
 import BaseSelect from "./BaseSelect";
@@ -13,6 +19,7 @@ export interface SplitOption {
 interface Props {
   value?: PropsValue<SplitOption>;
   onChange: (newValue: SplitOption | null) => void;
+  controlStyleOverrides?: CSSObjectWithLabel;
 }
 
 function SplitSelectOption<
@@ -40,7 +47,11 @@ function SplitSelectOption<
   );
 }
 
-const SplitSelect: React.FC<Props> = ({ onChange, value }: Props) => {
+const SplitSelect: React.FC<Props> = ({
+  onChange,
+  value,
+  controlStyleOverrides,
+}: Props) => {
   const options = getSelectOptionGroups();
   return (
     <BaseSelect<SplitOption>
@@ -52,6 +63,7 @@ const SplitSelect: React.FC<Props> = ({ onChange, value }: Props) => {
       onChange={(newValue) => onChange(newValue ?? null)}
       components={{ Option: SplitSelectOption }}
       value={value}
+      controlStyleOverrides={controlStyleOverrides}
     />
   );
 };

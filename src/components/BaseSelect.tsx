@@ -1,6 +1,12 @@
 /* eslint-disable @typescript-eslint/no-unsafe-return */
 import React, { ReactElement } from "react";
-import Select, { GroupBase, Props, StylesConfig, Theme } from "react-select";
+import Select, {
+  GroupBase,
+  Props,
+  StylesConfig,
+  Theme,
+  CSSObjectWithLabel,
+} from "react-select";
 
 function createOnMenuOpen(classNamePrefix: string) {
   // https://stackoverflow.com/a/66710895
@@ -39,7 +45,11 @@ function createCustomStyles<
   Option,
   IsMulti extends boolean = false,
   Group extends GroupBase<Option> = GroupBase<Option>
->(): StylesConfig<Option, IsMulti, Group> {
+>({
+  controlStyleOverrides,
+}: {
+  controlStyleOverrides?: CSSObjectWithLabel;
+}): StylesConfig<Option, IsMulti, Group> {
   return {
     groupHeading: (provided) => ({
       ...provided,
@@ -66,6 +76,7 @@ function createCustomStyles<
         fontFamily: "serif",
         margin: "8px 8px 8px 0",
         backgroundColor: "#2f3136",
+        ...controlStyleOverrides,
       };
     },
     container: (provided) => {
@@ -110,10 +121,16 @@ export default function BaseSelect<
   Option,
   IsMulti extends boolean = false,
   Group extends GroupBase<Option> = GroupBase<Option>
->(props: Props<Option, IsMulti, Group>): ReactElement {
+>(
+  props: Props<Option, IsMulti, Group> & {
+    controlStyleOverrides?: CSSObjectWithLabel;
+  }
+): ReactElement {
   return (
     <Select
-      styles={createCustomStyles<Option, IsMulti, Group>()}
+      styles={createCustomStyles<Option, IsMulti, Group>({
+        controlStyleOverrides: props.controlStyleOverrides,
+      })}
       onMenuOpen={createOnMenuOpen(props.classNamePrefix ?? "BaseSelect")}
       theme={customTheme}
       {...props}
