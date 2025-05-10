@@ -3,7 +3,14 @@ import Tooltip from "@atlaskit/tooltip";
 import Editor, { useMonaco, Monaco } from "@monaco-editor/react";
 import { editor, Uri } from "monaco-editor";
 import { ItemInterface, ReactSortable } from "react-sortablejs";
-import { TiDelete, TiPlus, TiChevronRight, TiArrowMove } from "react-icons/ti";
+import {
+  TiDelete,
+  TiPlus,
+  TiChevronRight,
+  TiArrowMove,
+  TiArrowMinimise,
+  TiArrowMaximise,
+} from "react-icons/ti";
 import { Tab, Tabs, TabList, TabPanel } from "react-tabs";
 import JSON5 from "json5";
 import SplitConfigSchema from "../schema/splits.schema";
@@ -164,6 +171,48 @@ function AddFirstAutosplit({ parsedConfig, onChange }: AddFirstAutosplitProps) {
   );
 }
 
+interface ToggleSubsplitProps {
+  index: number;
+  subsplit?: boolean;
+  parsedConfig: Partial<Config>;
+  onChange: (newConfig: Partial<Config>) => void;
+}
+
+function ToggleSubsplit({
+  index,
+  subsplit,
+  parsedConfig,
+  onChange,
+}: ToggleSubsplitProps) {
+  const Component = subsplit ? TiArrowMaximise : TiArrowMinimise;
+  const tooltip = subsplit ? "Convert to normal split" : "Convert to subsplit";
+  return (
+    <Tooltip content={tooltip}>
+      <Component
+        size="1.5em"
+        style={{ cursor: "pointer" }}
+        onClick={() => {
+          if (!parsedConfig.splitIds) {
+            return;
+          }
+          const currentSplit = parsedConfig.splitIds[index];
+          const toggledSplit = subsplit
+            ? currentSplit.slice(1)
+            : `-${currentSplit}`;
+          onChange({
+            ...parsedConfig,
+            splitIds: [
+              ...parsedConfig.splitIds.slice(0, index),
+              toggledSplit,
+              ...parsedConfig.splitIds.slice(index + 1),
+            ],
+          });
+        }}
+      />
+    </Tooltip>
+  );
+}
+
 interface SingleAutosplitSelectProps {
   splitId: string;
   index: number;
@@ -206,6 +255,12 @@ function SingleAutosplitSelect({
         />
         <DeleteAutosplit
           index={index}
+          onChange={onChange}
+          parsedConfig={parsedConfig}
+        />
+        <ToggleSubsplit
+          index={index}
+          subsplit={value?.subsplit}
           onChange={onChange}
           parsedConfig={parsedConfig}
         />
