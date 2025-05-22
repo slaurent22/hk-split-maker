@@ -6,7 +6,7 @@
     "scripts": {
         "gen-files": "node tools/hollowknight-gen-files.js",
         "build-prod": "del-cli dist/** && webpack --mode production",
-        "serve": "webpack serve --mode development",
+        "serve": "webpack serve --mode development --port 8080",
         "eslint": "eslint --max-warnings 0 .",
         "eslintfix": "eslint --fix .",
         "stylelint": "stylelint **/*.css",
