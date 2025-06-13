@@ -102,6 +102,13 @@
             }
         },
         {
+            "fileName": "any-shade-soul",
+            "displayName": "Any% (1.2.2.1 Shade Soul)",
+            "data": {
+                "routeNotesURL": "https://pastebin.com/bbZG17xJ"
+            }
+        },
+        {
             "fileName": "any-fury",
             "displayName": "Any% (1.2.2.1 Fury/iBaldur)",
             "data": {
