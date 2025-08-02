@@ -91,9 +91,7 @@
             "displayName": "All Skills (Emilitia)",
             "data": {
                 "routeNotesURL": "https://github.com/hk-speedrunning/HK-Rules/blob/main/route-notes/All%20Skills%20(Emilitia).md",
-                "searchTerms": [
-                    "Eternal"
-                ]
+                "searchTerms": ["Eternal"]
             }
         },
         {
@@ -193,10 +191,7 @@
             "displayName": "True Ending (1.4.3.2+ SCSB)",
             "data": {
                 "routeNotesURL": "https://github.com/hk-speedrunning/HK-Rules/blob/main/route-notes/True%20Ending%20(1.4.3.2%2B%20SCSB).md",
-                "searchTerms": [
-                    "soul catcher",
-                    "steady body"
-                ]
+                "searchTerms": ["soul catcher", "steady body"]
             }
         },
         {
@@ -210,10 +205,7 @@
             "displayName": "112% APB (All Glitches)",
             "data": {
                 "routeNotesURL": "https://github.com/hk-speedrunning/HK-Rules/blob/main/route-notes/112%25%20APB%20(All%20Glitches).md",
-                "searchTerms": [
-                    "112",
-                    "ag"
-                ]
+                "searchTerms": ["112", "ag"]
             }
         },
         {
@@ -221,9 +213,7 @@
             "displayName": "All Skills (All Glitches)",
             "data": {
                 "routeNotesURL": "https://github.com/hk-speedrunning/HK-Rules/blob/main/route-notes/All%20Skills%20(All%20Glitches).md",
-                "searchTerms": [
-                    "ag"
-                ]
+                "searchTerms": ["ag"]
             }
         },
         {
@@ -238,77 +228,56 @@
             "fileName": "any-ag",
             "displayName": "Any% (All Glitches)",
             "data": {
-                "searchTerms": [
-                    "ag"
-                ]
+                "searchTerms": ["ag"]
             }
         },
         {
             "fileName": "any-nmms",
             "displayName": "Any% (No Main Menu Storage)",
             "data": {
-                "searchTerms": [
-                    "nmms"
-                ]
+                "searchTerms": ["nmms"]
             }
         },
         {
             "fileName": "any-nmms-1028",
             "displayName": "Any% (NMMS 1.0.2.8)",
             "data": {
-                "searchTerms": [
-                    "nmms"
-                ]
+                "searchTerms": ["nmms"]
             }
         },
         {
             "fileName": "low-ag",
             "displayName": "Low% (All Glitches)",
             "data": {
-                "searchTerms": [
-                    "low",
-                    "ag"
-                ]
+                "searchTerms": ["low", "ag"]
             }
         },
         {
             "fileName": "low-nmms",
             "displayName": "Low% (No Main Menu Storage)",
             "data": {
-                "searchTerms": [
-                    "low",
-                    "nmms"
-                ]
+                "searchTerms": ["low", "nmms"]
             }
         },
         {
             "fileName": "te-ag",
             "displayName": "True Ending (All Glitches)",
             "data": {
-                "searchTerms": [
-                    "te",
-                    "ag"
-                ]
+                "searchTerms": ["te", "ag"]
             }
         },
         {
             "fileName": "te-ag-dupeless",
             "displayName": "True Ending (All Glitches, Dupeless)",
             "data": {
-                "searchTerms": [
-                    "te",
-                    "ag"
-                ]
+                "searchTerms": ["te", "ag"]
             }
         },
         {
             "fileName": "te-nmms",
             "displayName": "True Ending (No Main Menu Storage)",
             "data": {
-                "searchTerms": [
-                    "te",
-                    "nmms"
-                ]
+                "searchTerms": ["te", "nmms"]
             }
         }
     ],
@@ -381,9 +350,7 @@
             "fileName": "room-timer",
             "displayName": "Room Timer",
             "data": {
-                "searchTerms": [
-                    "Abyss Climb"
-                ]
+                "searchTerms": ["Abyss Climb"]
             }
         }
     ],
@@ -501,10 +468,7 @@
             "displayName": "16 Mask Shards",
             "data": {
                 "routeNotesURL": "https://github.com/hk-speedrunning/HK-Rules/blob/main/route-notes/16%20Mask%20Shards.md",
-                "searchTerms": [
-                    "All",
-                    "Skulls"
-                ]
+                "searchTerms": ["All", "Skulls"]
             }
         },
         {
@@ -525,11 +489,7 @@
             "fileName": "agag",
             "displayName": "All Grubs All Glitches",
             "data": {
-                "searchTerms": [
-                    "ag",
-                    "agag",
-                    "elegy"
-                ],
+                "searchTerms": ["ag", "agag", "elegy"],
                 "routeNotesURL": "https://github.com/hk-speedrunning/HK-Rules/blob/main/route-notes/All%20Grubs%20All%20Glitches.md"
             }
         },
@@ -566,10 +526,7 @@
             "displayName": "ACN No Shop Charms",
             "data": {
                 "routeNotesURL": "https://github.com/hk-speedrunning/HK-Rules/blob/main/route-notes/ACN%20No%20Shop%20Charms.md",
-                "searchTerms": [
-                    "All",
-                    "Notches"
-                ]
+                "searchTerms": ["All", "Notches"]
             }
         },
         {
@@ -640,9 +597,7 @@
             "fileName": "a1uba",
             "displayName": "A1uba%",
             "data": {
-                "searchTerms": [
-                    "Aluba"
-                ]
+                "searchTerms": ["Aluba"]
             }
         },
         {
@@ -650,9 +605,7 @@
             "displayName": "Al2ba%",
             "data": {
                 "routeNotesURL": "https://github.com/hk-speedrunning/HK-Rules/blob/main/route-notes/Al2ba%25.md",
-                "searchTerms": [
-                    "Aluba"
-                ]
+                "searchTerms": ["Aluba"]
             }
         },
         {
@@ -686,10 +639,7 @@
             "displayName": "Elderbug%",
             "data": {
                 "routeNotesURL": "https://github.com/hk-speedrunning/HK-Rules/blob/main/route-notes/Elderbug%25.md",
-                "searchTerms": [
-                    "Delicate",
-                    "Flower"
-                ]
+                "searchTerms": ["Delicate", "Flower"]
             }
         },
         {
@@ -704,10 +654,7 @@
             "displayName": "Empty Hall",
             "data": {
                 "routeNotesURL": "https://github.com/hk-speedrunning/HK-Rules/blob/main/route-notes/Empty%20Hall.md",
-                "searchTerms": [
-                    "Godhome",
-                    "Gods"
-                ]
+                "searchTerms": ["Godhome", "Gods"]
             }
         },
         {
@@ -727,9 +674,7 @@
             "displayName": "Eternal Ordeal% 1mg",
             "data": {
                 "routeNotesURL": "https://github.com/hk-speedrunning/HK-Rules/blob/main/route-notes/Eternal%20Ordeal%25%201mg.md",
-                "searchTerms": [
-                    "Zote"
-                ]
+                "searchTerms": ["Zote"]
             }
         },
         {
@@ -763,10 +708,7 @@
             "displayName": "Florist",
             "data": {
                 "routeNotesURL": "https://github.com/hk-speedrunning/HK-Rules/blob/main/route-notes/Florist.md",
-                "searchTerms": [
-                    "Delicate",
-                    "Flower"
-                ]
+                "searchTerms": ["Delicate", "Flower"]
             }
         },
         {
@@ -781,9 +723,7 @@
             "displayName": "GPZ%",
             "data": {
                 "routeNotesURL": "https://github.com/hk-speedrunning/HK-Rules/blob/main/route-notes/GPZ%25.md",
-                "searchTerms": [
-                    "Zote"
-                ]
+                "searchTerms": ["Zote"]
             }
         },
         {
@@ -942,19 +882,14 @@
             "displayName": "Salubra's Blessing%",
             "data": {
                 "routeNotesURL": "https://github.com/hk-speedrunning/HK-Rules/blob/main/route-notes/Salubra's%20Blessing%25.md",
-                "searchTerms": [
-                    "Smooch"
-                ]
+                "searchTerms": ["Smooch"]
             }
         },
         {
             "fileName": "sbaco",
             "displayName": "Salubra's Blessing% ACO",
             "data": {
-                "searchTerms": [
-                    "Smooch",
-                    "Alphabetical Charm Order"
-                ]
+                "searchTerms": ["Smooch", "Alphabetical Charm Order"]
             }
         },
         {
@@ -962,10 +897,7 @@
             "displayName": "Salubra's Blessing% CMO",
             "data": {
                 "routeNotesURL": "https://github.com/hk-speedrunning/HK-Rules/blob/main/route-notes/Salubra's%20Blessing%25%20CMO.md",
-                "searchTerms": [
-                    "Smooch",
-                    "Charm Menu Order"
-                ]
+                "searchTerms": ["Smooch", "Charm Menu Order"]
             }
         },
         {
@@ -973,10 +905,7 @@
             "displayName": "Salubra's Blessing% ICO",
             "data": {
                 "routeNotesURL": "https://github.com/hk-speedrunning/HK-Rules/blob/main/route-notes/Salubra's%20Blessing%25%20ICO.md",
-                "searchTerms": [
-                    "Smooch",
-                    "Intended Charm Order"
-                ]
+                "searchTerms": ["Smooch", "Intended Charm Order"]
             }
         },
         {
@@ -1070,9 +999,7 @@
             "displayName": "Witness",
             "data": {
                 "routeNotesURL": "https://github.com/hk-speedrunning/HK-Rules/blob/main/route-notes/Witness.md",
-                "searchTerms": [
-                    "Quirrel"
-                ]
+                "searchTerms": ["Quirrel"]
             }
         },
         {
