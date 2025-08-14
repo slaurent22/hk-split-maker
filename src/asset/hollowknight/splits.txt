@@ -553,6 +553,8 @@
         AspidHunter,
         [Description("Aluba (Killed)"), ToolTip("Splits when killing an Aluba")]
         Aluba,
+        [Description("Crystal Peak Hunter's Notes (Killed)"), ToolTip("Splits when killing all Crystal Peak enemies needed for Hunter's Notes journal completion\n(Includes Crystal Crawler, Crystal Guardian 1&2, Crystal Hunter, Crystallised Husk, Glimback, Husk Miner, and Shardmite. Excludes Bluggsac, Grimmkin Novice, and Grub Mimic.)")]
+        CrystalPeakHuntersNotes,
         [Description("Little Baldur Hunter's Notes (Killed)"), ToolTip("Splits when killing all little Baldurs needed for Hunter's Notes journal completion")]
         RollerHuntersNotes,
         [Description("Maggots (Killed)"), ToolTip("Splits when killing both Maggots")]
@@ -750,11 +752,13 @@
         KingdomsEdgeOvercharmedEntry,
         [Description("NKG Dream (Transition)"), ToolTip("Splits on transition into Nightmare King Grimm dream")]
         EnterNKG,
-        [Description("Queen's Garden Entry (Transition)"), ToolTip("Splits on transition to QG scene following QGA or above Deepnest")]
+        [Description("Queen's Gardens or Deepnest (Transition)"), ToolTip("Splits on transition into either Queen's Gardens or Deepnest")]
+        EnterQueensGardensOrDeepnest,
+        [Description("Queen's Gardens Entry (Transition)"), ToolTip("Splits on transition to QG scene following QGA or above Deepnest")]
         QueensGardensEntry,
-        [Description("Queen's Garden - Frogs (Transition)"), ToolTip("Splits on transition to QG frogs scene")]
+        [Description("Queen's Gardens - Frogs (Transition)"), ToolTip("Splits on transition to QG frogs scene")]
         QueensGardensFrogsTrans,
-        [Description("Queen's Garden - Post-Upper Arena (Transition)"), ToolTip("Splits on transition to room after upper arena in QG")]
+        [Description("Queen's Gardens - Post-Upper Arena (Transition)"), ToolTip("Splits on transition to room after upper arena in QG")]
         QueensGardensPostArenaTransition,
         [Description("Soul Sanctum (Transition)"), ToolTip("Splits when entering Soul Sanctum")]
         EnterSanctum,
@@ -1235,7 +1239,7 @@
         BenchRGStag,
         [Description("Queen's Gardens Stag (Bench)"), ToolTip("Splits when sitting on the bench at Queen's Gardens Stag")]
         BenchQGStag,
-        [Description("Queen's Garden Bench (Toll)"), ToolTip("Splits when buying Queen's Garden toll bench")]
+        [Description("Queen's Gardens Bench (Toll)"), ToolTip("Splits when buying Queen's Gardens toll bench")]
         TollBenchQG,
         [Description("Sanctum Bench (Toll)"), ToolTip("Splits when buying City/Sanctum toll bench by Cornifer's location")]
         TollBenchCity,

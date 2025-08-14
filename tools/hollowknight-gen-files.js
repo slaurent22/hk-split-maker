@@ -399,6 +399,8 @@ function getUrl(id, qualifier) {
         return getUrl("Zote", "Enemy");
       case "Aluba":
         return getUrl("Aluba", "Enemy");
+      case "CrystalPeakHuntersNotes":
+        return getUrl("CrystalCrawler", "Enemy");
       case "RollerHuntersNotes":
         return getUrl("Baldur", "Enemy");
       case "Maggots":
@@ -529,6 +531,7 @@ function getUrl(id, qualifier) {
         return getUrl("KingdomsEdge", "Area");
       case "EnterNKG":
         return getUrl("GrimmkinNightmare", "Enemy");
+      case "EnterQueensGardensOrDeepnest":
       case "QueensGardensEntry":
         return getUrl("QueensGardens", "Area");
       case "EnterSanctum":
