@@ -269,6 +269,7 @@ import Pantheon5 from "./Achievement/EmbraceTheVoid.png";
 import PathOfPain from "./Item/SealOfBinding.png";
 import AspidHunter from "./Enemy/AspidHunter.png";
 import Aluba from "./Enemy/Aluba.png";
+import CrystalPeakHuntersNotes from "./Enemy/CrystalCrawler.png";
 import RollerHuntersNotes from "./Enemy/Baldur.png";
 import Maggots from "./Enemy/Maggot.png";
 import HuskMiner from "./Enemy/HuskMiner.png";
@@ -365,6 +366,7 @@ import KingsPassEnterFromTown from "./Enemy/Vengefly.png";
 import KingdomsEdgeEntry from "./Enemy/PrimalAspid.png";
 import KingdomsEdgeOvercharmedEntry from "./Enemy/PrimalAspid.png";
 import EnterNKG from "./Enemy/GrimmkinNightmare.png";
+import EnterQueensGardensOrDeepnest from "./Enemy/SpinyHusk.png";
 import QueensGardensEntry from "./Enemy/SpinyHusk.png";
 import QueensGardensFrogsTrans from "./Enemy/SpinyHusk.png";
 import QueensGardensPostArenaTransition from "./Enemy/SpinyHusk.png";
@@ -1025,6 +1027,7 @@ export default {
   PathOfPain,
   AspidHunter,
   Aluba,
+  CrystalPeakHuntersNotes,
   RollerHuntersNotes,
   Maggots,
   HuskMiner,
@@ -1121,6 +1124,7 @@ export default {
   KingdomsEdgeEntry,
   KingdomsEdgeOvercharmedEntry,
   EnterNKG,
+  EnterQueensGardensOrDeepnest,
   QueensGardensEntry,
   QueensGardensFrogsTrans,
   QueensGardensPostArenaTransition,
