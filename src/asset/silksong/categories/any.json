@@ -1,0 +1,13 @@
+{
+    "categoryName": "Any%",
+    "splitIds": ["Silk", "Song"],
+    "endTriggeringAutosplit": false,
+    "endingSplit": {
+        "name": "FinalBoss",
+        "icon": "FinalBoss"
+    },
+    "gameName": "Hollow Knight: Silksong",
+    "variables": {
+        "Any% Glitch": "No Major Glitches"
+    }
+}

@@ -1,0 +1,62 @@
+[
+    {
+        "description": "Manual Split (Misc)",
+        "key": "ManualSplit",
+        "tooltip": "Never splits. Use this when you need to manually split"
+    },
+    {
+        "description": "Start New Game (Start)",
+        "key": "StartNewGame",
+        "tooltip": "Splits when starting a new save file"
+    },
+    {
+        "description": "Main Menu (Menu)",
+        "key": "Menu",
+        "tooltip": "Splits on the main menu"
+    },
+    {
+        "description": "Death (Event)",
+        "key": "PlayerDeath",
+        "tooltip": "Splits when player HP is 0"
+    },
+    {
+        "description": "Any Transition (Transition)",
+        "key": "AnyTransition",
+        "tooltip": "Splits when entering a transition (only one will split per transition)"
+    },
+    {
+        "description": "Moss Mother (Boss)",
+        "key": "MossMother",
+        "tooltip": "Splits when killing Moss Mother"
+    },
+    {
+        "description": "Silk Spear (Skill)",
+        "key": "SilkSpear",
+        "tooltip": "Splits when obtaining Silk Spear"
+    },
+    {
+        "description": "Bell Beast (Boss)",
+        "key": "BellBeast",
+        "tooltip": "Splits when defeating the Bell Beast"
+    },
+    {
+        "description": "Swift Step (Skill)",
+        "key": "SwiftStep",
+        "tooltip": "Splits when obtaining Swift Step (Dash/Sprint)"
+    },
+    {
+        "description": "Lace 1 (Boss)",
+        "key": "Lace1",
+        "tooltip": "Splits when defeating Lace 1 in DeepDocks"
+    },
+    {
+        "description": "Drifter's Cloak (Skill)",
+        "key": "DriftersCloak",
+        "tooltip": "Splits when obtaining Drifter's Cloak (Umbrella/Float)"
+    },
+    {
+        "description": "Fourth Chorus (Boss)",
+        "key": "FourthChorus",
+        "tooltip": "Splits when killing Fourth Chorus"
+    }
+]

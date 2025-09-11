@@ -1,0 +1,14 @@
+{
+    "Main": [
+        {
+            "fileName": "any",
+            "displayName": "Any%",
+            "data": {}
+        },
+        {
+            "fileName": "all-skills",
+            "displayName": "All Skills",
+            "data": {}
+        }
+    ]
+}

@@ -6,6 +6,7 @@ import React, {
   Suspense,
   ChangeEvent,
 } from "react";
+import { Tab, Tabs, TabList, TabPanel } from "react-tabs";
 import { saveAs } from "file-saver";
 import JSON5 from "json5";
 import useQueryString, { QueryStringResult } from "use-query-string";
@@ -225,67 +226,138 @@ export default function App(): ReactElement {
   return (
     <div id="app">
       <AlertBanner />
-      <Header />
-      <Instructions />
-      <div id="input-output">
-        <div id="editor-section" className="side">
-          <h2>Input Configuration</h2>
-          <div className="output-container">
-            <div className="row">
-              <input type="file" id="import-input" onChange={onImport} />
-              <ArrowButton
-                text="Import Splits"
-                id="import-button"
-                onClick={onImportButton}
-              />
-              <ArrowButton
-                text="Generate"
-                id="submit-button"
-                onClick={onSubmit}
-              />
-              <ShareButton
-                id="share-button"
-                onClick={onShare}
-                disabled={state.shareButtonDisabled}
-              />
+      <Tabs>
+        <TabList>
+          <Tab>Hollow Knight</Tab>
+          <Tab>Silksong</Tab>
+        </TabList>
+        <TabPanel>
+          <Header />
+          <Instructions />
+          <div id="input-output">
+            <div id="editor-section" className="side">
+              <h2>Input Configuration</h2>
+              <div className="output-container">
+                <div className="row">
+                  <input type="file" id="import-input" onChange={onImport} />
+                  <ArrowButton
+                    text="Import Splits"
+                    id="import-button"
+                    onClick={onImportButton}
+                  />
+                  <ArrowButton
+                    text="Generate"
+                    id="submit-button"
+                    onClick={onSubmit}
+                  />
+                  <ShareButton
+                    id="share-button"
+                    onClick={onShare}
+                    disabled={state.shareButtonDisabled}
+                  />
+                </div>
+                <Suspense fallback={<div>Loading category select...</div>}>
+                  <CategorySelect
+                    id="categories"
+                    onChange={onCategorySelect}
+                    data={state.categories}
+                    defaultValue={getCategoryDefinition(builtin ?? "") ?? null}
+                  />
+                </Suspense>
+                <Suspense fallback={<div>Loading split config editor...</div>}>
+                  <SplitConfigEditor
+                    defaultValue={state.configInput}
+                    onChange={onConfigInputChange}
+                  />
+                </Suspense>
+              </div>
             </div>
-            <Suspense fallback={<div>Loading category select...</div>}>
-              <CategorySelect
-                id="categories"
-                onChange={onCategorySelect}
-                data={state.categories}
-                defaultValue={getCategoryDefinition(builtin ?? "") ?? null}
-              />
-            </Suspense>
-            <Suspense fallback={<div>Loading split config editor...</div>}>
-              <SplitConfigEditor
-                defaultValue={state.configInput}
-                onChange={onConfigInputChange}
-              />
-            </Suspense>
-          </div>
-        </div>
-        <div id="output-section" className="side">
-          <h2>Output Splits File</h2>
-          <div className="output-container">
-            <div className="row">
-              <ArrowButton
-                id="download-button"
-                text="Download"
-                onClick={onDownload}
-                disabled={state.splitOutput.length === 0}
-              />
+            <div id="output-section" className="side">
+              <h2>Output Splits File</h2>
+              <div className="output-container">
+                <div className="row">
+                  <ArrowButton
+                    id="download-button"
+                    text="Download"
+                    onClick={onDownload}
+                    disabled={state.splitOutput.length === 0}
+                  />
+                </div>
+                <Suspense fallback={<div>Loading split output editor...</div>}>
+                  <SplitOutputEditor
+                    defaultValue={state.splitOutput}
+                    onChange={onSplitOutputChange}
+                  />
+                </Suspense>
+              </div>
             </div>
-            <Suspense fallback={<div>Loading split output editor...</div>}>
-              <SplitOutputEditor
-                defaultValue={state.splitOutput}
-                onChange={onSplitOutputChange}
-              />
-            </Suspense>
           </div>
-        </div>
-      </div>
-      <Footer />
+          <Footer />
+        </TabPanel>
+        <TabPanel>
+          <Header />
+          <Instructions />
+          <div id="input-output">
+            <div id="editor-section" className="side">
+              <h2>Input Configuration</h2>
+              <div className="output-container">
+                <div className="row">
+                  <input type="file" id="import-input" onChange={onImport} />
+                  <ArrowButton
+                    text="Import Splits"
+                    id="import-button"
+                    onClick={onImportButton}
+                  />
+                  <ArrowButton
+                    text="Generate"
+                    id="submit-button"
+                    onClick={onSubmit}
+                  />
+                  <ShareButton
+                    id="share-button"
+                    onClick={onShare}
+                    disabled={state.shareButtonDisabled}
+                  />
+                </div>
+                <Suspense fallback={<div>Loading category select...</div>}>
+                  <CategorySelect
+                    id="categories"
+                    onChange={onCategorySelect}
+                    data={state.categories}
+                    defaultValue={getCategoryDefinition(builtin ?? "") ?? null}
+                  />
+                </Suspense>
+                <Suspense fallback={<div>Loading split config editor...</div>}>
+                  <SplitConfigEditor
+                    defaultValue={state.configInput}
+                    onChange={onConfigInputChange}
+                  />
+                </Suspense>
+              </div>
+            </div>
+            <div id="output-section" className="side">
+              <h2>Output Splits File</h2>
+              <div className="output-container">
+                <div className="row">
+                  <ArrowButton
+                    id="download-button"
+                    text="Download"
+                    onClick={onDownload}
+                    disabled={state.splitOutput.length === 0}
+                  />
+                </div>
+                <Suspense fallback={<div>Loading split output editor...</div>}>
+                  <SplitOutputEditor
+                    defaultValue={state.splitOutput}
+                    onChange={onSplitOutputChange}
+                  />
+                </Suspense>
+              </div>
+            </div>
+          </div>
+          <Footer />
+        </TabPanel>
+      </Tabs>
     </div>
   );
 }
