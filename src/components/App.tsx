@@ -7,6 +7,8 @@ import React, {
   ChangeEvent,
 } from "react";
 import { Tab, Tabs, TabList, TabPanel } from "react-tabs";
+import { useSelector } from "react-redux";
+import { useSearchParams } from "react-router-dom";
 import { saveAs } from "file-saver";
 import JSON5 from "json5";
 import useQueryString, { QueryStringResult } from "use-query-string";
@@ -19,6 +21,7 @@ import {
   buildSplitsFileName,
 } from "../lib/lss";
 import CategoryAnyPercent from "../asset/hollowknight/categories/any.json";
+import { RootState } from "../store";
 import ArrowButton from "./ArrowButton";
 import Header from "./Header";
 import Instructions from "./Instructions";
@@ -223,10 +226,33 @@ export default function App(): ReactElement {
     saveAs(outBlob, `${splitName}.lss`);
   };
 
+  const currentGame = useSelector(
+    (reduxState: RootState) => reduxState.game.currentGame
+  );
+  let selectedIndex = 0;
+  if (currentGame === "silksong") {
+    selectedIndex = 1;
+  }
+
+  const [searchParams, setSearchParams] = useSearchParams();
+
+  const onTabSelect = (index: number) => {
+    if (index === 0) {
+      const newParams = new URLSearchParams(searchParams);
+      newParams.set("game", "hollowknight");
+      setSearchParams(newParams, { replace: true });
+    }
+    if (index === 1) {
+      const newParams = new URLSearchParams(searchParams);
+      newParams.set("game", "silksong");
+      setSearchParams(newParams, { replace: true });
+    }
+  };
+
   return (
     <div id="app">
       <AlertBanner />
-      <Tabs>
+      <Tabs onSelect={onTabSelect} selectedIndex={selectedIndex}>
         <TabList>
           <Tab>Hollow Knight</Tab>
           <Tab>Silksong</Tab>
