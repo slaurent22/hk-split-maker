@@ -1,5 +1,4 @@
 import React, { useEffect, useRef, useState, ReactElement } from "react";
-import Tooltip from "@atlaskit/tooltip";
 import Editor, { useMonaco, Monaco } from "@monaco-editor/react";
 import { editor, Uri } from "monaco-editor";
 import { ItemInterface, ReactSortable } from "react-sortablejs";
@@ -17,9 +16,10 @@ import SplitConfigSchema from "../schema/splits.schema";
 import { Config, SUB_SPLIT_RE } from "../lib/lss";
 import { parseSplitsDefinitions as HollowKnightParseSplitsDefinitions } from "../lib/hollowknight-splits";
 import { parseSplitsDefinitions as SilksongParseSplitsDefinitions } from "../lib/silksong-splits";
-import SplitSelect, { SplitOption } from "./SplitSelect";
-import "react-tabs/style/react-tabs.css";
 import { useCurrentGame } from "../hooks";
+import SplitSelect, { SplitOption } from "./SplitSelect";
+import Tooltip from "./Tooltip";
+import "react-tabs/style/react-tabs.css";
 
 interface Props {
   defaultValue: string;
@@ -192,29 +192,29 @@ function ToggleSubsplit({
   const Component = subsplit ? TiArrowMaximise : TiArrowMinimise;
   const tooltip = subsplit ? "Convert to normal split" : "Convert to subsplit";
   return (
-    // <Tooltip content={tooltip}>
-    <Component
-      size="1.5em"
-      style={{ cursor: "pointer" }}
-      onClick={() => {
-        if (!parsedConfig.splitIds) {
-          return;
-        }
-        const currentSplit = parsedConfig.splitIds[index];
-        const toggledSplit = subsplit
-          ? currentSplit.slice(1)
-          : `-${currentSplit}`;
-        onChange({
-          ...parsedConfig,
-          splitIds: [
-            ...parsedConfig.splitIds.slice(0, index),
-            toggledSplit,
-            ...parsedConfig.splitIds.slice(index + 1),
-          ],
-        });
-      }}
-    />
-    // </Tooltip>
+    <Tooltip content={tooltip}>
+      <Component
+        size="1.5em"
+        style={{ cursor: "pointer" }}
+        onClick={() => {
+          if (!parsedConfig.splitIds) {
+            return;
+          }
+          const currentSplit = parsedConfig.splitIds[index];
+          const toggledSplit = subsplit
+            ? currentSplit.slice(1)
+            : `-${currentSplit}`;
+          onChange({
+            ...parsedConfig,
+            splitIds: [
+              ...parsedConfig.splitIds.slice(0, index),
+              toggledSplit,
+              ...parsedConfig.splitIds.slice(index + 1),
+            ],
+          });
+        }}
+      />
+    </Tooltip>
   );
 }
 

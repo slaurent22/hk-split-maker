@@ -6,8 +6,8 @@ import {
   PropsValue,
   CSSObjectWithLabel,
 } from "react-select";
-import Tooltip from "@atlaskit/tooltip";
 import { useSplitsFunctions } from "../hooks";
+import Tooltip from "./Tooltip";
 import BaseSelect from "./BaseSelect";
 
 export interface SplitOption {
@@ -30,20 +30,20 @@ function SplitSelectOption<
   ...rest
 }: OptionProps<SplitOption, IsMulti, Group>): ReactElement {
   return (
-    // <Tooltip content={rest.data.tooltip}>
-    <components.Option {...rest}>
-      {children}
-      <span
-        style={{
-          fontFamily: "monospace",
-          fontSize: "14px",
-          float: "right",
-        }}
-      >
-        {rest.data.value}
-      </span>
-    </components.Option>
-    // </Tooltip>
+    <Tooltip content={rest.data.tooltip}>
+      <components.Option {...rest}>
+        {children}
+        <span
+          style={{
+            fontFamily: "monospace",
+            fontSize: "14px",
+            float: "right",
+          }}
+        >
+          {rest.data.value}
+        </span>
+      </components.Option>
+    </Tooltip>
   );
 }
 
@@ -57,7 +57,6 @@ const SplitSelect: React.FC<Props> = ({
     () => getSelectOptionGroups(),
     [getSelectOptionGroups]
   );
-  console.log({ options });
   return (
     <BaseSelect<SplitOption>
       id={"id"}
