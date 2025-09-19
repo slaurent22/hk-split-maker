@@ -1,6 +1,6 @@
 {
     "$schema": "https://json-schema.org/draft/2020-12/schema",
-    "$id": "https://hksplitmaker.com/splits.schema.json",
+    "$id": "https://hksplitmaker.com/hollowknight/splits.schema.json",
     "title": "HK Splits",
     "description": "A Hollow Knight LiveSplit Configuration",
     "type": "object",

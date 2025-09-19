@@ -1,0 +1,45 @@
+{
+    "$schema": "https://json-schema.org/draft/2020-12/schema",
+    "$id": "https://hksplitmaker.com/silksong/splits.schema.json",
+    "title": "SS Splits",
+    "description": "A Silksong LiveSplit Configuration",
+    "type": "object",
+    "additionalProperties": false,
+    "properties": {
+        "names": {
+            "additionalProperties": false,
+            "description": "Name overrides for the splits. Map each autosplit id to a string or an array of strings.",
+            "type": "object",
+            "properties": {}
+        },
+        "icons": {
+            "additionalProperties": false,
+            "description": "Icon overrides for the splits. Map each autosplit id to a autosplit id or an array of autosplit ids.",
+            "type": "object",
+            "properties": {}
+        },
+        "categoryName": {
+            "description": "The category name on the associated speedrun.com board.",
+            "type": "string"
+        },
+        "gameName": {
+            "description": "The game name on the associated speedrun.com board.",
+            "enum": ["Hollow Knight: Silksong"]
+        },
+        "variables": {
+            "description": "Additional Info",
+            "type": "object"
+        },
+        "splitIds": {
+            "type": "array",
+            "items": {
+                "oneOf": []
+            }
+        },
+        "offset": {
+            "description": "When time should start (formatted like 00:00:00 or 00:00:00.0000000)",
+            "type": "string"
+        }
+    },
+    "required": ["categoryName", "gameName", "splitIds"]
+}
