@@ -1,4 +1,4 @@
-import React, { ReactElement } from "react";
+import React, { ReactElement, useMemo } from "react";
 import {
   GroupBase,
   OptionProps,
@@ -7,7 +7,7 @@ import {
   CSSObjectWithLabel,
 } from "react-select";
 import Tooltip from "@atlaskit/tooltip";
-import { getSelectOptionGroups } from "../lib/hollowknight-splits";
+import { useSplitsFunctions } from "../hooks";
 import BaseSelect from "./BaseSelect";
 
 export interface SplitOption {
@@ -30,20 +30,20 @@ function SplitSelectOption<
   ...rest
 }: OptionProps<SplitOption, IsMulti, Group>): ReactElement {
   return (
-    <Tooltip content={rest.data.tooltip}>
-      <components.Option {...rest}>
-        {children}
-        <span
-          style={{
-            fontFamily: "monospace",
-            fontSize: "14px",
-            float: "right",
-          }}
-        >
-          {rest.data.value}
-        </span>
-      </components.Option>
-    </Tooltip>
+    // <Tooltip content={rest.data.tooltip}>
+    <components.Option {...rest}>
+      {children}
+      <span
+        style={{
+          fontFamily: "monospace",
+          fontSize: "14px",
+          float: "right",
+        }}
+      >
+        {rest.data.value}
+      </span>
+    </components.Option>
+    // </Tooltip>
   );
 }
 
@@ -52,7 +52,12 @@ const SplitSelect: React.FC<Props> = ({
   value,
   controlStyleOverrides,
 }: Props) => {
-  const options = getSelectOptionGroups();
+  const { getSelectOptionGroups } = useSplitsFunctions();
+  const options = useMemo(
+    () => getSelectOptionGroups(),
+    [getSelectOptionGroups]
+  );
+  console.log({ options });
   return (
     <BaseSelect<SplitOption>
       id={"id"}

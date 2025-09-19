@@ -18,7 +18,6 @@ export default function AppWrapper({ children }: AppWrapperProps): ReactNode {
 
   useEffect(() => {
     const gameParam = searchParams.get("game") as Game | null;
-    console.log({ gameParam, currentGame });
 
     if (gameParam && VALID_GAMES.includes(gameParam)) {
       if (gameParam !== currentGame) {

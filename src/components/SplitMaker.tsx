@@ -113,7 +113,10 @@ export default function SplitMaker(): ReactElement {
   useEffect(() => {
     void (async () => {
       if (state.categoryName && getCategoryDefinition(state.categoryName)) {
-        const editorContent = await getCategoryConfigJSON(state.categoryName);
+        const editorContent = await getCategoryConfigJSON(
+          state.categoryName,
+          currentGame
+        );
         onConfigInputChange(editorContent, true);
       }
     })();
