@@ -1,11 +1,32 @@
 {
     "categoryName": "Any%",
-    "splitIds": ["Silk", "Song"],
-    "endTriggeringAutosplit": false,
-    "endingSplit": {
-        "name": "FinalBoss",
-        "icon": "FinalBoss"
-    },
+    "splitIds": [
+        "StartNewGame",
+        "MossMother",
+        "SilkSpear",
+        "BellBeast",
+        "SwiftStep",
+        "Lace1",
+        "DriftersCloak",
+        "EnterGreymoor",
+        "Moorwing",
+        "ClingGrip",
+        "Widow",
+        "EnterMist",
+        "LeaveMist",
+        "Phantom",
+        "Act2Started",
+        "CogworkDancers",
+        "Trobbio",
+        "Clawline",
+        "VaultkeepersMelody",
+        "ArchitectsMelody",
+        "EnterHighHalls",
+        "EnterHighHallsGauntlet",
+        "ConductorsMelody",
+        "Lace2",
+        "EndingSplit"
+    ],
     "gameName": "Hollow Knight: Silksong",
     "variables": {
         "Any% Glitch": "No Major Glitches"
