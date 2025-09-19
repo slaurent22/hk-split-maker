@@ -3,6 +3,7 @@ import { Tab, Tabs, TabList, TabPanel } from "react-tabs";
 import { useSelector } from "react-redux";
 import { useSearchParams } from "react-router-dom";
 import { RootState } from "../store";
+import { Game } from "../store/game-slice";
 import Header from "./Header";
 import Instructions from "./Instructions";
 import AlertBanner from "./AlertBanner";
@@ -21,17 +22,21 @@ export default function App(): ReactElement {
 
   const [searchParams, setSearchParams] = useSearchParams();
 
+  const switchGame = (game: Game) => {
+    const newParams = new URLSearchParams(searchParams);
+    newParams.set("game", game);
+    newParams.delete("builtin");
+    newParams.delete("config");
+    setSearchParams(newParams, { replace: true });
+  };
+
   const onTabSelect = (index: number) => {
     // Only set query param here. AppWrapper will map query param to Redux store
     if (index === 0) {
-      const newParams = new URLSearchParams(searchParams);
-      newParams.set("game", "hollowknight");
-      setSearchParams(newParams, { replace: true });
+      switchGame("hollowknight");
     }
     if (index === 1) {
-      const newParams = new URLSearchParams(searchParams);
-      newParams.set("game", "silksong");
-      setSearchParams(newParams, { replace: true });
+      switchGame("silksong");
     }
   };
 
