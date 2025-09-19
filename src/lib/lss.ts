@@ -286,7 +286,6 @@ export async function createSplitsXml(
     case "silksong":
       autosplitterSettings = [
         { Version: "1.0.0.0" },
-        { ScriptPath: "" },
         {
           CustomSettings: [
             {
