@@ -20,6 +20,7 @@ import {
 } from "../lib/lss";
 import HKCategoryAnyPercent from "../asset/hollowknight/categories/any.json";
 import SSCategoryAnyPercent from "../asset/silksong/categories/any.json";
+import { Game } from "../store/game-slice";
 import ArrowButton from "./ArrowButton";
 import ShareButton from "./ShareButton";
 
@@ -36,11 +37,9 @@ interface AppState {
 }
 
 export default function SplitMaker(): ReactElement {
-  const currentGame = useCurrentGame();
+  const game = useCurrentGame();
   const defaultCategory =
-    currentGame === "hollowknight"
-      ? HKCategoryAnyPercent
-      : SSCategoryAnyPercent;
+    game === "hollowknight" ? HKCategoryAnyPercent : SSCategoryAnyPercent;
   const [searchParams, setSearchParams] = useSearchParams();
   const builtin = searchParams.get("bultin") ?? undefined;
   const config = searchParams.get("config") ?? undefined;
@@ -57,14 +56,14 @@ export default function SplitMaker(): ReactElement {
   useEffect(() => {
     if (window.location.hash) {
       setSearchParams({
-        game: currentGame,
+        game,
         builtin: window.location.hash.substring(1),
       });
     }
   }, [window.location.hash]);
 
   const onUpdateCategoryName = (categoryName: string) => {
-    setSearchParams({ game: currentGame, builtin: categoryName });
+    setSearchParams({ game, builtin: categoryName });
   };
 
   const onConfigInputChange = (
@@ -72,7 +71,7 @@ export default function SplitMaker(): ReactElement {
     loadedFromBuiltin = false
   ) => {
     if (!loadedFromBuiltin) {
-      setSearchParams({ game: currentGame });
+      setSearchParams({ game });
     }
     setState({
       ...state,
@@ -95,7 +94,7 @@ export default function SplitMaker(): ReactElement {
     if (confirmed) {
       const condensed = JSON.stringify(JSON.parse(state.configInput));
       setSearchParams({
-        game: currentGame,
+        game,
         config: btoa(condensed),
       });
       alert("Copy the URL from your browser's URL bar!");
@@ -115,7 +114,7 @@ export default function SplitMaker(): ReactElement {
       if (state.categoryName && getCategoryDefinition(state.categoryName)) {
         const editorContent = await getCategoryConfigJSON(
           state.categoryName,
-          currentGame
+          game
         );
         onConfigInputChange(editorContent, true);
       }
@@ -145,7 +144,7 @@ export default function SplitMaker(): ReactElement {
     document.getElementById("import-input")?.click();
   };
 
-  const onImport = (ce: ChangeEvent<HTMLInputElement>) => {
+  const onImport = (ce: ChangeEvent<HTMLInputElement>, currentGame: Game) => {
     // file select
     if (!ce.target.files) {
       return;
@@ -156,7 +155,7 @@ export default function SplitMaker(): ReactElement {
       const fileContents = pe.target?.result;
       if (typeof fileContents === "string") {
         try {
-          const jsonConfig = importSplitsXml(fileContents);
+          const jsonConfig = importSplitsXml(fileContents, currentGame);
           setState({
             ...state,
             configInput: JSON.stringify(jsonConfig, null, 4),
@@ -191,7 +190,7 @@ export default function SplitMaker(): ReactElement {
 
     try {
       // todo: runtime schema validation
-      output = await createSplitsXml(configObject);
+      output = await createSplitsXml(configObject, game);
     } catch (e) {
       console.error(e);
       alert(
@@ -230,11 +229,16 @@ export default function SplitMaker(): ReactElement {
         <h2>Input Configuration</h2>
         <div className="output-container">
           <div className="row">
-            <input type="file" id="import-input" onChange={onImport} />
+            <input
+              type="file"
+              id="import-input"
+              onChange={(e) => onImport(e, game)}
+            />
             <ArrowButton
               text="Import Splits"
               id="import-button"
               onClick={onImportButton}
+              disabled={game !== "hollowknight"}
             />
             <ArrowButton
               text="Generate"

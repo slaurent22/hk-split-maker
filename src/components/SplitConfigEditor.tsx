@@ -135,6 +135,8 @@ interface AddAutosplitProps {
 }
 
 function AddAutosplit({ parsedConfig, onChange, index }: AddAutosplitProps) {
+  const game = useCurrentGame();
+  const defaultSplit = game === "hollowknight" ? "AbyssShriek" : "SilkSpear";
   return (
     <div style={{ alignItems: "center", display: "flex" }}>
       <TiPlus
@@ -148,7 +150,7 @@ function AddAutosplit({ parsedConfig, onChange, index }: AddAutosplitProps) {
             ...parsedConfig,
             splitIds: [
               ...parsedConfig.splitIds.slice(0, index + 1),
-              "AbyssShriek",
+              defaultSplit,
               ...parsedConfig.splitIds.slice(index + 1),
             ],
           });
