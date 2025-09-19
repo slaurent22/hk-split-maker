@@ -1,0 +1,27 @@
+{
+    "categoryName": "5 Tools",
+    "splitIds": [
+        "StartNewGame",
+        "MossMother",
+        "ManualSplit",
+        "ManualSplit",
+        "SilkSpear",
+        "ManualSplit",
+        "BellBeast",
+        "ManualSplit",
+        "ManualSplit"
+    ],
+    "names": {
+        "ManualSplit": [
+            "Beast Shard (Manual)",
+            "Compass (Manual)",
+            "Druid's Eye (Manual)",
+            "Straight Pin (Manual)",
+            "Magnet (Manual)"
+        ]
+    },
+    "gameName": "Hollow Knight: Silksong Category Extensions",
+    "variables": {
+        "Any% Glitch": "No Major Glitches"
+    }
+}

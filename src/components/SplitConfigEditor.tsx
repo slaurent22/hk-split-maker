@@ -1,5 +1,4 @@
 import React, { useEffect, useRef, useState, ReactElement } from "react";
-import Tooltip from "@atlaskit/tooltip";
 import Editor, { useMonaco, Monaco } from "@monaco-editor/react";
 import { editor, Uri } from "monaco-editor";
 import { ItemInterface, ReactSortable } from "react-sortablejs";
@@ -13,10 +12,14 @@ import {
 } from "react-icons/ti";
 import { Tab, Tabs, TabList, TabPanel } from "react-tabs";
 import JSON5 from "json5";
-import SplitConfigSchema from "../schema/splits.schema";
+import HKSplitConfigSchema from "../schema/hollowknight/splits.schema";
+import SSSplitConfigSchema from "../schema/silksong/splits.schema";
 import { Config, SUB_SPLIT_RE } from "../lib/lss";
-import { parseSplitsDefinitions } from "../lib/hollowknight-splits";
+import { parseSplitsDefinitions as HollowKnightParseSplitsDefinitions } from "../lib/hollowknight-splits";
+import { parseSplitsDefinitions as SilksongParseSplitsDefinitions } from "../lib/silksong-splits";
+import { useCurrentGame } from "../hooks";
 import SplitSelect, { SplitOption } from "./SplitSelect";
+import Tooltip from "./Tooltip";
 import "react-tabs/style/react-tabs.css";
 
 interface Props {
@@ -24,24 +27,33 @@ interface Props {
   onChange: (value: string | undefined) => void;
 }
 
-const { $id: schemaId } = SplitConfigSchema;
+function useHandleEditorWillMount(): [(monaco: Monaco) => void, Uri] {
+  const game = useCurrentGame();
+  const splitConfigSchema =
+    game === "hollowknight" ? HKSplitConfigSchema : SSSplitConfigSchema;
+  const { $id: schemaId } = splitConfigSchema;
 
-const modelUri = Uri.parse(schemaId);
-function handleEditorWillMount(monaco: Monaco) {
-  monaco.languages.json.jsonDefaults.setDiagnosticsOptions({
-    validate: true,
-    schemas: [
-      {
-        uri: schemaId,
-        fileMatch: [modelUri.toString()],
-        schema: SplitConfigSchema,
-      },
-    ],
-  });
+  const modelUri = Uri.parse(schemaId);
+  return [
+    function handleEditorWillMount(monaco: Monaco) {
+      monaco.languages.json.jsonDefaults.setDiagnosticsOptions({
+        validate: true,
+        schemas: [
+          {
+            uri: schemaId,
+            fileMatch: [modelUri.toString()],
+            schema: splitConfigSchema,
+          },
+        ],
+      });
+    },
+    modelUri,
+  ];
 }
 
-const splitDefinitions = parseSplitsDefinitions();
-function getSplitOption(splitId: string) {
+const hkSplitDefinitions = HollowKnightParseSplitsDefinitions();
+const ssSplitDefinitions = SilksongParseSplitsDefinitions();
+function useSplitOption(splitId: string) {
   let autosplitId = splitId;
   let subsplit = false;
   const subSplitMatch = SUB_SPLIT_RE.exec(autosplitId);
@@ -52,7 +64,9 @@ function getSplitOption(splitId: string) {
     autosplitId = subSplitMatch.groups.name;
     subsplit = true;
   }
-  // todo: consolidate with other similar functions
+  const game = useCurrentGame();
+  const splitDefinitions =
+    game === "hollowknight" ? hkSplitDefinitions : ssSplitDefinitions;
   const split = splitDefinitions.get(autosplitId);
   if (!split) {
     return undefined;
@@ -121,6 +135,8 @@ interface AddAutosplitProps {
 }
 
 function AddAutosplit({ parsedConfig, onChange, index }: AddAutosplitProps) {
+  const game = useCurrentGame();
+  const defaultSplit = game === "hollowknight" ? "AbyssShriek" : "SilkSpear";
   return (
     <div style={{ alignItems: "center", display: "flex" }}>
       <TiPlus
@@ -134,7 +150,7 @@ function AddAutosplit({ parsedConfig, onChange, index }: AddAutosplitProps) {
             ...parsedConfig,
             splitIds: [
               ...parsedConfig.splitIds.slice(0, index + 1),
-              "AbyssShriek",
+              defaultSplit,
               ...parsedConfig.splitIds.slice(index + 1),
             ],
           });
@@ -226,7 +242,7 @@ function SingleAutosplitSelect({
   parsedConfig,
   onChange,
 }: SingleAutosplitSelectProps) {
-  const value = getSplitOption(splitId);
+  const value = useSplitOption(splitId);
   return (
     <div>
       <div
@@ -329,6 +345,7 @@ function hasSplits(parsedConfig: Partial<Config>): parsedConfig is Config {
 }
 
 export default function SplitConfigEditor(props: Props): ReactElement {
+  const [handleEditorWillMount, modelUri] = useHandleEditorWillMount();
   const monaco = useMonaco();
   useEffect(() => {
     if (monaco) {

@@ -1,4 +1,4 @@
-import React, { ReactElement } from "react";
+import React, { ReactElement, useMemo } from "react";
 import {
   GroupBase,
   OptionProps,
@@ -6,8 +6,8 @@ import {
   PropsValue,
   CSSObjectWithLabel,
 } from "react-select";
-import Tooltip from "@atlaskit/tooltip";
-import { getSelectOptionGroups } from "../lib/hollowknight-splits";
+import { useSplitsFunctions } from "../hooks";
+import Tooltip from "./Tooltip";
 import BaseSelect from "./BaseSelect";
 
 export interface SplitOption {
@@ -52,7 +52,11 @@ const SplitSelect: React.FC<Props> = ({
   value,
   controlStyleOverrides,
 }: Props) => {
-  const options = getSelectOptionGroups();
+  const { getSelectOptionGroups } = useSplitsFunctions();
+  const options = useMemo(
+    () => getSelectOptionGroups(),
+    [getSelectOptionGroups]
+  );
   return (
     <BaseSelect<SplitOption>
       id={"id"}

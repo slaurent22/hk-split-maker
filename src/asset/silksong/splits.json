@@ -1,0 +1,282 @@
+[
+    {
+        "description": "Manual Split (Misc)",
+        "key": "ManualSplit",
+        "tooltip": "Never splits. Use this when you need to manually split"
+    },
+    {
+        "description": "Start New Game (Start)",
+        "key": "StartNewGame",
+        "tooltip": "Splits when starting a new save file"
+    },
+    {
+        "description": "Credits Roll (Ending)",
+        "key": "EndingSplit",
+        "tooltip": "Splits on any credits rolling, any ending"
+    },
+    {
+        "description": "Weaver Queen (Ending)",
+        "key": "EndingA",
+        "tooltip": "Splits on Weaver Queen ending"
+    },
+    {
+        "description": "Main Menu (Menu)",
+        "key": "Menu",
+        "tooltip": "Splits on the main menu"
+    },
+    {
+        "description": "Death (Event)",
+        "key": "PlayerDeath",
+        "tooltip": "Splits when player HP is 0"
+    },
+    {
+        "description": "Any Transition (Transition)",
+        "key": "AnyTransition",
+        "tooltip": "Splits when entering a transition (only one will split per transition)"
+    },
+    {
+        "description": "Moss Mother (Boss)",
+        "key": "MossMother",
+        "tooltip": "Splits when killing Moss Mother"
+    },
+    {
+        "description": "Moss Mother (Transition)",
+        "key": "MossMotherTrans",
+        "tooltip": "Splits on the transition after killing Moss Mother"
+    },
+    {
+        "description": "Silk Spear (Skill)",
+        "key": "SilkSpear",
+        "tooltip": "Splits when obtaining Silk Spear"
+    },
+    {
+        "description": "Silk Spear (Transition)",
+        "key": "SilkSpearTrans",
+        "tooltip": "Splits on the transition after obtaining Silk Spear"
+    },
+    {
+        "description": "Bell Beast (Boss)",
+        "key": "BellBeast",
+        "tooltip": "Splits when defeating the Bell Beast"
+    },
+    {
+        "description": "Bell Beast (Transition)",
+        "key": "BellBeastTrans",
+        "tooltip": "Splits on the transition after defeating the Bell Beast"
+    },
+    {
+        "description": "Marrow Bell (Event)",
+        "key": "MarrowBell",
+        "tooltip": "Splits when ringing the Marrow Bell Shrine"
+    },
+    {
+        "description": "Swift Step (Skill)",
+        "key": "SwiftStep",
+        "tooltip": "Splits when obtaining Swift Step (Dash/Sprint)"
+    },
+    {
+        "description": "Swift Step (Transition)",
+        "key": "SwiftStepTrans",
+        "tooltip": "Splits on the transition after obtaining Swift Step (Dash/Sprint)"
+    },
+    {
+        "description": "Lace 1 (Boss)",
+        "key": "Lace1",
+        "tooltip": "Splits when defeating Lace 1 in DeepDocks"
+    },
+    {
+        "description": "Lace 1 (Transition)",
+        "key": "Lace1Trans",
+        "tooltip": "Splits on the transition after defeating Lace 1 in DeepDocks"
+    },
+    {
+        "description": "Deep Docks Bell (Event)",
+        "key": "DeepDocksBell",
+        "tooltip": "Splits when ringing the Deep Docks Bell Shrine"
+    },
+    {
+        "description": "Drifter's Cloak (Skill)",
+        "key": "DriftersCloak",
+        "tooltip": "Splits when obtaining Drifter's Cloak (Umbrella/Float)"
+    },
+    {
+        "description": "Drifter's Cloak (Transition)",
+        "key": "DriftersCloakTrans",
+        "tooltip": "Splits on the transition after obtaining Drifter's Cloak (Umbrella/Float)"
+    },
+    {
+        "description": "Fourth Chorus (Boss)",
+        "key": "FourthChorus",
+        "tooltip": "Splits when killing Fourth Chorus"
+    },
+    {
+        "description": "Enter Greymoor (Transition)",
+        "key": "EnterGreymoor",
+        "tooltip": "Splits when entering Greymoor"
+    },
+    {
+        "description": "Greymoor Bell (Event)",
+        "key": "GreymoorBell",
+        "tooltip": "Splits when ringing the Greymoor Bell Shrine"
+    },
+    {
+        "description": "Moorwing (Boss)",
+        "key": "Moorwing",
+        "tooltip": "Splits when killing Moorwing"
+    },
+    {
+        "description": "Moorwing (Transition)",
+        "key": "MoorwingTrans",
+        "tooltip": "Splits on the transition after killing Moorwing"
+    },
+    {
+        "description": "Cling Grip (Skill)",
+        "key": "ClingGrip",
+        "tooltip": "Splits when obtaining Cling Grip (Wall Jump)"
+    },
+    {
+        "description": "Cling Grip (Transition)",
+        "key": "ClingGripTrans",
+        "tooltip": "Splits on the transition after obtaining Cling Grip (Wall Jump)"
+    },
+    {
+        "description": "Shellwood Bell (Event)",
+        "key": "ShellwoodBell",
+        "tooltip": "Splits when ringing the Shellwood Bell Shrine"
+    },
+    {
+        "description": "Widow (Boss)",
+        "key": "Widow",
+        "tooltip": "Splits when killing Widow"
+    },
+    {
+        "description": "Bellhart Bell (Event)",
+        "key": "BellhartBell",
+        "tooltip": "Splits when ringing the Bellhart Bell Shrine"
+    },
+    {
+        "description": "Last Judge (Boss)",
+        "key": "LastJudge",
+        "tooltip": "Splits when killing Last Judge"
+    },
+    {
+        "description": "Enter The Mist (Transition)",
+        "key": "EnterMist",
+        "tooltip": "Splits when entering The Mist"
+    },
+    {
+        "description": "Leave The Mist (Transition)",
+        "key": "LeaveMist",
+        "tooltip": "Splits when leaving The Mist"
+    },
+    {
+        "description": "Phantom (Boss)",
+        "key": "Phantom",
+        "tooltip": "Splits when killing Phantom"
+    },
+    {
+        "description": "Act 2 Started (Event)",
+        "key": "Act2Started",
+        "tooltip": "Splits when starting Act 2"
+    },
+    {
+        "description": "Cogwork Dancers (Boss)",
+        "key": "CogworkDancers",
+        "tooltip": "Splits when killing Cogwork Dancers"
+    },
+    {
+        "description": "Whispering Vaults Gauntlet (Mini Boss)",
+        "key": "WhisperingVaultsGauntlet",
+        "tooltip": "Splits when completing the Whispering Vaults Gauntlet"
+    },
+    {
+        "description": "Trobbio (Boss)",
+        "key": "Trobbio",
+        "tooltip": "Splits when killing Trobbio"
+    },
+    {
+        "description": "Trobbio (Transition)",
+        "key": "TrobbioTrans",
+        "tooltip": "Splits on the transition after killing Trobbio"
+    },
+    {
+        "description": "Clawline (Skill)",
+        "key": "Clawline",
+        "tooltip": "Splits when obtaining Clawline (Harpoon Dash)"
+    },
+    {
+        "description": "Enter High Halls (Transition)",
+        "key": "EnterHighHalls",
+        "tooltip": "Splits when entering High Halls"
+    },
+    {
+        "description": "Enter High Halls Gauntlet (Transition)",
+        "key": "EnterHighHallsGauntlet",
+        "tooltip": "Splits when entering the High Halls Gauntlet room"
+    },
+    {
+        "description": "High Halls Gauntlet (Mini Boss)",
+        "key": "HighHallsGauntlet",
+        "tooltip": "Splits when completing the High Halls Gauntlet"
+    },
+    {
+        "description": "Lace 2 (Boss)",
+        "key": "Lace2",
+        "tooltip": "Splits when defeating Lace 2 in TheCradle"
+    },
+    {
+        "description": "Vaultkeepers Melody (Melody)",
+        "key": "VaultkeepersMelody",
+        "tooltip": "Splits when learning Vaultkeepers Melody"
+    },
+    {
+        "description": "Vaultkeepers Melody (Transition)",
+        "key": "VaultkeepersMelodyTrans",
+        "tooltip": "Splits on the transition after learning Vaultkeepers Melody"
+    },
+    {
+        "description": "Architects Melody (Melody)",
+        "key": "ArchitectsMelody",
+        "tooltip": "Splits when learning Architects Melody"
+    },
+    {
+        "description": "Architects Melody (Transition)",
+        "key": "ArchitectsMelodyTrans",
+        "tooltip": "Splits on the transition after learning Architects Melody"
+    },
+    {
+        "description": "Conductors Melody (Melody)",
+        "key": "ConductorsMelody",
+        "tooltip": "Splits when learning Conductors Melody"
+    },
+    {
+        "description": "Conductors Melody (Transition)",
+        "key": "ConductorsMelodyTrans",
+        "tooltip": "Splits on the transition after learning Conductors Melody"
+    },
+    {
+        "description": "Unlock Threefold Melody Lift (Event)",
+        "key": "UnlockedMelodyLift",
+        "tooltip": "Splits when unlocking the Threefold Melody Lift"
+    },
+    {
+        "description": "Needle 1 (Upgrade)",
+        "key": "NeedleUpgrade1",
+        "tooltip": "Splits when upgrading to Sharpened Needle"
+    },
+    {
+        "description": "Needle 2 (Upgrade)",
+        "key": "NeedleUpgrade2",
+        "tooltip": "Splits when upgrading to Shining Needle"
+    },
+    {
+        "description": "Needle 3 (Upgrade)",
+        "key": "NeedleUpgrade3",
+        "tooltip": "Splits when upgrading to Hivesteel Needle"
+    },
+    {
+        "description": "Needle 4 (Upgrade)",
+        "key": "NeedleUpgrade4",
+        "tooltip": "Splits when upgrading to Pale Steel Needle"
+    }
+]

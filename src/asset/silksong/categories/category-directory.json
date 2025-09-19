@@ -1,0 +1,16 @@
+{
+    "Main": [
+        {
+            "fileName": "any",
+            "displayName": "Any%",
+            "data": {}
+        }
+    ],
+    "Category Extensions": [
+        {
+            "fileName": "5-tools",
+            "displayName": "5 Tools",
+            "data": {}
+        }
+    ]
+}

@@ -1,10 +1,8 @@
 import xml from "../external-lib/xml.js";
+import { Game } from "../store/game-slice";
 import { createLiveSplitIconData } from "./image-util";
-import {
-  SplitDefinition,
-  getIconURLs,
-  parseSplitsDefinitions,
-} from "./hollowknight-splits";
+import { SplitDefinition } from "./hollowknight-splits";
+import { splitsFunctions } from "./splits";
 
 export interface Config {
   startTriggeringAutosplit?: string;
@@ -120,11 +118,13 @@ function getMetadataNode(config: Config): xml.XmlObject {
   };
 }
 
-export async function createSplitsXml(config: Config): Promise<string> {
+export async function createSplitsXml(
+  config: Config,
+  game: Game
+): Promise<string> {
   const {
-    splitIds,
     ordered = true,
-    endTriggeringAutosplit,
+    endTriggeringAutosplit = true,
     endingSplit,
     categoryName,
     gameName,
@@ -132,6 +132,13 @@ export async function createSplitsXml(config: Config): Promise<string> {
     icons,
     offset,
   } = config;
+
+  // for silksong, first autosplit is start trigger
+  const splitIds =
+    game === "silksong" ? config.splitIds.slice(1) : config.splitIds;
+  const autosplitIds = config.splitIds;
+
+  const { parseSplitsDefinitions, getIconURLs } = splitsFunctions(game);
 
   const splitDefinitions = parseSplitsDefinitions();
   const allIconURLs = getIconURLs();
@@ -258,9 +265,43 @@ export async function createSplitsXml(config: Config): Promise<string> {
     segments.push(getSegmentNode(endingSplitName, icon));
   }
 
-  const autosplits = parsedSplitIds.map(({ autosplitId }) => {
+  const autosplits = autosplitIds.map((autosplitId) => {
     return { Split: autosplitId };
   });
+
+  const silksongAutosplits = autosplitIds.map((autosplitId) => {
+    return { Setting: [{ _attr: { type: "string", value: autosplitId } }] };
+  });
+
+  let autosplitterSettings: Array<xml.XmlObject> = [];
+  switch (game) {
+    case "hollowknight":
+      autosplitterSettings = [
+        { Ordered: boolRepr(ordered) },
+        { AutosplitEndRuns: boolRepr(endTriggeringAutosplit) },
+        { AutosplitStartRuns: config.startTriggeringAutosplit ?? "" },
+        { Splits: autosplits },
+      ];
+      break;
+    case "silksong":
+      autosplitterSettings = [
+        { Version: "1.0" },
+        {
+          CustomSettings: [
+            {
+              Setting: [
+                { _attr: { id: "splits", type: "list" } },
+                ...silksongAutosplits,
+              ],
+            },
+          ],
+        },
+      ];
+      break;
+    default:
+      // eslint-disable-next-line @typescript-eslint/restrict-template-expressions
+      throw new Error(`Invalid game ${game}`);
+  }
 
   return xml(
     {
@@ -274,14 +315,7 @@ export async function createSplitsXml(config: Config): Promise<string> {
         { AttemptCount: "0" },
         { AttemptHistory: "" },
         { Segments: segments },
-        {
-          AutoSplitterSettings: [
-            { Ordered: boolRepr(ordered) },
-            { AutosplitEndRuns: boolRepr(endTriggeringAutosplit) },
-            { AutosplitStartRuns: config.startTriggeringAutosplit ?? "" },
-            { Splits: autosplits },
-          ],
-        },
+        { AutoSplitterSettings: autosplitterSettings },
       ],
     },
     {
@@ -376,7 +410,7 @@ function parseAutoSplitterSettings(
   }
 }
 
-export function importSplitsXml(str: string): Config {
+export function importSplitsXml(str: string, game: Game): Config {
   // xml parse
   const parser = new DOMParser();
   const xmlDoc = parser.parseFromString(str, "text/xml");
@@ -472,6 +506,7 @@ export function importSplitsXml(str: string): Config {
   const uniqueAutosplitIds: Set<string> = new Set(
     parsedSplitIds.map(({ autosplitId }) => autosplitId)
   );
+  const { parseSplitsDefinitions } = splitsFunctions(game);
   const splitDefinitions = parseSplitsDefinitions();
   const potentialNameOverrides: Record<string, string | string[]> = {};
   let hasNameOverrides = false;

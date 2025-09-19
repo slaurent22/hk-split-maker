@@ -31,7 +31,7 @@ npm install --legacy-peer-deps && npm run serve
 
 Navigate to `http://localhost:8080/` in your web browser.
 
-### Adding New and Updated Autosplits
+### Adding New and Updated Autosplits for Hollow Knight
 
 1. Copy the contents of `public enum SplitName` from
    [HollowKnightSplitSettings.cs](https://github.com/ShootMe/LiveSplit.HollowKnight/blob/master/HollowKnightSplitSettings.cs) into [splits.txt](./src/asset/hollowknight/splits.txt).
@@ -43,6 +43,12 @@ Navigate to `http://localhost:8080/` in your web browser.
 7. Ensure the generated splits have the correct autosplits.
 
 For an example of this process, see https://github.com/slaurent22/hk-split-maker/pull/125
+
+### Adding New and Updated Autosplits for Silksong
+
+1. Ensure [splits.json](https://github.com/AlexKnauth/silksong-autosplit-wasm/blob/master/examples/splits.json) is up-to-date.
+2. Copy [splits.json](https://github.com/AlexKnauth/silksong-autosplit-wasm/blob/master/examples/splits.json) into [splits.json](./src/asset/silksong/splits.json).
+3. TBD
 
 ## Future Enhancements
 
