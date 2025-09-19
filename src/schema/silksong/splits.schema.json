@@ -24,7 +24,10 @@
         },
         "gameName": {
             "description": "The game name on the associated speedrun.com board.",
-            "enum": ["Hollow Knight: Silksong"]
+            "enum": [
+                "Hollow Knight: Silksong",
+                "Hollow Knight: Silksong Category Extensions"
+            ]
         },
         "variables": {
             "description": "Additional Info",
