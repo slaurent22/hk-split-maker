@@ -5,9 +5,11 @@ import { Game } from "../store/game-slice";
   Since the name "splits" is taken, we'll call the complete configuration "category".
   Not entirely true in terms of LiveSplit naming, but close enough.
 */
-import CategoryDirectory, {
+import HKCategoryDirectory, {
   CategoryDefinition,
 } from "../asset/hollowknight/categories/category-directory.json";
+
+import SSCategoryDirectory from "../asset/silksong/categories/category-directory.json";
 
 interface CatContent {
   splitIds: Array<string>;
@@ -18,11 +20,10 @@ interface CatContent {
   variables: Record<string, string>;
 }
 
-export function getCategoryDirectory(): Record<
-  string,
-  Array<CategoryDefinition>
-> {
-  return CategoryDirectory;
+export function getCategoryDirectory(
+  game: Game
+): Record<string, Array<CategoryDefinition>> {
+  return game === "hollowknight" ? HKCategoryDirectory : SSCategoryDirectory;
 }
 
 export async function getCategoryConfigJSON(

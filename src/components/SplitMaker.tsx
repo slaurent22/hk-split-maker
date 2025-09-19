@@ -49,7 +49,7 @@ export default function SplitMaker(): ReactElement {
     configInput: JSON.stringify(initialConfig, null, 4),
     splitOutput: "",
     categoryName: builtin,
-    categories: getCategoryDirectory(),
+    categories: getCategoryDirectory(game),
     shareButtonDisabled: true,
   });
 
