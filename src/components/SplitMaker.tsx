@@ -6,10 +6,10 @@ import React, {
   Suspense,
   ChangeEvent,
 } from "react";
-import { useSelector } from "react-redux";
 import { useSearchParams } from "react-router-dom";
 import { saveAs } from "file-saver";
 import JSON5 from "json5";
+import { useCurrentGame } from "../hooks";
 import { getCategoryConfigJSON, getCategoryDirectory } from "../lib/categories";
 import { CategoryDefinition } from "../asset/hollowknight/categories/category-directory.json";
 import {
@@ -20,7 +20,6 @@ import {
 } from "../lib/lss";
 import HKCategoryAnyPercent from "../asset/hollowknight/categories/any.json";
 import SSCategoryAnyPercent from "../asset/silksong/categories/any.json";
-import { RootState } from "../store";
 import ArrowButton from "./ArrowButton";
 import ShareButton from "./ShareButton";
 
@@ -37,9 +36,7 @@ interface AppState {
 }
 
 export default function SplitMaker(): ReactElement {
-  const currentGame = useSelector(
-    (reduxState: RootState) => reduxState.game.currentGame
-  );
+  const currentGame = useCurrentGame();
   const defaultCategory =
     currentGame === "hollowknight"
       ? HKCategoryAnyPercent

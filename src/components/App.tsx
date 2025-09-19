@@ -1,8 +1,7 @@
 import React, { ReactElement } from "react";
 import { Tab, Tabs, TabList, TabPanel } from "react-tabs";
-import { useSelector } from "react-redux";
 import { useSearchParams } from "react-router-dom";
-import { RootState } from "../store";
+import { useCurrentGame } from "../hooks";
 import { Game } from "../store/game-slice";
 import Header from "./Header";
 import Instructions from "./Instructions";
@@ -11,10 +10,7 @@ import Footer from "./Footer";
 import SplitMaker from "./SplitMaker";
 
 export default function App(): ReactElement {
-  const currentGame = useSelector(
-    (reduxState: RootState) => reduxState.game.currentGame
-  );
-
+  const currentGame = useCurrentGame();
   let selectedIndex = 0;
   if (currentGame === "silksong") {
     selectedIndex = 1;

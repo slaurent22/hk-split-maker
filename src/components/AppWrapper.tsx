@@ -1,7 +1,8 @@
 import React, { ReactNode, useEffect } from "react";
-import { useDispatch, useSelector } from "react-redux";
+import { useDispatch } from "react-redux";
 import { useSearchParams } from "react-router-dom";
-import { RootState, AppDispatch } from "../store";
+import { useCurrentGame } from "../hooks";
+import { AppDispatch } from "../store";
 import { setGame, Game } from "../store/game-slice";
 
 interface AppWrapperProps {
@@ -13,7 +14,7 @@ const VALID_GAMES: Game[] = ["hollowknight", "silksong"];
 export default function AppWrapper({ children }: AppWrapperProps): ReactNode {
   const dispatch = useDispatch<AppDispatch>();
   const [searchParams, setSearchParams] = useSearchParams();
-  const currentGame = useSelector((state: RootState) => state.game.currentGame);
+  const currentGame = useCurrentGame();
 
   useEffect(() => {
     const gameParam = searchParams.get("game") as Game | null;
