@@ -27,6 +27,9 @@
         "Lace2",
         "EndingSplit"
     ],
+    "names": {
+        "EndingSplit": "Grand Mother Silk"
+    },
     "gameName": "Hollow Knight: Silksong",
     "variables": {
         "Any% Glitch": "No Major Glitches"

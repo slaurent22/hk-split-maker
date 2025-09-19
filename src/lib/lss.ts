@@ -123,9 +123,8 @@ export async function createSplitsXml(
   game: Game
 ): Promise<string> {
   const {
-    splitIds,
     ordered = true,
-    endTriggeringAutosplit,
+    endTriggeringAutosplit = true,
     endingSplit,
     categoryName,
     gameName,
@@ -133,6 +132,11 @@ export async function createSplitsXml(
     icons,
     offset,
   } = config;
+
+  // for silksong, first autosplit is start trigger
+  const splitIds =
+    game === "silksong" ? config.splitIds.slice(1) : config.splitIds;
+  const autosplitIds = config.splitIds;
 
   const { parseSplitsDefinitions, getIconURLs } = splitsFunctions(game);
 
@@ -261,11 +265,11 @@ export async function createSplitsXml(
     segments.push(getSegmentNode(endingSplitName, icon));
   }
 
-  const autosplits = parsedSplitIds.map(({ autosplitId }) => {
+  const autosplits = autosplitIds.map((autosplitId) => {
     return { Split: autosplitId };
   });
 
-  const silksongAutosplits = parsedSplitIds.map(({ autosplitId }) => {
+  const silksongAutosplits = autosplitIds.map((autosplitId) => {
     return { Setting: [{ _attr: { type: "string", value: autosplitId } }] };
   });
 
