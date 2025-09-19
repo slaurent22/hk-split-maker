@@ -41,7 +41,7 @@ export default function SplitMaker(): ReactElement {
   const defaultCategory =
     game === "hollowknight" ? HKCategoryAnyPercent : SSCategoryAnyPercent;
   const [searchParams, setSearchParams] = useSearchParams();
-  const builtin = searchParams.get("bultin") ?? undefined;
+  const builtin = searchParams.get("builtin") ?? undefined;
   const config = searchParams.get("config") ?? undefined;
   // eslint-disable-next-line @typescript-eslint/no-unsafe-assignment
   const initialConfig = config ? JSON.parse(atob(config)) : defaultCategory;
