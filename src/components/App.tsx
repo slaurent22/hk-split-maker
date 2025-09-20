@@ -39,19 +39,18 @@ export default function App(): ReactElement {
   return (
     <div id="app">
       <AlertBanner />
+      <Header />
       <Tabs onSelect={onTabSelect} selectedIndex={selectedIndex}>
         <TabList>
           <Tab>Hollow Knight</Tab>
           <Tab>Silksong</Tab>
         </TabList>
         <TabPanel>
-          <Header />
           <Instructions />
           <SplitMaker />
           <Footer />
         </TabPanel>
         <TabPanel>
-          <Header />
           <Instructions />
           <SplitMaker />
           <Footer />
