@@ -112,7 +112,7 @@ module.exports = {
         og_description: {
           property: "og:description",
           content:
-            "Generate and download LiveSplit files for Hollow Knight speedrunning. " +
+            "Generate and download LiveSplit files for Hollow Knight & Silksong speedrunning. " +
             "Many categories included, or customize your own!",
         },
         og_image: {
