@@ -85,7 +85,7 @@
     },
     "lint-staged": {
         "*.{js,jsx,ts,tsx}": [
-            "eslint --cache --fix",
+            "eslint --max-warnings 0 --cache --fix",
             "prettier --write"
         ],
         "*.css": [
