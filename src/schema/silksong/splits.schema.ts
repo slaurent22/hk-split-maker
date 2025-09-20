@@ -23,29 +23,17 @@ const SUBSPLITS_SCHEMA = SPLITS.map(
   }
 );
 
-const MANUAL_SPLIT_SCHEMA = {
-  title: "Manual Split",
-  description: "A mid-run manual split",
-  type: "string",
-  pattern: "^%.+",
-};
-
-type SplitIdItem =
-  | typeof MANUAL_SPLIT_SCHEMA
-  | {
-      title: string;
-      description: string;
-      const: string;
-    };
+interface SplitIdItem {
+  title: string;
+  description: string;
+  const: string;
+}
 
 const items = SplitConfigSchemaSource.properties.splitIds.items as {
   oneOf: Array<SplitIdItem>;
 };
 
-items.oneOf = items.oneOf
-  .concat(SPLITS_SCHEMA)
-  .concat(SUBSPLITS_SCHEMA)
-  .concat(MANUAL_SPLIT_SCHEMA);
+items.oneOf = items.oneOf.concat(SPLITS_SCHEMA).concat(SUBSPLITS_SCHEMA);
 
 const overrideSchemaPropItem = (description: string) => ({
   oneOf: [

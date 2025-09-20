@@ -150,15 +150,6 @@ export async function createSplitsXml(
     let autosplitId = splitId;
     let subsplit = false;
     let name = "";
-    const manualSplitMatch = MANUAL_SPLIT_RE.exec(splitId);
-    if (manualSplitMatch) {
-      const parsedName = manualSplitMatch.groups?.name;
-      if (!parsedName) {
-        throw new Error(`Failed to parse name out of "${splitId}"`);
-      }
-      autosplitId = "ManualSplit";
-      name = parsedName;
-    }
 
     const subSplitMatch = SUB_SPLIT_RE.exec(autosplitId);
     if (subSplitMatch) {

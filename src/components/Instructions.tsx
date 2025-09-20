@@ -74,11 +74,6 @@ const Instructions: React.FC = () => {
               segment name beginning with the minus sign, for use with the
               LiveSplit Subsplits layout component.
             </li>
-            <li>
-              Include your own <strong>manual splits</strong> by prefixing the
-              name with a precent sign (%). These entries will be associated
-              with the "Manual Split (Misc)" autosplit
-            </li>
           </ul>
         </li>
         <li>
