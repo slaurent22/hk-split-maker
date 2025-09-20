@@ -38,7 +38,6 @@ interface ParsedSplitId {
 
 const DEFAULT_OFFSET = "00:00:00";
 
-const MANUAL_SPLIT_RE = /%(?<name>.+)/;
 export const SUB_SPLIT_RE = /-(?<name>.+)/;
 
 export function buildSplitsFileName(splitsConfig: Config): string {
