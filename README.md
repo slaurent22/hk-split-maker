@@ -37,7 +37,7 @@ Navigate to `http://localhost:8080/` in your web browser.
    [HollowKnightSplitSettings.cs](https://github.com/ShootMe/LiveSplit.HollowKnight/blob/master/HollowKnightSplitSettings.cs) into [splits.txt](./src/asset/hollowknight/splits.txt).
 2. Remove the commented-out lines. At this point, `git diff` should only list the new (or updated) autosplits.
 3. Update [hollowknight-gen-files.js](./tools/hollowknight-gen-files.js) to ensure each new autosplit is mapped to an icon. Optionally, add new icons to the [icons/](./src/asset/hollowknight/icons) directory.
-4. Run `npm run gen-files` to regenerate the core files from these updates.
+4. Run `npm run gen-files-hk` to regenerate the core files from these updates.
 5. Run `npm run serve` to make sure the application runs.
 6. You can use [every.json](./src/asset/hollowknight/categories/every.json) as a test case, or construct a new test case containing the new splits.
 7. Ensure the generated splits have the correct autosplits.
@@ -48,7 +48,11 @@ For an example of this process, see https://github.com/slaurent22/hk-split-maker
 
 1. Ensure [splits.json](https://github.com/AlexKnauth/silksong-autosplit-wasm/blob/master/examples/splits.json) is up-to-date.
 2. Copy [splits.json](https://github.com/AlexKnauth/silksong-autosplit-wasm/blob/master/examples/splits.json) into [splits.json](./src/asset/silksong/splits.json).
-3. TBD
+3. Update [silksong-gen-files.js](./tools/silksong-gen-files.js) to ensure each new autosplit is mapped to an icon. Optionally, add new icons to the [icons/](./src/asset/silksong/icons) directory.
+4. Run `npm run gen-files-ss` to regenerate the core files from these updates.
+5. Run `npm run serve` to make sure the application runs.
+6. You can use [every.json](./src/asset/silksong/categories/every.json) as a test case, or construct a new test case containing the new splits.
+7. Ensure the generated splits have the correct autosplits.
 
 ## Future Enhancements
 

@@ -1,5 +1,5 @@
 import splits from "../asset/silksong/splits.json";
-// import Icons from "../asset/silksong/icons/icons";
+import Icons from "../asset/silksong/icons/icons";
 
 export const DESCRIPTION_NAME_REGEXP = /(?<name>.+)\s+\((?<qualifier>.+)\)/;
 
@@ -92,8 +92,8 @@ export function getSelectOptionGroups(): Array<SelectOptionGroup> {
 
 export function getIconURLs(): Map<string, string> {
   const result = new Map<string, string>();
-  //   for (const [key, url] of Object.entries(Icons)) {
-  //     result.set(key, url);
-  //   }
+  for (const [key, url] of Object.entries(Icons)) {
+    result.set(key, url);
+  }
   return result;
 }
