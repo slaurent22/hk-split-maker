@@ -2,21 +2,21 @@
     "categoryName": "5 Tools",
     "splitIds": [
         "StartNewGame",
-        "MossMother",
-        "ManualSplit",
+        "MossMotherTrans",
         "ManualSplit",
         "SilkSpear",
         "ManualSplit",
         "BellBeast",
         "ManualSplit",
+        "ManualSplit",
         "ManualSplit"
     ],
     "names": {
         "ManualSplit": [
-            "Shard Pendant (Manual Split)",
             "Compass (Manual Split)",
             "Druid's Eye (Manual Split)",
             "Straight Pin (Manual Split)",
+            "Shard Pendant (Manual Split)",
             "Magnetite Brooch (Manual Split)"
         ]
     },
