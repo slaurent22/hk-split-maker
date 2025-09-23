@@ -22,7 +22,8 @@ export interface SplitDefinition {
 
 function getNameAndGroup({
   description,
-}: Pick<SplitDefinition, "description">): [string, string] {
+  id,
+}: Pick<SplitDefinition, "description" | "id">): [string, string] {
   const match = DESCRIPTION_NAME_REGEXP.exec(description);
   let name = description;
   let qualifier = "Other";
@@ -30,8 +31,24 @@ function getNameAndGroup({
   if (match && match.groups) {
     ({ name, qualifier } = match.groups);
   }
-
-  return [name, qualifier];
+  switch (id) {
+    case "MossMotherTrans":
+    case "SilkSpearTrans":
+    case "BellBeastTrans":
+    case "SwiftStepTrans":
+    case "Lace1Trans":
+    case "DriftersCloakTrans":
+    case "MoorwingTrans":
+    case "ClingGripTrans":
+    case "TrobbioTrans":
+    case "ClawlineTrans":
+    case "VaultkeepersMelodyTrans":
+    case "ArchitectsMelodyTrans":
+    case "ConductorsMelodyTrans":
+      return [`${name} Exit`, qualifier];
+    default:
+      return [name, qualifier];
+  }
 }
 
 export function parseSplitsDefinitions(): Map<string, SplitDefinition> {
@@ -41,7 +58,7 @@ export function parseSplitsDefinitions(): Map<string, SplitDefinition> {
   splitDefinitions = new Map<string, SplitDefinition>();
   for (const { description, key, tooltip } of splits) {
     const id = key;
-    const [name, group] = getNameAndGroup({ description });
+    const [name, group] = getNameAndGroup({ description, id });
     splitDefinitions.set(id, {
       description,
       id,
