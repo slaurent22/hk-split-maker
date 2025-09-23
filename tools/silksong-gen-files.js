@@ -93,7 +93,7 @@ function getUrl(qualifier, id) {
       return getUrl("Enemy", "Wraith");
     case "EnterHighHalls":
       return getUrl("Enemy", "Minister");
-    case "EnterHighHallsGauntlet":
+    case "EnterHighHallsArena":
       return getUrl("Enemy", "Maestro");
 
     // Boss Transition
@@ -117,9 +117,9 @@ function getUrl(qualifier, id) {
       return getUrl("Melody", "ConductorsMelody");
 
     // Mini Boss
-    case "WhisperingVaultsGauntlet":
+    case "WhisperingVaultsArena":
       return getUrl("Enemy", "Vaultkeeper");
-    case "HighHallsGauntlet":
+    case "HighHallsArena":
       return getUrl("Enemy", "ChoirClapper");
 
     // Needle Upgrade
@@ -136,6 +136,106 @@ function getUrl(qualifier, id) {
     case "Lace1":
     case "Lace2":
       return getUrl("Boss", "Lace");
+
+    // Flea
+    case "SavedFleaHuntersMarch":
+    case "SavedFleaBellhart":
+    case "SavedFleaMarrow":
+    case "SavedFleaDeepDocksSprint":
+    case "SavedFleaFarFieldsPilgrimsRest":
+    case "SavedFleaFarFieldsTrap":
+    case "SavedFleaSandsOfKarak":
+    case "SavedFleaBlastedSteps":
+    case "SavedFleaWormways":
+    case "SavedFleaDeepDocksArena":
+    case "SavedFleaDeepDocksBellway":
+    case "SavedFleaBilewaterOrgan":
+    case "SavedFleaSinnersRoad":
+    case "SavedFleaGreymoorRoof":
+    case "SavedFleaGreymoorLake":
+    case "SavedFleaWhisperingVaults":
+    case "SavedFleaSongclave":
+    case "SavedFleaMountFay":
+    case "SavedFleaBilewaterTrap":
+    case "SavedFleaBilewaterThieves":
+    case "SavedFleaShellwood":
+    case "SavedFleaSlabBellway":
+    case "SavedFleaSlabCage":
+    case "SavedFleaChoralChambersWind":
+    case "SavedFleaChoralChambersCage":
+    case "SavedFleaUnderworksExplosions":
+    case "SavedFleaUnderworksWispThicket":
+    case "SavedFleaGiantFlea":
+    case "SavedFleaVog":
+    case "SavedFleaKratt":
+      return getUrl("NPC", "Flea");
+
+    case "SeenFleatopiaEmpty":
+      return getUrl("NPC", "Mooshka");
+
+    // Bellway
+    case "PutrifiedDuctsStation":
+    case "BellhartStation":
+    case "FarFieldsStation":
+    case "GrandBellwayStation":
+    case "BlastedStepsStation":
+    case "DeepDocksStation":
+    case "GreymoorStation":
+    case "MountFayStation":
+    case "BilewaterStation":
+    case "ShellwoodStation":
+      return getUrl("Misc", "Bellway");
+
+    // Ventrica
+    case "ChoralChambersTube":
+    case "UnderworksTube":
+    case "CityBellwayTube":
+    case "HighHallsTube":
+    case "SongclaveTube":
+    case "MemoriumTube":
+      return getUrl("Misc", "Ventrica");
+
+    // NPCs
+    case "SeenShakraBonebottom":
+    case "SeenShakraMarrow":
+    case "SeenShakraDeepDocks":
+    case "SeenShakraFarFields":
+    case "SeenShakraWormways":
+    case "SeenShakraGreymoor":
+    case "SeenShakraBellhart":
+    case "SeenShakraShellwood":
+    case "SeenShakraHuntersMarch":
+    case "SeenShakraBlastedSteps":
+    case "SeenShakraSinnersRoad":
+    case "SeenShakraMountFay":
+    case "SeenShakraBilewater":
+    case "SeenShakraSandsOfKarak":
+      return getUrl("NPC", "Shakra");
+
+    case "MetJubilanaEnclave":
+      return getUrl("NPC", "Jubilana");
+
+    case "MetShermaEnclave":
+      return getUrl("NPC", "Sherma");
+
+    case "UnlockedPrinceCage":
+    case "GreenPrinceInVerdania":
+      return getUrl("NPC", "GreenPrince");
+
+    case "BellhouseKeyConversation":
+      return getUrl("Item", "BellhomeKey");
+
+    // Hearts and Memories
+    case "CollectedHeartNyleth":
+      return getUrl("Item", "PollenHeart");
+    case "CollectedHeartKhann":
+      return getUrl("Item", "EncrustedHeart");
+    case "CollectedHeartKarmelita":
+      return getUrl("Item", "HuntersHeart");
+    case "CollectedHeartClover":
+      return getUrl("Item", "ConjoinedHeart");
+    case "CompletedRedMemory":
+      return getUrl("Item", "Everbloom");
 
     // Ending
     case "EndingSplit":

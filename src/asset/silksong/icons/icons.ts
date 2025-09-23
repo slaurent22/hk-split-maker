@@ -37,13 +37,13 @@ import LeaveMist from "./Enemy/Wraith.png";
 import Phantom from "./Boss/Phantom.png";
 import Act2Started from "./Event/Act2Started.png";
 import CogworkDancers from "./Boss/CogworkDancers.png";
-import WhisperingVaultsGauntlet from "./Enemy/Vaultkeeper.png";
+import WhisperingVaultsArena from "./Enemy/Vaultkeeper.png";
 import Trobbio from "./Boss/Trobbio.png";
 import TrobbioTrans from "./Boss/Trobbio.png";
 import Clawline from "./Skill/Clawline.png";
 import EnterHighHalls from "./Enemy/Minister.png";
-import EnterHighHallsGauntlet from "./Enemy/Maestro.png";
-import HighHallsGauntlet from "./Enemy/ChoirClapper.png";
+import EnterHighHallsArena from "./Enemy/Maestro.png";
+import HighHallsArena from "./Enemy/ChoirClapper.png";
 import Lace2 from "./Boss/Lace.png";
 import VaultkeepersMelody from "./Melody/VaultkeepersMelody.png";
 import VaultkeepersMelodyTrans from "./Melody/VaultkeepersMelody.png";
@@ -56,6 +56,79 @@ import NeedleUpgrade1 from "./Item/Needle1.png";
 import NeedleUpgrade2 from "./Item/Needle2.png";
 import NeedleUpgrade3 from "./Item/Needle3.png";
 import NeedleUpgrade4 from "./Item/Needle4.png";
+import SavedFleaHuntersMarch from "./NPC/Flea.png";
+import SavedFleaBellhart from "./NPC/Flea.png";
+import SavedFleaMarrow from "./NPC/Flea.png";
+import SavedFleaDeepDocksSprint from "./NPC/Flea.png";
+import SavedFleaFarFieldsPilgrimsRest from "./NPC/Flea.png";
+import SavedFleaFarFieldsTrap from "./NPC/Flea.png";
+import SavedFleaSandsOfKarak from "./NPC/Flea.png";
+import SavedFleaBlastedSteps from "./NPC/Flea.png";
+import SavedFleaWormways from "./NPC/Flea.png";
+import SavedFleaDeepDocksArena from "./NPC/Flea.png";
+import SavedFleaDeepDocksBellway from "./NPC/Flea.png";
+import SavedFleaBilewaterOrgan from "./NPC/Flea.png";
+import SavedFleaSinnersRoad from "./NPC/Flea.png";
+import SavedFleaGreymoorRoof from "./NPC/Flea.png";
+import SavedFleaGreymoorLake from "./NPC/Flea.png";
+import SavedFleaWhisperingVaults from "./NPC/Flea.png";
+import SavedFleaSongclave from "./NPC/Flea.png";
+import SavedFleaMountFay from "./NPC/Flea.png";
+import SavedFleaBilewaterTrap from "./NPC/Flea.png";
+import SavedFleaBilewaterThieves from "./NPC/Flea.png";
+import SavedFleaShellwood from "./NPC/Flea.png";
+import SavedFleaSlabBellway from "./NPC/Flea.png";
+import SavedFleaSlabCage from "./NPC/Flea.png";
+import SavedFleaChoralChambersWind from "./NPC/Flea.png";
+import SavedFleaChoralChambersCage from "./NPC/Flea.png";
+import SavedFleaUnderworksExplosions from "./NPC/Flea.png";
+import SavedFleaUnderworksWispThicket from "./NPC/Flea.png";
+import SavedFleaGiantFlea from "./NPC/Flea.png";
+import SavedFleaVog from "./NPC/Flea.png";
+import SavedFleaKratt from "./NPC/Flea.png";
+import PutrifiedDuctsStation from "./Misc/Bellway.png";
+import BellhartStation from "./Misc/Bellway.png";
+import FarFieldsStation from "./Misc/Bellway.png";
+import GrandBellwayStation from "./Misc/Bellway.png";
+import BlastedStepsStation from "./Misc/Bellway.png";
+import DeepDocksStation from "./Misc/Bellway.png";
+import GreymoorStation from "./Misc/Bellway.png";
+import MountFayStation from "./Misc/Bellway.png";
+import BilewaterStation from "./Misc/Bellway.png";
+import ShellwoodStation from "./Misc/Bellway.png";
+import ChoralChambersTube from "./Misc/Ventrica.png";
+import UnderworksTube from "./Misc/Ventrica.png";
+import CityBellwayTube from "./Misc/Ventrica.png";
+import HighHallsTube from "./Misc/Ventrica.png";
+import SongclaveTube from "./Misc/Ventrica.png";
+import MemoriumTube from "./Misc/Ventrica.png";
+import SeenShakraBonebottom from "./NPC/Shakra.png";
+import SeenShakraMarrow from "./NPC/Shakra.png";
+import SeenShakraDeepDocks from "./NPC/Shakra.png";
+import SeenShakraFarFields from "./NPC/Shakra.png";
+import SeenShakraWormways from "./NPC/Shakra.png";
+import SeenShakraGreymoor from "./NPC/Shakra.png";
+import SeenShakraBellhart from "./NPC/Shakra.png";
+import SeenShakraShellwood from "./NPC/Shakra.png";
+import SeenShakraHuntersMarch from "./NPC/Shakra.png";
+import SeenShakraBlastedSteps from "./NPC/Shakra.png";
+import SeenShakraSinnersRoad from "./NPC/Shakra.png";
+import SeenShakraMountFay from "./NPC/Shakra.png";
+import SeenShakraBilewater from "./NPC/Shakra.png";
+import SeenShakraSandsOfKarak from "./NPC/Shakra.png";
+import MetJubilanaEnclave from "./NPC/Jubilana.png";
+import MetShermaEnclave from "./NPC/Sherma.png";
+import UnlockedPrinceCage from "./NPC/GreenPrince.png";
+import GreenPrinceInVerdania from "./NPC/GreenPrince.png";
+import SeenFleatopiaEmpty from "./NPC/Mooshka.png";
+import FaydownCloak from "./Skill/FaydownCloak.png";
+import SilkSoar from "./Skill/SilkSoar.png";
+import CollectedHeartNyleth from "./Item/PollenHeart.png";
+import CollectedHeartKhann from "./Item/EncrustedHeart.png";
+import CollectedHeartKarmelita from "./Item/HuntersHeart.png";
+import CollectedHeartClover from "./Item/ConjoinedHeart.png";
+import CompletedRedMemory from "./Item/Everbloom.png";
+import BellhouseKeyConversation from "./Item/BellhomeKey.png";
 export default {
   ManualSplit,
   StartNewGame,
@@ -94,13 +167,13 @@ export default {
   Phantom,
   Act2Started,
   CogworkDancers,
-  WhisperingVaultsGauntlet,
+  WhisperingVaultsArena,
   Trobbio,
   TrobbioTrans,
   Clawline,
   EnterHighHalls,
-  EnterHighHallsGauntlet,
-  HighHallsGauntlet,
+  EnterHighHallsArena,
+  HighHallsArena,
   Lace2,
   VaultkeepersMelody,
   VaultkeepersMelodyTrans,
@@ -113,4 +186,77 @@ export default {
   NeedleUpgrade2,
   NeedleUpgrade3,
   NeedleUpgrade4,
+  SavedFleaHuntersMarch,
+  SavedFleaBellhart,
+  SavedFleaMarrow,
+  SavedFleaDeepDocksSprint,
+  SavedFleaFarFieldsPilgrimsRest,
+  SavedFleaFarFieldsTrap,
+  SavedFleaSandsOfKarak,
+  SavedFleaBlastedSteps,
+  SavedFleaWormways,
+  SavedFleaDeepDocksArena,
+  SavedFleaDeepDocksBellway,
+  SavedFleaBilewaterOrgan,
+  SavedFleaSinnersRoad,
+  SavedFleaGreymoorRoof,
+  SavedFleaGreymoorLake,
+  SavedFleaWhisperingVaults,
+  SavedFleaSongclave,
+  SavedFleaMountFay,
+  SavedFleaBilewaterTrap,
+  SavedFleaBilewaterThieves,
+  SavedFleaShellwood,
+  SavedFleaSlabBellway,
+  SavedFleaSlabCage,
+  SavedFleaChoralChambersWind,
+  SavedFleaChoralChambersCage,
+  SavedFleaUnderworksExplosions,
+  SavedFleaUnderworksWispThicket,
+  SavedFleaGiantFlea,
+  SavedFleaVog,
+  SavedFleaKratt,
+  PutrifiedDuctsStation,
+  BellhartStation,
+  FarFieldsStation,
+  GrandBellwayStation,
+  BlastedStepsStation,
+  DeepDocksStation,
+  GreymoorStation,
+  MountFayStation,
+  BilewaterStation,
+  ShellwoodStation,
+  ChoralChambersTube,
+  UnderworksTube,
+  CityBellwayTube,
+  HighHallsTube,
+  SongclaveTube,
+  MemoriumTube,
+  SeenShakraBonebottom,
+  SeenShakraMarrow,
+  SeenShakraDeepDocks,
+  SeenShakraFarFields,
+  SeenShakraWormways,
+  SeenShakraGreymoor,
+  SeenShakraBellhart,
+  SeenShakraShellwood,
+  SeenShakraHuntersMarch,
+  SeenShakraBlastedSteps,
+  SeenShakraSinnersRoad,
+  SeenShakraMountFay,
+  SeenShakraBilewater,
+  SeenShakraSandsOfKarak,
+  MetJubilanaEnclave,
+  MetShermaEnclave,
+  UnlockedPrinceCage,
+  GreenPrinceInVerdania,
+  SeenFleatopiaEmpty,
+  FaydownCloak,
+  SilkSoar,
+  CollectedHeartNyleth,
+  CollectedHeartKhann,
+  CollectedHeartKarmelita,
+  CollectedHeartClover,
+  CompletedRedMemory,
+  BellhouseKeyConversation,
 };
