@@ -34,7 +34,10 @@ function getNameAndGroup({
   // eslint-disable-next-line default-case
   switch (qualifier) {
     case "Flea":
-      return [name.substring("Rescued ".length), qualifier];
+      if (name.startsWith("Rescued")) {
+        return [name.substring("Rescued ".length), qualifier];
+      }
+      break;
     case "Bellway":
       return [`${name} Bellway`, qualifier];
     case "Ventrica":
