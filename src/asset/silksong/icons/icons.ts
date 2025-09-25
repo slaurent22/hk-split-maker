@@ -19,6 +19,7 @@ import SwiftStepTrans from "./Skill/SwiftStep.png";
 import Lace1 from "./Boss/Lace.png";
 import Lace1Trans from "./Boss/Lace.png";
 import DeepDocksBell from "./Misc/Bell.png";
+import EnterWormways from "./Enemy/Grom.png";
 import DriftersCloak from "./Skill/DriftersCloak.png";
 import DriftersCloakTrans from "./Skill/DriftersCloak.png";
 import FourthChorus from "./Boss/FourthChorus.png";
@@ -26,9 +27,11 @@ import EnterGreymoor from "./Enemy/Craw.png";
 import GreymoorBell from "./Misc/Bell.png";
 import Moorwing from "./Boss/Moorwing.png";
 import MoorwingTrans from "./Boss/Moorwing.png";
+import EnterShellwood from "./Enemy/Phacia.png";
 import ClingGrip from "./Skill/ClingGrip.png";
 import ClingGripTrans from "./Skill/ClingGrip.png";
 import ShellwoodBell from "./Misc/Bell.png";
+import EnterBellhart from "./Enemy/Furm.png";
 import Widow from "./Boss/Widow.png";
 import BellhartBell from "./Misc/Bell.png";
 import LastJudge from "./Boss/LastJudge.png";
@@ -56,6 +59,7 @@ import NeedleUpgrade1 from "./Item/Needle1.png";
 import NeedleUpgrade2 from "./Item/Needle2.png";
 import NeedleUpgrade3 from "./Item/Needle3.png";
 import NeedleUpgrade4 from "./Item/Needle4.png";
+import ReaperCrestTrans from "./Crest/Reaper.png";
 import SavedFleaHuntersMarch from "./NPC/Flea.png";
 import SavedFleaBellhart from "./NPC/Flea.png";
 import SavedFleaMarrow from "./NPC/Flea.png";
@@ -150,6 +154,7 @@ export default {
   Lace1,
   Lace1Trans,
   DeepDocksBell,
+  EnterWormways,
   DriftersCloak,
   DriftersCloakTrans,
   FourthChorus,
@@ -157,9 +162,11 @@ export default {
   GreymoorBell,
   Moorwing,
   MoorwingTrans,
+  EnterShellwood,
   ClingGrip,
   ClingGripTrans,
   ShellwoodBell,
+  EnterBellhart,
   Widow,
   BellhartBell,
   LastJudge,
@@ -187,6 +194,7 @@ export default {
   NeedleUpgrade2,
   NeedleUpgrade3,
   NeedleUpgrade4,
+  ReaperCrestTrans,
   SavedFleaHuntersMarch,
   SavedFleaBellhart,
   SavedFleaMarrow,

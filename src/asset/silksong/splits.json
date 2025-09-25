@@ -115,6 +115,12 @@
     },
     {
         "alias": null,
+        "description": "Enter Wormways (Transition)",
+        "key": "EnterWormways",
+        "tooltip": "Splits on entering Wormways"
+    },
+    {
+        "alias": null,
         "description": "Drifter's Cloak (Skill)",
         "key": "DriftersCloak",
         "tooltip": "Splits when obtaining Drifter's Cloak (Umbrella/Float)"
@@ -157,6 +163,12 @@
     },
     {
         "alias": null,
+        "description": "Enter Shellwood (Transition)",
+        "key": "EnterShellwood",
+        "tooltip": "Splits when entering Shellwood"
+    },
+    {
+        "alias": null,
         "description": "Cling Grip (Skill)",
         "key": "ClingGrip",
         "tooltip": "Splits when obtaining Cling Grip (Wall Jump)"
@@ -172,6 +184,12 @@
         "description": "Shellwood Bell (Event)",
         "key": "ShellwoodBell",
         "tooltip": "Splits when ringing the Shellwood Bell Shrine"
+    },
+    {
+        "alias": null,
+        "description": "Enter Bellhart (Transition)",
+        "key": "EnterBellhart",
+        "tooltip": "Splits when entering Bellhart"
     },
     {
         "alias": null,
@@ -334,6 +352,12 @@
         "description": "Needle 4 (Upgrade)",
         "key": "NeedleUpgrade4",
         "tooltip": "Splits when upgrading to Pale Steel Needle"
+    },
+    {
+        "alias": null,
+        "description": "Reaper Crest (Transition)",
+        "key": "ReaperCrestTrans",
+        "tooltip": "Splits when leaving the church with the Reaper Crest unlocked"
     },
     {
         "alias": null,

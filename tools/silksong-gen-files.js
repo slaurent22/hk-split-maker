@@ -75,7 +75,6 @@ function getUrl(qualifier, id) {
     // Skill Transition
     case "SilkSpearTrans":
       return getUrl("Skill", "SilkSpear");
-
     case "SwiftStepTrans":
       return getUrl("Skill", "SwiftStep");
     case "DriftersCloakTrans":
@@ -84,6 +83,10 @@ function getUrl(qualifier, id) {
       return getUrl("Skill", "ClingGrip");
     case "ClawlineTrans":
       return getUrl("Skill", "Clawline");
+
+    // Crest Transition
+    case "ReaperCrestTrans":
+      return getUrl("Crest", "Reaper");
 
     // Area Transition
     case "EnterGreymoor":
@@ -95,6 +98,12 @@ function getUrl(qualifier, id) {
       return getUrl("Enemy", "Minister");
     case "EnterHighHallsArena":
       return getUrl("Enemy", "Maestro");
+    case "EnterWormways":
+      return getUrl("Enemy", "Grom");
+    case "EnterShellwood":
+      return getUrl("Enemy", "Phacia");
+    case "EnterBellhart":
+      return getUrl("Enemy", "Furm");
 
     // Boss Transition
     case "MossMotherTrans":
