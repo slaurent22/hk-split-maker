@@ -31,6 +31,16 @@ function getNameAndGroup({
   if (match && match.groups) {
     ({ name, qualifier } = match.groups);
   }
+  // eslint-disable-next-line default-case
+  switch (qualifier) {
+    case "Flea":
+      return [name.substring("Rescued ".length), qualifier];
+    case "Bellway":
+      return [`${name} Bellway`, qualifier];
+    case "Ventrica":
+      return [`${name} Ventrica`, qualifier];
+  }
+  // eslint-disable-next-line default-case
   switch (id) {
     case "MossMotherTrans":
     case "SilkSpearTrans":
@@ -46,9 +56,8 @@ function getNameAndGroup({
     case "ArchitectsMelodyTrans":
     case "ConductorsMelodyTrans":
       return [`${name} Exit`, qualifier];
-    default:
-      return [name, qualifier];
   }
+  return [name, qualifier];
 }
 
 export function parseSplitsDefinitions(): Map<string, SplitDefinition> {
