@@ -298,7 +298,7 @@ export default function SplitMaker(): ReactElement {
           {game === "silksong" && (
             <>
               <h3>Output Layout File</h3>
-              <div>
+              <div className="layout-instructions">
                 <input
                   id="generate-lss-toggle"
                   type="checkbox"
@@ -313,6 +313,11 @@ export default function SplitMaker(): ReactElement {
                 <label htmlFor="generate-lss-toggle">
                   Generate layout (lsl) file
                 </label>
+              </div>
+              <div className="layout-instructions">
+                Assumes <code>C:{"\\"}silksong_autosplit_wasm_stable.wasm</code>
+                . After generating, edit line 46 below before downloading to
+                change this location.
               </div>
               <Suspense fallback={<div>Loading layout output editor...</div>}>
                 <SplitOutputEditor
