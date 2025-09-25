@@ -1,0 +1,32 @@
+{
+    "categoryName": "Low%",
+    "splitIds": [
+        "StartNewGame",
+        "MossMother",
+        "ManualSplit",
+        "ClingGrip",
+        "Lace1",
+        "DriftersCloak",
+        "Widow",
+        "EnterMist",
+        "LeaveMist",
+        "Phantom",
+        "CogworkDancers",
+        "Trobbio",
+        "Clawline",
+        "VaultkeepersMelody",
+        "ArchitectsMelody",
+        "EnterHighHallsArena",
+        "ConductorsMelody",
+        "Lace2",
+        "EndingSplit"
+    ],
+    "names": {
+        "ManualSplit": "Simple Key (Manual)",
+        "EndingSplit": "Grand Mother Silk"
+    },
+    "gameName": "Hollow Knight: Silksong",
+    "variables": {
+        "Low% Glitch": "No Major Glitches"
+    }
+}

@@ -11,6 +11,11 @@
             "data": {}
         },
         {
+            "fileName": "low",
+            "displayName": "Low%",
+            "data": {}
+        },
+        {
             "fileName": "te",
             "displayName": "True Ending",
             "data": {}
