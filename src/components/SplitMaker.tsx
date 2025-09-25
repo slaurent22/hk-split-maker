@@ -311,7 +311,7 @@ export default function SplitMaker(): ReactElement {
                   }}
                 />
                 <label htmlFor="generate-lss-toggle">
-                  Generate layout (lss) file
+                  Generate layout (lsl) file
                 </label>
               </div>
               <Suspense fallback={<div>Loading layout output editor...</div>}>
