@@ -1,645 +1,774 @@
 [
     {
+        "alias": null,
         "description": "Manual Split (Misc)",
         "key": "ManualSplit",
         "tooltip": "Never splits. Use this when you need to manually split"
     },
     {
+        "alias": null,
         "description": "Start New Game (Start)",
         "key": "StartNewGame",
         "tooltip": "Splits when starting a new save file"
     },
     {
+        "alias": null,
         "description": "Credits Roll (Ending)",
         "key": "EndingSplit",
         "tooltip": "Splits on any credits rolling, any ending"
     },
     {
+        "alias": null,
         "description": "Weaver Queen (Ending)",
         "key": "EndingA",
         "tooltip": "Splits on Weaver Queen ending"
     },
     {
+        "alias": null,
         "description": "Main Menu (Menu)",
         "key": "Menu",
         "tooltip": "Splits on the main menu"
     },
     {
+        "alias": null,
         "description": "Death (Event)",
         "key": "PlayerDeath",
         "tooltip": "Splits when player HP is 0"
     },
     {
+        "alias": null,
         "description": "Any Transition (Transition)",
         "key": "AnyTransition",
         "tooltip": "Splits when entering a transition (only one will split per transition)"
     },
     {
+        "alias": null,
         "description": "Moss Mother (Boss)",
         "key": "MossMother",
         "tooltip": "Splits when killing Moss Mother"
     },
     {
+        "alias": null,
         "description": "Moss Mother (Transition)",
         "key": "MossMotherTrans",
         "tooltip": "Splits on the transition after killing Moss Mother"
     },
     {
+        "alias": null,
         "description": "Silk Spear (Skill)",
         "key": "SilkSpear",
         "tooltip": "Splits when obtaining Silk Spear"
     },
     {
+        "alias": null,
         "description": "Silk Spear (Transition)",
         "key": "SilkSpearTrans",
         "tooltip": "Splits on the transition after obtaining Silk Spear"
     },
     {
+        "alias": null,
         "description": "Bell Beast (Boss)",
         "key": "BellBeast",
         "tooltip": "Splits when defeating the Bell Beast"
     },
     {
+        "alias": null,
         "description": "Bell Beast (Transition)",
         "key": "BellBeastTrans",
         "tooltip": "Splits on the transition after defeating the Bell Beast"
     },
     {
+        "alias": null,
         "description": "Marrow Bell (Event)",
         "key": "MarrowBell",
         "tooltip": "Splits when ringing the Marrow Bell Shrine"
     },
     {
+        "alias": null,
         "description": "Swift Step (Skill)",
         "key": "SwiftStep",
         "tooltip": "Splits when obtaining Swift Step (Dash/Sprint)"
     },
     {
+        "alias": null,
         "description": "Swift Step (Transition)",
         "key": "SwiftStepTrans",
         "tooltip": "Splits on the transition after obtaining Swift Step (Dash/Sprint)"
     },
     {
+        "alias": null,
         "description": "Lace 1 (Boss)",
         "key": "Lace1",
         "tooltip": "Splits when defeating Lace 1 in DeepDocks"
     },
     {
+        "alias": null,
         "description": "Lace 1 (Transition)",
         "key": "Lace1Trans",
         "tooltip": "Splits on the transition after defeating Lace 1 in DeepDocks"
     },
     {
+        "alias": null,
         "description": "Deep Docks Bell (Event)",
         "key": "DeepDocksBell",
         "tooltip": "Splits when ringing the Deep Docks Bell Shrine"
     },
     {
+        "alias": null,
         "description": "Drifter's Cloak (Skill)",
         "key": "DriftersCloak",
         "tooltip": "Splits when obtaining Drifter's Cloak (Umbrella/Float)"
     },
     {
+        "alias": null,
         "description": "Drifter's Cloak (Transition)",
         "key": "DriftersCloakTrans",
         "tooltip": "Splits on the transition after obtaining Drifter's Cloak (Umbrella/Float)"
     },
     {
+        "alias": null,
         "description": "Fourth Chorus (Boss)",
         "key": "FourthChorus",
         "tooltip": "Splits when killing Fourth Chorus"
     },
     {
+        "alias": null,
         "description": "Enter Greymoor (Transition)",
         "key": "EnterGreymoor",
         "tooltip": "Splits when entering Greymoor"
     },
     {
+        "alias": null,
         "description": "Greymoor Bell (Event)",
         "key": "GreymoorBell",
         "tooltip": "Splits when ringing the Greymoor Bell Shrine"
     },
     {
+        "alias": null,
         "description": "Moorwing (Boss)",
         "key": "Moorwing",
         "tooltip": "Splits when killing Moorwing"
     },
     {
+        "alias": null,
         "description": "Moorwing (Transition)",
         "key": "MoorwingTrans",
         "tooltip": "Splits on the transition after killing Moorwing"
     },
     {
+        "alias": null,
         "description": "Cling Grip (Skill)",
         "key": "ClingGrip",
         "tooltip": "Splits when obtaining Cling Grip (Wall Jump)"
     },
     {
+        "alias": null,
         "description": "Cling Grip (Transition)",
         "key": "ClingGripTrans",
         "tooltip": "Splits on the transition after obtaining Cling Grip (Wall Jump)"
     },
     {
+        "alias": null,
         "description": "Shellwood Bell (Event)",
         "key": "ShellwoodBell",
         "tooltip": "Splits when ringing the Shellwood Bell Shrine"
     },
     {
+        "alias": null,
         "description": "Widow (Boss)",
         "key": "Widow",
         "tooltip": "Splits when killing Widow"
     },
     {
+        "alias": null,
         "description": "Bellhart Bell (Event)",
         "key": "BellhartBell",
         "tooltip": "Splits when ringing the Bellhart Bell Shrine"
     },
     {
+        "alias": null,
         "description": "Last Judge (Boss)",
         "key": "LastJudge",
         "tooltip": "Splits when killing Last Judge"
     },
     {
+        "alias": null,
         "description": "Enter The Mist (Transition)",
         "key": "EnterMist",
         "tooltip": "Splits when entering The Mist"
     },
     {
+        "alias": null,
         "description": "Leave The Mist (Transition)",
         "key": "LeaveMist",
         "tooltip": "Splits when leaving The Mist"
     },
     {
+        "alias": null,
         "description": "Phantom (Boss)",
         "key": "Phantom",
         "tooltip": "Splits when killing Phantom"
     },
     {
+        "alias": null,
         "description": "Act 2 Started (Event)",
         "key": "Act2Started",
         "tooltip": "Splits when starting Act 2"
     },
     {
+        "alias": null,
         "description": "Cogwork Dancers (Boss)",
         "key": "CogworkDancers",
         "tooltip": "Splits when killing Cogwork Dancers"
     },
     {
+        "alias": "WhisperingVaultsGauntlet",
         "description": "Whispering Vaults Arena (Mini Boss)",
         "key": "WhisperingVaultsArena",
         "tooltip": "Splits when completing the Whispering Vaults Arena"
     },
     {
+        "alias": null,
         "description": "Trobbio (Boss)",
         "key": "Trobbio",
         "tooltip": "Splits when killing Trobbio"
     },
     {
+        "alias": null,
         "description": "Trobbio (Transition)",
         "key": "TrobbioTrans",
         "tooltip": "Splits on the transition after killing Trobbio"
     },
     {
+        "alias": null,
         "description": "Clawline (Skill)",
         "key": "Clawline",
         "tooltip": "Splits when obtaining Clawline (Harpoon Dash)"
     },
     {
+        "alias": null,
         "description": "Enter High Halls (Transition)",
         "key": "EnterHighHalls",
         "tooltip": "Splits when entering High Halls"
     },
     {
+        "alias": "EnterHighHallsGauntlet",
         "description": "Enter High Halls Arena (Transition)",
         "key": "EnterHighHallsArena",
         "tooltip": "Splits when entering the High Halls Arena room"
     },
     {
+        "alias": "HighHallsGauntlet",
         "description": "High Halls Arena (Mini Boss)",
         "key": "HighHallsArena",
         "tooltip": "Splits when completing the High Halls Arena"
     },
     {
+        "alias": null,
         "description": "Lace 2 (Boss)",
         "key": "Lace2",
         "tooltip": "Splits when defeating Lace 2 in TheCradle"
     },
     {
+        "alias": null,
         "description": "Vaultkeepers Melody (Melody)",
         "key": "VaultkeepersMelody",
         "tooltip": "Splits when learning Vaultkeepers Melody"
     },
     {
+        "alias": null,
         "description": "Vaultkeepers Melody (Transition)",
         "key": "VaultkeepersMelodyTrans",
         "tooltip": "Splits on the transition after learning Vaultkeepers Melody"
     },
     {
+        "alias": null,
         "description": "Architects Melody (Melody)",
         "key": "ArchitectsMelody",
         "tooltip": "Splits when learning Architects Melody"
     },
     {
+        "alias": null,
         "description": "Architects Melody (Transition)",
         "key": "ArchitectsMelodyTrans",
         "tooltip": "Splits on the transition after learning Architects Melody"
     },
     {
+        "alias": null,
         "description": "Conductors Melody (Melody)",
         "key": "ConductorsMelody",
         "tooltip": "Splits when learning Conductors Melody"
     },
     {
+        "alias": null,
         "description": "Conductors Melody (Transition)",
         "key": "ConductorsMelodyTrans",
         "tooltip": "Splits on the transition after learning Conductors Melody"
     },
     {
+        "alias": null,
         "description": "Unlock Threefold Melody Lift (Event)",
         "key": "UnlockedMelodyLift",
         "tooltip": "Splits when unlocking the Threefold Melody Lift"
     },
     {
+        "alias": null,
         "description": "Needle 1 (Upgrade)",
         "key": "NeedleUpgrade1",
         "tooltip": "Splits when upgrading to Sharpened Needle"
     },
     {
+        "alias": null,
         "description": "Needle 2 (Upgrade)",
         "key": "NeedleUpgrade2",
         "tooltip": "Splits when upgrading to Shining Needle"
     },
     {
+        "alias": null,
         "description": "Needle 3 (Upgrade)",
         "key": "NeedleUpgrade3",
         "tooltip": "Splits when upgrading to Hivesteel Needle"
     },
     {
+        "alias": null,
         "description": "Needle 4 (Upgrade)",
         "key": "NeedleUpgrade4",
         "tooltip": "Splits when upgrading to Pale Steel Needle"
     },
     {
+        "alias": null,
         "description": "Rescued Flea Hunter's March (Flea)",
         "key": "SavedFleaHuntersMarch",
         "tooltip": "Splits after rescuing flea in Ant_03"
     },
     {
+        "alias": null,
         "description": "Rescued Flea Bellhart (Flea)",
         "key": "SavedFleaBellhart",
         "tooltip": "Splits after rescuing flea in Belltown_04"
     },
     {
+        "alias": null,
         "description": "Rescued Flea Marrow (Flea)",
         "key": "SavedFleaMarrow",
         "tooltip": "Splits after rescuing flea in Bone_06"
     },
     {
+        "alias": null,
         "description": "Rescued Flea Deep Docks Sprint (Flea)",
         "key": "SavedFleaDeepDocksSprint",
         "tooltip": "Splits after rescuing flea in Bone_East_05"
     },
     {
+        "alias": null,
         "description": "Rescued Flea Far Fields Pilgrim's Rest (Flea)",
         "key": "SavedFleaFarFieldsPilgrimsRest",
         "tooltip": "Splits after rescuing flea in Bone_East_10_Church"
     },
     {
+        "alias": null,
         "description": "Rescued Flea Far Fields Trap (Flea)",
         "key": "SavedFleaFarFieldsTrap",
         "tooltip": "Splits after rescuing flea in Bone_East_17b"
     },
     {
+        "alias": null,
         "description": "Rescued Flea Sands of Karak (Flea)",
         "key": "SavedFleaSandsOfKarak",
         "tooltip": "Splits after rescuing flea in Coral_24"
     },
     {
+        "alias": null,
         "description": "Rescued Flea Blasted Steps (Flea)",
         "key": "SavedFleaBlastedSteps",
         "tooltip": "Splits after rescuing flea in Coral_35"
     },
     {
+        "alias": null,
         "description": "Rescued Flea Wormways (Flea)",
         "key": "SavedFleaWormways",
         "tooltip": "Splits after rescuing flea in Crawl_06"
     },
     {
+        "alias": null,
         "description": "Rescued Flea Deep Docks Arena (Flea)",
         "key": "SavedFleaDeepDocksArena",
         "tooltip": "Splits after rescuing flea in Dock_03d"
     },
     {
+        "alias": null,
         "description": "Rescued Flea Deep Docks Bellway (Flea)",
         "key": "SavedFleaDeepDocksBellway",
         "tooltip": "Splits after rescuing flea in Dock_16"
     },
     {
+        "alias": null,
         "description": "Rescued Flea Bilewater Organ (Flea)",
         "key": "SavedFleaBilewaterOrgan",
         "tooltip": "Splits after rescuing flea in Dust_09"
     },
     {
+        "alias": null,
         "description": "Rescued Flea Sinner's Road (Flea)",
         "key": "SavedFleaSinnersRoad",
         "tooltip": "Splits after rescuing flea in Dust_12"
     },
     {
+        "alias": null,
         "description": "Rescued Flea Greymoor Roof (Flea)",
         "key": "SavedFleaGreymoorRoof",
         "tooltip": "Splits after rescuing flea in Greymoor_06"
     },
     {
+        "alias": null,
         "description": "Rescued Flea Greymoor Lake (Flea)",
         "key": "SavedFleaGreymoorLake",
         "tooltip": "Splits after rescuing flea in Greymoor_15b"
     },
     {
+        "alias": null,
         "description": "Rescued Flea Whispering Vaults (Flea)",
         "key": "SavedFleaWhisperingVaults",
         "tooltip": "Splits after rescuing flea in Library_01"
     },
     {
+        "alias": null,
         "description": "Rescued Flea Songclave (Flea)",
         "key": "SavedFleaSongclave",
         "tooltip": "Splits after rescuing flea in Library_09"
     },
     {
+        "alias": null,
         "description": "Rescued Flea Mount Fay (Flea)",
         "key": "SavedFleaMountFay",
         "tooltip": "Splits after rescuing flea in Peak_05c"
     },
     {
+        "alias": null,
         "description": "Rescued Flea Bilewater Trap (Flea)",
         "key": "SavedFleaBilewaterTrap",
         "tooltip": "Splits after rescuing flea in Shadow_10"
     },
     {
+        "alias": null,
         "description": "Rescued Flea Bilewater Thieves (Flea)",
         "key": "SavedFleaBilewaterThieves",
         "tooltip": "Splits after rescuing flea in Shadow_28"
     },
     {
+        "alias": null,
         "description": "Rescued Flea Shellwood (Flea)",
         "key": "SavedFleaShellwood",
         "tooltip": "Splits after rescuing flea in Shellwood_03"
     },
     {
+        "alias": null,
         "description": "Rescued Flea Slab Bellway (Flea)",
         "key": "SavedFleaSlabBellway",
         "tooltip": "Splits after rescuing flea in Slab_06"
     },
     {
+        "alias": null,
         "description": "Rescued Flea Slab Cage (Flea)",
         "key": "SavedFleaSlabCage",
         "tooltip": "Splits after rescuing flea in Slab_Cell"
     },
     {
+        "alias": null,
         "description": "Rescued Flea Choral Chambers Wind (Flea)",
         "key": "SavedFleaChoralChambersWind",
         "tooltip": "Splits after rescuing flea in Song_11"
     },
     {
+        "alias": null,
         "description": "Rescued Flea Choral Chambers Cage (Flea)",
         "key": "SavedFleaChoralChambersCage",
         "tooltip": "Splits after rescuing flea in Song_14"
     },
     {
+        "alias": null,
         "description": "Rescued Flea Underworks Explosions (Flea)",
         "key": "SavedFleaUnderworksExplosions",
         "tooltip": "Splits after rescuing flea in Under_21"
     },
     {
+        "alias": null,
         "description": "Rescued Flea Underworks Wisp Thicket (Flea)",
         "key": "SavedFleaUnderworksWispThicket",
         "tooltip": "Splits after rescuing flea in Under_23"
     },
     {
+        "alias": null,
         "description": "Defeated Giant Flea (Flea)",
         "key": "SavedFleaGiantFlea",
         "tooltip": "Splits after defeating Giant Flea"
     },
     {
+        "alias": null,
         "description": "Met Vog (Flea)",
         "key": "SavedFleaVog",
         "tooltip": "Splits after talking to Vog"
     },
     {
+        "alias": null,
         "description": "Freed Kratt (Flea)",
         "key": "SavedFleaKratt",
         "tooltip": "Splits after freeing Kratt"
     },
     {
+        "alias": null,
         "description": "Putrified Ducts (Bellway)",
         "key": "PutrifiedDuctsStation",
         "tooltip": "Splits after unlocking Putrified Ducts Bellway"
     },
     {
+        "alias": null,
         "description": "Bellhart (Bellway)",
         "key": "BellhartStation",
         "tooltip": "Splits after unlocking Bellhart Bellway"
     },
     {
+        "alias": null,
         "description": "Far Fields (Bellway)",
         "key": "FarFieldsStation",
         "tooltip": "Splits after unlocking Far Fields Bellway"
     },
     {
+        "alias": null,
         "description": "Grand Bellway (Bellway)",
         "key": "GrandBellwayStation",
         "tooltip": "Splits after unlocking Grand Bellway"
     },
     {
+        "alias": null,
         "description": "Blasted Steps (Bellway)",
         "key": "BlastedStepsStation",
         "tooltip": "Splits after unlocking Blasted Steps Bellway"
     },
     {
+        "alias": null,
         "description": "Deep Docks (Bellway)",
         "key": "DeepDocksStation",
         "tooltip": "Splits after unlocking Deep Docks Bellway"
     },
     {
+        "alias": null,
         "description": "Greymoor (Bellway)",
         "key": "GreymoorStation",
         "tooltip": "Splits after unlocking Greymoor Bellway"
     },
     {
+        "alias": null,
         "description": "Mount Fay (Bellway)",
         "key": "MountFayStation",
         "tooltip": "Splits after unlocking Mount Fay Bellway"
     },
     {
+        "alias": null,
         "description": "Bilewater (Bellway)",
         "key": "BilewaterStation",
         "tooltip": "Splits after unlocking Bilewater Bellway"
     },
     {
+        "alias": null,
         "description": "Shellwood (Bellway)",
         "key": "ShellwoodStation",
         "tooltip": "Splits after unlocking Shellwood Bellway"
     },
     {
+        "alias": null,
         "description": "Choral Chambers (Ventrica)",
         "key": "ChoralChambersTube",
         "tooltip": "Splits after unlocking Choral Chambers Ventrica"
     },
     {
+        "alias": null,
         "description": "Underworks (Ventrica)",
         "key": "UnderworksTube",
         "tooltip": "Splits after unlocking Underworks Ventrica"
     },
     {
+        "alias": null,
         "description": "Grand Bellway (Ventrica)",
         "key": "CityBellwayTube",
         "tooltip": "Splits after unlocking Grand Bellway Ventrica"
     },
     {
+        "alias": null,
         "description": "High Halls (Ventrica)",
         "key": "HighHallsTube",
         "tooltip": "Splits after unlocking High Halls Ventrica"
     },
     {
+        "alias": null,
         "description": "Songclave (Ventrica)",
         "key": "SongclaveTube",
         "tooltip": "Splits after unlocking Songclave Ventrica"
     },
     {
+        "alias": null,
         "description": "Memorium (Ventrica)",
         "key": "MemoriumTube",
         "tooltip": "Splits after unlocking Memorium Ventrica"
     },
     {
+        "alias": null,
         "description": "Seen Shakra Bonebottom (NPC)",
         "key": "SeenShakraBonebottom",
         "tooltip": "Splits after seeing Shakra in Bonebottom"
     },
     {
+        "alias": null,
         "description": "Seen Shakra Marrow (NPC)",
         "key": "SeenShakraMarrow",
         "tooltip": "Splits after seeing Shakra in Marrow"
     },
     {
+        "alias": null,
         "description": "Seen Shakra Deep Docks (NPC)",
         "key": "SeenShakraDeepDocks",
         "tooltip": "Splits after seeing Shakra in Deep Docks"
     },
     {
+        "alias": null,
         "description": "Seen Shakra Far Fields (NPC)",
         "key": "SeenShakraFarFields",
         "tooltip": "Splits after seeing Shakra in Far Fields"
     },
     {
+        "alias": null,
         "description": "Seen Shakra Wormways (NPC)",
         "key": "SeenShakraWormways",
         "tooltip": "Splits after seeing Shakra in Wormways"
     },
     {
+        "alias": null,
         "description": "Seen Shakra Greymoor (NPC)",
         "key": "SeenShakraGreymoor",
         "tooltip": "Splits after seeing Shakra in Greymoor"
     },
     {
+        "alias": null,
         "description": "Seen Shakra Bellhart (NPC)",
         "key": "SeenShakraBellhart",
         "tooltip": "Splits after seeing Shakra in Bellhart"
     },
     {
+        "alias": null,
         "description": "Seen Shakra Shellwood (NPC)",
         "key": "SeenShakraShellwood",
         "tooltip": "Splits after seeing Shakra in Shellwood"
     },
     {
+        "alias": null,
         "description": "Seen Shakra Hunter's March (NPC)",
         "key": "SeenShakraHuntersMarch",
         "tooltip": "Splits after seeing Shakra in Hunter's March"
     },
     {
+        "alias": null,
         "description": "Seen Shakra Blasted Steps (NPC)",
         "key": "SeenShakraBlastedSteps",
         "tooltip": "Splits after seeing Shakra in Blasted Steps"
     },
     {
+        "alias": null,
         "description": "Seen Shakra Sinner's Road (NPC)",
         "key": "SeenShakraSinnersRoad",
         "tooltip": "Splits after seeing Shakra in Sinner's Road"
     },
     {
+        "alias": null,
         "description": "Seen Shakra Mount Fay (NPC)",
         "key": "SeenShakraMountFay",
         "tooltip": "Splits after seeing Shakra in Mount Fay"
     },
     {
+        "alias": null,
         "description": "Seen Shakra Bilewater (NPC)",
         "key": "SeenShakraBilewater",
         "tooltip": "Splits after seeing Shakra in Bilewater"
     },
     {
+        "alias": null,
         "description": "Seen Shakra Sands of Karak (NPC)",
         "key": "SeenShakraSandsOfKarak",
         "tooltip": "Splits after seeing Shakra in Sands of Karak"
     },
     {
+        "alias": null,
         "description": "Met Merchant Enclave (NPC)",
         "key": "MetJubilanaEnclave",
         "tooltip": "Splits after talking to Jubilana in Songclave"
     },
     {
+        "alias": null,
         "description": "Met Sherma Enclave (NPC)",
         "key": "MetShermaEnclave",
         "tooltip": "Splits after talking to Sherma in Songclave"
     },
     {
+        "alias": null,
         "description": "Unlock Prince Cage (Event)",
         "key": "UnlockedPrinceCage",
         "tooltip": "Splits when you unlock Green Prince's Cage in Sinner's Road"
     },
     {
+        "alias": null,
         "description": "Met Green Prince Cogwork (NPC)",
         "key": "GreenPrinceInVerdania",
         "tooltip": "Splits when you talk to Green Prince in Cogwork Dancer's arena"
     },
     {
+        "alias": null,
         "description": "Seen Fleatopia Empty (Event)",
         "key": "SeenFleatopiaEmpty",
         "tooltip": "Splits when you find Fleatopias location"
     },
     {
+        "alias": null,
         "description": "Faydown Cloak (Skill)",
         "key": "FaydownCloak",
         "tooltip": "Splits when you obtain Double Jump"
     },
     {
+        "alias": null,
         "description": "Silk Soar (Skill)",
         "key": "SilkSoar",
         "tooltip": "Splits when you obtain Super Jump"
     },
     {
+        "alias": null,
         "description": "Nyleth's Heart (Item)",
         "key": "CollectedHeartNyleth",
         "tooltip": "Splits when you obtain Nyleth's Heart"
     },
     {
+        "alias": null,
         "description": "Khann's Heart (Item)",
         "key": "CollectedHeartKhann",
         "tooltip": "Splits when you obtain Khann's Heart"
     },
     {
+        "alias": null,
         "description": "Karmelita's Heart (Item)",
         "key": "CollectedHeartKarmelita",
         "tooltip": "Splits when you obtain Karmelita's Heart"
     },
     {
+        "alias": null,
         "description": "Clover Dancer's Heart (Item)",
         "key": "CollectedHeartClover",
         "tooltip": "Split when you obtain Conjoined Heart"
     },
     {
+        "alias": null,
         "description": "Red Memory (Event)",
         "key": "CompletedRedMemory",
         "tooltip": "Splits on completing Red Memory"
     },
     {
+        "alias": null,
         "description": "Pavo Bellhome Key (NPC)",
         "key": "BellhouseKeyConversation",
         "tooltip": "Splits when obtaining Bellhome Key from Pavo"
