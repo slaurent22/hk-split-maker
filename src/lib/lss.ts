@@ -3,6 +3,7 @@ import { Game } from "../store/game-slice";
 import { createLiveSplitIconData } from "./image-util";
 import { SplitDefinition } from "./hollowknight-splits";
 import { splitsFunctions } from "./splits";
+// import DefaultLayout from "./default-layout.xml";
 
 export interface Config {
   startTriggeringAutosplit?: string;
@@ -313,6 +314,269 @@ export async function createSplitsXml(
       indent: "  ",
     }
   );
+}
+
+function makeAutoSplittingRuntimeComponent(
+  splitIds: Array<string>
+): Record<string, unknown> {
+  const splitList = [
+    {
+      Setting: [
+        { _attr: { id: "splits", type: "list" } },
+        ...splitIds.map((name) => ({
+          Setting: { _attr: { type: "string", value: name } },
+        })),
+      ],
+    },
+    ...splitIds.map((name, i) => ({
+      Setting: {
+        _attr: { id: `splits_${i}_item`, type: "string", value: name },
+      },
+    })),
+    {
+      Setting: [{ _attr: { id: "hit_counter", type: "bool" } }, "True"],
+    },
+    {
+      Setting: [{ _attr: { id: "splits_insert_0", type: "bool" } }, "False"],
+    },
+    ...splitIds.map((_, i) => ({
+      Setting: {
+        _attr: { id: `splits_${i}_action`, type: "string", value: "None" },
+      },
+    })),
+  ];
+
+  return {
+    Component: [
+      { Path: "LiveSplit.AutoSplittingRuntime.dll" },
+      {
+        Settings: [
+          { Version: "1.0" },
+          { ScriptPath: "C:\\silksong_autosplit_wasm_stable.wasm" },
+          { CustomSettings: splitList },
+        ],
+      },
+    ],
+  };
+}
+
+export function createLayoutXml(config: Config, game: Game): string {
+  if (game !== "silksong") {
+    throw new Error("layout generation only supported for silksong");
+  }
+  const layoutObj = [
+    {
+      Layout: [
+        { _attr: { version: "1.6.1" } },
+        { Mode: "Vertical" },
+        { X: "-807" },
+        { Y: "138" },
+        { VerticalWidth: "286" },
+        { VerticalHeight: "519" },
+        { HorizontalWidth: "-1" },
+        { HorizontalHeight: "-1" },
+        {
+          Settings: [
+            { TextColor: "FFFFFFFF" },
+            { BackgroundColor: "FF0F0F0F" },
+            { BackgroundColor2: "00000000" },
+            { ThinSeparatorsColor: "03FFFFFF" },
+            { SeparatorsColor: "24FFFFFF" },
+            { PersonalBestColor: "FF16A6FF" },
+            { AheadGainingTimeColor: "FF00CC36" },
+            { AheadLosingTimeColor: "FF52CC73" },
+            { BehindGainingTimeColor: "FFCC5C52" },
+            { BehindLosingTimeColor: "FFCC1200" },
+            { BestSegmentColor: "FFD8AF1F" },
+            { UseRainbowColor: "False" },
+            { NotRunningColor: "FFACACAC" },
+            { PausedColor: "FF7A7A7A" },
+            { TextOutlineColor: "00000000" },
+            { ShadowsColor: "80000000" },
+            {
+              TimesFont: {
+                _cdata:
+                  "AAEAAAD/////AQAAAAAAAAAMAgAAAFFTeXN0ZW0uRHJhd2luZywgVmVyc2lvbj00LjAuMC4wLCBDdWx0dXJlPW5ldXRyYWwsIFB1YmxpY0tleVRva2VuPWIwM2Y1ZjdmMTFkNTBhM2EFAQAAABNTeXN0ZW0uRHJhd2luZy5Gb250BAAAAAROYW1lBFNpemUFU3R5bGUEVW5pdAEABAQLGFN5c3RlbS5EcmF3aW5nLkZvbnRTdHlsZQIAAAAbU3lzdGVtLkRyYXdpbmcuR3JhcGhpY3NVbml0AgAAAAIAAAAGAwAAAAhTZWdvZSBVSQAAgEEF/P///xhTeXN0ZW0uRHJhd2luZy5Gb250U3R5bGUBAAAAB3ZhbHVlX18ACAIAAAABAAAABfv///8bU3lzdGVtLkRyYXdpbmcuR3JhcGhpY3NVbml0AQAAAAd2YWx1ZV9fAAgCAAAAAgAAAAs=",
+              },
+            },
+            {
+              TimerFont: {
+                _cdata:
+                  "AAEAAAD/////AQAAAAAAAAAMAgAAAFFTeXN0ZW0uRHJhd2luZywgVmVyc2lvbj00LjAuMC4wLCBDdWx0dXJlPW5ldXRyYWwsIFB1YmxpY0tleVRva2VuPWIwM2Y1ZjdmMTFkNTBhM2EFAQAAABNTeXN0ZW0uRHJhd2luZy5Gb250BAAAAAROYW1lBFNpemUFU3R5bGUEVW5pdAEABAQLGFN5c3RlbS5EcmF3aW5nLkZvbnRTdHlsZQIAAAAbU3lzdGVtLkRyYXdpbmcuR3JhcGhpY3NVbml0AgAAAAIAAAAGAwAAAAdDYWxpYnJpAAAvQgX8////GFN5c3RlbS5EcmF3aW5nLkZvbnRTdHlsZQEAAAAHdmFsdWVfXwAIAgAAAAEAAAAF+////xtTeXN0ZW0uRHJhd2luZy5HcmFwaGljc1VuaXQBAAAAB3ZhbHVlX18ACAIAAAACAAAACw==",
+              },
+            },
+            {
+              TextFont: {
+                _cdata:
+                  "AAEAAAD/////AQAAAAAAAAAMAgAAAFFTeXN0ZW0uRHJhd2luZywgVmVyc2lvbj00LjAuMC4wLCBDdWx0dXJlPW5ldXRyYWwsIFB1YmxpY0tleVRva2VuPWIwM2Y1ZjdmMTFkNTBhM2EFAQAAABNTeXN0ZW0uRHJhd2luZy5Gb250BAAAAAROYW1lBFNpemUFU3R5bGUEVW5pdAEABAQLGFN5c3RlbS5EcmF3aW5nLkZvbnRTdHlsZQIAAAAbU3lzdGVtLkRyYXdpbmcuR3JhcGhpY3NVbml0AgAAAAIAAAAGAwAAAAhTZWdvZSBVSQAAgEEF/P///xhTeXN0ZW0uRHJhd2luZy5Gb250U3R5bGUBAAAAB3ZhbHVlX18ACAIAAAAAAAAABfv///8bU3lzdGVtLkRyYXdpbmcuR3JhcGhpY3NVbml0AQAAAAd2YWx1ZV9fAAgCAAAAAgAAAAs=",
+              },
+            },
+            { AlwaysOnTop: "True" },
+            { ShowBestSegments: "True" },
+            { AntiAliasing: "True" },
+            { DropShadows: "True" },
+            { BackgroundType: "SolidColor" },
+            { BackgroundImage: {} },
+            { ImageOpacity: "1" },
+            { ImageBlur: "0" },
+            { Opacity: "1" },
+            { MousePassThroughWhileRunning: "False" },
+          ],
+        },
+        {
+          Components: [
+            makeAutoSplittingRuntimeComponent(config.splitIds),
+            {
+              Component: [
+                { Path: "LiveSplit.Title.dll" },
+                {
+                  Settings: [
+                    { Version: "1.7.3" },
+                    { ShowGameName: "True" },
+                    { ShowCategoryName: "True" },
+                    { ShowAttemptCount: "True" },
+                    { ShowFinishedRunsCount: "False" },
+                    { OverrideTitleFont: "False" },
+                    { OverrideTitleColor: "False" },
+                    {
+                      TitleFont: {
+                        _cdata:
+                          "AAEAAAD/////AQAAAAAAAAAMAgAAAFFTeXN0ZW0uRHJhd2luZywgVmVyc2lvbj00LjAuMC4wLCBDdWx0dXJlPW5ldXRyYWwsIFB1YmxpY0tleVRva2VuPWIwM2Y1ZjdmMTFkNTBhM2EFAQAAABNTeXN0ZW0uRHJhd2luZy5Gb250BAAAAAROYW1lBFNpemUFU3R5bGUEVW5pdAEABAQLGFN5c3RlbS5EcmF3aW5nLkZvbnRTdHlsZQIAAAAbU3lzdGVtLkRyYXdpbmcuR3JhcGhpY3NVbml0AgAAAAIAAAAGAwAAAAhTZWdvZSBVSQAAgEEF/P///xhTeXN0ZW0uRHJhd2luZy5Gb250U3R5bGUBAAAAB3ZhbHVlX18ACAIAAAAAAAAABfv///8bU3lzdGVtLkRyYXdpbmcuR3JhcGhpY3NVbml0AQAAAAd2YWx1ZV9fAAgCAAAAAgAAAAs=",
+                      },
+                    },
+                    { SingleLine: "False" },
+                    { TitleColor: "FFFFFFFF" },
+                    { BackgroundColor: "FF2A2A2A" },
+                    { BackgroundColor2: "FF131313" },
+                    { BackgroundGradient: "Vertical" },
+                    { DisplayGameIcon: "True" },
+                    { ShowRegion: "False" },
+                    { ShowPlatform: "False" },
+                    { ShowVariables: "True" },
+                    { TextAlignment: "0" },
+                  ],
+                },
+              ],
+            },
+            {
+              Component: [
+                { Path: "LiveSplit.Splits.dll" },
+                {
+                  Settings: [
+                    { Version: "1.6" },
+                    { CurrentSplitTopColor: "FF3373F4" },
+                    { CurrentSplitBottomColor: "FF153574" },
+                    { VisualSplitCount: "16" },
+                    { SplitPreviewCount: "1" },
+                    { DisplayIcons: "True" },
+                    { ShowThinSeparators: "True" },
+                    { AlwaysShowLastSplit: "True" },
+                    { SplitWidth: "20" },
+                    { SplitTimesAccuracy: "Seconds" },
+                    { AutomaticAbbreviations: "False" },
+                    { BeforeNamesColor: "FFFFFFFF" },
+                    { CurrentNamesColor: "FFFFFFFF" },
+                    { AfterNamesColor: "FFFFFFFF" },
+                    { OverrideTextColor: "False" },
+                    { BeforeTimesColor: "FFFFFFFF" },
+                    { CurrentTimesColor: "FFFFFFFF" },
+                    { AfterTimesColor: "FFFFFFFF" },
+                    { OverrideTimesColor: "False" },
+                    { ShowBlankSplits: "True" },
+                    { LockLastSplit: "True" },
+                    { IconSize: "24" },
+                    { IconShadows: "True" },
+                    { SplitHeight: "3.6" },
+                    { CurrentSplitGradient: "Vertical" },
+                    { BackgroundColor: "00FFFFFF" },
+                    { BackgroundColor2: "01FFFFFF" },
+                    { BackgroundGradient: "Alternating" },
+                    { SeparatorLastSplit: "True" },
+                    { DeltasAccuracy: "Tenths" },
+                    { DropDecimals: "True" },
+                    { OverrideDeltasColor: "False" },
+                    { DeltasColor: "FFFFFFFF" },
+                    { Display2Rows: "False" },
+                    { ShowColumnLabels: "False" },
+                    { LabelsColor: "FFFFFFFF" },
+                    {
+                      Columns: [
+                        {
+                          Settings: [
+                            { Version: "1.5" },
+                            { Name: "+/-" },
+                            { Type: "Delta" },
+                            { Comparison: "Current Comparison" },
+                            { TimingMethod: "Current Timing Method" },
+                          ],
+                        },
+                        {
+                          Settings: [
+                            { Version: "1.5" },
+                            { Name: "Time" },
+                            { Type: "SplitTime" },
+                            { Comparison: "Current Comparison" },
+                            { TimingMethod: "Current Timing Method" },
+                          ],
+                        },
+                      ],
+                    },
+                  ],
+                },
+              ],
+            },
+            {
+              Component: [
+                { Path: "LiveSplit.Timer.dll" },
+                {
+                  Settings: [
+                    { Version: "1.5" },
+                    { TimerHeight: "69" },
+                    { TimerWidth: "225" },
+                    { TimerFormat: "1.23" },
+                    { OverrideSplitColors: "False" },
+                    { ShowGradient: "True" },
+                    { TimerColor: "FFAAAAAA" },
+                    { BackgroundColor: "00000000" },
+                    { BackgroundColor2: "FF222222" },
+                    { BackgroundGradient: "Plain" },
+                    { CenterTimer: "False" },
+                    { TimingMethod: "Current Timing Method" },
+                    { DecimalsSize: "35" },
+                  ],
+                },
+              ],
+            },
+            {
+              Component: [
+                { Path: "LiveSplit.PreviousSegment.dll" },
+                {
+                  Settings: [
+                    { Version: "1.6" },
+                    { TextColor: "FFFFFFFF" },
+                    { OverrideTextColor: "False" },
+                    { BackgroundColor: "FF1C1C1C" },
+                    { BackgroundColor2: "FF0D0D0D" },
+                    { BackgroundGradient: "Vertical" },
+                    { DeltaAccuracy: "Tenths" },
+                    { DropDecimals: "True" },
+                    { Comparison: "Current Comparison" },
+                    { Display2Rows: "False" },
+                    { ShowPossibleTimeSave: "False" },
+                    { TimeSaveAccuracy: "Tenths" },
+                  ],
+                },
+              ],
+            },
+          ],
+        },
+      ],
+    },
+  ];
+  return xml(layoutObj, {
+    declaration: true,
+    indent: "  ",
+  });
 }
 
 function transformNameOverrideForImport(

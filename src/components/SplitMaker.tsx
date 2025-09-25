@@ -17,6 +17,7 @@ import {
   createSplitsXml,
   importSplitsXml,
   buildSplitsFileName,
+  createLayoutXml,
 } from "../lib/lss";
 import HKCategoryAnyPercent from "../asset/hollowknight/categories/any.json";
 import SSCategoryAnyPercent from "../asset/silksong/categories/any.json";
@@ -30,10 +31,10 @@ const SplitOutputEditor = lazy(() => import("./SplitOutputEditor"));
 
 interface AppState {
   configInput: string;
-  splitOutput: string;
   categories: Record<string, Array<CategoryDefinition>>;
   categoryName?: string;
   shareButtonDisabled: boolean;
+  generateLayout: boolean;
 }
 
 export default function SplitMaker(): ReactElement {
@@ -47,11 +48,14 @@ export default function SplitMaker(): ReactElement {
   const initialConfig = config ? JSON.parse(atob(config)) : defaultCategory;
   const [state, setState] = useState<AppState>({
     configInput: JSON.stringify(initialConfig, null, 4),
-    splitOutput: "",
     categoryName: builtin,
     categories: getCategoryDirectory(game),
     shareButtonDisabled: true,
+    generateLayout: game === "silksong",
   });
+
+  const [splitOutput, setSplitOutput] = useState("");
+  const [layoutOutput, setLayoutOutput] = useState("");
 
   useEffect(() => {
     if (window.location.hash) {
@@ -81,10 +85,11 @@ export default function SplitMaker(): ReactElement {
   };
 
   const onSplitOutputChange = (value: string | undefined) => {
-    setState({
-      ...state,
-      splitOutput: value ?? "",
-    });
+    setSplitOutput(value ?? "");
+  };
+
+  const onLayoutOutputChange = (value: string | undefined) => {
+    setLayoutOutput(value ?? "");
   };
 
   const onShare = () => {
@@ -182,6 +187,7 @@ export default function SplitMaker(): ReactElement {
       return;
     }
     let output = "";
+    let newLayout = "";
 
     const submitButton = document.getElementById(
       "submit-button"
@@ -191,6 +197,9 @@ export default function SplitMaker(): ReactElement {
     try {
       // todo: runtime schema validation
       output = await createSplitsXml(configObject, game);
+      if (state.generateLayout) {
+        newLayout = createLayoutXml(configObject, game);
+      }
     } catch (e) {
       console.error(e);
       alert(
@@ -201,15 +210,12 @@ export default function SplitMaker(): ReactElement {
       submitButton.disabled = false;
     }
 
-    setState({
-      ...state,
-      splitOutput: output,
-    });
+    setSplitOutput(output);
+    setLayoutOutput(newLayout);
   };
 
   const onDownload = (): void => {
-    const output = state.splitOutput;
-    const outBlob = new Blob([output]);
+    const outBlob = new Blob([splitOutput]);
 
     // Guess a good file name.
     // Can be inaccurate if a new config has been entered but not processed yet.
@@ -221,6 +227,11 @@ export default function SplitMaker(): ReactElement {
       splitName = "splits";
     }
     saveAs(outBlob, `${splitName}.lss`);
+
+    if (state.generateLayout && layoutOutput.length > 0) {
+      const layoutOutBlob = new Blob([layoutOutput]);
+      saveAs(layoutOutBlob, `${splitName}.lsl`);
+    }
   };
 
   return (
@@ -275,15 +286,42 @@ export default function SplitMaker(): ReactElement {
               id="download-button"
               text="Download"
               onClick={onDownload}
-              disabled={state.splitOutput.length === 0}
+              disabled={splitOutput.length === 0}
             />
           </div>
           <Suspense fallback={<div>Loading split output editor...</div>}>
             <SplitOutputEditor
-              defaultValue={state.splitOutput}
+              defaultValue={splitOutput}
               onChange={onSplitOutputChange}
             />
           </Suspense>
+          {game === "silksong" && (
+            <>
+              <h3>Output Layout File</h3>
+              <div>
+                <input
+                  id="generate-lss-toggle"
+                  type="checkbox"
+                  checked={state.generateLayout}
+                  onChange={(e) => {
+                    setState({ ...state, generateLayout: e.target.checked });
+                    if (!e.target.checked) {
+                      setLayoutOutput("");
+                    }
+                  }}
+                />
+                <label htmlFor="generate-lss-toggle">
+                  Generate layout (lss) file
+                </label>
+              </div>
+              <Suspense fallback={<div>Loading layout output editor...</div>}>
+                <SplitOutputEditor
+                  defaultValue={layoutOutput}
+                  onChange={onLayoutOutputChange}
+                />
+              </Suspense>
+            </>
+          )}
         </div>
       </div>
     </div>

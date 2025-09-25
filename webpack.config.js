@@ -67,6 +67,14 @@ module.exports = {
         ],
       },
       {
+        test: /\.xml$/,
+        use: [
+          {
+            loader: path.resolve("loaders/text-loader.js"),
+          },
+        ],
+      },
+      {
         test: /\.css$/i,
         use: ["style-loader", "css-loader"],
       },
