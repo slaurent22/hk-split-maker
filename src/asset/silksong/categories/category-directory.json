@@ -11,6 +11,11 @@
             "data": {}
         },
         {
+            "fileName": "judgement",
+            "displayName": "Judgement",
+            "data": {}
+        },
+        {
             "fileName": "low",
             "displayName": "Low%",
             "data": {}
