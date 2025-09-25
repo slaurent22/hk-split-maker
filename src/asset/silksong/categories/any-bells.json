@@ -1,0 +1,36 @@
+{
+    "categoryName": "Any%",
+    "splitIds": [
+        "StartNewGame",
+        "MossMother",
+        "SilkSpear",
+        "BellBeast",
+        "MarrowBell",
+        "SwiftStep",
+        "Lace1",
+        "DeepDocksBell",
+        "DriftersCloak",
+        "GreymoorBell",
+        "Moorwing",
+        "ClingGrip",
+        "Widow",
+        "NeedleUpgrade1",
+        "BellhartBell",
+        "ShellwoodBell",
+        "LastJudge",
+        "CogworkDancers",
+        "Trobbio",
+        "VaultkeepersMelody",
+        "ArchitectsMelody",
+        "ConductorsMelody",
+        "Lace2",
+        "EndingSplit"
+    ],
+    "names": {
+        "EndingSplit": "Grand Mother Silk"
+    },
+    "gameName": "Hollow Knight: Silksong",
+    "variables": {
+        "Any% Glitch": "No Major Glitches"
+    }
+}

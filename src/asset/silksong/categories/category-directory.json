@@ -1,8 +1,13 @@
 {
     "Main": [
         {
-            "fileName": "any",
-            "displayName": "Any%",
+            "fileName": "any-bells",
+            "displayName": "Any% (Bells Route)",
+            "data": {}
+        },
+        {
+            "fileName": "any-mist",
+            "displayName": "Any% (Mist Route)",
             "data": {}
         },
         {

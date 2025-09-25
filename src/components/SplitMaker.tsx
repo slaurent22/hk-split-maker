@@ -20,7 +20,7 @@ import {
   createLayoutXml,
 } from "../lib/lss";
 import HKCategoryAnyPercent from "../asset/hollowknight/categories/any.json";
-import SSCategoryAnyPercent from "../asset/silksong/categories/any.json";
+import SSCategoryAnyPercent from "../asset/silksong/categories/any-bells.json";
 import { Game } from "../store/game-slice";
 import ArrowButton from "./ArrowButton";
 import ShareButton from "./ShareButton";
