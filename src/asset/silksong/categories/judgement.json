@@ -1,0 +1,25 @@
+{
+    "categoryName": "Judgement",
+    "splitIds": [
+        "StartNewGame",
+        "MossMother",
+        "SilkSpear",
+        "BellBeast",
+        "MarrowBell",
+        "SwiftStep",
+        "Lace1",
+        "DeepDocksBell",
+        "DriftersCloak",
+        "GreymoorBell",
+        "Moorwing",
+        "ClingGrip",
+        "Widow",
+        "ShellwoodBell",
+        "LastJudge",
+        "Act2Started"
+    ],
+    "gameName": "Hollow Knight: Silksong",
+    "variables": {
+        "Judgement Glitch": "No Major Glitches"
+    }
+}
