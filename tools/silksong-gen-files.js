@@ -255,14 +255,14 @@ function createIconImports() {
   }
 
   // non-split icons
-  // output += `import TheHollowKnight from "./Achievement/TheHollowKnight.png";\n`;
+  output += `import SisteroftheVoid from "./Achievement/SisteroftheVoid.png";\n`;
 
   // console.log(output);
   output += "export default {\n";
   for (const { id } of Splits) {
     output += `  ${id},\n`;
   }
-  //   output += `  TheHollowKnight,\n`;
+  output += `  SisteroftheVoid,\n`;
   output += "};\n";
 
   // console.log(output);

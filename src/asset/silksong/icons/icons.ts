@@ -129,6 +129,7 @@ import CollectedHeartKarmelita from "./Item/HuntersHeart.png";
 import CollectedHeartClover from "./Item/ConjoinedHeart.png";
 import CompletedRedMemory from "./Item/Everbloom.png";
 import BellhouseKeyConversation from "./Item/BellhomeKey.png";
+import SisteroftheVoid from "./Achievement/SisteroftheVoid.png";
 export default {
   ManualSplit,
   StartNewGame,
@@ -259,4 +260,5 @@ export default {
   CollectedHeartClover,
   CompletedRedMemory,
   BellhouseKeyConversation,
+  SisteroftheVoid,
 };

@@ -4,6 +4,11 @@
             "fileName": "any",
             "displayName": "Any%",
             "data": {}
+        },
+        {
+            "fileName": "te",
+            "displayName": "True Ending",
+            "data": {}
         }
     ],
     "Category Extensions": [
