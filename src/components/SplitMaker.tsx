@@ -29,14 +29,6 @@ const CategorySelect = lazy(() => import("./CategorySelect"));
 const SplitConfigEditor = lazy(() => import("./SplitConfigEditor"));
 const SplitOutputEditor = lazy(() => import("./SplitOutputEditor"));
 
-interface AppState {
-  configInput: string;
-  categories: Record<string, Array<CategoryDefinition>>;
-  categoryName?: string;
-  shareButtonDisabled: boolean;
-  generateLayout: boolean;
-}
-
 export default function SplitMaker(): ReactElement {
   const game = useCurrentGame();
   const defaultCategory =
@@ -46,13 +38,13 @@ export default function SplitMaker(): ReactElement {
   const config = searchParams.get("config") ?? undefined;
   // eslint-disable-next-line @typescript-eslint/no-unsafe-assignment
   const initialConfig = config ? JSON.parse(atob(config)) : defaultCategory;
-  const [state, setState] = useState<AppState>({
-    configInput: JSON.stringify(initialConfig, null, 4),
-    categoryName: builtin,
-    categories: getCategoryDirectory(game),
-    shareButtonDisabled: true,
-    generateLayout: game === "silksong",
-  });
+  const [configInput, setConfigInput] = useState(
+    JSON.stringify(initialConfig, null, 4)
+  );
+  const [categoryName, setCategoryName] = useState(builtin);
+  const categories = getCategoryDirectory(game);
+  const [shareButtonDisabled, setShareButtonDisabled] = useState(true);
+  const [generateLayout, setGenerateLayout] = useState(game === "silksong");
 
   const [splitOutput, setSplitOutput] = useState("");
   const [layoutOutput, setLayoutOutput] = useState("");
@@ -66,8 +58,8 @@ export default function SplitMaker(): ReactElement {
     }
   }, [window.location.hash]);
 
-  const onUpdateCategoryName = (categoryName: string) => {
-    setSearchParams({ game, builtin: categoryName });
+  const onUpdateCategoryName = (newCategoryName: string) => {
+    setSearchParams({ game, builtin: newCategoryName });
   };
 
   const onConfigInputChange = (
@@ -77,11 +69,8 @@ export default function SplitMaker(): ReactElement {
     if (!loadedFromBuiltin) {
       setSearchParams({ game });
     }
-    setState({
-      ...state,
-      configInput: value ?? "",
-      shareButtonDisabled: loadedFromBuiltin,
-    });
+    setConfigInput(value ?? "");
+    setShareButtonDisabled(loadedFromBuiltin);
   };
 
   const onSplitOutputChange = (value: string | undefined) => {
@@ -97,7 +86,7 @@ export default function SplitMaker(): ReactElement {
       "This will create a disgusting URL. Only use for custom configurations. Proceed?"
     );
     if (confirmed) {
-      const condensed = JSON.stringify(JSON.parse(state.configInput));
+      const condensed = JSON.stringify(JSON.parse(configInput));
       setSearchParams({
         game,
         config: btoa(condensed),
@@ -106,43 +95,37 @@ export default function SplitMaker(): ReactElement {
     }
   };
 
-  const getCategoryDefinition = (categoryName: string) => {
-    return Object.values(state.categories)
+  const getCategoryDefinition = (targetCategoryName: string) => {
+    return Object.values(categories)
       .flat()
       .find((category) => {
-        return category.fileName === categoryName;
+        return category.fileName === targetCategoryName;
       });
   };
 
   useEffect(() => {
     void (async () => {
-      if (state.categoryName && getCategoryDefinition(state.categoryName)) {
-        const editorContent = await getCategoryConfigJSON(
-          state.categoryName,
-          game
-        );
+      if (categoryName && getCategoryDefinition(categoryName)) {
+        const editorContent = await getCategoryConfigJSON(categoryName, game);
         onConfigInputChange(editorContent, true);
       }
     })();
-  }, [state.categoryName]);
+  }, [categoryName]);
 
   const onCategorySelect = (newValue: CategoryDefinition | null) => {
     if (newValue) {
-      setState({
-        ...state,
-        categoryName: newValue.fileName,
-      });
+      setCategoryName(newValue.fileName);
     }
   };
 
   useEffect(() => {
-    if (state.categoryName) {
-      onUpdateCategoryName(state.categoryName);
+    if (categoryName) {
+      onUpdateCategoryName(categoryName);
     }
-  }, [state.categoryName]);
+  }, [categoryName]);
 
   const parseConfigInput = () => {
-    return JSON5.parse<Config>(state.configInput);
+    return JSON5.parse<Config>(configInput);
   };
 
   const onImportButton = () => {
@@ -161,10 +144,7 @@ export default function SplitMaker(): ReactElement {
       if (typeof fileContents === "string") {
         try {
           const jsonConfig = importSplitsXml(fileContents, currentGame);
-          setState({
-            ...state,
-            configInput: JSON.stringify(jsonConfig, null, 4),
-          });
+          setConfigInput(JSON.stringify(jsonConfig, null, 4));
         } catch (e) {
           console.error(e);
           alert(
@@ -197,7 +177,7 @@ export default function SplitMaker(): ReactElement {
     try {
       // todo: runtime schema validation
       output = await createSplitsXml(configObject, game);
-      if (state.generateLayout) {
+      if (generateLayout) {
         newLayout = createLayoutXml(configObject, game);
       }
     } catch (e) {
@@ -228,7 +208,7 @@ export default function SplitMaker(): ReactElement {
     }
     saveAs(outBlob, `${splitName}.lss`);
 
-    if (state.generateLayout && layoutOutput.length > 0) {
+    if (generateLayout && layoutOutput.length > 0) {
       const layoutOutBlob = new Blob([layoutOutput]);
       saveAs(layoutOutBlob, `${splitName}.lsl`);
     }
@@ -259,20 +239,20 @@ export default function SplitMaker(): ReactElement {
             <ShareButton
               id="share-button"
               onClick={onShare}
-              disabled={state.shareButtonDisabled}
+              disabled={shareButtonDisabled}
             />
           </div>
           <Suspense fallback={<div>Loading category select...</div>}>
             <CategorySelect
               id="categories"
               onChange={onCategorySelect}
-              data={state.categories}
+              data={categories}
               defaultValue={getCategoryDefinition(builtin ?? "") ?? null}
             />
           </Suspense>
           <Suspense fallback={<div>Loading split config editor...</div>}>
             <SplitConfigEditor
-              defaultValue={state.configInput}
+              defaultValue={configInput}
               onChange={onConfigInputChange}
             />
           </Suspense>
@@ -302,9 +282,9 @@ export default function SplitMaker(): ReactElement {
                 <input
                   id="generate-lss-toggle"
                   type="checkbox"
-                  checked={state.generateLayout}
+                  checked={generateLayout}
                   onChange={(e) => {
-                    setState({ ...state, generateLayout: e.target.checked });
+                    setGenerateLayout(e.target.checked);
                     if (!e.target.checked) {
                       setLayoutOutput("");
                     }
