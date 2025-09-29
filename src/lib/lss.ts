@@ -369,8 +369,8 @@ export function createLayoutXml(config: Config, game: Game): string {
       Layout: [
         { _attr: { version: "1.6.1" } },
         { Mode: "Vertical" },
-        { X: "-807" },
-        { Y: "138" },
+        { X: "0" },
+        { Y: "0" },
         { VerticalWidth: "286" },
         { VerticalHeight: "519" },
         { HorizontalWidth: "-1" },
