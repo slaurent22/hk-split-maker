@@ -118,6 +118,16 @@ function getMetadataNode(config: Config): xml.XmlObject {
   };
 }
 
+const SILKSONG_SCRIPT_NAME_NODE = {
+  Setting: {
+    _attr: {
+      id: "script_name",
+      type: "string",
+      value: "silksong_autosplit_wasm",
+    },
+  },
+};
+
 export async function createSplitsXml(
   config: Config,
   game: Game
@@ -279,6 +289,7 @@ export async function createSplitsXml(
         { Version: "1.0" },
         {
           CustomSettings: [
+            SILKSONG_SCRIPT_NAME_NODE,
             {
               Setting: [
                 { _attr: { id: "splits", type: "list" } },
@@ -353,7 +364,7 @@ function makeAutoSplittingRuntimeComponent(
         Settings: [
           { Version: "1.0" },
           { ScriptPath: "C:\\silksong_autosplit_wasm_stable.wasm" },
-          { CustomSettings: splitList },
+          { CustomSettings: [SILKSONG_SCRIPT_NAME_NODE, ...splitList] },
         ],
       },
     ],
