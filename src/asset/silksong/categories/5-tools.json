@@ -20,6 +20,15 @@
             "Magnetite Brooch (Manual Split)"
         ]
     },
+    "icons": {
+        "ManualSplit": [
+            "Compass",
+            "DruidsEye",
+            "StraightPin",
+            "ShardPendant",
+            "MagnetiteBrooch"
+        ]
+    },
     "gameName": "Hollow Knight: Silksong Category Extensions",
     "variables": {
         "5 Tools Glitch": "No Major Glitches"

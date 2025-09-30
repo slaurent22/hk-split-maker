@@ -159,6 +159,11 @@ import AbyssEscape from "./Event/Act3Started.png";
 import BallowMoved from "./NPC/Ballow.png";
 import Act3Started from "./Event/Act3Started.png";
 import SisteroftheVoid from "./Achievement/SisteroftheVoid.png";
+import Compass from "./Tool/Compass.png";
+import DruidsEye from "./Tool/DruidsEye.png";
+import MagnetiteBrooch from "./Tool/MagnetiteBrooch.png";
+import ShardPendant from "./Tool/ShardPendant.png";
+import StraightPin from "./Tool/StraightPin.png";
 export default {
   ManualSplit,
   StartNewGame,
@@ -319,4 +324,9 @@ export default {
   BallowMoved,
   Act3Started,
   SisteroftheVoid,
+  Compass,
+  DruidsEye,
+  MagnetiteBrooch,
+  ShardPendant,
+  StraightPin,
 };

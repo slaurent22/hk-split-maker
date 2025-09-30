@@ -297,6 +297,11 @@ function createIconImports() {
 
   // non-split icons
   output += `import SisteroftheVoid from "./Achievement/SisteroftheVoid.png";\n`;
+  output += `import Compass from "./Tool/Compass.png";\n`;
+  output += `import DruidsEye from "./Tool/DruidsEye.png";\n`;
+  output += `import MagnetiteBrooch from "./Tool/MagnetiteBrooch.png";\n`;
+  output += `import ShardPendant from "./Tool/ShardPendant.png";\n`;
+  output += `import StraightPin from "./Tool/StraightPin.png";\n`;
 
   // console.log(output);
   output += "export default {\n";
@@ -304,6 +309,11 @@ function createIconImports() {
     output += `  ${id},\n`;
   }
   output += `  SisteroftheVoid,\n`;
+  output += `  Compass,\n`;
+  output += `  DruidsEye,\n`;
+  output += `  MagnetiteBrooch,\n`;
+  output += `  ShardPendant,\n`;
+  output += `  StraightPin,\n`;
   output += "};\n";
 
   // console.log(output);
