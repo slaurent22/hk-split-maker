@@ -260,6 +260,9 @@ export default function SplitMaker(): ReactElement {
       </div>
       <div id="output-section" className="side">
         <h2>Output Splits File</h2>
+        {game === "silksong" && (
+          <h3>Ensure you have autosplitter version 0.1.13 or later</h3>
+        )}
         <div className="output-container">
           <div className="row">
             <ArrowButton
@@ -277,7 +280,7 @@ export default function SplitMaker(): ReactElement {
           </Suspense>
           {game === "silksong" && (
             <>
-              <h3>Output Layout File</h3>
+              <h2>Output Layout File</h2>
               <div className="layout-instructions">
                 <input
                   id="generate-lss-toggle"
