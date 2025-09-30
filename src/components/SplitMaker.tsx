@@ -17,7 +17,6 @@ import {
   createSplitsXml,
   importSplitsXml,
   buildSplitsFileName,
-  createLayoutXml,
 } from "../lib/lss";
 import HKCategoryAnyPercent from "../asset/hollowknight/categories/any.json";
 import SSCategoryAnyPercent from "../asset/silksong/categories/any-bells.json";
@@ -44,10 +43,8 @@ export default function SplitMaker(): ReactElement {
   const [categoryName, setCategoryName] = useState(builtin);
   const categories = getCategoryDirectory(game);
   const [shareButtonDisabled, setShareButtonDisabled] = useState(true);
-  const [generateLayout, setGenerateLayout] = useState(game === "silksong");
 
   const [splitOutput, setSplitOutput] = useState("");
-  const [layoutOutput, setLayoutOutput] = useState("");
 
   useEffect(() => {
     if (window.location.hash) {
@@ -75,10 +72,6 @@ export default function SplitMaker(): ReactElement {
 
   const onSplitOutputChange = (value: string | undefined) => {
     setSplitOutput(value ?? "");
-  };
-
-  const onLayoutOutputChange = (value: string | undefined) => {
-    setLayoutOutput(value ?? "");
   };
 
   const onShare = () => {
@@ -167,7 +160,6 @@ export default function SplitMaker(): ReactElement {
       return;
     }
     let output = "";
-    let newLayout = "";
 
     const submitButton = document.getElementById(
       "submit-button"
@@ -177,9 +169,6 @@ export default function SplitMaker(): ReactElement {
     try {
       // todo: runtime schema validation
       output = await createSplitsXml(configObject, game);
-      if (generateLayout) {
-        newLayout = createLayoutXml(configObject, game);
-      }
     } catch (e) {
       console.error(e);
       alert(
@@ -191,7 +180,6 @@ export default function SplitMaker(): ReactElement {
     }
 
     setSplitOutput(output);
-    setLayoutOutput(newLayout);
   };
 
   const onDownload = (): void => {
@@ -207,11 +195,6 @@ export default function SplitMaker(): ReactElement {
       splitName = "splits";
     }
     saveAs(outBlob, `${splitName}.lss`);
-
-    if (generateLayout && layoutOutput.length > 0) {
-      const layoutOutBlob = new Blob([layoutOutput]);
-      saveAs(layoutOutBlob, `${splitName}.lsl`);
-    }
   };
 
   return (
@@ -260,19 +243,6 @@ export default function SplitMaker(): ReactElement {
       </div>
       <div id="output-section" className="side">
         <h2>Output Splits File</h2>
-        {game === "silksong" && (
-          <h3>
-            Ensure you have{" "}
-            <a
-              target="_blank"
-              rel="noreferrer"
-              href="https://github.com/AlexKnauth/silksong-autosplit-wasm/releases/latest"
-            >
-              autosplitter
-            </a>{" "}
-            version 0.1.13 or later
-          </h3>
-        )}
         <div className="output-container">
           <div className="row">
             <ArrowButton
@@ -288,38 +258,6 @@ export default function SplitMaker(): ReactElement {
               onChange={onSplitOutputChange}
             />
           </Suspense>
-          {game === "silksong" && (
-            <>
-              <h2>Output Layout File</h2>
-              <div className="layout-instructions">
-                <input
-                  id="generate-lss-toggle"
-                  type="checkbox"
-                  checked={generateLayout}
-                  onChange={(e) => {
-                    setGenerateLayout(e.target.checked);
-                    if (!e.target.checked) {
-                      setLayoutOutput("");
-                    }
-                  }}
-                />
-                <label htmlFor="generate-lss-toggle">
-                  Generate layout (lsl) file
-                </label>
-              </div>
-              <div className="layout-instructions">
-                Assumes <code>C:{"\\"}silksong_autosplit_wasm_stable.wasm</code>
-                . After generating, edit line 46 below before downloading to
-                change this location.
-              </div>
-              <Suspense fallback={<div>Loading layout output editor...</div>}>
-                <SplitOutputEditor
-                  defaultValue={layoutOutput}
-                  onChange={onLayoutOutputChange}
-                />
-              </Suspense>
-            </>
-          )}
         </div>
       </div>
     </div>
