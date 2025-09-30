@@ -58,6 +58,7 @@ function getUrl(qualifier, id) {
     case "StartNewGame":
     case "PlayerDeath":
     case "AnyTransition":
+    case "Act1Start":
       return getUrl("Misc", "Hornet");
 
     // Menu
@@ -70,6 +71,7 @@ function getUrl(qualifier, id) {
     case "GreymoorBell":
     case "ShellwoodBell":
     case "BellhartBell":
+    case "SongclaveBell":
       return getUrl("Misc", "Bell");
 
     // Skill Transition
@@ -104,6 +106,8 @@ function getUrl(qualifier, id) {
       return getUrl("Enemy", "Phacia");
     case "EnterBellhart":
       return getUrl("Enemy", "Furm");
+    case "EnterFarFields":
+      return getUrl("Enemy", "Fertid");
 
     // Boss Transition
     case "MossMotherTrans":
@@ -141,10 +145,17 @@ function getUrl(qualifier, id) {
     case "NeedleUpgrade4":
       return getUrl("Item", "Needle4");
 
-    // Lace
+    // Boss
     case "Lace1":
     case "Lace2":
       return getUrl("Boss", "Lace");
+    case "Conchflies1":
+      return getUrl("Boss", "Conchfly");
+    case "SavageBeastfly1":
+    case "SavageBeastfly2":
+      return getUrl("Boss", "SavageBeastfly");
+    case "SkullTyrant1":
+      return getUrl("Boss", "SkullTyrant");
 
     // Flea
     case "SavedFleaHuntersMarch":
@@ -172,7 +183,7 @@ function getUrl(qualifier, id) {
     case "SavedFleaSlabCage":
     case "SavedFleaChoralChambersWind":
     case "SavedFleaChoralChambersCage":
-    case "SavedFleaUnderworksExplosions":
+    case "SavedFleaUnderworksCauldron":
     case "SavedFleaUnderworksWispThicket":
     case "SavedFleaGiantFlea":
     case "SavedFleaVog":
@@ -180,6 +191,8 @@ function getUrl(qualifier, id) {
       return getUrl("NPC", "Flea");
 
     case "SeenFleatopiaEmpty":
+    case "CaravanTroupeGreymoor":
+    case "CaravanTroupeFleatopia":
       return getUrl("NPC", "Mooshka");
 
     // Bellway
@@ -190,7 +203,7 @@ function getUrl(qualifier, id) {
     case "BlastedStepsStation":
     case "DeepDocksStation":
     case "GreymoorStation":
-    case "MountFayStation":
+    case "SlabStation":
     case "BilewaterStation":
     case "ShellwoodStation":
       return getUrl("Misc", "Bellway");
@@ -198,7 +211,7 @@ function getUrl(qualifier, id) {
     // Ventrica
     case "ChoralChambersTube":
     case "UnderworksTube":
-    case "CityBellwayTube":
+    case "GrandBellwayTube":
     case "HighHallsTube":
     case "SongclaveTube":
     case "MemoriumTube":
@@ -222,9 +235,12 @@ function getUrl(qualifier, id) {
       return getUrl("NPC", "Shakra");
 
     case "MetJubilanaEnclave":
+    case "JubilanaRescuedMemorium":
+    case "JubilanaRescuedChoralChambers":
       return getUrl("NPC", "Jubilana");
 
     case "MetShermaEnclave":
+    case "ShermaReturned":
       return getUrl("NPC", "Sherma");
 
     case "UnlockedPrinceCage":
@@ -233,17 +249,33 @@ function getUrl(qualifier, id) {
 
     case "BellhouseKeyConversation":
       return getUrl("Item", "BellhomeKey");
+    case "PavoTimePassed":
+      return getUrl("NPC", "Pavo");
+
+    case "BallowMoved":
+      return getUrl("NPC", "Ballow");
+
+    // Events
+    case "VerdaniaOrbsCollected":
+      return getUrl("Enemy", "Verdanir");
+    case "SoldRelic":
+      return getUrl("NPC", "Scrounge");
+    case "SilkAndSoulOffered":
+    case "SoulSnareReady":
+      return getUrl("Event", "SilkAndSoul");
+    case "AbyssEscape":
+      return getUrl("Event", "Act3Started");
 
     // Hearts and Memories
-    case "CollectedHeartNyleth":
+    case "HeartNyleth":
       return getUrl("Item", "PollenHeart");
-    case "CollectedHeartKhann":
+    case "HeartKhann":
       return getUrl("Item", "EncrustedHeart");
-    case "CollectedHeartKarmelita":
+    case "HeartKarmelita":
       return getUrl("Item", "HuntersHeart");
-    case "CollectedHeartClover":
+    case "HeartClover":
       return getUrl("Item", "ConjoinedHeart");
-    case "CompletedRedMemory":
+    case "RedMemory":
       return getUrl("Item", "Everbloom");
 
     // Ending

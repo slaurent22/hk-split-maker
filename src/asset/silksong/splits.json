@@ -9,7 +9,13 @@
         "alias": null,
         "description": "Start New Game (Start)",
         "key": "StartNewGame",
-        "tooltip": "Splits when starting a new save file"
+        "tooltip": "Splits when starting a new save file from the opening cutscenes into Moss Grotto"
+    },
+    {
+        "alias": null,
+        "description": "Act 1 Start (Start)",
+        "key": "Act1Start",
+        "tooltip": "Splits when starting Act 1, either from the starting Bind, or from revert autosave Act1Start"
     },
     {
         "alias": null,
@@ -118,6 +124,12 @@
         "description": "Enter Wormways (Transition)",
         "key": "EnterWormways",
         "tooltip": "Splits on entering Wormways"
+    },
+    {
+        "alias": null,
+        "description": "Enter Far Fields (Transition)",
+        "key": "EnterFarFields",
+        "tooltip": "Splits when entering Far Fields"
     },
     {
         "alias": null,
@@ -510,9 +522,9 @@
         "tooltip": "Splits after rescuing flea in Song_14"
     },
     {
-        "alias": null,
-        "description": "Rescued Flea Underworks Explosions (Flea)",
-        "key": "SavedFleaUnderworksExplosions",
+        "alias": "SavedFleaUnderworksExplosions",
+        "description": "Rescued Flea Underworks Cauldron (Flea)",
+        "key": "SavedFleaUnderworksCauldron",
         "tooltip": "Splits after rescuing flea in Under_21"
     },
     {
@@ -523,19 +535,19 @@
     },
     {
         "alias": null,
-        "description": "Defeated Giant Flea (Flea)",
+        "description": "Rescued Giant Flea (Flea)",
         "key": "SavedFleaGiantFlea",
         "tooltip": "Splits after defeating Giant Flea"
     },
     {
         "alias": null,
-        "description": "Met Vog (Flea)",
+        "description": "Rescued Vog (Flea)",
         "key": "SavedFleaVog",
         "tooltip": "Splits after talking to Vog"
     },
     {
         "alias": null,
-        "description": "Freed Kratt (Flea)",
+        "description": "Rescued Kratt (Flea)",
         "key": "SavedFleaKratt",
         "tooltip": "Splits after freeing Kratt"
     },
@@ -582,10 +594,10 @@
         "tooltip": "Splits after unlocking Greymoor Bellway"
     },
     {
-        "alias": null,
-        "description": "Mount Fay (Bellway)",
-        "key": "MountFayStation",
-        "tooltip": "Splits after unlocking Mount Fay Bellway"
+        "alias": "MountFayStation",
+        "description": "Slab / Mount Fay (Bellway)",
+        "key": "SlabStation",
+        "tooltip": "Splits after unlocking Slab / Mount Fay Bellway"
     },
     {
         "alias": null,
@@ -612,9 +624,9 @@
         "tooltip": "Splits after unlocking Underworks Ventrica"
     },
     {
-        "alias": null,
+        "alias": "CityBellwayTube",
         "description": "Grand Bellway (Ventrica)",
-        "key": "CityBellwayTube",
+        "key": "GrandBellwayTube",
         "tooltip": "Splits after unlocking Grand Bellway Ventrica"
     },
     {
@@ -762,33 +774,33 @@
         "tooltip": "Splits when you obtain Super Jump"
     },
     {
-        "alias": null,
+        "alias": "CollectedHeartNyleth",
         "description": "Nyleth's Heart (Item)",
-        "key": "CollectedHeartNyleth",
+        "key": "HeartNyleth",
         "tooltip": "Splits when you obtain Nyleth's Heart"
     },
     {
-        "alias": null,
+        "alias": "CollectedHeartKhann",
         "description": "Khann's Heart (Item)",
-        "key": "CollectedHeartKhann",
+        "key": "HeartKhann",
         "tooltip": "Splits when you obtain Khann's Heart"
     },
     {
-        "alias": null,
+        "alias": "CollectedHeartKarmelita",
         "description": "Karmelita's Heart (Item)",
-        "key": "CollectedHeartKarmelita",
+        "key": "HeartKarmelita",
         "tooltip": "Splits when you obtain Karmelita's Heart"
     },
     {
-        "alias": null,
+        "alias": "CollectedHeartClover",
         "description": "Clover Dancer's Heart (Item)",
-        "key": "CollectedHeartClover",
+        "key": "HeartClover",
         "tooltip": "Split when you obtain Conjoined Heart"
     },
     {
-        "alias": null,
+        "alias": "CompletedRedMemory",
         "description": "Red Memory (Event)",
-        "key": "CompletedRedMemory",
+        "key": "RedMemory",
         "tooltip": "Splits on completing Red Memory"
     },
     {
@@ -796,5 +808,143 @@
         "description": "Pavo Bellhome Key (NPC)",
         "key": "BellhouseKeyConversation",
         "tooltip": "Splits when obtaining Bellhome Key from Pavo"
+    },
+    {
+        "alias": null,
+        "description": "Verdania Orbs (Event)",
+        "key": "VerdaniaOrbsCollected",
+        "tooltip": "Splits when you reach the required number of Verdania Orbs"
+    },
+    {
+        "alias": null,
+        "description": "Forebrothers (Boss)",
+        "key": "Forebrothers",
+        "tooltip": "Splits after defeating the Forebrothers"
+    },
+    {
+        "alias": null,
+        "description": "Groal (Boss)",
+        "key": "Groal",
+        "tooltip": "Splits after defeating Groal"
+    },
+    {
+        "alias": null,
+        "description": "Conchflies 1 (Boss)",
+        "key": "Conchflies1",
+        "tooltip": "Splits after defeating Conchflies 1"
+    },
+    {
+        "alias": null,
+        "description": "Savage Beastfly 1 (Boss)",
+        "key": "SavageBeastfly1",
+        "tooltip": "Splits after defeating the Beastfly in the Chapel"
+    },
+    {
+        "alias": null,
+        "description": "Savage Beastfly 2 (Boss))",
+        "key": "SavageBeastfly2",
+        "tooltip": "Splits after completing the Beastfly in Far Fields"
+    },
+    {
+        "alias": null,
+        "description": "Caravan Troupe Greymoor (Event)",
+        "key": "CaravanTroupeGreymoor",
+        "tooltip": "Splits when the Caravan Troupe moves to Greymoor"
+    },
+    {
+        "alias": null,
+        "description": "Caravan Troupe Fleatopia (Event)",
+        "key": "CaravanTroupeFleatopia",
+        "tooltip": "Splits when the Caravan Troupe moves to Fleatopia"
+    },
+    {
+        "alias": null,
+        "description": "Scrounge Relic Sold (Event)",
+        "key": "SoldRelic",
+        "tooltip": "Splits after selling the first relic to Scrounge"
+    },
+    {
+        "alias": null,
+        "description": "Collected WhiteWard Key (Item)",
+        "key": "CollectedWhiteWardKey",
+        "tooltip": "Splits when you collect the WhiteWard Key"
+    },
+    {
+        "alias": null,
+        "description": "Pavo Time Passed (Event)",
+        "key": "PavoTimePassed",
+        "tooltip": "Splits after meeting the Belltown Greeter and time has passed"
+    },
+    {
+        "alias": null,
+        "description": "Songclave Bell (Event)",
+        "key": "SongclaveBell",
+        "tooltip": "Splits when ringing the Songclave Bell Shrine"
+    },
+    {
+        "alias": null,
+        "description": "Voltvyrm (Boss)",
+        "key": "Voltvyrm",
+        "tooltip": "Splits after defeating Voltvyrm"
+    },
+    {
+        "alias": null,
+        "description": "Skull Tyrant (Boss)",
+        "key": "SkullTyrant1",
+        "tooltip": "Splits after defeating the Skull Tyrant"
+    },
+    {
+        "alias": null,
+        "description": "Sherma Returned (NPC)",
+        "key": "ShermaReturned",
+        "tooltip": "Splits when Sherma is rescued and time passes"
+    },
+    {
+        "alias": null,
+        "description": "Jubilana Rescued Memorium (Event)",
+        "key": "JubilanaRescuedMemorium",
+        "tooltip": "Splits after saving the Jubilana in Memorium"
+    },
+    {
+        "alias": null,
+        "description": "Jubilana Rescued Choral Chambers (Event)",
+        "key": "JubilanaRescuedChoralChambers",
+        "tooltip": "Splits after saving the Jubilana in Choral Chambers"
+    },
+    {
+        "alias": null,
+        "description": "Silk and Soul Offered (Event)",
+        "key": "SilkAndSoulOffered",
+        "tooltip": "Splits when the Caretaker offers the Silk and Soul quest"
+    },
+    {
+        "alias": null,
+        "description": "Soul Snare Ready (Event)",
+        "key": "SoulSnareReady",
+        "tooltip": "Splits when the Soul Snare becomes ready"
+    },
+    {
+        "alias": null,
+        "description": "Seth (Boss)",
+        "key": "Seth",
+        "tooltip": "Splits after defeating Seth"
+    },
+    {
+        "alias": null,
+        "description": "Completed Abyss Escape (Event)",
+        "key": "AbyssEscape",
+        "tooltip": "Splits after completing the Abyss Escape"
+    },
+    {
+        "alias": null,
+        "description": "Ballow Moved (Event)",
+        "key": "BallowMoved",
+        "tooltip": "Splits when Ballow moves to the Diving Bell"
+    },
+    {
+        "alias": null,
+        "description": "Act 3 Start (Event)",
+        "key": "Act3Started",
+        "tooltip": "Splits upon entering Act 3"
     }
 ]
