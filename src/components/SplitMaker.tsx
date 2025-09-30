@@ -261,7 +261,17 @@ export default function SplitMaker(): ReactElement {
       <div id="output-section" className="side">
         <h2>Output Splits File</h2>
         {game === "silksong" && (
-          <h3>Ensure you have autosplitter version 0.1.13 or later</h3>
+          <h3>
+            Ensure you have{" "}
+            <a
+              target="_blank"
+              rel="noreferrer"
+              href="https://github.com/AlexKnauth/silksong-autosplit-wasm/releases/latest"
+            >
+              autosplitter
+            </a>{" "}
+            version 0.1.13 or later
+          </h3>
         )}
         <div className="output-container">
           <div className="row">
