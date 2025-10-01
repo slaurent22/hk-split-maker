@@ -1,0 +1,26 @@
+{
+    "categoryName": "Judgement",
+    "splitIds": [
+        "StartNewGame",
+        "MossMotherTrans",
+        "SilkSpearTrans",
+        "BellBeastTrans",
+        "SavedFleaDeepDocksSprint",
+        "Lace1Trans",
+        "SavedFleaFarFieldsTrap",
+        "SavedFleaDeepDocksBellway",
+        "SavedFleaHuntersMarch",
+        "SavedFleaMarrow",
+        "CaravanTroupeGreymoor",
+        "GreymoorBell",
+        "ClingGrip",
+        "Menu",
+        "ShellwoodBell",
+        "LastJudge",
+        "Act2Started"
+    ],
+    "gameName": "Hollow Knight: Silksong",
+    "variables": {
+        "Judgement Subcategory": "No Major Glitches"
+    }
+}
