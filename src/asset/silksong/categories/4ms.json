@@ -4,23 +4,25 @@
         "StartNewGame",
         "MossMotherTrans",
         "SilkSpear",
+        "ManualSplit",
         "BellBeast",
+        "ManualSplit",
         "SwiftStep",
+        "ManualSplit",
         "Lace1",
         "DriftersCloak",
         "ManualSplit"
     ],
     "names": {
-        "MossMotherTrans": "[0] %s",
-        "SilkSpear": "[0] %s",
-        "BellBeast": "[1] %s",
-        "SwiftStep": "[2] %s",
-        "Lace1": "[3] %s",
-        "DriftersCloak": "[3] %s",
-        "ManualSplit": "Mask Shard 4 (Manual Split)"
+        "ManualSplit": [
+            "Shard 1 (Manual Split)",
+            "Shard 2 (Manual Split)",
+            "Shard 3 (Manual Split)",
+            "Shard 4 (Manual Split)"
+        ]
     },
     "icons": {
-        "ManualSplit": "MaskShard4"
+        "ManualSplit": ["MaskShard", "MaskShard", "MaskShard", "Mask"]
     },
     "gameName": "Hollow Knight: Silksong Category Extensions",
     "variables": {
