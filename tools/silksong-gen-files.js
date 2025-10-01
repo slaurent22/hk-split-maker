@@ -302,6 +302,7 @@ function createIconImports() {
   output += `import MagnetiteBrooch from "./Tool/MagnetiteBrooch.png";\n`;
   output += `import ShardPendant from "./Tool/ShardPendant.png";\n`;
   output += `import StraightPin from "./Tool/StraightPin.png";\n`;
+  output += `import MaskShard4 from "./Item/Mask.png";\n`;
 
   // console.log(output);
   output += "export default {\n";
@@ -314,6 +315,7 @@ function createIconImports() {
   output += `  MagnetiteBrooch,\n`;
   output += `  ShardPendant,\n`;
   output += `  StraightPin,\n`;
+  output += `  MaskShard4,\n`;
   output += "};\n";
 
   // console.log(output);

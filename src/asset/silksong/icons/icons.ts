@@ -164,6 +164,7 @@ import DruidsEye from "./Tool/DruidsEye.png";
 import MagnetiteBrooch from "./Tool/MagnetiteBrooch.png";
 import ShardPendant from "./Tool/ShardPendant.png";
 import StraightPin from "./Tool/StraightPin.png";
+import MaskShard4 from "./Item/Mask.png";
 export default {
   ManualSplit,
   StartNewGame,
@@ -329,4 +330,5 @@ export default {
   MagnetiteBrooch,
   ShardPendant,
   StraightPin,
+  MaskShard4,
 };
