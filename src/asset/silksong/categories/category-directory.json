@@ -1,6 +1,11 @@
 {
     "Main": [
         {
+            "fileName": "100",
+            "displayName": "100%",
+            "data": {}
+        },
+        {
             "fileName": "any-bells",
             "displayName": "Any% (Bells Route)",
             "data": {}
