@@ -212,7 +212,6 @@ export default function SplitMaker(): ReactElement {
               text="Import Splits"
               id="import-button"
               onClick={onImportButton}
-              disabled={game !== "hollowknight"}
             />
             <ArrowButton
               text="Generate"

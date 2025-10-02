@@ -11,7 +11,7 @@ export interface Config {
   names?: Record<string, string | Array<string>>;
   icons?: Record<string, string | Array<string>>;
   ordered?: boolean;
-  endTriggeringAutosplit: boolean;
+  endTriggeringAutosplit?: boolean;
   endingSplit?: {
     name?: string;
     icon?: string;
@@ -22,12 +22,16 @@ export interface Config {
   offset?: string;
 }
 
-interface ParsedAutoSplitterSettings {
+interface ParsedHKAutoSplitterSettings {
   startTriggeringAutosplit?: string;
   // autosplitIds vs splitIds: autosplitIds do not contain "-" for subsplits, splitIds can
   autosplitIds: Array<string>;
   ordered?: boolean;
   endTriggeringAutosplit: boolean;
+}
+
+interface ParsedSSAutosplitterSettings {
+  autosplitIds: Array<string>;
 }
 
 interface ParsedSplitId {
@@ -615,9 +619,9 @@ function getTextContentByTagName(
   return getTextContent(elementByTagName);
 }
 
-function parseAutoSplitterSettings(
+function parseHKAutoSplitterSettings(
   autoSplitterSettings: Element
-): ParsedAutoSplitterSettings {
+): ParsedHKAutoSplitterSettings {
   const xmlDocSplits = autoSplitterSettings.getElementsByTagName("Splits")[0];
   const xmlDocCustomSettings =
     autoSplitterSettings.getElementsByTagName("CustomSettings")[0];
@@ -675,7 +679,26 @@ function parseAutoSplitterSettings(
   }
 }
 
-export function importSplitsXml(str: string, game: Game): Config {
+function parseSSAutoSplitterSettings(
+  autoSplitterSettings: Element
+): ParsedSSAutosplitterSettings {
+  const xmlDocCustomSettings =
+    autoSplitterSettings.getElementsByTagName("CustomSettings")[0];
+  const xmlDocSplits = xmlDocCustomSettings.querySelector('[id="splits"]');
+  if (!xmlDocSplits) {
+    throw new Error("Failed to import splits: missing splits");
+  }
+  const autosplitIds: Array<string> = [];
+  const xmlDocSettings = xmlDocSplits.getElementsByTagName("Setting");
+  for (let i = 0; i < xmlDocSettings.length; i++) {
+    const settingsNode = xmlDocSettings[i];
+    const autosplitId = settingsNode.getAttribute("value") ?? "ManualSplit";
+    autosplitIds.push(autosplitId);
+  }
+  return { autosplitIds };
+}
+
+function importHKSplitsXml(str: string): Config {
   // xml parse
   const parser = new DOMParser();
   const xmlDoc = parser.parseFromString(str, "text/xml");
@@ -728,7 +751,7 @@ export function importSplitsXml(str: string, game: Game): Config {
     startTriggeringAutosplit,
     autosplitIds,
     endTriggeringAutosplit,
-  } = parseAutoSplitterSettings(autoSplitterSettings);
+  } = parseHKAutoSplitterSettings(autoSplitterSettings);
   if (!ordered) {
     throw new Error(`Failed to import splits: Ordered must be True to import`);
   }
@@ -771,7 +794,7 @@ export function importSplitsXml(str: string, game: Game): Config {
   const uniqueAutosplitIds: Set<string> = new Set(
     parsedSplitIds.map(({ autosplitId }) => autosplitId)
   );
-  const { parseSplitsDefinitions } = splitsFunctions(game);
+  const { parseSplitsDefinitions } = splitsFunctions("hollowknight");
   const splitDefinitions = parseSplitsDefinitions();
   const potentialNameOverrides: Record<string, string | string[]> = {};
   let hasNameOverrides = false;
@@ -818,4 +841,132 @@ export function importSplitsXml(str: string, game: Game): Config {
     config = { offset, ...config };
   }
   return config;
+}
+
+function importSSSplitsXml(str: string): Config {
+  // xml parse
+  const parser = new DOMParser();
+  const xmlDoc = parser.parseFromString(str, "text/xml");
+  // GameName, CategoryName -> gameName, categoryName
+  const gameName =
+    getTextContentByTagName(xmlDoc, "GameName") || "Hollow Knight: Silksong";
+  const categoryName = getTextContentByTagName(xmlDoc, "CategoryName") || "";
+  const offset = getTextContentByTagName(xmlDoc, "Offset");
+  // Metadata Variables -> variables
+  const xmlDocVariables0 = xmlDoc.getElementsByTagName("Variables")[0];
+  const xmlDocVariables =
+    xmlDocVariables0 && xmlDocVariables0.getElementsByTagName("Variable");
+  const potentialVariables: Record<string, string> = {};
+  let hasVariables = false;
+  if (xmlDocVariables && xmlDocVariables.length > 0) {
+    for (let i = 0; i < xmlDocVariables.length; i++) {
+      const variableName = xmlDocVariables[i].getAttribute("name");
+      if (variableName) {
+        potentialVariables[variableName] =
+          getTextContent(xmlDocVariables[i]) || "";
+        hasVariables = true;
+      }
+    }
+  }
+  const autoSplitterSettings = xmlDoc.getElementsByTagName(
+    "AutoSplitterSettings"
+  )[0];
+  const { autosplitIds } = parseSSAutoSplitterSettings(autoSplitterSettings);
+  // autosplitIds vs splitIds: autosplitIds do not contain "-" for subsplits, splitIds can
+  const parsedSplitIds: ParsedSplitId[] = [];
+  autosplitIds.forEach((autosplitId) => {
+    parsedSplitIds.push({
+      autosplitId,
+      subsplit: false,
+      name: "",
+      iconId: "",
+    });
+  });
+  // Segments Segment Name -> names, endingSplit name
+  const xmlDocSegments0 = xmlDoc.getElementsByTagName("Segments")[0];
+  const segments =
+    (xmlDocSegments0 && xmlDocSegments0.getElementsByTagName("Segment")) || [];
+  // subsplitNames vs names: names do not contain "-" for subsplits, subsplitNames can
+  let endName = "";
+  for (let i = 0; i < segments.length; i++) {
+    const subsegmentName = getTextContentByTagName(segments[i], "Name") || "";
+    if (i < parsedSplitIds.length) {
+      // segments are offset by one because start trigger is in list
+      if (subsegmentName.startsWith("-")) {
+        parsedSplitIds[i + 1].subsplit = true;
+        parsedSplitIds[i + 1].name = subsegmentName.substring(1);
+      } else {
+        parsedSplitIds[i + 1].subsplit = false;
+        parsedSplitIds[i + 1].name = subsegmentName;
+      }
+    } else if (i === parsedSplitIds.length) {
+      // endingSplit cannot be a subsplit
+      endName = subsegmentName;
+    }
+  }
+  // Deal with "-" subsplit markers
+  const splitIds: string[] = parsedSplitIds.map(({ autosplitId, subsplit }) => {
+    const namePrefix = subsplit ? "-" : "";
+    return `${namePrefix}${autosplitId}`;
+  });
+  const uniqueAutosplitIds: Set<string> = new Set(
+    parsedSplitIds.map(({ autosplitId }) => autosplitId)
+  );
+  const { parseSplitsDefinitions } = splitsFunctions("silksong");
+  const splitDefinitions = parseSplitsDefinitions();
+  const potentialNameOverrides: Record<string, string | string[]> = {};
+  let hasNameOverrides = false;
+  uniqueAutosplitIds.forEach((uniqueAutosplitId) => {
+    const splitNames = parsedSplitIds
+      .filter(({ autosplitId }) => autosplitId === uniqueAutosplitId)
+      .map(({ name }) => name);
+    const splitDefinition = splitDefinitions.get(uniqueAutosplitId);
+    if (
+      splitDefinition &&
+      splitNames.every(
+        (aName) => aName === "" || aName === splitDefinition.name
+      )
+    ) {
+      // do nothing
+    } else if (splitNames.length === 1) {
+      potentialNameOverrides[uniqueAutosplitId] =
+        transformNameOverrideForImport(splitNames[0], splitDefinition);
+      hasNameOverrides = true;
+    } else {
+      const nameOverrides = [...splitNames];
+      nameOverrides.forEach((nameOverride, index) => {
+        nameOverrides[index] = transformNameOverrideForImport(
+          nameOverride,
+          splitDefinition
+        );
+      });
+
+      potentialNameOverrides[uniqueAutosplitId] = nameOverrides;
+      hasNameOverrides = true;
+    }
+  });
+  let config: Config = {
+    categoryName,
+    splitIds,
+    names: hasNameOverrides ? potentialNameOverrides : undefined,
+    endingSplit: endName.length > 0 ? { name: endName } : undefined,
+    gameName,
+    variables: hasVariables ? potentialVariables : undefined,
+  };
+  if (offset && offset !== DEFAULT_OFFSET) {
+    config = { offset, ...config };
+  }
+  return config;
+}
+
+export function importSplitsXml(str: string, game: Game): Config {
+  switch (game) {
+    case "hollowknight":
+      return importHKSplitsXml(str);
+    case "silksong":
+      return importSSSplitsXml(str);
+    default:
+      // eslint-disable-next-line @typescript-eslint/restrict-template-expressions
+      throw new Error(`invalid game ${game}`);
+  }
 }
