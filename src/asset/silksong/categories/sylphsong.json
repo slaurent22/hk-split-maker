@@ -1,0 +1,55 @@
+{
+    "categoryName": "Sylphsong%",
+    "splitIds": [
+        "StartNewGame",
+        "MossMotherTrans",
+        "SilkSpearTrans",
+        "BellBeastTrans",
+        "SwiftStepTrans",
+        "Lace1Trans",
+        "FarFieldsStation",
+        "CaravanTroupeGreymoor",
+        "ClingGripTrans",
+        "Widow",
+        "DriftersCloakTrans",
+        "GreymoorStation",
+        "EnterMist",
+        "GrandBellwayStation",
+        "Menu",
+        "ManualSplit",
+        "ManualSplit",
+        "DeepDocksStation",
+        "ManualSplit",
+        "ManualSplit",
+        "CogworkDancers",
+        "Menu",
+        "Trobbio",
+        "Clawline",
+        "ManualSplit",
+        "ManualSplit",
+        "Menu",
+        "ManualSplit",
+        "ManualSplit",
+        "ReaperCrestTrans",
+        "ManualSplit"
+    ],
+    "names": {
+        "Menu": [
+            "Needle Strike (Quitout)",
+            "Left Citadel Rosaries (Quitout)",
+            "Upper Bilewater Locket (Quitout)"
+        ],
+        "ManualSplit": [
+            "Wanderer Crest (Manual)",
+            "Beast Crest (Manual)",
+            "Weavelight (Manual)",
+            "Voltvessels (Manual)",
+            "Architect Crest (Manual)",
+            "Enter Bilewater (Manual)",
+            "Cursed (Manual)",
+            "Witch Crest (Manual)",
+            "Sylphsong"
+        ]
+    },
+    "gameName": "Hollow Knight: Silksong Category Extensions"
+}

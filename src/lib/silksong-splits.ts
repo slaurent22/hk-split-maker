@@ -58,6 +58,7 @@ function getNameAndGroup({
     case "VaultkeepersMelodyTrans":
     case "ArchitectsMelodyTrans":
     case "ConductorsMelodyTrans":
+    case "ReaperCrestTrans":
       return [`${name} Exit`, qualifier];
   }
   return [name, qualifier];
