@@ -616,7 +616,7 @@ function getTextContentByTagName(
   tagName: string
 ): string | undefined {
   const elementByTagName = element.getElementsByTagName(tagName)[0];
-  return getTextContent(elementByTagName);
+  return elementByTagName ? getTextContent(elementByTagName) : "";
 }
 
 function parseHKAutoSplitterSettings(
@@ -850,8 +850,9 @@ function importSSSplitsXml(str: string): Config {
   // GameName, CategoryName -> gameName, categoryName
   const gameName =
     getTextContentByTagName(xmlDoc, "GameName") || "Hollow Knight: Silksong";
-  const categoryName = getTextContentByTagName(xmlDoc, "CategoryName") || "";
-  const offset = getTextContentByTagName(xmlDoc, "Offset");
+  const categoryName =
+    getTextContentByTagName(xmlDoc, "CategoryName") || "Any%";
+  const offset = getTextContentByTagName(xmlDoc, "Offset") || DEFAULT_OFFSET;
   // Metadata Variables -> variables
   const xmlDocVariables0 = xmlDoc.getElementsByTagName("Variables")[0];
   const xmlDocVariables =
@@ -868,9 +869,28 @@ function importSSSplitsXml(str: string): Config {
       }
     }
   }
-  const autoSplitterSettings = xmlDoc.getElementsByTagName(
+  let autoSplitterSettings = xmlDoc.getElementsByTagName(
     "AutoSplitterSettings"
   )[0];
+  if (!autoSplitterSettings) {
+    const xmlDocComponents0 = xmlDoc.getElementsByTagName("Components")[0];
+    const xmlDocComponents =
+      (xmlDocComponents0 &&
+        xmlDocComponents0.getElementsByTagName("Component")) ||
+      [];
+    for (let i = 0; i < xmlDocComponents.length; i++) {
+      const xmlDocComponent = xmlDocComponents[i];
+      const path = getTextContentByTagName(xmlDocComponent, "Path");
+      if (path === "LiveSplit.AutoSplittingRuntime.dll") {
+        autoSplitterSettings =
+          xmlDocComponent.getElementsByTagName("Settings")[0];
+        break;
+      }
+    }
+    if (!autoSplitterSettings) {
+      throw new Error(`Failed to import splits: missing AutoSplitterSettings`);
+    }
+  }
   const { autosplitIds } = parseSSAutoSplitterSettings(autoSplitterSettings);
   // autosplitIds vs splitIds: autosplitIds do not contain "-" for subsplits, splitIds can
   const parsedSplitIds: ParsedSplitId[] = [];
