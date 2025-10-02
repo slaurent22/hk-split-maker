@@ -2,7 +2,16 @@ import React from "react";
 import { useCurrentGame } from "../hooks";
 import { Game } from "../store/game-slice";
 
-const VIDEO_URL = "https://www.youtube.com/watch?v=JBdm7LvZAZQ";
+const VIDEO_URL: Record<Game, { href: string; text: string }> = {
+  hollowknight: {
+    href: "https://www.youtube.com/watch?v=JBdm7LvZAZQ",
+    text: "HK Split Maker Tutorial on YouTube",
+  },
+  silksong: {
+    href: "https://youtu.be/CYudtHjQmzQ?t=241",
+    text: "HKSM Section of Ivy's Getting Started Guide",
+  },
+};
 
 const SPLITS_LINK: Record<Game, { href: string; text: string }> = {
   hollowknight: {
@@ -91,8 +100,8 @@ const Instructions: React.FC = () => {
       </ul>
       <h2>Video Tutorial</h2>
       <div className="centered">
-        <a href={VIDEO_URL} target="_blank" rel="noreferrer">
-          HK Split Maker Tutorial on YouTube
+        <a href={VIDEO_URL[game].href} target="_blank" rel="noreferrer">
+          {VIDEO_URL[game].text}
         </a>
       </div>
     </div>
