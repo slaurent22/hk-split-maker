@@ -281,7 +281,8 @@ export async function createSplitsXml(
     return { Split: autosplitId };
   });
 
-  const silksongAutosplits = autosplitIds.map((autosplitId) => {
+  const silksongAutosplits = autosplitIds.map((splitId) => {
+    const { autosplitId } = isAutosplitIdSubsplit(splitId);
     return { Setting: [{ _attr: { type: "string", value: autosplitId } }] };
   });
 
