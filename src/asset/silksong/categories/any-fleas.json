@@ -5,7 +5,7 @@
         "MossMotherTrans",
         "SilkSpearTrans",
         "BellBeastTrans",
-        "SwiftStep",
+        "SwiftStepTrans",
         "SavedFleaDeepDocksSprint",
         "Lace1Trans",
         "SavedFleaFarFieldsTrap",
@@ -26,12 +26,16 @@
         "VaultkeepersMelodyTrans",
         "ArchitectsMelodyTrans",
         "EnterHighHallsArena",
-        "ConductorsMelodyTrans",
+        "Menu",
         "Lace2",
         "EndingSplit"
     ],
     "names": {
+        "Menu": "Conductor's Melody (%s)",
         "EndingSplit": "Grand Mother Silk"
+    },
+    "icons": {
+        "Menu": "ConductorsMelody"
     },
     "gameName": "Hollow Knight: Silksong",
     "variables": {

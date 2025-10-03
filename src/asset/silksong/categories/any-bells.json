@@ -5,10 +5,8 @@
         "MossMotherTrans",
         "SilkSpearTrans",
         "BellBeastTrans",
-        "MarrowBell",
         "SwiftStepTrans",
         "Lace1Trans",
-        "DeepDocksBell",
         "DriftersCloakTrans",
         "GreymoorBell",
         "MoorwingTrans",
@@ -21,12 +19,17 @@
         "TrobbioTrans",
         "VaultkeepersMelodyTrans",
         "ArchitectsMelodyTrans",
-        "ConductorsMelodyTrans",
+        "EnterHighHallsArena",
+        "Menu",
         "Lace2",
         "EndingSplit"
     ],
     "names": {
+        "Menu": "Conductor's Melody (%s)",
         "EndingSplit": "Grand Mother Silk"
+    },
+    "icons": {
+        "Menu": "ConductorsMelody"
     },
     "gameName": "Hollow Knight: Silksong",
     "variables": {
