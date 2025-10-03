@@ -185,14 +185,14 @@ export default function SplitMaker(): ReactElement {
   const onDownload = (): void => {
     const outBlob = new Blob([splitOutput]);
 
-    let splitName = builtin;
-    if (!splitName) {
-      try {
-        const splitsConfig = parseConfigInput();
-        splitName = buildSplitsFileName(splitsConfig);
-      } catch {
-        splitName = "splits";
-      }
+    // Guess a good file name.
+    // Can be inaccurate if a new config has been entered but not processed yet.
+    let splitName = "";
+    try {
+      const splitsConfig = parseConfigInput();
+      splitName = buildSplitsFileName(splitsConfig);
+    } catch {
+      splitName = "splits";
     }
     saveAs(outBlob, `${splitName}.lss`);
   };
