@@ -122,6 +122,21 @@ function getMetadataNode(config: Config): xml.XmlObject {
   };
 }
 
+function isAutosplitIdSubsplit(autosplitId: string): {
+  subsplit: boolean;
+  autosplitId: string;
+} {
+  const subSplitMatch = SUB_SPLIT_RE.exec(autosplitId);
+  if (subSplitMatch) {
+    if (!subSplitMatch.groups) {
+      throw new Error(`Failed to parse name out of "${autosplitId}"`);
+    }
+    return { subsplit: true, autosplitId: subSplitMatch.groups.name };
+  } else {
+    return { subsplit: false, autosplitId };
+  }
+}
+
 const SILKSONG_SCRIPT_NAME_NODE = {
   Setting: {
     _attr: {
@@ -161,18 +176,9 @@ export async function createSplitsXml(
 
   const splitIdCount = new Map<string, number>();
   const parsedSplitIds: ParsedSplitId[] = splitIds.map((splitId) => {
-    let autosplitId = splitId;
-    let subsplit = false;
     let name = "";
 
-    const subSplitMatch = SUB_SPLIT_RE.exec(autosplitId);
-    if (subSplitMatch) {
-      if (!subSplitMatch.groups) {
-        throw new Error(`Failed to parse name out of "${splitId}"`);
-      }
-      autosplitId = subSplitMatch.groups.name;
-      subsplit = true;
-    }
+    const { subsplit, autosplitId } = isAutosplitIdSubsplit(splitId);
 
     const splitDefinition = splitDefinitions.get(autosplitId);
     if (!splitDefinition) {
@@ -270,7 +276,8 @@ export async function createSplitsXml(
     segments.push(getSegmentNode(endingSplitName, icon));
   }
 
-  const autosplits = autosplitIds.map((autosplitId) => {
+  const autosplits = autosplitIds.map((splitId) => {
+    const { autosplitId } = isAutosplitIdSubsplit(splitId);
     return { Split: autosplitId };
   });
 
