@@ -4,26 +4,15 @@
         "StartNewGame",
         "MossMotherTrans",
         "SilkSpear",
-        "ManualSplit",
+        "MaskShard1",
         "BellBeast",
-        "ManualSplit",
+        "MaskShard2",
         "SwiftStep",
-        "ManualSplit",
+        "MaskShard3",
         "Lace1",
         "DriftersCloak",
-        "ManualSplit"
+        "Mask1"
     ],
-    "names": {
-        "ManualSplit": [
-            "Shard 1 (Manual Split)",
-            "Shard 2 (Manual Split)",
-            "Shard 3 (Manual Split)",
-            "Shard 4 (Manual Split)"
-        ]
-    },
-    "icons": {
-        "ManualSplit": ["MaskShard", "MaskShard", "MaskShard", "Mask"]
-    },
     "gameName": "Hollow Knight: Silksong Category Extensions",
     "variables": {
         "4 Mask Shards Subcategory": "No Major Glitches"
