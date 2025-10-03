@@ -74,6 +74,31 @@ function getUrl(qualifier, id) {
     case "SongclaveBell":
       return getUrl("Misc", "Bell");
 
+    // Mask Shard
+    case "MaskShard1":
+    case "MaskShard2":
+    case "MaskShard3":
+    case "MaskShard5":
+    case "MaskShard6":
+    case "MaskShard7":
+    case "MaskShard9":
+    case "MaskShard10":
+    case "MaskShard11":
+    case "MaskShard13":
+    case "MaskShard14":
+    case "MaskShard15":
+    case "MaskShard17":
+    case "MaskShard18":
+    case "MaskShard19":
+      return getUrl("Item", "MaskShard");
+
+    case "Mask1":
+    case "Mask2":
+    case "Mask3":
+    case "Mask4":
+    case "Mask5":
+      return getUrl("Item", "Mask");
+
     // Skill Transition
     case "SilkSpearTrans":
       return getUrl("Skill", "SilkSpear");
@@ -108,6 +133,10 @@ function getUrl(qualifier, id) {
       return getUrl("Enemy", "Furm");
     case "EnterFarFields":
       return getUrl("Enemy", "Fertid");
+    case "EnterHuntersMarch":
+      return getUrl("Enemy", "Skarrlid");
+    case "EnterBilewater":
+      return getUrl("Enemy", "Stilkin");
 
     // Boss Transition
     case "MossMotherTrans":
@@ -302,8 +331,6 @@ function createIconImports() {
   output += `import MagnetiteBrooch from "./Tool/MagnetiteBrooch.png";\n`;
   output += `import ShardPendant from "./Tool/ShardPendant.png";\n`;
   output += `import StraightPin from "./Tool/StraightPin.png";\n`;
-  output += `import MaskShard from "./Item/MaskShard.png";\n`;
-  output += `import Mask from "./Item/Mask.png";\n`;
 
   // console.log(output);
   output += "export default {\n";
@@ -316,8 +343,6 @@ function createIconImports() {
   output += `  MagnetiteBrooch,\n`;
   output += `  ShardPendant,\n`;
   output += `  StraightPin,\n`;
-  output += `  MaskShard\,\n`;
-  output += `  Mask\,\n`;
   output += "};\n";
 
   // console.log(output);

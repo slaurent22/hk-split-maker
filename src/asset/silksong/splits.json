@@ -127,6 +127,12 @@
     },
     {
         "alias": null,
+        "description": "Enter Hunter's March (Transition)",
+        "key": "EnterHuntersMarch",
+        "tooltip": "Splits on entering Hunter's March in the room after the Skarrguard encounter"
+    },
+    {
+        "alias": null,
         "description": "Enter Far Fields (Transition)",
         "key": "EnterFarFields",
         "tooltip": "Splits when entering Far Fields"
@@ -232,6 +238,12 @@
         "description": "Leave The Mist (Transition)",
         "key": "LeaveMist",
         "tooltip": "Splits when leaving The Mist"
+    },
+    {
+        "alias": null,
+        "description": "Enter Bilewater (Transition)",
+        "key": "EnterBilewater",
+        "tooltip": "Splits when entering Bilewater from Sinner's Road or Whispering Vaults"
     },
     {
         "alias": null,
@@ -364,6 +376,126 @@
         "description": "Needle 4 (Upgrade)",
         "key": "NeedleUpgrade4",
         "tooltip": "Splits when upgrading to Pale Steel Needle"
+    },
+    {
+        "alias": null,
+        "description": "Mask Shard 1 (Fragment)",
+        "key": "MaskShard1",
+        "tooltip": "Splits when getting 1st Mask Shard"
+    },
+    {
+        "alias": null,
+        "description": "Mask Shard 2 (Fragment)",
+        "key": "MaskShard2",
+        "tooltip": "Splits when getting 2nd Mask Shard"
+    },
+    {
+        "alias": null,
+        "description": "Mask Shard 3 (Fragment)",
+        "key": "MaskShard3",
+        "tooltip": "Splits when getting 3rd Mask Shard"
+    },
+    {
+        "alias": null,
+        "description": "Mask Upgrade 4 (Upgrade)",
+        "key": "Mask1",
+        "tooltip": "Splits when getting 1 extra Masks (6 base HP)"
+    },
+    {
+        "alias": null,
+        "description": "Mask Shard 5 (Fragment)",
+        "key": "MaskShard5",
+        "tooltip": "Splits when getting 5th Mask Shard"
+    },
+    {
+        "alias": null,
+        "description": "Mask Shard 6 (Fragment)",
+        "key": "MaskShard6",
+        "tooltip": "Splits when getting 6th Mask Shard"
+    },
+    {
+        "alias": null,
+        "description": "Mask Shard 7 (Fragment)",
+        "key": "MaskShard7",
+        "tooltip": "Splits when getting 7th Mask Shard"
+    },
+    {
+        "alias": null,
+        "description": "Mask Upgrade 8 (Upgrade)",
+        "key": "Mask2",
+        "tooltip": "Splits when getting 2 extra Masks (7 base HP)"
+    },
+    {
+        "alias": null,
+        "description": "Mask Shard 9 (Fragment)",
+        "key": "MaskShard9",
+        "tooltip": "Splits when getting 9th Mask Shard"
+    },
+    {
+        "alias": null,
+        "description": "Mask Shard 10 (Fragment)",
+        "key": "MaskShard10",
+        "tooltip": "Splits when getting 10th Mask Shard"
+    },
+    {
+        "alias": null,
+        "description": "Mask Shard 11 (Fragment)",
+        "key": "MaskShard11",
+        "tooltip": "Splits when getting 11th Mask Shard"
+    },
+    {
+        "alias": null,
+        "description": "Mask Upgrade 12 (Upgrade)",
+        "key": "Mask3",
+        "tooltip": "Splits when getting 3 extra Masks (8 base HP)"
+    },
+    {
+        "alias": null,
+        "description": "Mask Shard 13 (Fragment)",
+        "key": "MaskShard13",
+        "tooltip": "Splits when getting 13th Mask Shard"
+    },
+    {
+        "alias": null,
+        "description": "Mask Shard 14 (Fragment)",
+        "key": "MaskShard14",
+        "tooltip": "Splits when getting 14th Mask Shard"
+    },
+    {
+        "alias": null,
+        "description": "Mask Shard 15 (Fragment)",
+        "key": "MaskShard15",
+        "tooltip": "Splits when getting 15th Mask Shard"
+    },
+    {
+        "alias": null,
+        "description": "Mask Upgrade 16 (Upgrade)",
+        "key": "Mask4",
+        "tooltip": "Splits when getting 4 extra Masks (9 base HP)"
+    },
+    {
+        "alias": null,
+        "description": "Mask Shard 17 (Fragment)",
+        "key": "MaskShard17",
+        "tooltip": "Splits when getting 17th Mask Shard"
+    },
+    {
+        "alias": null,
+        "description": "Mask Shard 18 (Fragment)",
+        "key": "MaskShard18",
+        "tooltip": "Splits when getting 18th Mask Shard"
+    },
+    {
+        "alias": null,
+        "description": "Mask Shard 19 (Fragment)",
+        "key": "MaskShard19",
+        "tooltip": "Splits when getting 19th Mask Shard"
+    },
+    {
+        "alias": null,
+        "description": "Mask Upgrade 20 (Upgrade)",
+        "key": "Mask5",
+        "tooltip": "Splits when getting 5 extra Masks (10 base HP)"
     },
     {
         "alias": null,
@@ -841,7 +973,7 @@
     },
     {
         "alias": null,
-        "description": "Savage Beastfly 2 (Boss))",
+        "description": "Savage Beastfly 2 (Boss)",
         "key": "SavageBeastfly2",
         "tooltip": "Splits after completing the Beastfly in Far Fields"
     },

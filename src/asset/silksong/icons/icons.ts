@@ -21,6 +21,7 @@ import Lace1 from "./Boss/Lace.png";
 import Lace1Trans from "./Boss/Lace.png";
 import DeepDocksBell from "./Misc/Bell.png";
 import EnterWormways from "./Enemy/Grom.png";
+import EnterHuntersMarch from "./Enemy/Skarrlid.png";
 import EnterFarFields from "./Enemy/Fertid.png";
 import DriftersCloak from "./Skill/DriftersCloak.png";
 import DriftersCloakTrans from "./Skill/DriftersCloak.png";
@@ -39,6 +40,7 @@ import BellhartBell from "./Misc/Bell.png";
 import LastJudge from "./Boss/LastJudge.png";
 import EnterMist from "./Enemy/Wraith.png";
 import LeaveMist from "./Enemy/Wraith.png";
+import EnterBilewater from "./Enemy/Stilkin.png";
 import Phantom from "./Boss/Phantom.png";
 import Act2Started from "./Event/Act2Started.png";
 import CogworkDancers from "./Boss/CogworkDancers.png";
@@ -61,6 +63,26 @@ import NeedleUpgrade1 from "./Item/Needle1.png";
 import NeedleUpgrade2 from "./Item/Needle2.png";
 import NeedleUpgrade3 from "./Item/Needle3.png";
 import NeedleUpgrade4 from "./Item/Needle4.png";
+import MaskShard1 from "./Item/MaskShard.png";
+import MaskShard2 from "./Item/MaskShard.png";
+import MaskShard3 from "./Item/MaskShard.png";
+import Mask1 from "./Item/Mask.png";
+import MaskShard5 from "./Item/MaskShard.png";
+import MaskShard6 from "./Item/MaskShard.png";
+import MaskShard7 from "./Item/MaskShard.png";
+import Mask2 from "./Item/Mask.png";
+import MaskShard9 from "./Item/MaskShard.png";
+import MaskShard10 from "./Item/MaskShard.png";
+import MaskShard11 from "./Item/MaskShard.png";
+import Mask3 from "./Item/Mask.png";
+import MaskShard13 from "./Item/MaskShard.png";
+import MaskShard14 from "./Item/MaskShard.png";
+import MaskShard15 from "./Item/MaskShard.png";
+import Mask4 from "./Item/Mask.png";
+import MaskShard17 from "./Item/MaskShard.png";
+import MaskShard18 from "./Item/MaskShard.png";
+import MaskShard19 from "./Item/MaskShard.png";
+import Mask5 from "./Item/Mask.png";
 import ReaperCrestTrans from "./Crest/Reaper.png";
 import SavedFleaHuntersMarch from "./NPC/Flea.png";
 import SavedFleaBellhart from "./NPC/Flea.png";
@@ -164,8 +186,6 @@ import DruidsEye from "./Tool/DruidsEye.png";
 import MagnetiteBrooch from "./Tool/MagnetiteBrooch.png";
 import ShardPendant from "./Tool/ShardPendant.png";
 import StraightPin from "./Tool/StraightPin.png";
-import MaskShard from "./Item/MaskShard.png";
-import Mask from "./Item/Mask.png";
 export default {
   ManualSplit,
   StartNewGame,
@@ -188,6 +208,7 @@ export default {
   Lace1Trans,
   DeepDocksBell,
   EnterWormways,
+  EnterHuntersMarch,
   EnterFarFields,
   DriftersCloak,
   DriftersCloakTrans,
@@ -206,6 +227,7 @@ export default {
   LastJudge,
   EnterMist,
   LeaveMist,
+  EnterBilewater,
   Phantom,
   Act2Started,
   CogworkDancers,
@@ -228,6 +250,26 @@ export default {
   NeedleUpgrade2,
   NeedleUpgrade3,
   NeedleUpgrade4,
+  MaskShard1,
+  MaskShard2,
+  MaskShard3,
+  Mask1,
+  MaskShard5,
+  MaskShard6,
+  MaskShard7,
+  Mask2,
+  MaskShard9,
+  MaskShard10,
+  MaskShard11,
+  Mask3,
+  MaskShard13,
+  MaskShard14,
+  MaskShard15,
+  Mask4,
+  MaskShard17,
+  MaskShard18,
+  MaskShard19,
+  Mask5,
   ReaperCrestTrans,
   SavedFleaHuntersMarch,
   SavedFleaBellhart,
@@ -331,6 +373,4 @@ export default {
   MagnetiteBrooch,
   ShardPendant,
   StraightPin,
-  MaskShard,
-  Mask,
 };
