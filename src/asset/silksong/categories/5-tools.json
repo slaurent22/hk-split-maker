@@ -13,19 +13,19 @@
     ],
     "names": {
         "ManualSplit": [
-            "Compass (Manual Split)",
-            "Druid's Eye (Manual Split)",
-            "Straight Pin (Manual Split)",
-            "Shard Pendant (Manual Split)",
-            "Magnetite Brooch (Manual Split)"
+            "Compass (%s)",
+            "Druid's Eye (%s)",
+            "Shard Pendant (%s)",
+            "Straight Pin (%s)",
+            "Magnetite Brooch (%s)"
         ]
     },
     "icons": {
         "ManualSplit": [
             "Compass",
             "DruidsEye",
-            "StraightPin",
             "ShardPendant",
+            "StraightPin",
             "MagnetiteBrooch"
         ]
     },
