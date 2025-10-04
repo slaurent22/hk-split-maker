@@ -99,6 +99,10 @@ function getUrl(qualifier, id) {
     case "Mask5":
       return getUrl("Item", "Mask");
 
+    // Item
+    case "BoneBottomSimpleKey":
+      return getUrl("Item", "SimpleKey");
+
     // Skill Transition
     case "SilkSpearTrans":
       return getUrl("Skill", "SilkSpear");
@@ -137,6 +141,16 @@ function getUrl(qualifier, id) {
       return getUrl("Enemy", "Skarrlid");
     case "EnterBilewater":
       return getUrl("Enemy", "Stilkin");
+    case "EnterMosshome":
+      return getUrl("Enemy", "OvergrownPilgrim");
+    case "EnterBlastedSteps":
+      return getUrl("Enemy", "Judge");
+    case "EnterSinnersRoad":
+      return getUrl("Enemy", "Muckroach");
+    case "EnterExhaustOrgan":
+      return getUrl("Boss", "Phantom");
+    case "EnterMemorium":
+      return getUrl("Enemy", "Rhinogrund");
 
     // Boss Transition
     case "MossMotherTrans":
@@ -149,6 +163,18 @@ function getUrl(qualifier, id) {
       return getUrl("Boss", "Moorwing");
     case "TrobbioTrans":
       return getUrl("Boss", "Trobbio");
+    case "EnterLastJudge":
+      return getUrl("Boss", "LastJudge");
+    case "EnterNylethMemory":
+      return getUrl("Boss", "Nyleth");
+    case "EnterKhannMemory":
+      return getUrl("Boss", "Khann");
+    case "EnterKarmelitaMemory":
+      return getUrl("Boss", "Karmelita");
+    case "EnterVerdaniaMemory":
+      return getUrl("Enemy", "LeafGlider");
+    case "EnterSeth":
+      return getUrl("Boss", "Seth");
 
     // Melody Transition
     case "VaultkeepersMelodyTrans":

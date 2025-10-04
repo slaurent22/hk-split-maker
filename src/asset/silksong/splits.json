@@ -61,6 +61,12 @@
     },
     {
         "alias": null,
+        "description": "Enter Mosshome (Transition)",
+        "key": "EnterMosshome",
+        "tooltip": "Splits when entering Mosshome (Mosstown_01)"
+    },
+    {
+        "alias": null,
         "description": "Silk Spear (Skill)",
         "key": "SilkSpear",
         "tooltip": "Splits when obtaining Silk Spear"
@@ -70,6 +76,12 @@
         "description": "Silk Spear (Transition)",
         "key": "SilkSpearTrans",
         "tooltip": "Splits on the transition after obtaining Silk Spear"
+    },
+    {
+        "alias": null,
+        "description": "Bone Bottom Simple Key (Item)",
+        "key": "BoneBottomSimpleKey",
+        "tooltip": "Splits when buying the Bone Bottom simple key from Pebb"
     },
     {
         "alias": null,
@@ -223,9 +235,27 @@
     },
     {
         "alias": null,
+        "description": "Enter Blasted Steps (Transition)",
+        "key": "EnterBlastedSteps",
+        "tooltip": "Splits when entering the Blasted Steps from Shellwood, where the area text appears"
+    },
+    {
+        "alias": null,
+        "description": "Enter Last Judge (Transition)",
+        "key": "EnterLastJudge",
+        "tooltip": "Splits when entering the Last Judge boss arena from the Blasted Steps"
+    },
+    {
+        "alias": null,
         "description": "Last Judge (Boss)",
         "key": "LastJudge",
         "tooltip": "Splits when killing Last Judge"
+    },
+    {
+        "alias": null,
+        "description": "Enter Sinner's Road (Transition)",
+        "key": "EnterSinnersRoad",
+        "tooltip": "Splits when entering Sinner's Road from Greymoor"
     },
     {
         "alias": null,
@@ -244,6 +274,12 @@
         "description": "Enter Bilewater (Transition)",
         "key": "EnterBilewater",
         "tooltip": "Splits when entering Bilewater from Sinner's Road or Whispering Vaults"
+    },
+    {
+        "alias": null,
+        "description": "Enter Exhaust Organ (Transition)",
+        "key": "EnterExhaustOrgan",
+        "tooltip": "Splits when entering the Exhaust Organ from Bilewater"
     },
     {
         "alias": null,
@@ -304,6 +340,12 @@
         "description": "High Halls Arena (Mini Boss)",
         "key": "HighHallsArena",
         "tooltip": "Splits when completing the High Halls Arena"
+    },
+    {
+        "alias": null,
+        "description": "Enter Memorium",
+        "key": "EnterMemorium",
+        "tooltip": "Splits when entering the Memorium"
     },
     {
         "alias": null,
@@ -906,10 +948,22 @@
         "tooltip": "Splits when you obtain Super Jump"
     },
     {
+        "alias": null,
+        "description": "Enter Nyleth Memory (Transition)",
+        "key": "EnterNylethMemory",
+        "tooltip": "Splits when entering Nyleth's memory"
+    },
+    {
         "alias": "CollectedHeartNyleth",
         "description": "Nyleth's Heart (Item)",
         "key": "HeartNyleth",
         "tooltip": "Splits when you obtain Nyleth's Heart"
+    },
+    {
+        "alias": null,
+        "description": "Enter Khann Memory",
+        "key": "EnterKhannMemory",
+        "tooltip": "Splits when entering Khann's Coral Tower memory"
     },
     {
         "alias": "CollectedHeartKhann",
@@ -918,10 +972,22 @@
         "tooltip": "Splits when you obtain Khann's Heart"
     },
     {
+        "alias": null,
+        "description": "Enter Karmelita Memory (Transition)",
+        "key": "EnterKarmelitaMemory",
+        "tooltip": "Splits when entering Karmelita's memory"
+    },
+    {
         "alias": "CollectedHeartKarmelita",
         "description": "Karmelita's Heart (Item)",
         "key": "HeartKarmelita",
         "tooltip": "Splits when you obtain Karmelita's Heart"
+    },
+    {
+        "alias": null,
+        "description": "Enter Verdania Memory (Transition)",
+        "key": "EnterVerdaniaMemory",
+        "tooltip": "Splits when entering the Verdania Memory"
     },
     {
         "alias": "CollectedHeartClover",
@@ -1054,6 +1120,12 @@
         "description": "Soul Snare Ready (Event)",
         "key": "SoulSnareReady",
         "tooltip": "Splits when the Soul Snare becomes ready"
+    },
+    {
+        "alias": null,
+        "description": "Enter Seth (Transition)",
+        "key": "EnterSeth",
+        "tooltip": "Splits when entering Seth's boss arena"
     },
     {
         "alias": null,

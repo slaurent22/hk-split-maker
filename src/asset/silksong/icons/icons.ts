@@ -10,8 +10,10 @@ import PlayerDeath from "./Misc/Hornet.png";
 import AnyTransition from "./Misc/Hornet.png";
 import MossMother from "./Boss/MossMother.png";
 import MossMotherTrans from "./Boss/MossMother.png";
+import EnterMosshome from "./Enemy/OvergrownPilgrim.png";
 import SilkSpear from "./Skill/SilkSpear.png";
 import SilkSpearTrans from "./Skill/SilkSpear.png";
+import BoneBottomSimpleKey from "./Item/SimpleKey.png";
 import BellBeast from "./Boss/BellBeast.png";
 import BellBeastTrans from "./Boss/BellBeast.png";
 import MarrowBell from "./Misc/Bell.png";
@@ -37,10 +39,14 @@ import ShellwoodBell from "./Misc/Bell.png";
 import EnterBellhart from "./Enemy/Furm.png";
 import Widow from "./Boss/Widow.png";
 import BellhartBell from "./Misc/Bell.png";
+import EnterBlastedSteps from "./Enemy/Judge.png";
+import EnterLastJudge from "./Boss/LastJudge.png";
 import LastJudge from "./Boss/LastJudge.png";
+import EnterSinnersRoad from "./Enemy/Muckroach.png";
 import EnterMist from "./Enemy/Wraith.png";
 import LeaveMist from "./Enemy/Wraith.png";
 import EnterBilewater from "./Enemy/Stilkin.png";
+import EnterExhaustOrgan from "./Boss/Phantom.png";
 import Phantom from "./Boss/Phantom.png";
 import Act2Started from "./Event/Act2Started.png";
 import CogworkDancers from "./Boss/CogworkDancers.png";
@@ -51,6 +57,7 @@ import Clawline from "./Skill/Clawline.png";
 import EnterHighHalls from "./Enemy/Minister.png";
 import EnterHighHallsArena from "./Enemy/Maestro.png";
 import HighHallsArena from "./Enemy/ChoirClapper.png";
+import EnterMemorium from "./Enemy/Rhinogrund.png";
 import Lace2 from "./Boss/Lace.png";
 import VaultkeepersMelody from "./Melody/VaultkeepersMelody.png";
 import VaultkeepersMelodyTrans from "./Melody/VaultkeepersMelody.png";
@@ -151,9 +158,13 @@ import GreenPrinceInVerdania from "./NPC/GreenPrince.png";
 import SeenFleatopiaEmpty from "./NPC/Mooshka.png";
 import FaydownCloak from "./Skill/FaydownCloak.png";
 import SilkSoar from "./Skill/SilkSoar.png";
+import EnterNylethMemory from "./Boss/Nyleth.png";
 import HeartNyleth from "./Item/PollenHeart.png";
+import EnterKhannMemory from "./Boss/Khann.png";
 import HeartKhann from "./Item/EncrustedHeart.png";
+import EnterKarmelitaMemory from "./Boss/Karmelita.png";
 import HeartKarmelita from "./Item/HuntersHeart.png";
+import EnterVerdaniaMemory from "./Enemy/LeafGlider.png";
 import HeartClover from "./Item/ConjoinedHeart.png";
 import RedMemory from "./Item/Everbloom.png";
 import BellhouseKeyConversation from "./Item/BellhomeKey.png";
@@ -176,6 +187,7 @@ import JubilanaRescuedMemorium from "./NPC/Jubilana.png";
 import JubilanaRescuedChoralChambers from "./NPC/Jubilana.png";
 import SilkAndSoulOffered from "./Event/SilkAndSoul.png";
 import SoulSnareReady from "./Event/SilkAndSoul.png";
+import EnterSeth from "./Boss/Seth.png";
 import Seth from "./Boss/Seth.png";
 import AbyssEscape from "./Event/Act3Started.png";
 import BallowMoved from "./NPC/Ballow.png";
@@ -197,8 +209,10 @@ export default {
   AnyTransition,
   MossMother,
   MossMotherTrans,
+  EnterMosshome,
   SilkSpear,
   SilkSpearTrans,
+  BoneBottomSimpleKey,
   BellBeast,
   BellBeastTrans,
   MarrowBell,
@@ -224,10 +238,14 @@ export default {
   EnterBellhart,
   Widow,
   BellhartBell,
+  EnterBlastedSteps,
+  EnterLastJudge,
   LastJudge,
+  EnterSinnersRoad,
   EnterMist,
   LeaveMist,
   EnterBilewater,
+  EnterExhaustOrgan,
   Phantom,
   Act2Started,
   CogworkDancers,
@@ -238,6 +256,7 @@ export default {
   EnterHighHalls,
   EnterHighHallsArena,
   HighHallsArena,
+  EnterMemorium,
   Lace2,
   VaultkeepersMelody,
   VaultkeepersMelodyTrans,
@@ -338,9 +357,13 @@ export default {
   SeenFleatopiaEmpty,
   FaydownCloak,
   SilkSoar,
+  EnterNylethMemory,
   HeartNyleth,
+  EnterKhannMemory,
   HeartKhann,
+  EnterKarmelitaMemory,
   HeartKarmelita,
+  EnterVerdaniaMemory,
   HeartClover,
   RedMemory,
   BellhouseKeyConversation,
@@ -363,6 +386,7 @@ export default {
   JubilanaRescuedChoralChambers,
   SilkAndSoulOffered,
   SoulSnareReady,
+  EnterSeth,
   Seth,
   AbyssEscape,
   BallowMoved,
