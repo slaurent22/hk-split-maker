@@ -3,13 +3,15 @@
     "splitIds": [
         "StartNewGame",
         "MossMother",
-        "ManualSplit",
-        "PlayerDeath",
+        "EnterMosshome",
+        "BoneBottomSimpleKey",
+        "EnterWormways",
+        "EnterShellwood",
         "ClingGrip",
         "Lace1",
         "DriftersCloak",
         "Widow",
-        "EnterMist",
+        "EnterSinnersRoad",
         "LeaveMist",
         "Phantom",
         "CogworkDancers",
@@ -24,7 +26,6 @@
         "EndingSplit"
     ],
     "names": {
-        "ManualSplit": "Simple Key (Manual)",
         "EndingSplit": "Grand Mother Silk"
     },
     "gameName": "Hollow Knight: Silksong",
