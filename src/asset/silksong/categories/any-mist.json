@@ -21,16 +21,12 @@
         "VaultkeepersMelodyTrans",
         "ArchitectsMelodyTrans",
         "EnterHighHallsArena",
-        "Menu",
+        "ConductorsMelodyTrans",
         "Lace2",
         "EndingSplit"
     ],
     "names": {
-        "Menu": "Conductor's Melody (%s)",
         "EndingSplit": "Grand Mother Silk"
-    },
-    "icons": {
-        "Menu": "ConductorsMelody"
     },
     "gameName": "Hollow Knight: Silksong",
     "variables": {
