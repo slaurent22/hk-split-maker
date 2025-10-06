@@ -4,8 +4,8 @@
     "description": "",
     "private": true,
     "scripts": {
-        "gen-files-hk": "node tools/hollowknight-gen-files.js",
-        "gen-files-ss": "node tools/silksong-gen-files.js",
+        "gen-files-hk": "node tools/gen-files-hk.js",
+        "gen-files-ss": "node tools/gen-files-ss.js",
         "build-prod": "del-cli dist/** && webpack --mode production",
         "serve": "webpack serve --mode development --port 8080",
         "eslint": "eslint --max-warnings 0 .",
