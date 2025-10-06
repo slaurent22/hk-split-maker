@@ -99,6 +99,29 @@ function getUrl(qualifier, id) {
     case "Mask5":
       return getUrl("Item", "Mask");
 
+    // Spool Fragment
+    case "SpoolFragment1":
+    case "SpoolFragment3":
+    case "SpoolFragment5":
+    case "SpoolFragment7":
+    case "SpoolFragment9":
+    case "SpoolFragment11":
+    case "SpoolFragment13":
+    case "SpoolFragment15":
+    case "SpoolFragment17":
+      return getUrl("Item", "SpoolFragment");
+
+    case "Spool1":
+    case "Spool2":
+    case "Spool3":
+    case "Spool4":
+    case "Spool5":
+    case "Spool6":
+    case "Spool7":
+    case "Spool8":
+    case "Spool9":
+      return getUrl("Item", "Spool");
+
     // Item
     case "BoneBottomSimpleKey":
       return getUrl("Item", "SimpleKey");
@@ -114,10 +137,28 @@ function getUrl(qualifier, id) {
       return getUrl("Skill", "ClingGrip");
     case "ClawlineTrans":
       return getUrl("Skill", "Clawline");
+    case "SharpdartTrans":
+      return getUrl("Skill", "Sharpdart");
+    case "ThreadStormTrans":
+      return getUrl("Skill", "ThreadStorm");
+    case "CrossStitchTrans":
+      return getUrl("Skill", "CrossStitch");
+    case "RuneRageTrans":
+      return getUrl("Skill", "RuneRage");
+    case "PaleNailsTrans":
+      return getUrl("Skill", "PaleNails");
 
     // Crest Transition
     case "ReaperCrestTrans":
-      return getUrl("Crest", "Reaper");
+      return getUrl("Crest", "ReaperCrest");
+    case "WandererCrestTrans":
+      return getUrl("Crest", "WandererCrest");
+    case "BeastCrestTrans":
+      return getUrl("Crest", "BeastCrest");
+    case "ArchitectCrestTrans":
+      return getUrl("Crest", "ArchitectCrest");
+    case "ShamanCrestTrans":
+      return getUrl("Crest", "ShamanCrest");
 
     // Area Transition
     case "EnterGreymoor":
@@ -151,6 +192,10 @@ function getUrl(qualifier, id) {
       return getUrl("Boss", "Phantom");
     case "EnterMemorium":
       return getUrl("Enemy", "Rhinogrund");
+    case "EnterUpperWormways":
+      return getUrl("Enemy", "Gromling");
+    case "HuntersMarchPostMiddleArenaTransition":
+      return getUrl("Enemy", "SkarrScout");
 
     // Boss Transition
     case "MossMotherTrans":
@@ -175,6 +220,10 @@ function getUrl(qualifier, id) {
       return getUrl("Enemy", "LeafGlider");
     case "EnterSeth":
       return getUrl("Boss", "Seth");
+    case "EnterBellEater":
+      return getUrl("Boss", "BellEater");
+    case "EnterVerdaniaCastle":
+      return getUrl("Boss", "CloverDancers");
 
     // Melody Transition
     case "VaultkeepersMelodyTrans":
@@ -320,6 +369,8 @@ function getUrl(qualifier, id) {
       return getUrl("Event", "SilkAndSoul");
     case "AbyssEscape":
       return getUrl("Event", "Act3Started");
+    case "VerdaniaLakeFountainOrbs":
+      return getUrl("Enemy", "Nuphar");
 
     // Hearts and Memories
     case "HeartNyleth":

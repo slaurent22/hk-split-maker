@@ -59,6 +59,15 @@ function getNameAndGroup({
     case "ArchitectsMelodyTrans":
     case "ConductorsMelodyTrans":
     case "ReaperCrestTrans":
+    case "WandererCrestTrans":
+    case "BeastCrestTrans":
+    case "ArchitectCrestTrans":
+    case "ShamanCrestTrans":
+    case "SharpdartTrans":
+    case "ThreadStormTrans":
+    case "CrossStitchTrans":
+    case "RuneRageTrans":
+    case "PaleNailsTrans":
       return [`${name} Exit`, qualifier];
   }
   return [name, qualifier];

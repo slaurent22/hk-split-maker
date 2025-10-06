@@ -23,7 +23,11 @@ import Lace1 from "./Boss/Lace.png";
 import Lace1Trans from "./Boss/Lace.png";
 import DeepDocksBell from "./Misc/Bell.png";
 import EnterWormways from "./Enemy/Grom.png";
+import EnterUpperWormways from "./Enemy/Gromling.png";
+import Sharpdart from "./Skill/Sharpdart.png";
+import SharpdartTrans from "./Skill/Sharpdart.png";
 import EnterHuntersMarch from "./Enemy/Skarrlid.png";
+import HuntersMarchPostMiddleArenaTransition from "./Enemy/SkarrScout.png";
 import EnterFarFields from "./Enemy/Fertid.png";
 import DriftersCloak from "./Skill/DriftersCloak.png";
 import DriftersCloakTrans from "./Skill/DriftersCloak.png";
@@ -32,6 +36,8 @@ import EnterGreymoor from "./Enemy/Craw.png";
 import GreymoorBell from "./Misc/Bell.png";
 import Moorwing from "./Boss/Moorwing.png";
 import MoorwingTrans from "./Boss/Moorwing.png";
+import ThreadStorm from "./Skill/ThreadStorm.png";
+import ThreadStormTrans from "./Skill/ThreadStorm.png";
 import EnterShellwood from "./Enemy/Phacia.png";
 import ClingGrip from "./Skill/ClingGrip.png";
 import ClingGripTrans from "./Skill/ClingGrip.png";
@@ -48,6 +54,10 @@ import LeaveMist from "./Enemy/Wraith.png";
 import EnterBilewater from "./Enemy/Stilkin.png";
 import EnterExhaustOrgan from "./Boss/Phantom.png";
 import Phantom from "./Boss/Phantom.png";
+import CrossStitch from "./Skill/CrossStitch.png";
+import CrossStitchTrans from "./Skill/CrossStitch.png";
+import RuneRage from "./Skill/RuneRage.png";
+import RuneRageTrans from "./Skill/RuneRage.png";
 import Act2Started from "./Event/Act2Started.png";
 import CogworkDancers from "./Boss/CogworkDancers.png";
 import WhisperingVaultsArena from "./Enemy/Vaultkeeper.png";
@@ -59,6 +69,8 @@ import EnterHighHallsArena from "./Enemy/Maestro.png";
 import HighHallsArena from "./Enemy/ChoirClapper.png";
 import EnterMemorium from "./Enemy/Rhinogrund.png";
 import Lace2 from "./Boss/Lace.png";
+import PaleNails from "./Skill/PaleNails.png";
+import PaleNailsTrans from "./Skill/PaleNails.png";
 import VaultkeepersMelody from "./Melody/VaultkeepersMelody.png";
 import VaultkeepersMelodyTrans from "./Melody/VaultkeepersMelody.png";
 import ArchitectsMelody from "./Melody/ArchitectsMelody.png";
@@ -90,7 +102,34 @@ import MaskShard17 from "./Item/MaskShard.png";
 import MaskShard18 from "./Item/MaskShard.png";
 import MaskShard19 from "./Item/MaskShard.png";
 import Mask5 from "./Item/Mask.png";
-import ReaperCrestTrans from "./Crest/Reaper.png";
+import SpoolFragment1 from "./Item/SpoolFragment.png";
+import Spool1 from "./Item/Spool.png";
+import SpoolFragment3 from "./Item/SpoolFragment.png";
+import Spool2 from "./Item/Spool.png";
+import SpoolFragment5 from "./Item/SpoolFragment.png";
+import Spool3 from "./Item/Spool.png";
+import SpoolFragment7 from "./Item/SpoolFragment.png";
+import Spool4 from "./Item/Spool.png";
+import SpoolFragment9 from "./Item/SpoolFragment.png";
+import Spool5 from "./Item/Spool.png";
+import SpoolFragment11 from "./Item/SpoolFragment.png";
+import Spool6 from "./Item/Spool.png";
+import SpoolFragment13 from "./Item/SpoolFragment.png";
+import Spool7 from "./Item/Spool.png";
+import SpoolFragment15 from "./Item/SpoolFragment.png";
+import Spool8 from "./Item/Spool.png";
+import SpoolFragment17 from "./Item/SpoolFragment.png";
+import Spool9 from "./Item/Spool.png";
+import ReaperCrest from "./Crest/ReaperCrest.png";
+import ReaperCrestTrans from "./Crest/ReaperCrest.png";
+import WandererCrest from "./Crest/WandererCrest.png";
+import WandererCrestTrans from "./Crest/WandererCrest.png";
+import BeastCrest from "./Crest/BeastCrest.png";
+import BeastCrestTrans from "./Crest/BeastCrest.png";
+import ArchitectCrest from "./Crest/ArchitectCrest.png";
+import ArchitectCrestTrans from "./Crest/ArchitectCrest.png";
+import ShamanCrest from "./Crest/ShamanCrest.png";
+import ShamanCrestTrans from "./Crest/ShamanCrest.png";
 import SavedFleaHuntersMarch from "./NPC/Flea.png";
 import SavedFleaBellhart from "./NPC/Flea.png";
 import SavedFleaMarrow from "./NPC/Flea.png";
@@ -157,6 +196,8 @@ import UnlockedPrinceCage from "./NPC/GreenPrince.png";
 import GreenPrinceInVerdania from "./NPC/GreenPrince.png";
 import SeenFleatopiaEmpty from "./NPC/Mooshka.png";
 import FaydownCloak from "./Skill/FaydownCloak.png";
+import EnterBellEater from "./Boss/BellEater.png";
+import BeastlingCall from "./Skill/BeastlingCall.png";
 import SilkSoar from "./Skill/SilkSoar.png";
 import EnterNylethMemory from "./Boss/Nyleth.png";
 import HeartNyleth from "./Item/PollenHeart.png";
@@ -165,9 +206,11 @@ import HeartKhann from "./Item/EncrustedHeart.png";
 import EnterKarmelitaMemory from "./Boss/Karmelita.png";
 import HeartKarmelita from "./Item/HuntersHeart.png";
 import EnterVerdaniaMemory from "./Enemy/LeafGlider.png";
+import EnterVerdaniaCastle from "./Boss/CloverDancers.png";
 import HeartClover from "./Item/ConjoinedHeart.png";
 import RedMemory from "./Item/Everbloom.png";
 import BellhouseKeyConversation from "./Item/BellhomeKey.png";
+import VerdaniaLakeFountainOrbs from "./Enemy/Nuphar.png";
 import VerdaniaOrbsCollected from "./Enemy/Verdanir.png";
 import Forebrothers from "./Boss/Forebrothers.png";
 import Groal from "./Boss/Groal.png";
@@ -222,7 +265,11 @@ export default {
   Lace1Trans,
   DeepDocksBell,
   EnterWormways,
+  EnterUpperWormways,
+  Sharpdart,
+  SharpdartTrans,
   EnterHuntersMarch,
+  HuntersMarchPostMiddleArenaTransition,
   EnterFarFields,
   DriftersCloak,
   DriftersCloakTrans,
@@ -231,6 +278,8 @@ export default {
   GreymoorBell,
   Moorwing,
   MoorwingTrans,
+  ThreadStorm,
+  ThreadStormTrans,
   EnterShellwood,
   ClingGrip,
   ClingGripTrans,
@@ -247,6 +296,10 @@ export default {
   EnterBilewater,
   EnterExhaustOrgan,
   Phantom,
+  CrossStitch,
+  CrossStitchTrans,
+  RuneRage,
+  RuneRageTrans,
   Act2Started,
   CogworkDancers,
   WhisperingVaultsArena,
@@ -258,6 +311,8 @@ export default {
   HighHallsArena,
   EnterMemorium,
   Lace2,
+  PaleNails,
+  PaleNailsTrans,
   VaultkeepersMelody,
   VaultkeepersMelodyTrans,
   ArchitectsMelody,
@@ -289,7 +344,34 @@ export default {
   MaskShard18,
   MaskShard19,
   Mask5,
+  SpoolFragment1,
+  Spool1,
+  SpoolFragment3,
+  Spool2,
+  SpoolFragment5,
+  Spool3,
+  SpoolFragment7,
+  Spool4,
+  SpoolFragment9,
+  Spool5,
+  SpoolFragment11,
+  Spool6,
+  SpoolFragment13,
+  Spool7,
+  SpoolFragment15,
+  Spool8,
+  SpoolFragment17,
+  Spool9,
+  ReaperCrest,
   ReaperCrestTrans,
+  WandererCrest,
+  WandererCrestTrans,
+  BeastCrest,
+  BeastCrestTrans,
+  ArchitectCrest,
+  ArchitectCrestTrans,
+  ShamanCrest,
+  ShamanCrestTrans,
   SavedFleaHuntersMarch,
   SavedFleaBellhart,
   SavedFleaMarrow,
@@ -356,6 +438,8 @@ export default {
   GreenPrinceInVerdania,
   SeenFleatopiaEmpty,
   FaydownCloak,
+  EnterBellEater,
+  BeastlingCall,
   SilkSoar,
   EnterNylethMemory,
   HeartNyleth,
@@ -364,9 +448,11 @@ export default {
   EnterKarmelitaMemory,
   HeartKarmelita,
   EnterVerdaniaMemory,
+  EnterVerdaniaCastle,
   HeartClover,
   RedMemory,
   BellhouseKeyConversation,
+  VerdaniaLakeFountainOrbs,
   VerdaniaOrbsCollected,
   Forebrothers,
   Groal,
