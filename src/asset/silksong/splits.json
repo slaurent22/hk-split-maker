@@ -139,12 +139,6 @@
     },
     {
         "alias": null,
-        "description": "Enter Upper Wormways (Transition)",
-        "key": "EnterUpperWormways",
-        "tooltip": "Splits on entering the vertical transition to the upper portion of Wormways (Crawl_03)"
-    },
-    {
-        "alias": null,
         "description": "Sharpdart (Skill)",
         "key": "Sharpdart",
         "tooltip": "Splits when obtaining Sharpdart"
@@ -160,12 +154,6 @@
         "description": "Enter Hunter's March (Transition)",
         "key": "EnterHuntersMarch",
         "tooltip": "Splits on entering Hunter's March in the room after the Skarrguard encounter"
-    },
-    {
-        "alias": null,
-        "description": "Hunter's March - Post-Middle Arena (Transition)",
-        "key": "HuntersMarchPostMiddleArenaTransition",
-        "tooltip": "Splits on transition to the room after the middle arena in Hunter's March"
     },
     {
         "alias": null,
@@ -1234,12 +1222,6 @@
         "description": "Enter Verdania Memory (Transition)",
         "key": "EnterVerdaniaMemory",
         "tooltip": "Splits when entering the Verdania Memory"
-    },
-    {
-        "alias": null,
-        "description": "Enter Verdania Castle (Transition)",
-        "key": "EnterVerdaniaCastle",
-        "tooltip": "Splits when entering the room containing the Clover Dancers boss"
     },
     {
         "alias": "CollectedHeartClover",
