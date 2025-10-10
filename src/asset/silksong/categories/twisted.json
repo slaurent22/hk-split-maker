@@ -24,15 +24,12 @@
         "ArchitectsMelody",
         "ConductorsMelody",
         "Lace2",
-        "ManualSplit",
+        "GainedCurse",
         "EndingSplit"
     ],
     "names": {
         "EndingSplit": "Grand Mother Silk",
-        "ManualSplit": [
-            "Twisted Bud (Manual Split)",
-            "Get Cursed (Manual Split)"
-        ]
+        "ManualSplit": "Twisted Bud (Manual Split)"
     },
     "gameName": "Hollow Knight: Silksong",
     "variables": {
