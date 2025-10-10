@@ -263,6 +263,8 @@ import DruidsEye from "./Tool/DruidsEye.png";
 import MagnetiteBrooch from "./Tool/MagnetiteBrooch.png";
 import ShardPendant from "./Tool/ShardPendant.png";
 import StraightPin from "./Tool/StraightPin.png";
+import Weavelight from "./Tool/Weavelight.png";
+import Voltvessels from "./Tool/Voltvessels.png";
 export default {
   ManualSplit,
   StartNewGame,
@@ -527,4 +529,6 @@ export default {
   MagnetiteBrooch,
   ShardPendant,
   StraightPin,
+  Weavelight,
+  Voltvessels,
 };

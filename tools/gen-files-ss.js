@@ -438,6 +438,8 @@ function createIconImports() {
   output += `import MagnetiteBrooch from "./Tool/MagnetiteBrooch.png";\n`;
   output += `import ShardPendant from "./Tool/ShardPendant.png";\n`;
   output += `import StraightPin from "./Tool/StraightPin.png";\n`;
+  output += `import Weavelight from "./Tool/Weavelight.png";\n`;
+  output += `import Voltvessels from "./Tool/Voltvessels.png";\n`;
 
   // console.log(output);
   output += "export default {\n";
@@ -450,6 +452,8 @@ function createIconImports() {
   output += `  MagnetiteBrooch,\n`;
   output += `  ShardPendant,\n`;
   output += `  StraightPin,\n`;
+  output += `  Weavelight,\n`;
+  output += `  Voltvessels,\n`;
   output += "};\n";
 
   // console.log(output);

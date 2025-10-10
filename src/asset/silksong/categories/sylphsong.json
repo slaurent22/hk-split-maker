@@ -15,9 +15,9 @@
         "GreymoorStation",
         "EnterMist",
         "GrandBellwayStation",
-        "Menu",
-        "ManualSplit",
-        "ManualSplit",
+        "NeedleStrike",
+        "WandererCrestTrans",
+        "BeastCrestTrans",
         "DeepDocksStation",
         "ManualSplit",
         "ManualSplit",
@@ -25,31 +25,23 @@
         "Menu",
         "Trobbio",
         "Clawline",
-        "ManualSplit",
-        "ManualSplit",
+        "ArchitectCrestTrans",
+        "EnterBilewater",
         "Menu",
-        "ManualSplit",
-        "ManualSplit",
+        "GainedCurse",
+        "WitchCrestTrans",
         "ReaperCrestTrans",
-        "ManualSplit"
+        "Sylphsong"
     ],
     "names": {
+        "ManualSplit": ["Weavelight (Manual)", "Voltvessels (Manual)"],
         "Menu": [
-            "Needle Strike (Quitout)",
             "Left Citadel Rosaries (Quitout)",
             "Upper Bilewater Locket (Quitout)"
-        ],
-        "ManualSplit": [
-            "Wanderer Crest (Manual)",
-            "Beast Crest (Manual)",
-            "Weavelight (Manual)",
-            "Voltvessels (Manual)",
-            "Architect Crest (Manual)",
-            "Enter Bilewater (Manual)",
-            "Cursed (Manual)",
-            "Witch Crest (Manual)",
-            "Sylphsong"
         ]
+    },
+    "icons": {
+        "ManualSplit": ["Weavelight", "Voltvessels"]
     },
     "gameName": "Hollow Knight: Silksong Category Extensions"
 }
