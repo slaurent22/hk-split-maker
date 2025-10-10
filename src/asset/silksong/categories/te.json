@@ -55,6 +55,7 @@
         "SavedFleaBlastedSteps",
         "SavedFleaSandsOfKarak",
         "Voltvyrm",
+        "ShermaReturned",
         "SeenFleatopiaEmpty",
         "ArchitectsMelody",
         "ConductorsMelody",
@@ -81,6 +82,7 @@
         "EndingSplit",
         "GreenPrinceInVerdania",
         "SilkSoar",
+        "AbyssEscape",
         "EnterSeth",
         "Seth",
         "EnterNylethMemory",
@@ -88,6 +90,7 @@
         "EnterKarmelitaMemory",
         "HeartKarmelita",
         "EnterVerdaniaMemory",
+        "VerdaniaOrbsCollected",
         "HeartClover",
         "RedMemory",
         "EndingSplit"
