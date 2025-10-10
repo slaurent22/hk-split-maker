@@ -257,7 +257,7 @@ import Seth from "./Boss/Seth.png";
 import AbyssEscape from "./Event/Act3Started.png";
 import BallowMoved from "./NPC/Ballow.png";
 import Act3Started from "./Event/Act3Started.png";
-import SisteroftheVoid from "./Achievement/SisteroftheVoid.png";
+import LostLace from "./Boss/LostLace.png";
 import Compass from "./Tool/Compass.png";
 import DruidsEye from "./Tool/DruidsEye.png";
 import MagnetiteBrooch from "./Tool/MagnetiteBrooch.png";
@@ -523,7 +523,7 @@ export default {
   AbyssEscape,
   BallowMoved,
   Act3Started,
-  SisteroftheVoid,
+  LostLace,
   Compass,
   DruidsEye,
   MagnetiteBrooch,

@@ -432,7 +432,7 @@ function createIconImports() {
   }
 
   // non-split icons
-  output += `import SisteroftheVoid from "./Achievement/SisteroftheVoid.png";\n`;
+  output += `import LostLace from "./Boss/LostLace.png";\n`;
   output += `import Compass from "./Tool/Compass.png";\n`;
   output += `import DruidsEye from "./Tool/DruidsEye.png";\n`;
   output += `import MagnetiteBrooch from "./Tool/MagnetiteBrooch.png";\n`;
@@ -446,7 +446,7 @@ function createIconImports() {
   for (const { id } of Splits) {
     output += `  ${id},\n`;
   }
-  output += `  SisteroftheVoid,\n`;
+  output += `  LostLace,\n`;
   output += `  Compass,\n`;
   output += `  DruidsEye,\n`;
   output += `  MagnetiteBrooch,\n`;
