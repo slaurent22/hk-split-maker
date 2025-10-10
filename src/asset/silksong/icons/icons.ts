@@ -8,8 +8,10 @@ import EndingA from "./Boss/GrandMotherSilk.png";
 import Menu from "./Item/Map.png";
 import PlayerDeath from "./Misc/Hornet.png";
 import AnyTransition from "./Misc/Hornet.png";
+import TransitionExcludingDiscontinuities from "./Misc/Hornet.png";
 import MossMother from "./Boss/MossMother.png";
 import MossMotherTrans from "./Boss/MossMother.png";
+import EnterBoneBottom from "./NPC/Pebb.png";
 import EnterMosshome from "./Enemy/OvergrownPilgrim.png";
 import SilkSpear from "./Skill/SilkSpear.png";
 import SilkSpearTrans from "./Skill/SilkSpear.png";
@@ -46,8 +48,11 @@ import EnterBellhart from "./Enemy/Furm.png";
 import Widow from "./Boss/Widow.png";
 import BellhartBell from "./Misc/Bell.png";
 import EnterBlastedSteps from "./Enemy/Judge.png";
+import NeedleStrike from "./Skill/NeedleStrike.png";
+import NeedleStrikeTrans from "./Skill/NeedleStrike.png";
 import EnterLastJudge from "./Boss/LastJudge.png";
 import LastJudge from "./Boss/LastJudge.png";
+import EnterCitadelFrontGate from "./Event/Act2Started.png";
 import EnterSinnersRoad from "./Enemy/Muckroach.png";
 import EnterMist from "./Enemy/Wraith.png";
 import LeaveMist from "./Enemy/Wraith.png";
@@ -60,6 +65,7 @@ import RuneRage from "./Skill/RuneRage.png";
 import RuneRageTrans from "./Skill/RuneRage.png";
 import Act2Started from "./Event/Act2Started.png";
 import CogworkDancers from "./Boss/CogworkDancers.png";
+import EnterWhisperingVaults from "./Enemy/Lampbearer.png";
 import WhisperingVaultsArena from "./Enemy/Vaultkeeper.png";
 import Trobbio from "./Boss/Trobbio.png";
 import TrobbioTrans from "./Boss/Trobbio.png";
@@ -68,6 +74,7 @@ import EnterHighHalls from "./Enemy/Minister.png";
 import EnterHighHallsArena from "./Enemy/Maestro.png";
 import HighHallsArena from "./Enemy/ChoirClapper.png";
 import EnterMemorium from "./Enemy/Rhinogrund.png";
+import EnterPutrifiedDucts from "./Enemy/Barnak.png";
 import Lace2 from "./Boss/Lace.png";
 import PaleNails from "./Skill/PaleNails.png";
 import PaleNailsTrans from "./Skill/PaleNails.png";
@@ -120,6 +127,14 @@ import SpoolFragment15 from "./Item/SpoolFragment.png";
 import Spool8 from "./Item/Spool.png";
 import SpoolFragment17 from "./Item/SpoolFragment.png";
 import Spool9 from "./Item/Spool.png";
+import ToolPouch1 from "./Item/ToolPouch.png";
+import ToolPouch2 from "./Item/ToolPouch.png";
+import ToolPouch3 from "./Item/ToolPouch.png";
+import ToolPouch4 from "./Item/ToolPouch.png";
+import CraftingKit1 from "./Item/CraftingKit.png";
+import CraftingKit2 from "./Item/CraftingKit.png";
+import CraftingKit3 from "./Item/CraftingKit.png";
+import CraftingKit4 from "./Item/CraftingKit.png";
 import ReaperCrest from "./Crest/ReaperCrest.png";
 import ReaperCrestTrans from "./Crest/ReaperCrest.png";
 import WandererCrest from "./Crest/WandererCrest.png";
@@ -128,8 +143,14 @@ import BeastCrest from "./Crest/BeastCrest.png";
 import BeastCrestTrans from "./Crest/BeastCrest.png";
 import ArchitectCrest from "./Crest/ArchitectCrest.png";
 import ArchitectCrestTrans from "./Crest/ArchitectCrest.png";
+import CurseCrest from "./Event/Cursed.png";
+import GainedCurse from "./Event/Cursed.png";
+import WitchCrest from "./Crest/WitchCrest.png";
+import WitchCrestTrans from "./Crest/WitchCrest.png";
 import ShamanCrest from "./Crest/ShamanCrest.png";
 import ShamanCrestTrans from "./Crest/ShamanCrest.png";
+import Sylphsong from "./Skill/Sylphsong.png";
+import SylphsongTrans from "./Skill/Sylphsong.png";
 import SavedFleaHuntersMarch from "./NPC/Flea.png";
 import SavedFleaBellhart from "./NPC/Flea.png";
 import SavedFleaMarrow from "./NPC/Flea.png";
@@ -199,6 +220,7 @@ import FaydownCloak from "./Skill/FaydownCloak.png";
 import EnterBellEater from "./Boss/BellEater.png";
 import BeastlingCall from "./Skill/BeastlingCall.png";
 import SilkSoar from "./Skill/SilkSoar.png";
+import ElegyOfTheDeep from "./Skill/ElegyOfTheDeep.png";
 import EnterNylethMemory from "./Boss/Nyleth.png";
 import HeartNyleth from "./Item/PollenHeart.png";
 import EnterKhannMemory from "./Boss/Khann.png";
@@ -250,8 +272,10 @@ export default {
   Menu,
   PlayerDeath,
   AnyTransition,
+  TransitionExcludingDiscontinuities,
   MossMother,
   MossMotherTrans,
+  EnterBoneBottom,
   EnterMosshome,
   SilkSpear,
   SilkSpearTrans,
@@ -288,8 +312,11 @@ export default {
   Widow,
   BellhartBell,
   EnterBlastedSteps,
+  NeedleStrike,
+  NeedleStrikeTrans,
   EnterLastJudge,
   LastJudge,
+  EnterCitadelFrontGate,
   EnterSinnersRoad,
   EnterMist,
   LeaveMist,
@@ -302,6 +329,7 @@ export default {
   RuneRageTrans,
   Act2Started,
   CogworkDancers,
+  EnterWhisperingVaults,
   WhisperingVaultsArena,
   Trobbio,
   TrobbioTrans,
@@ -310,6 +338,7 @@ export default {
   EnterHighHallsArena,
   HighHallsArena,
   EnterMemorium,
+  EnterPutrifiedDucts,
   Lace2,
   PaleNails,
   PaleNailsTrans,
@@ -362,6 +391,14 @@ export default {
   Spool8,
   SpoolFragment17,
   Spool9,
+  ToolPouch1,
+  ToolPouch2,
+  ToolPouch3,
+  ToolPouch4,
+  CraftingKit1,
+  CraftingKit2,
+  CraftingKit3,
+  CraftingKit4,
   ReaperCrest,
   ReaperCrestTrans,
   WandererCrest,
@@ -370,8 +407,14 @@ export default {
   BeastCrestTrans,
   ArchitectCrest,
   ArchitectCrestTrans,
+  CurseCrest,
+  GainedCurse,
+  WitchCrest,
+  WitchCrestTrans,
   ShamanCrest,
   ShamanCrestTrans,
+  Sylphsong,
+  SylphsongTrans,
   SavedFleaHuntersMarch,
   SavedFleaBellhart,
   SavedFleaMarrow,
@@ -441,6 +484,7 @@ export default {
   EnterBellEater,
   BeastlingCall,
   SilkSoar,
+  ElegyOfTheDeep,
   EnterNylethMemory,
   HeartNyleth,
   EnterKhannMemory,

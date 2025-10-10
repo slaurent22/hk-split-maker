@@ -49,6 +49,12 @@
     },
     {
         "alias": null,
+        "description": "Transition excluding discontinuities (Transition)",
+        "key": "TransitionExcludingDiscontinuities",
+        "tooltip": "Splits when entering a transition (excludes discontinuities including save states and deaths)"
+    },
+    {
+        "alias": null,
         "description": "Moss Mother (Boss)",
         "key": "MossMother",
         "tooltip": "Splits when killing Moss Mother"
@@ -58,6 +64,12 @@
         "description": "Moss Mother (Transition)",
         "key": "MossMotherTrans",
         "tooltip": "Splits on the transition after killing Moss Mother"
+    },
+    {
+        "alias": null,
+        "description": "Enter Bone Bottom (Transition)",
+        "key": "EnterBoneBottom",
+        "tooltip": "Splits when entering Bone Bottom"
     },
     {
         "alias": null,
@@ -139,6 +151,12 @@
     },
     {
         "alias": null,
+        "description": "Enter Upper Wormways (Transition)",
+        "key": "EnterUpperWormways",
+        "tooltip": "Splits on entering the vertical transition to the upper portion of Wormways (Crawl_03)"
+    },
+    {
+        "alias": null,
         "description": "Sharpdart (Skill)",
         "key": "Sharpdart",
         "tooltip": "Splits when obtaining Sharpdart"
@@ -154,6 +172,12 @@
         "description": "Enter Hunter's March (Transition)",
         "key": "EnterHuntersMarch",
         "tooltip": "Splits on entering Hunter's March in the room after the Skarrguard encounter"
+    },
+    {
+        "alias": null,
+        "description": "Hunter's March - Post-Middle Arena (Transition)",
+        "key": "HuntersMarchPostMiddleArenaTransition",
+        "tooltip": "Splits on transition to the room after the middle arena in Hunter's March"
     },
     {
         "alias": null,
@@ -265,6 +289,18 @@
     },
     {
         "alias": null,
+        "description": "Needle Strike (Skill)",
+        "key": "NeedleStrike",
+        "tooltip": "Splits when obtaining Needle Strike (Charge Slash)"
+    },
+    {
+        "alias": null,
+        "description": "Needle Strike (Transition)",
+        "key": "NeedleStrikeTrans",
+        "tooltip": "Splits on the transition after obtaining Needle Strike (Charge Slash)"
+    },
+    {
+        "alias": null,
         "description": "Enter Last Judge (Transition)",
         "key": "EnterLastJudge",
         "tooltip": "Splits when entering the Last Judge boss arena from the Blasted Steps"
@@ -274,6 +310,12 @@
         "description": "Last Judge (Boss)",
         "key": "LastJudge",
         "tooltip": "Splits when killing Last Judge"
+    },
+    {
+        "alias": null,
+        "description": "Enter Citadel Front Gate (Transition)",
+        "key": "EnterCitadelFrontGate",
+        "tooltip": "Splits when entering the Citadel past the Last Judge arena"
     },
     {
         "alias": null,
@@ -348,6 +390,12 @@
         "tooltip": "Splits when killing Cogwork Dancers"
     },
     {
+        "alias": null,
+        "description": "Enter Whispering Vaults (Transition)",
+        "key": "EnterWhisperingVaults",
+        "tooltip": "Splits when entering the rooms where the Whispering Vaults area text appears, past the arena or from Songclave"
+    },
+    {
         "alias": "WhisperingVaultsGauntlet",
         "description": "Whispering Vaults Arena (Mini Boss)",
         "key": "WhisperingVaultsArena",
@@ -391,9 +439,15 @@
     },
     {
         "alias": null,
-        "description": "Enter Memorium",
+        "description": "Enter Memorium (Transition)",
         "key": "EnterMemorium",
         "tooltip": "Splits when entering the Memorium"
+    },
+    {
+        "alias": null,
+        "description": "Enter Putrified Ducts (Transition)",
+        "key": "EnterPutrifiedDucts",
+        "tooltip": "Splits when entering the Putrified Ducts"
     },
     {
         "alias": null,
@@ -709,6 +763,54 @@
     },
     {
         "alias": null,
+        "description": "Tool Pouch Level 1 (Upgrade)",
+        "key": "ToolPouch1",
+        "tooltip": "Splits when getting the 1st tool pouch capacity upgrade"
+    },
+    {
+        "alias": null,
+        "description": "Tool Pouch Level 2 (Upgrade)",
+        "key": "ToolPouch2",
+        "tooltip": "Splits when getting the 2nd tool pouch capacity upgrade"
+    },
+    {
+        "alias": null,
+        "description": "Tool Pouch Level 3 (Upgrade)",
+        "key": "ToolPouch3",
+        "tooltip": "Splits when getting the 3rd tool pouch capacity upgrade"
+    },
+    {
+        "alias": null,
+        "description": "Tool Pouch Level 4 (Upgrade)",
+        "key": "ToolPouch4",
+        "tooltip": "Splits when getting the 4th tool pouch capacity upgrade"
+    },
+    {
+        "alias": null,
+        "description": "Crafting Kit Level 1 (Upgrade)",
+        "key": "CraftingKit1",
+        "tooltip": "Splits when getting the 1st crafting kit damage upgrade"
+    },
+    {
+        "alias": null,
+        "description": "Crafting Kit Level 2 (Upgrade)",
+        "key": "CraftingKit2",
+        "tooltip": "Splits when getting the 2nd crafting kit damage upgrade"
+    },
+    {
+        "alias": null,
+        "description": "Crafting Kit Level 3 (Upgrade)",
+        "key": "CraftingKit3",
+        "tooltip": "Splits when getting the 3rd crafting kit damage upgrade"
+    },
+    {
+        "alias": null,
+        "description": "Crafting Kit Level 4 (Upgrade)",
+        "key": "CraftingKit4",
+        "tooltip": "Splits when getting the 4th crafting kit damage upgrade"
+    },
+    {
+        "alias": null,
         "description": "Reaper Crest (Crest)",
         "key": "ReaperCrest",
         "tooltip": "Splits when the Reaper Crest is unlocked"
@@ -757,6 +859,30 @@
     },
     {
         "alias": null,
+        "description": "Curse Crest (Crest)",
+        "key": "CurseCrest",
+        "tooltip": "Splits when the Curse crest is applied"
+    },
+    {
+        "alias": null,
+        "description": "Gained Curse (Event)",
+        "key": "GainedCurse",
+        "tooltip": "Splits when Hornet first gains control after breaking out of the Curse Crest tree"
+    },
+    {
+        "alias": null,
+        "description": "Witch Crest (Crest)",
+        "key": "WitchCrest",
+        "tooltip": "Splits when the Cursed Crest is transformed into the Witch Crest"
+    },
+    {
+        "alias": null,
+        "description": "Witch Crest (Transition)",
+        "key": "WitchCrestTrans",
+        "tooltip": "Splits when leaving Yarnaby's room after the Witch Crest is obtained"
+    },
+    {
+        "alias": null,
         "description": "Shaman Crest (Crest)",
         "key": "ShamanCrest",
         "tooltip": "Splits when the Shaman Crest is unlocked"
@@ -766,6 +892,18 @@
         "description": "Shaman Crest (Transition)",
         "key": "ShamanCrestTrans",
         "tooltip": "Splits when leaving the room with the Shaman Crest unlocked"
+    },
+    {
+        "alias": null,
+        "description": "Sylphsong (Skill)",
+        "key": "Sylphsong",
+        "tooltip": "Splits when obtaining Sylphsong after binding Eva"
+    },
+    {
+        "alias": null,
+        "description": "Sylphsong (Transition)",
+        "key": "SylphsongTrans",
+        "tooltip": "Splits when leaving the room after obtaining Sylphsong"
     },
     {
         "alias": null,
@@ -1183,6 +1321,12 @@
     },
     {
         "alias": null,
+        "description": "Elegy of the Deep (Skill)",
+        "key": "ElegyOfTheDeep",
+        "tooltip": "Splits when obtaining Elegy of the Deep"
+    },
+    {
+        "alias": null,
         "description": "Enter Nyleth Memory (Transition)",
         "key": "EnterNylethMemory",
         "tooltip": "Splits when entering Nyleth's memory"
@@ -1222,6 +1366,12 @@
         "description": "Enter Verdania Memory (Transition)",
         "key": "EnterVerdaniaMemory",
         "tooltip": "Splits when entering the Verdania Memory"
+    },
+    {
+        "alias": null,
+        "description": "Enter Verdania Castle (Transition)",
+        "key": "EnterVerdaniaCastle",
+        "tooltip": "Splits when entering the room containing the Clover Dancers boss"
     },
     {
         "alias": "CollectedHeartClover",

@@ -59,6 +59,7 @@ function getUrl(qualifier, id) {
     case "PlayerDeath":
     case "AnyTransition":
     case "Act1Start":
+    case "TransitionExcludingDiscontinuities":
       return getUrl("Misc", "Hornet");
 
     // Menu
@@ -126,6 +127,18 @@ function getUrl(qualifier, id) {
     case "BoneBottomSimpleKey":
       return getUrl("Item", "SimpleKey");
 
+    case "ToolPouch1":
+    case "ToolPouch2":
+    case "ToolPouch3":
+    case "ToolPouch4":
+      return getUrl("Item", "ToolPouch");
+
+    case "CraftingKit1":
+    case "CraftingKit2":
+    case "CraftingKit3":
+    case "CraftingKit4":
+      return getUrl("Item", "CraftingKit");
+
     // Skill Transition
     case "SilkSpearTrans":
       return getUrl("Skill", "SilkSpear");
@@ -147,6 +160,10 @@ function getUrl(qualifier, id) {
       return getUrl("Skill", "RuneRage");
     case "PaleNailsTrans":
       return getUrl("Skill", "PaleNails");
+    case "NeedleStrikeTrans":
+      return getUrl("Skill", "NeedleStrike");
+    case "SylphsongTrans":
+      return getUrl("Skill", "Sylphsong");
 
     // Crest Transition
     case "ReaperCrestTrans":
@@ -159,6 +176,8 @@ function getUrl(qualifier, id) {
       return getUrl("Crest", "ArchitectCrest");
     case "ShamanCrestTrans":
       return getUrl("Crest", "ShamanCrest");
+    case "WitchCrestTrans":
+      return getUrl("Crest", "WitchCrest");
 
     // Area Transition
     case "EnterGreymoor":
@@ -196,6 +215,14 @@ function getUrl(qualifier, id) {
       return getUrl("Enemy", "Gromling");
     case "HuntersMarchPostMiddleArenaTransition":
       return getUrl("Enemy", "SkarrScout");
+    case "EnterBoneBottom":
+      return getUrl("NPC", "Pebb");
+    case "EnterCitadelFrontGate":
+      return getUrl("Event", "Act2Started");
+    case "EnterWhisperingVaults":
+      return getUrl("Enemy", "Lampbearer");
+    case "EnterPutrifiedDucts":
+      return getUrl("Enemy", "Barnak");
 
     // Boss Transition
     case "MossMotherTrans":
@@ -371,6 +398,9 @@ function getUrl(qualifier, id) {
       return getUrl("Event", "Act3Started");
     case "VerdaniaLakeFountainOrbs":
       return getUrl("Enemy", "Nuphar");
+    case "CurseCrest":
+    case "GainedCurse":
+      return getUrl("Event", "Cursed");
 
     // Hearts and Memories
     case "HeartNyleth":

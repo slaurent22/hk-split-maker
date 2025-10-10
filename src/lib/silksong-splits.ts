@@ -68,6 +68,9 @@ function getNameAndGroup({
     case "CrossStitchTrans":
     case "RuneRageTrans":
     case "PaleNailsTrans":
+    case "NeedleStrikeTrans":
+    case "WitchCrestTrans":
+    case "SylphsongTrans":
       return [`${name} Exit`, qualifier];
   }
   return [name, qualifier];
