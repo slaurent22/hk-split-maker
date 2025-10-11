@@ -1,0 +1,18 @@
+{
+    "categoryName": "Any%",
+    "splitIds": [
+        "StartNewGame",
+        "EnterBoneBottom",
+        "EnterBlastedSteps",
+        "EnterCitadelFrontGate",
+        "ChoralChambersTube",
+        "EndingSplit"
+    ],
+    "names": {
+        "EndingSplit": "Grand Mother Silk"
+    },
+    "gameName": "Hollow Knight: Silksong",
+    "variables": {
+        "Any% Subcategory": "All Glitches"
+    }
+}

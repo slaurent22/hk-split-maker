@@ -51,6 +51,13 @@
             "data": {}
         }
     ],
+    "Glitched": [
+        {
+            "fileName": "any-ag",
+            "displayName": "Any% (All Glitches)",
+            "data": {}
+        }
+    ],
     "Category Extensions": [
         {
             "fileName": "5-tools",
