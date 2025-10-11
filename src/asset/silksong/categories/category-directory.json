@@ -3,22 +3,30 @@
         {
             "fileName": "100",
             "displayName": "100%",
-            "data": {}
+            "data": {
+                "routeNotesURL": "https://app.milanote.com/1UWRKC16EY1t7x/detailed-route-v4?p=4KWVkAUB4ds"
+            }
         },
         {
             "fileName": "any-bells",
             "displayName": "Any% (Bells Route)",
-            "data": {}
+            "data": {
+                "routeNotesURL": "https://docs.google.com/document/d/1OwFO5OSDMIZWn24Jm6f14QtfF7145Aom5T-exSffINI/edit?tab=t.gxdxsxf2j77q"
+            }
         },
         {
             "fileName": "any-fleas",
             "displayName": "Any% (Fleas Route)",
-            "data": {}
+            "data": {
+                "routeNotesURL": "https://drive.google.com/file/d/1PB5wgN88NnyAI8ZdPe9Zzn812-vgOp0j/view"
+            }
         },
         {
             "fileName": "any-mist",
             "displayName": "Any% (Mist Route)",
-            "data": {}
+            "data": {
+                "routeNotesURL": "https://docs.google.com/document/d/1OwFO5OSDMIZWn24Jm6f14QtfF7145Aom5T-exSffINI/edit?tab=t.0"
+            }
         },
         {
             "fileName": "judgement",
@@ -33,12 +41,16 @@
         {
             "fileName": "low",
             "displayName": "Low%",
-            "data": {}
+            "data": {
+                "routeNotesURL": "https://docs.google.com/document/d/1mwzi3iZh_tu0_E4a9ldDLk4e7XvYJrVvIaOJA1i_EJk"
+            }
         },
         {
             "fileName": "te",
             "displayName": "True Ending",
-            "data": {}
+            "data": {
+                "routeNotesURL": "https://docs.google.com/document/d/1wU-HvUALzYgTV2lGot_nrITouoHhJzADaXtgJawb4_Y"
+            }
         },
         {
             "fileName": "twisted",
