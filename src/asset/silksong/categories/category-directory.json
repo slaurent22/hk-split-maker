@@ -44,11 +44,6 @@
             "fileName": "twisted",
             "displayName": "Twisted%",
             "data": {}
-        },
-        {
-            "fileName": "room-timer",
-            "displayName": "Room Timer",
-            "data": {}
         }
     ],
     "Glitched": [
@@ -58,6 +53,14 @@
             "data": {}
         }
     ],
+    "Individual Level": [
+        {
+            "fileName": "room-timer",
+            "displayName": "Room Timer",
+            "data": {}
+        }
+    ],
+    "Mods": [],
     "Category Extensions": [
         {
             "fileName": "5-tools",

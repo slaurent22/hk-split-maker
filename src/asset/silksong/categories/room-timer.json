@@ -1,5 +1,11 @@
 {
     "categoryName": "Room Timer",
-    "splitIds": ["AnyTransition", "AnyTransition"],
+    "splitIds": [
+        "TransitionExcludingDiscontinuities",
+        "TransitionExcludingDiscontinuities"
+    ],
+    "names": {
+        "TransitionExcludingDiscontinuities": ["Exit Room"]
+    },
     "gameName": "Hollow Knight: Silksong"
 }
