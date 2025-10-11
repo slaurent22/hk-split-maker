@@ -46,6 +46,13 @@
             }
         },
         {
+            "fileName": "low-te",
+            "displayName": "Low% True Ending",
+            "data": {
+                "routeNotesURL": "https://docs.google.com/document/d/1To9dVt89HbOxghuxU-wRUELeiuw1j07IcSvGKLTO-aU"
+            }
+        },
+        {
             "fileName": "te",
             "displayName": "True Ending",
             "data": {
