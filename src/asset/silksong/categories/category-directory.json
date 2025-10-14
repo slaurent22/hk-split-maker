@@ -82,6 +82,11 @@
     "Mods": [],
     "Category Extensions": [
         {
+            "fileName": "2-spool-fragments",
+            "displayName": "2 Spool Fragments",
+            "data": {}
+        },
+        {
             "fileName": "3-memory-lockets",
             "displayName": "3 Memory Lockets",
             "data": {}
