@@ -171,7 +171,7 @@
         "alias": null,
         "description": "Enter Hunter's March (Transition)",
         "key": "EnterHuntersMarch",
-        "tooltip": "Splits on entering Hunter's March in the room after the Skarrguard encounter"
+        "tooltip": "Splits on entering a Hunter's March transition with area text (includes post-Skarrguard room and tall room)"
     },
     {
         "alias": null,
@@ -202,6 +202,18 @@
         "description": "Fourth Chorus (Boss)",
         "key": "FourthChorus",
         "tooltip": "Splits when killing Fourth Chorus"
+    },
+    {
+        "alias": null,
+        "description": "Gurr the Outcast Encountered (Boss)",
+        "key": "GurrTheOutcastEncountered",
+        "tooltip": "Splits when encountering Gurr the Outcast"
+    },
+    {
+        "alias": null,
+        "description": "Gurr the Outcast (Boss)",
+        "key": "GurrTheOutcast",
+        "tooltip": "Splits when Gurr the Outcast is defeated"
     },
     {
         "alias": null,
@@ -339,7 +351,7 @@
         "alias": null,
         "description": "Enter Bilewater (Transition)",
         "key": "EnterBilewater",
-        "tooltip": "Splits when entering Bilewater from Sinner's Road or Whispering Vaults"
+        "tooltip": "Splits when entering a Bilewater room with area text (excludes outer Exhaust Organ room)"
     },
     {
         "alias": null,
@@ -367,6 +379,48 @@
     },
     {
         "alias": null,
+        "description": "Enter The Slab (Transition)",
+        "key": "EnterTheSlab",
+        "tooltip": "Splits when entering the Slab's front entrance"
+    },
+    {
+        "alias": null,
+        "description": "Key of Indolent (Item)",
+        "key": "SlabKeyIndolent",
+        "tooltip": "Splits when you obtain the Indolent slab key"
+    },
+    {
+        "alias": null,
+        "description": "Key of Heretic (Item)",
+        "key": "SlabKeyHeretic",
+        "tooltip": "Splits when you obtain the Heretic slab key"
+    },
+    {
+        "alias": null,
+        "description": "Key of Apostate (Item)",
+        "key": "SlabKeyApostate",
+        "tooltip": "Splits when you obtain the Apostate slab key"
+    },
+    {
+        "alias": null,
+        "description": "Enter First Sinner (Transition)",
+        "key": "EnterFirstSinner",
+        "tooltip": "Splits when entering the First Sinner's boss arena"
+    },
+    {
+        "alias": null,
+        "description": "First Sinner Encountered (Boss)",
+        "key": "FirstSinnerEncountered",
+        "tooltip": "Splits when the First Sinner boss is activated the first time after binding"
+    },
+    {
+        "alias": null,
+        "description": "First Sinner (Boss)",
+        "key": "FirstSinner",
+        "tooltip": "Splits when defeating the First Sinner, after the memory sequence"
+    },
+    {
+        "alias": null,
         "description": "Rune Rage (Skill)",
         "key": "RuneRage",
         "tooltip": "Splits when obtaining Rune Rage"
@@ -376,6 +430,18 @@
         "description": "Rune Rage (Transition)",
         "key": "RuneRageTrans",
         "tooltip": "Splits on the transition after obtaining Rune Rage"
+    },
+    {
+        "alias": null,
+        "description": "Enter Mount Fay (Transition)",
+        "key": "EnterMountFay",
+        "tooltip": "Splits when entering Mount Fay"
+    },
+    {
+        "alias": null,
+        "description": "Enter Brightvein (Transition)",
+        "key": "EnterBrightvein",
+        "tooltip": "Splits when entering the Brightvein sub-area"
     },
     {
         "alias": null,
@@ -447,7 +513,7 @@
         "alias": null,
         "description": "Enter Putrified Ducts (Transition)",
         "key": "EnterPutrifiedDucts",
-        "tooltip": "Splits when entering the Putrified Ducts"
+        "tooltip": "Splits when entering the Putrified Ducts in a room with area text (excludes Huntress room, includes tall room)"
     },
     {
         "alias": null,
@@ -1525,12 +1591,6 @@
     },
     {
         "alias": null,
-        "description": "Completed Abyss Escape (Event)",
-        "key": "AbyssEscape",
-        "tooltip": "Splits after completing the Abyss Escape"
-    },
-    {
-        "alias": null,
         "description": "Ballow Moved (Event)",
         "key": "BallowMoved",
         "tooltip": "Splits when Ballow moves to the Diving Bell"
@@ -1540,5 +1600,35 @@
         "description": "Act 3 Start (Event)",
         "key": "Act3Started",
         "tooltip": "Splits upon entering Act 3"
+    },
+    {
+        "alias": null,
+        "description": "Diving Bell Abyss Entry (Transition)",
+        "key": "DivingBellAbyssTrans",
+        "tooltip": "Splits when the Diving Bell enters the Abyss"
+    },
+    {
+        "alias": null,
+        "description": "Enter Abyss (Transition)",
+        "key": "EnterAbyss",
+        "tooltip": "Splits when entering the Abyss in a room with area text"
+    },
+    {
+        "alias": null,
+        "description": "Completed Abyss Escape (Event)",
+        "key": "AbyssEscape",
+        "tooltip": "Splits after completing the Abyss Escape"
+    },
+    {
+        "alias": null,
+        "description": "Last Dive (Transition)",
+        "key": "LastDiveTrans",
+        "tooltip": "Splits when beginning the Last Dive scene"
+    },
+    {
+        "alias": null,
+        "description": "Lost Lace Encountered (Boss)",
+        "key": "LostLaceEncountered",
+        "tooltip": "Splits when Lost Lace is encountered in the Abyss Cocoon"
     }
 ]

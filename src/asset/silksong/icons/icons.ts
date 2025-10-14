@@ -34,6 +34,8 @@ import EnterFarFields from "./Enemy/Fertid.png";
 import DriftersCloak from "./Skill/DriftersCloak.png";
 import DriftersCloakTrans from "./Skill/DriftersCloak.png";
 import FourthChorus from "./Boss/FourthChorus.png";
+import GurrTheOutcastEncountered from "./Boss/GurrTheOutcast.png";
+import GurrTheOutcast from "./Boss/GurrTheOutcast.png";
 import EnterGreymoor from "./Enemy/Craw.png";
 import GreymoorBell from "./Misc/Bell.png";
 import Moorwing from "./Boss/Moorwing.png";
@@ -61,8 +63,17 @@ import EnterExhaustOrgan from "./Boss/Phantom.png";
 import Phantom from "./Boss/Phantom.png";
 import CrossStitch from "./Skill/CrossStitch.png";
 import CrossStitchTrans from "./Skill/CrossStitch.png";
+import EnterTheSlab from "./Enemy/Wardenfly.png";
+import SlabKeyIndolent from "./Item/SlabKeyIndolent.png";
+import SlabKeyHeretic from "./Item/SlabKeyHeretic.png";
+import SlabKeyApostate from "./Item/SlabKeyApostate.png";
+import EnterFirstSinner from "./Boss/FirstSinner.png";
+import FirstSinnerEncountered from "./Boss/FirstSinner.png";
+import FirstSinner from "./Boss/FirstSinner.png";
 import RuneRage from "./Skill/RuneRage.png";
 import RuneRageTrans from "./Skill/RuneRage.png";
+import EnterMountFay from "./Enemy/Driftlin.png";
+import EnterBrightvein from "./Enemy/Mnemonord.png";
 import Act2Started from "./Event/Act2Started.png";
 import CogworkDancers from "./Boss/CogworkDancers.png";
 import EnterWhisperingVaults from "./Enemy/Lampbearer.png";
@@ -254,9 +265,13 @@ import SilkAndSoulOffered from "./Event/SilkAndSoul.png";
 import SoulSnareReady from "./Event/SilkAndSoul.png";
 import EnterSeth from "./Boss/Seth.png";
 import Seth from "./Boss/Seth.png";
-import AbyssEscape from "./Event/Act3Started.png";
 import BallowMoved from "./NPC/Ballow.png";
 import Act3Started from "./Event/Act3Started.png";
+import DivingBellAbyssTrans from "./Item/DivingBellKey.png";
+import EnterAbyss from "./Enemy/ShadowCreeper.png";
+import AbyssEscape from "./Event/Act3Started.png";
+import LastDiveTrans from "./Event/LastDive.png";
+import LostLaceEncountered from "./Boss/LostLace.png";
 import LostLace from "./Boss/LostLace.png";
 import Compass from "./Tool/Compass.png";
 import DruidsEye from "./Tool/DruidsEye.png";
@@ -300,6 +315,8 @@ export default {
   DriftersCloak,
   DriftersCloakTrans,
   FourthChorus,
+  GurrTheOutcastEncountered,
+  GurrTheOutcast,
   EnterGreymoor,
   GreymoorBell,
   Moorwing,
@@ -327,8 +344,17 @@ export default {
   Phantom,
   CrossStitch,
   CrossStitchTrans,
+  EnterTheSlab,
+  SlabKeyIndolent,
+  SlabKeyHeretic,
+  SlabKeyApostate,
+  EnterFirstSinner,
+  FirstSinnerEncountered,
+  FirstSinner,
   RuneRage,
   RuneRageTrans,
+  EnterMountFay,
+  EnterBrightvein,
   Act2Started,
   CogworkDancers,
   EnterWhisperingVaults,
@@ -520,9 +546,13 @@ export default {
   SoulSnareReady,
   EnterSeth,
   Seth,
-  AbyssEscape,
   BallowMoved,
   Act3Started,
+  DivingBellAbyssTrans,
+  EnterAbyss,
+  AbyssEscape,
+  LastDiveTrans,
+  LostLaceEncountered,
   LostLace,
   Compass,
   DruidsEye,

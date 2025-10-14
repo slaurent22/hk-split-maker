@@ -223,8 +223,20 @@ function getUrl(qualifier, id) {
       return getUrl("Enemy", "Lampbearer");
     case "EnterPutrifiedDucts":
       return getUrl("Enemy", "Barnak");
+    case "EnterTheSlab":
+      return getUrl("Enemy", "Wardenfly");
+    case "EnterMountFay":
+      return getUrl("Enemy", "Driftlin");
+    case "EnterBrightvein":
+      return getUrl("Enemy", "Mnemonord");
+    case "DivingBellAbyssTrans":
+      return getUrl("Item", "DivingBellKey");
+    case "EnterAbyss":
+      return getUrl("Enemy", "ShadowCreeper");
+    case "LastDiveTrans":
+      return getUrl("Event", "LastDive");
 
-    // Boss Transition
+    // Boss Transition/Encountered
     case "MossMotherTrans":
       return getUrl("Boss", "MossMother");
     case "BellBeastTrans":
@@ -251,6 +263,13 @@ function getUrl(qualifier, id) {
       return getUrl("Boss", "BellEater");
     case "EnterVerdaniaCastle":
       return getUrl("Boss", "CloverDancers");
+    case "GurrTheOutcastEncountered":
+      return getUrl("Boss", "GurrTheOutcast");
+    case "EnterFirstSinner":
+    case "FirstSinnerEncountered":
+      return getUrl("Boss", "FirstSinner");
+    case "LostLaceEncountered":
+      return getUrl("Boss", "LostLace");
 
     // Melody Transition
     case "VaultkeepersMelodyTrans":
