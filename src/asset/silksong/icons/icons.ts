@@ -280,6 +280,7 @@ import ShardPendant from "./Tool/ShardPendant.png";
 import StraightPin from "./Tool/StraightPin.png";
 import Weavelight from "./Tool/Weavelight.png";
 import Voltvessels from "./Tool/Voltvessels.png";
+import MemoryLocket from "./Item/MemoryLocket.png";
 export default {
   ManualSplit,
   StartNewGame,
@@ -561,4 +562,5 @@ export default {
   StraightPin,
   Weavelight,
   Voltvessels,
+  MemoryLocket,
 };

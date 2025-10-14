@@ -459,6 +459,7 @@ function createIconImports() {
   output += `import StraightPin from "./Tool/StraightPin.png";\n`;
   output += `import Weavelight from "./Tool/Weavelight.png";\n`;
   output += `import Voltvessels from "./Tool/Voltvessels.png";\n`;
+  output += `import MemoryLocket from "./Item/MemoryLocket.png";\n`;
 
   // console.log(output);
   output += "export default {\n";
@@ -473,6 +474,7 @@ function createIconImports() {
   output += `  StraightPin,\n`;
   output += `  Weavelight,\n`;
   output += `  Voltvessels,\n`;
+  output += `  MemoryLocket,\n`;
   output += "};\n";
 
   // console.log(output);

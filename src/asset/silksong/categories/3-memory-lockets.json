@@ -1,0 +1,33 @@
+{
+    "categoryName": "3 Memory Lockets",
+    "splitIds": [
+        "StartNewGame",
+        "MossMotherTrans",
+        "SilkSpearTrans",
+        "BellBeastTrans",
+        "SavedFleaHuntersMarch",
+        "ManualSplit",
+        "SavedFleaDeepDocksSprint",
+        "Lace1Trans",
+        "SavedFleaFarFieldsTrap",
+        "ManualSplit",
+        "SavedFleaDeepDocksBellway",
+        "SavedFleaMarrow",
+        "CaravanTroupeGreymoor",
+        "ManualSplit"
+    ],
+    "names": {
+        "ManualSplit": [
+            "Hunter's March Locket (Manual)",
+            "Pilgrim's Rest Locket (Manual)",
+            "Greymoor Locket (Manual)"
+        ]
+    },
+    "icons": {
+        "ManualSplit": "MemoryLocket"
+    },
+    "gameName": "Hollow Knight: Silksong Category Extensions",
+    "variables": {
+        "3 Memory Lockets Subcategory": "No Major Glitches"
+    }
+}

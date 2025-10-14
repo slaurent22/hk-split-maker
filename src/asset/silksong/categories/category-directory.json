@@ -82,17 +82,22 @@
     "Mods": [],
     "Category Extensions": [
         {
-            "fileName": "5-tools",
-            "displayName": "5 Tools",
-            "data": {
-                "routeNotesURL": "https://pastebin.com/raw/KZJdr1D1"
-            }
+            "fileName": "3-memory-lockets",
+            "displayName": "3 Memory Lockets",
+            "data": {}
         },
         {
             "fileName": "4ms",
             "displayName": "4 Mask Shards",
             "data": {
                 "routeNotesURL": "https://pastebin.com/raw/V07PL8RP"
+            }
+        },
+        {
+            "fileName": "5-tools",
+            "displayName": "5 Tools",
+            "data": {
+                "routeNotesURL": "https://pastebin.com/raw/KZJdr1D1"
             }
         },
         {
