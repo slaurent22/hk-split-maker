@@ -75,6 +75,7 @@
         "SoulSnareReady",
         "EndingSplit",
         "BallowMoved",
+        "DivingBellAbyssTrans",
         "SilkSoar",
         "AbyssEscape",
         "HeartKarmelita",
@@ -83,6 +84,7 @@
         "Seth",
         "HeartNyleth",
         "RedMemory",
+        "LastDiveTrans",
         "EndingSplit"
     ],
     "names": {

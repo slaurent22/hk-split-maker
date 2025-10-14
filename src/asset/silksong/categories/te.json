@@ -81,6 +81,7 @@
         "SoulSnareReady",
         "EndingSplit",
         "GreenPrinceInVerdania",
+        "DivingBellAbyssTrans",
         "SilkSoar",
         "AbyssEscape",
         "EnterSeth",
@@ -93,6 +94,7 @@
         "VerdaniaOrbsCollected",
         "HeartClover",
         "RedMemory",
+        "LastDiveTrans",
         "EndingSplit"
     ],
     "names": {
