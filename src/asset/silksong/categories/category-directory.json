@@ -84,12 +84,16 @@
         {
             "fileName": "2-spool-fragments",
             "displayName": "2 Spool Fragments",
-            "data": {}
+            "data": {
+                "routeNotesURL": "https://pastebin.com/raw/w5CwLHDD"
+            }
         },
         {
             "fileName": "3-memory-lockets",
             "displayName": "3 Memory Lockets",
-            "data": {}
+            "data": {
+                "routeNotesURL": "https://pastebin.com/raw/M9MtqJQn"
+            }
         },
         {
             "fileName": "4ms",
