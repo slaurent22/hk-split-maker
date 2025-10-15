@@ -253,6 +253,24 @@
     },
     {
         "alias": null,
+        "description": "Enter Wisp Thicket (Transition)",
+        "key": "EnterWispThicket",
+        "tooltip": "Splits when entering the Wisp Thicket from Greymoor"
+    },
+    {
+        "alias": null,
+        "description": "Enter Father of the Flame (Transition)",
+        "key": "EnterFatherOfTheFlame",
+        "tooltip": "Splits when entering the arena for the Father of the Flame boss"
+    },
+    {
+        "alias": null,
+        "description": "Father of the Flame (Boss)",
+        "key": "FatherOfTheFlame",
+        "tooltip": "Splits when defeating Father of the Flame"
+    },
+    {
+        "alias": null,
         "description": "Enter Shellwood (Transition)",
         "key": "EnterShellwood",
         "tooltip": "Splits when entering Shellwood"
@@ -319,6 +337,12 @@
     },
     {
         "alias": null,
+        "description": "Last Judge Encountered (Boss)",
+        "key": "LastJudgeEncountered",
+        "tooltip": "Splits after the Last Judge boss fight is first encountered, post-needolin"
+    },
+    {
+        "alias": null,
         "description": "Last Judge (Boss)",
         "key": "LastJudge",
         "tooltip": "Splits when killing Last Judge"
@@ -340,6 +364,12 @@
         "description": "Enter The Mist (Transition)",
         "key": "EnterMist",
         "tooltip": "Splits when entering The Mist"
+    },
+    {
+        "alias": null,
+        "description": "Mist Crossing (Transition)",
+        "key": "MistCrossing",
+        "tooltip": "Splits when entering the Mist's midpoint crossing room"
     },
     {
         "alias": null,
@@ -445,9 +475,33 @@
     },
     {
         "alias": null,
+        "description": "Upper Mount Fay (Transition)",
+        "key": "UpperMountFayTrans",
+        "tooltip": "Splits when entering the upper portion of Mount Fay on the right"
+    },
+    {
+        "alias": null,
+        "description": "Faydown Cloak (Skill)",
+        "key": "FaydownCloak",
+        "tooltip": "Splits when you obtain Faydown Cloak (Double Jump)"
+    },
+    {
+        "alias": null,
         "description": "Act 2 Started (Event)",
         "key": "Act2Started",
         "tooltip": "Splits when starting Act 2"
+    },
+    {
+        "alias": null,
+        "description": "Enter Cogwork Dancers (Transition)",
+        "key": "EnterCogworkDancers",
+        "tooltip": "Splits when entering the Cogwork Dancers boss arena"
+    },
+    {
+        "alias": null,
+        "description": "Cogwork Dancers Encountered (Boss)",
+        "key": "CogworkDancersEncountered",
+        "tooltip": "Splits when first encountering the Cogwork Dancers boss"
     },
     {
         "alias": null,
@@ -1363,12 +1417,6 @@
     },
     {
         "alias": null,
-        "description": "Faydown Cloak (Skill)",
-        "key": "FaydownCloak",
-        "tooltip": "Splits when you obtain Double Jump"
-    },
-    {
-        "alias": null,
         "description": "Enter Bell Eater (Transition)",
         "key": "EnterBellEater",
         "tooltip": "Splits when entering the Bell Eater's arena"
@@ -1444,6 +1492,12 @@
         "description": "Clover Dancer's Heart (Item)",
         "key": "HeartClover",
         "tooltip": "Split when you obtain Conjoined Heart"
+    },
+    {
+        "alias": null,
+        "description": "Enter Red Memory (Transition)",
+        "key": "EnterRedMemory",
+        "tooltip": "Splits when beginning the Red Memory sequence"
     },
     {
         "alias": "CompletedRedMemory",
@@ -1576,6 +1630,18 @@
         "description": "Soul Snare Ready (Event)",
         "key": "SoulSnareReady",
         "tooltip": "Splits when the Soul Snare becomes ready"
+    },
+    {
+        "alias": null,
+        "description": "Enter Destroyed Cogworks (Transition)",
+        "key": "EnterDestroyedCogworks",
+        "tooltip": "Splits when entering the destroyed portion of Cogworks"
+    },
+    {
+        "alias": null,
+        "description": "Destroyed Cogworks Void Arena (Mini Boss)",
+        "key": "DestroyedCogworksVoidArena",
+        "tooltip": "Splits when completing the Destroyed Cogworks void arena"
     },
     {
         "alias": null,

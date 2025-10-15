@@ -42,6 +42,9 @@ import Moorwing from "./Boss/Moorwing.png";
 import MoorwingTrans from "./Boss/Moorwing.png";
 import ThreadStorm from "./Skill/ThreadStorm.png";
 import ThreadStormTrans from "./Skill/ThreadStorm.png";
+import EnterWispThicket from "./Enemy/Wisp.png";
+import EnterFatherOfTheFlame from "./Boss/FatherOfTheFlame.png";
+import FatherOfTheFlame from "./Boss/FatherOfTheFlame.png";
 import EnterShellwood from "./Enemy/Phacia.png";
 import ClingGrip from "./Skill/ClingGrip.png";
 import ClingGripTrans from "./Skill/ClingGrip.png";
@@ -53,10 +56,12 @@ import EnterBlastedSteps from "./Enemy/Judge.png";
 import NeedleStrike from "./Skill/NeedleStrike.png";
 import NeedleStrikeTrans from "./Skill/NeedleStrike.png";
 import EnterLastJudge from "./Boss/LastJudge.png";
+import LastJudgeEncountered from "./Boss/LastJudge.png";
 import LastJudge from "./Boss/LastJudge.png";
 import EnterCitadelFrontGate from "./Event/Act2Started.png";
 import EnterSinnersRoad from "./Enemy/Muckroach.png";
 import EnterMist from "./Enemy/Wraith.png";
+import MistCrossing from "./Enemy/Wraith.png";
 import LeaveMist from "./Enemy/Wraith.png";
 import EnterBilewater from "./Enemy/Stilkin.png";
 import EnterExhaustOrgan from "./Boss/Phantom.png";
@@ -74,7 +79,11 @@ import RuneRage from "./Skill/RuneRage.png";
 import RuneRageTrans from "./Skill/RuneRage.png";
 import EnterMountFay from "./Enemy/Driftlin.png";
 import EnterBrightvein from "./Enemy/Mnemonord.png";
+import UpperMountFayTrans from "./Enemy/Mnemonid.png";
+import FaydownCloak from "./Skill/FaydownCloak.png";
 import Act2Started from "./Event/Act2Started.png";
+import EnterCogworkDancers from "./Boss/CogworkDancers.png";
+import CogworkDancersEncountered from "./Boss/CogworkDancers.png";
 import CogworkDancers from "./Boss/CogworkDancers.png";
 import EnterWhisperingVaults from "./Enemy/Lampbearer.png";
 import WhisperingVaultsArena from "./Enemy/Vaultkeeper.png";
@@ -227,7 +236,6 @@ import MetShermaEnclave from "./NPC/Sherma.png";
 import UnlockedPrinceCage from "./NPC/GreenPrince.png";
 import GreenPrinceInVerdania from "./NPC/GreenPrince.png";
 import SeenFleatopiaEmpty from "./NPC/Mooshka.png";
-import FaydownCloak from "./Skill/FaydownCloak.png";
 import EnterBellEater from "./Boss/BellEater.png";
 import BeastlingCall from "./Skill/BeastlingCall.png";
 import SilkSoar from "./Skill/SilkSoar.png";
@@ -241,6 +249,7 @@ import HeartKarmelita from "./Item/HuntersHeart.png";
 import EnterVerdaniaMemory from "./Enemy/LeafGlider.png";
 import EnterVerdaniaCastle from "./Boss/CloverDancers.png";
 import HeartClover from "./Item/ConjoinedHeart.png";
+import EnterRedMemory from "./NPC/ShamanSeeker.png";
 import RedMemory from "./Item/Everbloom.png";
 import BellhouseKeyConversation from "./Item/BellhomeKey.png";
 import VerdaniaLakeFountainOrbs from "./Enemy/Nuphar.png";
@@ -263,6 +272,8 @@ import JubilanaRescuedMemorium from "./NPC/Jubilana.png";
 import JubilanaRescuedChoralChambers from "./NPC/Jubilana.png";
 import SilkAndSoulOffered from "./Event/SilkAndSoul.png";
 import SoulSnareReady from "./Event/SilkAndSoul.png";
+import EnterDestroyedCogworks from "./Misc/ShiningCog.png";
+import DestroyedCogworksVoidArena from "./Enemy/Undercrank.png";
 import EnterSeth from "./Boss/Seth.png";
 import Seth from "./Boss/Seth.png";
 import BallowMoved from "./NPC/Ballow.png";
@@ -324,6 +335,9 @@ export default {
   MoorwingTrans,
   ThreadStorm,
   ThreadStormTrans,
+  EnterWispThicket,
+  EnterFatherOfTheFlame,
+  FatherOfTheFlame,
   EnterShellwood,
   ClingGrip,
   ClingGripTrans,
@@ -335,10 +349,12 @@ export default {
   NeedleStrike,
   NeedleStrikeTrans,
   EnterLastJudge,
+  LastJudgeEncountered,
   LastJudge,
   EnterCitadelFrontGate,
   EnterSinnersRoad,
   EnterMist,
+  MistCrossing,
   LeaveMist,
   EnterBilewater,
   EnterExhaustOrgan,
@@ -356,7 +372,11 @@ export default {
   RuneRageTrans,
   EnterMountFay,
   EnterBrightvein,
+  UpperMountFayTrans,
+  FaydownCloak,
   Act2Started,
+  EnterCogworkDancers,
+  CogworkDancersEncountered,
   CogworkDancers,
   EnterWhisperingVaults,
   WhisperingVaultsArena,
@@ -509,7 +529,6 @@ export default {
   UnlockedPrinceCage,
   GreenPrinceInVerdania,
   SeenFleatopiaEmpty,
-  FaydownCloak,
   EnterBellEater,
   BeastlingCall,
   SilkSoar,
@@ -523,6 +542,7 @@ export default {
   EnterVerdaniaMemory,
   EnterVerdaniaCastle,
   HeartClover,
+  EnterRedMemory,
   RedMemory,
   BellhouseKeyConversation,
   VerdaniaLakeFountainOrbs,
@@ -545,6 +565,8 @@ export default {
   JubilanaRescuedChoralChambers,
   SilkAndSoulOffered,
   SoulSnareReady,
+  EnterDestroyedCogworks,
+  DestroyedCogworksVoidArena,
   EnterSeth,
   Seth,
   BallowMoved,

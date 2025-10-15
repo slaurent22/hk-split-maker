@@ -184,6 +184,7 @@ function getUrl(qualifier, id) {
       return getUrl("Enemy", "Craw");
     case "EnterMist":
     case "LeaveMist":
+    case "MistCrossing":
       return getUrl("Enemy", "Wraith");
     case "EnterHighHalls":
       return getUrl("Enemy", "Minister");
@@ -235,6 +236,10 @@ function getUrl(qualifier, id) {
       return getUrl("Enemy", "ShadowCreeper");
     case "LastDiveTrans":
       return getUrl("Event", "LastDive");
+    case "EnterWispThicket":
+      return getUrl("Enemy", "Wisp");
+    case "UpperMountFayTrans":
+      return getUrl("Enemy", "Mnemonid");
 
     // Boss Transition/Encountered
     case "MossMotherTrans":
@@ -270,6 +275,17 @@ function getUrl(qualifier, id) {
       return getUrl("Boss", "FirstSinner");
     case "LostLaceEncountered":
       return getUrl("Boss", "LostLace");
+    case "EnterFatherOfTheFlame":
+      return getUrl("Boss", "FatherOfTheFlame");
+    case "LastJudgeEncountered":
+      return getUrl("Boss", "LastJudge");
+    case "EnterCogworkDancers":
+    case "CogworkDancersEncountered":
+      return getUrl("Boss", "CogworkDancers");
+    case "EnterRedMemory":
+      return getUrl("NPC", "ShamanSeeker");
+    case "EnterDestroyedCogworks":
+      return getUrl("Misc", "ShiningCog");
 
     // Melody Transition
     case "VaultkeepersMelodyTrans":
@@ -284,6 +300,8 @@ function getUrl(qualifier, id) {
       return getUrl("Enemy", "Vaultkeeper");
     case "HighHallsArena":
       return getUrl("Enemy", "ChoirClapper");
+    case "DestroyedCogworksVoidArena":
+      return getUrl("Enemy", "Undercrank");
 
     // Needle Upgrade
     case "NeedleUpgrade1":
