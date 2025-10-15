@@ -110,6 +110,13 @@
             }
         },
         {
+            "fileName": "7-equips",
+            "displayName": "7 Equips",
+            "data": {
+                "routeNotesURL": "https://pastebin.com/raw/4JwNXnLR"
+            }
+        },
+        {
             "fileName": "awoo",
             "displayName": "Awoo%",
             "data": {

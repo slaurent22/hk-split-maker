@@ -289,9 +289,11 @@ import DruidsEye from "./Tool/DruidsEye.png";
 import MagnetiteBrooch from "./Tool/MagnetiteBrooch.png";
 import ShardPendant from "./Tool/ShardPendant.png";
 import StraightPin from "./Tool/StraightPin.png";
+import WardingBell from "./Tool/WardingBell.png";
 import Weavelight from "./Tool/Weavelight.png";
 import Voltvessels from "./Tool/Voltvessels.png";
 import MemoryLocket from "./Item/MemoryLocket.png";
+import HunterCrest from "./Crest/HunterCrest.png";
 export default {
   ManualSplit,
   StartNewGame,
@@ -582,7 +584,9 @@ export default {
   MagnetiteBrooch,
   ShardPendant,
   StraightPin,
+  WardingBell,
   Weavelight,
   Voltvessels,
   MemoryLocket,
+  HunterCrest,
 };
