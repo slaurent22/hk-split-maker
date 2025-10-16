@@ -13,6 +13,13 @@
             }
         },
         {
+            "fileName": "all-bosses",
+            "displayName": "All Bosses",
+            "data": {
+                "routeNotesURL": "https://docs.google.com/document/d/12Vw0jSuTyQ_ivkZjkj8FslcXJAF6CogDbVwvR87yhgg/edit?usp=sharing"
+            }
+        },
+        {
             "fileName": "any-bells",
             "displayName": "Any% (Bells Route)",
             "data": {
