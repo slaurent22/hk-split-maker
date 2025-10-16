@@ -110,6 +110,13 @@
             }
         },
         {
+            "fileName": "6-wishes",
+            "displayName": "6 Wishes",
+            "data": {
+                "routeNotesURL": "https://pastebin.com/raw/03wvX0yQ"
+            }
+        },
+        {
             "fileName": "7-equips",
             "displayName": "7 Equips",
             "data": {

@@ -1,0 +1,29 @@
+{
+    "categoryName": "6 Wishes",
+    "splitIds": [
+        "StartNewGame",
+        "MossMotherTrans",
+        "SilkSpearTrans",
+        "-ManualSplit",
+        "BellBeast",
+        "SwiftStep",
+        "-SavedFleaDeepDocksSprint",
+        "DeepDocksStation",
+        "-SavedFleaDeepDocksBellway",
+        "-SavedFleaMarrow",
+        "-SavedFleaHuntersMarch",
+        "Lace1Trans",
+        "-SavedFleaFarFieldsTrap",
+        "CaravanTroupeGreymoor",
+        "ManualSplit",
+        "ManualSplit"
+    ],
+    "names": {
+        "ManualSplit": [
+            "Berry Picking (%s)",
+            "Garbs of the Pilgrims (%s)",
+            "A Lifesaving Bridge (%s)"
+        ]
+    },
+    "gameName": "Hollow Knight: Silksong Category Extensions"
+}
