@@ -1,6 +1,11 @@
 {
     "Main": [
         {
+            "fileName": "blank",
+            "displayName": "Blank Template",
+            "data": {}
+        },
+        {
             "fileName": "100",
             "displayName": "100%",
             "data": {
