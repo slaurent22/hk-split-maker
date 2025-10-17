@@ -45,6 +45,7 @@ export default function SplitMaker(): ReactElement {
   const [shareButtonDisabled, setShareButtonDisabled] = useState(true);
 
   const [splitOutput, setSplitOutput] = useState("");
+  const [includeIcons, setIncludeIcons] = useState(true);
 
   useEffect(() => {
     if (window.location.hash) {
@@ -168,7 +169,7 @@ export default function SplitMaker(): ReactElement {
 
     try {
       // todo: runtime schema validation
-      output = await createSplitsXml(configObject, game);
+      output = await createSplitsXml(configObject, game, includeIcons);
     } catch (e) {
       console.error(e);
       alert(
@@ -232,6 +233,17 @@ export default function SplitMaker(): ReactElement {
               defaultValue={getCategoryDefinition(builtin ?? "") ?? null}
             />
           </Suspense>
+          <div>
+            <input
+              id="generate-icons-toggle"
+              type="checkbox"
+              checked={includeIcons}
+              onChange={(e) => {
+                setIncludeIcons(e.target.checked);
+              }}
+            />
+            <label htmlFor="generate-icons-toggle">Include icons</label>
+          </div>
           <Suspense fallback={<div>Loading split config editor...</div>}>
             <SplitConfigEditor
               defaultValue={configInput}

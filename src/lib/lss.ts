@@ -149,7 +149,8 @@ const SILKSONG_SCRIPT_NAME_NODE = {
 
 export async function createSplitsXml(
   config: Config,
-  game: Game
+  game: Game,
+  includeIcons: boolean
 ): Promise<string> {
   const {
     ordered = true,
@@ -229,30 +230,32 @@ export async function createSplitsXml(
     };
   });
 
-  parsedSplitIds.forEach(({ iconId }) => {
-    const url = allIconURLs.get(iconId);
-    if (url) {
-      iconURLsToFetch.add(url);
-    }
-  });
-  if (!endTriggeringAutosplit && endingSplit?.icon) {
-    const url = allIconURLs.get(endingSplit.icon);
-    if (url) {
-      iconURLsToFetch.add(url);
-    }
-  }
-
-  await Promise.all(
-    [...iconURLsToFetch].map(async (url) => {
-      try {
-        const iconData = await createLiveSplitIconData(url);
-        liveSplitIconData.set(url, iconData);
-      } catch (e) {
-        console.error(`Failed to create icon data for ${url}`);
-        console.error(e);
+  if (includeIcons) {
+    parsedSplitIds.forEach(({ iconId }) => {
+      const url = allIconURLs.get(iconId);
+      if (url) {
+        iconURLsToFetch.add(url);
       }
-    })
-  );
+    });
+    if (!endTriggeringAutosplit && endingSplit?.icon) {
+      const url = allIconURLs.get(endingSplit.icon);
+      if (url) {
+        iconURLsToFetch.add(url);
+      }
+    }
+
+    await Promise.all(
+      [...iconURLsToFetch].map(async (url) => {
+        try {
+          const iconData = await createLiveSplitIconData(url);
+          liveSplitIconData.set(url, iconData);
+        } catch (e) {
+          console.error(`Failed to create icon data for ${url}`);
+          console.error(e);
+        }
+      })
+    );
+  }
 
   const segments = parsedSplitIds.map(({ subsplit, name, iconId }) => {
     const iconURL = allIconURLs.get(iconId);
