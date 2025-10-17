@@ -240,6 +240,16 @@ function getUrl(qualifier, id) {
       return getUrl("Enemy", "Wisp");
     case "UpperMountFayTrans":
       return getUrl("Enemy", "Mnemonid");
+    case "EnterWeavenestAtla":
+      return getUrl("Enemy", "ServitorIgnim");
+    case "EnterHalfwayHomeBasement":
+      return getUrl("Enemy", "SkarrStalker");
+    case "EnterSongclave":
+      return getUrl("NPC", "Caretaker");
+    case "EnterWhiteward":
+      return getUrl("Enemy", "Surgeon");
+    case "PostWhitewardElevatorTrans":
+      return getUrl("Enemy", "Mortician");
 
     // Boss Transition/Encountered
     case "MossMotherTrans":
@@ -286,6 +296,8 @@ function getUrl(qualifier, id) {
       return getUrl("NPC", "ShamanSeeker");
     case "EnterDestroyedCogworks":
       return getUrl("Misc", "ShiningCog");
+    case "TheUnravelledEncountered":
+      return getUrl("Boss", "TheUnravelled");
 
     // Melody Transition
     case "VaultkeepersMelodyTrans":
@@ -423,6 +435,9 @@ function getUrl(qualifier, id) {
     case "BallowMoved":
       return getUrl("NPC", "Ballow");
 
+    case "MetMergwin":
+      return getUrl("NPC", "Mergwin");
+
     // Events
     case "VerdaniaOrbsCollected":
       return getUrl("Enemy", "Verdanir");
@@ -438,6 +453,10 @@ function getUrl(qualifier, id) {
     case "CurseCrest":
     case "GainedCurse":
       return getUrl("Event", "Cursed");
+    case "TrailsEndTrans":
+      return getUrl("NPC", "Shakra");
+    case "GivenCouriersRasher":
+      return getUrl("Item", "CouriersRasher");
 
     // Hearts and Memories
     case "HeartNyleth":

@@ -97,6 +97,12 @@
     },
     {
         "alias": null,
+        "description": "Enter Weavenest Atla (Transition)",
+        "key": "EnterWeavenestAtla",
+        "tooltip": "Splits on entering Weavenest Atla"
+    },
+    {
+        "alias": null,
         "description": "Bell Beast (Boss)",
         "key": "BellBeast",
         "tooltip": "Splits when defeating the Bell Beast"
@@ -253,6 +259,12 @@
     },
     {
         "alias": null,
+        "description": "Halfway Basement (Transition)",
+        "key": "EnterHalfwayHomeBasement",
+        "tooltip": "Splits after entering the basement in Halfway Home"
+    },
+    {
+        "alias": null,
         "description": "Enter Wisp Thicket (Transition)",
         "key": "EnterWispThicket",
         "tooltip": "Splits when entering the Wisp Thicket from Greymoor"
@@ -361,6 +373,12 @@
     },
     {
         "alias": null,
+        "description": "Lugoli (Boss)",
+        "key": "Lugoli",
+        "tooltip": "Splits after defeating Lugoli"
+    },
+    {
+        "alias": null,
         "description": "Enter The Mist (Transition)",
         "key": "EnterMist",
         "tooltip": "Splits when entering The Mist"
@@ -409,6 +427,12 @@
     },
     {
         "alias": null,
+        "description": "Trail's End (Transition)",
+        "key": "TrailsEndTrans",
+        "tooltip": "Splits on the transition out of the room to complete Trail's End"
+    },
+    {
+        "alias": null,
         "description": "Enter The Slab (Transition)",
         "key": "EnterTheSlab",
         "tooltip": "Splits when entering the Slab's front entrance"
@@ -430,6 +454,12 @@
         "description": "Key of Apostate (Item)",
         "key": "SlabKeyApostate",
         "tooltip": "Splits when you obtain the Apostate slab key"
+    },
+    {
+        "alias": null,
+        "description": "Broodmother (Boss)",
+        "key": "Broodmother",
+        "tooltip": "Splits after defeating the Broodmother"
     },
     {
         "alias": null,
@@ -523,6 +553,12 @@
     },
     {
         "alias": null,
+        "description": "Enter Songclave (Transition)",
+        "key": "EnterSongclave",
+        "tooltip": "Splits when entering Songclave"
+    },
+    {
+        "alias": null,
         "description": "Trobbio (Boss)",
         "key": "Trobbio",
         "tooltip": "Splits when killing Trobbio"
@@ -532,6 +568,18 @@
         "description": "Trobbio (Transition)",
         "key": "TrobbioTrans",
         "tooltip": "Splits on the transition after killing Trobbio"
+    },
+    {
+        "alias": null,
+        "description": "Met Mergwin (NPC)",
+        "key": "MetMergwin",
+        "tooltip": "Splits after talking to Loyal Mergwin the first time"
+    },
+    {
+        "alias": null,
+        "description": "Given Courier's Rasher (Event)",
+        "key": "GivenCouriersRasher",
+        "tooltip": "Splits after giving the Courier's Rasher to Loyal Mergwin"
     },
     {
         "alias": null,
@@ -556,6 +604,42 @@
         "description": "High Halls Arena (Mini Boss)",
         "key": "HighHallsArena",
         "tooltip": "Splits when completing the High Halls Arena"
+    },
+    {
+        "alias": null,
+        "description": "Enter Whiteward (Transition)",
+        "key": "EnterWhiteward",
+        "tooltip": "Splits when entering the upper portion of Whiteward from the Choral Chambers"
+    },
+    {
+        "alias": null,
+        "description": "Post-Whiteward Elevator (Transition)",
+        "key": "PostWhitewardElevatorTrans",
+        "tooltip": "Splits when taking any transition further into Whiteward past the elevator"
+    },
+    {
+        "alias": "CollectedWhiteWardKey",
+        "description": "Collected Whiteward Key (Item)",
+        "key": "CollectedWhitewardKey",
+        "tooltip": "Splits when you collect the Whiteward Key"
+    },
+    {
+        "alias": null,
+        "description": "Collected Surgeon's Key (Item)",
+        "key": "CollectedSurgeonsKey",
+        "tooltip": "Splits when you collect the Surgeon's Key"
+    },
+    {
+        "alias": null,
+        "description": "The Unravelled Encountered (Boss)",
+        "key": "TheUnravelledEncountered",
+        "tooltip": "Splits when The Unravelled boss first appears"
+    },
+    {
+        "alias": null,
+        "description": "The Unravelled (Boss)",
+        "key": "TheUnravelled",
+        "tooltip": "Splits when The Unravelled is defeated"
     },
     {
         "alias": null,
@@ -1570,12 +1654,6 @@
         "description": "Scrounge Relic Sold (Event)",
         "key": "SoldRelic",
         "tooltip": "Splits after selling the first relic to Scrounge"
-    },
-    {
-        "alias": null,
-        "description": "Collected WhiteWard Key (Item)",
-        "key": "CollectedWhiteWardKey",
-        "tooltip": "Splits when you collect the WhiteWard Key"
     },
     {
         "alias": null,

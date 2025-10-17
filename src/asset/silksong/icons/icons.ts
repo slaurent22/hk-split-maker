@@ -16,6 +16,7 @@ import EnterMosshome from "./Enemy/OvergrownPilgrim.png";
 import SilkSpear from "./Skill/SilkSpear.png";
 import SilkSpearTrans from "./Skill/SilkSpear.png";
 import BoneBottomSimpleKey from "./Item/SimpleKey.png";
+import EnterWeavenestAtla from "./Enemy/ServitorIgnim.png";
 import BellBeast from "./Boss/BellBeast.png";
 import BellBeastTrans from "./Boss/BellBeast.png";
 import MarrowBell from "./Misc/Bell.png";
@@ -42,6 +43,7 @@ import Moorwing from "./Boss/Moorwing.png";
 import MoorwingTrans from "./Boss/Moorwing.png";
 import ThreadStorm from "./Skill/ThreadStorm.png";
 import ThreadStormTrans from "./Skill/ThreadStorm.png";
+import EnterHalfwayHomeBasement from "./Enemy/SkarrStalker.png";
 import EnterWispThicket from "./Enemy/Wisp.png";
 import EnterFatherOfTheFlame from "./Boss/FatherOfTheFlame.png";
 import FatherOfTheFlame from "./Boss/FatherOfTheFlame.png";
@@ -60,6 +62,7 @@ import LastJudgeEncountered from "./Boss/LastJudge.png";
 import LastJudge from "./Boss/LastJudge.png";
 import EnterCitadelFrontGate from "./Event/Act2Started.png";
 import EnterSinnersRoad from "./Enemy/Muckroach.png";
+import Lugoli from "./Boss/Lugoli.png";
 import EnterMist from "./Enemy/Wraith.png";
 import MistCrossing from "./Enemy/Wraith.png";
 import LeaveMist from "./Enemy/Wraith.png";
@@ -68,10 +71,12 @@ import EnterExhaustOrgan from "./Boss/Phantom.png";
 import Phantom from "./Boss/Phantom.png";
 import CrossStitch from "./Skill/CrossStitch.png";
 import CrossStitchTrans from "./Skill/CrossStitch.png";
+import TrailsEndTrans from "./NPC/Shakra.png";
 import EnterTheSlab from "./Enemy/Wardenfly.png";
 import SlabKeyIndolent from "./Item/SlabKeyIndolent.png";
 import SlabKeyHeretic from "./Item/SlabKeyHeretic.png";
 import SlabKeyApostate from "./Item/SlabKeyApostate.png";
+import Broodmother from "./Boss/Broodmother.png";
 import EnterFirstSinner from "./Boss/FirstSinner.png";
 import FirstSinnerEncountered from "./Boss/FirstSinner.png";
 import FirstSinner from "./Boss/FirstSinner.png";
@@ -87,12 +92,21 @@ import CogworkDancersEncountered from "./Boss/CogworkDancers.png";
 import CogworkDancers from "./Boss/CogworkDancers.png";
 import EnterWhisperingVaults from "./Enemy/Lampbearer.png";
 import WhisperingVaultsArena from "./Enemy/Vaultkeeper.png";
+import EnterSongclave from "./NPC/Caretaker.png";
 import Trobbio from "./Boss/Trobbio.png";
 import TrobbioTrans from "./Boss/Trobbio.png";
+import MetMergwin from "./NPC/Mergwin.png";
+import GivenCouriersRasher from "./Item/CouriersRasher.png";
 import Clawline from "./Skill/Clawline.png";
 import EnterHighHalls from "./Enemy/Minister.png";
 import EnterHighHallsArena from "./Enemy/Maestro.png";
 import HighHallsArena from "./Enemy/ChoirClapper.png";
+import EnterWhiteward from "./Enemy/Surgeon.png";
+import PostWhitewardElevatorTrans from "./Enemy/Mortician.png";
+import CollectedWhitewardKey from "./Item/CollectedWhitewardKey.png";
+import CollectedSurgeonsKey from "./Item/CollectedSurgeonsKey.png";
+import TheUnravelledEncountered from "./Boss/TheUnravelled.png";
+import TheUnravelled from "./Boss/TheUnravelled.png";
 import EnterMemorium from "./Enemy/Rhinogrund.png";
 import EnterPutrifiedDucts from "./Enemy/Barnak.png";
 import Lace2 from "./Boss/Lace.png";
@@ -262,7 +276,6 @@ import SavageBeastfly2 from "./Boss/SavageBeastfly.png";
 import CaravanTroupeGreymoor from "./NPC/Mooshka.png";
 import CaravanTroupeFleatopia from "./NPC/Mooshka.png";
 import SoldRelic from "./NPC/Scrounge.png";
-import CollectedWhiteWardKey from "./Item/CollectedWhiteWardKey.png";
 import PavoTimePassed from "./NPC/Pavo.png";
 import SongclaveBell from "./Misc/Bell.png";
 import Voltvyrm from "./Boss/Voltvyrm.png";
@@ -311,6 +324,7 @@ export default {
   SilkSpear,
   SilkSpearTrans,
   BoneBottomSimpleKey,
+  EnterWeavenestAtla,
   BellBeast,
   BellBeastTrans,
   MarrowBell,
@@ -337,6 +351,7 @@ export default {
   MoorwingTrans,
   ThreadStorm,
   ThreadStormTrans,
+  EnterHalfwayHomeBasement,
   EnterWispThicket,
   EnterFatherOfTheFlame,
   FatherOfTheFlame,
@@ -355,6 +370,7 @@ export default {
   LastJudge,
   EnterCitadelFrontGate,
   EnterSinnersRoad,
+  Lugoli,
   EnterMist,
   MistCrossing,
   LeaveMist,
@@ -363,10 +379,12 @@ export default {
   Phantom,
   CrossStitch,
   CrossStitchTrans,
+  TrailsEndTrans,
   EnterTheSlab,
   SlabKeyIndolent,
   SlabKeyHeretic,
   SlabKeyApostate,
+  Broodmother,
   EnterFirstSinner,
   FirstSinnerEncountered,
   FirstSinner,
@@ -382,12 +400,21 @@ export default {
   CogworkDancers,
   EnterWhisperingVaults,
   WhisperingVaultsArena,
+  EnterSongclave,
   Trobbio,
   TrobbioTrans,
+  MetMergwin,
+  GivenCouriersRasher,
   Clawline,
   EnterHighHalls,
   EnterHighHallsArena,
   HighHallsArena,
+  EnterWhiteward,
+  PostWhitewardElevatorTrans,
+  CollectedWhitewardKey,
+  CollectedSurgeonsKey,
+  TheUnravelledEncountered,
+  TheUnravelled,
   EnterMemorium,
   EnterPutrifiedDucts,
   Lace2,
@@ -557,7 +584,6 @@ export default {
   CaravanTroupeGreymoor,
   CaravanTroupeFleatopia,
   SoldRelic,
-  CollectedWhiteWardKey,
   PavoTimePassed,
   SongclaveBell,
   Voltvyrm,
