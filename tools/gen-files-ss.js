@@ -250,6 +250,10 @@ function getUrl(qualifier, id) {
       return getUrl("Enemy", "Surgeon");
     case "PostWhitewardElevatorTrans":
       return getUrl("Enemy", "Mortician");
+    case "EnterSandsOfKarak":
+      return getUrl("Enemy", "Crustcrawler");
+    case "EnterVoltnest":
+      return getUrl("Boss", "Voltvyrm");
 
     // Boss Transition/Encountered
     case "MossMotherTrans":
@@ -298,6 +302,12 @@ function getUrl(qualifier, id) {
       return getUrl("Misc", "ShiningCog");
     case "TheUnravelledEncountered":
       return getUrl("Boss", "TheUnravelled");
+    case "GreatConchfliesTrans":
+      return getUrl("Boss", "GreatConchflies");
+    case "PhantomTrans":
+      return getUrl("Boss", "Phantom");
+    case "RagingConchflyTrans":
+      return getUrl("Boss", "GreatConchflies");
 
     // Melody Transition
     case "VaultkeepersMelodyTrans":
@@ -329,13 +339,13 @@ function getUrl(qualifier, id) {
     case "Lace1":
     case "Lace2":
       return getUrl("Boss", "Lace");
-    case "Conchflies1":
-      return getUrl("Boss", "Conchfly");
     case "SavageBeastfly1":
     case "SavageBeastfly2":
       return getUrl("Boss", "SavageBeastfly");
     case "SkullTyrant1":
       return getUrl("Boss", "SkullTyrant");
+    case "RagingConchfly":
+      return getUrl("Boss", "GreatConchflies");
 
     // Flea
     case "SavedFleaHuntersMarch":

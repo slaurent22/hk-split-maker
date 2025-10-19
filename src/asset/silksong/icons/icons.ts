@@ -55,6 +55,8 @@ import EnterBellhart from "./Enemy/Furm.png";
 import Widow from "./Boss/Widow.png";
 import BellhartBell from "./Misc/Bell.png";
 import EnterBlastedSteps from "./Enemy/Judge.png";
+import GreatConchflies from "./Boss/GreatConchflies.png";
+import GreatConchfliesTrans from "./Boss/GreatConchflies.png";
 import NeedleStrike from "./Skill/NeedleStrike.png";
 import NeedleStrikeTrans from "./Skill/NeedleStrike.png";
 import EnterLastJudge from "./Boss/LastJudge.png";
@@ -69,6 +71,7 @@ import LeaveMist from "./Enemy/Wraith.png";
 import EnterBilewater from "./Enemy/Stilkin.png";
 import EnterExhaustOrgan from "./Boss/Phantom.png";
 import Phantom from "./Boss/Phantom.png";
+import PhantomTrans from "./Boss/Phantom.png";
 import CrossStitch from "./Skill/CrossStitch.png";
 import CrossStitchTrans from "./Skill/CrossStitch.png";
 import TrailsEndTrans from "./NPC/Shakra.png";
@@ -86,6 +89,12 @@ import EnterMountFay from "./Enemy/Driftlin.png";
 import EnterBrightvein from "./Enemy/Mnemonord.png";
 import UpperMountFayTrans from "./Enemy/Mnemonid.png";
 import FaydownCloak from "./Skill/FaydownCloak.png";
+import EnterSandsOfKarak from "./Enemy/Crustcrawler.png";
+import EnterVoltnest from "./Boss/Voltvyrm.png";
+import Voltvyrm from "./Boss/Voltvyrm.png";
+import RagingConchfly from "./Boss/GreatConchflies.png";
+import RagingConchflyTrans from "./Boss/GreatConchflies.png";
+import WatcherAtTheEdge from "./Boss/WatcherAtTheEdge.png";
 import Act2Started from "./Event/Act2Started.png";
 import EnterCogworkDancers from "./Boss/CogworkDancers.png";
 import CogworkDancersEncountered from "./Boss/CogworkDancers.png";
@@ -270,7 +279,6 @@ import VerdaniaLakeFountainOrbs from "./Enemy/Nuphar.png";
 import VerdaniaOrbsCollected from "./Enemy/Verdanir.png";
 import Forebrothers from "./Boss/Forebrothers.png";
 import Groal from "./Boss/Groal.png";
-import Conchflies1 from "./Boss/Conchfly.png";
 import SavageBeastfly1 from "./Boss/SavageBeastfly.png";
 import SavageBeastfly2 from "./Boss/SavageBeastfly.png";
 import CaravanTroupeGreymoor from "./NPC/Mooshka.png";
@@ -278,7 +286,6 @@ import CaravanTroupeFleatopia from "./NPC/Mooshka.png";
 import SoldRelic from "./NPC/Scrounge.png";
 import PavoTimePassed from "./NPC/Pavo.png";
 import SongclaveBell from "./Misc/Bell.png";
-import Voltvyrm from "./Boss/Voltvyrm.png";
 import SkullTyrant1 from "./Boss/SkullTyrant.png";
 import ShermaReturned from "./NPC/Sherma.png";
 import JubilanaRescuedMemorium from "./NPC/Jubilana.png";
@@ -363,6 +370,8 @@ export default {
   Widow,
   BellhartBell,
   EnterBlastedSteps,
+  GreatConchflies,
+  GreatConchfliesTrans,
   NeedleStrike,
   NeedleStrikeTrans,
   EnterLastJudge,
@@ -377,6 +386,7 @@ export default {
   EnterBilewater,
   EnterExhaustOrgan,
   Phantom,
+  PhantomTrans,
   CrossStitch,
   CrossStitchTrans,
   TrailsEndTrans,
@@ -394,6 +404,12 @@ export default {
   EnterBrightvein,
   UpperMountFayTrans,
   FaydownCloak,
+  EnterSandsOfKarak,
+  EnterVoltnest,
+  Voltvyrm,
+  RagingConchfly,
+  RagingConchflyTrans,
+  WatcherAtTheEdge,
   Act2Started,
   EnterCogworkDancers,
   CogworkDancersEncountered,
@@ -578,7 +594,6 @@ export default {
   VerdaniaOrbsCollected,
   Forebrothers,
   Groal,
-  Conchflies1,
   SavageBeastfly1,
   SavageBeastfly2,
   CaravanTroupeGreymoor,
@@ -586,7 +601,6 @@ export default {
   SoldRelic,
   PavoTimePassed,
   SongclaveBell,
-  Voltvyrm,
   SkullTyrant1,
   ShermaReturned,
   JubilanaRescuedMemorium,

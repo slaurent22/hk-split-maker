@@ -330,6 +330,18 @@
         "tooltip": "Splits when entering the Blasted Steps from Shellwood, where the area text appears"
     },
     {
+        "alias": "Conchflies1",
+        "description": "Great Conchflies (Boss)",
+        "key": "GreatConchflies",
+        "tooltip": "Splits after defeating the Great Conchflies (two-enemy encounter) boss"
+    },
+    {
+        "alias": null,
+        "description": "Great Conchflies (Transition)",
+        "key": "GreatConchfliesTrans",
+        "tooltip": "Splits on the transition after defeating the Great Conchflies boss"
+    },
+    {
         "alias": null,
         "description": "Needle Strike (Skill)",
         "key": "NeedleStrike",
@@ -412,6 +424,12 @@
         "description": "Phantom (Boss)",
         "key": "Phantom",
         "tooltip": "Splits when killing Phantom"
+    },
+    {
+        "alias": null,
+        "description": "Phantom (Transition)",
+        "key": "PhantomTrans",
+        "tooltip": "Splits on the transition after killing Phantom"
     },
     {
         "alias": null,
@@ -514,6 +532,42 @@
         "description": "Faydown Cloak (Skill)",
         "key": "FaydownCloak",
         "tooltip": "Splits when you obtain Faydown Cloak (Double Jump)"
+    },
+    {
+        "alias": null,
+        "description": "Enter Sands of Karak (Transition)",
+        "key": "EnterSandsOfKarak",
+        "tooltip": "Splits when entering Sands of Karak"
+    },
+    {
+        "alias": null,
+        "description": "Enter Voltnest (Transition)",
+        "key": "EnterVoltnest",
+        "tooltip": "Splits when entering the Voltnest subregion"
+    },
+    {
+        "alias": null,
+        "description": "Voltvyrm (Boss)",
+        "key": "Voltvyrm",
+        "tooltip": "Splits after defeating Voltvyrm"
+    },
+    {
+        "alias": null,
+        "description": "Raging Conchfly (Boss)",
+        "key": "RagingConchfly",
+        "tooltip": "Splits when the Raging Conchfly (single-enemy second encounter) is defeated"
+    },
+    {
+        "alias": null,
+        "description": "Raging Conchfly (Transition)",
+        "key": "RagingConchflyTrans",
+        "tooltip": "Splits on the transition after defeating Raging Conchfly"
+    },
+    {
+        "alias": null,
+        "description": "Watcher at the Edge (Boss)",
+        "key": "WatcherAtTheEdge",
+        "tooltip": "Splits when Watcher at the Edge is defeated"
     },
     {
         "alias": null,
@@ -1621,12 +1675,6 @@
     },
     {
         "alias": null,
-        "description": "Conchflies 1 (Boss)",
-        "key": "Conchflies1",
-        "tooltip": "Splits after defeating Conchflies 1"
-    },
-    {
-        "alias": null,
         "description": "Savage Beastfly 1 (Boss)",
         "key": "SavageBeastfly1",
         "tooltip": "Splits after defeating the Beastfly in the Chapel"
@@ -1666,12 +1714,6 @@
         "description": "Songclave Bell (Event)",
         "key": "SongclaveBell",
         "tooltip": "Splits when ringing the Songclave Bell Shrine"
-    },
-    {
-        "alias": null,
-        "description": "Voltvyrm (Boss)",
-        "key": "Voltvyrm",
-        "tooltip": "Splits after defeating Voltvyrm"
     },
     {
         "alias": null,
