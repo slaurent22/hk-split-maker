@@ -1,0 +1,36 @@
+{
+    "categoryName": "Slap%",
+    "splitIds": [
+        "StartNewGame",
+        "MossMotherTrans",
+        "SilkSpearTrans",
+        "MarrowBell",
+        "SwiftStepTrans",
+        "Lace1Trans",
+        "DriftersCloakTrans",
+        "GreymoorBell",
+        "MoorwingTrans",
+        "ClingGripTrans",
+        "Widow",
+        "ShellwoodBell",
+        "Act2Started",
+        "ManualSplit",
+        "CogworkDancers",
+        "WhisperingVaultsArena",
+        "TrobbioTrans",
+        "Clawline",
+        "ManualSplit",
+        "GainedCurse",
+        "ManualSplit",
+        "ManualSplit"
+    ],
+    "names": {
+        "ManualSplit": [
+            "Grindle Slap",
+            "Twisted Bud",
+            "Nuu Slap",
+            "Yarnaby Slap"
+        ]
+    },
+    "gameName": "Hollow Knight: Silksong Category Extensions"
+}

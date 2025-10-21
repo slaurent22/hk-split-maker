@@ -150,6 +150,13 @@
             }
         },
         {
+            "fileName": "slap",
+            "displayName": "Slap%",
+            "data": {
+                "routeNotesURL": "https://docs.google.com/document/d/1IbRnAVxcAzzxbvHKevTz2xz-E217hXeofCyNnAeZ5so"
+            }
+        },
+        {
             "fileName": "sylphsong",
             "displayName": "Sylphsong%",
             "data": {
