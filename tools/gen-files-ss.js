@@ -254,6 +254,10 @@ function getUrl(qualifier, id) {
       return getUrl("Enemy", "Crustcrawler");
     case "EnterVoltnest":
       return getUrl("Boss", "Voltvyrm");
+    case "EnterRedMemory":
+      return getUrl("NPC", "ShamanSeeker");
+    case "EnterDestroyedCogworks":
+      return getUrl("Misc", "ShiningCog");
 
     // Boss Transition/Encountered
     case "MossMotherTrans":
@@ -296,10 +300,6 @@ function getUrl(qualifier, id) {
     case "EnterCogworkDancers":
     case "CogworkDancersEncountered":
       return getUrl("Boss", "CogworkDancers");
-    case "EnterRedMemory":
-      return getUrl("NPC", "ShamanSeeker");
-    case "EnterDestroyedCogworks":
-      return getUrl("Misc", "ShiningCog");
     case "TheUnravelledEncountered":
       return getUrl("Boss", "TheUnravelled");
     case "GreatConchfliesTrans":
