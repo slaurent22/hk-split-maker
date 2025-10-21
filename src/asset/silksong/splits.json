@@ -595,6 +595,12 @@
     },
     {
         "alias": null,
+        "description": "Second Sentinel Awoken (Event)",
+        "key": "SecondSentinelAwoken",
+        "tooltip": "Splits when using the Cogheart to activate Second Sentinel"
+    },
+    {
+        "alias": null,
         "description": "Enter Whispering Vaults (Transition)",
         "key": "EnterWhisperingVaults",
         "tooltip": "Splits when entering the rooms where the Whispering Vaults area text appears, past the arena or from Songclave"
@@ -661,6 +667,24 @@
     },
     {
         "alias": null,
+        "description": "Enter Second Sentinel (Transition)",
+        "key": "EnterSecondSentinel",
+        "tooltip": "Splits when entering the arena for the Second Sentinel boss fight"
+    },
+    {
+        "alias": null,
+        "description": "Second Sentinel Encountered (Boss)",
+        "key": "SecondSentinelBossEncountered",
+        "tooltip": "Splits when the Second Sentinel boss encounter begins the first time"
+    },
+    {
+        "alias": null,
+        "description": "Second Sentinel (Boss)",
+        "key": "SecondSentinel",
+        "tooltip": "Splits when Second Sentinel is defeated"
+    },
+    {
+        "alias": null,
         "description": "Enter Whiteward (Transition)",
         "key": "EnterWhiteward",
         "tooltip": "Splits when entering the upper portion of Whiteward from the Choral Chambers"
@@ -706,6 +730,18 @@
         "description": "Enter Putrified Ducts (Transition)",
         "key": "EnterPutrifiedDucts",
         "tooltip": "Splits when entering the Putrified Ducts in a room with area text (excludes Huntress room, includes tall room)"
+    },
+    {
+        "alias": null,
+        "description": "Flea Festival Begin (Event)",
+        "key": "FleaFestivalBegin",
+        "tooltip": "Splits when starting the Flea Festival in Fleatopia"
+    },
+    {
+        "alias": null,
+        "description": "Flea Festival End (Event)",
+        "key": "FleaFestivalEnd",
+        "tooltip": "Splits when the Flea Festival has ended"
     },
     {
         "alias": null,
@@ -1584,6 +1620,18 @@
         "tooltip": "Splits when entering Nyleth's memory"
     },
     {
+        "alias": null,
+        "description": "Nyleth Encountered (Boss)",
+        "key": "NylethEncountered",
+        "tooltip": "Splits when Nyleth is encountered for the first time"
+    },
+    {
+        "alias": null,
+        "description": "Nyleth (Boss)",
+        "key": "Nyleth",
+        "tooltip": "Splits when Nyleth is defeated"
+    },
+    {
         "alias": "CollectedHeartNyleth",
         "description": "Nyleth's Heart (Item)",
         "key": "HeartNyleth",
@@ -1596,6 +1644,18 @@
         "tooltip": "Splits when entering Khann's Coral Tower memory"
     },
     {
+        "alias": null,
+        "description": "Khann Encountered (Boss)",
+        "key": "KhannEncountered",
+        "tooltip": "Splits when Khann is first met at the top of the Coral Tower memory"
+    },
+    {
+        "alias": null,
+        "description": "Crust King Khann (Boss)",
+        "key": "CrustKingKhann",
+        "tooltip": "Splits when Crust King Khann is defeated"
+    },
+    {
         "alias": "CollectedHeartKhann",
         "description": "Khann's Heart (Item)",
         "key": "HeartKhann",
@@ -1606,6 +1666,12 @@
         "description": "Enter Karmelita Memory (Transition)",
         "key": "EnterKarmelitaMemory",
         "tooltip": "Splits when entering Karmelita's memory"
+    },
+    {
+        "alias": null,
+        "description": "Skarrsinger Karmelita (Boss)",
+        "key": "SkarrsingerKarmelita",
+        "tooltip": "Splits when Skarrsinger Karmelita is defeated"
     },
     {
         "alias": "CollectedHeartKarmelita",
@@ -1624,6 +1690,24 @@
         "description": "Enter Verdania Castle (Transition)",
         "key": "EnterVerdaniaCastle",
         "tooltip": "Splits when entering the room containing the Clover Dancers boss"
+    },
+    {
+        "alias": null,
+        "description": "Palestag (Boss)",
+        "key": "Palestag",
+        "tooltip": "Splits when the Palestag boss is defeated"
+    },
+    {
+        "alias": null,
+        "description": "Clover Dancers Encountered (Boss)",
+        "key": "CloverDancersEncountered",
+        "tooltip": "Splits when the Clover Dancers boss fight begins for the first time"
+    },
+    {
+        "alias": null,
+        "description": "Clover Dancers (Boss)",
+        "key": "CloverDancers",
+        "tooltip": "Splits when the Clover Dancers boss is defeated"
     },
     {
         "alias": "CollectedHeartClover",

@@ -275,9 +275,9 @@ function getUrl(qualifier, id) {
     case "EnterNylethMemory":
       return getUrl("Boss", "Nyleth");
     case "EnterKhannMemory":
-      return getUrl("Boss", "Khann");
+      return getUrl("Boss", "CrustKingKhann");
     case "EnterKarmelitaMemory":
-      return getUrl("Boss", "Karmelita");
+      return getUrl("Boss", "SkarrsingerKarmelita");
     case "EnterVerdaniaMemory":
       return getUrl("Enemy", "LeafGlider");
     case "EnterSeth":
@@ -308,6 +308,15 @@ function getUrl(qualifier, id) {
       return getUrl("Boss", "Phantom");
     case "RagingConchflyTrans":
       return getUrl("Boss", "GreatConchflies");
+    case "EnterSecondSentinel":
+    case "SecondSentinelBossEncountered":
+      return getUrl("Boss", "SecondSentinel");
+    case "NylethEncountered":
+      return getUrl("Boss", "Nyleth");
+    case "KhannEncountered":
+      return getUrl("Boss", "CrustKingKhann");
+    case "CloverDancersEncountered":
+      return getUrl("Boss", "CloverDancers");
 
     // Melody Transition
     case "VaultkeepersMelodyTrans":
@@ -467,6 +476,12 @@ function getUrl(qualifier, id) {
       return getUrl("NPC", "Shakra");
     case "GivenCouriersRasher":
       return getUrl("Item", "CouriersRasher");
+    case "SecondSentinelAwoken":
+      return getUrl("Item", "Cogheart");
+    case "FleaFestivalBegin":
+      return getUrl("Misc", "FleaCaravan");
+    case "FleaFestivalEnd":
+      return getUrl("Item", "PaleOil");
 
     // Hearts and Memories
     case "HeartNyleth":

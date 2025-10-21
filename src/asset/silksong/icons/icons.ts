@@ -99,6 +99,7 @@ import Act2Started from "./Event/Act2Started.png";
 import EnterCogworkDancers from "./Boss/CogworkDancers.png";
 import CogworkDancersEncountered from "./Boss/CogworkDancers.png";
 import CogworkDancers from "./Boss/CogworkDancers.png";
+import SecondSentinelAwoken from "./Item/Cogheart.png";
 import EnterWhisperingVaults from "./Enemy/Lampbearer.png";
 import WhisperingVaultsArena from "./Enemy/Vaultkeeper.png";
 import EnterSongclave from "./NPC/Caretaker.png";
@@ -110,6 +111,9 @@ import Clawline from "./Skill/Clawline.png";
 import EnterHighHalls from "./Enemy/Minister.png";
 import EnterHighHallsArena from "./Enemy/Maestro.png";
 import HighHallsArena from "./Enemy/ChoirClapper.png";
+import EnterSecondSentinel from "./Boss/SecondSentinel.png";
+import SecondSentinelBossEncountered from "./Boss/SecondSentinel.png";
+import SecondSentinel from "./Boss/SecondSentinel.png";
 import EnterWhiteward from "./Enemy/Surgeon.png";
 import PostWhitewardElevatorTrans from "./Enemy/Mortician.png";
 import CollectedWhitewardKey from "./Item/CollectedWhitewardKey.png";
@@ -118,6 +122,8 @@ import TheUnravelledEncountered from "./Boss/TheUnravelled.png";
 import TheUnravelled from "./Boss/TheUnravelled.png";
 import EnterMemorium from "./Enemy/Rhinogrund.png";
 import EnterPutrifiedDucts from "./Enemy/Barnak.png";
+import FleaFestivalBegin from "./Misc/FleaCaravan.png";
+import FleaFestivalEnd from "./Item/PaleOil.png";
 import Lace2 from "./Boss/Lace.png";
 import PaleNails from "./Skill/PaleNails.png";
 import PaleNailsTrans from "./Skill/PaleNails.png";
@@ -264,13 +270,21 @@ import BeastlingCall from "./Skill/BeastlingCall.png";
 import SilkSoar from "./Skill/SilkSoar.png";
 import ElegyOfTheDeep from "./Skill/ElegyOfTheDeep.png";
 import EnterNylethMemory from "./Boss/Nyleth.png";
+import NylethEncountered from "./Boss/Nyleth.png";
+import Nyleth from "./Boss/Nyleth.png";
 import HeartNyleth from "./Item/PollenHeart.png";
-import EnterKhannMemory from "./Boss/Khann.png";
+import EnterKhannMemory from "./Boss/CrustKingKhann.png";
+import KhannEncountered from "./Boss/CrustKingKhann.png";
+import CrustKingKhann from "./Boss/CrustKingKhann.png";
 import HeartKhann from "./Item/EncrustedHeart.png";
-import EnterKarmelitaMemory from "./Boss/Karmelita.png";
+import EnterKarmelitaMemory from "./Boss/SkarrsingerKarmelita.png";
+import SkarrsingerKarmelita from "./Boss/SkarrsingerKarmelita.png";
 import HeartKarmelita from "./Item/HuntersHeart.png";
 import EnterVerdaniaMemory from "./Enemy/LeafGlider.png";
 import EnterVerdaniaCastle from "./Boss/CloverDancers.png";
+import Palestag from "./Boss/Palestag.png";
+import CloverDancersEncountered from "./Boss/CloverDancers.png";
+import CloverDancers from "./Boss/CloverDancers.png";
 import HeartClover from "./Item/ConjoinedHeart.png";
 import EnterRedMemory from "./NPC/ShamanSeeker.png";
 import RedMemory from "./Item/Everbloom.png";
@@ -414,6 +428,7 @@ export default {
   EnterCogworkDancers,
   CogworkDancersEncountered,
   CogworkDancers,
+  SecondSentinelAwoken,
   EnterWhisperingVaults,
   WhisperingVaultsArena,
   EnterSongclave,
@@ -425,6 +440,9 @@ export default {
   EnterHighHalls,
   EnterHighHallsArena,
   HighHallsArena,
+  EnterSecondSentinel,
+  SecondSentinelBossEncountered,
+  SecondSentinel,
   EnterWhiteward,
   PostWhitewardElevatorTrans,
   CollectedWhitewardKey,
@@ -433,6 +451,8 @@ export default {
   TheUnravelled,
   EnterMemorium,
   EnterPutrifiedDucts,
+  FleaFestivalBegin,
+  FleaFestivalEnd,
   Lace2,
   PaleNails,
   PaleNailsTrans,
@@ -579,13 +599,21 @@ export default {
   SilkSoar,
   ElegyOfTheDeep,
   EnterNylethMemory,
+  NylethEncountered,
+  Nyleth,
   HeartNyleth,
   EnterKhannMemory,
+  KhannEncountered,
+  CrustKingKhann,
   HeartKhann,
   EnterKarmelitaMemory,
+  SkarrsingerKarmelita,
   HeartKarmelita,
   EnterVerdaniaMemory,
   EnterVerdaniaCastle,
+  Palestag,
+  CloverDancersEncountered,
+  CloverDancers,
   HeartClover,
   EnterRedMemory,
   RedMemory,
