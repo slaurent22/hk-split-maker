@@ -72,6 +72,11 @@
             }
         },
         {
+            "fileName": "te-blue",
+            "displayName": "True Ending (BlueSR Route)",
+            "data": {}
+        },
+        {
             "fileName": "twisted",
             "displayName": "Twisted%",
             "data": {}
