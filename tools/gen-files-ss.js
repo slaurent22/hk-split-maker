@@ -463,6 +463,7 @@ function getUrl(qualifier, id) {
     case "SoldRelic":
       return getUrl("NPC", "Scrounge");
     case "SilkAndSoulOffered":
+      return getUrl("Misc", "Wayfarer");
     case "SoulSnareReady":
       return getUrl("Event", "SilkAndSoul");
     case "AbyssEscape":

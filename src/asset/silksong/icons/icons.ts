@@ -304,7 +304,7 @@ import SkullTyrant1 from "./Boss/SkullTyrant.png";
 import ShermaReturned from "./NPC/Sherma.png";
 import JubilanaRescuedMemorium from "./NPC/Jubilana.png";
 import JubilanaRescuedChoralChambers from "./NPC/Jubilana.png";
-import SilkAndSoulOffered from "./Event/SilkAndSoul.png";
+import SilkAndSoulOffered from "./Misc/Wayfarer.png";
 import SoulSnareReady from "./Event/SilkAndSoul.png";
 import EnterDestroyedCogworks from "./Misc/ShiningCog.png";
 import DestroyedCogworksVoidArena from "./Enemy/Undercrank.png";
