@@ -6,8 +6,22 @@
             "data": {}
         },
         {
-            "fileName": "100",
-            "displayName": "100%",
+            "fileName": "100-jw",
+            "displayName": "100% (JW Route)",
+            "data": {
+                "routeNotesURL": "https://docs.google.com/document/d/1bKXTu8ZtDbsMReaRgIrm2zAMZHon7sl8yN3AkbycfJM"
+            }
+        },
+        {
+            "fileName": "100-monstah-39",
+            "displayName": "100% (Monstah 3.9 Route)",
+            "data": {
+                "routeNotesURL": "https://app.milanote.com/1V7BrX1cs2nZ9F/route-v39?p=4KWVkAUB4ds"
+            }
+        },
+        {
+            "fileName": "100-monstah-40",
+            "displayName": "100% (Monstah 4.0 Route)",
             "data": {
                 "routeNotesURL": "https://app.milanote.com/1UWRKC16EY1t7x/detailed-route-v4?p=4KWVkAUB4ds"
             }
