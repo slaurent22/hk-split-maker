@@ -23,15 +23,14 @@
         "ManualSplit",
         "ManualSplit",
         "GivenCouriersRasher",
-        "ManualSplit"
+        "GreatTasteReward"
     ],
     "names": {
         "ManualSplit": [
             "Crustnut (%s)",
             "Mossberry Stew (%s)",
             "Vintage Nectar (%s)",
-            "Pickled Muckmaggot (%s)",
-            "Glutton (%s)"
+            "Pickled Muckmaggot (%s)"
         ]
     },
     "gameName": "Hollow Knight: Silksong Category Extensions",
