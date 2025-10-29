@@ -6,6 +6,7 @@ import Act1Start from "./Misc/Hornet.png";
 import EndingSplit from "./Boss/GrandMotherSilk.png";
 import EndingA from "./Boss/GrandMotherSilk.png";
 import Menu from "./Item/Map.png";
+import BenchAny from "./Misc/Bench.png";
 import PlayerDeath from "./Misc/Hornet.png";
 import AnyTransition from "./Misc/Hornet.png";
 import TransitionExcludingDiscontinuities from "./Misc/Hornet.png";
@@ -53,6 +54,7 @@ import ClingGripTrans from "./Skill/ClingGrip.png";
 import ShellwoodBell from "./Misc/Bell.png";
 import EnterBellhart from "./Enemy/Furm.png";
 import Widow from "./Boss/Widow.png";
+import MenuNeedolinMemory from "./Skill/Needolin.png";
 import BellhartBell from "./Misc/Bell.png";
 import EnterBlastedSteps from "./Enemy/Judge.png";
 import GreatConchflies from "./Boss/GreatConchflies.png";
@@ -76,6 +78,7 @@ import CrossStitch from "./Skill/CrossStitch.png";
 import CrossStitchTrans from "./Skill/CrossStitch.png";
 import TrailsEndTrans from "./NPC/Shakra.png";
 import EnterTheSlab from "./Enemy/Wardenfly.png";
+import WardenflyCaptureTrans from "./Enemy/Wardenfly.png";
 import SlabKeyIndolent from "./Item/SlabKeyIndolent.png";
 import SlabKeyHeretic from "./Item/SlabKeyHeretic.png";
 import SlabKeyApostate from "./Item/SlabKeyApostate.png";
@@ -99,6 +102,7 @@ import Act2Started from "./Event/Act2Started.png";
 import EnterCogworkDancers from "./Boss/CogworkDancers.png";
 import CogworkDancersEncountered from "./Boss/CogworkDancers.png";
 import CogworkDancers from "./Boss/CogworkDancers.png";
+import EnterCogworkCore from "./Enemy/CogworkChoirbug.png";
 import SecondSentinelAwoken from "./Item/Cogheart.png";
 import EnterWhisperingVaults from "./Enemy/Lampbearer.png";
 import WhisperingVaultsArena from "./Enemy/Vaultkeeper.png";
@@ -107,7 +111,9 @@ import Trobbio from "./Boss/Trobbio.png";
 import TrobbioTrans from "./Boss/Trobbio.png";
 import MetMergwin from "./NPC/Mergwin.png";
 import GivenCouriersRasher from "./Item/CouriersRasher.png";
+import GreatTasteReward from "./Item/PaleOil.png";
 import Clawline from "./Skill/Clawline.png";
+import PostClawlineArenaTrans from "./Skill/Clawline.png";
 import EnterHighHalls from "./Enemy/Minister.png";
 import EnterHighHallsArena from "./Enemy/Maestro.png";
 import HighHallsArena from "./Enemy/ChoirClapper.png";
@@ -125,6 +131,8 @@ import EnterPutrifiedDucts from "./Enemy/Barnak.png";
 import FleaFestivalBegin from "./Misc/FleaCaravan.png";
 import FleaFestivalEnd from "./Item/PaleOil.png";
 import Lace2 from "./Boss/Lace.png";
+import PostLace2ArenaTrans from "./Boss/Lace.png";
+import EnterTheCradle from "./Boss/Lace.png";
 import PaleNails from "./Skill/PaleNails.png";
 import PaleNailsTrans from "./Skill/PaleNails.png";
 import VaultkeepersMelody from "./Melody/VaultkeepersMelody.png";
@@ -240,6 +248,7 @@ import GreymoorStation from "./Misc/Bellway.png";
 import SlabStation from "./Misc/Bellway.png";
 import BilewaterStation from "./Misc/Bellway.png";
 import ShellwoodStation from "./Misc/Bellway.png";
+import BellwayTrans from "./Misc/Bellway.png";
 import ChoralChambersTube from "./Misc/Ventrica.png";
 import UnderworksTube from "./Misc/Ventrica.png";
 import GrandBellwayTube from "./Misc/Ventrica.png";
@@ -260,6 +269,7 @@ import SeenShakraSinnersRoad from "./NPC/Shakra.png";
 import SeenShakraMountFay from "./NPC/Shakra.png";
 import SeenShakraBilewater from "./NPC/Shakra.png";
 import SeenShakraSandsOfKarak from "./NPC/Shakra.png";
+import ShakraMapBuyout from "./NPC/Shakra.png";
 import MetJubilanaEnclave from "./NPC/Jubilana.png";
 import MetShermaEnclave from "./NPC/Sherma.png";
 import UnlockedPrinceCage from "./NPC/GreenPrince.png";
@@ -335,6 +345,7 @@ export default {
   EndingSplit,
   EndingA,
   Menu,
+  BenchAny,
   PlayerDeath,
   AnyTransition,
   TransitionExcludingDiscontinuities,
@@ -382,6 +393,7 @@ export default {
   ShellwoodBell,
   EnterBellhart,
   Widow,
+  MenuNeedolinMemory,
   BellhartBell,
   EnterBlastedSteps,
   GreatConchflies,
@@ -405,6 +417,7 @@ export default {
   CrossStitchTrans,
   TrailsEndTrans,
   EnterTheSlab,
+  WardenflyCaptureTrans,
   SlabKeyIndolent,
   SlabKeyHeretic,
   SlabKeyApostate,
@@ -428,6 +441,7 @@ export default {
   EnterCogworkDancers,
   CogworkDancersEncountered,
   CogworkDancers,
+  EnterCogworkCore,
   SecondSentinelAwoken,
   EnterWhisperingVaults,
   WhisperingVaultsArena,
@@ -436,7 +450,9 @@ export default {
   TrobbioTrans,
   MetMergwin,
   GivenCouriersRasher,
+  GreatTasteReward,
   Clawline,
+  PostClawlineArenaTrans,
   EnterHighHalls,
   EnterHighHallsArena,
   HighHallsArena,
@@ -454,6 +470,8 @@ export default {
   FleaFestivalBegin,
   FleaFestivalEnd,
   Lace2,
+  PostLace2ArenaTrans,
+  EnterTheCradle,
   PaleNails,
   PaleNailsTrans,
   VaultkeepersMelody,
@@ -569,6 +587,7 @@ export default {
   SlabStation,
   BilewaterStation,
   ShellwoodStation,
+  BellwayTrans,
   ChoralChambersTube,
   UnderworksTube,
   GrandBellwayTube,
@@ -589,6 +608,7 @@ export default {
   SeenShakraMountFay,
   SeenShakraBilewater,
   SeenShakraSandsOfKarak,
+  ShakraMapBuyout,
   MetJubilanaEnclave,
   MetShermaEnclave,
   UnlockedPrinceCage,

@@ -61,10 +61,14 @@ function getUrl(qualifier, id) {
     case "Act1Start":
     case "TransitionExcludingDiscontinuities":
       return getUrl("Misc", "Hornet");
+    case "BenchAny":
+      return getUrl("Misc", "Bench");
 
     // Menu
     case "Menu":
       return getUrl("Item", "Map");
+    case "MenuNeedolinMemory":
+      return getUrl("Skill", "Needolin");
 
     // Bell
     case "MarrowBell":
@@ -139,6 +143,9 @@ function getUrl(qualifier, id) {
     case "CraftingKit4":
       return getUrl("Item", "CraftingKit");
 
+    case "GreatTasteReward":
+      return getUrl("Item", "PaleOil");
+
     // Skill Transition
     case "SilkSpearTrans":
       return getUrl("Skill", "SilkSpear");
@@ -164,6 +171,8 @@ function getUrl(qualifier, id) {
       return getUrl("Skill", "NeedleStrike");
     case "SylphsongTrans":
       return getUrl("Skill", "Sylphsong");
+    case "PostClawlineArenaTrans":
+      return getUrl("Skill", "Clawline");
 
     // Crest Transition
     case "ReaperCrestTrans":
@@ -258,6 +267,14 @@ function getUrl(qualifier, id) {
       return getUrl("NPC", "ShamanSeeker");
     case "EnterDestroyedCogworks":
       return getUrl("Misc", "ShiningCog");
+    case "WardenflyCaptureTrans":
+      return getUrl("Enemy", "Wardenfly");
+    case "EnterCogworkCore":
+      return getUrl("Enemy", "CogworkChoirbug");
+    case "BellwayTrans":
+      return getUrl("Misc", "Bellway");
+    case "EnterTheCradle":
+      return getUrl("Boss", "Lace");
 
     // Boss Transition/Encountered
     case "MossMotherTrans":
@@ -317,6 +334,8 @@ function getUrl(qualifier, id) {
       return getUrl("Boss", "CrustKingKhann");
     case "CloverDancersEncountered":
       return getUrl("Boss", "CloverDancers");
+    case "PostLace2ArenaTrans":
+      return getUrl("Boss", "Lace");
 
     // Melody Transition
     case "VaultkeepersMelodyTrans":
@@ -431,6 +450,7 @@ function getUrl(qualifier, id) {
     case "SeenShakraMountFay":
     case "SeenShakraBilewater":
     case "SeenShakraSandsOfKarak":
+    case "ShakraMapBuyout":
       return getUrl("NPC", "Shakra");
 
     case "MetJubilanaEnclave":

@@ -37,6 +37,12 @@
     },
     {
         "alias": null,
+        "description": "Any Bench (Bench)",
+        "key": "BenchAny",
+        "tooltip": "Splits when sitting on a bench"
+    },
+    {
+        "alias": null,
         "description": "Death (Event)",
         "key": "PlayerDeath",
         "tooltip": "Splits when player HP is 0"
@@ -51,7 +57,7 @@
         "alias": null,
         "description": "Transition excluding discontinuities (Transition)",
         "key": "TransitionExcludingDiscontinuities",
-        "tooltip": "Splits when entering a transition (excludes discontinuities including save states and deaths)"
+        "tooltip": "Splits when entering a transition (excludes discontinuities including save states, deaths, and bellway travel)"
     },
     {
         "alias": null,
@@ -319,6 +325,12 @@
     },
     {
         "alias": null,
+        "description": "Main Menu w/ Needolin Memory (Menu)",
+        "key": "MenuNeedolinMemory",
+        "tooltip": "Splits on the main menu after waking up from the Needolin Memory"
+    },
+    {
+        "alias": null,
         "description": "Bellhart Bell (Event)",
         "key": "BellhartBell",
         "tooltip": "Splits when ringing the Bellhart Bell Shrine"
@@ -454,6 +466,12 @@
         "description": "Enter The Slab (Transition)",
         "key": "EnterTheSlab",
         "tooltip": "Splits when entering the Slab's front entrance"
+    },
+    {
+        "alias": null,
+        "description": "Wardenfly Capture (Transition)",
+        "key": "WardenflyCaptureTrans",
+        "tooltip": "Splits when entering the Slab after being captured by a Wardenfly"
     },
     {
         "alias": null,
@@ -595,6 +613,12 @@
     },
     {
         "alias": null,
+        "description": "Enter Cogwork Core (Transition)",
+        "key": "EnterCogworkCore",
+        "tooltip": "Splits when entering the main region of Cogwork Core, above or below the Cogwork Dancers arena"
+    },
+    {
+        "alias": null,
         "description": "Second Sentinel Awoken (Event)",
         "key": "SecondSentinelAwoken",
         "tooltip": "Splits when using the Cogheart to activate Second Sentinel"
@@ -643,9 +667,21 @@
     },
     {
         "alias": null,
+        "description": "Great Taste Reward (Item)",
+        "key": "GreatTasteReward",
+        "tooltip": "Splits when collecting the Pale Oil reward from the Great Taste of Pharloom wish"
+    },
+    {
+        "alias": null,
         "description": "Clawline (Skill)",
         "key": "Clawline",
         "tooltip": "Splits when obtaining Clawline (Harpoon Dash)"
+    },
+    {
+        "alias": null,
+        "description": "Post-Clawline Arena (Transition)",
+        "key": "PostClawlineArenaTrans",
+        "tooltip": "Splits when exiting the Cauldron through the clawline-locked arena transition"
     },
     {
         "alias": null,
@@ -747,7 +783,19 @@
         "alias": null,
         "description": "Lace 2 (Boss)",
         "key": "Lace2",
-        "tooltip": "Splits when defeating Lace 2 in TheCradle"
+        "tooltip": "Splits when defeating Lace 2 in the Cradle"
+    },
+    {
+        "alias": null,
+        "description": "Post-Lace 2 Arena (Transition)",
+        "key": "PostLace2ArenaTrans",
+        "tooltip": "Splits when taking the transition after Lace 2's arena into the ventrica terminus"
+    },
+    {
+        "alias": null,
+        "description": "Enter The Cradle (Transition)",
+        "key": "EnterTheCradle",
+        "tooltip": "Splits when entering the full Cradle area, past the ventrica terminus"
     },
     {
         "alias": null,
@@ -1441,6 +1489,12 @@
     },
     {
         "alias": null,
+        "description": "Bellway (Transition)",
+        "key": "BellwayTrans",
+        "tooltip": "Splits when riding the Bell Beast through the Bellways"
+    },
+    {
+        "alias": null,
         "description": "Choral Chambers (Ventrica)",
         "key": "ChoralChambersTube",
         "tooltip": "Splits after unlocking Choral Chambers Ventrica"
@@ -1558,6 +1612,12 @@
         "description": "Seen Shakra Sands of Karak (NPC)",
         "key": "SeenShakraSandsOfKarak",
         "tooltip": "Splits after seeing Shakra in Sands of Karak"
+    },
+    {
+        "alias": null,
+        "description": "Shakra Map Buyout (NPC)",
+        "key": "ShakraMapBuyout",
+        "tooltip": "Splits after purchasing all of Shakra's maps"
     },
     {
         "alias": null,
