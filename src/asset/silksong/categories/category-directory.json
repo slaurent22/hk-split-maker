@@ -176,6 +176,13 @@
             }
         },
         {
+            "fileName": "ordinal",
+            "displayName": "Ordinal%",
+            "data": {
+                "routeNotesURL": "https://pastebin.com/raw/RtZKTH7C"
+            }
+        },
+        {
             "fileName": "slap",
             "displayName": "Slap%",
             "data": {
