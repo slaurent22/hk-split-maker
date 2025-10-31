@@ -176,6 +176,13 @@
             }
         },
         {
+            "fileName": "beer-bottle",
+            "displayName": "Beer Bottle%",
+            "data": {
+                "routeNotesURL": "https://docs.google.com/document/d/1fFSlz-ak-iD_2FXyIBMmwQUp6Z275E3vFTvWPrJ07jQ"
+            }
+        },
+        {
             "fileName": "glutton",
             "displayName": "Glutton%",
             "data": {
