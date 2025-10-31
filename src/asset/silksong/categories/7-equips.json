@@ -48,5 +48,8 @@
             "HunterCrest"
         ]
     },
-    "gameName": "Hollow Knight: Silksong Category Extensions"
+    "gameName": "Hollow Knight: Silksong Category Extensions",
+    "variables": {
+        "7 Equips Subcategory": "No Major Glitches"
+    }
 }

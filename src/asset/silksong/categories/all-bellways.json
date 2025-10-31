@@ -43,5 +43,8 @@
         "EnterMemorium": "%s(BD1,VU1)",
         "EnterBlastedSteps": "%s(BU5)"
     },
-    "gameName": "Hollow Knight: Silksong"
+    "gameName": "Hollow Knight: Silksong",
+    "variables": {
+        "All Bellways Subcategory": "No Major Glitches"
+    }
 }

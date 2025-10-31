@@ -25,5 +25,8 @@
             "A Lifesaving Bridge (%s)"
         ]
     },
-    "gameName": "Hollow Knight: Silksong Category Extensions"
+    "gameName": "Hollow Knight: Silksong Category Extensions",
+    "variables": {
+        "6 Wishes Subcategory": "No Major Glitches"
+    }
 }

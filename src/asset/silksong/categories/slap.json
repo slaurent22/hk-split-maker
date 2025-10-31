@@ -32,5 +32,8 @@
             "Yarnaby Slap"
         ]
     },
-    "gameName": "Hollow Knight: Silksong Category Extensions"
+    "gameName": "Hollow Knight: Silksong Category Extensions",
+    "variables": {
+        "Slap% Subcategory": "No Major Glitches"
+    }
 }

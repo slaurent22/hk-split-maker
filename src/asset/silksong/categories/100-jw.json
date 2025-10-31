@@ -190,5 +190,8 @@
     "icons": {
         "EndingSplit": ["EndingSplit", "LostLace"]
     },
-    "gameName": "Hollow Knight: Silksong"
+    "gameName": "Hollow Knight: Silksong",
+    "variables": {
+        "100% Subcategory": "No Major Glitches"
+    }
 }

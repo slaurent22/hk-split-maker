@@ -43,5 +43,8 @@
     "icons": {
         "ManualSplit": ["Weavelight", "Voltvessels"]
     },
-    "gameName": "Hollow Knight: Silksong Category Extensions"
+    "gameName": "Hollow Knight: Silksong Category Extensions",
+    "variables": {
+        "Sylphsong% Subcategory": "No Major Glitches"
+    }
 }
