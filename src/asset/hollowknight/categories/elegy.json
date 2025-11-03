@@ -1,5 +1,5 @@
 {
-    "categoryName": "Elegy% (No Major Glitches)",
+    "categoryName": "Elegy%",
     "splitIds": [
         "-CityKey",
         "VengefulSpirit",
@@ -67,8 +67,15 @@
         "GrubberflysElegy"
     ],
     "names": {
-        "TollBenchQG": "Queen's Garden Bench"
+        "TollBenchQG": "Queen's Garden Bench",
+        "GrubCrystalPeaksMimics": "[1D] %s",
+        "GrubCliffsBaldurShell": "[1U] %s",
+        "Collector": "[2U] %s",
+        "GrubberflysElegy": "[1U] %s"
     },
     "endTriggeringAutosplit": true,
-    "gameName": "Hollow Knight Category Extensions"
+    "gameName": "Hollow Knight Category Extensions",
+    "variables": {
+        "Elegy% Glitch": "Elegy% No Major Glitches"
+    }
 }
