@@ -402,6 +402,8 @@ export default function SplitConfigEditor(props: Props): ReactElement {
     console.error(e);
   }
 
+  const game = useCurrentGame();
+
   return (
     <Tabs>
       <TabList>
@@ -459,10 +461,12 @@ export default function SplitConfigEditor(props: Props): ReactElement {
             parsedConfig={parsedConfig}
           />
         )}
-        <EndTriggeringAutosplit
-          onChange={onChangeParsedConfig}
-          parsedConfig={parsedConfig}
-        />
+        {game === "hollowknight" && (
+          <EndTriggeringAutosplit
+            onChange={onChangeParsedConfig}
+            parsedConfig={parsedConfig}
+          />
+        )}
       </TabPanel>
     </Tabs>
   );
