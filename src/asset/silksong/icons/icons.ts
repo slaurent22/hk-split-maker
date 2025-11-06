@@ -306,6 +306,7 @@ import Groal from "./Boss/Groal.png";
 import SavageBeastfly1 from "./Boss/SavageBeastfly.png";
 import SavageBeastfly2 from "./Boss/SavageBeastfly.png";
 import CaravanTroupeGreymoor from "./NPC/Mooshka.png";
+import CaravanTroupeBlastedSteps from "./NPC/Mooshka.png";
 import CaravanTroupeFleatopia from "./NPC/Mooshka.png";
 import SoldRelic from "./NPC/Scrounge.png";
 import PavoTimePassed from "./NPC/Pavo.png";
@@ -645,6 +646,7 @@ export default {
   SavageBeastfly1,
   SavageBeastfly2,
   CaravanTroupeGreymoor,
+  CaravanTroupeBlastedSteps,
   CaravanTroupeFleatopia,
   SoldRelic,
   PavoTimePassed,

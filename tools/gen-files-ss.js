@@ -410,6 +410,7 @@ function getUrl(qualifier, id) {
 
     case "SeenFleatopiaEmpty":
     case "CaravanTroupeGreymoor":
+    case "CaravanTroupeBlastedSteps":
     case "CaravanTroupeFleatopia":
       return getUrl("NPC", "Mooshka");
 

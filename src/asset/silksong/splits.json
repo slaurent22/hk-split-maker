@@ -1837,6 +1837,12 @@
     },
     {
         "alias": null,
+        "description": "Caravan Troupe Blasted Steps (Event)",
+        "key": "CaravanTroupeBlastedSteps",
+        "tooltip": "Splits when the Caravan Troupe moves to Blasted Steps"
+    },
+    {
+        "alias": null,
         "description": "Caravan Troupe Fleatopia (Event)",
         "key": "CaravanTroupeFleatopia",
         "tooltip": "Splits when the Caravan Troupe moves to Fleatopia"
