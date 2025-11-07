@@ -112,6 +112,11 @@
     ],
     "Individual Level": [
         {
+            "fileName": "moss-grotto",
+            "displayName": "Moss Grotto",
+            "data": {}
+        },
+        {
             "fileName": "room-timer",
             "displayName": "Room Timer",
             "data": {}

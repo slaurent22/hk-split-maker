@@ -1,0 +1,16 @@
+{
+    "categoryName": "Moss Grotto",
+    "splitIds": [
+        "StartNewGame",
+        "AnyTransition",
+        "AnyTransition",
+        "AnyTransition",
+        "AnyTransition",
+        "AnyTransition",
+        "MossMotherTrans"
+    ],
+    "gameName": "Hollow Knight: Silksong Category Extensions",
+    "variables": {
+        "Moss Grotto Subcategory": "No Major Glitches"
+    }
+}
