@@ -35,28 +35,28 @@
         },
         {
             "fileName": "any-bells",
-            "displayName": "Any% (Bells Route)",
+            "displayName": "Any% (Bells Route, Cloak)",
             "data": {
                 "routeNotesURL": "https://docs.google.com/document/d/1OwFO5OSDMIZWn24Jm6f14QtfF7145Aom5T-exSffINI/edit?tab=t.gxdxsxf2j77q"
             }
         },
         {
             "fileName": "any-fleas",
-            "displayName": "Any% (Fleas Route)",
+            "displayName": "Any% (Fleas Route, Cloakless)",
             "data": {
                 "routeNotesURL": "https://drive.google.com/file/d/1PB5wgN88NnyAI8ZdPe9Zzn812-vgOp0j/view"
             }
         },
         {
             "fileName": "any-key",
-            "displayName": "Any% (Key Route)",
+            "displayName": "Any% (Key Route, Cloakless)",
             "data": {
                 "routeNotesURL": "https://docs.google.com/document/d/e/2PACX-1vSMkElA8vNdvb2wVgxlyFs2wRPl4vgs53CK-6-zWkWGjZMalrqM-IX15c19MYgwlZpuJPm0kyacWqur/pub"
             }
         },
         {
             "fileName": "any-mist",
-            "displayName": "Any% (Mist Route)",
+            "displayName": "Any% (Mist Route, Cloak)",
             "data": {
                 "routeNotesURL": "https://docs.google.com/document/d/1OwFO5OSDMIZWn24Jm6f14QtfF7145Aom5T-exSffINI/edit?tab=t.0"
             }
