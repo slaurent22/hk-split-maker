@@ -1,5 +1,5 @@
 {
-    "categoryName": "Slap%",
+    "categoryName": "Dapper Slapper",
     "splitIds": [
         "StartNewGame",
         "MossMotherTrans",
@@ -34,6 +34,6 @@
     },
     "gameName": "Hollow Knight: Silksong Category Extensions",
     "variables": {
-        "Slap% Subcategory": "No Major Glitches"
+        "Dapper Slapper Subcategory": "No Major Glitches"
     }
 }

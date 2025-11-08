@@ -188,6 +188,13 @@
             }
         },
         {
+            "fileName": "dapper-slapper",
+            "displayName": "Dapper Slapper",
+            "data": {
+                "routeNotesURL": "https://docs.google.com/document/d/1IbRnAVxcAzzxbvHKevTz2xz-E217hXeofCyNnAeZ5so"
+            }
+        },
+        {
             "fileName": "glutton",
             "displayName": "Glutton%",
             "data": {
@@ -199,13 +206,6 @@
             "displayName": "Ordinal%",
             "data": {
                 "routeNotesURL": "https://pastebin.com/raw/RtZKTH7C"
-            }
-        },
-        {
-            "fileName": "slap",
-            "displayName": "Slap%",
-            "data": {
-                "routeNotesURL": "https://docs.google.com/document/d/1IbRnAVxcAzzxbvHKevTz2xz-E217hXeofCyNnAeZ5so"
             }
         },
         {
