@@ -7,8 +7,12 @@
         "AnyTransition",
         "AnyTransition",
         "AnyTransition",
+        "MossMother",
         "MossMotherTrans"
     ],
+    "names": {
+        "AnyTransition": ["Tut_01", "Tut_02", "Tut_01", "Tut_01b", "Tut_01"]
+    },
     "gameName": "Hollow Knight: Silksong Category Extensions",
     "variables": {
         "Moss Grotto Subcategory": "No Major Glitches"
