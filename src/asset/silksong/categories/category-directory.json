@@ -211,7 +211,9 @@
         {
             "fileName": "slab-jailed",
             "displayName": "Slab% (Jailed)",
-            "data": {}
+            "data": {
+                "routeNotesURL": "https://pastebin.com/raw/msqJSb8s"
+            }
         },
         {
             "fileName": "sylphsong",
