@@ -27,6 +27,13 @@
             }
         },
         {
+            "fileName": "100-monstah-50",
+            "displayName": "100% (Monstah 5.0 Route)",
+            "data": {
+                "routeNotesURL": "https://app.milanote.com/1VeN2d1HkF2Hdw?p=4KWVkAUB4ds"
+            }
+        },
+        {
             "fileName": "all-bosses",
             "displayName": "All Bosses",
             "data": {
