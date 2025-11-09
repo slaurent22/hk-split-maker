@@ -41,6 +41,13 @@
             }
         },
         {
+            "fileName": "all-act-one-bosses",
+            "displayName": "All Act One Bosses",
+            "data": {
+                "routeNotesURL": "https://docs.google.com/document/d/1Nzk0IuUnTxfF_fWKozyHhh_zAtBB79OYSWqfKydPnf8"
+            }
+        },
+        {
             "fileName": "any-bells",
             "displayName": "Any% (Bells Route, Cloak)",
             "data": {
