@@ -1,0 +1,25 @@
+{
+    "categoryName": "Beer Bottle%",
+    "splitIds": [
+        "StartNewGame",
+        "MossMother",
+        "SilkSpear",
+        "BellBeast",
+        "EnterHuntersMarch",
+        "SavedFleaHuntersMarch",
+        "HuntersMarchPostMiddleArenaTransition",
+        "SwiftStep",
+        "SavedFleaDeepDocksSprint",
+        "DeepDocksStation",
+        "SavedFleaDeepDocksBellway",
+        "BoneBottomSimpleKey",
+        "SavedFleaWormways",
+        "SavedFleaMarrow",
+        "CaravanTroupeGreymoor",
+        "Lace1"
+    ],
+    "gameName": "Hollow Knight: Silksong",
+    "variables": {
+        "Beer Bottle% Subcategory": "No Major Glitches"
+    }
+}

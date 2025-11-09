@@ -202,6 +202,13 @@
             }
         },
         {
+            "fileName": "beer-bottle-early-hm",
+            "displayName": "Beer Bottle% (Early Hunter's March)",
+            "data": {
+                "routeNotesURL": "https://pastebin.com/raw/8pMfJJ6e"
+            }
+        },
+        {
             "fileName": "dapper-slapper",
             "displayName": "Dapper Slapper",
             "data": {
