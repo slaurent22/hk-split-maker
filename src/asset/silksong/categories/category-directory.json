@@ -230,6 +230,13 @@
             }
         },
         {
+            "fileName": "slab-bellbeast",
+            "displayName": "Slab% (Bellbeast)",
+            "data": {
+                "routeNotesURL": "https://pastebin.com/raw/1DeeqkeT"
+            }
+        },
+        {
             "fileName": "slab-jailed",
             "displayName": "Slab% (Jailed)",
             "data": {
