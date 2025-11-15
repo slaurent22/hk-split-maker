@@ -48,6 +48,13 @@
             }
         },
         {
+            "fileName": "all-act-two-bosses",
+            "displayName": "All Act Two Bosses",
+            "data": {
+                "routeNotesURL": "https://docs.google.com/document/d/1w8pymwxMqiM_Ep6qMJJbcyxqf_a_7zgfrYxawWpy_tE"
+            }
+        },
+        {
             "fileName": "any-bells",
             "displayName": "Any% (Bells Route, Cloak)",
             "data": {
