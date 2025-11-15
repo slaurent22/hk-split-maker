@@ -21,6 +21,7 @@
         "SavedFleaBellhart",
         "Widow",
         "NeedleUpgrade1",
+        "Menu",
         "ThreadStorm",
         "SavedFleaGreymoorLake",
         "GreymoorStation",
@@ -94,6 +95,7 @@
         "EndingSplit"
     ],
     "names": {
+        "Menu": "Silver Bells Quitout",
         "EndingSplit": ["Grand Mother Silk", "Lost Lace"]
     },
     "icons": {
