@@ -23,7 +23,7 @@
             "fileName": "100-monstah-40",
             "displayName": "100% (Monstah 4.0 Route)",
             "data": {
-                "routeNotesURL": "https://app.milanote.com/1UWRKC16EY1t7x/detailed-route-v4?p=4KWVkAUB4ds"
+                "routeNotesURL": "https://app.milanote.com/1V56Bk15t7HI6z?p=4KWVkAUB4ds"
             }
         },
         {
@@ -31,6 +31,13 @@
             "displayName": "100% (Monstah 5.0 Route)",
             "data": {
                 "routeNotesURL": "https://app.milanote.com/1VeN2d1HkF2Hdw?p=4KWVkAUB4ds"
+            }
+        },
+        {
+            "fileName": "100-monstah-51",
+            "displayName": "100% (Monstah 5.1 Route)",
+            "data": {
+                "routeNotesURL": "https://app.milanote.com/1UWRKC16EY1t7x?p=4KWVkAUB4ds"
             }
         },
         {
