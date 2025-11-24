@@ -13,6 +13,13 @@
             }
         },
         {
+            "fileName": "100-mist-route",
+            "displayName": "100% (Mist Route)",
+            "data": {
+                "routeNotesURL": "https://pastebin.com/raw/DHR1KiwW"
+            }
+        },
+        {
             "fileName": "100-monstah-39",
             "displayName": "100% (Monstah 3.9 Route)",
             "data": {
