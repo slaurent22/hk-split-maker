@@ -52,6 +52,19 @@ function createEvery() {
 const NEW_ID_MAP = {};
 
 function getUrl(qualifier, id) {
+  if (qualifier === "Upgrade") {
+    switch (id) {
+      // Eva
+      case "HunterCrestEvo1":
+        return getUrl("Crest", "HunterCrestEvo1");
+      case "VesticrestYellowSlot":
+        return getUrl("Crest", "VesticrestYellowSlot");
+      case "VesticrestBlueSlot":
+        return getUrl("Crest", "VesticrestBlueSlot");
+      case "HunterCrestEvo2":
+        return getUrl("Crest", "HunterCrestEvo2");
+    }
+  }
   switch (id) {
     // Misc
     case "ManualSplit":
@@ -275,6 +288,8 @@ function getUrl(qualifier, id) {
       return getUrl("Misc", "Bellway");
     case "EnterTheCradle":
       return getUrl("Boss", "Lace");
+    case "VentricaTrans":
+      return getUrl("Misc", "Ventrica");
 
     // Boss Transition/Encountered
     case "MossMotherTrans":
@@ -336,6 +351,8 @@ function getUrl(qualifier, id) {
       return getUrl("Boss", "CloverDancers");
     case "PostLace2ArenaTrans":
       return getUrl("Boss", "Lace");
+    case "WidowEncountered":
+      return getUrl("Boss", "Widow");
 
     // Melody Transition
     case "VaultkeepersMelodyTrans":
@@ -478,6 +495,9 @@ function getUrl(qualifier, id) {
     case "MetMergwin":
       return getUrl("NPC", "Mergwin");
 
+    case "YarnabySlap":
+      return getUrl("NPC", "Yarnaby");
+
     // Events
     case "VerdaniaOrbsCollected":
       return getUrl("Enemy", "Verdanir");
@@ -496,7 +516,7 @@ function getUrl(qualifier, id) {
       return getUrl("Event", "Cursed");
     case "TrailsEndTrans":
       return getUrl("NPC", "Shakra");
-    case "GivenCouriersRasher":
+    case "DeliveredCouriersRasher":
       return getUrl("Item", "CouriersRasher");
     case "SecondSentinelAwoken":
       return getUrl("Item", "Cogheart");
@@ -536,14 +556,6 @@ function createIconImports() {
 
   // non-split icons
   output += `import LostLace from "./Boss/LostLace.png";\n`;
-  output += `import Compass from "./Tool/Compass.png";\n`;
-  output += `import DruidsEye from "./Tool/DruidsEye.png";\n`;
-  output += `import MagnetiteBrooch from "./Tool/MagnetiteBrooch.png";\n`;
-  output += `import ShardPendant from "./Tool/ShardPendant.png";\n`;
-  output += `import StraightPin from "./Tool/StraightPin.png";\n`;
-  output += `import WardingBell from "./Tool/WardingBell.png";\n`;
-  output += `import Weavelight from "./Tool/Weavelight.png";\n`;
-  output += `import Voltvessels from "./Tool/Voltvessels.png";\n`;
   output += `import MemoryLocket from "./Item/MemoryLocket.png";\n`;
   output += `import HunterCrest from "./Crest/HunterCrest.png";\n`;
 
@@ -553,14 +565,6 @@ function createIconImports() {
     output += `  ${id},\n`;
   }
   output += `  LostLace,\n`;
-  output += `  Compass,\n`;
-  output += `  DruidsEye,\n`;
-  output += `  MagnetiteBrooch,\n`;
-  output += `  ShardPendant,\n`;
-  output += `  StraightPin,\n`;
-  output += `  WardingBell,\n`;
-  output += `  Weavelight,\n`;
-  output += `  Voltvessels,\n`;
   output += `  MemoryLocket,\n`;
   output += `  HunterCrest,\n`;
   output += "};\n";

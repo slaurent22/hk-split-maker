@@ -45,6 +45,7 @@ import MoorwingTrans from "./Boss/Moorwing.png";
 import ThreadStorm from "./Skill/ThreadStorm.png";
 import ThreadStormTrans from "./Skill/ThreadStorm.png";
 import EnterHalfwayHomeBasement from "./Enemy/SkarrStalker.png";
+import YarnabySlap from "./NPC/Yarnaby.png";
 import EnterWispThicket from "./Enemy/Wisp.png";
 import EnterFatherOfTheFlame from "./Boss/FatherOfTheFlame.png";
 import FatherOfTheFlame from "./Boss/FatherOfTheFlame.png";
@@ -53,6 +54,7 @@ import ClingGrip from "./Skill/ClingGrip.png";
 import ClingGripTrans from "./Skill/ClingGrip.png";
 import ShellwoodBell from "./Misc/Bell.png";
 import EnterBellhart from "./Enemy/Furm.png";
+import WidowEncountered from "./Boss/Widow.png";
 import Widow from "./Boss/Widow.png";
 import MenuNeedolinMemory from "./Skill/Needolin.png";
 import BellhartBell from "./Misc/Bell.png";
@@ -110,7 +112,7 @@ import EnterSongclave from "./NPC/Caretaker.png";
 import Trobbio from "./Boss/Trobbio.png";
 import TrobbioTrans from "./Boss/Trobbio.png";
 import MetMergwin from "./NPC/Mergwin.png";
-import GivenCouriersRasher from "./Item/CouriersRasher.png";
+import DeliveredCouriersRasher from "./Item/CouriersRasher.png";
 import GreatTasteReward from "./Item/PaleOil.png";
 import Clawline from "./Skill/Clawline.png";
 import PostClawlineArenaTrans from "./Skill/Clawline.png";
@@ -206,6 +208,10 @@ import WitchCrest from "./Crest/WitchCrest.png";
 import WitchCrestTrans from "./Crest/WitchCrest.png";
 import ShamanCrest from "./Crest/ShamanCrest.png";
 import ShamanCrestTrans from "./Crest/ShamanCrest.png";
+import HunterCrestEvo1 from "./Crest/HunterCrestEvo1.png";
+import VesticrestYellowSlot from "./Crest/VesticrestYellowSlot.png";
+import VesticrestBlueSlot from "./Crest/VesticrestBlueSlot.png";
+import HunterCrestEvo2 from "./Crest/HunterCrestEvo2.png";
 import Sylphsong from "./Skill/Sylphsong.png";
 import SylphsongTrans from "./Skill/Sylphsong.png";
 import SavedFleaHuntersMarch from "./NPC/Flea.png";
@@ -255,6 +261,7 @@ import GrandBellwayTube from "./Misc/Ventrica.png";
 import HighHallsTube from "./Misc/Ventrica.png";
 import SongclaveTube from "./Misc/Ventrica.png";
 import MemoriumTube from "./Misc/Ventrica.png";
+import VentricaTrans from "./Misc/Ventrica.png";
 import SeenShakraBonebottom from "./NPC/Shakra.png";
 import SeenShakraMarrow from "./NPC/Shakra.png";
 import SeenShakraDeepDocks from "./NPC/Shakra.png";
@@ -328,15 +335,66 @@ import EnterAbyss from "./Enemy/ShadowCreeper.png";
 import AbyssEscape from "./Event/Act3Started.png";
 import LastDiveTrans from "./Event/LastDive.png";
 import LostLaceEncountered from "./Boss/LostLace.png";
-import LostLace from "./Boss/LostLace.png";
+import AscendantsGrip from "./Tool/AscendantsGrip.png";
+import BarbedBracelet from "./Tool/BarbedBracelet.png";
+import ClawMirror from "./Tool/ClawMirror.png";
+import ClawMirrors from "./Tool/ClawMirrors.png";
+import Cogfly from "./Tool/Cogfly.png";
+import CogworkWheel from "./Tool/CogworkWheel.png";
 import Compass from "./Tool/Compass.png";
+import Conchcutter from "./Tool/Conchcutter.png";
+import Curveclaw from "./Tool/Curveclaw.png";
+import Curvesickle from "./Tool/Curvesickle.png";
+import DeadBugsPurse from "./Tool/DeadBugsPurse.png";
+import DelversDrill from "./Tool/DelversDrill.png";
 import DruidsEye from "./Tool/DruidsEye.png";
+import DruidsEyes from "./Tool/DruidsEyes.png";
+import EggofFlealia from "./Tool/EggofFlealia.png";
+import FleaBrew from "./Tool/FleaBrew.png";
+import Flintslate from "./Tool/Flintslate.png";
+import FracturedMask from "./Tool/FracturedMask.png";
+import InjectorBand from "./Tool/InjectorBand.png";
+import Longclaw from "./Tool/Longclaw.png";
+import Longpin from "./Tool/Longpin.png";
+import MagmaBell from "./Tool/MagmaBell.png";
 import MagnetiteBrooch from "./Tool/MagnetiteBrooch.png";
+import MagnetiteDice from "./Tool/MagnetiteDice.png";
+import MemoryCrystal from "./Tool/MemoryCrystal.png";
+import Multibinder from "./Tool/Multibinder.png";
+import NeedlePhial from "./Tool/NeedlePhial.png";
+import Pimpillo from "./Tool/Pimpillo.png";
+import PinBadge from "./Tool/PinBadge.png";
+import PlasmiumPhial from "./Tool/PlasmiumPhial.png";
+import PollipPouch from "./Tool/PollipPouch.png";
+import QuickSling from "./Tool/QuickSling.png";
+import ReserveBind from "./Tool/ReserveBind.png";
+import RosaryCannon from "./Tool/RosaryCannon.png";
+import SawtoothCirclet from "./Tool/SawtoothCirclet.png";
+import Scuttlebrace from "./Tool/Scuttlebrace.png";
 import ShardPendant from "./Tool/ShardPendant.png";
+import ShellSatchel from "./Tool/ShellSatchel.png";
+import SilkshotArchitect from "./Tool/SilkshotArchitect.png";
+import SilkshotForge from "./Tool/SilkshotForge.png";
+import SilkshotWeaver from "./Tool/SilkshotWeaver.png";
+import SilkspeedAnklets from "./Tool/SilkspeedAnklets.png";
+import SnareSetter from "./Tool/SnareSetter.png";
+import SnitchPick from "./Tool/SnitchPick.png";
+import SpiderStrings from "./Tool/SpiderStrings.png";
+import SpoolExtender from "./Tool/SpoolExtender.png";
+import StingShard from "./Tool/StingShard.png";
 import StraightPin from "./Tool/StraightPin.png";
+import Tacks from "./Tool/Tacks.png";
+import ThiefsMark from "./Tool/ThiefsMark.png";
+import ThreefoldPin from "./Tool/ThreefoldPin.png";
+import ThrowingRing from "./Tool/ThrowingRing.png";
+import VoltFilament from "./Tool/VoltFilament.png";
+import Voltvessels from "./Tool/Voltvessels.png";
 import WardingBell from "./Tool/WardingBell.png";
 import Weavelight from "./Tool/Weavelight.png";
-import Voltvessels from "./Tool/Voltvessels.png";
+import WeightedBelt from "./Tool/WeightedBelt.png";
+import WispfireLantern from "./Tool/WispfireLantern.png";
+import WreathofPurity from "./Tool/WreathofPurity.png";
+import LostLace from "./Boss/LostLace.png";
 import MemoryLocket from "./Item/MemoryLocket.png";
 import HunterCrest from "./Crest/HunterCrest.png";
 export default {
@@ -385,6 +443,7 @@ export default {
   ThreadStorm,
   ThreadStormTrans,
   EnterHalfwayHomeBasement,
+  YarnabySlap,
   EnterWispThicket,
   EnterFatherOfTheFlame,
   FatherOfTheFlame,
@@ -393,6 +452,7 @@ export default {
   ClingGripTrans,
   ShellwoodBell,
   EnterBellhart,
+  WidowEncountered,
   Widow,
   MenuNeedolinMemory,
   BellhartBell,
@@ -450,7 +510,7 @@ export default {
   Trobbio,
   TrobbioTrans,
   MetMergwin,
-  GivenCouriersRasher,
+  DeliveredCouriersRasher,
   GreatTasteReward,
   Clawline,
   PostClawlineArenaTrans,
@@ -546,6 +606,10 @@ export default {
   WitchCrestTrans,
   ShamanCrest,
   ShamanCrestTrans,
+  HunterCrestEvo1,
+  VesticrestYellowSlot,
+  VesticrestBlueSlot,
+  HunterCrestEvo2,
   Sylphsong,
   SylphsongTrans,
   SavedFleaHuntersMarch,
@@ -595,6 +659,7 @@ export default {
   HighHallsTube,
   SongclaveTube,
   MemoriumTube,
+  VentricaTrans,
   SeenShakraBonebottom,
   SeenShakraMarrow,
   SeenShakraDeepDocks,
@@ -668,15 +733,66 @@ export default {
   AbyssEscape,
   LastDiveTrans,
   LostLaceEncountered,
-  LostLace,
+  AscendantsGrip,
+  BarbedBracelet,
+  ClawMirror,
+  ClawMirrors,
+  Cogfly,
+  CogworkWheel,
   Compass,
+  Conchcutter,
+  Curveclaw,
+  Curvesickle,
+  DeadBugsPurse,
+  DelversDrill,
   DruidsEye,
+  DruidsEyes,
+  EggofFlealia,
+  FleaBrew,
+  Flintslate,
+  FracturedMask,
+  InjectorBand,
+  Longclaw,
+  Longpin,
+  MagmaBell,
   MagnetiteBrooch,
+  MagnetiteDice,
+  MemoryCrystal,
+  Multibinder,
+  NeedlePhial,
+  Pimpillo,
+  PinBadge,
+  PlasmiumPhial,
+  PollipPouch,
+  QuickSling,
+  ReserveBind,
+  RosaryCannon,
+  SawtoothCirclet,
+  Scuttlebrace,
   ShardPendant,
+  ShellSatchel,
+  SilkshotArchitect,
+  SilkshotForge,
+  SilkshotWeaver,
+  SilkspeedAnklets,
+  SnareSetter,
+  SnitchPick,
+  SpiderStrings,
+  SpoolExtender,
+  StingShard,
   StraightPin,
+  Tacks,
+  ThiefsMark,
+  ThreefoldPin,
+  ThrowingRing,
+  VoltFilament,
+  Voltvessels,
   WardingBell,
   Weavelight,
-  Voltvessels,
+  WeightedBelt,
+  WispfireLantern,
+  WreathofPurity,
+  LostLace,
   MemoryLocket,
   HunterCrest,
 };

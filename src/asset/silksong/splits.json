@@ -271,6 +271,12 @@
     },
     {
         "alias": null,
+        "description": "Yarnaby Slap (Event)",
+        "key": "YarnabySlap",
+        "tooltip": "Splits when the first dialogue box appears after slapping Yarnaby post Cursed Crest-cure"
+    },
+    {
+        "alias": null,
         "description": "Enter Wisp Thicket (Transition)",
         "key": "EnterWispThicket",
         "tooltip": "Splits when entering the Wisp Thicket from Greymoor"
@@ -316,6 +322,12 @@
         "description": "Enter Bellhart (Transition)",
         "key": "EnterBellhart",
         "tooltip": "Splits when entering Bellhart"
+    },
+    {
+        "alias": null,
+        "description": "Widow Encountered (Boss)",
+        "key": "WidowEncountered",
+        "tooltip": "Splits when Widow boss encounter begins, after she disappears from the background scene"
     },
     {
         "alias": null,
@@ -660,9 +672,9 @@
         "tooltip": "Splits after talking to Loyal Mergwin the first time"
     },
     {
-        "alias": null,
-        "description": "Given Courier's Rasher (Event)",
-        "key": "GivenCouriersRasher",
+        "alias": "GivenCouriersRasher",
+        "description": "Delivered Courier's Rasher (Event)",
+        "key": "DeliveredCouriersRasher",
         "tooltip": "Splits after giving the Courier's Rasher to Loyal Mergwin"
     },
     {
@@ -1237,6 +1249,30 @@
     },
     {
         "alias": null,
+        "description": "Hunter Crest Evolution 1 (Upgrade)",
+        "key": "HunterCrestEvo1",
+        "tooltip": "Splits when the first upgrade to the Hunter Crest is obtained"
+    },
+    {
+        "alias": null,
+        "description": "Vesticrest Slot 1 (Upgrade)",
+        "key": "VesticrestYellowSlot",
+        "tooltip": "Splits when obtaining the Vesticrest yellow tool slot"
+    },
+    {
+        "alias": null,
+        "description": "Vesticrest Slot 2 (Upgrade)",
+        "key": "VesticrestBlueSlot",
+        "tooltip": "Splits when obtaining the Vesticrest blue tool slot"
+    },
+    {
+        "alias": null,
+        "description": "Hunter Crest Evolution 2 (Upgrade)",
+        "key": "HunterCrestEvo2",
+        "tooltip": "Splits when the second upgrade to the Hunter Crest is obtained"
+    },
+    {
+        "alias": null,
         "description": "Sylphsong (Skill)",
         "key": "Sylphsong",
         "tooltip": "Splits when obtaining Sylphsong after binding Eva"
@@ -1489,7 +1525,7 @@
     },
     {
         "alias": null,
-        "description": "Bellway (Transition)",
+        "description": "Bellway Travel (Transition)",
         "key": "BellwayTrans",
         "tooltip": "Splits when riding the Bell Beast through the Bellways"
     },
@@ -1528,6 +1564,12 @@
         "description": "Memorium (Ventrica)",
         "key": "MemoriumTube",
         "tooltip": "Splits after unlocking Memorium Ventrica"
+    },
+    {
+        "alias": null,
+        "description": "Ventrica Travel (Transition)",
+        "key": "VentricaTrans",
+        "tooltip": "Splits when traveling to another room using the Ventrica system"
     },
     {
         "alias": null,
@@ -1966,5 +2008,359 @@
         "description": "Lost Lace Encountered (Boss)",
         "key": "LostLaceEncountered",
         "tooltip": "Splits when Lost Lace is encountered in the Abyss Cocoon"
+    },
+    {
+        "alias": null,
+        "description": "Ascendant's Grip (Tool)",
+        "key": "AscendantsGrip",
+        "tooltip": "Splits when obtaining the Ascendant's Grip"
+    },
+    {
+        "alias": null,
+        "description": "Barbed Bracelet (Tool)",
+        "key": "BarbedBracelet",
+        "tooltip": "Splits when obtaining the Barbed Bracelet"
+    },
+    {
+        "alias": null,
+        "description": "Claw Mirror (Tool)",
+        "key": "ClawMirror",
+        "tooltip": "Splits when obtaining the Claw Mirror"
+    },
+    {
+        "alias": null,
+        "description": "Claw Mirrors (Tool)",
+        "key": "ClawMirrors",
+        "tooltip": "Splits when upgrading the Claw Mirror to Claw Mirrors"
+    },
+    {
+        "alias": null,
+        "description": "Cogfly (Tool)",
+        "key": "Cogfly",
+        "tooltip": "Splits when obtaining the Cogfly"
+    },
+    {
+        "alias": null,
+        "description": "Cogwork Wheel (Tool)",
+        "key": "CogworkWheel",
+        "tooltip": "Splits when obtaining the Cogwork Wheel"
+    },
+    {
+        "alias": null,
+        "description": "Compass (Tool)",
+        "key": "Compass",
+        "tooltip": "Splits when obtaining the Compass"
+    },
+    {
+        "alias": null,
+        "description": "Conchcutter (Tool)",
+        "key": "Conchcutter",
+        "tooltip": "Splits when obtaining the Conchcutter"
+    },
+    {
+        "alias": null,
+        "description": "Curveclaw (Tool)",
+        "key": "Curveclaw",
+        "tooltip": "Splits when obtaining the Curveclaw"
+    },
+    {
+        "alias": null,
+        "description": "Curvesickle (Tool)",
+        "key": "Curvesickle",
+        "tooltip": "Splits when upgrading the Curveclaw to the Curvesickle"
+    },
+    {
+        "alias": null,
+        "description": "Dead Bug's Purse (Tool)",
+        "key": "DeadBugsPurse",
+        "tooltip": "Splits when obtaining the Dead Bug's Purse"
+    },
+    {
+        "alias": null,
+        "description": "Delver's Drill (Tool)",
+        "key": "DelversDrill",
+        "tooltip": "Splits when obtaining the Delver's Drill"
+    },
+    {
+        "alias": null,
+        "description": "Druid's Eye (Tool)",
+        "key": "DruidsEye",
+        "tooltip": "Splits when obtaining the Druid's Eye"
+    },
+    {
+        "alias": null,
+        "description": "Druid's Eyes (Tool)",
+        "key": "DruidsEyes",
+        "tooltip": "Splits when upgrading the Druid's Eye to Druid's Eyes"
+    },
+    {
+        "alias": null,
+        "description": "Egg of Flealia (Tool)",
+        "key": "EggofFlealia",
+        "tooltip": "Splits when obtaining the Egg of Flealia"
+    },
+    {
+        "alias": null,
+        "description": "Flea Brew (Tool)",
+        "key": "FleaBrew",
+        "tooltip": "Splits when obtaining the Flea Brew"
+    },
+    {
+        "alias": null,
+        "description": "Flintslate (Tool)",
+        "key": "Flintslate",
+        "tooltip": "Splits when obtaining the Flintslate"
+    },
+    {
+        "alias": null,
+        "description": "Fractured Mask (Tool)",
+        "key": "FracturedMask",
+        "tooltip": "Splits when obtaining the Fractured Mask"
+    },
+    {
+        "alias": null,
+        "description": "Injector Band (Tool)",
+        "key": "InjectorBand",
+        "tooltip": "Splits when obtaining the Injector Band"
+    },
+    {
+        "alias": null,
+        "description": "Longclaw (Tool)",
+        "key": "Longclaw",
+        "tooltip": "Splits when obtaining the Longclaw"
+    },
+    {
+        "alias": null,
+        "description": "Longpin (Tool)",
+        "key": "Longpin",
+        "tooltip": "Splits when obtaining the Longpin"
+    },
+    {
+        "alias": null,
+        "description": "Magma Bell (Tool)",
+        "key": "MagmaBell",
+        "tooltip": "Splits when obtaining the Magma Bell"
+    },
+    {
+        "alias": null,
+        "description": "Magnetite Brooch (Tool)",
+        "key": "MagnetiteBrooch",
+        "tooltip": "Splits when obtaining the Magnetite Brooch"
+    },
+    {
+        "alias": null,
+        "description": "Magnetite Dice (Tool)",
+        "key": "MagnetiteDice",
+        "tooltip": "Splits when obtaining the Magnetite Dice"
+    },
+    {
+        "alias": null,
+        "description": "Memory Crystal (Tool)",
+        "key": "MemoryCrystal",
+        "tooltip": "Splits when obtaining the Memory Crystal"
+    },
+    {
+        "alias": null,
+        "description": "Multibinder (Tool)",
+        "key": "Multibinder",
+        "tooltip": "Splits when obtaining the Multibinder"
+    },
+    {
+        "alias": null,
+        "description": "Needle Phial (Tool)",
+        "key": "NeedlePhial",
+        "tooltip": "Splits when obtaining the Needle Phial"
+    },
+    {
+        "alias": null,
+        "description": "Pimpillo (Tool)",
+        "key": "Pimpillo",
+        "tooltip": "Splits when obtaining the Pimpillo"
+    },
+    {
+        "alias": null,
+        "description": "Pin Badge (Tool)",
+        "key": "PinBadge",
+        "tooltip": "Splits when obtaining the Pin Badge"
+    },
+    {
+        "alias": null,
+        "description": "Plasmium Phial (Tool)",
+        "key": "PlasmiumPhial",
+        "tooltip": "Splits when obtaining the Plasmium Phial"
+    },
+    {
+        "alias": null,
+        "description": "Pollip Pouch (Tool)",
+        "key": "PollipPouch",
+        "tooltip": "Splits when obtaining the Pollip Pouch"
+    },
+    {
+        "alias": null,
+        "description": "Quick Sling (Tool)",
+        "key": "QuickSling",
+        "tooltip": "Splits when obtaining the Quick Sling"
+    },
+    {
+        "alias": null,
+        "description": "Reserve Bind (Tool)",
+        "key": "ReserveBind",
+        "tooltip": "Splits when obtaining the Reserve Bind"
+    },
+    {
+        "alias": null,
+        "description": "Rosary Cannon (Tool)",
+        "key": "RosaryCannon",
+        "tooltip": "Splits when obtaining the Rosary Cannon"
+    },
+    {
+        "alias": null,
+        "description": "Sawtooth Circlet (Tool)",
+        "key": "SawtoothCirclet",
+        "tooltip": "Splits when obtaining the Sawtooth Circlet"
+    },
+    {
+        "alias": null,
+        "description": "Scuttlebrace (Tool)",
+        "key": "Scuttlebrace",
+        "tooltip": "Splits when obtaining the Scuttlebrace"
+    },
+    {
+        "alias": null,
+        "description": "Shard Pendant (Tool)",
+        "key": "ShardPendant",
+        "tooltip": "Splits when obtaining the Shard Pendant"
+    },
+    {
+        "alias": null,
+        "description": "Shell Satchel (Tool)",
+        "key": "ShellSatchel",
+        "tooltip": "Splits when obtaining the Shell Satchel"
+    },
+    {
+        "alias": null,
+        "description": "Silkshot Architect (Tool)",
+        "key": "SilkshotArchitect",
+        "tooltip": "Splits when obtaining the Silkshot from the Twelfth Architect"
+    },
+    {
+        "alias": null,
+        "description": "Silkshot Forge (Tool)",
+        "key": "SilkshotForge",
+        "tooltip": "Splits when obtaining the Silkshot from the Forge Daughter"
+    },
+    {
+        "alias": null,
+        "description": "Silkshot Weaver (Tool)",
+        "key": "SilkshotWeaver",
+        "tooltip": "Splits when obtaining the Silkshot from Mount Fay"
+    },
+    {
+        "alias": null,
+        "description": "Silkspeed Anklets (Tool)",
+        "key": "SilkspeedAnklets",
+        "tooltip": "Splits when obtaining the Silkspeed Anklets"
+    },
+    {
+        "alias": null,
+        "description": "Snare Setter (Tool)",
+        "key": "SnareSetter",
+        "tooltip": "Splits when obtaining the Snare Setter"
+    },
+    {
+        "alias": null,
+        "description": "Snitch Pick (Tool)",
+        "key": "SnitchPick",
+        "tooltip": "Splits when obtaining the Snitch Pick"
+    },
+    {
+        "alias": null,
+        "description": "Spider Strings (Tool)",
+        "key": "SpiderStrings",
+        "tooltip": "Splits when obtaining the Spider Strings"
+    },
+    {
+        "alias": null,
+        "description": "Spool Extender (Tool)",
+        "key": "SpoolExtender",
+        "tooltip": "Splits when obtaining the Spool Extender"
+    },
+    {
+        "alias": null,
+        "description": "Sting Shard (Tool)",
+        "key": "StingShard",
+        "tooltip": "Splits when obtaining the Sting Shard"
+    },
+    {
+        "alias": null,
+        "description": "Straight Pin (Tool)",
+        "key": "StraightPin",
+        "tooltip": "Splits when obtaining the Straight Pin"
+    },
+    {
+        "alias": null,
+        "description": "Tacks (Tool)",
+        "key": "Tacks",
+        "tooltip": "Splits when obtaining the Tacks"
+    },
+    {
+        "alias": null,
+        "description": "Thief's Mark (Tool)",
+        "key": "ThiefsMark",
+        "tooltip": "Splits when obtaining the Thief's Mark"
+    },
+    {
+        "alias": null,
+        "description": "Threefold Pin (Tool)",
+        "key": "ThreefoldPin",
+        "tooltip": "Splits when obtaining the Threefold Pin"
+    },
+    {
+        "alias": null,
+        "description": "Throwing Ring (Tool)",
+        "key": "ThrowingRing",
+        "tooltip": "Splits when obtaining the Throwing Ring"
+    },
+    {
+        "alias": null,
+        "description": "Volt Filament (Tool)",
+        "key": "VoltFilament",
+        "tooltip": "Splits when obtaining the Volt Filament"
+    },
+    {
+        "alias": null,
+        "description": "Voltvessels (Tool)",
+        "key": "Voltvessels",
+        "tooltip": "Splits when obtaining the Voltvessels"
+    },
+    {
+        "alias": null,
+        "description": "Warding Bell (Tool)",
+        "key": "WardingBell",
+        "tooltip": "Splits when obtaining the Warding Bell"
+    },
+    {
+        "alias": null,
+        "description": "Weavelight (Tool)",
+        "key": "Weavelight",
+        "tooltip": "Splits when obtaining the Weavelight"
+    },
+    {
+        "alias": null,
+        "description": "Weighted Belt (Tool)",
+        "key": "WeightedBelt",
+        "tooltip": "Splits when obtaining the Weighted Belt"
+    },
+    {
+        "alias": null,
+        "description": "Wispfire Lantern (Tool)",
+        "key": "WispfireLantern",
+        "tooltip": "Splits when obtaining the Wispfire Lantern"
+    },
+    {
+        "alias": null,
+        "description": "Wreath of Purity (Tool)",
+        "key": "WreathofPurity",
+        "tooltip": "Splits when obtaining the Wreath of Purity"
     }
 ]
