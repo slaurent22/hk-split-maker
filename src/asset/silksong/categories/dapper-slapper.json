@@ -22,15 +22,10 @@
         "ManualSplit",
         "GainedCurse",
         "ManualSplit",
-        "ManualSplit"
+        "YarnabySlap"
     ],
     "names": {
-        "ManualSplit": [
-            "Grindle Slap",
-            "Twisted Bud",
-            "Nuu Slap",
-            "Yarnaby Slap"
-        ]
+        "ManualSplit": ["Grindle Slap", "Twisted Bud", "Nuu Slap"]
     },
     "gameName": "Hollow Knight: Silksong Category Extensions",
     "variables": {

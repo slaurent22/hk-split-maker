@@ -3,32 +3,14 @@
     "splitIds": [
         "StartNewGame",
         "MossMotherTrans",
-        "ManualSplit",
+        "Compass",
         "SilkSpear",
-        "ManualSplit",
+        "DruidsEye",
         "BellBeast",
-        "ManualSplit",
-        "ManualSplit",
-        "ManualSplit"
+        "ShardPendant",
+        "StraightPin",
+        "MagnetiteBrooch"
     ],
-    "names": {
-        "ManualSplit": [
-            "Compass (%s)",
-            "Druid's Eye (%s)",
-            "Shard Pendant (%s)",
-            "Straight Pin (%s)",
-            "Magnetite Brooch (%s)"
-        ]
-    },
-    "icons": {
-        "ManualSplit": [
-            "Compass",
-            "DruidsEye",
-            "ShardPendant",
-            "StraightPin",
-            "MagnetiteBrooch"
-        ]
-    },
     "gameName": "Hollow Knight: Silksong Category Extensions",
     "variables": {
         "5 Tools Subcategory": "No Major Glitches"

@@ -19,8 +19,8 @@
         "WandererCrestTrans",
         "BeastCrestTrans",
         "DeepDocksStation",
-        "ManualSplit",
-        "ManualSplit",
+        "Weavelight",
+        "Voltvessels",
         "CogworkDancers",
         "Menu",
         "Trobbio",
@@ -34,14 +34,10 @@
         "Sylphsong"
     ],
     "names": {
-        "ManualSplit": ["Weavelight (Manual)", "Voltvessels (Manual)"],
         "Menu": [
             "Left Citadel Rosaries (Quitout)",
             "Upper Bilewater Locket (Quitout)"
         ]
-    },
-    "icons": {
-        "ManualSplit": ["Weavelight", "Voltvessels"]
     },
     "gameName": "Hollow Knight: Silksong Category Extensions",
     "variables": {

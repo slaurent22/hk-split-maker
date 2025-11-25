@@ -47,7 +47,7 @@
         "SavedFleaBilewaterTrap",
         "SavedFleaDeepDocksArena",
         "SavedFleaFarFieldsPilgrimsRest",
-        "ManualSplit"
+        "EggofFlealia"
     ],
     "names": {
         "SavedFleaDeepDocksSprint": "%s",
@@ -83,7 +83,7 @@
         "SavedFleaBilewaterTrap": "%s",
         "SavedFleaDeepDocksArena": "[4D] %s",
         "SavedFleaFarFieldsPilgrimsRest": "%s",
-        "ManualSplit": "[2D] Egg of Flealia (Manual Split)"
+        "ManualSplit": "[2D] %s"
     },
     "gameName": "Hollow Knight: Silksong Category Extensions",
     "variables": {
