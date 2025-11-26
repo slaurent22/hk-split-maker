@@ -889,6 +889,12 @@
     },
     {
         "alias": null,
+        "description": "Mask Shard (Obtain)",
+        "key": "OnObtainMaskShard",
+        "tooltip": "Splits when obtaining a Mask Shard or a complete Mask upgrade"
+    },
+    {
+        "alias": null,
         "description": "Mask Shard 1 (Fragment)",
         "key": "MaskShard1",
         "tooltip": "Splits when getting 1st Mask Shard"

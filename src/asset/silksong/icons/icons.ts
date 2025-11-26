@@ -148,6 +148,7 @@ import NeedleUpgrade1 from "./Item/Needle1.png";
 import NeedleUpgrade2 from "./Item/Needle2.png";
 import NeedleUpgrade3 from "./Item/Needle3.png";
 import NeedleUpgrade4 from "./Item/Needle4.png";
+import OnObtainMaskShard from "./Item/MaskShard.png";
 import MaskShard1 from "./Item/MaskShard.png";
 import MaskShard2 from "./Item/MaskShard.png";
 import MaskShard3 from "./Item/MaskShard.png";
@@ -546,6 +547,7 @@ export default {
   NeedleUpgrade2,
   NeedleUpgrade3,
   NeedleUpgrade4,
+  OnObtainMaskShard,
   MaskShard1,
   MaskShard2,
   MaskShard3,

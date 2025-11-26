@@ -108,6 +108,7 @@ function getUrl(qualifier, id) {
     case "MaskShard17":
     case "MaskShard18":
     case "MaskShard19":
+    case "OnObtainMaskShard":
       return getUrl("Item", "MaskShard");
 
     case "Mask1":
