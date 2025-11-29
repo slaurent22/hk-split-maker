@@ -129,17 +129,12 @@
             "fileName": "te",
             "displayName": "True Ending",
             "data": {
-                "routeNotesURL": "https://docs.google.com/document/d/1wU-HvUALzYgTV2lGot_nrITouoHhJzADaXtgJawb4_Y"
+                "routeNotesURL": "https://app.milanote.com/1VnE1x1JTJBmf5/silksong-true-ending-early-evo-route-wts-v1?p=WAYd1bsWVru"
             }
         },
         {
             "fileName": "te-blue",
-            "displayName": "True Ending (BlueSR Route)",
-            "data": {}
-        },
-        {
-            "fileName": "te-evo-needle-strike",
-            "displayName": "True Ending (Evo/Needle Strike)",
+            "displayName": "True Ending (BlueSR Splits)",
             "data": {}
         },
         {
