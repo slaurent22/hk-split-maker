@@ -152,6 +152,11 @@
     ],
     "Individual Level": [
         {
+            "fileName": "coral-tower",
+            "displayName": "Coral Tower",
+            "data": {}
+        },
+        {
             "fileName": "moss-grotto",
             "displayName": "Moss Grotto",
             "data": {}

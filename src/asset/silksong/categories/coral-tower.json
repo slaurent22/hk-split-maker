@@ -1,0 +1,20 @@
+{
+    "categoryName": "Coral Tower",
+    "splitIds": [
+        "EnterKhannMemory",
+        "ManualSplit",
+        "ManualSplit",
+        "ManualSplit",
+        "ManualSplit",
+        "CrustKingKhann"
+    ],
+    "names": {
+        "ManualSplit": [
+            "Arena 1 (Manual)",
+            "Arena 2 (Manual)",
+            "Arena 3 (Manual)",
+            "Arena 4 (Manual)"
+        ]
+    },
+    "gameName": "Hollow Knight: Silksong"
+}
