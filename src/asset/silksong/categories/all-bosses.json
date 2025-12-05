@@ -159,6 +159,16 @@
         "Lugoli": "{Sinner's Road}%s",
         "SavedFleaGreymoorRoof": "{Greymoor 2}%s",
         "FatherOfTheFlame": "{Thicket}%s",
+        "BenchAny": [
+            "Bilewater",
+            "Bilewater midpoint",
+            "Reached Songclave",
+            "Sauna",
+            "Bottom Bench",
+            "Wormways",
+            "Mount Fay midpoint",
+            "Bell safety bench"
+        ],
         "Groal": "{Bilewater}%s",
         "Broodmother": "{Slab}%s",
         "EndingSplit": ["Grand Mother Silk", "Lost Lace"],
