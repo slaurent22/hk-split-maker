@@ -421,10 +421,13 @@ function getUrl(qualifier, id) {
     case "SavedFleaChoralChambersCage":
     case "SavedFleaUnderworksCauldron":
     case "SavedFleaUnderworksWispThicket":
+      return getUrl("Misc", "Flea");
     case "SavedFleaGiantFlea":
+      return getUrl("Misc", "GiantFlea");
     case "SavedFleaVog":
+      return getUrl("Misc", "Vog");
     case "SavedFleaKratt":
-      return getUrl("NPC", "Flea");
+      return getUrl("Misc", "Kratt");
 
     case "SeenFleatopiaEmpty":
     case "CaravanTroupeGreymoor":
