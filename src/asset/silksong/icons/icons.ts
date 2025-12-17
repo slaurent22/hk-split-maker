@@ -334,6 +334,7 @@ import Act3Started from "./Event/Act3Started.png";
 import DivingBellAbyssTrans from "./Item/DivingBellKey.png";
 import EnterAbyss from "./Enemy/ShadowCreeper.png";
 import AbyssEscape from "./Event/Act3Started.png";
+import ReverseAbyssEscapeTrans from "./Event/Act3Started.png";
 import LastDiveTrans from "./Event/LastDive.png";
 import LostLaceEncountered from "./Boss/LostLace.png";
 import AscendantsGrip from "./Tool/AscendantsGrip.png";
@@ -733,6 +734,7 @@ export default {
   DivingBellAbyssTrans,
   EnterAbyss,
   AbyssEscape,
+  ReverseAbyssEscapeTrans,
   LastDiveTrans,
   LostLaceEncountered,
   AscendantsGrip,

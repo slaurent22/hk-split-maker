@@ -2005,6 +2005,12 @@
     },
     {
         "alias": null,
+        "description": "Reverse Abyss Escape (Transition)",
+        "key": "ReverseAbyssEscapeTrans",
+        "tooltip": "Splits when descending from the Abyss Escape room. Intended for glitched runs."
+    },
+    {
+        "alias": null,
         "description": "Last Dive (Transition)",
         "key": "LastDiveTrans",
         "tooltip": "Splits when beginning the Last Dive scene"

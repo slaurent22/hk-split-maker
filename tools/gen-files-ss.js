@@ -291,6 +291,8 @@ function getUrl(qualifier, id) {
       return getUrl("Boss", "Lace");
     case "VentricaTrans":
       return getUrl("Misc", "Ventrica");
+    case "ReverseAbyssEscapeTrans":
+      return getUrl("Event", "Act3Started");
 
     // Boss Transition/Encountered
     case "MossMotherTrans":
