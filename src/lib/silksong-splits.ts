@@ -79,6 +79,8 @@ function getNameAndGroup({
       return ["Clawline Arena Exit", qualifier];
     case "PostLace2ArenaTrans":
       return ["Lace 2 Arena Exit", qualifier];
+    case "HuntersMarchPostMiddleArenaTransition":
+      return ["Hunter's March Arena Exit", qualifier];
   }
   return [name, qualifier];
 }
