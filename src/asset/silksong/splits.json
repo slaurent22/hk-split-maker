@@ -277,6 +277,12 @@
     },
     {
         "alias": null,
+        "description": "Crawfather (Boss)",
+        "key": "Crawfather",
+        "tooltip": "Splits when defeating the Crawfather"
+    },
+    {
+        "alias": null,
         "description": "Enter Wisp Thicket (Transition)",
         "key": "EnterWispThicket",
         "tooltip": "Splits when entering the Wisp Thicket from Greymoor"
@@ -394,12 +400,6 @@
         "description": "Last Judge (Boss)",
         "key": "LastJudge",
         "tooltip": "Splits when killing Last Judge"
-    },
-    {
-        "alias": null,
-        "description": "Enter Citadel Front Gate (Transition)",
-        "key": "EnterCitadelFrontGate",
-        "tooltip": "Splits when entering the Citadel past the Last Judge arena"
     },
     {
         "alias": null,
@@ -646,6 +646,18 @@
         "description": "Whispering Vaults Arena (Mini Boss)",
         "key": "WhisperingVaultsArena",
         "tooltip": "Splits when completing the Whispering Vaults Arena"
+    },
+    {
+        "alias": "EnterCitadelFrontGate",
+        "description": "Enter Grand Gate (Transition)",
+        "key": "EnterGrandGate",
+        "tooltip": "Splits when entering the Grand Gate region, past the Last Judge door or into the top of the scales room"
+    },
+    {
+        "alias": null,
+        "description": "Enter Choral Chambers (Transition)",
+        "key": "EnterChoralChambers",
+        "tooltip": "Splits when entering the Choral Chambers"
     },
     {
         "alias": null,

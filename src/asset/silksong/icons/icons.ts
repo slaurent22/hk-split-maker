@@ -46,6 +46,7 @@ import ThreadStorm from "./Skill/ThreadStorm.png";
 import ThreadStormTrans from "./Skill/ThreadStorm.png";
 import EnterHalfwayHomeBasement from "./Enemy/SkarrStalker.png";
 import YarnabySlap from "./NPC/Yarnaby.png";
+import Crawfather from "./Boss/Crawfather.png";
 import EnterWispThicket from "./Enemy/Wisp.png";
 import EnterFatherOfTheFlame from "./Boss/FatherOfTheFlame.png";
 import FatherOfTheFlame from "./Boss/FatherOfTheFlame.png";
@@ -66,7 +67,6 @@ import NeedleStrikeTrans from "./Skill/NeedleStrike.png";
 import EnterLastJudge from "./Boss/LastJudge.png";
 import LastJudgeEncountered from "./Boss/LastJudge.png";
 import LastJudge from "./Boss/LastJudge.png";
-import EnterCitadelFrontGate from "./Event/Act2Started.png";
 import EnterSinnersRoad from "./Enemy/Muckroach.png";
 import Lugoli from "./Boss/Lugoli.png";
 import EnterMist from "./Enemy/Wraith.png";
@@ -108,6 +108,8 @@ import EnterCogworkCore from "./Enemy/CogworkChoirbug.png";
 import SecondSentinelAwoken from "./Item/Cogheart.png";
 import EnterWhisperingVaults from "./Enemy/Lampbearer.png";
 import WhisperingVaultsArena from "./Enemy/Vaultkeeper.png";
+import EnterGrandGate from "./Event/Act2Started.png";
+import EnterChoralChambers from "./Enemy/ChoirFlyer.png";
 import EnterSongclave from "./NPC/Caretaker.png";
 import Trobbio from "./Boss/Trobbio.png";
 import TrobbioTrans from "./Boss/Trobbio.png";
@@ -446,6 +448,7 @@ export default {
   ThreadStormTrans,
   EnterHalfwayHomeBasement,
   YarnabySlap,
+  Crawfather,
   EnterWispThicket,
   EnterFatherOfTheFlame,
   FatherOfTheFlame,
@@ -466,7 +469,6 @@ export default {
   EnterLastJudge,
   LastJudgeEncountered,
   LastJudge,
-  EnterCitadelFrontGate,
   EnterSinnersRoad,
   Lugoli,
   EnterMist,
@@ -508,6 +510,8 @@ export default {
   SecondSentinelAwoken,
   EnterWhisperingVaults,
   WhisperingVaultsArena,
+  EnterGrandGate,
+  EnterChoralChambers,
   EnterSongclave,
   Trobbio,
   TrobbioTrans,

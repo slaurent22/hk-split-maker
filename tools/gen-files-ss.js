@@ -241,7 +241,7 @@ function getUrl(qualifier, id) {
       return getUrl("Enemy", "SkarrScout");
     case "EnterBoneBottom":
       return getUrl("NPC", "Pebb");
-    case "EnterCitadelFrontGate":
+    case "EnterGrandGate":
       return getUrl("Event", "Act2Started");
     case "EnterWhisperingVaults":
       return getUrl("Enemy", "Lampbearer");
@@ -293,6 +293,8 @@ function getUrl(qualifier, id) {
       return getUrl("Misc", "Ventrica");
     case "ReverseAbyssEscapeTrans":
       return getUrl("Event", "Act3Started");
+    case "EnterChoralChambers":
+      return getUrl("Enemy", "ChoirFlyer");
 
     // Boss Transition/Encountered
     case "MossMotherTrans":
