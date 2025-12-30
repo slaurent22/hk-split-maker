@@ -6,15 +6,16 @@
         "TransClaw",
         "DeepnestSpa",
         "Menu",
+        "DeepnestStation",
         "DreamNail",
         "WatcherChandelier",
-        "BlackKnightTrans",
-        "Lemm2",
+        "Lurien",
+        "LemmShopExit",
         "LumaflyLantern",
         "CrystalHeart",
-        "Uumuu",
-        "BeastsDenTrapBench",
         "Hegemol",
+        "UumuuEncountered",
+        "Monomon",
         "UnchainedHollowKnight"
     ],
     "endTriggeringAutosplit": false,
@@ -22,5 +23,8 @@
         "name": "Hollow Knight",
         "icon": "HollowKnightBoss"
     },
-    "gameName": "Hollow Knight"
+    "gameName": "Hollow Knight",
+    "variables": {
+        "Low% Glitch": "1.4.3.2+ NMG"
+    }
 }
