@@ -4,8 +4,7 @@
         "StartNewGame",
         "MossMotherTrans",
         "SilkSpearTrans",
-        "ManualSplit",
-        "BellBeast",
+        "MarrowBell",
         "SwiftStep",
         "SavedFleaDeepDocksSprint",
         "DeepDocksStation",
@@ -15,15 +14,10 @@
         "Lace1Trans",
         "SavedFleaFarFieldsTrap",
         "CaravanTroupeGreymoor",
-        "ManualSplit",
         "ManualSplit"
     ],
     "names": {
-        "ManualSplit": [
-            "Berry Picking (%s)",
-            "Bone Bottom Repairs (%s)",
-            "A Lifesaving Bridge (%s)"
-        ]
+        "ManualSplit": "A Lifesaving Bridge (%s)"
     },
     "gameName": "Hollow Knight: Silksong Category Extensions",
     "variables": {
