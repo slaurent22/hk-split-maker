@@ -1,0 +1,36 @@
+{
+    "categoryName": "All Act One Bosses",
+    "splitIds": [
+        "StartNewGame",
+        "MossMotherTrans",
+        "SilkSpearTrans",
+        "MarrowBell",
+        "SwiftStepTrans",
+        "Lace1Trans",
+        "DriftersCloakTrans",
+        "GreymoorBell",
+        "MoorwingTrans",
+        "ManualSplit",
+        "ClingGripTrans",
+        "BellhartBell",
+        "HunterCrestEvo1",
+        "Menu",
+        "SkullTyrant1",
+        "HuntersMarchPostMiddleArenaTransition",
+        "SavageBeastfly1",
+        "ShellwoodBell",
+        "GreatConchflies",
+        "LastJudge",
+        "EnterMist",
+        "Phantom",
+        "Act2Started"
+    ],
+    "names": {
+        "ManualSplit": ["Sister Splinter (%s)"],
+        "Menu": ["Moss Mothers (%s)"]
+    },
+    "gameName": "Hollow Knight: Silksong",
+    "variables": {
+        "All Act One Bosses Subcategory": "No Major Glitches"
+    }
+}

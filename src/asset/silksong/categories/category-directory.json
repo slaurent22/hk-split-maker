@@ -67,6 +67,13 @@
             }
         },
         {
+            "fileName": "all-act-one-bosses-evo",
+            "displayName": "All Act One Bosses (Evo)",
+            "data": {
+                "routeNotesURL": "https://docs.google.com/document/d/1_M_ulh_tY38vlINZfq0LF1KCo0U-p1yesrHw63ZYbXk"
+            }
+        },
+        {
             "fileName": "all-act-two-bosses",
             "displayName": "All Act Two Bosses",
             "data": {
