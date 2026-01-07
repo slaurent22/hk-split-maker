@@ -147,8 +147,15 @@
             }
         },
         {
+            "fileName": "te-891",
+            "displayName": "True Ending (1.0.28891 Voltpogos)",
+            "data": {
+                "routeNotesURL": "https://app.milanote.com/1VBenZ1Gl3d13b?p=8Vu6s9nVNn3"
+            }
+        },
+        {
             "fileName": "te-blue",
-            "displayName": "True Ending (BlueSR Splits)",
+            "displayName": "True Ending (outdated BlueSR Splits)",
             "data": {}
         },
         {
