@@ -409,6 +409,12 @@
     },
     {
         "alias": null,
+        "description": "Sinner's Road Simple Key (Item)",
+        "key": "SinnersRoadSimpleKey",
+        "tooltip": "Splits when picking up the Sinner's Road simple key from the Roachkeeper arena"
+    },
+    {
+        "alias": null,
         "description": "Lugoli (Boss)",
         "key": "Lugoli",
         "tooltip": "Splits after defeating Lugoli"
@@ -664,6 +670,12 @@
         "description": "Enter Songclave (Transition)",
         "key": "EnterSongclave",
         "tooltip": "Splits when entering Songclave"
+    },
+    {
+        "alias": null,
+        "description": "Jubilana Simple Key (Item)",
+        "key": "JubilanaSimpleKey",
+        "tooltip": "Splits when buying the simple key from Jubilana"
     },
     {
         "alias": null,

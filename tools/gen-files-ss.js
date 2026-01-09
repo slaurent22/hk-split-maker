@@ -143,6 +143,8 @@ function getUrl(qualifier, id) {
 
     // Item
     case "BoneBottomSimpleKey":
+    case "SinnersRoadSimpleKey":
+    case "JubilanaSimpleKey":
       return getUrl("Item", "SimpleKey");
 
     case "ToolPouch1":

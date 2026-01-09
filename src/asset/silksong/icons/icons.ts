@@ -68,6 +68,7 @@ import EnterLastJudge from "./Boss/LastJudge.png";
 import LastJudgeEncountered from "./Boss/LastJudge.png";
 import LastJudge from "./Boss/LastJudge.png";
 import EnterSinnersRoad from "./Enemy/Muckroach.png";
+import SinnersRoadSimpleKey from "./Item/SimpleKey.png";
 import Lugoli from "./Boss/Lugoli.png";
 import EnterMist from "./Enemy/Wraith.png";
 import MistCrossing from "./Enemy/Wraith.png";
@@ -111,6 +112,7 @@ import WhisperingVaultsArena from "./Enemy/Vaultkeeper.png";
 import EnterGrandGate from "./Event/Act2Started.png";
 import EnterChoralChambers from "./Enemy/ChoirFlyer.png";
 import EnterSongclave from "./NPC/Caretaker.png";
+import JubilanaSimpleKey from "./Item/SimpleKey.png";
 import Trobbio from "./Boss/Trobbio.png";
 import TrobbioTrans from "./Boss/Trobbio.png";
 import MetMergwin from "./NPC/Mergwin.png";
@@ -470,6 +472,7 @@ export default {
   LastJudgeEncountered,
   LastJudge,
   EnterSinnersRoad,
+  SinnersRoadSimpleKey,
   Lugoli,
   EnterMist,
   MistCrossing,
@@ -513,6 +516,7 @@ export default {
   EnterGrandGate,
   EnterChoralChambers,
   EnterSongclave,
+  JubilanaSimpleKey,
   Trobbio,
   TrobbioTrans,
   MetMergwin,
