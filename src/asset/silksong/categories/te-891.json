@@ -127,7 +127,7 @@
         "EnterSeth": "[4U] %s",
         "EnterKarmelitaMemory": "[1U] %s",
         "EnterRedMemory": "[3U] %s",
-        "LastDiveTrans": "[3D] %s"
+        "LastDiveTrans": "[2D] %s"
     },
     "icons": {
         "EndingSplit": ["EndingSplit", "LostLace"]
