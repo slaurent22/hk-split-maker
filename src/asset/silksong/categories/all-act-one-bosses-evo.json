@@ -10,7 +10,7 @@
         "DriftersCloakTrans",
         "GreymoorBell",
         "MoorwingTrans",
-        "ManualSplit",
+        "SisterSplinterTrans",
         "ClingGripTrans",
         "BellhartBell",
         "HunterCrestEvo1",
@@ -27,7 +27,6 @@
         "Act2Started"
     ],
     "names": {
-        "ManualSplit": ["Sister Splinter (%s)"],
         "Menu": ["Moss Mothers (%s)"]
     },
     "gameName": "Hollow Knight: Silksong",

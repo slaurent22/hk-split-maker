@@ -10,7 +10,7 @@
         "DriftersCloak",
         "GreymoorBell",
         "Moorwing",
-        "ManualSplit",
+        "SisterSplinter",
         "ClingGrip",
         "Widow",
         "SkullTyrant1",
@@ -25,7 +25,7 @@
         "Act2Started"
     ],
     "names": {
-        "ManualSplit": ["Sister Splinter (%s)", "Moss Mothers (%s)"]
+        "ManualSplit": ["Moss Mothers (%s)"]
     },
     "gameName": "Hollow Knight: Silksong",
     "variables": {

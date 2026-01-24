@@ -12,7 +12,7 @@
         "ThreadStormTrans",
         "-GreymoorBell",
         "MoorwingTrans",
-        "ManualSplit",
+        "SisterSplinterTrans",
         "ClingGripTrans",
         "BellhartBell",
         "ShellwoodBell",
@@ -28,8 +28,7 @@
         "EnterWhiteward",
         "SlabStation",
         "-PlayerDeath",
-        "-FaydownCloak",
-        "TransitionExcludingDiscontinuities",
+        "FaydownCloakTrans",
         "GreatConchfliesTrans",
         "RagingConchfly",
         "Voltvyrm",
@@ -71,12 +70,7 @@
         "EndingSplit"
     ],
     "names": {
-        "ManualSplit": [
-            "Sister Splinter (%s)",
-            "Garmond & Zaza (%s)",
-            "[3U] Shakra (%s)"
-        ],
-        "TransitionExcludingDiscontinuities": "Faydown Cloak Exit",
+        "ManualSplit": ["Garmond & Zaza (%s)", "[3U] Shakra (%s)"],
         "Menu": "Moss Mothers (%s)",
         "NeedleUpgrade2": "[2U] %s",
         "GreatConchfliesTrans": "[1D, 2U] %s",
@@ -88,9 +82,6 @@
         "SavageBeastfly2": "[4D] %s",
         "Broodmother": "[1U] %s",
         "EndingSplit": "Grand Mother Silk"
-    },
-    "icons": {
-        "TransitionExcludingDiscontinuities": "FaydownCloak"
     },
     "gameName": "Hollow Knight: Silksong",
     "variables": {
