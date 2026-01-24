@@ -189,6 +189,10 @@ function getUrl(qualifier, id) {
       return getUrl("Skill", "Sylphsong");
     case "PostClawlineArenaTrans":
       return getUrl("Skill", "Clawline");
+    case "FaydownCloakTrans":
+      return getUrl("Skill", "FaydownCloak");
+    case "SilkSoarTrans":
+      return getUrl("Skill", "SilkSoar");
 
     // Crest Transition
     case "ReaperCrestTrans":
@@ -360,6 +364,18 @@ function getUrl(qualifier, id) {
       return getUrl("Boss", "Lace");
     case "WidowEncountered":
       return getUrl("Boss", "Widow");
+    case "PlasmifiedZangoEncountered":
+      return getUrl("Boss", "PlasmifiedZango");
+    case "SisterSplinterEncountered":
+    case "SisterSplinterTrans":
+      return getUrl("Boss", "SisterSplinter");
+    case "TrobbioEncountered":
+      return getUrl("Boss", "Trobbio");
+    case "TormentedTrobbioEncountered":
+    case "TormentedTrobbioTrans":
+      return getUrl("Boss", "TormentedTrobbio");
+    case "EnterLace2":
+      return getUrl("Boss", "Lace");
 
     // Melody Transition
     case "VaultkeepersMelodyTrans":

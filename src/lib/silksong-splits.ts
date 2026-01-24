@@ -75,6 +75,10 @@ function getNameAndGroup({
     case "PhantomTrans":
     case "RagingConchflyTrans":
     case "TrailsEndTrans":
+    case "FaydownCloakTrans":
+    case "SilkSoarTrans":
+    case "SisterSplinterTrans":
+    case "TormentedTrobbioTrans":
       return [`${name} Exit`, qualifier];
     case "PostClawlineArenaTrans":
       return ["Clawline Arena Exit", qualifier];

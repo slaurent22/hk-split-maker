@@ -181,6 +181,12 @@
     },
     {
         "alias": null,
+        "description": "Plasmified Zango Encountered (Boss)",
+        "key": "PlasmifiedZangoEncountered",
+        "tooltip": "Splits when encountering the Plasmified Zango boss for the first time"
+    },
+    {
+        "alias": null,
         "description": "Enter Hunter's March (Transition)",
         "key": "EnterHuntersMarch",
         "tooltip": "Splits on entering a Hunter's March transition with area text (includes post-Skarrguard room and tall room)"
@@ -307,6 +313,24 @@
     },
     {
         "alias": null,
+        "description": "Sister Splinter Encountered (Boss)",
+        "key": "SisterSplinterEncountered",
+        "tooltip": "Splits when first encountering Sister Splinter"
+    },
+    {
+        "alias": null,
+        "description": "Sister Splinter (Boss)",
+        "key": "SisterSplinter",
+        "tooltip": "Splits when Sister Splinter is defeated"
+    },
+    {
+        "alias": null,
+        "description": "Sister Splinter (Transition)",
+        "key": "SisterSplinterTrans",
+        "tooltip": "Splits on the transition after Sister Splinter is defeated"
+    },
+    {
+        "alias": null,
         "description": "Cling Grip (Skill)",
         "key": "ClingGrip",
         "tooltip": "Splits when obtaining Cling Grip (Wall Jump)"
@@ -400,6 +424,12 @@
         "description": "Last Judge (Boss)",
         "key": "LastJudge",
         "tooltip": "Splits when killing Last Judge"
+    },
+    {
+        "alias": null,
+        "description": "Lost Garmond (Boss)",
+        "key": "LostGarmond",
+        "tooltip": "Splits when defeating Lost Garmond"
     },
     {
         "alias": null,
@@ -571,6 +601,12 @@
     },
     {
         "alias": null,
+        "description": "Faydown Cloak (Transition)",
+        "key": "FaydownCloakTrans",
+        "tooltip": "Splits on the transition after obtaining Faydown Cloak"
+    },
+    {
+        "alias": null,
         "description": "Enter Sands of Karak (Transition)",
         "key": "EnterSandsOfKarak",
         "tooltip": "Splits when entering Sands of Karak"
@@ -679,6 +715,12 @@
     },
     {
         "alias": null,
+        "description": "Trobbio Encountered (Boss)",
+        "key": "TrobbioEncountered",
+        "tooltip": "Splits when first encountering Trobbio"
+    },
+    {
+        "alias": null,
         "description": "Trobbio (Boss)",
         "key": "Trobbio",
         "tooltip": "Splits when killing Trobbio"
@@ -688,6 +730,24 @@
         "description": "Trobbio (Transition)",
         "key": "TrobbioTrans",
         "tooltip": "Splits on the transition after killing Trobbio"
+    },
+    {
+        "alias": null,
+        "description": "Tormented Trobbio Encountered (Boss)",
+        "key": "TormentedTrobbioEncountered",
+        "tooltip": "Splits when first encountering Tormented Trobbio"
+    },
+    {
+        "alias": null,
+        "description": "Tormented Trobbio (Boss)",
+        "key": "TormentedTrobbio",
+        "tooltip": "Splits when killing Tormented Trobbio"
+    },
+    {
+        "alias": null,
+        "description": "Tormented Trobbio (Transition)",
+        "key": "TormentedTrobbioTrans",
+        "tooltip": "Splits on the transition after killing Tormented Trobbio"
     },
     {
         "alias": null,
@@ -814,6 +874,12 @@
         "description": "Flea Festival End (Event)",
         "key": "FleaFestivalEnd",
         "tooltip": "Splits when the Flea Festival has ended"
+    },
+    {
+        "alias": null,
+        "description": "Enter Lace 2 (Transition)",
+        "key": "EnterLace2",
+        "tooltip": "Splits when entering the Lace 2 boss arena"
     },
     {
         "alias": null,
@@ -1737,7 +1803,13 @@
         "alias": null,
         "description": "Silk Soar (Skill)",
         "key": "SilkSoar",
-        "tooltip": "Splits when you obtain Super Jump"
+        "tooltip": "Splits when you obtain Silk Soar (Super Jump)"
+    },
+    {
+        "alias": null,
+        "description": "Silk Soar (Transition)",
+        "key": "SilkSoarTrans",
+        "tooltip": "Splits on the transition after obtaining Silk Soar"
     },
     {
         "alias": null,

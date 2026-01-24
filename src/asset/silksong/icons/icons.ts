@@ -30,6 +30,7 @@ import EnterWormways from "./Enemy/Grom.png";
 import EnterUpperWormways from "./Enemy/Gromling.png";
 import Sharpdart from "./Skill/Sharpdart.png";
 import SharpdartTrans from "./Skill/Sharpdart.png";
+import PlasmifiedZangoEncountered from "./Boss/PlasmifiedZango.png";
 import EnterHuntersMarch from "./Enemy/Skarrlid.png";
 import HuntersMarchPostMiddleArenaTransition from "./Enemy/SkarrScout.png";
 import EnterFarFields from "./Enemy/Fertid.png";
@@ -51,6 +52,9 @@ import EnterWispThicket from "./Enemy/Wisp.png";
 import EnterFatherOfTheFlame from "./Boss/FatherOfTheFlame.png";
 import FatherOfTheFlame from "./Boss/FatherOfTheFlame.png";
 import EnterShellwood from "./Enemy/Phacia.png";
+import SisterSplinterEncountered from "./Boss/SisterSplinter.png";
+import SisterSplinter from "./Boss/SisterSplinter.png";
+import SisterSplinterTrans from "./Boss/SisterSplinter.png";
 import ClingGrip from "./Skill/ClingGrip.png";
 import ClingGripTrans from "./Skill/ClingGrip.png";
 import ShellwoodBell from "./Misc/Bell.png";
@@ -67,6 +71,7 @@ import NeedleStrikeTrans from "./Skill/NeedleStrike.png";
 import EnterLastJudge from "./Boss/LastJudge.png";
 import LastJudgeEncountered from "./Boss/LastJudge.png";
 import LastJudge from "./Boss/LastJudge.png";
+import LostGarmond from "./Boss/LostGarmond.png";
 import EnterSinnersRoad from "./Enemy/Muckroach.png";
 import SinnersRoadSimpleKey from "./Item/SimpleKey.png";
 import Lugoli from "./Boss/Lugoli.png";
@@ -95,6 +100,7 @@ import EnterMountFay from "./Enemy/Driftlin.png";
 import EnterBrightvein from "./Enemy/Mnemonord.png";
 import UpperMountFayTrans from "./Enemy/Mnemonid.png";
 import FaydownCloak from "./Skill/FaydownCloak.png";
+import FaydownCloakTrans from "./Skill/FaydownCloak.png";
 import EnterSandsOfKarak from "./Enemy/Crustcrawler.png";
 import EnterVoltnest from "./Boss/Voltvyrm.png";
 import Voltvyrm from "./Boss/Voltvyrm.png";
@@ -113,8 +119,12 @@ import EnterGrandGate from "./Event/Act2Started.png";
 import EnterChoralChambers from "./Enemy/ChoirFlyer.png";
 import EnterSongclave from "./NPC/Caretaker.png";
 import JubilanaSimpleKey from "./Item/SimpleKey.png";
+import TrobbioEncountered from "./Boss/Trobbio.png";
 import Trobbio from "./Boss/Trobbio.png";
 import TrobbioTrans from "./Boss/Trobbio.png";
+import TormentedTrobbioEncountered from "./Boss/TormentedTrobbio.png";
+import TormentedTrobbio from "./Boss/TormentedTrobbio.png";
+import TormentedTrobbioTrans from "./Boss/TormentedTrobbio.png";
 import MetMergwin from "./NPC/Mergwin.png";
 import DeliveredCouriersRasher from "./Item/CouriersRasher.png";
 import GreatTasteReward from "./Item/PaleOil.png";
@@ -136,6 +146,7 @@ import EnterMemorium from "./Enemy/Rhinogrund.png";
 import EnterPutrifiedDucts from "./Enemy/Barnak.png";
 import FleaFestivalBegin from "./Misc/FleaCaravan.png";
 import FleaFestivalEnd from "./Item/PaleOil.png";
+import EnterLace2 from "./Boss/Lace.png";
 import Lace2 from "./Boss/Lace.png";
 import PostLace2ArenaTrans from "./Boss/Lace.png";
 import EnterTheCradle from "./Boss/Lace.png";
@@ -290,6 +301,7 @@ import SeenFleatopiaEmpty from "./NPC/Mooshka.png";
 import EnterBellEater from "./Boss/BellEater.png";
 import BeastlingCall from "./Skill/BeastlingCall.png";
 import SilkSoar from "./Skill/SilkSoar.png";
+import SilkSoarTrans from "./Skill/SilkSoar.png";
 import ElegyOfTheDeep from "./Skill/ElegyOfTheDeep.png";
 import EnterNylethMemory from "./Boss/Nyleth.png";
 import NylethEncountered from "./Boss/Nyleth.png";
@@ -434,6 +446,7 @@ export default {
   EnterUpperWormways,
   Sharpdart,
   SharpdartTrans,
+  PlasmifiedZangoEncountered,
   EnterHuntersMarch,
   HuntersMarchPostMiddleArenaTransition,
   EnterFarFields,
@@ -455,6 +468,9 @@ export default {
   EnterFatherOfTheFlame,
   FatherOfTheFlame,
   EnterShellwood,
+  SisterSplinterEncountered,
+  SisterSplinter,
+  SisterSplinterTrans,
   ClingGrip,
   ClingGripTrans,
   ShellwoodBell,
@@ -471,6 +487,7 @@ export default {
   EnterLastJudge,
   LastJudgeEncountered,
   LastJudge,
+  LostGarmond,
   EnterSinnersRoad,
   SinnersRoadSimpleKey,
   Lugoli,
@@ -499,6 +516,7 @@ export default {
   EnterBrightvein,
   UpperMountFayTrans,
   FaydownCloak,
+  FaydownCloakTrans,
   EnterSandsOfKarak,
   EnterVoltnest,
   Voltvyrm,
@@ -517,8 +535,12 @@ export default {
   EnterChoralChambers,
   EnterSongclave,
   JubilanaSimpleKey,
+  TrobbioEncountered,
   Trobbio,
   TrobbioTrans,
+  TormentedTrobbioEncountered,
+  TormentedTrobbio,
+  TormentedTrobbioTrans,
   MetMergwin,
   DeliveredCouriersRasher,
   GreatTasteReward,
@@ -540,6 +562,7 @@ export default {
   EnterPutrifiedDucts,
   FleaFestivalBegin,
   FleaFestivalEnd,
+  EnterLace2,
   Lace2,
   PostLace2ArenaTrans,
   EnterTheCradle,
@@ -694,6 +717,7 @@ export default {
   EnterBellEater,
   BeastlingCall,
   SilkSoar,
+  SilkSoarTrans,
   ElegyOfTheDeep,
   EnterNylethMemory,
   NylethEncountered,
