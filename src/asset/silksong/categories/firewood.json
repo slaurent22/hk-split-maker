@@ -1,0 +1,39 @@
+{
+    "categoryName": "Firewood%",
+    "splitIds": [
+        "StartNewGame",
+        "MossMother",
+        "SilkSpear",
+        "BellBeast",
+        "MarrowBell",
+        "-EnterHuntersMarch",
+        "-SavedFleaHuntersMarch",
+        "HuntersMarchPostMiddleArenaTransition",
+        "-SwiftStep",
+        "-SavedFleaDeepDocksSprint",
+        "-DeepDocksStation",
+        "SavedFleaDeepDocksBellway",
+        "BoneBottomSimpleKey",
+        "BellwayTrans",
+        "Flintslate",
+        "-EnterFarFields",
+        "-SavedFleaFarFieldsTrap",
+        "Menu",
+        "-BellwayTrans",
+        "-SavedFleaMarrow",
+        "CaravanTroupeGreymoor",
+        "EnterShellwood",
+        "SisterSplinterEncountered",
+        "SisterSplinter"
+    ],
+    "names": {
+        "HuntersMarchPostMiddleArenaTransition": "{Hunter's March} Shakra Arena",
+        "SavedFleaDeepDocksBellway": "{Swift Step} %s",
+        "BellwayTrans": ["Bellway To Deep Docks", "Bellway To Marrow"],
+        "Menu": "{Far Fields} SQ to Bone Bottom"
+    },
+    "gameName": "Hollow Knight: Silksong Category Extensions",
+    "variables": {
+        "Firewood% Subcategory": "No Major Glitches"
+    }
+}

@@ -275,6 +275,13 @@
             }
         },
         {
+            "fileName": "firewood",
+            "displayName": "Firewood%",
+            "data": {
+                "routeNotesURL": "https://pastebin.com/raw/QWqAUnf5"
+            }
+        },
+        {
             "fileName": "glutton",
             "displayName": "Glutton%",
             "data": {
