@@ -10,8 +10,8 @@
         "DriftersCloakTrans",
         "GreymoorBell",
         "MoorwingTrans",
-        "SisterSplinterTrans",
         "ClingGripTrans",
+        "SisterSplinterTrans",
         "BellhartBell",
         "HunterCrestEvo1",
         "Menu",
@@ -29,6 +29,7 @@
     "names": {
         "Menu": ["Moss Mothers (%s)"]
     },
+    "icons": {"Menu": "MossMother"}, 
     "gameName": "Hollow Knight: Silksong",
     "variables": {
         "All Act One Bosses Subcategory": "No Major Glitches"
