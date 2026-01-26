@@ -73,7 +73,11 @@
     "names": {
         "ManualSplit": "Garmond & Zaza (%s)",
         "TransitionExcludingDiscontinuities": "[1D] Hunter's Crest Evolution 1 Exit (%s)",
-        "Menu": ["Moss Mothers (%s)", "[2U] Needle Upgrade 2 (%s)", "[3U] Shakra (%s)"],
+        "Menu": [
+            "Moss Mothers (%s)",
+            "[2U] Needle Upgrade 2 (%s)",
+            "[3U] Shakra (%s)"
+        ],
         "ShellwoodBell": " [1U] %s",
         "GreatConchfliesTrans": "[1D, 2U] %s",
         "SkullTyrant1": "[3U] %s",
@@ -88,7 +92,7 @@
     "icons": {
         "Menu": ["MossMother", "NeedleUpgrade2", "ShakraMapBuyout"],
         "TransitionExcludingDiscontinuities": "HunterCrestEvo1"
-        },
+    },
     "gameName": "Hollow Knight: Silksong",
     "variables": {
         "All Act Two Bosses Subcategory": "No Major Glitches"
