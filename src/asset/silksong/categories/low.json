@@ -14,7 +14,7 @@
         "BellhartBell",
         "EnterSinnersRoad",
         "EnterExhaustOrgan",
-        "Phantom",
+        "PhantomTrans",
         "EnterCogworkDancers",
         "EnterCogworkCore",
         "EnterWhisperingVaults",
@@ -24,8 +24,8 @@
         "ArchitectsMelodyTrans",
         "EnterHighHallsArena",
         "HighHallsArena",
-        "UnlockedMelodyLift",
-        "Lace2",
+        "EnterLace2",
+        "PostLace2ArenaTrans",
         "EndingSplit"
     ],
     "names": {
