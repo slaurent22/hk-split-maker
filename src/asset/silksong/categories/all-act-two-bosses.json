@@ -24,7 +24,8 @@
         "CogworkDancers",
         "EnterWhisperingVaults",
         "-SongclaveTube",
-        "NeedleUpgrade2",
+        "-NeedleUpgrade2",
+        "Menu",
         "Trobbio",
         "PostClawlineArenaTrans",
         "EnterWhiteward",
@@ -72,9 +73,8 @@
     "names": {
         "ManualSplit": "Garmond & Zaza (%s)",
         "TransitionExcludingDiscontinuities": "[1D] Hunter's Crest Evolution 1 Exit (%s)",
-        "Menu": ["Moss Mothers (%s)", "[3U] Shakra (%s)"],
+        "Menu": ["Moss Mothers (%s)", "[2U] Needle Upgrade 2 (%s)", "[3U] Shakra (%s)"],
         "ShellwoodBell": " [1U] %s",
-        "NeedleUpgrade2": "[2U] %s",
         "GreatConchfliesTrans": "[1D, 2U] %s",
         "SkullTyrant1": "[3U] %s",
         "EnterWeavenestAtla": "[3D, 1D] %s",
@@ -86,7 +86,7 @@
         "EndingSplit": "Grand Mother Silk"
     },
     "icons": {
-        "Menu": ["MossMother", "ShakraMapBuyout"],
+        "Menu": ["MossMother", "NeedleUpgrade2", "ShakraMapBuyout"],
         "TransitionExcludingDiscontinuities": "HunterCrestEvo1"
         },
     "gameName": "Hollow Knight: Silksong",
