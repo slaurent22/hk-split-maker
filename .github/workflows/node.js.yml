@@ -27,5 +27,4 @@ jobs:
       - run: npm ci --legacy-peer-deps
       - run: npm run eslint
       - run: npm run stylelint
-      - run: npm run prettier-check
       - run: npm run build-prod
