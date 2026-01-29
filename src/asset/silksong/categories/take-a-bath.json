@@ -1,0 +1,25 @@
+{
+    "categoryName": "Take A Bath%",
+    "splitIds": [
+        "StartNewGame",
+        "MossMotherTrans",
+        "SilkSpearTrans",
+        "MarrowBell",
+        "SwiftStep",
+        "SavedFleaDeepDocksSprint",
+        "Lace1Trans",
+        "SavedFleaFarFieldsTrap",
+        "DeepDocksStation",
+        "SavedFleaDeepDocksBellway",
+        "SavedFleaHuntersMarch",
+        "SavedFleaMarrow",
+        "CaravanTroupeGreymoor",
+        "ClingGrip",
+        "SavedFleaKratt",
+        "ManualSplit"
+    ],
+    "names": {
+        "ManualSplit": "Splish Splash"
+    },
+    "gameName": "Hollow Knight: Silksong Category Extensions"
+}

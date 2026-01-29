@@ -315,6 +315,13 @@
             "data": {
                 "routeNotesURL": "https://pastebin.com/raw/PzWLD0k5"
             }
+        },
+        {
+            "fileName": "take-a-bath",
+            "displayName": "Take A Bath%",
+            "data": {
+                "routeNotesURL": "https://pastebin.com/raw/67pVQAcN"
+            }
         }
     ]
 }
