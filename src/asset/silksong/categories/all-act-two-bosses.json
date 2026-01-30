@@ -28,7 +28,6 @@
         "Menu",
         "TrobbioTrans",
         "PostClawlineArenaTrans",
-        "EnterWhiteward",
         "EnterMountFay",
         "-UpperMountFayTrans",
         "FaydownCloakTrans",
@@ -42,7 +41,6 @@
         "SkullTyrant1",
         "HuntersMarchPostMiddleArenaTransition",
         "SavageBeastfly1",
-        "MetShermaEnclave",
         "-ManualSplit",
         "TransitionExculdingDiscontinuities",
         "VaultkeepersMelodyTrans",
@@ -75,7 +73,7 @@
         "ManualSplit": "Encountered Garmond & Zaza (%s)",
         "TransitionExcludingDiscontinuities": [
             "[1D] Hunter's Crest Evolution 1 Exit (%s)",
-            "Garmond & Zaza Exit (%s)"
+            "[3D] Garmond & Zaza Exit (%s)"
         ],
         "Menu": [
             "Moss Mothers (%s)",
@@ -86,7 +84,6 @@
         "ShellwoodBell": " [1U] %s",
         "GreatConchfliesTrans": "[1D, 2U] %s",
         "SkullTyrant1": "[3U] %s",
-        "MetShermaEnclave": "[3D] %s",
         "EnterWispThicket": "[4U] %s",
         "TrailsEndTrans": "[4U] %s",
         "EnterFirstSinner": "[1U] %s",
