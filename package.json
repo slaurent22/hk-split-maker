@@ -17,7 +17,8 @@
         "prettier-check": "npx prettier --check .",
         "prettier-write": "npx prettier --write .",
         "test": "echo \"Error: no test specified\" && exit 1",
-        "postinstall": "husky install"
+        "postinstall": "husky install",
+        "check-json": "node tools/check-json.js"
     },
     "author": "",
     "license": "ISC",
