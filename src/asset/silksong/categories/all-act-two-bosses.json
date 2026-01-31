@@ -31,6 +31,7 @@
         "EnterMountFay",
         "-UpperMountFayTrans",
         "FaydownCloakTrans",
+        "-GreatConchflies",
         "NeedleStrikeTrans",
         "RagingConchflyTrans",
         "VoltFilament",
@@ -54,7 +55,6 @@
         "ShakraMapBuyout",
         "TrailsEndTrans",
         "Groal",
-        "SlabKeyApostate",
         "EnterMist",
         "LeaveMist",
         "PhantomTrans",
@@ -62,6 +62,7 @@
         "FirstSinner",
         "SavageBeastfly2",
         "Forebrothers",
+        "-ManualSplit",
         "Menu",
         "SecondSentinelBossEncountered",
         "SecondSentinel",
@@ -70,7 +71,10 @@
         "EndingSplit"
     ],
     "names": {
-        "ManualSplit": "Encountered Garmond & Zaza (%s)",
+        "ManualSplit": [
+            "Encountered Garmond & Zaza (%s)",
+            "Encountered Shakra (%s)",
+        ],
         "TransitionExcludingDiscontinuities": [
             "[1D] Hunter's Crest Evolution 1 Exit (%s)",
             "[3D] Garmond & Zaza Exit (%s)"
@@ -93,7 +97,8 @@
     },
     "icons": {
         "Menu": ["MossMother", "NeedleUpgrade2", "ShakraMapBuyout"],
-        "TransitionExcludingDiscontinuities": "HunterCrestEvo1"
+        "TransitionExcludingDiscontinuities": "HunterCrestEvo1",
+        "ManualSplit": ["LostGarmond", "ShakraMapBuyout"]
     },
     "gameName": "Hollow Knight: Silksong",
     "variables": {
