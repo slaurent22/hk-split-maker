@@ -97,13 +97,13 @@
     },
     "icons": {
         "Menu": [
-        "MossMother", 
-        "NeedleUpgrade2", 
-        "ShakraMapBuyout"
+            "MossMother", 
+            "NeedleUpgrade2", 
+            "ShakraMapBuyout"
         ],
         "TransitionExcludingDiscontinuities": [
-        "HunterCrestEvo1",
-        "LostGarmond"
+            "HunterCrestEvo1",
+            "LostGarmond"
         ],
         "ManualSplit": [
             "LostGarmond", 
