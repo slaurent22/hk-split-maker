@@ -95,19 +95,12 @@
         "EndingSplit": "Grand Mother Silk"
     },
     "icons": {
-        "Menu": [
-            "MossMother", 
-            "NeedleUpgrade2", 
-            "ShakraMapBuyout"
-        ],
+        "Menu": ["MossMother", "NeedleUpgrade2", "ShakraMapBuyout"],
         "TransitionExcludingDiscontinuities": [
             "HunterCrestEvo1",
             "LostGarmond"
         ],
-        "ManualSplit": [
-            "LostGarmond", 
-            "ShakraMapBuyout"
-            ]
+        "ManualSplit": ["LostGarmond", "ShakraMapBuyout"]
     },
     "gameName": "Hollow Knight: Silksong",
     "variables": {
