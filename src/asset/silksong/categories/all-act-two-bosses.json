@@ -43,7 +43,7 @@
         "HuntersMarchPostMiddleArenaTransition",
         "SavageBeastfly1",
         "-ManualSplit",
-        "TransitionExculdingDiscontinuities",
+        "TransitionExcludingDiscontinuities",
         "VaultkeepersMelodyTrans",
         "CollectedSurgeonsKey",
         "TheUnravelled",
@@ -96,9 +96,19 @@
         "EndingSplit": "Grand Mother Silk"
     },
     "icons": {
-        "Menu": ["MossMother", "NeedleUpgrade2", "ShakraMapBuyout"],
-        "TransitionExcludingDiscontinuities": "HunterCrestEvo1",
-        "ManualSplit": ["LostGarmond", "ShakraMapBuyout"]
+        "Menu": [
+        "MossMother", 
+        "NeedleUpgrade2", 
+        "ShakraMapBuyout"
+        ],
+        "TransitionExcludingDiscontinuities": [
+        "HunterCrestEvo1",
+        "LostGarmond"
+        ],
+        "ManualSplit": [
+            "LostGarmond", 
+            "ShakraMapBuyout"
+            ]
     },
     "gameName": "Hollow Knight: Silksong",
     "variables": {
