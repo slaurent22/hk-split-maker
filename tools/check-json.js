@@ -20,7 +20,6 @@ function walk(dir) {
       }
     } else if (entry.isFile() && entry.name.endsWith(".json")) {
       try {
-        console.log(`Checking ${entry.name}`);
         const content = fs.readFileSync(fullPath, "utf8");
         JSON.parse(content);
       } catch (err) {
