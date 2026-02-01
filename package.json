@@ -23,7 +23,7 @@
     "author": "",
     "license": "ISC",
     "engines": {
-        "node": ">=20.19.0"
+        "node": ">=24.13.0"
     },
     "devDependencies": {
         "@babel/core": "^7.16.10",
@@ -31,7 +31,7 @@
         "@babel/preset-react": "^7.16.7",
         "@babel/preset-typescript": "^7.16.7",
         "@types/file-saver": "^2.0.2",
-        "@types/node": "^15.6.0",
+        "@types/node": "^24.10.9",
         "@types/react": "^18.3.24",
         "@types/react-dom": "^18.3.7",
         "@types/react-tabs": "^2.3.4",
