@@ -219,6 +219,13 @@
             }
         },
         {
+            "fileName": "4ms-no-bellway-route",
+            "displayName": "4 Mask Shards (No Bellway Route)",
+            "data": {
+                "routeNotesURL": "https://pastebin.com/raw/ByYe7pDm"
+            }
+        },
+        {
             "fileName": "5-tools",
             "displayName": "5 Tools",
             "data": {
