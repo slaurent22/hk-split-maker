@@ -1,0 +1,29 @@
+{
+    "categoryName": "10 Achievements",
+    "splitIds": [
+        "StartNewGame",
+        "MossMotherTrans",
+        "SilkSpear",
+        "MaskShard1",
+        "SpoolFragment1",
+        "BellBeastTrans",
+        "MaskShard2",
+        "SwiftStep",
+        "Spool1",
+        "Lace1Trans",
+        "WardingBell",
+        "DriftersCloak",
+        "MaskShard3",
+        "FourthChorus",
+        "EnterGreymoor",
+        "ReaperCrest",
+        "MoorwingTrans",
+        "Mask1",
+        "ClingGrip",
+        "Widow"
+    ],
+    "gameName": "Hollow Knight: Silksong Category Extensions",
+    "variables": {
+        "10 Achievements Subcategory": "No Major Glitches"
+    }
+}
