@@ -5,7 +5,6 @@
         "MossMotherTrans",
         "SilkSpearTrans",
         "MarrowBell",
-        "SavedFleaDeepDocksSprint",
         "SwiftStepTrans",
         "Lace1Trans",
         "SavedFleaFarFieldsTrap",
@@ -17,7 +16,6 @@
         "BellhartBell",
         "EnterMist",
         "LeaveMist",
-        "Phantom",
         "Act2Started",
         "CogworkDancers",
         "EnterWhisperingVaults",
@@ -31,6 +29,7 @@
         "EndingSplit"
     ],
     "names": {
+        "SwiftStepTrans": "Swift Step + Flea Exit",
         "EndingSplit": "Grand Mother Silk"
     },
     "gameName": "Hollow Knight: Silksong",
