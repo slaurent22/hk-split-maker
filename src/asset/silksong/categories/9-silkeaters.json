@@ -1,0 +1,31 @@
+{
+    "categoryName": "9 Silkeaters",
+    "splitIds": [
+        "StartNewGame",
+        "MossMotherTrans",
+        "SilkSpearTrans",
+        "MarrowBell",
+        "SwiftStepTrans",
+        "Lace1Trans",
+        "DriftersCloakTrans",
+        "MoorwingTrans",
+        "ClingGripTrans",
+        "EnterBlastedSteps",
+        "BellhartBell",
+        "EnterSinnersRoad",
+        "EnterMist",
+        "LeaveMist",
+        "CollectedWhitewardKey",
+        "CogworkDancers",
+        "EnterWhisperingVaults",
+        "EnterWhiteward",
+        "PostClawlineArenaTrans",
+        "UnderworksTube",
+        "Forebrothers",
+        "ManualSplit"
+    ],
+    "names": {
+        "ManualSplit": "9 Silkeaters (%s)"
+    },
+    "gameName": "Hollow Knight: Silksong Category Extensions"
+}
