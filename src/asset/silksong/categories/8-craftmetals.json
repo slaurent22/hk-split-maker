@@ -1,0 +1,37 @@
+{
+    "categoryName": "8 Craftmetals",
+    "splitIds": [
+        "StartNewGame",
+        "MossMotherTrans",
+        "SilkSpearTrans",
+        "MarrowBell",
+        "SwiftStepTrans",
+        "SavedFleaDeepDocksBellway",
+        "SavedFleaFarFieldsTrap",
+        "SavedFleaHuntersMarch",
+        "SavedFleaMarrow",
+        "CaravanTroupeGreymoor",
+        "ClingGripTrans",
+        "BellhartBell",
+        "DriftersCloakTrans",
+        "GreymoorBell",
+        "ShellwoodBell",
+        "Act2Started",
+        "GrandBellwayTube",
+        "EnterWhiteward",
+        "SlabStation",
+        "PostClawlineArenaTrans",
+        "UnderworksTube",
+        "EnterMountFay",
+        "FaydownCloak",
+        "EnterWispThicket",
+        "EnterMemorium",
+        "EnterPutrifiedDucts",
+        "ManualSplit"
+    ],
+    "names": {
+        "SwiftStepTrans": "Swift Step + Flea Exit",
+        "ManualSplit": "8 Craftmetals (%s)"
+    },
+    "gameName": "Hollow Knight: Silksong Category Extensions"
+}
