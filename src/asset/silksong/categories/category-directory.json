@@ -254,6 +254,13 @@
             }
         },
         {
+            "fileName": "8-craftmetals",
+            "displayName": "8 Craftmetals",
+            "data": {
+                "routeNotesURL": "https://pastebin.com/raw/gKDYYBTb"
+            }
+        },
+        {
             "fileName": "10-achievements",
             "displayName": "10 Achievements",
             "data": {
