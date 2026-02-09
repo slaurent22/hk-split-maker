@@ -240,6 +240,13 @@
             }
         },
         {
+            "fileName": "7-beast-shards-sprintmaster",
+            "displayName": "7 Beast Shards (1.0.28891 Voltpogo Sprintmaster)",
+            "data": {
+                "routeNotesURL": "https://docs.google.com/document/d/1QXqL4n9DmE_EUQUe7wOeYA0uyW7U3rAxa61ivQGIvNQ/edit?usp=sharing"
+            }
+        },
+        {
             "fileName": "7-equips",
             "displayName": "7 Equips",
             "data": {

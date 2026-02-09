@@ -1,0 +1,35 @@
+{
+    "categoryName": "7 Beast Shards",
+    "splitIds": [
+        "StartNewGame",
+        "MossMotherTrans",
+        "SilkSpearTrans",
+        "MarrowBell",
+        "SavedFleaHuntersMarch",
+        "SwiftStepTrans",
+        "SavedFleaDeepDocksBellway",
+        "Lace1Trans",
+        "SavedFleaFarFieldsTrap",
+        "FarFieldsStation",
+        "SavedFleaMarrow",
+        "EnterBellhart",
+        "ClingGripTrans",
+        "BellhartBell",
+        "DriftersCloakTrans",
+        "GreymoorBell",
+        "EnterLastJudge",
+        "Act2Started",
+        "SlabStation",
+        "EnterWhiteward",
+        "PostClawlineArenaTrans",
+        "FaydownCloak",
+        "Voltvessels",
+        "Moorwing",
+        "SnareSetter",
+        "ManualSplit"
+    ],
+    "names": {
+        "ManualSplit": "7 Beast Shards"
+    },
+    "gameName": "Hollow Knight: Silksong Category Extensions"
+}
