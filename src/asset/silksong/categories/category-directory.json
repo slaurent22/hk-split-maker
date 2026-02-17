@@ -74,6 +74,13 @@
             }
         },
         {
+            "fileName": "all-bosses-mist",
+            "displayName": "All Bosses (Mist Route)",
+            "data": {
+                "routeNotesURL": "https://app.milanote.com/1VQX1L1C8nMs0q?p=R1lE2KGJH9w"
+            }
+        },
+        {
             "fileName": "all-act-one-bosses",
             "displayName": "All Act One Bosses",
             "data": {
