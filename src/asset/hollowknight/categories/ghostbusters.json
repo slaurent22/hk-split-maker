@@ -31,8 +31,8 @@
     ],
     "names": {
         "BlueLake": "Blue Lake (1U)",
-        "BenchAny": "Deepnest Spa Bench (1U)",
-        "Menu": "Glade Cleared (%s)",
+        "BenchAny": "Deepnest Spa Bench (1U) (Any Bench)",
+        "Menu": "Glade Cleared (Main Menu)",
         "SpiritGladeOpen": "Sprit Glade Door (1U)",
         "OnObtainGhostGravedigger": "Gravedigger (1U, B, 2U)",
         "QueensGardensPostArenaTransition": "QG Hard Arena"
