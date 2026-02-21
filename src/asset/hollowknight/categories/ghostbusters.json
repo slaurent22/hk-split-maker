@@ -32,10 +32,12 @@
     "names": {
         "BlueLake": "Blue Lake (1U)",
         "BenchAny": "Deepnest Spa Bench (1U) (Any Bench)",
+        "SavedCloth": "Save Cloth (B)"
+        "SimpleKey": "Simple Key",
+        "SpiritGladeOpen": "Sprit Glade Door (1U, B)",
         "Menu": "Glade Cleared (Main Menu)",
-        "SpiritGladeOpen": "Sprit Glade Door (1U)",
         "OnObtainGhostGravedigger": "Gravedigger (1U, B, 2U)",
-        "QueensGardensPostArenaTransition": "QG Hard Arena"
+        "QueensGardensPostArenaTransition": "QG Arena Exit"
     },
     "endTriggeringAutosplit": true,
     "gameName": "Hollow Knight Category Extensions",
