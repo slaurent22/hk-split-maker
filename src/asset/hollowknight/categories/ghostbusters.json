@@ -4,29 +4,44 @@
         "VengefulSpirit",
         "EnterGreenpath",
         "MothwingCloak",
+        "MantisClaw",
         "BlueLake",
         "RestingGroundsStation",
-        "MantisClaw",
+        "BenchAny",
         "GalienEssence",
         "TramPass",
         "SavedCloth",
-        "HiveKnight",
+        "SimpleKey",
+        "EnterHiveKnight",
+        "OnObtainGhostVespa",
+        "EnterHornet2",
         "KingsBrand",
+        "OnObtainGhostPoggy",
+        "AbyssDoor",
         "ShadeCloak",
-        "KingsStationStation",
+        "HiddenStationStation",
+        "SpiritGladeOpen",
+        "Menu",
+        "OnObtainGhostGravedigger",
+        "OnObtainGhostJoni",
         "QueensGardensEntry",
         "OnObtainGhostCaelifFera",
         "QueensGardensPostArenaTransition",
-        "TraitorLord",
-        "OnObtainGhostJoni",
-        "SpiritGladeOpen",
-        "Menu",
-        "OnObtainGhostMarissa",
-        "OnObtainGhostPoggy"
+        "OnObtainGhostCloth"
     ],
     "names": {
-        "Menu": "Glade Cleared (Main Menu)"
+        "BlueLake": "Blue Lake (1U)",
+        "BenchAny": "Deepnest Spa Bench (1U) (Any Bench)",
+        "SavedCloth": "Save Cloth (B)",
+        "SimpleKey": "Simple Key",
+        "SpiritGladeOpen": "Sprit Glade Door (1U, B)",
+        "Menu": "Glade Cleared (Main Menu)",
+        "OnObtainGhostGravedigger": "Gravedigger (1U, B, 2U)",
+        "QueensGardensPostArenaTransition": "QG Arena Exit"
     },
     "endTriggeringAutosplit": true,
-    "gameName": "Hollow Knight Category Extensions"
+    "gameName": "Hollow Knight Category Extensions",
+    "variables": {
+        "Ghostbusters Glitch": "1.4.3.2+ NMG"
+    }
 }
