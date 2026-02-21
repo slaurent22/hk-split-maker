@@ -79,6 +79,7 @@ function getUrl(qualifier, id) {
 
     // Menu
     case "Menu":
+    case "TrailsEndMenu":
       return getUrl("Item", "Map");
     case "MenuNeedolinMemory":
       return getUrl("Skill", "Needolin");
@@ -128,6 +129,7 @@ function getUrl(qualifier, id) {
     case "SpoolFragment13":
     case "SpoolFragment15":
     case "SpoolFragment17":
+    case "OnObtainSpoolFragment":
       return getUrl("Item", "SpoolFragment");
 
     case "Spool1":
@@ -376,6 +378,10 @@ function getUrl(qualifier, id) {
       return getUrl("Boss", "TormentedTrobbio");
     case "EnterLace2":
       return getUrl("Boss", "Lace");
+    case "PalestagTrans":
+      return getUrl("Boss", "Palestag");
+    case "ForebrothersTrans":
+      return getUrl("Boss", "Forebrothers");
 
     // Melody Transition
     case "VaultkeepersMelodyTrans":

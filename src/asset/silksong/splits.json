@@ -511,6 +511,12 @@
     },
     {
         "alias": null,
+        "description": "Trail's End (Menu)",
+        "key": "TrailsEndMenu",
+        "tooltip": "Splits on the main menu when quitting out of the Trails's End room"
+    },
+    {
+        "alias": null,
         "description": "Enter The Slab (Transition)",
         "key": "EnterTheSlab",
         "tooltip": "Splits when entering the Slab's front entrance"
@@ -1102,6 +1108,12 @@
         "description": "Mask Upgrade 20 (Upgrade)",
         "key": "Mask5",
         "tooltip": "Splits when getting 5 extra Masks (10 base HP)"
+    },
+    {
+        "alias": null,
+        "description": "Spool Fragment (Obtain)",
+        "key": "OnObtainSpoolFragment",
+        "tooltip": "Splits when obtaining a Spool Fragment or a complete Spool upgrade"
     },
     {
         "alias": null,
@@ -1903,6 +1915,12 @@
     },
     {
         "alias": null,
+        "description": "Palestag (Transition)",
+        "key": "PalestagTrans",
+        "tooltip": "Splits on the transition after Palestag is defeated"
+    },
+    {
+        "alias": null,
         "description": "Clover Dancers Encountered (Boss)",
         "key": "CloverDancersEncountered",
         "tooltip": "Splits when the Clover Dancers boss fight begins for the first time"
@@ -1954,6 +1972,12 @@
         "description": "Forebrothers (Boss)",
         "key": "Forebrothers",
         "tooltip": "Splits after defeating the Forebrothers"
+    },
+    {
+        "alias": null,
+        "description": "Forebrothers (Transition)",
+        "key": "ForebrothersTrans",
+        "tooltip": "Splits on the transition after defeating the Forebrothers"
     },
     {
         "alias": null,

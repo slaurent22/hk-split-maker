@@ -85,6 +85,7 @@ import PhantomTrans from "./Boss/Phantom.png";
 import CrossStitch from "./Skill/CrossStitch.png";
 import CrossStitchTrans from "./Skill/CrossStitch.png";
 import TrailsEndTrans from "./NPC/Shakra.png";
+import TrailsEndMenu from "./Item/Map.png";
 import EnterTheSlab from "./Enemy/Wardenfly.png";
 import WardenflyCaptureTrans from "./Enemy/Wardenfly.png";
 import SlabKeyIndolent from "./Item/SlabKeyIndolent.png";
@@ -184,6 +185,7 @@ import MaskShard17 from "./Item/MaskShard.png";
 import MaskShard18 from "./Item/MaskShard.png";
 import MaskShard19 from "./Item/MaskShard.png";
 import Mask5 from "./Item/Mask.png";
+import OnObtainSpoolFragment from "./Item/SpoolFragment.png";
 import SpoolFragment1 from "./Item/SpoolFragment.png";
 import Spool1 from "./Item/Spool.png";
 import SpoolFragment3 from "./Item/SpoolFragment.png";
@@ -317,6 +319,7 @@ import HeartKarmelita from "./Item/HuntersHeart.png";
 import EnterVerdaniaMemory from "./Enemy/LeafGlider.png";
 import EnterVerdaniaCastle from "./Boss/CloverDancers.png";
 import Palestag from "./Boss/Palestag.png";
+import PalestagTrans from "./Boss/Palestag.png";
 import CloverDancersEncountered from "./Boss/CloverDancers.png";
 import CloverDancers from "./Boss/CloverDancers.png";
 import HeartClover from "./Item/ConjoinedHeart.png";
@@ -326,6 +329,7 @@ import BellhouseKeyConversation from "./Item/BellhomeKey.png";
 import VerdaniaLakeFountainOrbs from "./Enemy/Nuphar.png";
 import VerdaniaOrbsCollected from "./Enemy/Verdanir.png";
 import Forebrothers from "./Boss/Forebrothers.png";
+import ForebrothersTrans from "./Boss/Forebrothers.png";
 import Groal from "./Boss/Groal.png";
 import SavageBeastfly1 from "./Boss/SavageBeastfly.png";
 import SavageBeastfly2 from "./Boss/SavageBeastfly.png";
@@ -501,6 +505,7 @@ export default {
   CrossStitch,
   CrossStitchTrans,
   TrailsEndTrans,
+  TrailsEndMenu,
   EnterTheSlab,
   WardenflyCaptureTrans,
   SlabKeyIndolent,
@@ -600,6 +605,7 @@ export default {
   MaskShard18,
   MaskShard19,
   Mask5,
+  OnObtainSpoolFragment,
   SpoolFragment1,
   Spool1,
   SpoolFragment3,
@@ -733,6 +739,7 @@ export default {
   EnterVerdaniaMemory,
   EnterVerdaniaCastle,
   Palestag,
+  PalestagTrans,
   CloverDancersEncountered,
   CloverDancers,
   HeartClover,
@@ -742,6 +749,7 @@ export default {
   VerdaniaLakeFountainOrbs,
   VerdaniaOrbsCollected,
   Forebrothers,
+  ForebrothersTrans,
   Groal,
   SavageBeastfly1,
   SavageBeastfly2,

@@ -79,6 +79,8 @@ function getNameAndGroup({
     case "SilkSoarTrans":
     case "SisterSplinterTrans":
     case "TormentedTrobbioTrans":
+    case "PalestagTrans":
+    case "ForebrothersTrans":
       return [`${name} Exit`, qualifier];
     case "PostClawlineArenaTrans":
       return ["Clawline Arena Exit", qualifier];
@@ -86,6 +88,8 @@ function getNameAndGroup({
       return ["Lace 2 Arena Exit", qualifier];
     case "HuntersMarchPostMiddleArenaTransition":
       return ["Hunter's March Arena Exit", qualifier];
+    case "TrailsEndMenu":
+      return [`${name} Menu`, qualifier];
   }
   return [name, qualifier];
 }
