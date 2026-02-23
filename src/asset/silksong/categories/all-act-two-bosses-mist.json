@@ -87,14 +87,8 @@
             "Hunter Crest Evo Exit",
             "G&Z Exit"
         ],
-        "Menu": [
-            "Moss Mother Duo SQ",
-            "Needle 2 SQ"
-        ],
-        "ManualSplit": [
-            "G&Z Encountered",
-            "Shakra"
-        ],
+        "Menu": ["Moss Mother Duo SQ", "Needle 2 SQ"],
+        "ManualSplit": ["G&Z Encountered", "Shakra"],
         "EndingSplit": "Grand Mother Silk"
     },
     "gameName": "Hollow Knight: Silksong"
