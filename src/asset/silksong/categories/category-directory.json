@@ -102,6 +102,13 @@
             }
         },
         {
+            "fileName": "all-act-two-bosses-mist",
+            "displayName": "All Act Two Bosses (Mist Route)",
+            "data": {
+                "routeNotesURL": "https://docs.google.com/document/d/1zlLJYEzrKcsL5oMd5lUcfaA5OFjSG_ceW2K1PnYQOvE"
+            }
+        },
+        {
             "fileName": "any-bells",
             "displayName": "Any% (Bells Route, Cloak)",
             "data": {
