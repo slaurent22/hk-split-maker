@@ -81,6 +81,13 @@
             }
         },
         {
+            "fileName": "all-bosses-zodiam",
+            "displayName": "All Bosses (Zodiam Route)",
+            "data": {
+                "routeNotesURL": "https://app.milanote.com/1VVhJE1QSvIM9i?p=7MyJrpBqjMC"
+            }
+        },
+        {
             "fileName": "all-act-one-bosses",
             "displayName": "All Act One Bosses",
             "data": {
