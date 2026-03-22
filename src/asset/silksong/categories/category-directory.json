@@ -305,10 +305,24 @@
             }
         },
         {
-            "fileName": "all-bellways",
-            "displayName": "All Bellways",
+            "fileName": "all-bellways-mist-wings",
+            "displayName": "All Bellways (Mist Wings)",
             "data": {
                 "routeNotesURL": "https://pastebin.com/raw/5JXJ1eeh"
+            }
+        },
+        {
+            "fileName": "all-bellways-bells",
+            "displayName": "All Bellways (Bells)",
+            "data": {
+                "routeNotesURL": "https://speedpastes.org/pIWZGp3T"
+            }
+        },
+        {
+            "fileName": "all-bellways-mist",
+            "displayName": "All Bellways (Mist)",
+            "data": {
+                "routeNotesURL": "https://speedpastes.org/DIBdoaQd"
             }
         },
         {
