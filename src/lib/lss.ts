@@ -147,6 +147,19 @@ const SILKSONG_SCRIPT_NAME_NODE = {
   },
 };
 
+// <Setting id="pause_on_file_select" type="bool">False</Setting>
+const SILKSONG_PAUSE_ON_FILE_SELECT_FALSE_NODE = {
+  Setting: [
+    {
+      _attr: {
+        id: "pause_on_file_select",
+        type: "bool",
+      },
+    },
+    "False",
+  ],
+};
+
 export async function createSplitsXml(
   config: Config,
   game: Game,
@@ -300,11 +313,14 @@ export async function createSplitsXml(
       ];
       break;
     case "silksong":
+      const isAllGlitches = config.variables && Object.values(config.variables).some((v) => v === "All Glitches");
+      const pauseOnFileSelect = isAllGlitches ? [SILKSONG_PAUSE_ON_FILE_SELECT_FALSE_NODE] : [];
       autosplitterSettings = [
         { Version: "1.0" },
         {
           CustomSettings: [
             SILKSONG_SCRIPT_NAME_NODE,
+            ...pauseOnFileSelect,
             {
               Setting: [
                 { _attr: { id: "splits", type: "list" } },
@@ -343,8 +359,10 @@ export async function createSplitsXml(
 }
 
 function makeAutoSplittingRuntimeComponent(
-  splitIds: Array<string>
+  splitIds: Array<string>,
+  isAllGlitches: boolean | undefined,
 ): Record<string, unknown> {
+  let pauseOnFileSelect = isAllGlitches ? [SILKSONG_PAUSE_ON_FILE_SELECT_FALSE_NODE] : [];
   const splitList = [
     {
       Setting: [
@@ -359,6 +377,7 @@ function makeAutoSplittingRuntimeComponent(
         _attr: { id: `splits_${i}_item`, type: "string", value: name },
       },
     })),
+    ...pauseOnFileSelect,
     {
       Setting: [{ _attr: { id: "hit_counter", type: "bool" } }, "True"],
     },
@@ -390,6 +409,7 @@ export function createLayoutXml(config: Config, game: Game): string {
   if (game !== "silksong") {
     throw new Error("layout generation only supported for silksong");
   }
+  const isAllGlitches = config.variables && Object.values(config.variables).some((v) => v === "All Glitches");
   const layoutObj = [
     {
       Layout: [
@@ -451,7 +471,7 @@ export function createLayoutXml(config: Config, game: Game): string {
         },
         {
           Components: [
-            makeAutoSplittingRuntimeComponent(config.splitIds),
+            makeAutoSplittingRuntimeComponent(config.splitIds, isAllGlitches),
             {
               Component: [
                 { Path: "LiveSplit.Title.dll" },
