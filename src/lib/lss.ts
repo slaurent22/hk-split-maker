@@ -313,8 +313,12 @@ export async function createSplitsXml(
       ];
       break;
     case "silksong":
-      const isAllGlitches = config.variables && Object.values(config.variables).some((v) => v === "All Glitches");
-      const pauseOnFileSelect = isAllGlitches ? [SILKSONG_PAUSE_ON_FILE_SELECT_FALSE_NODE] : [];
+      const isAllGlitches =
+        config.variables &&
+        Object.values(config.variables).some((v) => v === "All Glitches");
+      const pauseOnFileSelect = isAllGlitches
+        ? [SILKSONG_PAUSE_ON_FILE_SELECT_FALSE_NODE]
+        : [];
       autosplitterSettings = [
         { Version: "1.0" },
         {
@@ -360,9 +364,11 @@ export async function createSplitsXml(
 
 function makeAutoSplittingRuntimeComponent(
   splitIds: Array<string>,
-  isAllGlitches: boolean | undefined,
+  isAllGlitches: boolean | undefined
 ): Record<string, unknown> {
-  let pauseOnFileSelect = isAllGlitches ? [SILKSONG_PAUSE_ON_FILE_SELECT_FALSE_NODE] : [];
+  let pauseOnFileSelect = isAllGlitches
+    ? [SILKSONG_PAUSE_ON_FILE_SELECT_FALSE_NODE]
+    : [];
   const splitList = [
     {
       Setting: [
@@ -409,7 +415,9 @@ export function createLayoutXml(config: Config, game: Game): string {
   if (game !== "silksong") {
     throw new Error("layout generation only supported for silksong");
   }
-  const isAllGlitches = config.variables && Object.values(config.variables).some((v) => v === "All Glitches");
+  const isAllGlitches =
+    config.variables &&
+    Object.values(config.variables).some((v) => v === "All Glitches");
   const layoutObj = [
     {
       Layout: [
