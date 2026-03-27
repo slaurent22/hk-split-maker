@@ -312,7 +312,7 @@ export async function createSplitsXml(
         { Splits: autosplits },
       ];
       break;
-    case "silksong":
+    case "silksong": {
       const isAllGlitches =
         config.variables &&
         Object.values(config.variables).some((v) => v === "All Glitches");
@@ -335,6 +335,7 @@ export async function createSplitsXml(
         },
       ];
       break;
+    }
     default:
       // eslint-disable-next-line @typescript-eslint/restrict-template-expressions
       throw new Error(`Invalid game ${game}`);
