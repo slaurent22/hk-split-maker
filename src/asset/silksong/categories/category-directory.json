@@ -180,11 +180,6 @@
             "data": {
                 "routeNotesURL": "https://app.milanote.com/1VFfeQ1CUctcbv?p=roZW9TTwqoQ"
             }
-        },
-        {
-            "fileName": "twisted",
-            "displayName": "Twisted%",
-            "data": {}
         }
     ],
     "Glitched": [
@@ -401,6 +396,11 @@
             "data": {
                 "routeNotesURL": "https://speedpastes.org/67pVQAcN"
             }
+        },
+        {
+            "fileName": "twisted",
+            "displayName": "Twisted%",
+            "data": {}
         }
     ]
 }
