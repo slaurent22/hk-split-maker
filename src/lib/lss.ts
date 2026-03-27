@@ -366,7 +366,7 @@ function makeAutoSplittingRuntimeComponent(
   splitIds: Array<string>,
   isAllGlitches: boolean | undefined
 ): Record<string, unknown> {
-  let pauseOnFileSelect = isAllGlitches
+  const pauseOnFileSelect = isAllGlitches
     ? [SILKSONG_PAUSE_ON_FILE_SELECT_FALSE_NODE]
     : [];
   const splitList = [
