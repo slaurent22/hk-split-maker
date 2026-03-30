@@ -1,0 +1,16 @@
+{
+    "categoryName": "5 Tools",
+    "splitIds": [
+        "StartNewGame",
+        "EnterBoneBottom",
+        "SwiftStepTrans",
+        "WardingBell",
+        "Flintslate",
+        "FracturedMask",
+        "Compass"
+    ],
+    "gameName": "Hollow Knight: Silksong Category Extensions",
+    "variables": {
+        "5 Tools Subcategory": "All Glitches"
+    }
+}

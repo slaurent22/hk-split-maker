@@ -1,0 +1,19 @@
+{
+    "categoryName": "Act 1",
+    "splitIds": [
+        "StartNewGame",
+        "EnterBoneBottom",
+        "DeepDocksBell",
+        "GreymoorBell",
+        "MarrowBell",
+        "BellhartBell",
+        "ShellwoodBell",
+        "LastJudge",
+        "Act2Started"
+    ],
+    "gameName": "Hollow Knight: Silksong",
+    "variables": {
+        "Act 1 Route": "Judgement",
+        "Act 1 Subcategory": "All Glitches"
+    }
+}

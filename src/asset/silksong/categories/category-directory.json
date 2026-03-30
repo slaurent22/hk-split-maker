@@ -190,7 +190,37 @@
     "Glitched": [
         {
             "fileName": "any-ag",
-            "displayName": "Any% (All Glitches)",
+            "displayName": "Any% (All Glitches, Cling Grip)",
+            "data": {}
+        },
+        {
+            "fileName": "any-ag-swift-step",
+            "displayName": "Any% (All Glitches, Swift Step)",
+            "data": {}
+        },
+        {
+            "fileName": "low-ag",
+            "displayName": "Low% (All Glitches)",
+            "data": {}
+        },
+        {
+            "fileName": "act1-judgement-ag",
+            "displayName": "Act 1 Judgement (All Glitches)",
+            "data": {}
+        },
+        {
+            "fileName": "5-tools-ag",
+            "displayName": "5 Tools (All Glitches)",
+            "data": {}
+        },
+        {
+            "fileName": "bath-ag",
+            "displayName": "Bath% (All Glitches)",
+            "data": {}
+        },
+        {
+            "fileName": "twisted-ag",
+            "displayName": "Twisted% (All Glitches)",
             "data": {}
         }
     ],
