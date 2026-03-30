@@ -30,6 +30,7 @@
     },
     "gameName": "Hollow Knight: Silksong",
     "variables": {
-        "Any% Subcategory": "No Major Glitches"
+        "Any% Subcategory": "No Major Glitches",
+        "Any% Drifters Cloak?": "Cloakless"
     }
 }
