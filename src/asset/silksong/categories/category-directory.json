@@ -363,6 +363,13 @@
             }
         },
         {
+            "fileName": "bath",
+            "displayName": "Bath%",
+            "data": {
+                "routeNotesURL": "https://speedpastes.org/67pVQAcN"
+            }
+        },
+        {
             "fileName": "beer-bottle",
             "displayName": "Beer Bottle%",
             "data": {
@@ -423,13 +430,6 @@
             "displayName": "Sylphsong%",
             "data": {
                 "routeNotesURL": "https://pastebin.com/raw/PzWLD0k5"
-            }
-        },
-        {
-            "fileName": "take-a-bath",
-            "displayName": "Take A Bath%",
-            "data": {
-                "routeNotesURL": "https://speedpastes.org/67pVQAcN"
             }
         },
         {
