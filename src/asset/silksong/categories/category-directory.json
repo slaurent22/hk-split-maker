@@ -67,6 +67,21 @@
             }
         },
         {
+            "fileName": "act1-judgement",
+            "displayName": "Act 1 Judgement",
+            "data": {}
+        },
+        {
+            "fileName": "act1-judgement-fleas",
+            "displayName": "Act 1 Judgement (Fleas)",
+            "data": {}
+        },
+        {
+            "fileName": "act1-sinner",
+            "displayName": "Act 1 Sinner",
+            "data": {}
+        },
+        {
             "fileName": "all-bosses",
             "displayName": "All Bosses",
             "data": {
@@ -142,16 +157,6 @@
             "data": {
                 "routeNotesURL": "https://docs.google.com/document/d/1OwFO5OSDMIZWn24Jm6f14QtfF7145Aom5T-exSffINI/edit?tab=t.0"
             }
-        },
-        {
-            "fileName": "judgement",
-            "displayName": "Judgement",
-            "data": {}
-        },
-        {
-            "fileName": "judgement-fleas",
-            "displayName": "Judgement (Fleas)",
-            "data": {}
         },
         {
             "fileName": "low",

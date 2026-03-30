@@ -1,5 +1,5 @@
 {
-    "categoryName": "Judgement",
+    "categoryName": "Act 1",
     "splitIds": [
         "StartNewGame",
         "MossMother",
@@ -20,6 +20,7 @@
     ],
     "gameName": "Hollow Knight: Silksong",
     "variables": {
-        "Judgement Subcategory": "No Major Glitches"
+        "Act 1 Route": "Judgement",
+        "Act 1 Subcategory": "No Major Glitches"
     }
 }
