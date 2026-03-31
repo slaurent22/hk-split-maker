@@ -1,0 +1,22 @@
+{
+    "categoryName": "Twisted%",
+    "splitIds": [
+        "StartNewGame",
+        "EnterBoneBottom",
+        "SwiftStepTrans",
+        "ClingGrip",
+        "EnterBlastedSteps",
+        "Menu",
+        "CurseCrest",
+        "ChoralChambersTube",
+        "EndingSplit"
+    ],
+    "names": {
+        "Menu": "Twisted Bud (Menu)",
+        "EndingSplit": "Grand Mother Silk"
+    },
+    "gameName": "Hollow Knight: Silksong Category Extensions",
+    "variables": {
+        "Twisted% Subcategory": "All Glitches"
+    }
+}

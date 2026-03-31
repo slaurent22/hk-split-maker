@@ -1,25 +1,27 @@
 {
-    "categoryName": "Take A Bath%",
+    "categoryName": "Act 1",
     "splitIds": [
         "StartNewGame",
         "MossMotherTrans",
         "SilkSpearTrans",
         "MarrowBell",
-        "SwiftStep",
         "SavedFleaDeepDocksSprint",
         "Lace1Trans",
         "SavedFleaFarFieldsTrap",
-        "DeepDocksStation",
         "SavedFleaDeepDocksBellway",
         "SavedFleaHuntersMarch",
         "SavedFleaMarrow",
         "CaravanTroupeGreymoor",
+        "GreymoorBell",
         "ClingGrip",
-        "SavedFleaKratt",
-        "ManualSplit"
+        "Menu",
+        "ShellwoodBell",
+        "LastJudge",
+        "Act2Started"
     ],
-    "names": {
-        "ManualSplit": "Splish Splash"
-    },
-    "gameName": "Hollow Knight: Silksong Category Extensions"
+    "gameName": "Hollow Knight: Silksong",
+    "variables": {
+        "Act 1 Route": "Judgement",
+        "Act 1 Subcategory": "No Major Glitches"
+    }
 }

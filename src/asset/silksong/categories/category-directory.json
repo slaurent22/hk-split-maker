@@ -67,6 +67,21 @@
             }
         },
         {
+            "fileName": "act1-judgement",
+            "displayName": "Act 1 Judgement",
+            "data": {}
+        },
+        {
+            "fileName": "act1-judgement-fleas",
+            "displayName": "Act 1 Judgement (Fleas)",
+            "data": {}
+        },
+        {
+            "fileName": "act1-sinner",
+            "displayName": "Act 1 Sinner",
+            "data": {}
+        },
+        {
             "fileName": "all-bosses",
             "displayName": "All Bosses",
             "data": {
@@ -144,16 +159,6 @@
             }
         },
         {
-            "fileName": "judgement",
-            "displayName": "Judgement",
-            "data": {}
-        },
-        {
-            "fileName": "judgement-fleas",
-            "displayName": "Judgement (Fleas)",
-            "data": {}
-        },
-        {
             "fileName": "low",
             "displayName": "Low%",
             "data": {
@@ -185,7 +190,37 @@
     "Glitched": [
         {
             "fileName": "any-ag",
-            "displayName": "Any% (All Glitches)",
+            "displayName": "Any% (All Glitches, Cling Grip)",
+            "data": {}
+        },
+        {
+            "fileName": "any-ag-swift-step",
+            "displayName": "Any% (All Glitches, Swift Step)",
+            "data": {}
+        },
+        {
+            "fileName": "low-ag",
+            "displayName": "Low% (All Glitches)",
+            "data": {}
+        },
+        {
+            "fileName": "act1-judgement-ag",
+            "displayName": "Act 1 Judgement (All Glitches)",
+            "data": {}
+        },
+        {
+            "fileName": "5-tools-ag",
+            "displayName": "5 Tools (All Glitches)",
+            "data": {}
+        },
+        {
+            "fileName": "bath-ag",
+            "displayName": "Bath% (All Glitches)",
+            "data": {}
+        },
+        {
+            "fileName": "twisted-ag",
+            "displayName": "Twisted% (All Glitches)",
             "data": {}
         }
     ],
@@ -328,6 +363,13 @@
             }
         },
         {
+            "fileName": "bath",
+            "displayName": "Bath%",
+            "data": {
+                "routeNotesURL": "https://speedpastes.org/67pVQAcN"
+            }
+        },
+        {
             "fileName": "beer-bottle",
             "displayName": "Beer Bottle%",
             "data": {
@@ -388,13 +430,6 @@
             "displayName": "Sylphsong%",
             "data": {
                 "routeNotesURL": "https://pastebin.com/raw/PzWLD0k5"
-            }
-        },
-        {
-            "fileName": "take-a-bath",
-            "displayName": "Take A Bath%",
-            "data": {
-                "routeNotesURL": "https://speedpastes.org/67pVQAcN"
             }
         },
         {

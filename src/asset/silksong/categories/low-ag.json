@@ -1,5 +1,5 @@
 {
-    "categoryName": "Any%",
+    "categoryName": "Low%",
     "splitIds": [
         "StartNewGame",
         "EnterBoneBottom",
@@ -13,7 +13,6 @@
     },
     "gameName": "Hollow Knight: Silksong",
     "variables": {
-        "Any% Subcategory": "All Glitches",
-        "Any% Drifters Cloak?": "Cloakless"
+        "Low% Subcategory": "All Glitches"
     }
 }
