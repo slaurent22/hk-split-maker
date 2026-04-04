@@ -6,7 +6,6 @@
         "SilkSpearTrans",
         "MarrowBell",
         "SwiftStepTrans",
-        "SavedFleaDeepDocksSprint",
         "DeepDocksStation",
         "SavedFleaDeepDocksBellway",
         "SavedFleaMarrow",
@@ -18,6 +17,7 @@
         "ManualSplit"
     ],
     "names": {
+        "SwiftStepTrans": "Swift Step + Flea Exit",
         "ManualSplit": "A Lifesaving Bridge (%s)"
     },
     "gameName": "Hollow Knight: Silksong Category Extensions",
