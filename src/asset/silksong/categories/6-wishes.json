@@ -5,7 +5,7 @@
         "MossMotherTrans",
         "SilkSpearTrans",
         "MarrowBell",
-        "SwiftStep",
+        "SwiftStepTrans",
         "SavedFleaDeepDocksSprint",
         "DeepDocksStation",
         "SavedFleaDeepDocksBellway",
@@ -14,6 +14,7 @@
         "Lace1Trans",
         "SavedFleaFarFieldsTrap",
         "CaravanTroupeGreymoor",
+        "BellhartStation",
         "ManualSplit"
     ],
     "names": {
