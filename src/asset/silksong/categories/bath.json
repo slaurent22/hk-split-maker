@@ -16,11 +16,8 @@
         "CaravanTroupeGreymoor",
         "ClingGrip",
         "SavedFleaKratt",
-        "ManualSplit"
+        "MaggotsRemoved"
     ],
-    "names": {
-        "ManualSplit": "Splish Splash"
-    },
     "gameName": "Hollow Knight: Silksong Category Extensions",
     "variables": {
         "Bath% Subcategory": "No Major Glitches"
