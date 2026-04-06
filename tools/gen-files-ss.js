@@ -311,6 +311,8 @@ function getUrl(qualifier, id) {
       return getUrl("Enemy", "ChoirFlyer");
     case "EnterCrawCourtroom":
       return getUrl("Enemy", "SquatcrawJuror");
+    case "EnterSprintmasterCave":
+      return getUrl("NPC", "SprintmasterSwift");
 
     // Boss Transition/Encountered
     case "MossMotherTrans":
@@ -564,6 +566,8 @@ function getUrl(qualifier, id) {
       return getUrl("Misc", "FleaCaravan");
     case "FleaFestivalEnd":
       return getUrl("Item", "PaleOil");
+    case "MaggotsRemoved":
+      return getUrl("Enemy", "Muckmaggot");
 
     // Hearts and Memories
     case "HeartNyleth":

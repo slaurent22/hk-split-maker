@@ -8,6 +8,7 @@ import EndingA from "./Boss/GrandMotherSilk.png";
 import Menu from "./Item/Map.png";
 import BenchAny from "./Misc/Bench.png";
 import PlayerDeath from "./Misc/Hornet.png";
+import MaggotsRemoved from "./Enemy/Muckmaggot.png";
 import AnyTransition from "./Misc/Hornet.png";
 import TransitionExcludingDiscontinuities from "./Misc/Hornet.png";
 import MossMother from "./Boss/MossMother.png";
@@ -39,6 +40,7 @@ import DriftersCloakTrans from "./Skill/DriftersCloak.png";
 import FourthChorus from "./Boss/FourthChorus.png";
 import GurrTheOutcastEncountered from "./Boss/GurrTheOutcast.png";
 import GurrTheOutcast from "./Boss/GurrTheOutcast.png";
+import EnterSprintmasterCave from "./NPC/SprintmasterSwift.png";
 import EnterGreymoor from "./Enemy/Craw.png";
 import GreymoorBell from "./Misc/Bell.png";
 import Moorwing from "./Boss/Moorwing.png";
@@ -433,6 +435,7 @@ export default {
   Menu,
   BenchAny,
   PlayerDeath,
+  MaggotsRemoved,
   AnyTransition,
   TransitionExcludingDiscontinuities,
   MossMother,
@@ -464,6 +467,7 @@ export default {
   FourthChorus,
   GurrTheOutcastEncountered,
   GurrTheOutcast,
+  EnterSprintmasterCave,
   EnterGreymoor,
   GreymoorBell,
   Moorwing,

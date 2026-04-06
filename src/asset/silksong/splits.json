@@ -49,6 +49,12 @@
     },
     {
         "alias": null,
+        "description": "Maggots Removed (Event)",
+        "key": "MaggotsRemoved",
+        "tooltip": "Splits when Hornet stops being afflicted by maggot water"
+    },
+    {
+        "alias": null,
         "description": "Any Transition (Transition)",
         "key": "AnyTransition",
         "tooltip": "Splits when entering a transition (only one will split per transition)"
@@ -232,6 +238,12 @@
         "description": "Gurr the Outcast (Boss)",
         "key": "GurrTheOutcast",
         "tooltip": "Splits when Gurr the Outcast is defeated"
+    },
+    {
+        "alias": null,
+        "description": "Enter Sprintmaster Cave (Transition)",
+        "key": "EnterSprintmasterCave",
+        "tooltip": "Splits when entering the room containing Sprintmaster Swift"
     },
     {
         "alias": null,
