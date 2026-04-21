@@ -75,6 +75,8 @@ function getUrl(qualifier, id) {
     case "TransitionExcludingDiscontinuities":
       return getUrl("Misc", "Hornet");
     case "BenchAny":
+    case "BenchHalfwayHome":
+    case "BenchChoralChambersBelowDining":
       return getUrl("Misc", "Bench");
 
     // Menu
@@ -83,6 +85,10 @@ function getUrl(qualifier, id) {
       return getUrl("Item", "Map");
     case "MenuNeedolinMemory":
       return getUrl("Skill", "Needolin");
+    case "VaultkeepersMelodyMenu":
+      return getUrl("Melody", "VaultkeepersMelody");
+    case "ConductorsMelodyMenu":
+      return getUrl("Melody", "ConductorsMelody");
 
     // Bell
     case "MarrowBell":
@@ -303,6 +309,10 @@ function getUrl(qualifier, id) {
       return getUrl("Event", "Act3Started");
     case "EnterChoralChambers":
       return getUrl("Enemy", "ChoirFlyer");
+    case "EnterCrawCourtroom":
+      return getUrl("Enemy", "SquatcrawJuror");
+    case "EnterSprintmasterCave":
+      return getUrl("NPC", "SprintmasterSwift");
 
     // Boss Transition/Encountered
     case "MossMotherTrans":
@@ -556,6 +566,8 @@ function getUrl(qualifier, id) {
       return getUrl("Misc", "FleaCaravan");
     case "FleaFestivalEnd":
       return getUrl("Item", "PaleOil");
+    case "MaggotsRemoved":
+      return getUrl("Enemy", "Muckmaggot");
 
     // Hearts and Memories
     case "HeartNyleth":

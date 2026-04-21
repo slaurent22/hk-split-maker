@@ -1,0 +1,14 @@
+{
+    "categoryName": "Bath%",
+    "splitIds": [
+        "StartNewGame",
+        "EnterBoneBottom",
+        "SwiftStepTrans",
+        "EnterBlastedSteps",
+        "MaggotsRemoved"
+    ],
+    "gameName": "Hollow Knight: Silksong Category Extensions",
+    "variables": {
+        "Bath% Subcategory": "All Glitches"
+    }
+}

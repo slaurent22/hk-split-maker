@@ -8,10 +8,12 @@
         "VengefulSpirit",
         "DreamNail",
         "LurienDreamer",
-        "EnterSanctumWithShadeSoul",
+        "TransShadeSoul",
         "TeachersArchive",
         "Uumuu",
-        "HegemolDreamer"
+        "MonomonDreamer",
+        "HegemolDreamer",
+        "UnchainedHollowKnight"
     ],
     "endTriggeringAutosplit": false,
     "endingSplit": {

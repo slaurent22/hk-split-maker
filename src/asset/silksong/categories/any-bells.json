@@ -22,6 +22,7 @@
         "ArchitectsMelodyTrans",
         "EnterHighHallsArena",
         "ConductorsMelodyTrans",
+        "EnterLace2",
         "PostLace2ArenaTrans",
         "EndingSplit"
     ],
@@ -30,6 +31,7 @@
     },
     "gameName": "Hollow Knight: Silksong",
     "variables": {
-        "Any% Subcategory": "No Major Glitches"
+        "Any% Subcategory": "No Major Glitches",
+        "Any% Drifters Cloak?": "Cloak"
     }
 }

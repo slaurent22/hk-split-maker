@@ -8,6 +8,7 @@ import EndingA from "./Boss/GrandMotherSilk.png";
 import Menu from "./Item/Map.png";
 import BenchAny from "./Misc/Bench.png";
 import PlayerDeath from "./Misc/Hornet.png";
+import MaggotsRemoved from "./Enemy/Muckmaggot.png";
 import AnyTransition from "./Misc/Hornet.png";
 import TransitionExcludingDiscontinuities from "./Misc/Hornet.png";
 import MossMother from "./Boss/MossMother.png";
@@ -39,14 +40,17 @@ import DriftersCloakTrans from "./Skill/DriftersCloak.png";
 import FourthChorus from "./Boss/FourthChorus.png";
 import GurrTheOutcastEncountered from "./Boss/GurrTheOutcast.png";
 import GurrTheOutcast from "./Boss/GurrTheOutcast.png";
+import EnterSprintmasterCave from "./NPC/SprintmasterSwift.png";
 import EnterGreymoor from "./Enemy/Craw.png";
 import GreymoorBell from "./Misc/Bell.png";
 import Moorwing from "./Boss/Moorwing.png";
 import MoorwingTrans from "./Boss/Moorwing.png";
 import ThreadStorm from "./Skill/ThreadStorm.png";
 import ThreadStormTrans from "./Skill/ThreadStorm.png";
+import BenchHalfwayHome from "./Misc/Bench.png";
 import EnterHalfwayHomeBasement from "./Enemy/SkarrStalker.png";
 import YarnabySlap from "./NPC/Yarnaby.png";
+import EnterCrawCourtroom from "./Enemy/SquatcrawJuror.png";
 import Crawfather from "./Boss/Crawfather.png";
 import EnterWispThicket from "./Enemy/Wisp.png";
 import EnterFatherOfTheFlame from "./Boss/FatherOfTheFlame.png";
@@ -120,6 +124,7 @@ import EnterGrandGate from "./Event/Act2Started.png";
 import EnterChoralChambers from "./Enemy/ChoirFlyer.png";
 import EnterSongclave from "./NPC/Caretaker.png";
 import JubilanaSimpleKey from "./Item/SimpleKey.png";
+import BenchChoralChambersBelowDining from "./Misc/Bench.png";
 import TrobbioEncountered from "./Boss/Trobbio.png";
 import Trobbio from "./Boss/Trobbio.png";
 import TrobbioTrans from "./Boss/Trobbio.png";
@@ -155,10 +160,12 @@ import PaleNails from "./Skill/PaleNails.png";
 import PaleNailsTrans from "./Skill/PaleNails.png";
 import VaultkeepersMelody from "./Melody/VaultkeepersMelody.png";
 import VaultkeepersMelodyTrans from "./Melody/VaultkeepersMelody.png";
+import VaultkeepersMelodyMenu from "./Melody/VaultkeepersMelody.png";
 import ArchitectsMelody from "./Melody/ArchitectsMelody.png";
 import ArchitectsMelodyTrans from "./Melody/ArchitectsMelody.png";
 import ConductorsMelody from "./Melody/ConductorsMelody.png";
 import ConductorsMelodyTrans from "./Melody/ConductorsMelody.png";
+import ConductorsMelodyMenu from "./Melody/ConductorsMelody.png";
 import UnlockedMelodyLift from "./Event/UnlockedMelodyLift.png";
 import NeedleUpgrade1 from "./Item/Needle1.png";
 import NeedleUpgrade2 from "./Item/Needle2.png";
@@ -428,6 +435,7 @@ export default {
   Menu,
   BenchAny,
   PlayerDeath,
+  MaggotsRemoved,
   AnyTransition,
   TransitionExcludingDiscontinuities,
   MossMother,
@@ -459,14 +467,17 @@ export default {
   FourthChorus,
   GurrTheOutcastEncountered,
   GurrTheOutcast,
+  EnterSprintmasterCave,
   EnterGreymoor,
   GreymoorBell,
   Moorwing,
   MoorwingTrans,
   ThreadStorm,
   ThreadStormTrans,
+  BenchHalfwayHome,
   EnterHalfwayHomeBasement,
   YarnabySlap,
+  EnterCrawCourtroom,
   Crawfather,
   EnterWispThicket,
   EnterFatherOfTheFlame,
@@ -540,6 +551,7 @@ export default {
   EnterChoralChambers,
   EnterSongclave,
   JubilanaSimpleKey,
+  BenchChoralChambersBelowDining,
   TrobbioEncountered,
   Trobbio,
   TrobbioTrans,
@@ -575,10 +587,12 @@ export default {
   PaleNailsTrans,
   VaultkeepersMelody,
   VaultkeepersMelodyTrans,
+  VaultkeepersMelodyMenu,
   ArchitectsMelody,
   ArchitectsMelodyTrans,
   ConductorsMelody,
   ConductorsMelodyTrans,
+  ConductorsMelodyMenu,
   UnlockedMelodyLift,
   NeedleUpgrade1,
   NeedleUpgrade2,

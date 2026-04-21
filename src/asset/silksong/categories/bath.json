@@ -1,26 +1,25 @@
 {
-    "categoryName": "Judgement",
+    "categoryName": "Bath%",
     "splitIds": [
         "StartNewGame",
         "MossMotherTrans",
         "SilkSpearTrans",
         "MarrowBell",
+        "SwiftStep",
         "SavedFleaDeepDocksSprint",
         "Lace1Trans",
         "SavedFleaFarFieldsTrap",
+        "DeepDocksStation",
         "SavedFleaDeepDocksBellway",
         "SavedFleaHuntersMarch",
         "SavedFleaMarrow",
         "CaravanTroupeGreymoor",
-        "GreymoorBell",
         "ClingGrip",
-        "Menu",
-        "ShellwoodBell",
-        "LastJudge",
-        "Act2Started"
+        "SavedFleaKratt",
+        "MaggotsRemoved"
     ],
-    "gameName": "Hollow Knight: Silksong",
+    "gameName": "Hollow Knight: Silksong Category Extensions",
     "variables": {
-        "Judgement Subcategory": "No Major Glitches"
+        "Bath% Subcategory": "No Major Glitches"
     }
 }

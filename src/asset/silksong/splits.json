@@ -49,6 +49,12 @@
     },
     {
         "alias": null,
+        "description": "Maggots Removed (Event)",
+        "key": "MaggotsRemoved",
+        "tooltip": "Splits when Hornet stops being afflicted by maggot water"
+    },
+    {
+        "alias": null,
         "description": "Any Transition (Transition)",
         "key": "AnyTransition",
         "tooltip": "Splits when entering a transition (only one will split per transition)"
@@ -235,6 +241,12 @@
     },
     {
         "alias": null,
+        "description": "Enter Sprintmaster Cave (Transition)",
+        "key": "EnterSprintmasterCave",
+        "tooltip": "Splits when entering the room containing Sprintmaster Swift"
+    },
+    {
+        "alias": null,
         "description": "Enter Greymoor (Transition)",
         "key": "EnterGreymoor",
         "tooltip": "Splits when entering Greymoor"
@@ -271,6 +283,12 @@
     },
     {
         "alias": null,
+        "description": "Halfway Home Bench (Bench)",
+        "key": "BenchHalfwayHome",
+        "tooltip": "Splits when sitting on the bench in Halfway Home"
+    },
+    {
+        "alias": null,
         "description": "Halfway Basement (Transition)",
         "key": "EnterHalfwayHomeBasement",
         "tooltip": "Splits after entering the basement in Halfway Home"
@@ -280,6 +298,12 @@
         "description": "Yarnaby Slap (Event)",
         "key": "YarnabySlap",
         "tooltip": "Splits when the first dialogue box appears after slapping Yarnaby post Cursed Crest-cure"
+    },
+    {
+        "alias": null,
+        "description": "Enter Craw Courtroom (Transition)",
+        "key": "EnterCrawCourtroom",
+        "tooltip": "Splits when entering the room past the Craw Summons door"
     },
     {
         "alias": null,
@@ -721,6 +745,12 @@
     },
     {
         "alias": null,
+        "description": "Choral Chambers Bench Below Dining (Bench)",
+        "key": "BenchChoralChambersBelowDining",
+        "tooltip": "Splits when sitting on the bench half-covered with a sheet (Song_18), above Whiteward, below the Gourmand dining hall, and across from Jubilana rescue location"
+    },
+    {
+        "alias": null,
         "description": "Trobbio Encountered (Boss)",
         "key": "TrobbioEncountered",
         "tooltip": "Splits when first encountering Trobbio"
@@ -931,6 +961,12 @@
     },
     {
         "alias": null,
+        "description": "Vaultkeepers Melody (Menu)",
+        "key": "VaultkeepersMelodyMenu",
+        "tooltip": "Splits on the main menu after learning Vaultkeepers Melody"
+    },
+    {
+        "alias": null,
         "description": "Architects Melody (Melody)",
         "key": "ArchitectsMelody",
         "tooltip": "Splits when learning Architects Melody"
@@ -952,6 +988,12 @@
         "description": "Conductors Melody (Transition)",
         "key": "ConductorsMelodyTrans",
         "tooltip": "Splits on the transition after learning Conductors Melody"
+    },
+    {
+        "alias": null,
+        "description": "Conductors Melody (Menu)",
+        "key": "ConductorsMelodyMenu",
+        "tooltip": "Splits on the main menu after learning Conductors Melody"
     },
     {
         "alias": null,

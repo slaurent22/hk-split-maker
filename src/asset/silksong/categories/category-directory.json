@@ -67,6 +67,21 @@
             }
         },
         {
+            "fileName": "act1-judgement",
+            "displayName": "Act 1 Judgement",
+            "data": {}
+        },
+        {
+            "fileName": "act1-judgement-fleas",
+            "displayName": "Act 1 Judgement (Fleas)",
+            "data": {}
+        },
+        {
+            "fileName": "act1-sinner",
+            "displayName": "Act 1 Sinner",
+            "data": {}
+        },
+        {
             "fileName": "all-bosses",
             "displayName": "All Bosses",
             "data": {
@@ -91,7 +106,7 @@
             "fileName": "all-act-one-bosses",
             "displayName": "All Act One Bosses",
             "data": {
-                "routeNotesURL": "https://docs.google.com/document/d/1Nzk0IuUnTxfF_fWKozyHhh_zAtBB79OYSWqfKydPnf8"
+                "routeNotesURL": "https://docs.google.com/document/d/14XaJUPYWbHBm7tUNFkAoDSJKB4vksXkm7kkfjgN0x0w"
             }
         },
         {
@@ -133,7 +148,7 @@
             "fileName": "any-key",
             "displayName": "Any% (Key Route, Cloakless)",
             "data": {
-                "routeNotesURL": "https://docs.google.com/document/d/e/2PACX-1vSMkElA8vNdvb2wVgxlyFs2wRPl4vgs53CK-6-zWkWGjZMalrqM-IX15c19MYgwlZpuJPm0kyacWqur/pub"
+                "routeNotesURL": "https://github.com/Iurig/Silksong-Route-Notes/blob/main/Key%20Route%20Rosary%20Guide.md"
             }
         },
         {
@@ -142,16 +157,6 @@
             "data": {
                 "routeNotesURL": "https://docs.google.com/document/d/1OwFO5OSDMIZWn24Jm6f14QtfF7145Aom5T-exSffINI/edit?tab=t.0"
             }
-        },
-        {
-            "fileName": "judgement",
-            "displayName": "Judgement",
-            "data": {}
-        },
-        {
-            "fileName": "judgement-fleas",
-            "displayName": "Judgement (Fleas)",
-            "data": {}
         },
         {
             "fileName": "low",
@@ -171,26 +176,51 @@
             "fileName": "te",
             "displayName": "True Ending",
             "data": {
-                "routeNotesURL": "https://app.milanote.com/1VwUqK10sHoW4Y?p=I7ZUIiTwMtg"
+                "routeNotesURL": "https://app.milanote.com/1WbEZ11uqkHtUz/silksong-true-ending-lp?p=Ug6mw9f6KRi"
             }
         },
         {
             "fileName": "te-891",
             "displayName": "True Ending (1.0.28891 Voltpogos)",
             "data": {
-                "routeNotesURL": "https://app.milanote.com/1VFfeQ1CUctcbv?p=roZW9TTwqoQ"
+                "routeNotesURL": "https://app.milanote.com/1WbFcm1cdcT3dK/silksong-true-ending-patch-1028891?p=Ug6mw9f6KRi"
             }
-        },
-        {
-            "fileName": "twisted",
-            "displayName": "Twisted%",
-            "data": {}
         }
     ],
     "Glitched": [
         {
             "fileName": "any-ag",
-            "displayName": "Any% (All Glitches)",
+            "displayName": "Any% (All Glitches, Cling Grip)",
+            "data": {}
+        },
+        {
+            "fileName": "any-ag-swift-step",
+            "displayName": "Any% (All Glitches, Swift Step)",
+            "data": {}
+        },
+        {
+            "fileName": "low-ag",
+            "displayName": "Low% (All Glitches)",
+            "data": {}
+        },
+        {
+            "fileName": "act1-judgement-ag",
+            "displayName": "Act 1 Judgement (All Glitches)",
+            "data": {}
+        },
+        {
+            "fileName": "5-tools-ag",
+            "displayName": "5 Tools (All Glitches)",
+            "data": {}
+        },
+        {
+            "fileName": "bath-ag",
+            "displayName": "Bath% (All Glitches)",
+            "data": {}
+        },
+        {
+            "fileName": "twisted-ag",
+            "displayName": "Twisted% (All Glitches)",
             "data": {}
         }
     ],
@@ -333,6 +363,13 @@
             }
         },
         {
+            "fileName": "bath",
+            "displayName": "Bath%",
+            "data": {
+                "routeNotesURL": "https://speedpastes.org/67pVQAcN"
+            }
+        },
+        {
             "fileName": "beer-bottle",
             "displayName": "Beer Bottle%",
             "data": {
@@ -396,11 +433,9 @@
             }
         },
         {
-            "fileName": "take-a-bath",
-            "displayName": "Take A Bath%",
-            "data": {
-                "routeNotesURL": "https://speedpastes.org/67pVQAcN"
-            }
+            "fileName": "twisted",
+            "displayName": "Twisted%",
+            "data": {}
         }
     ]
 }
