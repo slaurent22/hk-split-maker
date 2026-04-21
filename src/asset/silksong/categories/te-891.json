@@ -1,8 +1,7 @@
 {
-    "offset": "00:00:21.7600000",
     "categoryName": "True Ending",
     "splitIds": [
-        "Act1Start",
+        "StartNewGame",
         "MossMotherTrans",
         "SilkSpearTrans",
         "MarrowBell",
