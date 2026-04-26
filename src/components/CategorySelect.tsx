@@ -3,6 +3,7 @@ import {
   GroupBase,
   OptionProps,
   SingleValueProps,
+  ContainerProps,
   components,
   createFilter,
 } from "react-select";
@@ -125,9 +126,34 @@ function CategorySelectSingleValue<
       {children}
       {rest.data.value === "pop" && <SchyPicture />}
       {rest.data.data?.routeNotesURL && (
-        <em style={{ float: "right" }}>Open for route notes</em>
+        <em style={{ float: "right" }}>Route notes available</em>
       )}
     </components.SingleValue>
+  );
+}
+
+function CategorySelectSelectContainer<
+  IsMulti extends boolean = false,
+  Group extends GroupBase<CategoryOption> = GroupBase<CategoryOption>
+>({
+  children,
+  ...rest
+}: ContainerProps<CategoryOption, IsMulti, Group>): ReactElement {
+  const selectedOption = rest.getValue()[0];
+  return (
+    <components.SelectContainer {...rest}>
+      {children}
+      {selectedOption?.data?.routeNotesURL && (
+        <a
+          href={selectedOption.data.routeNotesURL}
+          target="_blank"
+          rel="noopener noreferrer"
+          style={{ marginBottom: "0.5rem", display: "block" }}
+        >
+          Route Notes for {selectedOption.label}
+        </a>
+      )}
+    </components.SelectContainer>
   );
 }
 
@@ -159,6 +185,7 @@ const CategorySelect: React.FC<Props> = ({
       components={{
         Option: CategorySelectOption,
         SingleValue: CategorySelectSingleValue,
+        SelectContainer: CategorySelectSelectContainer,
       }}
       filterOption={createFilter(filterConfig)}
     />
