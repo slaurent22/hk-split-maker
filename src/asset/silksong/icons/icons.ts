@@ -34,12 +34,14 @@ import SharpdartTrans from "./Skill/Sharpdart.png";
 import PlasmifiedZangoEncountered from "./Boss/PlasmifiedZango.png";
 import EnterHuntersMarch from "./Enemy/Skarrlid.png";
 import HuntersMarchPostMiddleArenaTransition from "./Enemy/SkarrScout.png";
+import Skarrgard2 from "./Enemy/Skarrgard.png";
 import EnterFarFields from "./Enemy/Fertid.png";
 import DriftersCloak from "./Skill/DriftersCloak.png";
 import DriftersCloakTrans from "./Skill/DriftersCloak.png";
 import FourthChorus from "./Boss/FourthChorus.png";
 import GurrTheOutcastEncountered from "./Boss/GurrTheOutcast.png";
 import GurrTheOutcast from "./Boss/GurrTheOutcast.png";
+import Skarrgard3 from "./Enemy/Skarrgard.png";
 import EnterSprintmasterCave from "./NPC/SprintmasterSwift.png";
 import EnterGreymoor from "./Enemy/Craw.png";
 import GreymoorBell from "./Misc/Bell.png";
@@ -461,12 +463,14 @@ export default {
   PlasmifiedZangoEncountered,
   EnterHuntersMarch,
   HuntersMarchPostMiddleArenaTransition,
+  Skarrgard2,
   EnterFarFields,
   DriftersCloak,
   DriftersCloakTrans,
   FourthChorus,
   GurrTheOutcastEncountered,
   GurrTheOutcast,
+  Skarrgard3,
   EnterSprintmasterCave,
   EnterGreymoor,
   GreymoorBell,

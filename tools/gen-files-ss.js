@@ -408,6 +408,9 @@ function getUrl(qualifier, id) {
       return getUrl("Enemy", "ChoirClapper");
     case "DestroyedCogworksVoidArena":
       return getUrl("Enemy", "Undercrank");
+    case "Skarrgard2":
+    case "Skarrgard3":
+      return getUrl("Enemy", "Skarrgard");
 
     // Needle Upgrade
     case "NeedleUpgrade1":

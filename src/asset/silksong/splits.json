@@ -195,13 +195,19 @@
         "alias": null,
         "description": "Enter Hunter's March (Transition)",
         "key": "EnterHuntersMarch",
-        "tooltip": "Splits on entering a Hunter's March transition with area text (includes post-Skarrguard room and tall room)"
+        "tooltip": "Splits on entering a Hunter's March transition with area text (includes post-Skarrgard room and tall room)"
     },
     {
         "alias": null,
         "description": "Hunter's March - Post-Middle Arena (Transition)",
         "key": "HuntersMarchPostMiddleArenaTransition",
         "tooltip": "Splits on transition to the room after the middle arena in Hunter's March"
+    },
+    {
+        "alias": null,
+        "description": "Skarrgard 2 (Mini Boss)",
+        "key": "Skarrgard2",
+        "tooltip": "Splits when defeating the Skarrgard encounter guarding rosary strings in Hunter's March (Ant_21)"
     },
     {
         "alias": null,
@@ -238,6 +244,12 @@
         "description": "Gurr the Outcast (Boss)",
         "key": "GurrTheOutcast",
         "tooltip": "Splits when Gurr the Outcast is defeated"
+    },
+    {
+        "alias": null,
+        "description": "Skarrgard 3 (Mini Boss)",
+        "key": "Skarrgard3",
+        "tooltip": "Splits when defeating the Skarrguard beside Karmelita (Bone_East_25)"
     },
     {
         "alias": null,
