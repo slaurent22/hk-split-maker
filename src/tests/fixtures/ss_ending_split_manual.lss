@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Run version="1.7.0">
+  <GameIcon></GameIcon>
+  <GameName>Hollow Knight: Silksong</GameName>
+  <CategoryName>Category Name</CategoryName>
+  <Metadata>
+    <Run id=""/>
+    <Platform usesEmulator="False"/>
+    <Variables>
+      <Variable name="key">value</Variable>
+    </Variables>
+  </Metadata>
+  <Offset>00:00:00</Offset>
+  <AttemptCount>0</AttemptCount>
+  <AttemptHistory></AttemptHistory>
+  <Segments>
+    <Segment>
+      <Name>Any Bench</Name>
+      <SplitTimes>
+        <SplitTime name="Personal Best"/>
+      </SplitTimes>
+      <BestSegmentTime></BestSegmentTime>
+      <SegmentHistory></SegmentHistory>
+    </Segment>
+    <Segment>
+      <Name>-Groal</Name>
+      <SplitTimes>
+        <SplitTime name="Personal Best"/>
+      </SplitTimes>
+      <BestSegmentTime></BestSegmentTime>
+      <SegmentHistory></SegmentHistory>
+    </Segment>
+    <Segment>
+      <Name>Any Bench</Name>
+      <SplitTimes>
+        <SplitTime name="Personal Best"/>
+      </SplitTimes>
+      <BestSegmentTime></BestSegmentTime>
+      <SegmentHistory></SegmentHistory>
+    </Segment>
+    <Segment>
+      <Name>-Death</Name>
+      <SplitTimes>
+        <SplitTime name="Personal Best"/>
+      </SplitTimes>
+      <BestSegmentTime></BestSegmentTime>
+      <SegmentHistory></SegmentHistory>
+    </Segment>
+    <Segment>
+      <Name>Ending</Name>
+      <SplitTimes>
+        <SplitTime name="Personal Best"/>
+      </SplitTimes>
+      <BestSegmentTime></BestSegmentTime>
+      <SegmentHistory></SegmentHistory>
+    </Segment>
+  </Segments>
+  <AutoSplitterSettings>
+    <Version>1.0</Version>
+    <CustomSettings>
+      <Setting id="script_name" type="string" value="silksong_autosplit_wasm"/>
+      <Setting id="splits" type="list">
+        <Setting type="string" value="StartNewGame">
+        </Setting>
+        <Setting type="string" value="BenchAny">
+        </Setting>
+        <Setting type="string" value="Groal">
+        </Setting>
+        <Setting type="string" value="BenchAny">
+        </Setting>
+        <Setting type="string" value="PlayerDeath">
+        </Setting>
+      </Setting>
+    </CustomSettings>
+  </AutoSplitterSettings>
+</Run>
