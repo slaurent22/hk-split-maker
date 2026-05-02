@@ -2,7 +2,7 @@
 module.exports = {
   preset: "ts-jest",
   testEnvironment: "jsdom",
-  roots: ["<rootDir>/src"],
+  roots: ["<rootDir>/tests"],
   testMatch: ["**/__tests__/**/*.ts?(x)", "**/?(*.)+(spec|test).ts?(x)"],
   transform: {
     "^.+\\.tsx?$": [
@@ -15,12 +15,11 @@ module.exports = {
         },
       },
     ],
-    "^.+\\.(txt|lss)$": "<rootDir>/src/tests/loaders/text-transformer.js",
+    "^.+\\.(txt|lss)$": "<rootDir>/tests/loaders/text-transformer.js",
   },
   moduleNameMapper: {
-    "\\.css$": "<rootDir>/src/tests/__mocks__/styleMock.js",
-    "\\.(jpg|jpeg|png|gif|svg|webp)$":
-      "<rootDir>/src/tests/__mocks__/fileMock.js",
+    "\\.css$": "<rootDir>/tests/__mocks__/styleMock.js",
+    "\\.(jpg|jpeg|png|gif|svg|webp)$": "<rootDir>/tests/__mocks__/fileMock.js",
   },
   moduleFileExtensions: ["ts", "tsx", "js", "jsx", "json"],
   collectCoverage: false, // Set to true or use --coverage flag
