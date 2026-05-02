@@ -1,4 +1,6 @@
 node_modules/
 dist/
+coverage/
 .vscode/
 .eslintcache
+.DS_Store
