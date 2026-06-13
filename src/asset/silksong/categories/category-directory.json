@@ -11,6 +11,13 @@
             "data": {}
         },
         {
+            "fileName": "100-bells-route",
+            "displayName": "100% (LP Bells Route)",
+            "data": {
+                "routeNotesURL": "https://pastebin.com/raw/DKvsQWg9"
+            }
+        },
+        {
             "fileName": "100-jw",
             "displayName": "100% (JW Route)",
             "data": {
@@ -19,7 +26,7 @@
         },
         {
             "fileName": "100-mist-route",
-            "displayName": "100% (Mist Route)",
+            "displayName": "100% (LP Mist Route)",
             "data": {
                 "routeNotesURL": "https://pastebin.com/raw/wXQeQpvW"
             }
