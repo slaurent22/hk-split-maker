@@ -20,6 +20,7 @@ export interface Config {
   gameName: string;
   variables?: Record<string, string>;
   offset?: string;
+  splitTimes?: Record<string, SplitTimes>;
 }
 
 interface ParsedHKAutoSplitterSettings {
@@ -34,11 +35,28 @@ interface ParsedSSAutosplitterSettings {
   autosplitIds: Array<string>;
 }
 
+interface SplitTimes {
+  personalBest?: {
+    realTime?: string;
+    gameTime?: string;
+  };
+  bestSegmentTime?: {
+    realTime?: string;
+    gameTime?: string;
+  };
+  segmentHistory?: Array<{
+    id?: string;
+    realTime?: string;
+    gameTime?: string;
+  }>;
+}
+
 interface ParsedSplitId {
   autosplitId: string;
   subsplit: boolean;
   name: string;
   iconId: string;
+  splitTimes?: SplitTimes;
 }
 
 const DEFAULT_OFFSET = "00:00:00";
@@ -74,7 +92,11 @@ function boolRepr(bool: boolean): string {
   return bool ? "True" : "False";
 }
 
-function getSegmentNode(name: string, iconData?: string): xml.XmlObject {
+function getSegmentNode(
+  name: string,
+  iconData?: string,
+  splitTimes?: SplitTimes
+): xml.XmlObject {
   const iconNode: xml.XmlObject = {
     Icon: iconData ? { _cdata: iconData } : "",
   };
@@ -82,9 +104,44 @@ function getSegmentNode(name: string, iconData?: string): xml.XmlObject {
     Segment: [
       { Name: name },
       iconNode,
-      { SplitTimes: [{ SplitTime: { _attr: { name: "Personal Best" } } }] },
-      { BestSegmentTime: "" },
-      { SegmentHistory: "" },
+      {
+        SplitTimes: [
+          {
+            SplitTime: splitTimes?.personalBest
+              ? [
+                  {
+                    _attr: { name: "Personal Best" },
+                  },
+                  { RealTime: splitTimes.personalBest.realTime || "" },
+                  { GameTime: splitTimes.personalBest.gameTime || "" },
+                ]
+              : { _attr: { name: "Personal Best" } },
+          },
+        ],
+      },
+      {
+        BestSegmentTime: splitTimes?.bestSegmentTime
+          ? [
+              {
+                RealTime: splitTimes.bestSegmentTime.realTime || "",
+              },
+              {
+                GameTime: splitTimes.bestSegmentTime.gameTime || "",
+              },
+            ]
+          : "",
+      },
+      {
+        SegmentHistory: splitTimes?.segmentHistory
+          ? splitTimes.segmentHistory.map((entry) => ({
+              Time: [
+                { _attr: { id: entry.id || undefined } },
+                ...(entry.realTime ? [{ RealTime: entry.realTime }] : []),
+                ...(entry.gameTime ? [{ GameTime: entry.gameTime }] : []),
+              ],
+            }))
+          : "",
+      },
     ],
   };
 }
@@ -277,7 +334,8 @@ export async function createSplitsXml(
       icon = liveSplitIconData.get(iconURL) ?? "";
     }
     const namePrefix = subsplit ? "-" : "";
-    return getSegmentNode(`${namePrefix}${name}`, icon);
+    const splitName = `${namePrefix}${name}`;
+    return getSegmentNode(splitName, icon, config.splitTimes?.[splitName]);
   });
 
   if (!endTriggeringAutosplit) {
@@ -659,6 +717,50 @@ function getTextContentByTagName(
   return elementByTagName ? getTextContent(elementByTagName) : "";
 }
 
+function parseSplitTimes(element: Element): SplitTimes | undefined {
+  const splitTimesNode = element.getElementsByTagName("SplitTimes")[0];
+  const bestSegmentTimeNode =
+    element.getElementsByTagName("BestSegmentTime")[0];
+  const segmentHistoryNode = element.getElementsByTagName("SegmentHistory")[0];
+
+  const splitTimes: SplitTimes = {};
+
+  if (splitTimesNode) {
+    const personalBestNode = splitTimesNode.querySelector(
+      '[name="Personal Best"]'
+    );
+    if (personalBestNode) {
+      splitTimes.personalBest = {
+        realTime: getTextContentByTagName(personalBestNode, "RealTime"),
+        gameTime: getTextContentByTagName(personalBestNode, "GameTime"),
+      };
+    }
+  }
+
+  if (bestSegmentTimeNode) {
+    splitTimes.bestSegmentTime = {
+      realTime: getTextContentByTagName(bestSegmentTimeNode, "RealTime"),
+      gameTime: getTextContentByTagName(bestSegmentTimeNode, "GameTime"),
+    };
+  }
+
+  if (segmentHistoryNode) {
+    const timeEntries = segmentHistoryNode.getElementsByTagName("Time");
+    if (timeEntries.length > 0) {
+      splitTimes.segmentHistory = [];
+      for (let i = 0; i < timeEntries.length; i++) {
+        const timeEntry = timeEntries[i];
+        splitTimes.segmentHistory.push({
+          id: timeEntry.getAttribute("id") || undefined,
+          realTime: getTextContentByTagName(timeEntry, "RealTime"),
+          gameTime: getTextContentByTagName(timeEntry, "GameTime"),
+        });
+      }
+    }
+  }
+  return Object.keys(splitTimes).length ? splitTimes : undefined;
+}
+
 function parseHKAutoSplitterSettings(
   autoSplitterSettings: Element
 ): ParsedHKAutoSplitterSettings {
@@ -948,6 +1050,8 @@ function importSSSplitsXml(str: string): Config {
     (xmlDocSegments0 && xmlDocSegments0.getElementsByTagName("Segment")) || [];
   // subsplitNames vs names: names do not contain "-" for subsplits, subsplitNames can
   let endName = "";
+  let parsedSplitTimesBySplitName: Record<string, SplitTimes> | undefined;
+
   for (let i = 0; i < segments.length; i++) {
     const subsegmentName = getTextContentByTagName(segments[i], "Name") || "";
     if (i < parsedSplitIds.length) {
@@ -962,6 +1066,15 @@ function importSSSplitsXml(str: string): Config {
     } else if (i === parsedSplitIds.length) {
       // endingSplit cannot be a subsplit
       endName = subsegmentName;
+    }
+
+    // parse split times for each segment
+    const splitTimes: SplitTimes | undefined = parseSplitTimes(segments[i]);
+    if (splitTimes) {
+      if (!parsedSplitTimesBySplitName) {
+        parsedSplitTimesBySplitName = {};
+      }
+      parsedSplitTimesBySplitName[subsegmentName] = splitTimes;
     }
   }
   // Deal with "-" subsplit markers
@@ -1012,6 +1125,7 @@ function importSSSplitsXml(str: string): Config {
     endingSplit: endName.length > 0 ? { name: endName } : undefined,
     gameName,
     variables: hasVariables ? potentialVariables : undefined,
+    splitTimes: parsedSplitTimesBySplitName,
   };
   if (offset && offset !== DEFAULT_OFFSET) {
     config = { offset, ...config };
