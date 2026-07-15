@@ -658,6 +658,13 @@
             }
         },
         {
+            "fileName": "elegy-dashmaster",
+            "displayName": "Elegy% (Dashmaster)",
+            "data": {
+                "routeNotesURL": "https://github.com/hk-speedrunning/HK-Route-Notes/blob/main/Elegy_Dashmaster.md"
+            }
+        },
+        {
             "fileName": "empty-hall",
             "displayName": "Empty Hall",
             "data": {
