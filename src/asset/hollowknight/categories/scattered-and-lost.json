@@ -1,0 +1,17 @@
+{
+    "categoryName": "Scattered and Lost",
+    "startTriggeringAutosplit": "TransitionAfterSaveState",
+    "splitIds": [
+        "TransitionAfterSaveState",
+        "TransitionAfterSaveState",
+        "TransitionAfterSaveState",
+        "OnGhostCoinsIncremented",
+        "OnGhostCoinsIncremented"
+    ],
+    "names": {
+        "TransitionAfterSaveState": ["Zippers", "Switches", "Bumpers"],
+        "OnGhostCoinsIncremented": ["Bubbles", "Brettor Lords"]
+    },
+    "endTriggeringAutosplit": true,
+    "gameName": "Hollow Knight Mods"
+}

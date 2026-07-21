@@ -408,6 +408,10 @@
         {
             "fileName": "rando-te",
             "displayName": "Randomizer TE (add splits as desired)"
+        },
+        {
+            "fileName": "scattered-and-lost",
+            "displayName": "Scattered and Lost (Bretta House IL)"
         }
     ],
     "Category Extensions": [
