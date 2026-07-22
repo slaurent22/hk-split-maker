@@ -217,7 +217,9 @@ export default function SplitMaker(): ReactElement {
             <ArrowButton
               text="Generate"
               id="submit-button"
-              onClick={() => onSubmit}
+              // needs to be a promise for Generate to work
+              /* eslint-disable @typescript-eslint/no-misused-promises */
+              onClick={onSubmit}
             />
             <ShareButton
               id="share-button"
