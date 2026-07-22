@@ -268,6 +268,9 @@
         "Spool8": "Grindle Buyout",
         "MaskShard17": "Brightvein Shard"
     },
+    "icons": {
+        "EndingSplit": ["EndingSplit", "LostLace"]
+    },
     "gameName": "Hollow Knight: Silksong",
     "variables": {
         "100% Subcategory": "No Major Glitches"
