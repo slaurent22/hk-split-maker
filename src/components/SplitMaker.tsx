@@ -217,7 +217,7 @@ export default function SplitMaker(): ReactElement {
             <ArrowButton
               text="Generate"
               id="submit-button"
-              onClick={onSubmit}
+              onClick={() => onSubmit}
             />
             <ShareButton
               id="share-button"
