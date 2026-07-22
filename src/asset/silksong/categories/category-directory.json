@@ -18,10 +18,10 @@
             }
         },
         {
-            "fileName": "100-jw",
-            "displayName": "100% (JW Route)",
+            "fileName": "100-lp-z7",
+            "displayName": "100% (LP z7)",
             "data": {
-                "routeNotesURL": "https://docs.google.com/document/d/1bKXTu8ZtDbsMReaRgIrm2zAMZHon7sl8yN3AkbycfJM"
+                "routeNotesURL": "https://pastebin.com/raw/QFTZCNCw"
             }
         },
         {
@@ -29,6 +29,13 @@
             "displayName": "100% (LP Mist Route)",
             "data": {
                 "routeNotesURL": "https://pastebin.com/raw/wXQeQpvW"
+            }
+        },
+        {
+            "fileName": "100-jw",
+            "displayName": "100% (JW Route)",
+            "data": {
+                "routeNotesURL": "https://docs.google.com/document/d/1bKXTu8ZtDbsMReaRgIrm2zAMZHon7sl8yN3AkbycfJM"
             }
         },
         {
