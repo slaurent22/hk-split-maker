@@ -21,6 +21,7 @@ import BoneBottomSimpleKey from "./Item/SimpleKey.png";
 import EnterWeavenestAtla from "./Enemy/ServitorIgnim.png";
 import BellBeast from "./Boss/BellBeast.png";
 import BellBeastTrans from "./Boss/BellBeast.png";
+import BellBeastArenaExit from "./Boss/BellBeast.png";
 import MarrowBell from "./Misc/Bell.png";
 import SwiftStep from "./Skill/SwiftStep.png";
 import SwiftStepTrans from "./Skill/SwiftStep.png";
@@ -49,6 +50,7 @@ import Moorwing from "./Boss/Moorwing.png";
 import MoorwingTrans from "./Boss/Moorwing.png";
 import ThreadStorm from "./Skill/ThreadStorm.png";
 import ThreadStormTrans from "./Skill/ThreadStorm.png";
+import EnterHalfwayHome from "./NPC/Creige.png";
 import BenchHalfwayHome from "./Misc/Bench.png";
 import EnterHalfwayHomeBasement from "./Enemy/SkarrStalker.png";
 import YarnabySlap from "./NPC/Yarnaby.png";
@@ -72,6 +74,7 @@ import BellhartBell from "./Misc/Bell.png";
 import EnterBlastedSteps from "./Enemy/Judge.png";
 import GreatConchflies from "./Boss/GreatConchflies.png";
 import GreatConchfliesTrans from "./Boss/GreatConchflies.png";
+import EnterGreatConchflies from "./Boss/GreatConchflies.png";
 import NeedleStrike from "./Skill/NeedleStrike.png";
 import NeedleStrikeTrans from "./Skill/NeedleStrike.png";
 import EnterLastJudge from "./Boss/LastJudge.png";
@@ -103,12 +106,14 @@ import FirstSinnerEncountered from "./Boss/FirstSinner.png";
 import FirstSinner from "./Boss/FirstSinner.png";
 import RuneRage from "./Skill/RuneRage.png";
 import RuneRageTrans from "./Skill/RuneRage.png";
+import FirstSinnerArenaExit from "./Boss/FirstSinner.png";
 import EnterMountFay from "./Enemy/Driftlin.png";
 import EnterBrightvein from "./Enemy/Mnemonord.png";
 import UpperMountFayTrans from "./Enemy/Mnemonid.png";
 import FaydownCloak from "./Skill/FaydownCloak.png";
 import FaydownCloakTrans from "./Skill/FaydownCloak.png";
 import EnterSandsOfKarak from "./Enemy/Crustcrawler.png";
+import KarakSimpleKeyExit from "./Item/SimpleKey.png";
 import EnterVoltnest from "./Boss/Voltvyrm.png";
 import Voltvyrm from "./Boss/Voltvyrm.png";
 import RagingConchfly from "./Boss/GreatConchflies.png";
@@ -141,15 +146,18 @@ import PostClawlineArenaTrans from "./Skill/Clawline.png";
 import EnterHighHalls from "./Enemy/Minister.png";
 import EnterHighHallsArena from "./Enemy/Maestro.png";
 import HighHallsArena from "./Enemy/ChoirClapper.png";
+import HighHallsArenaExit from "./Enemy/ChoirClapper.png";
 import EnterSecondSentinel from "./Boss/SecondSentinel.png";
 import SecondSentinelBossEncountered from "./Boss/SecondSentinel.png";
 import SecondSentinel from "./Boss/SecondSentinel.png";
 import EnterWhiteward from "./Enemy/Surgeon.png";
 import PostWhitewardElevatorTrans from "./Enemy/Mortician.png";
+import SeenWhiteward from "./Enemy/Surgeon.png";
 import CollectedWhitewardKey from "./Item/CollectedWhitewardKey.png";
 import CollectedSurgeonsKey from "./Item/CollectedSurgeonsKey.png";
 import TheUnravelledEncountered from "./Boss/TheUnravelled.png";
 import TheUnravelled from "./Boss/TheUnravelled.png";
+import TheUnravelledArenaExit from "./Boss/TheUnravelled.png";
 import EnterMemorium from "./Enemy/Rhinogrund.png";
 import EnterPutrifiedDucts from "./Enemy/Barnak.png";
 import FleaFestivalBegin from "./Misc/FleaCaravan.png";
@@ -425,6 +433,8 @@ import Weavelight from "./Tool/Weavelight.png";
 import WeightedBelt from "./Tool/WeightedBelt.png";
 import WispfireLantern from "./Tool/WispfireLantern.png";
 import WreathofPurity from "./Tool/WreathofPurity.png";
+import StraightPinTrans from "./Tool/StraightPin.png";
+import PimpilloTrans from "./Tool/Pimpillo.png";
 import LostLace from "./Boss/LostLace.png";
 import MemoryLocket from "./Item/MemoryLocket.png";
 import HunterCrest from "./Crest/HunterCrest.png";
@@ -450,6 +460,7 @@ export default {
   EnterWeavenestAtla,
   BellBeast,
   BellBeastTrans,
+  BellBeastArenaExit,
   MarrowBell,
   SwiftStep,
   SwiftStepTrans,
@@ -478,6 +489,7 @@ export default {
   MoorwingTrans,
   ThreadStorm,
   ThreadStormTrans,
+  EnterHalfwayHome,
   BenchHalfwayHome,
   EnterHalfwayHomeBasement,
   YarnabySlap,
@@ -501,6 +513,7 @@ export default {
   EnterBlastedSteps,
   GreatConchflies,
   GreatConchfliesTrans,
+  EnterGreatConchflies,
   NeedleStrike,
   NeedleStrikeTrans,
   EnterLastJudge,
@@ -532,12 +545,14 @@ export default {
   FirstSinner,
   RuneRage,
   RuneRageTrans,
+  FirstSinnerArenaExit,
   EnterMountFay,
   EnterBrightvein,
   UpperMountFayTrans,
   FaydownCloak,
   FaydownCloakTrans,
   EnterSandsOfKarak,
+  KarakSimpleKeyExit,
   EnterVoltnest,
   Voltvyrm,
   RagingConchfly,
@@ -570,15 +585,18 @@ export default {
   EnterHighHalls,
   EnterHighHallsArena,
   HighHallsArena,
+  HighHallsArenaExit,
   EnterSecondSentinel,
   SecondSentinelBossEncountered,
   SecondSentinel,
   EnterWhiteward,
   PostWhitewardElevatorTrans,
+  SeenWhiteward,
   CollectedWhitewardKey,
   CollectedSurgeonsKey,
   TheUnravelledEncountered,
   TheUnravelled,
+  TheUnravelledArenaExit,
   EnterMemorium,
   EnterPutrifiedDucts,
   FleaFestivalBegin,
@@ -854,6 +872,8 @@ export default {
   WeightedBelt,
   WispfireLantern,
   WreathofPurity,
+  StraightPinTrans,
+  PimpilloTrans,
   LostLace,
   MemoryLocket,
   HunterCrest,

@@ -127,6 +127,12 @@
     },
     {
         "alias": null,
+        "description": "Bell Beast Arena Exit (Transition)",
+        "key": "BellBeastArenaExit",
+        "tooltip": "Splits on any transition out of the Bell Beast arena, after waking up from the silk heart sequence"
+    },
+    {
+        "alias": null,
         "description": "Marrow Bell (Event)",
         "key": "MarrowBell",
         "tooltip": "Splits when ringing the Marrow Bell Shrine"
@@ -295,6 +301,12 @@
     },
     {
         "alias": null,
+        "description": "Enter Halfway Home (Transition)",
+        "key": "EnterHalfwayHome",
+        "tooltip": "Splits on entering Halfway Home"
+    },
+    {
+        "alias": null,
         "description": "Halfway Home Bench (Bench)",
         "key": "BenchHalfwayHome",
         "tooltip": "Splits when sitting on the bench in Halfway Home"
@@ -430,6 +442,12 @@
         "description": "Great Conchflies (Transition)",
         "key": "GreatConchfliesTrans",
         "tooltip": "Splits on the transition after defeating the Great Conchflies boss"
+    },
+    {
+        "alias": null,
+        "description": "Enter Great Conchflies (Transition)",
+        "key": "EnterGreatConchflies",
+        "tooltip": "Splits on the transition entering the Great Conchflies boss arena"
     },
     {
         "alias": null,
@@ -619,6 +637,12 @@
     },
     {
         "alias": null,
+        "description": "First Sinner Arena Exit (Transition)",
+        "key": "FirstSinnerArenaExit",
+        "tooltip": "Splits on the transition out of the First Sinner's boss arena, after waking up from the memory sequence"
+    },
+    {
+        "alias": null,
         "description": "Enter Mount Fay (Transition)",
         "key": "EnterMountFay",
         "tooltip": "Splits when entering Mount Fay"
@@ -652,6 +676,12 @@
         "description": "Enter Sands of Karak (Transition)",
         "key": "EnterSandsOfKarak",
         "tooltip": "Splits when entering Sands of Karak"
+    },
+    {
+        "alias": null,
+        "description": "Karak Simple Key Exit (Transition)",
+        "key": "KarakSimpleKeyExit",
+        "tooltip": "Splits on the transition out of the Simple Key and Bench room on the right side of Sands of Karak"
     },
     {
         "alias": null,
@@ -847,6 +877,12 @@
     },
     {
         "alias": null,
+        "description": "High Halls Arena Exit (Transition)",
+        "key": "HighHallsArenaExit",
+        "tooltip": "Splits on the transition out of High Halls Arena left to Conductor Ballador"
+    },
+    {
+        "alias": null,
         "description": "Enter Second Sentinel (Transition)",
         "key": "EnterSecondSentinel",
         "tooltip": "Splits when entering the arena for the Second Sentinel boss fight"
@@ -876,6 +912,12 @@
         "tooltip": "Splits when taking any transition further into Whiteward past the elevator"
     },
     {
+        "alias": null,
+        "description": "Seen Whiteward (Area)",
+        "key": "SeenWhiteward",
+        "tooltip": "Splits when entering Whiteward area text first appears"
+    },
+    {
         "alias": "CollectedWhiteWardKey",
         "description": "Collected Whiteward Key (Item)",
         "key": "CollectedWhitewardKey",
@@ -898,6 +940,12 @@
         "description": "The Unravelled (Boss)",
         "key": "TheUnravelled",
         "tooltip": "Splits when The Unravelled is defeated"
+    },
+    {
+        "alias": null,
+        "description": "The Unravelled Arena Exit (Transition)",
+        "key": "TheUnravelledArenaExit",
+        "tooltip": "Splits on the transition out of The Unravelled arena down to the Underworks, after waking up from the silk heart sequence"
     },
     {
         "alias": null,
@@ -2548,5 +2596,17 @@
         "description": "Wreath of Purity (Tool)",
         "key": "WreathofPurity",
         "tooltip": "Splits when obtaining the Wreath of Purity"
+    },
+    {
+        "alias": null,
+        "description": "Straight Pin (Transition)",
+        "key": "StraightPinTrans",
+        "tooltip": "Splits on the transition after obtaining the Straight Pin"
+    },
+    {
+        "alias": null,
+        "description": "Pimpillo (Transition)",
+        "key": "PimpilloTrans",
+        "tooltip": "Splits on the transition after obtaining the Pimpillo"
     }
 ]
