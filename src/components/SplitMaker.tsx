@@ -198,6 +198,37 @@ export default function SplitMaker(): ReactElement {
     saveAs(outBlob, `${splitName}.lss`);
   };
 
+  const onToggleAct1Start = () => {
+    let configObject;
+    try {
+      configObject = parseConfigInput();
+    } catch (e) {
+      console.log(e);
+      alert("Failed to parse config as JSON");
+      return;
+    }
+
+    let newConfig = structuredClone(configObject);
+
+    if (newConfig.splitIds?.[0] === "StartNewGame") {
+      newConfig.splitIds[0] = "Act1Start";
+      // so offset appears at the top of the serialized config
+      newConfig = {
+        offset: "00:00:21.7600000",
+        ...newConfig,
+      };
+    } else if (newConfig.splitIds?.[0] === "Act1Start") {
+      newConfig.splitIds[0] = "StartNewGame";
+      delete newConfig.offset;
+    } else {
+      alert(
+        "Cannot toggle Act1Start unless the first split is either StartNewGame or Act1Start"
+      );
+    }
+
+    setConfigInput(JSON.stringify(newConfig, null, 4));
+  };
+
   return (
     <div id="input-output">
       <div id="editor-section" className="side">
@@ -246,6 +277,15 @@ export default function SplitMaker(): ReactElement {
             />
             <label htmlFor="generate-icons-toggle">Include icons</label>
           </div>
+          {game === "silksong" && (
+            <div>
+              <ArrowButton
+                text="Toggle Act1Start"
+                id="toggle-act1-start"
+                onClick={onToggleAct1Start}
+              />
+            </div>
+          )}
           <Suspense fallback={<div>Loading split config editor...</div>}>
             <SplitConfigEditor
               defaultValue={configInput}
