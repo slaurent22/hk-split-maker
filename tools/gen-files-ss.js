@@ -153,6 +153,7 @@ function getUrl(qualifier, id) {
     case "BoneBottomSimpleKey":
     case "SinnersRoadSimpleKey":
     case "JubilanaSimpleKey":
+    case "KarakSimpleKeyExit":
       return getUrl("Item", "SimpleKey");
 
     case "ToolPouch1":
@@ -169,6 +170,11 @@ function getUrl(qualifier, id) {
 
     case "GreatTasteReward":
       return getUrl("Item", "PaleOil");
+
+    case "StraightPinTrans":
+      return getUrl("Tool", "StraightPin");
+    case "PimpilloTrans":
+      return getUrl("Tool", "Pimpillo");
 
     // Skill Transition
     case "SilkSpearTrans":
@@ -279,11 +285,14 @@ function getUrl(qualifier, id) {
       return getUrl("Enemy", "Mnemonid");
     case "EnterWeavenestAtla":
       return getUrl("Enemy", "ServitorIgnim");
+    case "EnterHalfwayHome":
+      return getUrl("NPC", "Creige");
     case "EnterHalfwayHomeBasement":
       return getUrl("Enemy", "SkarrStalker");
     case "EnterSongclave":
       return getUrl("NPC", "Caretaker");
     case "EnterWhiteward":
+    case "SeenWhiteward":
       return getUrl("Enemy", "Surgeon");
     case "PostWhitewardElevatorTrans":
       return getUrl("Enemy", "Mortician");
@@ -318,6 +327,7 @@ function getUrl(qualifier, id) {
     case "MossMotherTrans":
       return getUrl("Boss", "MossMother");
     case "BellBeastTrans":
+    case "BellBeastArenaExit":
       return getUrl("Boss", "BellBeast");
     case "Lace1Trans":
       return getUrl("Boss", "Lace");
@@ -345,6 +355,7 @@ function getUrl(qualifier, id) {
       return getUrl("Boss", "GurrTheOutcast");
     case "EnterFirstSinner":
     case "FirstSinnerEncountered":
+    case "FirstSinnerArenaExit":
       return getUrl("Boss", "FirstSinner");
     case "LostLaceEncountered":
       return getUrl("Boss", "LostLace");
@@ -356,7 +367,9 @@ function getUrl(qualifier, id) {
     case "CogworkDancersEncountered":
       return getUrl("Boss", "CogworkDancers");
     case "TheUnravelledEncountered":
+    case "TheUnravelledArenaExit":
       return getUrl("Boss", "TheUnravelled");
+    case "EnterGreatConchflies":
     case "GreatConchfliesTrans":
       return getUrl("Boss", "GreatConchflies");
     case "PhantomTrans":
@@ -405,6 +418,7 @@ function getUrl(qualifier, id) {
     case "WhisperingVaultsArena":
       return getUrl("Enemy", "Vaultkeeper");
     case "HighHallsArena":
+    case "HighHallsArenaExit":
       return getUrl("Enemy", "ChoirClapper");
     case "DestroyedCogworksVoidArena":
       return getUrl("Enemy", "Undercrank");
