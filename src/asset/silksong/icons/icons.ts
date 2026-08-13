@@ -435,6 +435,9 @@ import WispfireLantern from "./Tool/WispfireLantern.png";
 import WreathofPurity from "./Tool/WreathofPurity.png";
 import StraightPinTrans from "./Tool/StraightPin.png";
 import PimpilloTrans from "./Tool/Pimpillo.png";
+import CogheartPiece1 from "./Collectable/CogheartPiece1.png";
+import CogheartPiece2 from "./Collectable/CogheartPiece2.png";
+import CogheartPiece3 from "./Item/Cogheart.png";
 import LostLace from "./Boss/LostLace.png";
 import MemoryLocket from "./Item/MemoryLocket.png";
 import HunterCrest from "./Crest/HunterCrest.png";
@@ -874,6 +877,9 @@ export default {
   WreathofPurity,
   StraightPinTrans,
   PimpilloTrans,
+  CogheartPiece1,
+  CogheartPiece2,
+  CogheartPiece3,
   LostLace,
   MemoryLocket,
   HunterCrest,

@@ -577,6 +577,8 @@ function getUrl(qualifier, id) {
       return getUrl("NPC", "Shakra");
     case "DeliveredCouriersRasher":
       return getUrl("Item", "CouriersRasher");
+    case "CogheartPiece3":
+      return getUrl("Item", "Cogheart");
     case "SecondSentinelAwoken":
       return getUrl("Item", "Cogheart");
     case "FleaFestivalBegin":

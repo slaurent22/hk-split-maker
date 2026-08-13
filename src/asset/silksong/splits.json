@@ -2608,5 +2608,23 @@
         "description": "Pimpillo (Transition)",
         "key": "PimpilloTrans",
         "tooltip": "Splits on the transition after obtaining the Pimpillo"
+    },
+    {
+        "alias": null,
+        "description": "Cogheart Piece 1 (Collectable)",
+        "key": "CogheartPiece1",
+        "tooltip": "Splits when player picks up the first Cogheart Piece"
+    },
+    {
+        "alias": null,
+        "description": "Cogheart Piece 2 (Collectable)",
+        "key": "CogheartPiece2",
+        "tooltip": "Splits when player picks up the second Cogheart Piece"
+    },
+    {
+        "alias": null,
+        "description": "Cogheart Piece 3 (Collectable)",
+        "key": "CogheartPiece3",
+        "tooltip": "Splits when player picks up the third Cogheart Piece"
     }
 ]
