@@ -160,6 +160,15 @@ export default function SplitMaker(): ReactElement {
       alert("Failed to parse config as JSON");
       return;
     }
+    // Don't let the user generate an invalid Silksong splits file
+    if (game === "silksong") {
+      if (!configObject.splitIds || configObject.splitIds.length < 2) {
+        alert(
+          "For Silksong, you need at least two autosplits. The first one is the start trigger, and subsequent ones are the segments."
+        );
+        return;
+      }
+    }
     let output = "";
 
     const submitButton = document.getElementById(
