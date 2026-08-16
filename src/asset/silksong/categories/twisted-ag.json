@@ -18,5 +18,6 @@
     "gameName": "Hollow Knight: Silksong Category Extensions",
     "variables": {
         "Twisted% Subcategory": "All Glitches"
-    }
+    },
+    "pauseOnFileSelect": false
 }
