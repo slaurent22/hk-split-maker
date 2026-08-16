@@ -33,6 +33,7 @@ interface ParsedHKAutoSplitterSettings {
 
 interface ParsedSSAutosplitterSettings {
   autosplitIds: Array<string>;
+  pauseOnFileSelect: boolean | undefined;
 }
 
 interface ParsedSplitId {
@@ -751,7 +752,19 @@ function parseSSAutoSplitterSettings(
     const autosplitId = settingsNode.getAttribute("value") ?? "ManualSplit";
     autosplitIds.push(autosplitId);
   }
-  return { autosplitIds };
+  const xmlDocPauseOnFileSelect = xmlDocCustomSettings.querySelector(
+    '[id="pause_on_file_select"]'
+  );
+  let pauseOnFileSelect: boolean | undefined = undefined;
+  if (xmlDocPauseOnFileSelect) {
+    const pauseOnFileSelectStr = getTextContent(xmlDocPauseOnFileSelect);
+    if (pauseOnFileSelectStr == "True") {
+      pauseOnFileSelect = true;
+    } else if (pauseOnFileSelectStr == "False") {
+      pauseOnFileSelect = false;
+    }
+  }
+  return { autosplitIds, pauseOnFileSelect };
 }
 
 function importHKSplitsXml(str: string): Config {
@@ -947,7 +960,8 @@ function importSSSplitsXml(str: string): Config {
       throw new Error(`Failed to import splits: missing AutoSplitterSettings`);
     }
   }
-  const { autosplitIds } = parseSSAutoSplitterSettings(autoSplitterSettings);
+  const { autosplitIds, pauseOnFileSelect } =
+    parseSSAutoSplitterSettings(autoSplitterSettings);
   // autosplitIds vs splitIds: autosplitIds do not contain "-" for subsplits, splitIds can
   const parsedSplitIds: ParsedSplitId[] = [];
   autosplitIds.forEach((autosplitId) => {
@@ -1028,6 +1042,7 @@ function importSSSplitsXml(str: string): Config {
     endingSplit: endName.length > 0 ? { name: endName } : undefined,
     gameName,
     variables: hasVariables ? potentialVariables : undefined,
+    pauseOnFileSelect,
   };
   if (offset && offset !== DEFAULT_OFFSET) {
     config = { offset, ...config };
