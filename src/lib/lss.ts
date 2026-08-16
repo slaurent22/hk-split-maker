@@ -175,7 +175,7 @@ function silksongPauseOnFileSelectNodes(
               type: "bool",
             },
           },
-          pauseOnFileSelect ? "True" : "False",
+          pauseOnFileSelectMut ? "True" : "False",
         ],
       },
     ];
