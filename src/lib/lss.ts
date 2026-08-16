@@ -154,15 +154,16 @@ function silksongPauseOnFileSelectNodes(
   pauseOnFileSelect: boolean | undefined,
   variables: Record<string, string> | undefined
 ): Array<xml.XmlObject> {
-  if (pauseOnFileSelect === undefined) {
+  let pauseOnFileSelectMut = pauseOnFileSelect;
+  if (pauseOnFileSelectMut === undefined) {
     const isAllGlitches =
       variables && Object.values(variables).some((v) => v === "All Glitches");
     if (isAllGlitches) {
-      pauseOnFileSelect = false;
+      pauseOnFileSelectMut = false;
     }
   }
 
-  if (pauseOnFileSelect === undefined) {
+  if (pauseOnFileSelectMut === undefined) {
     return [];
   } else {
     return [
