@@ -20,6 +20,7 @@ export interface Config {
   gameName: string;
   variables?: Record<string, string>;
   offset?: string;
+  pauseOnFileSelect?: boolean;
 }
 
 interface ParsedHKAutoSplitterSettings {
@@ -148,17 +149,36 @@ const SILKSONG_SCRIPT_NAME_NODE = {
 };
 
 // <Setting id="pause_on_file_select" type="bool">False</Setting>
-const SILKSONG_PAUSE_ON_FILE_SELECT_FALSE_NODE = {
-  Setting: [
-    {
-      _attr: {
-        id: "pause_on_file_select",
-        type: "bool",
+function silksongPauseOnFileSelectNodes(
+  pauseOnFileSelect: boolean | undefined,
+  variables: Record<string, string> | undefined
+): Array<xml.XmlObject> {
+  if (pauseOnFileSelect === undefined) {
+    const isAllGlitches =
+      variables && Object.values(variables).some((v) => v === "All Glitches");
+    if (isAllGlitches) {
+      pauseOnFileSelect = false;
+    }
+  }
+
+  if (pauseOnFileSelect === undefined) {
+    return [];
+  } else {
+    return [
+      {
+        Setting: [
+          {
+            _attr: {
+              id: "pause_on_file_select",
+              type: "bool",
+            },
+          },
+          pauseOnFileSelect ? "True" : "False",
+        ],
       },
-    },
-    "False",
-  ],
-};
+    ];
+  }
+}
 
 export async function createSplitsXml(
   config: Config,
@@ -313,18 +333,15 @@ export async function createSplitsXml(
       ];
       break;
     case "silksong": {
-      const isAllGlitches =
-        config.variables &&
-        Object.values(config.variables).some((v) => v === "All Glitches");
-      const pauseOnFileSelect = isAllGlitches
-        ? [SILKSONG_PAUSE_ON_FILE_SELECT_FALSE_NODE]
-        : [];
       autosplitterSettings = [
         { Version: "1.0" },
         {
           CustomSettings: [
             SILKSONG_SCRIPT_NAME_NODE,
-            ...pauseOnFileSelect,
+            ...silksongPauseOnFileSelectNodes(
+              config.pauseOnFileSelect,
+              config.variables
+            ),
             {
               Setting: [
                 { _attr: { id: "splits", type: "list" } },
@@ -365,11 +382,9 @@ export async function createSplitsXml(
 
 function makeAutoSplittingRuntimeComponent(
   splitIds: Array<string>,
-  isAllGlitches: boolean | undefined
+  pauseOnFileSelect: boolean | undefined,
+  variables: Record<string, string> | undefined
 ): Record<string, unknown> {
-  const pauseOnFileSelect = isAllGlitches
-    ? [SILKSONG_PAUSE_ON_FILE_SELECT_FALSE_NODE]
-    : [];
   const splitList = [
     {
       Setting: [
@@ -384,7 +399,7 @@ function makeAutoSplittingRuntimeComponent(
         _attr: { id: `splits_${i}_item`, type: "string", value: name },
       },
     })),
-    ...pauseOnFileSelect,
+    ...silksongPauseOnFileSelectNodes(pauseOnFileSelect, variables),
     {
       Setting: [{ _attr: { id: "hit_counter", type: "bool" } }, "True"],
     },
@@ -416,9 +431,6 @@ export function createLayoutXml(config: Config, game: Game): string {
   if (game !== "silksong") {
     throw new Error("layout generation only supported for silksong");
   }
-  const isAllGlitches =
-    config.variables &&
-    Object.values(config.variables).some((v) => v === "All Glitches");
   const layoutObj = [
     {
       Layout: [
@@ -480,7 +492,11 @@ export function createLayoutXml(config: Config, game: Game): string {
         },
         {
           Components: [
-            makeAutoSplittingRuntimeComponent(config.splitIds, isAllGlitches),
+            makeAutoSplittingRuntimeComponent(
+              config.splitIds,
+              config.pauseOnFileSelect,
+              config.variables
+            ),
             {
               Component: [
                 { Path: "LiveSplit.Title.dll" },
