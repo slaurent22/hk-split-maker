@@ -755,7 +755,7 @@ function parseSSAutoSplitterSettings(
   const xmlDocPauseOnFileSelect = xmlDocCustomSettings.querySelector(
     '[id="pause_on_file_select"]'
   );
-  let pauseOnFileSelect: boolean | undefined = undefined;
+  let pauseOnFileSelect: boolean | undefined;
   if (xmlDocPauseOnFileSelect) {
     const pauseOnFileSelectStr = getTextContent(xmlDocPauseOnFileSelect);
     if (pauseOnFileSelectStr == "True") {
