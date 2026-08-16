@@ -15,5 +15,6 @@
     "variables": {
         "Any% Subcategory": "All Glitches",
         "Any% Drifters Cloak?": "Cloakless"
-    }
+    },
+    "pauseOnFileSelect": false
 }

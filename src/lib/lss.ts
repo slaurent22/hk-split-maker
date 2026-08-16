@@ -20,6 +20,7 @@ export interface Config {
   gameName: string;
   variables?: Record<string, string>;
   offset?: string;
+  pauseOnFileSelect?: boolean;
 }
 
 interface ParsedHKAutoSplitterSettings {
@@ -32,6 +33,7 @@ interface ParsedHKAutoSplitterSettings {
 
 interface ParsedSSAutosplitterSettings {
   autosplitIds: Array<string>;
+  pauseOnFileSelect: boolean | undefined;
 }
 
 interface ParsedSplitId {
@@ -148,17 +150,37 @@ const SILKSONG_SCRIPT_NAME_NODE = {
 };
 
 // <Setting id="pause_on_file_select" type="bool">False</Setting>
-const SILKSONG_PAUSE_ON_FILE_SELECT_FALSE_NODE = {
-  Setting: [
-    {
-      _attr: {
-        id: "pause_on_file_select",
-        type: "bool",
+function silksongPauseOnFileSelectNodes(
+  pauseOnFileSelect: boolean | undefined,
+  variables: Record<string, string> | undefined
+): Array<xml.XmlObject> {
+  let pauseOnFileSelectMut = pauseOnFileSelect;
+  if (pauseOnFileSelectMut === undefined) {
+    const isAllGlitches =
+      variables && Object.values(variables).some((v) => v === "All Glitches");
+    if (isAllGlitches) {
+      pauseOnFileSelectMut = false;
+    }
+  }
+
+  if (pauseOnFileSelectMut === undefined) {
+    return [];
+  } else {
+    return [
+      {
+        Setting: [
+          {
+            _attr: {
+              id: "pause_on_file_select",
+              type: "bool",
+            },
+          },
+          pauseOnFileSelectMut ? "True" : "False",
+        ],
       },
-    },
-    "False",
-  ],
-};
+    ];
+  }
+}
 
 export async function createSplitsXml(
   config: Config,
@@ -313,18 +335,15 @@ export async function createSplitsXml(
       ];
       break;
     case "silksong": {
-      const isAllGlitches =
-        config.variables &&
-        Object.values(config.variables).some((v) => v === "All Glitches");
-      const pauseOnFileSelect = isAllGlitches
-        ? [SILKSONG_PAUSE_ON_FILE_SELECT_FALSE_NODE]
-        : [];
       autosplitterSettings = [
         { Version: "1.0" },
         {
           CustomSettings: [
             SILKSONG_SCRIPT_NAME_NODE,
-            ...pauseOnFileSelect,
+            ...silksongPauseOnFileSelectNodes(
+              config.pauseOnFileSelect,
+              config.variables
+            ),
             {
               Setting: [
                 { _attr: { id: "splits", type: "list" } },
@@ -365,11 +384,9 @@ export async function createSplitsXml(
 
 function makeAutoSplittingRuntimeComponent(
   splitIds: Array<string>,
-  isAllGlitches: boolean | undefined
+  pauseOnFileSelect: boolean | undefined,
+  variables: Record<string, string> | undefined
 ): Record<string, unknown> {
-  const pauseOnFileSelect = isAllGlitches
-    ? [SILKSONG_PAUSE_ON_FILE_SELECT_FALSE_NODE]
-    : [];
   const splitList = [
     {
       Setting: [
@@ -384,7 +401,7 @@ function makeAutoSplittingRuntimeComponent(
         _attr: { id: `splits_${i}_item`, type: "string", value: name },
       },
     })),
-    ...pauseOnFileSelect,
+    ...silksongPauseOnFileSelectNodes(pauseOnFileSelect, variables),
     {
       Setting: [{ _attr: { id: "hit_counter", type: "bool" } }, "True"],
     },
@@ -416,9 +433,6 @@ export function createLayoutXml(config: Config, game: Game): string {
   if (game !== "silksong") {
     throw new Error("layout generation only supported for silksong");
   }
-  const isAllGlitches =
-    config.variables &&
-    Object.values(config.variables).some((v) => v === "All Glitches");
   const layoutObj = [
     {
       Layout: [
@@ -480,7 +494,11 @@ export function createLayoutXml(config: Config, game: Game): string {
         },
         {
           Components: [
-            makeAutoSplittingRuntimeComponent(config.splitIds, isAllGlitches),
+            makeAutoSplittingRuntimeComponent(
+              config.splitIds,
+              config.pauseOnFileSelect,
+              config.variables
+            ),
             {
               Component: [
                 { Path: "LiveSplit.Title.dll" },
@@ -735,7 +753,19 @@ function parseSSAutoSplitterSettings(
     const autosplitId = settingsNode.getAttribute("value") ?? "ManualSplit";
     autosplitIds.push(autosplitId);
   }
-  return { autosplitIds };
+  const xmlDocPauseOnFileSelect = xmlDocCustomSettings.querySelector(
+    '[id="pause_on_file_select"]'
+  );
+  let pauseOnFileSelect: boolean | undefined;
+  if (xmlDocPauseOnFileSelect) {
+    const pauseOnFileSelectStr = getTextContent(xmlDocPauseOnFileSelect);
+    if (pauseOnFileSelectStr == "True") {
+      pauseOnFileSelect = true;
+    } else if (pauseOnFileSelectStr == "False") {
+      pauseOnFileSelect = false;
+    }
+  }
+  return { autosplitIds, pauseOnFileSelect };
 }
 
 function importHKSplitsXml(str: string): Config {
@@ -931,7 +961,8 @@ function importSSSplitsXml(str: string): Config {
       throw new Error(`Failed to import splits: missing AutoSplitterSettings`);
     }
   }
-  const { autosplitIds } = parseSSAutoSplitterSettings(autoSplitterSettings);
+  const { autosplitIds, pauseOnFileSelect } =
+    parseSSAutoSplitterSettings(autoSplitterSettings);
   // autosplitIds vs splitIds: autosplitIds do not contain "-" for subsplits, splitIds can
   const parsedSplitIds: ParsedSplitId[] = [];
   autosplitIds.forEach((autosplitId) => {
@@ -1012,6 +1043,7 @@ function importSSSplitsXml(str: string): Config {
     endingSplit: endName.length > 0 ? { name: endName } : undefined,
     gameName,
     variables: hasVariables ? potentialVariables : undefined,
+    pauseOnFileSelect,
   };
   if (offset && offset !== DEFAULT_OFFSET) {
     config = { offset, ...config };

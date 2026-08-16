@@ -33,6 +33,10 @@
             "description": "Additional Info",
             "type": "object"
         },
+        "pauseOnFileSelect": {
+            "description": "Pause GameTime on File Select (Required false for Glitched)",
+            "type": "boolean"
+        },
         "splitIds": {
             "type": "array",
             "items": {

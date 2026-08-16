@@ -15,5 +15,6 @@
     "variables": {
         "Act 1 Route": "Judgement",
         "Act 1 Subcategory": "All Glitches"
-    }
+    },
+    "pauseOnFileSelect": false
 }

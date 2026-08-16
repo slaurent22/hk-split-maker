@@ -14,5 +14,6 @@
     "gameName": "Hollow Knight: Silksong",
     "variables": {
         "Low% Subcategory": "All Glitches"
-    }
+    },
+    "pauseOnFileSelect": false
 }

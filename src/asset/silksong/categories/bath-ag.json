@@ -10,5 +10,6 @@
     "gameName": "Hollow Knight: Silksong Category Extensions",
     "variables": {
         "Bath% Subcategory": "All Glitches"
-    }
+    },
+    "pauseOnFileSelect": false
 }
