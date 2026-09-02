@@ -439,7 +439,23 @@
         "PimpilloTrans",
         "CogheartPiece1",
         "CogheartPiece2",
-        "CogheartPiece3"
+        "CogheartPiece3",
+        "OnObtainCogheartPiece",
+        "OnObtainMemoryLocket",
+        "OnObtainCraftmetal",
+        "Crustnut",
+        "MossberryStew",
+        "VintageNectar",
+        "PickledMuckmaggot",
+        "PaleOil1",
+        "PaleOil2",
+        "PaleOil3",
+        "RuinedTool",
+        "TwistedBud",
+        "SteelSpines",
+        "MaidensSoul",
+        "HermitsSoul",
+        "SeekersSoul"
     ],
     "gameName": "Hollow Knight: Silksong Category Extensions"
 }

@@ -2626,5 +2626,101 @@
         "description": "Cogheart Piece 3 (Collectable)",
         "key": "CogheartPiece3",
         "tooltip": "Splits when player picks up the third Cogheart Piece"
+    },
+    {
+        "alias": null,
+        "description": "Cogheart Piece (Obtain)",
+        "key": "OnObtainCogheartPiece",
+        "tooltip": "Splits when obtaining a Cogheart Piece"
+    },
+    {
+        "alias": null,
+        "description": "Memory Locket (Obtain)",
+        "key": "OnObtainMemoryLocket",
+        "tooltip": "Splits when obtaining a Memory Locket"
+    },
+    {
+        "alias": null,
+        "description": "Craftmetal (Obtain)",
+        "key": "OnObtainCraftmetal",
+        "tooltip": "Splits when obtaining a Craftmetal"
+    },
+    {
+        "alias": null,
+        "description": "Crustnut (Collectable)",
+        "key": "Crustnut",
+        "tooltip": "Splits when player picks up the Crustnut"
+    },
+    {
+        "alias": null,
+        "description": "Mossberry Stew (Collectable)",
+        "key": "MossberryStew",
+        "tooltip": "Splits when player picks up the Mossberry Stew"
+    },
+    {
+        "alias": null,
+        "description": "Vintage Nectar (Collectable)",
+        "key": "VintageNectar",
+        "tooltip": "Splits when player picks up the Vintage Nectar"
+    },
+    {
+        "alias": null,
+        "description": "Pickled Muckmaggot (Collectable)",
+        "key": "PickledMuckmaggot",
+        "tooltip": "Splits when player picks up the Pickled Muckmaggot"
+    },
+    {
+        "alias": null,
+        "description": "Pale Oil 1 (Collectable)",
+        "key": "PaleOil1",
+        "tooltip": "Splits when player picks up the first Pale Oil"
+    },
+    {
+        "alias": null,
+        "description": "Pale Oil 2 (Collectable)",
+        "key": "PaleOil2",
+        "tooltip": "Splits when player picks up the second Pale Oil"
+    },
+    {
+        "alias": null,
+        "description": "Pale Oil 3 (Collectable)",
+        "key": "PaleOil3",
+        "tooltip": "Splits when player picks up the third Pale Oil"
+    },
+    {
+        "alias": null,
+        "description": "Ruined Tool (Collectable)",
+        "key": "RuinedTool",
+        "tooltip": "Splits when player picks up the Ruined Tool"
+    },
+    {
+        "alias": null,
+        "description": "Twisted Bud (Collectable)",
+        "key": "TwistedBud",
+        "tooltip": "Splits when player picks up the Twisted Bud"
+    },
+    {
+        "alias": null,
+        "description": "Steel Spines (Collectable)",
+        "key": "SteelSpines",
+        "tooltip": "Splits when player picks up the Steel Spines"
+    },
+    {
+        "alias": null,
+        "description": "Maidens Soul (Collectable)",
+        "key": "MaidensSoul",
+        "tooltip": "Splits when player picks up the Maiden's Soul"
+    },
+    {
+        "alias": null,
+        "description": "Hermits Soul (Collectable)",
+        "key": "HermitsSoul",
+        "tooltip": "Splits when player picks up the Hermit's Soul"
+    },
+    {
+        "alias": null,
+        "description": "Seekers Soul (Collectable)",
+        "key": "SeekersSoul",
+        "tooltip": "Splits when player picks up the Seeker's Soul"
     }
 ]

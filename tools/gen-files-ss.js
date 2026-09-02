@@ -171,6 +171,17 @@ function getUrl(qualifier, id) {
     case "GreatTasteReward":
       return getUrl("Item", "PaleOil");
 
+    case "OnObtainCogheartPiece":
+      return getUrl("Collectable", "CogheartPiece1");
+    case "OnObtainMemoryLocket":
+      return getUrl("Item", "MemoryLocket");
+    case "OnObtainCraftmetal":
+      return getUrl("Item", "Craftmetal");
+    case "PaleOil1":
+    case "PaleOil2":
+    case "PaleOil3":
+      return getUrl("Item", "PaleOil");
+
     case "StraightPinTrans":
       return getUrl("Tool", "StraightPin");
     case "PimpilloTrans":

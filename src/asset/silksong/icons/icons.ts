@@ -438,6 +438,22 @@ import PimpilloTrans from "./Tool/Pimpillo.png";
 import CogheartPiece1 from "./Collectable/CogheartPiece1.png";
 import CogheartPiece2 from "./Collectable/CogheartPiece2.png";
 import CogheartPiece3 from "./Item/Cogheart.png";
+import OnObtainCogheartPiece from "./Collectable/CogheartPiece1.png";
+import OnObtainMemoryLocket from "./Item/MemoryLocket.png";
+import OnObtainCraftmetal from "./Item/Craftmetal.png";
+import Crustnut from "./Collectable/Crustnut.png";
+import MossberryStew from "./Collectable/MossberryStew.png";
+import VintageNectar from "./Collectable/VintageNectar.png";
+import PickledMuckmaggot from "./Collectable/PickledMuckmaggot.png";
+import PaleOil1 from "./Item/PaleOil.png";
+import PaleOil2 from "./Item/PaleOil.png";
+import PaleOil3 from "./Item/PaleOil.png";
+import RuinedTool from "./Collectable/RuinedTool.png";
+import TwistedBud from "./Collectable/TwistedBud.png";
+import SteelSpines from "./Collectable/SteelSpines.png";
+import MaidensSoul from "./Collectable/MaidensSoul.png";
+import HermitsSoul from "./Collectable/HermitsSoul.png";
+import SeekersSoul from "./Collectable/SeekersSoul.png";
 import LostLace from "./Boss/LostLace.png";
 import MemoryLocket from "./Item/MemoryLocket.png";
 import HunterCrest from "./Crest/HunterCrest.png";
@@ -880,6 +896,22 @@ export default {
   CogheartPiece1,
   CogheartPiece2,
   CogheartPiece3,
+  OnObtainCogheartPiece,
+  OnObtainMemoryLocket,
+  OnObtainCraftmetal,
+  Crustnut,
+  MossberryStew,
+  VintageNectar,
+  PickledMuckmaggot,
+  PaleOil1,
+  PaleOil2,
+  PaleOil3,
+  RuinedTool,
+  TwistedBud,
+  SteelSpines,
+  MaidensSoul,
+  HermitsSoul,
+  SeekersSoul,
   LostLace,
   MemoryLocket,
   HunterCrest,
