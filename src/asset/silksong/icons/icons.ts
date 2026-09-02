@@ -455,7 +455,6 @@ import MaidensSoul from "./Collectable/MaidensSoul.png";
 import HermitsSoul from "./Collectable/HermitsSoul.png";
 import SeekersSoul from "./Collectable/SeekersSoul.png";
 import LostLace from "./Boss/LostLace.png";
-import MemoryLocket from "./Item/MemoryLocket.png";
 import HunterCrest from "./Crest/HunterCrest.png";
 export default {
   ManualSplit,
@@ -913,6 +912,5 @@ export default {
   HermitsSoul,
   SeekersSoul,
   LostLace,
-  MemoryLocket,
   HunterCrest,
 };

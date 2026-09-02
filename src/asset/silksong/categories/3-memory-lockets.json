@@ -6,25 +6,22 @@
         "SilkSpearTrans",
         "MarrowBell",
         "SavedFleaHuntersMarch",
-        "ManualSplit",
+        "OnObtainMemoryLocket",
         "SavedFleaDeepDocksSprint",
         "Lace1Trans",
         "SavedFleaFarFieldsTrap",
-        "ManualSplit",
+        "OnObtainMemoryLocket",
         "SavedFleaDeepDocksBellway",
         "SavedFleaMarrow",
         "CaravanTroupeGreymoor",
-        "ManualSplit"
+        "OnObtainMemoryLocket"
     ],
     "names": {
-        "ManualSplit": [
-            "Hunter's March Locket (Manual)",
-            "Pilgrim's Rest Locket (Manual)",
-            "Greymoor Locket (Manual)"
+        "OnObtainMemoryLocket": [
+            "Hunter's March Locket",
+            "Pilgrim's Rest Locket",
+            "Greymoor Locket"
         ]
-    },
-    "icons": {
-        "ManualSplit": "MemoryLocket"
     },
     "gameName": "Hollow Knight: Silksong Category Extensions",
     "variables": {

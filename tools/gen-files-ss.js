@@ -630,7 +630,6 @@ function createIconImports() {
 
   // non-split icons
   output += `import LostLace from "./Boss/LostLace.png";\n`;
-  output += `import MemoryLocket from "./Item/MemoryLocket.png";\n`;
   output += `import HunterCrest from "./Crest/HunterCrest.png";\n`;
 
   // console.log(output);
@@ -639,7 +638,6 @@ function createIconImports() {
     output += `  ${id},\n`;
   }
   output += `  LostLace,\n`;
-  output += `  MemoryLocket,\n`;
   output += `  HunterCrest,\n`;
   output += "};\n";
 

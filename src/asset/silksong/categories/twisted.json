@@ -20,7 +20,7 @@
         "Trobbio",
         "Clawline",
         "VaultkeepersMelody",
-        "ManualSplit",
+        "TwistedBud",
         "ArchitectsMelody",
         "ConductorsMelody",
         "Lace2",
@@ -28,8 +28,7 @@
         "EndingSplit"
     ],
     "names": {
-        "EndingSplit": "Grand Mother Silk",
-        "ManualSplit": "Twisted Bud (Manual Split)"
+        "EndingSplit": "Grand Mother Silk"
     },
     "gameName": "Hollow Knight: Silksong Category Extensions",
     "variables": {

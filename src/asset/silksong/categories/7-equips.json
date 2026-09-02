@@ -3,50 +3,30 @@
     "splitIds": [
         "StartNewGame",
         "MossMotherTrans",
-        "ManualSplit",
+        "Compass",
         "SilkSpear",
-        "ManualSplit",
+        "DruidsEye",
         "BellBeast",
-        "ManualSplit",
+        "StraightPin",
         "SavedFleaHuntersMarch",
-        "ManualSplit",
+        "OnObtainMemoryLocket",
         "SavedFleaDeepDocksSprint",
         "Lace1Trans",
         "SavedFleaFarFieldsTrap",
-        "ManualSplit",
-        "ManualSplit",
+        "OnObtainMemoryLocket",
+        "WardingBell",
         "SavedFleaDeepDocksBellway",
         "SavedFleaMarrow",
-        "ManualSplit",
+        "ShardPendant",
         "CaravanTroupeGreymoor",
-        "ManualSplit",
+        "OnObtainMemoryLocket",
         "ManualSplit"
     ],
     "names": {
-        "ManualSplit": [
-            "Compass (%s)",
-            "Druid's Eye (%s)",
-            "Straight Pin (%s)",
-            "Memory Locket (%s)",
-            "Memory Locket (%s)",
-            "Warding Bell (%s)",
-            "Shard Pendant (%s)",
-            "Memory Locket (%s)",
-            "7 Equips (%s)"
-        ]
+        "ManualSplit": ["7 Equips (%s)"]
     },
     "icons": {
-        "ManualSplit": [
-            "Compass",
-            "DruidsEye",
-            "StraightPin",
-            "MemoryLocket",
-            "MemoryLocket",
-            "WardingBell",
-            "ShardPendant",
-            "MemoryLocket",
-            "HunterCrest"
-        ]
+        "ManualSplit": ["HunterCrest"]
     },
     "gameName": "Hollow Knight: Silksong Category Extensions",
     "variables": {

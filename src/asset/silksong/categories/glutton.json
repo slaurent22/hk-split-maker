@@ -17,22 +17,14 @@
         "MetMergwin",
         "CollectedWhitewardKey",
         "Clawline",
-        "ManualSplit",
+        "Crustnut",
         "BeastCrest",
-        "ManualSplit",
-        "ManualSplit",
-        "ManualSplit",
+        "MossberryStew",
+        "VintageNectar",
+        "PickledMuckmaggot",
         "DeliveredCouriersRasher",
         "GreatTasteReward"
     ],
-    "names": {
-        "ManualSplit": [
-            "Crustnut (%s)",
-            "Mossberry Stew (%s)",
-            "Vintage Nectar (%s)",
-            "Pickled Muckmaggot (%s)"
-        ]
-    },
     "gameName": "Hollow Knight: Silksong Category Extensions",
     "variables": {
         "Glutton% Subcategory": "No Major Glitches"

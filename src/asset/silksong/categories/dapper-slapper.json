@@ -19,13 +19,13 @@
         "WhisperingVaultsArena",
         "TrobbioTrans",
         "Clawline",
-        "ManualSplit",
+        "TwistedBud",
         "GainedCurse",
         "ManualSplit",
         "YarnabySlap"
     ],
     "names": {
-        "ManualSplit": ["Grindle Slap", "Twisted Bud", "Nuu Slap"]
+        "ManualSplit": ["Grindle Slap (Manual)", "Nuu Slap (Manual)"]
     },
     "gameName": "Hollow Knight: Silksong Category Extensions",
     "variables": {
