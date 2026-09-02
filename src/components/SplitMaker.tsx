@@ -6,6 +6,7 @@ import React, {
   Suspense,
   ChangeEvent,
 } from "react";
+import { IoMdInformationCircleOutline } from "react-icons/io";
 import { useSearchParams } from "react-router-dom";
 import { saveAs } from "file-saver";
 import JSON5 from "json5";
@@ -231,7 +232,7 @@ export default function SplitMaker(): ReactElement {
       delete newConfig.offset;
     } else {
       alert(
-        "Cannot toggle Act1Start unless the first split is either StartNewGame or Act1Start"
+        "Cannot toggle autosave start unless the first split is either StartNewGame or Act1Start"
       );
     }
 
@@ -287,12 +288,19 @@ export default function SplitMaker(): ReactElement {
             <label htmlFor="generate-icons-toggle">Include icons</label>
           </div>
           {game === "silksong" && (
-            <div>
+            <div className="row" style={{ alignItems: "center" }}>
               <ArrowButton
-                text="Toggle Act1Start"
+                text="Toggle Autosave Start"
                 id="toggle-act1-start"
                 onClick={onToggleAct1Start}
               />
+              <a
+                href="https://www.speedrun.com/silksong/guides/5a1lq"
+                target="_blank"
+                rel="noreferrer"
+              >
+                <IoMdInformationCircleOutline size="1.5em" />
+              </a>
             </div>
           )}
           <Suspense fallback={<div>Loading split config editor...</div>}>
