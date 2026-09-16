@@ -42,7 +42,7 @@
         "EnterCogworkCore",
         "EnterWhisperingVaults",
         "-CollectedWhitewardKey",
-        "Menu",
+        "EnterWhisperingVaults",
         "-TrobbioEncountered",
         "TrobbioTrans",
         "-SavedFleaUnderworksCauldron",
@@ -139,7 +139,6 @@
         "ShellwoodBell": "[1D] %s",
         "Menu": [
             "Druid's Eye SQ",
-            "Songclave Ventrica SQ",
             "[2U] Needle 2 SQ",
             "Beast Shard SQ",
             "Whiteward Seen SQ",
@@ -151,6 +150,10 @@
             "Green Prince SQ",
             "Trail's End SQ",
             "[3U, 4U] Maiden Soul SQ"
+        ],
+        "EnterWhisperingVaults": [
+            "Whispering Vaults Arena Exit",
+            "Songclave Exit"
         ],
         "EnterChoralChambers": "Pale Oil Exit",
         "EnterWeavenestAtla": "[2D] %s",
