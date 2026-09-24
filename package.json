@@ -81,6 +81,7 @@
         "react-dom": "^18.3.1",
         "react-icons": "^5.7.0",
         "react-redux": "^9.2.0",
+        "react-router": "^8.3.0",
         "react-router-dom": "^7.9.1",
         "react-select": "^5.0.0",
         "react-sortablejs": "^6.1.1",
@@ -101,5 +102,10 @@
             "prettier --write"
         ],
         "*.{md,json}": "prettier --write"
+    },
+    "overrides": {
+        "react-router-dom": {
+            "react-router": "8.3.0"
+        }
     }
 }
