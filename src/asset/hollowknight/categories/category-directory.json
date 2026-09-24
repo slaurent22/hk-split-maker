@@ -250,7 +250,21 @@
             "fileName": "any-nmms-1028",
             "displayName": "Any% (NMMS 1.0.2.8)",
             "data": {
-                "searchTerms": ["nmms"]
+                "searchTerms": ["no main menu storage"]
+            }
+        },
+        {
+            "fileName": "any-nmms-no-hornet-dupe",
+            "displayName": "Any% (NMMS No Hornet Dupe)",
+            "data": {
+                "searchTerms": ["no main menu storage"]
+            }
+        },
+        {
+            "fileName": "any-nmms-steel-soul",
+            "displayName": "Any% (NMMS Steel Soul)",
+            "data": {
+                "searchTerms": ["no main menu storage"]
             }
         },
         {

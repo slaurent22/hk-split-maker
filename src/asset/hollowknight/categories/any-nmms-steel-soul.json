@@ -1,12 +1,13 @@
 {
-    "categoryName": "Any%",
+    "categoryName": "Any% Steel Soul",
     "splitIds": [
         "KingsPass",
         "FungalWastesEntry",
-        "Dashmaster",
-        "QueensStationStation",
+        "MenuClaw",
         "MothwingCloak",
+        "BlueLake",
         "DreamNail",
+        "DreamGate",
         "Dreamer3"
     ],
     "endTriggeringAutosplit": false,
@@ -16,6 +17,6 @@
     },
     "gameName": "Hollow Knight",
     "variables": {
-        "Any% Glitch": "No Main Menu Storage"
+        "Steel Soul Glitch": "No Main Menu Storage"
     }
 }
