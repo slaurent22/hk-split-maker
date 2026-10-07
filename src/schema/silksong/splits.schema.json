@@ -34,7 +34,7 @@
             "type": "object"
         },
         "pauseOnFileSelect": {
-            "description": "Pause GameTime on File Select (Required false for Glitched)",
+            "description": "Pause GameTime on Main Menu (Required false for Glitched)",
             "type": "boolean"
         },
         "splitIds": {
