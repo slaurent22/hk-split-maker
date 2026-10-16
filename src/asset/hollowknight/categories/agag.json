@@ -50,5 +50,6 @@
     "gameName": "Hollow Knight Category Extensions",
     "variables": {
         "Elegy% Glitch": "All Grubs All Glitches"
-    }
+    },
+    "pauseOnMainMenu": false
 }

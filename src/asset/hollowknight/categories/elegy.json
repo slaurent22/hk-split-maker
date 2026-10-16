@@ -77,5 +77,6 @@
     "gameName": "Hollow Knight Category Extensions",
     "variables": {
         "Elegy% Glitch": "Elegy% No Major Glitches"
-    }
+    },
+    "pauseOnMainMenu": true
 }
