@@ -19,5 +19,6 @@
         "ManualSplit": "HasDelicateFlower"
     },
     "endTriggeringAutosplit": true,
-    "gameName": "Hollow Knight Mods"
+    "gameName": "Hollow Knight Mods",
+    "pauseOnMainMenu": true
 }

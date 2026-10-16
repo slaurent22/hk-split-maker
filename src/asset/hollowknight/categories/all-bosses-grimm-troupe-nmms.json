@@ -72,5 +72,6 @@
     "variables": {
         "All Bosses Patch": "Grimm Troupe",
         "All Bosses Glitch": "No Main Menu Storage"
-    }
+    },
+    "pauseOnMainMenu": true
 }

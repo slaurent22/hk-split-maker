@@ -22,5 +22,6 @@
     "gameName": "Hollow Knight",
     "variables": {
         "True Ending Glitch": "No Main Menu Storage"
-    }
+    },
+    "pauseOnMainMenu": true
 }
