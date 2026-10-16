@@ -25,5 +25,6 @@
     "gameName": "Hollow Knight",
     "variables": {
         "Low% Glitch": "No Main Menu Storage"
-    }
+    },
+    "pauseOnMainMenu": true
 }

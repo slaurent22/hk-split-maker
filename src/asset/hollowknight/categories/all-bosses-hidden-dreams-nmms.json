@@ -68,5 +68,6 @@
     "variables": {
         "All Bosses Patch": "Hidden Dreams",
         "All Bosses Glitch": "No Main Menu Storage"
-    }
+    },
+    "pauseOnMainMenu": true
 }

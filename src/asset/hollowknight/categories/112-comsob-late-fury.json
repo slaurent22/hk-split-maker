@@ -150,5 +150,6 @@
         "name": "Embrace The Void",
         "icon": "RadianceBoss"
     },
-    "gameName": "Hollow Knight"
+    "gameName": "Hollow Knight",
+    "pauseOnMainMenu": true
 }
