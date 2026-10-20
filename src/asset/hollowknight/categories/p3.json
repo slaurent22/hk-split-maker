@@ -13,5 +13,6 @@
         "SlyP"
     ],
     "endTriggeringAutosplit": true,
-    "gameName": "Hollow Knight"
+    "gameName": "Hollow Knight",
+    "pauseOnMainMenu": true
 }

@@ -2,5 +2,9 @@
     "categoryName": "Who%",
     "splitIds": ["BenchAny", "GrubQueensGardensUpper"],
     "endTriggeringAutosplit": true,
-    "gameName": "Hollow Knight Category Extensions"
+    "gameName": "Hollow Knight Category Extensions",
+    "variables": {
+        "Who% Glitch": "All Glitches"
+    },
+    "pauseOnMainMenu": false
 }

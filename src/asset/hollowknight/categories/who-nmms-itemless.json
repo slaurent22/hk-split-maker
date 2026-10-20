@@ -5,5 +5,9 @@
         "Grub1": "Grub Queen's Gardens Upper"
     },
     "endTriggeringAutosplit": true,
-    "gameName": "Hollow Knight Category Extensions"
+    "gameName": "Hollow Knight Category Extensions",
+    "variables": {
+        "Who% Glitch": "No Main Menu Storage"
+    },
+    "pauseOnMainMenu": true
 }

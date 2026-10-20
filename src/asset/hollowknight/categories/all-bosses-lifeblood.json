@@ -84,5 +84,6 @@
     "gameName": "Hollow Knight",
     "variables": {
         "All Bosses Patch": "Lifeblood"
-    }
+    },
+    "pauseOnMainMenu": true
 }

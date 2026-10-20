@@ -43,5 +43,6 @@
     "gameName": "Hollow Knight Category Extensions",
     "variables": {
         "Ghostbusters Glitch": "1.4.3.2+ NMG"
-    }
+    },
+    "pauseOnMainMenu": true
 }
