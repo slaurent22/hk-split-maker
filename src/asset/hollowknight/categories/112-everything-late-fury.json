@@ -272,7 +272,7 @@
     ],
     "names": {
         "GrubCrossroadsWall": "[2U] %s",
-        "ShadeSoul": "[2D] %s",
+        "ShadeSoul": "[1U 2U] %s",
         "MaskFragment1": "Waterways Shard",
         "CycloneSlash": "[1D] %s",
         "VesselFragment1": "Stag Nest Fragment",
