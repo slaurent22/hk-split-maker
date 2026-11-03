@@ -1,0 +1,51 @@
+{
+    "categoryName": "Low% Cloakless Widow",
+    "splitIds": [
+        "StartNewGame",
+        "MossMotherTrans",
+        "EnterMosshome",
+        "-BenchAny",
+        "-Menu",
+        "-Menu",
+        "-Menu",
+        "-Menu",
+        "BoneBottomSimpleKey",
+        "EnterUpperWormways",
+        "EnterShellwood",
+        "ClingGripTrans",
+        "Widow",
+        "BellhartBell",
+        "Lace1Trans",
+        "DriftersCloakTrans",
+        "EnterSinnersRoad",
+        "EnterExhaustOrgan",
+        "PhantomTrans",
+        "EnterCogworkDancers",
+        "-CogworkDancers",
+        "EnterCogworkCore",
+        "EnterWhisperingVaults",
+        "TrobbioTrans",
+        "Clawline",
+        "VaultkeepersMelodyTrans",
+        "ArchitectsMelodyTrans",
+        "EnterHighHallsArena",
+        "HighHallsArena",
+        "EnterLace2",
+        "PostLace2ArenaTrans",
+        "EndingSplit"
+    ],
+    "names": {
+        "BenchAny": "Bench 214",
+        "Menu": [
+            "SQ 250",
+            "SQ 286",
+            "SQ 322",
+            "Grotto SQ 434",
+        ],
+        "EndingSplit": "Grand Mother Silk"
+    },
+    "gameName": "Hollow Knight: Silksong",
+    "variables": {
+        "Low% Subcategory": "No Major Glitches"
+    }
+}
