@@ -36,12 +36,7 @@
     ],
     "names": {
         "BenchAny": "Bench 214",
-        "Menu": [
-            "SQ 250",
-            "SQ 286",
-            "SQ 322",
-            "Grotto SQ 434"
-        ],
+        "Menu": ["SQ 250", "SQ 286", "SQ 322", "Grotto SQ 434"],
         "EndingSplit": "Grand Mother Silk"
     },
     "gameName": "Hollow Knight: Silksong",
