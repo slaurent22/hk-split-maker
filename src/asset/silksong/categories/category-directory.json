@@ -201,6 +201,13 @@
             }
         },
         {
+            "fileName": "low-cloakless-widow",
+            "displayName": "Low% Cloakless Widow",
+            "data": {
+                "routeNotesURL": "https://docs.google.com/spreadsheets/d/1VOfmmYpoLeAgdwi3k9CmCxJAPYk3-bvNQb1vHiAwELw/edit?usp=sharing"
+            }
+        },
+        {
             "fileName": "low-te",
             "displayName": "Low% True Ending",
             "data": {
