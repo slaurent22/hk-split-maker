@@ -152,6 +152,24 @@ export default function SplitMaker(): ReactElement {
     reader.readAsText(file);
   };
 
+  const validateAutosplits = (configObject: Config): boolean => {
+    if (game === "hollowknight") {
+      if (!configObject.splitIds?.length) {
+        alert("For Hollow Knight, you need at least one autosplit.");
+        return false;
+      }
+    } else if (game === "silksong") {
+      if (!configObject.splitIds || configObject.splitIds.length < 2) {
+        alert(
+          "For Silksong, you need at least two autosplits. The first one is the start trigger, and subsequent ones are the segments."
+        );
+        return false;
+      }
+    }
+
+    return true;
+  };
+
   const onSubmit = async () => {
     let configObject;
     try {
@@ -161,15 +179,12 @@ export default function SplitMaker(): ReactElement {
       alert("Failed to parse config as JSON");
       return;
     }
-    // Don't let the user generate an invalid Silksong splits file
-    if (game === "silksong") {
-      if (!configObject.splitIds || configObject.splitIds.length < 2) {
-        alert(
-          "For Silksong, you need at least two autosplits. The first one is the start trigger, and subsequent ones are the segments."
-        );
-        return;
-      }
+
+    // Don't let the user generate an invalid splits file
+    if (!validateAutosplits(configObject)) {
+      return;
     }
+
     let output = "";
 
     const submitButton = document.getElementById(
