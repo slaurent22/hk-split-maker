@@ -40,7 +40,11 @@ export default function App(): ReactElement {
     <div id="app">
       <AlertBanner />
       <Header />
-      <Tabs onSelect={onTabSelect} selectedIndex={selectedIndex}>
+      <Tabs
+        onSelect={onTabSelect}
+        selectedIndex={selectedIndex}
+        focusTabOnClick={false}
+      >
         <TabList>
           <Tab>Hollow Knight</Tab>
           <Tab>Silksong</Tab>
