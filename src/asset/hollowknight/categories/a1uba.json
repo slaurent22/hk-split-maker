@@ -2,5 +2,6 @@
     "categoryName": "A1uba%",
     "splitIds": ["VengefulSpirit", "EnterGreenpath", "MothwingCloak", "Aluba"],
     "endTriggeringAutosplit": true,
-    "gameName": "Hollow Knight Category Extensions"
+    "gameName": "Hollow Knight Category Extensions",
+    "pauseOnMainMenu": true
 }

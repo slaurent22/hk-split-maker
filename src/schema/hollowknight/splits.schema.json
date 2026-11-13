@@ -54,6 +54,10 @@
             "description": "Additional Info",
             "type": "object"
         },
+        "pauseOnMainMenu": {
+            "description": "Pause on Main Menu (Required false for All Glitches)",
+            "type": "boolean"
+        },
         "splitIds": {
             "type": "array",
             "items": {

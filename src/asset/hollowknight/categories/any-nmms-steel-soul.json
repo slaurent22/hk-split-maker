@@ -18,5 +18,6 @@
     "gameName": "Hollow Knight",
     "variables": {
         "Steel Soul Glitch": "No Main Menu Storage"
-    }
+    },
+    "pauseOnMainMenu": true
 }

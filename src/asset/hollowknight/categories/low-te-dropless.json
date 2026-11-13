@@ -61,5 +61,6 @@
     "gameName": "Hollow Knight Category Extensions",
     "variables": {
         "True Ending Glitch": "1.4.3.2+ NMG"
-    }
+    },
+    "pauseOnMainMenu": true
 }

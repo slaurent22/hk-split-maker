@@ -68,5 +68,6 @@
         "HuntersMark": "(1D) [207] %s"
     },
     "endTriggeringAutosplit": true,
-    "gameName": "Hollow Knight Mods"
+    "gameName": "Hollow Knight Mods",
+    "pauseOnMainMenu": true
 }

@@ -27,5 +27,6 @@
     "gameName": "Hollow Knight",
     "variables": {
         "All Skills Glitch": "All Glitches"
-    }
+    },
+    "pauseOnMainMenu": false
 }

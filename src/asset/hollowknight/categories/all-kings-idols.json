@@ -73,5 +73,6 @@
         ]
     },
     "endTriggeringAutosplit": true,
-    "gameName": "Hollow Knight Category Extensions"
+    "gameName": "Hollow Knight Category Extensions",
+    "pauseOnMainMenu": true
 }

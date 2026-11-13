@@ -24,5 +24,6 @@
         "name": "Hollow Knight",
         "icon": "HollowKnightBoss"
     },
-    "gameName": "Hollow Knight"
+    "gameName": "Hollow Knight",
+    "pauseOnMainMenu": true
 }

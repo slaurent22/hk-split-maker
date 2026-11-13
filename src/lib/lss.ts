@@ -20,6 +20,7 @@ export interface Config {
   gameName: string;
   variables?: Record<string, string>;
   offset?: string;
+  pauseOnMainMenu?: boolean;
   pauseOnFileSelect?: boolean;
 }
 
@@ -29,6 +30,7 @@ interface ParsedHKAutoSplitterSettings {
   autosplitIds: Array<string>;
   ordered?: boolean;
   endTriggeringAutosplit: boolean;
+  pauseOnMainMenu: boolean | undefined;
 }
 
 interface ParsedSSAutosplitterSettings {
@@ -149,18 +151,39 @@ const SILKSONG_SCRIPT_NAME_NODE = {
   },
 };
 
+function variablesAllGlitches(
+  variables: Record<string, string> | undefined
+): boolean {
+  if (variables) {
+    return Object.values(variables).some(
+      (v) => v.includes("All Glitches") || v.includes("Fast")
+    );
+  } else {
+    return false;
+  }
+}
+
+// <PauseOnMainMenu>False</PauseOnMainMenu>
+function hkPauseOnMainMenuNodes(
+  pauseOnMainMenu: boolean | undefined,
+  variables: Record<string, string> | undefined
+): Array<xml.XmlObject> {
+  let pauseOnMainMenuMut = pauseOnMainMenu;
+  if (pauseOnMainMenuMut === undefined) {
+    pauseOnMainMenuMut = !variablesAllGlitches(variables);
+  }
+
+  return [{ PauseOnMainMenu: boolRepr(pauseOnMainMenuMut) }];
+}
+
 // <Setting id="pause_on_file_select" type="bool">False</Setting>
 function silksongPauseOnFileSelectNodes(
   pauseOnFileSelect: boolean | undefined,
   variables: Record<string, string> | undefined
 ): Array<xml.XmlObject> {
   let pauseOnFileSelectMut = pauseOnFileSelect;
-  if (pauseOnFileSelectMut === undefined) {
-    const isAllGlitches =
-      variables && Object.values(variables).some((v) => v === "All Glitches");
-    if (isAllGlitches) {
-      pauseOnFileSelectMut = false;
-    }
+  if (pauseOnFileSelectMut === undefined && variablesAllGlitches(variables)) {
+    pauseOnFileSelectMut = false;
   }
 
   if (pauseOnFileSelectMut === undefined) {
@@ -331,6 +354,10 @@ export async function createSplitsXml(
         { Ordered: boolRepr(ordered) },
         { AutosplitEndRuns: boolRepr(endTriggeringAutosplit) },
         { AutosplitStartRuns: config.startTriggeringAutosplit ?? "" },
+        ...hkPauseOnMainMenuNodes(
+          config.pauseOnMainMenu ?? config.pauseOnFileSelect,
+          config.variables
+        ),
         { Splits: autosplits },
       ];
       break;
@@ -692,6 +719,16 @@ function parseHKAutoSplitterSettings(
     const orderedStr = getTextContentByTagName(autoSplitterSettings, "Ordered");
     const autoStart =
       getTextContentByTagName(autoSplitterSettings, "AutosplitStartRuns") || "";
+    const pauseOnMainMenuStr = getTextContentByTagName(
+      autoSplitterSettings,
+      "PauseOnMainMenu"
+    );
+    let pauseOnMainMenu: boolean | undefined;
+    if (pauseOnMainMenuStr == "True") {
+      pauseOnMainMenu = true;
+    } else if (pauseOnMainMenuStr == "False") {
+      pauseOnMainMenu = false;
+    }
     // autosplitIds vs splitIds: autosplitIds do not contain "-" for subsplits, splitIds can
     const autosplitIds: Array<string> = [];
     xmlDocSplits.childNodes.forEach((c) => {
@@ -706,6 +743,7 @@ function parseHKAutoSplitterSettings(
       startTriggeringAutosplit: autoStart.length > 0 ? autoStart : undefined,
       autosplitIds,
       endTriggeringAutosplit,
+      pauseOnMainMenu,
     };
   } else if (xmlDocCustomSettings) {
     // WASM autosplitter
@@ -723,12 +761,25 @@ function parseHKAutoSplitterSettings(
       }
     }
     const autostartId = autostartsplitIds[0];
+    const xmlDocPauseOnMainMenu = xmlDocCustomSettings.querySelector(
+      '[id="pause_on_main_menu"]'
+    );
+    let pauseOnMainMenu: boolean | undefined;
+    if (xmlDocPauseOnMainMenu) {
+      const pauseOnMainMenuStr = getTextContent(xmlDocPauseOnMainMenu);
+      if (pauseOnMainMenuStr == "True") {
+        pauseOnMainMenu = true;
+      } else if (pauseOnMainMenuStr == "False") {
+        pauseOnMainMenu = false;
+      }
+    }
     return {
       ordered: true,
       startTriggeringAutosplit:
         autostartId == "LegacyStart" ? undefined : autostartId,
       autosplitIds: autostartsplitIds.slice(1),
       endTriggeringAutosplit: true,
+      pauseOnMainMenu,
     };
   } else {
     throw new Error(

@@ -37,5 +37,6 @@
     "gameName": "Hollow Knight",
     "variables": {
         "All Skills Glitch": "1.4.3.2+ NMG"
-    }
+    },
+    "pauseOnMainMenu": true
 }

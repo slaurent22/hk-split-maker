@@ -76,5 +76,6 @@
     "gameName": "Hollow Knight",
     "variables": {
         "112% Glitch": "All Glitches"
-    }
+    },
+    "pauseOnMainMenu": false
 }

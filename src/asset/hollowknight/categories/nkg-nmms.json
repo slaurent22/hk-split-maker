@@ -15,5 +15,6 @@
     "gameName": "Hollow Knight Category Extensions",
     "variables": {
         "NKG% Glitch": "No Main Menu Storage"
-    }
+    },
+    "pauseOnMainMenu": true
 }

@@ -82,5 +82,6 @@
     "variables": {
         "All Bosses Patch": "Base Game",
         "All Bosses Glitch": "No Major Glitches"
-    }
+    },
+    "pauseOnMainMenu": true
 }
