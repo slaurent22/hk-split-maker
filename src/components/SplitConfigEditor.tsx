@@ -405,7 +405,7 @@ export default function SplitConfigEditor(props: Props): ReactElement {
   const game = useCurrentGame();
 
   return (
-    <Tabs>
+    <Tabs focusTabOnClick={false}>
       <TabList>
         <Tab>JSON</Tab>
         <Tab>UI (Beta)</Tab>
