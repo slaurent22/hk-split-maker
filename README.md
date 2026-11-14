@@ -54,6 +54,10 @@ For an example of this process, see https://github.com/slaurent22/hk-split-maker
 6. You can use [every.json](./src/asset/silksong/categories/every.json) as a test case, or construct a new test case containing the new splits.
 7. Ensure the generated splits have the correct autosplits.
 
+## Deployment
+
+This site is deployed to AWS Amplify with its build settings defined in [amplify.yml](./amplify.yml)
+
 ## Future Enhancements
 
 You can see the current list of feature ideas in the [GitHub
