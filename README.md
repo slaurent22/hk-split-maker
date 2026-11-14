@@ -23,13 +23,25 @@ Open the resulting lss file with LiveSplit.
 
 ## Development
 
-For development or local use, clone the repository and install/build manually via [Node.js](https://nodejs.org/en/).
+I recommend using [nvm](https://github.com/nvm-sh/nvm) to manage the Node.js version locally. Since this repo has an `.nvmrc` specifying the version, run this command to install and use the correct version
 
 ```sh
-npm install && npm run serve
+nvm use
 ```
 
-Navigate to `http://localhost:8080/` in your web browser.
+Install dependencies
+
+```sh
+npm install
+```
+
+Run locally. When it's ready, navigate to `http://localhost:8080/` in your web browser.
+
+```sh
+nvm run serve
+```
+
+Additional scripts (unit tests, production build) can be found in `package.json`.
 
 ### Adding New and Updated Autosplits for Hollow Knight
 
