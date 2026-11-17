@@ -1,5 +1,5 @@
 {
-    "categoryName": "Low% Cloakless Widow",
+    "categoryName": "Low%",
     "splitIds": [
         "StartNewGame",
         "MossMotherTrans",
@@ -34,6 +34,7 @@
     },
     "gameName": "Hollow Knight: Silksong",
     "variables": {
-        "Low% Subcategory": "No Major Glitches"
+        "Low% Subcategory": "No Major Glitches",
+        "Low% Ending": "Standard"
     }
 }
