@@ -46,6 +46,7 @@ export default function SplitMaker(): ReactElement {
   const [shareButtonDisabled, setShareButtonDisabled] = useState(true);
 
   const [splitOutput, setSplitOutput] = useState("");
+  const [splitConfig, setSplitConfig] = useState({});
   const [includeIcons, setIncludeIcons] = useState(true);
 
   useEffect(() => {
@@ -179,11 +180,12 @@ export default function SplitMaker(): ReactElement {
       alert("Failed to parse config as JSON");
       return;
     }
-
     // Don't let the user generate an invalid splits file
     if (!validateAutosplits(configObject)) {
       return;
     }
+
+    setSplitConfig(configObject);
 
     let output = "";
 
@@ -221,6 +223,76 @@ export default function SplitMaker(): ReactElement {
       splitName = "splits";
     }
     saveAs(outBlob, `${splitName}.lss`);
+  };
+
+  const onDownloadILs = async (): void => {
+    let output = [];
+
+    let config_template = {};
+    config_template.categoryName = splitConfig.categoryName + " ILs";
+    config_template.variables = splitConfig.variables;
+    config_template.gameName = splitConfig.gameName;
+    config_template.names = splitConfig.names;
+
+    config_template.endTriggeringAutosplit = true;
+    config_template.splitIds = [];
+
+    let exclude_last =
+      game === "hollowknight" && !splitConfig.endTriggeringAutosplit;
+    for (let i = 0; i < splitConfig.splitIds.length - exclude_last; i++) {
+      let currentSplit = splitConfig.splitIds[i];
+
+      config_template.splitIds.push(currentSplit);
+
+      if (currentSplit[0] != "-") {
+        try {
+          output.push([
+            await createSplitsXml(config_template, game, includeIcons),
+            currentSplit,
+          ]);
+        } catch (e) {
+          console.error(e);
+          alert(
+            "Failed to create ILs pack. The error has been logged to console.error"
+          );
+          return;
+        }
+
+        config_template.splitIds = [];
+        config_template.startTriggeringAutosplit = splitConfig.splitIds[i];
+      }
+    }
+
+    if (exclude_last) {
+      config_template.splitIds.push("EndingSplit");
+      if (config_template.names === undefined) config_template.names = {};
+
+      config_template.names["EndingSplit"] = splitConfig.endingSplit.name;
+
+      try {
+        output.push([
+          await createSplitsXml(config_template, game, includeIcons),
+          "EndingSplit",
+        ]);
+      } catch (e) {
+        console.error(e);
+        alert(
+          "Failed to create ILs pack. The error has been logged to console.error"
+        );
+        return;
+      }
+    }
+
+    const outBlob = new Blob(output);
+
+    let splitName = "";
+    try {
+      const splitsConfig = parseConfigInput();
+      splitName = buildSplitsFileName(splitsConfig);
+    } catch {
+      splitName = "splits";
+    }
+    saveAs(outBlob, `${splitName}_il_pack.lss`);
   };
 
   const onToggleAct1Start = () => {
@@ -334,6 +406,12 @@ export default function SplitMaker(): ReactElement {
               id="download-button"
               text="Download"
               onClick={onDownload}
+              disabled={splitOutput.length === 0}
+            />
+            <ArrowButton
+              id="download-button"
+              text="Download ILs"
+              onClick={onDownloadILs}
               disabled={splitOutput.length === 0}
             />
           </div>
