@@ -26,6 +26,7 @@
         "enabled": true,
         "rules": {
             "preset": "none",
+            "a11y": { "useGenericFontNames": "error" },
             "complexity": {
                 "noAdjacentSpacesInRegex": "error",
                 "noBannedTypes": "error",
@@ -50,7 +51,11 @@
                 "noInnerDeclarations": "error",
                 "noInvalidBuiltinInstantiation": "error",
                 "noInvalidConstructorSuper": "error",
+                "noInvalidDirectionInLinearGradient": "error",
+                "noInvalidGridAreas": "error",
+                "noInvalidPositionAtImportRule": "error",
                 "noInvalidUseBeforeDeclaration": "warn",
+                "noMissingVarFunction": "error",
                 "noNonoctalDecimalEscape": "error",
                 "noPrecisionLoss": "error",
                 "noRenderReturnValue": "error",
@@ -58,6 +63,12 @@
                 "noSetterReturn": "error",
                 "noSwitchDeclarations": "error",
                 "noUndeclaredVariables": "error",
+                "noUnknownMediaFeatureName": "error",
+                "noUnknownProperty": "error",
+                "noUnknownPseudoClass": "error",
+                "noUnknownPseudoElement": "error",
+                "noUnknownTypeSelector": "error",
+                "noUnknownUnit": "error",
                 "noUnreachable": "error",
                 "noUnreachableSuper": "error",
                 "noUnsafeFinally": "error",
@@ -86,6 +97,7 @@
             },
             "style": {
                 "noCommonJs": "error",
+                "noDescendingSpecificity": "error",
                 "noNamespace": "error",
                 "noNestedTernary": "off",
                 "noParameterAssign": "error",
@@ -116,14 +128,21 @@
                 "noConfusingLabels": "error",
                 "noControlCharactersInRegex": "error",
                 "noDebugger": "error",
+                "noDuplicateAtImportRules": "error",
                 "noDuplicateCase": "error",
                 "noDuplicateClassMembers": "error",
+                "noDuplicateCustomProperties": "error",
                 "noDuplicateElseIf": "error",
                 "noDuplicateEnumValues": "error",
+                "noDuplicateFontNames": "error",
                 "noDuplicateJsxProps": "error",
                 "noDuplicateObjectKeys": "error",
                 "noDuplicateParameters": "error",
+                "noDuplicateProperties": "error",
+                "noDuplicateSelectors": "error",
+                "noEmptyBlock": "error",
                 "noEmptyBlockStatements": "error",
+                "noEmptySource": "error",
                 "noExplicitAny": "error",
                 "noExtraNonNullAssertion": "error",
                 "noFallthroughSwitchClause": "error",
@@ -131,6 +150,7 @@
                 "noFunctionAssign": "error",
                 "noGlobalAssign": "error",
                 "noImportAssign": "error",
+                "noImportantInKeyframe": "error",
                 "noIrregularWhitespace": "error",
                 "noLoopFunc": "error",
                 "noMisleadingCharacterClass": "error",
@@ -143,8 +163,10 @@
                 "noSelfCompare": "error",
                 "noShadow": { "level": "error", "options": {} },
                 "noShadowRestrictedNames": "error",
+                "noShorthandPropertyOverrides": "error",
                 "noSparseArray": "error",
                 "noTsIgnore": "error",
+                "noUnknownAtRules": "error",
                 "noUnknownAttribute": "error",
                 "noUnsafeDeclarationMerging": "error",
                 "noUnsafeNegation": "error",
@@ -158,7 +180,14 @@
                 "useNamespaceKeyword": "error"
             }
         },
-        "includes": ["**", "!**/dist/", "!src/external-lib/"]
+        "includes": [
+            "**",
+            "!**/dist/",
+            "!src/external-lib/",
+            "**",
+            "!**/node_modules/",
+            "!**/dist/"
+        ]
     },
     "javascript": {
         "formatter": {
