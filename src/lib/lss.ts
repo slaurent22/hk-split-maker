@@ -152,11 +152,11 @@ const SILKSONG_SCRIPT_NAME_NODE = {
 };
 
 function variablesAllGlitches(
-  variables: Record<string, string> | undefined
+  variables: Record<string, string> | undefined,
 ): boolean {
   if (variables) {
     return Object.values(variables).some(
-      (v) => v.includes("All Glitches") || v.includes("Fast")
+      (v) => v.includes("All Glitches") || v.includes("Fast"),
     );
   } else {
     return false;
@@ -166,7 +166,7 @@ function variablesAllGlitches(
 // <PauseOnMainMenu>False</PauseOnMainMenu>
 function hkPauseOnMainMenuNodes(
   pauseOnMainMenu: boolean | undefined,
-  variables: Record<string, string> | undefined
+  variables: Record<string, string> | undefined,
 ): Array<xml.XmlObject> {
   let pauseOnMainMenuMut = pauseOnMainMenu;
   if (pauseOnMainMenuMut === undefined) {
@@ -356,7 +356,7 @@ export async function createSplitsXml(
         { AutosplitStartRuns: config.startTriggeringAutosplit ?? "" },
         ...hkPauseOnMainMenuNodes(
           config.pauseOnMainMenu ?? config.pauseOnFileSelect,
-          config.variables
+          config.variables,
         ),
         { Splits: autosplits },
       ];
@@ -720,7 +720,7 @@ function parseHKAutoSplitterSettings(
       getTextContentByTagName(autoSplitterSettings, "AutosplitStartRuns") || "";
     const pauseOnMainMenuStr = getTextContentByTagName(
       autoSplitterSettings,
-      "PauseOnMainMenu"
+      "PauseOnMainMenu",
     );
     let pauseOnMainMenu: boolean | undefined;
     if (pauseOnMainMenuStr == "True") {
@@ -761,7 +761,7 @@ function parseHKAutoSplitterSettings(
     }
     const autostartId = autostartsplitIds[0];
     const xmlDocPauseOnMainMenu = xmlDocCustomSettings.querySelector(
-      '[id="pause_on_main_menu"]'
+      '[id="pause_on_main_menu"]',
     );
     let pauseOnMainMenu: boolean | undefined;
     if (xmlDocPauseOnMainMenu) {
