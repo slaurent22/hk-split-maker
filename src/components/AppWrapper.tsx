@@ -3,7 +3,7 @@ import { useDispatch } from "react-redux";
 import { useSearchParams } from "react-router-dom";
 import { useCurrentGame } from "../hooks";
 import { AppDispatch } from "../store";
-import { setGame, Game } from "../store/game-slice";
+import { Game, setGame } from "../store/game-slice";
 
 interface AppWrapperProps {
   children: ReactNode;

@@ -1,7 +1,7 @@
 import xml from "../external-lib/xml.js";
 import { Game } from "../store/game-slice";
-import { createLiveSplitIconData } from "./image-util";
 import { SplitDefinition } from "./hollowknight-splits";
+import { createLiveSplitIconData } from "./image-util";
 import { splitsFunctions } from "./splits";
 // import DefaultLayout from "./default-layout.xml";
 
@@ -152,7 +152,7 @@ const SILKSONG_SCRIPT_NAME_NODE = {
 // <Setting id="pause_on_file_select" type="bool">False</Setting>
 function silksongPauseOnFileSelectNodes(
   pauseOnFileSelect: boolean | undefined,
-  variables: Record<string, string> | undefined
+  variables: Record<string, string> | undefined,
 ): Array<xml.XmlObject> {
   let pauseOnFileSelectMut = pauseOnFileSelect;
   if (pauseOnFileSelectMut === undefined) {
@@ -185,7 +185,7 @@ function silksongPauseOnFileSelectNodes(
 export async function createSplitsXml(
   config: Config,
   game: Game,
-  includeIcons: boolean
+  includeIcons: boolean,
 ): Promise<string> {
   const {
     ordered = true,
@@ -219,7 +219,7 @@ export async function createSplitsXml(
     const splitDefinition = splitDefinitions.get(autosplitId);
     if (!splitDefinition) {
       throw new Error(
-        `Failed to find a definition for split id ${autosplitId}`
+        `Failed to find a definition for split id ${autosplitId}`,
       );
     }
 
@@ -239,7 +239,7 @@ export async function createSplitsXml(
       if (nameTemplate) {
         name = nameTemplate.replace(
           new RegExp("%s", "g"),
-          splitDefinition.name
+          splitDefinition.name,
         );
       }
     }
@@ -288,7 +288,7 @@ export async function createSplitsXml(
           console.error(`Failed to create icon data for ${url}`);
           console.error(e);
         }
-      })
+      }),
     );
   }
 
@@ -342,7 +342,7 @@ export async function createSplitsXml(
             SILKSONG_SCRIPT_NAME_NODE,
             ...silksongPauseOnFileSelectNodes(
               config.pauseOnFileSelect,
-              config.variables
+              config.variables,
             ),
             {
               Setting: [
@@ -378,14 +378,14 @@ export async function createSplitsXml(
     {
       declaration: true,
       indent: "  ",
-    }
+    },
   );
 }
 
 function makeAutoSplittingRuntimeComponent(
   splitIds: Array<string>,
   pauseOnFileSelect: boolean | undefined,
-  variables: Record<string, string> | undefined
+  variables: Record<string, string> | undefined,
 ): Record<string, unknown> {
   const splitList = [
     {
@@ -497,7 +497,7 @@ export function createLayoutXml(config: Config, game: Game): string {
             makeAutoSplittingRuntimeComponent(
               config.splitIds,
               config.pauseOnFileSelect,
-              config.variables
+              config.variables,
             ),
             {
               Component: [
@@ -654,7 +654,7 @@ export function createLayoutXml(config: Config, game: Game): string {
 
 function transformNameOverrideForImport(
   nameOverride: string,
-  splitDefinition?: SplitDefinition
+  splitDefinition?: SplitDefinition,
 ): string {
   if (nameOverride === "") {
     return "%s";
@@ -671,14 +671,14 @@ function getTextContent(element: Element | ChildNode): string | undefined {
 
 function getTextContentByTagName(
   element: Element | Document,
-  tagName: string
+  tagName: string,
 ): string | undefined {
   const elementByTagName = element.getElementsByTagName(tagName)[0];
   return elementByTagName ? getTextContent(elementByTagName) : "";
 }
 
 function parseHKAutoSplitterSettings(
-  autoSplitterSettings: Element
+  autoSplitterSettings: Element,
 ): ParsedHKAutoSplitterSettings {
   const xmlDocSplits = autoSplitterSettings.getElementsByTagName("Splits")[0];
   const xmlDocCustomSettings =
@@ -687,7 +687,7 @@ function parseHKAutoSplitterSettings(
     // Default autosplitter
     const autosplitEndRuns = getTextContentByTagName(
       autoSplitterSettings,
-      "AutosplitEndRuns"
+      "AutosplitEndRuns",
     );
     const orderedStr = getTextContentByTagName(autoSplitterSettings, "Ordered");
     const autoStart =
@@ -717,7 +717,7 @@ function parseHKAutoSplitterSettings(
           xmlDocSettings[i].getElementsByTagName("Setting");
         for (let j = 0; j < xmlDocSplitsSettings.length; j++) {
           autostartsplitIds.push(
-            xmlDocSplitsSettings[j].getAttribute("value") || ""
+            xmlDocSplitsSettings[j].getAttribute("value") || "",
           );
         }
       }
@@ -732,13 +732,13 @@ function parseHKAutoSplitterSettings(
     };
   } else {
     throw new Error(
-      `Failed to import splits: missing AutoSplitterSettings Splits`
+      `Failed to import splits: missing AutoSplitterSettings Splits`,
     );
   }
 }
 
 function parseSSAutoSplitterSettings(
-  autoSplitterSettings: Element
+  autoSplitterSettings: Element,
 ): ParsedSSAutosplitterSettings {
   const xmlDocCustomSettings =
     autoSplitterSettings.getElementsByTagName("CustomSettings")[0];
@@ -754,7 +754,7 @@ function parseSSAutoSplitterSettings(
     autosplitIds.push(autosplitId);
   }
   const xmlDocPauseOnFileSelect = xmlDocCustomSettings.querySelector(
-    '[id="pause_on_file_select"]'
+    '[id="pause_on_file_select"]',
   );
   let pauseOnFileSelect: boolean | undefined;
   if (xmlDocPauseOnFileSelect) {
@@ -795,7 +795,7 @@ function importHKSplitsXml(str: string): Config {
   }
   // AutoSplitterSettings -> startTriggeringAutosplit, splitIds, endTriggeringAutosplit
   let autoSplitterSettings = xmlDoc.getElementsByTagName(
-    "AutoSplitterSettings"
+    "AutoSplitterSettings",
   )[0];
   if (!autoSplitterSettings) {
     const xmlDocComponents0 = xmlDoc.getElementsByTagName("Components")[0];
@@ -862,7 +862,7 @@ function importHKSplitsXml(str: string): Config {
     return `${namePrefix}${autosplitId}`;
   });
   const uniqueAutosplitIds: Set<string> = new Set(
-    parsedSplitIds.map(({ autosplitId }) => autosplitId)
+    parsedSplitIds.map(({ autosplitId }) => autosplitId),
   );
   const { parseSplitsDefinitions } = splitsFunctions("hollowknight");
   const splitDefinitions = parseSplitsDefinitions();
@@ -876,7 +876,7 @@ function importHKSplitsXml(str: string): Config {
     if (
       splitDefinition &&
       splitNames.every(
-        (aName) => aName === "" || aName === splitDefinition.name
+        (aName) => aName === "" || aName === splitDefinition.name,
       )
     ) {
       // do nothing
@@ -889,7 +889,7 @@ function importHKSplitsXml(str: string): Config {
       nameOverrides.forEach((nameOverride, index) => {
         nameOverrides[index] = transformNameOverrideForImport(
           nameOverride,
-          splitDefinition
+          splitDefinition,
         );
       });
 
@@ -940,7 +940,7 @@ function importSSSplitsXml(str: string): Config {
     }
   }
   let autoSplitterSettings = xmlDoc.getElementsByTagName(
-    "AutoSplitterSettings"
+    "AutoSplitterSettings",
   )[0];
   if (!autoSplitterSettings) {
     const xmlDocComponents0 = xmlDoc.getElementsByTagName("Components")[0];
@@ -1001,7 +1001,7 @@ function importSSSplitsXml(str: string): Config {
     return `${namePrefix}${autosplitId}`;
   });
   const uniqueAutosplitIds: Set<string> = new Set(
-    parsedSplitIds.map(({ autosplitId }) => autosplitId)
+    parsedSplitIds.map(({ autosplitId }) => autosplitId),
   );
   const { parseSplitsDefinitions } = splitsFunctions("silksong");
   const splitDefinitions = parseSplitsDefinitions();
@@ -1015,7 +1015,7 @@ function importSSSplitsXml(str: string): Config {
     if (
       splitDefinition &&
       splitNames.every(
-        (aName) => aName === "" || aName === splitDefinition.name
+        (aName) => aName === "" || aName === splitDefinition.name,
       )
     ) {
       // do nothing
@@ -1028,7 +1028,7 @@ function importSSSplitsXml(str: string): Config {
       nameOverrides.forEach((nameOverride, index) => {
         nameOverrides[index] = transformNameOverrideForImport(
           nameOverride,
-          splitDefinition
+          splitDefinition,
         );
       });
 

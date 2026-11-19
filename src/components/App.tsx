@@ -1,12 +1,12 @@
 import React, { ReactElement } from "react";
-import { Tab, Tabs, TabList, TabPanel } from "react-tabs";
 import { useSearchParams } from "react-router-dom";
+import { Tab, TabList, TabPanel, Tabs } from "react-tabs";
 import { useCurrentGame } from "../hooks";
 import { Game } from "../store/game-slice";
-import Header from "./Header";
-import Instructions from "./Instructions";
 import AlertBanner from "./AlertBanner";
 import Footer from "./Footer";
+import Header from "./Header";
+import Instructions from "./Instructions";
 import SplitMaker from "./SplitMaker";
 
 export default function App(): ReactElement {

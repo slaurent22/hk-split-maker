@@ -1,5 +1,5 @@
-import splits from "../asset/silksong/splits.json";
 import Icons from "../asset/silksong/icons/icons";
+import splits from "../asset/silksong/splits.json";
 
 export const DESCRIPTION_NAME_REGEXP = /(?<name>.+)\s+\((?<qualifier>.+)\)/;
 
@@ -125,7 +125,7 @@ function getGroupedSplitDefinitions() {
       groupedSplitDefinitions.set(split.group, []);
     }
     const group = groupedSplitDefinitions.get(
-      split.group
+      split.group,
     ) as Array<SplitDefinition>;
     group.push(split);
   }
