@@ -40,7 +40,7 @@
                 "noUselessCatch": "error",
                 "noUselessEscapeInRegex": "error",
                 "noUselessLoneBlockStatements": "error",
-                "noUselessStringConcat": "warn",
+                "noUselessStringConcat": "error",
                 "noUselessThisAlias": "error",
                 "noUselessTypeConstraint": "error",
                 "noUselessUndefinedInitialization": "error",
@@ -59,7 +59,7 @@
                 "noInvalidDirectionInLinearGradient": "error",
                 "noInvalidGridAreas": "error",
                 "noInvalidPositionAtImportRule": "error",
-                "noInvalidUseBeforeDeclaration": "warn",
+                "noInvalidUseBeforeDeclaration": "error",
                 "noMissingVarFunction": "error",
                 "noNonoctalDecimalEscape": "error",
                 "noPrecisionLoss": "error",
@@ -81,7 +81,7 @@
                 "noUnusedInstantiation": "error",
                 "noUnusedLabels": "error",
                 "noUnusedVariables": {
-                    "level": "warn",
+                    "level": "error",
                     "options": {
                         "ignoreRestSiblings": false,
                         "ignoreUsingDeclarations": false
@@ -106,20 +106,20 @@
                 "noNamespace": "error",
                 "noNestedTernary": "off",
                 "noParameterAssign": "error",
-                "noYodaExpression": "warn",
+                "noYodaExpression": "error",
                 "useArrayLiterals": "error",
                 "useAsConstAssertion": "error",
                 "useBlockStatements": "off",
                 "useConsistentBuiltinInstantiation": "error",
                 "useConsistentMemberAccessibility": {
-                    "level": "warn",
+                    "level": "error",
                     "options": {}
                 },
-                "useConsistentTypeDefinitions": "warn",
+                "useConsistentTypeDefinitions": "error",
                 "useConst": "error",
-                "useDefaultParameterLast": "warn",
+                "useDefaultParameterLast": "error",
                 "useDefaultSwitchClause": "error",
-                "useGroupedAccessorPairs": "warn",
+                "useGroupedAccessorPairs": "error",
                 "useImportType": { "level": "error", "options": {} },
                 "useThrowOnlyError": "error"
             },
