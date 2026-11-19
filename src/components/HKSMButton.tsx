@@ -1,5 +1,5 @@
 import classNames from "classnames";
-import type React from "react";
+import React from "react";
 import "./HKSMButton.css";
 
 interface Props {
