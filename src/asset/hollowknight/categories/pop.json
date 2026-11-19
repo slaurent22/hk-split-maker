@@ -14,5 +14,6 @@
         "PathOfPain": "Room 4"
     },
     "endTriggeringAutosplit": true,
-    "gameName": "Hollow Knight"
+    "gameName": "Hollow Knight",
+    "pauseOnMainMenu": true
 }
