@@ -84,6 +84,8 @@
         "xml-formatter": "^2.4.0"
     },
     "lint-staged": {
-        "*.{js,jsx,ts,tsx,css,md,json,yml}": ["biome check --write"]
+        "*.{js,jsx,ts,tsx,css,md,json,yml}": [
+            "biome check --write --no-errors-on-unmatched"
+        ]
     }
 }
