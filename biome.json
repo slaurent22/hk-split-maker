@@ -44,7 +44,7 @@
                 "noUselessThisAlias": "error",
                 "noUselessTypeConstraint": "error",
                 "noUselessUndefinedInitialization": "error",
-                "noVoid": "off"
+                "noVoid": "error"
             },
             "correctness": {
                 "noChildrenProp": "error",
