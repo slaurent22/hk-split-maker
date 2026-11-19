@@ -1,4 +1,3 @@
-/* eslint-disable @typescript-eslint/no-unsafe-return */
 import React, { ReactElement } from "react";
 import Select, {
   CSSObjectWithLabel,

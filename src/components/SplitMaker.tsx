@@ -36,7 +36,6 @@ export default function SplitMaker(): ReactElement {
   const [searchParams, setSearchParams] = useSearchParams();
   const builtin = searchParams.get("builtin") ?? undefined;
   const config = searchParams.get("config") ?? undefined;
-  // eslint-disable-next-line @typescript-eslint/no-unsafe-assignment
   const initialConfig = config ? JSON.parse(atob(config)) : defaultCategory;
   const [configInput, setConfigInput] = useState(
     JSON.stringify(initialConfig, null, 4),
@@ -274,7 +273,6 @@ export default function SplitMaker(): ReactElement {
               text="Generate"
               id="submit-button"
               // needs to be a promise for Generate to work
-              /* eslint-disable @typescript-eslint/no-misused-promises */
               onClick={onSubmit}
             />
             <ShareButton
