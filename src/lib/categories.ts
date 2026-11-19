@@ -4,10 +4,10 @@
   Not entirely true in terms of LiveSplit naming, but close enough.
 */
 import HKCategoryDirectory, {
-  CategoryDefinition,
+  type CategoryDefinition,
 } from "../asset/hollowknight/categories/category-directory.json";
 import SSCategoryDirectory from "../asset/silksong/categories/category-directory.json";
-import { Game } from "../store/game-slice";
+import type { Game } from "../store/game-slice";
 
 interface CatContent {
   splitIds: Array<string>;

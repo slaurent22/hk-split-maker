@@ -120,7 +120,7 @@
                 "useDefaultParameterLast": "warn",
                 "useDefaultSwitchClause": "off",
                 "useGroupedAccessorPairs": "warn",
-                "useImportType": { "level": "off", "options": {} },
+                "useImportType": { "level": "error", "options": {} },
                 "useThrowOnlyError": "error"
             },
             "suspicious": {

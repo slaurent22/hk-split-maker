@@ -1,4 +1,4 @@
-import { Game } from "../store/game-slice";
+import type { Game } from "../store/game-slice";
 import * as HollowKnightSplits from "./hollowknight-splits";
 import * as SilksongSplits from "./silksong-splits";
 

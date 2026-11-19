@@ -1,8 +1,8 @@
-import React, { ReactElement } from "react";
+import React, { type ReactElement } from "react";
 import { useSearchParams } from "react-router-dom";
 import { Tab, TabList, TabPanel, Tabs } from "react-tabs";
 import { useCurrentGame } from "../hooks";
-import { Game } from "../store/game-slice";
+import type { Game } from "../store/game-slice";
 import AlertBanner from "./AlertBanner";
 import Footer from "./Footer";
 import Header from "./Header";
