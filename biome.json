@@ -118,7 +118,7 @@
                 "useConsistentTypeDefinitions": "warn",
                 "useConst": "error",
                 "useDefaultParameterLast": "warn",
-                "useDefaultSwitchClause": "off",
+                "useDefaultSwitchClause": "error",
                 "useGroupedAccessorPairs": "warn",
                 "useImportType": { "level": "error", "options": {} },
                 "useThrowOnlyError": "error"

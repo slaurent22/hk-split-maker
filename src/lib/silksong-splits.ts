@@ -31,6 +31,7 @@ function getNameAndGroup({
   if (match && match.groups) {
     ({ name, qualifier } = match.groups);
   }
+  // biome-ignore lint/style/useDefaultSwitchClause: intentional passthrough
   switch (qualifier) {
     case "Flea":
       if (name.startsWith("Rescued")) {
@@ -42,6 +43,7 @@ function getNameAndGroup({
     case "Ventrica":
       return [`${name} Ventrica`, qualifier];
   }
+  // biome-ignore lint/style/useDefaultSwitchClause: intentional passthrough
   switch (id) {
     case "MossMotherTrans":
     case "SilkSpearTrans":
