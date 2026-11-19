@@ -23,7 +23,6 @@ export function splitsFunctions(game: Game): SplitsFunctions {
         getIconURLs: SilksongSplits.getIconURLs,
       };
     default:
-      // eslint-disable-next-line @typescript-eslint/restrict-template-expressions
       throw new Error(`invalid game ${game}`);
   }
 }

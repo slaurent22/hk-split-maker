@@ -9,7 +9,7 @@ permissions:
   contents: write
 
 jobs:
-  prettier:
+  autoformat:
     runs-on: ubuntu-latest
 
     steps:

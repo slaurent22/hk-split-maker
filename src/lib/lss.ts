@@ -356,7 +356,6 @@ export async function createSplitsXml(
       break;
     }
     default:
-      // eslint-disable-next-line @typescript-eslint/restrict-template-expressions
       throw new Error(`Invalid game ${game}`);
   }
 
@@ -1058,7 +1057,6 @@ export function importSplitsXml(str: string, game: Game): Config {
     case "silksong":
       return importSSSplitsXml(str);
     default:
-      // eslint-disable-next-line @typescript-eslint/restrict-template-expressions
       throw new Error(`invalid game ${game}`);
   }
 }

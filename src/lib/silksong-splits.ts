@@ -31,7 +31,6 @@ function getNameAndGroup({
   if (match && match.groups) {
     ({ name, qualifier } = match.groups);
   }
-  // eslint-disable-next-line default-case
   switch (qualifier) {
     case "Flea":
       if (name.startsWith("Rescued")) {
@@ -43,7 +42,6 @@ function getNameAndGroup({
     case "Ventrica":
       return [`${name} Ventrica`, qualifier];
   }
-  // eslint-disable-next-line default-case
   switch (id) {
     case "MossMotherTrans":
     case "SilkSpearTrans":
