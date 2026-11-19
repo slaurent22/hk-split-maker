@@ -204,7 +204,8 @@
             "quoteStyle": "double",
             "attributePosition": "auto",
             "bracketSpacing": true
-        }
+        },
+        "jsxRuntime": "reactClassic"
     },
     "html": {
         "formatter": {
