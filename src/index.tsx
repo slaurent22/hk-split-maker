@@ -18,5 +18,5 @@ createRoot(root).render(
         </AppWrapper>
       </BrowserRouter>
     </Provider>
-  </React.StrictMode>
+  </React.StrictMode>,
 );

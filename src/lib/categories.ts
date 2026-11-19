@@ -1,5 +1,3 @@
-import { Game } from "../store/game-slice";
-
 /*
   What is called "splits" in this app refers to the segments of a split file.
   Since the name "splits" is taken, we'll call the complete configuration "category".
@@ -8,8 +6,8 @@ import { Game } from "../store/game-slice";
 import HKCategoryDirectory, {
   CategoryDefinition,
 } from "../asset/hollowknight/categories/category-directory.json";
-
 import SSCategoryDirectory from "../asset/silksong/categories/category-directory.json";
+import { Game } from "../store/game-slice";
 
 interface CatContent {
   splitIds: Array<string>;
@@ -21,14 +19,14 @@ interface CatContent {
 }
 
 export function getCategoryDirectory(
-  game: Game
+  game: Game,
 ): Record<string, Array<CategoryDefinition>> {
   return game === "hollowknight" ? HKCategoryDirectory : SSCategoryDirectory;
 }
 
 export async function getCategoryConfigJSON(
   fileName: string,
-  game: Game
+  game: Game,
 ): Promise<string> {
   // This results in a dire warning because we're importing arbitrary data.
   // In the case of the icon files, we have a set of functions for the files.

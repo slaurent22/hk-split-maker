@@ -1,5 +1,5 @@
-import splits from "../asset/hollowknight/splits.txt";
 import Icons from "../asset/hollowknight/icons/icons";
+import splits from "../asset/hollowknight/splits.txt";
 
 const SPLITS_DEFINITIONS_REGEXP =
   /\[Description\("(?<description>.+)"\), ToolTip\("(?<tooltip>.+)"\)\]\s+(?<id>\w+),/g;
@@ -227,7 +227,7 @@ function getGroupedSplitDefinitions() {
       groupedSplitDefinitions.set(split.group, []);
     }
     const group = groupedSplitDefinitions.get(
-      split.group
+      split.group,
     ) as Array<SplitDefinition>;
     group.push(split);
   }

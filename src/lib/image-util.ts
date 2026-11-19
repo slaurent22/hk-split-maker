@@ -25,7 +25,7 @@ function toBase64(uint8Array: Uint8Array): string {
 }
 
 export async function createLiveSplitIconData(
-  imageUrl: string
+  imageUrl: string,
 ): Promise<string> {
   const imageBuffer = await fetchAsArrayBuffer(imageUrl);
   const imageBytes = prependByteSeparator(new Uint8Array(imageBuffer));

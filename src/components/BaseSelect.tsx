@@ -1,11 +1,11 @@
 /* eslint-disable @typescript-eslint/no-unsafe-return */
 import React, { ReactElement } from "react";
 import Select, {
+  CSSObjectWithLabel,
   GroupBase,
   Props,
   StylesConfig,
   Theme,
-  CSSObjectWithLabel,
 } from "react-select";
 
 function createOnMenuOpen(classNamePrefix: string) {
@@ -14,7 +14,7 @@ function createOnMenuOpen(classNamePrefix: string) {
   return () => {
     setTimeout(() => {
       const selectedEl = document.getElementsByClassName(
-        `${classNamePrefix}__option--is-selected`
+        `${classNamePrefix}__option--is-selected`,
       )[0];
       if (selectedEl) {
         selectedEl.scrollIntoView({ block: "center" });
@@ -44,7 +44,7 @@ function getGroupColor(section: string): string {
 function createCustomStyles<
   Option,
   IsMulti extends boolean = false,
-  Group extends GroupBase<Option> = GroupBase<Option>
+  Group extends GroupBase<Option> = GroupBase<Option>,
 >({
   controlStyleOverrides,
 }: {
@@ -120,11 +120,11 @@ function customTheme(theme: Theme): Theme {
 export default function BaseSelect<
   Option,
   IsMulti extends boolean = false,
-  Group extends GroupBase<Option> = GroupBase<Option>
+  Group extends GroupBase<Option> = GroupBase<Option>,
 >(
   props: Props<Option, IsMulti, Group> & {
     controlStyleOverrides?: CSSObjectWithLabel;
-  }
+  },
 ): ReactElement {
   return (
     <Select

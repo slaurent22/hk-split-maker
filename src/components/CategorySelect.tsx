@@ -1,11 +1,11 @@
 import React, { ReactElement } from "react";
 import {
-  GroupBase,
-  OptionProps,
-  SingleValueProps,
   ContainerProps,
   components,
   createFilter,
+  GroupBase,
+  OptionProps,
+  SingleValueProps,
 } from "react-select";
 import { CategoryDefinition } from "../asset/hollowknight/categories/category-directory.json";
 import Schy from "../asset/image/schy.png";
@@ -97,7 +97,7 @@ function SchyPicture(): ReactElement {
 
 function CategorySelectOption<
   IsMulti extends boolean = false,
-  Group extends GroupBase<CategoryOption> = GroupBase<CategoryOption>
+  Group extends GroupBase<CategoryOption> = GroupBase<CategoryOption>,
 >({
   children,
   ...rest
@@ -116,7 +116,7 @@ function CategorySelectOption<
 
 function CategorySelectSingleValue<
   IsMulti extends boolean = false,
-  Group extends GroupBase<CategoryOption> = GroupBase<CategoryOption>
+  Group extends GroupBase<CategoryOption> = GroupBase<CategoryOption>,
 >({
   children,
   ...rest
@@ -134,7 +134,7 @@ function CategorySelectSingleValue<
 
 function CategorySelectSelectContainer<
   IsMulti extends boolean = false,
-  Group extends GroupBase<CategoryOption> = GroupBase<CategoryOption>
+  Group extends GroupBase<CategoryOption> = GroupBase<CategoryOption>,
 >({
   children,
   ...rest
