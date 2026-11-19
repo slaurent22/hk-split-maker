@@ -23,11 +23,11 @@ declare namespace xml {
          * Add default xml declaration (default false)
          */
         declaration?:
-        | boolean
-        | {
-            encoding?: string;
-            standalone?: string;
-        };
+            | boolean
+            | {
+                  encoding?: string;
+                  standalone?: string;
+              };
     }
 
     interface XmlAttrs {
