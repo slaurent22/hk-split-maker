@@ -104,12 +104,12 @@
                 "noCommonJs": "error",
                 "noDescendingSpecificity": "error",
                 "noNamespace": "error",
-                "noNestedTernary": "off",
+                "noNestedTernary": "error",
                 "noParameterAssign": "error",
                 "noYodaExpression": "error",
                 "useArrayLiterals": "error",
                 "useAsConstAssertion": "error",
-                "useBlockStatements": "off",
+                "useBlockStatements": "error",
                 "useConsistentBuiltinInstantiation": "error",
                 "useConsistentMemberAccessibility": {
                     "level": "error",
@@ -175,7 +175,7 @@
                 "noUnknownAttribute": "error",
                 "noUnsafeDeclarationMerging": "error",
                 "noUnsafeNegation": "error",
-                "noUnusedExpressions": "off",
+                "noUnusedExpressions": "error",
                 "noUselessRegexBackrefs": "error",
                 "noVar": "error",
                 "noWith": "error",
@@ -218,7 +218,6 @@
             "linter": {
                 "rules": {
                     "style": {
-                        "useConsistentMemberAccessibility": "off",
                         "noCommonJs": "off"
                     }
                 }
