@@ -1,10 +1,10 @@
-import React, { ReactElement } from "react";
+import React, { type ReactElement } from "react";
 import Select, {
-  CSSObjectWithLabel,
-  GroupBase,
-  Props,
-  StylesConfig,
-  Theme,
+  type CSSObjectWithLabel,
+  type GroupBase,
+  type Props,
+  type StylesConfig,
+  type Theme,
 } from "react-select";
 
 function createOnMenuOpen(classNamePrefix: string) {

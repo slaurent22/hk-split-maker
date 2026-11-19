@@ -1,10 +1,11 @@
-import React, { ReactElement, useMemo } from "react";
+import type React from "react";
+import { type ReactElement, useMemo } from "react";
 import {
-  CSSObjectWithLabel,
+  type CSSObjectWithLabel,
   components,
-  GroupBase,
-  OptionProps,
-  PropsValue,
+  type GroupBase,
+  type OptionProps,
+  type PropsValue,
 } from "react-select";
 import { useSplitsFunctions } from "../hooks";
 import BaseSelect from "./BaseSelect";

@@ -1,4 +1,4 @@
-import React, { ReactElement } from "react";
+import React, { type ReactElement } from "react";
 
 export default function Footer(): ReactElement {
   const commit = process.env.GIT_VERSION;
