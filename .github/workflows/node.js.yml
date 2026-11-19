@@ -5,9 +5,9 @@ name: Node.js CI
 
 on:
   push:
-    branches: [main]
+    branches: [ main ]
   pull_request:
-    branches: [main]
+    branches: [ main ]
 
 jobs:
   build:
@@ -15,7 +15,7 @@ jobs:
 
     strategy:
       matrix:
-        node-version: [24.13.0]
+        node-version: [ 24.13.0 ]
         # See supported Node.js release schedule at https://nodejs.org/en/about/releases/
 
     steps:
@@ -25,8 +25,7 @@ jobs:
         with:
           node-version: ${{ matrix.node-version }}
       - run: npm ci
-      - run: npm run eslint
-      - run: npm run stylelint
+      - run: npm run lint
       - run: npm run check-json
       - run: npm run test
       - run: npm run build-prod

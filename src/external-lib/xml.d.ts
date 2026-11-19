@@ -1,4 +1,6 @@
-/* eslint-disable */
+// biome-ignore-all lint: reason
+// biome-ignore-all assist: reason
+// biome-ignore-all format: reason
 
 // Type definitions for xml 1.0
 // Project: http://github.com/dylang/node-xml
@@ -21,11 +23,11 @@ declare namespace xml {
          * Add default xml declaration (default false)
          */
         declaration?:
-            | boolean
-            | {
-                  encoding?: string;
-                  standalone?: string;
-              };
+        | boolean
+        | {
+            encoding?: string;
+            standalone?: string;
+        };
     }
 
     interface XmlAttrs {

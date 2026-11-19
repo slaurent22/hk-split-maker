@@ -8,14 +8,10 @@
         "gen-files-ss": "node tools/gen-files-ss.js",
         "build-prod": "del-cli dist/** && webpack --mode production",
         "serve": "webpack serve --mode development --port 8080",
-        "eslint": "eslint --max-warnings 0 .",
-        "eslintfix": "eslint --fix .",
-        "stylelint": "stylelint **/*.css",
-        "stylelintfix": "stylelint --fix **/*.css",
-        "lint": "npm run eslint && npm run stylelint",
-        "lintfix": "npm run eslintfix && npm run stylelintfix",
-        "prettier-check": "npx prettier --check .",
-        "prettier-write": "npx prettier --write .",
+        "lint": "biome check --formatter-enabled=false --assist-enabled=false",
+        "lintfix": "biome check --write --formatter-enabled=false --assist-enabled=false",
+        "format-check": "biome check --linter-enabled=false",
+        "format": "biome check --write --linter-enabled=false",
         "test": "jest",
         "test:coverage": "jest --coverage",
         "postinstall": "husky install",
@@ -94,14 +90,6 @@
         "xml-formatter": "^2.4.0"
     },
     "lint-staged": {
-        "*.{js,jsx,ts,tsx}": [
-            "eslint --max-warnings 0 --cache --fix",
-            "prettier --write"
-        ],
-        "*.css": [
-            "stylelint --fix",
-            "prettier --write"
-        ],
-        "*.{md,json}": "prettier --write"
+        "*.{js,jsx,ts,tsx,css,md,json,yml}": ["biome check --write"]
     }
 }

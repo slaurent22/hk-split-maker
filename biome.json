@@ -16,11 +16,16 @@
         "useEditorconfig": true,
         "includes": [
             "**",
-            "!**/node_modules/",
-            "!**/dist/",
-            "!**/.vscode/",
-            "!src/external-lib/"
+            "!**/node_modules/**",
+            "!**/dist/**",
+            "!**/.vscode/**",
+            "!src/external-lib/**"
         ]
+    },
+    "json": {
+        "formatter": {
+            "indentWidth": 4
+        }
     },
     "linter": {
         "enabled": true,
@@ -39,7 +44,7 @@
                 "noUselessThisAlias": "error",
                 "noUselessTypeConstraint": "error",
                 "noUselessUndefinedInitialization": "error",
-                "noVoid": "error"
+                "noVoid": "off"
             },
             "correctness": {
                 "noChildrenProp": "error",
@@ -89,7 +94,7 @@
                 "useValidTypeof": "error",
                 "useYield": "error"
             },
-            "performance": { "noAwaitInLoops": "error", "noDelete": "error" },
+            "performance": { "noAwaitInLoops": "error", "noDelete": "off" },
             "security": {
                 "noBlankTarget": "error",
                 "noDangerouslySetInnerHtmlWithChildren": "error",
@@ -113,9 +118,9 @@
                 "useConsistentTypeDefinitions": "warn",
                 "useConst": "error",
                 "useDefaultParameterLast": "warn",
-                "useDefaultSwitchClause": "error",
+                "useDefaultSwitchClause": "off",
                 "useGroupedAccessorPairs": "warn",
-                "useImportType": { "level": "warn", "options": {} },
+                "useImportType": { "level": "off", "options": {} },
                 "useThrowOnlyError": "error"
             },
             "suspicious": {
@@ -182,11 +187,10 @@
         },
         "includes": [
             "**",
-            "!**/dist/",
-            "!src/external-lib/",
-            "**",
-            "!**/node_modules/",
-            "!**/dist/"
+            "!**/node_modules/**",
+            "!**/dist/**",
+            "!**/.vscode/**",
+            "!src/external-lib/**"
         ]
     },
     "javascript": {
@@ -210,14 +214,22 @@
     },
     "overrides": [
         {
-            "includes": ["*.js"],
+            "includes": ["**/*.js"],
             "linter": {
                 "rules": {
-                    "style": { "useConsistentMemberAccessibility": "off" }
+                    "style": {
+                        "useConsistentMemberAccessibility": "off",
+                        "noCommonJs": "off"
+                    }
                 }
             }
         },
-        { "includes": ["*.json"], "formatter": { "indentWidth": 4 } }
+        {
+            "includes": ["tests/**"],
+            "javascript": {
+                "globals": ["describe", "expect", "test", "it"]
+            }
+        }
     ],
     "assist": {
         "enabled": true,
