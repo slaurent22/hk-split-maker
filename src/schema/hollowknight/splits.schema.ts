@@ -10,7 +10,7 @@ const SPLITS_SCHEMA = SPLITS.map(
       description,
       const: id,
     };
-  }
+  },
 );
 
 const SUBSPLITS_SCHEMA = SPLITS.map(
@@ -20,7 +20,7 @@ const SUBSPLITS_SCHEMA = SPLITS.map(
       description: `(subsplit) ${description}`,
       const: `-${id}`,
     };
-  }
+  },
 );
 
 interface SplitIdItem {

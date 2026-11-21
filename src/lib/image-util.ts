@@ -9,7 +9,6 @@ async function fetchAsArrayBuffer(imageUrl: string): Promise<ArrayBuffer> {
   return response.arrayBuffer();
 }
 
-// eslint-disable-next-line max-len
 const LIVESPLIT_FORMAT_HEADER =
   "AAEAAAD/////AQAAAAAAAAAMAgAAAFFTeXN0ZW0uRHJhd2luZywgVmVyc2lvbj00LjAuMC4wLCBDdWx0dXJlPW5ldXRyYWwsIFB1YmxpY0tleVRva2VuPWIwM2Y1ZjdmMTFkNTBhM2EFAQAAABVTeXN0ZW0uRHJhd2luZy5CaXRtYXABAAAABERhdGEHAgIAAAAJAwAAAA8DAAAAOw8A";
 
@@ -25,7 +24,7 @@ function toBase64(uint8Array: Uint8Array): string {
 }
 
 export async function createLiveSplitIconData(
-  imageUrl: string
+  imageUrl: string,
 ): Promise<string> {
   const imageBuffer = await fetchAsArrayBuffer(imageUrl);
   const imageBytes = prependByteSeparator(new Uint8Array(imageBuffer));

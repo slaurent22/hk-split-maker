@@ -1,24 +1,24 @@
-import React, { useEffect, useRef, useState, ReactElement } from "react";
-import Editor, { useMonaco, Monaco } from "@monaco-editor/react";
-import { editor, Uri } from "monaco-editor";
-import { ItemInterface, ReactSortable } from "react-sortablejs";
+import Editor, { type Monaco, useMonaco } from "@monaco-editor/react";
+import JSON5 from "json5";
+import { type editor, Uri } from "monaco-editor";
+import React, { type ReactElement, useEffect, useRef, useState } from "react";
 import {
+  TiArrowMaximise,
+  TiArrowMinimise,
+  TiArrowMove,
+  TiChevronRight,
   TiDelete,
   TiPlus,
-  TiChevronRight,
-  TiArrowMove,
-  TiArrowMinimise,
-  TiArrowMaximise,
 } from "react-icons/ti";
-import { Tab, Tabs, TabList, TabPanel } from "react-tabs";
-import JSON5 from "json5";
+import { type ItemInterface, ReactSortable } from "react-sortablejs";
+import { Tab, TabList, TabPanel, Tabs } from "react-tabs";
+import { useCurrentGame } from "../hooks";
+import { parseSplitsDefinitions as HollowKnightParseSplitsDefinitions } from "../lib/hollowknight-splits";
+import { type Config, SUB_SPLIT_RE } from "../lib/lss";
+import { parseSplitsDefinitions as SilksongParseSplitsDefinitions } from "../lib/silksong-splits";
 import HKSplitConfigSchema from "../schema/hollowknight/splits.schema";
 import SSSplitConfigSchema from "../schema/silksong/splits.schema";
-import { Config, SUB_SPLIT_RE } from "../lib/lss";
-import { parseSplitsDefinitions as HollowKnightParseSplitsDefinitions } from "../lib/hollowknight-splits";
-import { parseSplitsDefinitions as SilksongParseSplitsDefinitions } from "../lib/silksong-splits";
-import { useCurrentGame } from "../hooks";
-import SplitSelect, { SplitOption } from "./SplitSelect";
+import SplitSelect, { type SplitOption } from "./SplitSelect";
 import Tooltip from "./Tooltip";
 import "react-tabs/style/react-tabs.css";
 
@@ -330,7 +330,7 @@ function EndTriggeringAutosplit({
 type SplitIdItemInterface = ItemInterface & { splitId: string };
 
 function getItemInterfaceArr(
-  splitIds: Array<string>
+  splitIds: Array<string>,
 ): Array<SplitIdItemInterface> {
   return splitIds.map((splitId, index) => {
     return {
@@ -355,7 +355,7 @@ export default function SplitConfigEditor(props: Props): ReactElement {
 
   const editorRef = useRef<editor.IStandaloneCodeEditor | null>(null);
   const handleEditorDidMount = (
-    editorInstance: editor.IStandaloneCodeEditor
+    editorInstance: editor.IStandaloneCodeEditor,
   ) => {
     editorRef.current = editorInstance;
   };

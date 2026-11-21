@@ -1,4 +1,9 @@
-import React, { ReactNode, ReactElement, cloneElement, useId } from "react";
+import React, {
+  cloneElement,
+  type ReactElement,
+  type ReactNode,
+  useId,
+} from "react";
 import { Tooltip as ReactTooltip } from "react-tooltip";
 
 interface TooltipProps {

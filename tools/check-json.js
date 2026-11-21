@@ -1,4 +1,6 @@
-/* eslint-disable */
+// biome-ignore-all lint: reason
+// biome-ignore-all assist: reason
+// biome-ignore-all format: reason
 
 const fs = require("fs");
 const path = require("path");

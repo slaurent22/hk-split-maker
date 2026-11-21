@@ -43,6 +43,13 @@ nvm run serve
 
 Additional scripts (unit tests, production build) can be found in `package.json`.
 
+### Linting and Formatting
+
+This project uses [biome](https://biomejs.dev/) for both linting and formatting.
+It additionally uses `husky` and `lint-staged` to set up pre-commit hooks on modified files.
+The simplest invocation is `npm run biome` to autofix / format and report lint errors.
+Other linting and formatting scripts are available in `package.json`.
+
 ### Adding New and Updated Autosplits for Hollow Knight
 
 1. Copy the contents of `public enum SplitName` from

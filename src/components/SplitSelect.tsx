@@ -1,14 +1,14 @@
-import React, { ReactElement, useMemo } from "react";
+import React, { type ReactElement, useMemo } from "react";
 import {
-  GroupBase,
-  OptionProps,
+  type CSSObjectWithLabel,
   components,
-  PropsValue,
-  CSSObjectWithLabel,
+  type GroupBase,
+  type OptionProps,
+  type PropsValue,
 } from "react-select";
 import { useSplitsFunctions } from "../hooks";
-import Tooltip from "./Tooltip";
 import BaseSelect from "./BaseSelect";
+import Tooltip from "./Tooltip";
 
 export interface SplitOption {
   value: string;
@@ -24,7 +24,7 @@ interface Props {
 
 function SplitSelectOption<
   IsMulti extends boolean = false,
-  Group extends GroupBase<SplitOption> = GroupBase<SplitOption>
+  Group extends GroupBase<SplitOption> = GroupBase<SplitOption>,
 >({
   children,
   ...rest
@@ -55,7 +55,7 @@ const SplitSelect: React.FC<Props> = ({
   const { getSelectOptionGroups } = useSplitsFunctions();
   const options = useMemo(
     () => getSelectOptionGroups(),
-    [getSelectOptionGroups]
+    [getSelectOptionGroups],
   );
   return (
     <BaseSelect<SplitOption>

@@ -1,4 +1,4 @@
-import { Game } from "../store/game-slice";
+import type { Game } from "../store/game-slice";
 import * as HollowKnightSplits from "./hollowknight-splits";
 import * as SilksongSplits from "./silksong-splits";
 
@@ -23,7 +23,6 @@ export function splitsFunctions(game: Game): SplitsFunctions {
         getIconURLs: SilksongSplits.getIconURLs,
       };
     default:
-      // eslint-disable-next-line @typescript-eslint/restrict-template-expressions
       throw new Error(`invalid game ${game}`);
   }
 }

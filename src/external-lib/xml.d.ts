@@ -1,4 +1,6 @@
-/* eslint-disable */
+// biome-ignore-all lint: reason
+// biome-ignore-all assist: reason
+// biome-ignore-all format: reason
 
 // Type definitions for xml 1.0
 // Project: http://github.com/dylang/node-xml

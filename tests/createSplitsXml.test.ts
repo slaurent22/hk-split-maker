@@ -1,4 +1,4 @@
-import { Config, createSplitsXml } from "../src/lib/lss";
+import { type Config, createSplitsXml } from "../src/lib/lss";
 
 const silksongConfig: Config = {
   categoryName: "Category Name",
@@ -19,22 +19,22 @@ describe("createSplitsXml", () => {
       const splitsXml = await createSplitsXml(
         silksongConfig,
         "silksong",
-        false
+        false,
       );
       expect(splitsXml).toBeDefined();
       expect(splitsXml).toContain(
-        "<GameName>Hollow Knight: Silksong</GameName>"
+        "<GameName>Hollow Knight: Silksong</GameName>",
       );
       expect(splitsXml).toContain("<CategoryName>Category Name</CategoryName>");
       expect(splitsXml).toContain(
-        '<Setting type="string" value="StartNewGame">'
+        '<Setting type="string" value="StartNewGame">',
       );
       expect(splitsXml).toContain('<Setting type="string" value="BenchAny">');
       expect(splitsXml).toContain(
-        '<Setting type="string" value="GainedCurse">'
+        '<Setting type="string" value="GainedCurse">',
       );
       expect(splitsXml).toContain(
-        '<Setting type="string" value="PlayerDeath">'
+        '<Setting type="string" value="PlayerDeath">',
       );
     });
   });

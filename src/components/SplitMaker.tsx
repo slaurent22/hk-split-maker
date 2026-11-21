@@ -1,27 +1,27 @@
+import { saveAs } from "file-saver";
+import JSON5 from "json5";
 import React, {
+  type ChangeEvent,
+  lazy,
+  type ReactElement,
+  Suspense,
   useEffect,
   useState,
-  ReactElement,
-  lazy,
-  Suspense,
-  ChangeEvent,
 } from "react";
 import { IoMdInformationCircleOutline } from "react-icons/io";
 import { useSearchParams } from "react-router-dom";
-import { saveAs } from "file-saver";
-import JSON5 from "json5";
+import HKCategoryAnyPercent from "../asset/hollowknight/categories/any.json";
+import type { CategoryDefinition } from "../asset/hollowknight/categories/category-directory.json";
+import SSCategoryAnyPercent from "../asset/silksong/categories/any-bells.json";
 import { useCurrentGame } from "../hooks";
 import { getCategoryConfigJSON, getCategoryDirectory } from "../lib/categories";
-import { CategoryDefinition } from "../asset/hollowknight/categories/category-directory.json";
 import {
-  Config,
+  buildSplitsFileName,
+  type Config,
   createSplitsXml,
   importSplitsXml,
-  buildSplitsFileName,
 } from "../lib/lss";
-import HKCategoryAnyPercent from "../asset/hollowknight/categories/any.json";
-import SSCategoryAnyPercent from "../asset/silksong/categories/any-bells.json";
-import { Game } from "../store/game-slice";
+import type { Game } from "../store/game-slice";
 import ArrowButton from "./ArrowButton";
 import ShareButton from "./ShareButton";
 
@@ -36,10 +36,9 @@ export default function SplitMaker(): ReactElement {
   const [searchParams, setSearchParams] = useSearchParams();
   const builtin = searchParams.get("builtin") ?? undefined;
   const config = searchParams.get("config") ?? undefined;
-  // eslint-disable-next-line @typescript-eslint/no-unsafe-assignment
   const initialConfig = config ? JSON.parse(atob(config)) : defaultCategory;
   const [configInput, setConfigInput] = useState(
-    JSON.stringify(initialConfig, null, 4)
+    JSON.stringify(initialConfig, null, 4),
   );
   const [categoryName, setCategoryName] = useState(builtin);
   const categories = getCategoryDirectory(game);
@@ -64,7 +63,7 @@ export default function SplitMaker(): ReactElement {
 
   const onConfigInputChange = (
     value: string | undefined,
-    loadedFromBuiltin = false
+    loadedFromBuiltin = false,
   ) => {
     if (!loadedFromBuiltin) {
       setSearchParams({ game });
@@ -79,7 +78,7 @@ export default function SplitMaker(): ReactElement {
 
   const onShare = () => {
     const confirmed = confirm(
-      "This will create a disgusting URL. Only use for custom configurations. Proceed?"
+      "This will create a disgusting URL. Only use for custom configurations. Proceed?",
     );
     if (confirmed) {
       const condensed = JSON.stringify(JSON.parse(configInput));
@@ -100,7 +99,7 @@ export default function SplitMaker(): ReactElement {
   };
 
   useEffect(() => {
-    void (async () => {
+    (async () => {
       if (categoryName && getCategoryDefinition(categoryName)) {
         const editorContent = await getCategoryConfigJSON(categoryName, game);
         onConfigInputChange(editorContent, true);
@@ -144,7 +143,7 @@ export default function SplitMaker(): ReactElement {
         } catch (e) {
           console.error(e);
           alert(
-            "Failed to import splits. The error has been logged to console.error"
+            "Failed to import splits. The error has been logged to console.error",
           );
           return;
         }
@@ -162,7 +161,7 @@ export default function SplitMaker(): ReactElement {
     } else if (game === "silksong") {
       if (!configObject.splitIds || configObject.splitIds.length < 2) {
         alert(
-          "For Silksong, you need at least two autosplits. The first one is the start trigger, and subsequent ones are the segments."
+          "For Silksong, you need at least two autosplits. The first one is the start trigger, and subsequent ones are the segments.",
         );
         return false;
       }
@@ -190,7 +189,7 @@ export default function SplitMaker(): ReactElement {
     let output = "";
 
     const submitButton = document.getElementById(
-      "submit-button"
+      "submit-button",
     ) as HTMLInputElement;
     submitButton.disabled = true;
 
@@ -200,7 +199,7 @@ export default function SplitMaker(): ReactElement {
     } catch (e) {
       console.error(e);
       alert(
-        "Failed to create splits. The error has been logged to console.error"
+        "Failed to create splits. The error has been logged to console.error",
       );
       return;
     } finally {
@@ -319,7 +318,7 @@ export default function SplitMaker(): ReactElement {
       delete newConfig.offset;
     } else {
       alert(
-        "Cannot toggle autosave start unless the first split is either StartNewGame or Act1Start"
+        "Cannot toggle autosave start unless the first split is either StartNewGame or Act1Start",
       );
     }
 
@@ -346,7 +345,6 @@ export default function SplitMaker(): ReactElement {
               text="Generate"
               id="submit-button"
               // needs to be a promise for Generate to work
-              /* eslint-disable @typescript-eslint/no-misused-promises */
               onClick={onSubmit}
             />
             <ShareButton
