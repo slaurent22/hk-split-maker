@@ -225,9 +225,10 @@ export default function SplitMaker(): ReactElement {
   };
 
   const onDownloadILs = async (): void => {
-    let output = [];
+    const output_lss = [];
+    const output_names = [];
 
-    let config_template = {};
+    const config_template = {};
     config_template.categoryName = splitConfig.categoryName + " ILs";
     config_template.variables = splitConfig.variables;
     config_template.gameName = splitConfig.gameName;
@@ -236,23 +237,21 @@ export default function SplitMaker(): ReactElement {
     config_template.endTriggeringAutosplit = true;
     config_template.splitIds = [];
 
-    let exclude_last =
+    const exclude_last =
       game === "hollowknight" && !splitConfig.endTriggeringAutosplit;
     for (let i = 0; i < splitConfig.splitIds.length - exclude_last; i++) {
-      let currentSplit = splitConfig.splitIds[i];
+      const currentSplit = splitConfig.splitIds[i];
 
       config_template.splitIds.push(currentSplit);
 
       if (currentSplit[0] != "-") {
         try {
-          output.push([
-            await createSplitsXml(config_template, game, includeIcons),
-            currentSplit,
-          ]);
+          output_lss.push(createSplitsXml(config_template, game, includeIcons));
+          output_names.push(currentSplit);
         } catch (e) {
           console.error(e);
           alert(
-            "Failed to create ILs pack. The error has been logged to console.error"
+            "Failed to create ILs pack. The error has been logged to console.error",
           );
           return;
         }
@@ -264,23 +263,25 @@ export default function SplitMaker(): ReactElement {
 
     if (exclude_last) {
       config_template.splitIds.push("EndingSplit");
-      if (config_template.names === undefined) config_template.names = {};
+      if (config_template.names === undefined) {
+        config_template.names = {};
+      }
 
       config_template.names["EndingSplit"] = splitConfig.endingSplit.name;
 
       try {
-        output.push([
-          await createSplitsXml(config_template, game, includeIcons),
-          "EndingSplit",
-        ]);
+        output_lss.push(createSplitsXml(config_template, game, includeIcons));
+        output_names.push("EndingSplit");
       } catch (e) {
         console.error(e);
         alert(
-          "Failed to create ILs pack. The error has been logged to console.error"
+          "Failed to create ILs pack. The error has been logged to console.error",
         );
         return;
       }
     }
+
+    const output = await Promise.all(output_lss);
 
     const outBlob = new Blob(output);
 
