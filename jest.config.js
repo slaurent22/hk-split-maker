@@ -7,18 +7,14 @@ export default {
     "^.+\\.tsx?$": [
       "ts-jest",
       {
-        tsconfig: {
-          jsx: "react",
-          esModuleInterop: true,
-          allowSyntheticDefaultImports: true,
-        },
+        tsconfig: "tsconfig.test.json",
       },
     ],
     "^.+\\.(txt|lss|txt\\?raw)$": "<rootDir>/tests/loaders/text-transformer.js",
   },
   moduleNameMapper: {
-    "\\.css$": "<rootDir>/tests/__mocks__/styleMock.js",
-    "\\.(jpg|jpeg|png|gif|svg|webp)$": "<rootDir>/tests/__mocks__/fileMock.js",
+    "\\.css$": "<rootDir>/tests/__mocks__/styleMock.cjs",
+    "\\.(jpg|jpeg|png|gif|svg|webp)$": "<rootDir>/tests/__mocks__/fileMock.cjs",
     "^(.*)\\?raw$": "$1",
   },
   moduleFileExtensions: ["ts", "tsx", "js", "jsx", "json"],
