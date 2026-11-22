@@ -15,11 +15,12 @@ module.exports = {
         },
       },
     ],
-    "^.+\\.(txt|lss)$": "<rootDir>/tests/loaders/text-transformer.js",
+    "^.+\\.(txt|lss|txt\\?raw)$": "<rootDir>/tests/loaders/text-transformer.js",
   },
   moduleNameMapper: {
     "\\.css$": "<rootDir>/tests/__mocks__/styleMock.js",
     "\\.(jpg|jpeg|png|gif|svg|webp)$": "<rootDir>/tests/__mocks__/fileMock.js",
+    "^(.*)\\?raw$": "$1",
   },
   moduleFileExtensions: ["ts", "tsx", "js", "jsx", "json"],
   collectCoverage: false, // Set to true or use --coverage flag

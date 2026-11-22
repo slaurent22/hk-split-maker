@@ -1,4 +1,4 @@
-import xml from "../external-lib/xml.js";
+import xml from "xml";
 import type { Game } from "../store/game-slice";
 import type { SplitDefinition } from "./hollowknight-splits";
 import { createLiveSplitIconData } from "./image-util";
