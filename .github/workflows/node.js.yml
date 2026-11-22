@@ -13,19 +13,27 @@ jobs:
   build:
     runs-on: ubuntu-latest
 
-    strategy:
-      matrix:
-        node-version: [ 24.13.0 ]
-        # See supported Node.js release schedule at https://nodejs.org/en/about/releases/
-
     steps:
-      - uses: actions/checkout@v2
-      - name: Use Node.js ${{ matrix.node-version }}
-        uses: actions/setup-node@v2
+      - name: Checkout repo
+        uses: actions/checkout@v4
         with:
-          node-version: ${{ matrix.node-version }}
+          persist-credentials: true
+
+      - name: Read .nvmrc
+        run: echo ::set-output name=NODE_VERSION::$(cat .nvmrc)
+        id: nvm
+
+      - name: Use Node.js ${{ steps.nvm.outputs.NODE_VERSION }}
+        uses: actions/setup-node@v4
+        with:
+          node-version: ${{ steps.nvm.outputs.NODE_VERSION }}
+
       - run: npm ci
+
       - run: npm run lint
+
       - run: npm run check-json
+
       - run: npm run test
-      - run: npm run build-prod
+
+      - run: npm run build

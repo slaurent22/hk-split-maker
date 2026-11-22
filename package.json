@@ -6,7 +6,7 @@
     "scripts": {
         "gen-files-hk": "node tools/gen-files-hk.js",
         "gen-files-ss": "node tools/gen-files-ss.js",
-        "build-prod": "del-cli dist/** && vite build",
+        "build": "del-cli dist/** && vite build",
         "serve": "vite",
         "lint": "biome check --formatter-enabled=false --assist-enabled=false",
         "lintfix": "biome check --write --formatter-enabled=false --assist-enabled=false",

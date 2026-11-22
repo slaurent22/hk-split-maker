@@ -8,7 +8,7 @@ frontend:
         - npm ci
     build:
       commands:
-        - npm run build-prod
+        - npm run build
   artifacts:
     baseDirectory: dist
     files:
