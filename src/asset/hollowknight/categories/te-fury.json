@@ -63,5 +63,6 @@
     "gameName": "Hollow Knight",
     "variables": {
         "True Ending Glitch": "No Major Glitches"
-    }
+    },
+    "pauseOnMainMenu": true
 }

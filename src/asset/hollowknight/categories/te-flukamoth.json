@@ -47,5 +47,6 @@
         "name": "Radiance",
         "icon": "RadianceBoss"
     },
-    "gameName": "Hollow Knight"
+    "gameName": "Hollow Knight",
+    "pauseOnMainMenu": true
 }
