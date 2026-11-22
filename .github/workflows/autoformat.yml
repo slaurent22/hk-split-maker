@@ -18,7 +18,7 @@ jobs:
         with:
           persist-credentials: true
 
-      - uses: .github/actions/common-node-setup
+      - uses: ./.github/actions/common-node-setup
 
       - name: Run Autoformat
         run: npm run format

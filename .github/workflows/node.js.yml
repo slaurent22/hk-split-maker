@@ -19,7 +19,7 @@ jobs:
         with:
           persist-credentials: true
 
-      - uses: .github/actions/common-node-setup
+      - uses: ./.github/actions/common-node-setup
 
       - run: npm run lint
       - run: npm run check-json
