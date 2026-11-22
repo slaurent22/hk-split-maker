@@ -206,7 +206,7 @@
             "attributePosition": "auto",
             "bracketSpacing": true
         },
-        "jsxRuntime": "reactClassic"
+        "jsxRuntime": "transparent"
     },
     "html": {
         "formatter": {

@@ -1,19 +1,8 @@
 {
-    "compilerOptions": {
-        "allowJs": true,
-        "allowSyntheticDefaultImports": true,
-        "downlevelIteration": true,
-        "esModuleInterop": true,
-        "forceConsistentCasingInFileNames": true,
-        "jsx": "react",
-        "lib": ["dom", "es2020"],
-        "module": "es2020",
-        "moduleResolution": "node",
-        "noImplicitAny": true,
-        "outDir": "./dist/",
-        "strict": true,
-        "target": "es2020",
-        "resolveJsonModule": true,
-        "sourceMap": true
-    }
+    "files": [],
+    "references": [
+        { "path": "./tsconfig.app.json" },
+        { "path": "./tsconfig.node.json" },
+        { "path": "./tsconfig.test.json" }
+    ]
 }

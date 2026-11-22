@@ -2,8 +2,8 @@
 // biome-ignore-all assist: reason
 // biome-ignore-all format: reason
 
-const fs = require("fs");
-const path = require("path");
+import fs from "fs";
+import path from "path";
 
 const ROOT_DIR = process.cwd();
 const IGNORE_DIRS = new Set(["node_modules", ".git", "dist", ".vscode"]);

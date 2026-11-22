@@ -1,4 +1,4 @@
-import React from "react";
+import type React from "react";
 import arrow from "../asset/image/arrow.png";
 import HKSMButton from "./HKSMButton";
 import "./ArrowButton.css";

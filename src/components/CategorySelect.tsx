@@ -1,5 +1,5 @@
+import type React from "react";
 import type { ReactElement } from "react";
-import React from "react";
 import {
   type ContainerProps,
   components,
@@ -8,7 +8,7 @@ import {
   type OptionProps,
   type SingleValueProps,
 } from "react-select";
-import type { CategoryDefinition } from "../asset/hollowknight/categories/category-directory.json";
+import type { CategoryDefinition } from "../asset/hollowknight/categories/category-directory.json.d";
 import Schy from "../asset/image/schy.png";
 import BaseSelect from "./BaseSelect";
 
