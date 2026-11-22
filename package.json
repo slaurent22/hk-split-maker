@@ -14,7 +14,7 @@
         "format": "biome check --write --linter-enabled=false",
         "biome-check": "biome check",
         "biome": "biome check --write",
-        "test": "jest --debug",
+        "test": "jest",
         "test:coverage": "jest --coverage",
         "postinstall": "husky install",
         "check-json": "node tools/check-json.js"
