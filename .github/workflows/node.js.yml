@@ -19,21 +19,9 @@ jobs:
         with:
           persist-credentials: true
 
-      - name: Read .nvmrc
-        run: echo "NODE_VERSION=$(cat .nvmrc)" >> $GITHUB_OUTPUT
-        id: nvm
-
-      - name: Use Node.js ${{ steps.nvm.outputs.NODE_VERSION }}
-        uses: actions/setup-node@v4
-        with:
-          node-version: ${{ steps.nvm.outputs.NODE_VERSION }}
-
-      - run: npm ci
+      - uses: ./.github/actions/common-node-setup
 
       - run: npm run lint
-
       - run: npm run check-json
-
       - run: npm run test
-
       - run: npm run build
