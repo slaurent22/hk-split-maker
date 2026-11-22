@@ -6,7 +6,7 @@
     "scripts": {
         "gen-files-hk": "node tools/gen-files-hk.js",
         "gen-files-ss": "node tools/gen-files-ss.js",
-        "build-prod": "del-cli dist/** && vite build",
+        "build": "vite build",
         "serve": "vite",
         "lint": "biome check --formatter-enabled=false --assist-enabled=false",
         "lintfix": "biome check --write --formatter-enabled=false --assist-enabled=false",
@@ -36,7 +36,6 @@
         "@types/xml": "^1.0.5",
         "@vitejs/plugin-react": "^6.3.0",
         "core-js": "^3.20.3",
-        "del-cli": "^4.0.1",
         "husky": "^7.0.4",
         "jest": "^30.3.0",
         "jest-environment-jsdom": "^30.3.0",
