@@ -4,6 +4,7 @@ runs:
   steps:
     - name: Read .nvmrc
       run: echo "NODE_VERSION=$(cat .nvmrc)" >> $GITHUB_OUTPUT
+      shell: bash
       id: nvm
 
     - name: Use Node.js ${{ steps.nvm.outputs.NODE_VERSION }}
@@ -13,3 +14,4 @@ runs:
 
     - name: Install dependencies
       run: npm ci
+      shell: bash
