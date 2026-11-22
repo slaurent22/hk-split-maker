@@ -6,6 +6,7 @@
     "scripts": {
         "gen-files-hk": "node tools/gen-files-hk.js",
         "gen-files-ss": "node tools/gen-files-ss.js",
+        "typecheck": "tsc -b",
         "build": "vite build",
         "serve": "vite",
         "lint": "biome check --formatter-enabled=false --assist-enabled=false",
