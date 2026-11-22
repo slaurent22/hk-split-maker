@@ -24,6 +24,7 @@
     "engines": {
         "node": ">=24.13.0"
     },
+    "type": "module",
     "devDependencies": {
         "@biomejs/biome": "2.6.8",
         "@types/file-saver": "^2.0.2",
@@ -32,7 +33,7 @@
         "@types/react": "^18.3.24",
         "@types/react-dom": "^18.3.7",
         "@types/react-tabs": "^2.3.4",
-        "@types/sortablejs": "^1.10.7",
+        "@types/sortablejs": "^1.15.9",
         "@types/xml": "^1.0.5",
         "@vitejs/plugin-react": "^6.3.0",
         "core-js": "^3.20.3",
@@ -44,7 +45,7 @@
         "stylelint-config-standard": "^23.0.0",
         "ts-jest": "^29.4.9",
         "ts-loader": "^9.2.2",
-        "typescript": "5.1",
+        "typescript": "^6.0.3",
         "vite": "^8.3.8"
     },
     "dependencies": {
@@ -61,11 +62,11 @@
         "react-redux": "^9.2.0",
         "react-router-dom": "^7.18.4",
         "react-select": "^5.3.0",
-        "react-sortablejs": "^6.1.1",
+        "react-sortablejs": "^6.1.4",
         "react-tabs": "^4.0.0",
         "react-tooltip": "^5.29.1",
         "regenerator-runtime": "^0.14.1",
-        "sortablejs": "^1.14.0",
+        "sortablejs": "^1.15.7",
         "use-query-string": "^2.4.1",
         "vite-plugin-node-polyfills": "^0.28.0",
         "xml": "^1.0.1",

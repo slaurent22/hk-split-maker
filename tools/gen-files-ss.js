@@ -2,14 +2,14 @@
 // biome-ignore-all assist: reason
 // biome-ignore-all format: reason
 
-const { readFileSync, writeFileSync } = require("fs");
+import { writeFileSync } from "fs";
 
 const FILE = {
   EVERY: "./src/asset/silksong/categories/every.json",
   ICONS: "./src/asset/silksong/icons/icons.ts",
 };
 
-const splits = require("../src/asset/silksong/splits.json");
+import splits from "../src/asset/silksong/splits.json";
 
 // TODO: figure out good way to have tools and web share common code
 const DESCRIPTION_NAME_REGEXP = /(?<name>.+)\s+\((?<qualifier>.+)\)/;

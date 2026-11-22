@@ -3,9 +3,8 @@
   Since the name "splits" is taken, we'll call the complete configuration "category".
   Not entirely true in terms of LiveSplit naming, but close enough.
 */
-import HKCategoryDirectory, {
-  type CategoryDefinition,
-} from "../asset/hollowknight/categories/category-directory.json";
+import HKCategoryDirectory from "../asset/hollowknight/categories/category-directory.json";
+import type { CategoryDefinition } from "../asset/hollowknight/categories/category-directory.json.d";
 import SSCategoryDirectory from "../asset/silksong/categories/category-directory.json";
 import type { Game } from "../store/game-slice";
 

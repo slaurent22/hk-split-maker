@@ -1,6 +1,6 @@
 import { saveAs } from "file-saver";
 import JSON5 from "json5";
-import React, {
+import {
   type ChangeEvent,
   lazy,
   type ReactElement,
@@ -11,7 +11,7 @@ import React, {
 import { IoMdInformationCircleOutline } from "react-icons/io";
 import { useSearchParams } from "react-router-dom";
 import HKCategoryAnyPercent from "../asset/hollowknight/categories/any.json";
-import type { CategoryDefinition } from "../asset/hollowknight/categories/category-directory.json";
+import type { CategoryDefinition } from "../asset/hollowknight/categories/category-directory.json.d";
 import SSCategoryAnyPercent from "../asset/silksong/categories/any-bells.json";
 import { useCurrentGame } from "../hooks";
 import { getCategoryConfigJSON, getCategoryDirectory } from "../lib/categories";

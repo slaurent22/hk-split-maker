@@ -1,4 +1,4 @@
-import React from "react";
+import type React from "react";
 import { TiArrowForwardOutline } from "react-icons/ti";
 import HKSMButton from "./HKSMButton";
 

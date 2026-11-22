@@ -1,6 +1,6 @@
 import JSON5 from "json5";
 import type { editor } from "monaco-editor";
-import React, {
+import {
   lazy,
   type ReactElement,
   Suspense,

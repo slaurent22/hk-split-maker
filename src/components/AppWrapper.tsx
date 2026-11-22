@@ -1,4 +1,4 @@
-import React, { type ReactNode, useEffect } from "react";
+import { type ReactNode, useEffect } from "react";
 import { useDispatch } from "react-redux";
 import { useSearchParams } from "react-router-dom";
 import { useCurrentGame } from "../hooks";

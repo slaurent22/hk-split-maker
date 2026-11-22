@@ -1,5 +1,4 @@
-// eslint-disable-next-line no-undef
-module.exports = {
+export default {
   preset: "ts-jest",
   testEnvironment: "jsdom",
   roots: ["<rootDir>/tests"],
