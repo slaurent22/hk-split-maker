@@ -79,6 +79,7 @@
                 "noUnsafeFinally": "error",
                 "noUnsafeOptionalChaining": "error",
                 "noUnusedInstantiation": "error",
+                "noUnusedImports": "error",
                 "noUnusedLabels": "error",
                 "noUnusedVariables": {
                     "level": "error",
