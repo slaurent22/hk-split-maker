@@ -41,7 +41,7 @@ Run locally. When it's ready, navigate to `http://localhost:8080/` in your web b
 nvm run serve
 ```
 
-Additional scripts (unit tests, production build) can be found in `package.json`.
+Additional scripts (typecheck, unit tests, production build) can be found in `package.json`.
 
 ### Linting and Formatting
 
