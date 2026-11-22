@@ -3,6 +3,7 @@ frontend:
   phases:
     preBuild:
       commands:
+        - nvm use # use version specified by .nvmrc
         - npm ci
     build:
       commands:
