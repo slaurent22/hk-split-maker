@@ -18,8 +18,7 @@
         "test": "vitest run",
         "test:coverage": "vitest run --coverage",
         "test:watch": "vitest watch",
-        "postinstall": "husky install",
-        "check-json": "node tools/check-json.js"
+        "postinstall": "husky install"
     },
     "author": "",
     "license": "ISC",

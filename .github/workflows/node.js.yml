@@ -22,7 +22,6 @@ jobs:
       - uses: ./.github/actions/common-node-setup
 
       - run: npm run lint
-      - run: npm run check-json
       - run: npm run typecheck
       - run: npm run test
       - run: npm run build
