@@ -42,8 +42,6 @@
         "husky": "^7.0.4",
         "jsdom": "^29.1.1",
         "lint-staged": "^12.3.7",
-        "stylelint": "^14.0.0",
-        "stylelint-config-standard": "^23.0.0",
         "typescript": "^6.0.3",
         "vite": "^8.3.8",
         "vitest": "^5.1.1"
@@ -52,7 +50,6 @@
         "@monaco-editor/react": "^4.5.0",
         "@reduxjs/toolkit": "^2.9.0",
         "classnames": "^2.3.2",
-        "commander": "^7.2.0",
         "file-saver": "^2.0.5",
         "json5": "^2.2.0",
         "monaco-editor": "^0.26.0",
@@ -67,10 +64,8 @@
         "react-tooltip": "^5.29.1",
         "regenerator-runtime": "^0.14.1",
         "sortablejs": "^1.15.7",
-        "use-query-string": "^2.4.1",
         "vite-plugin-node-polyfills": "^0.28.0",
-        "xml": "^1.0.1",
-        "xml-formatter": "^2.4.0"
+        "xml": "^1.0.1"
     },
     "lint-staged": {
         "*.{js,jsx,ts,tsx,css,md,json,yml}": [
