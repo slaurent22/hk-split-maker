@@ -4,7 +4,7 @@
         "target": "es2023",
         "lib": ["ES2023", "DOM"],
         "module": "esnext",
-        "types": ["jest"],
+        "types": ["vitest/globals"],
         "allowArbitraryExtensions": true,
         "skipLibCheck": true,
         "moduleResolution": "bundler",
