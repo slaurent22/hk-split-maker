@@ -79,6 +79,7 @@
                 "noUnsafeFinally": "error",
                 "noUnsafeOptionalChaining": "error",
                 "noUnusedInstantiation": "error",
+                "noUnusedImports": "error",
                 "noUnusedLabels": "error",
                 "noUnusedVariables": {
                     "level": "error",
@@ -205,7 +206,7 @@
             "attributePosition": "auto",
             "bracketSpacing": true
         },
-        "jsxRuntime": "reactClassic"
+        "jsxRuntime": "transparent"
     },
     "html": {
         "formatter": {

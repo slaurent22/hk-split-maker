@@ -325,5 +325,6 @@
         "name": "{Embrace the Void} Absolute Radiance",
         "icon": "RadianceBoss"
     },
-    "gameName": "Hollow Knight"
+    "gameName": "Hollow Knight",
+    "pauseOnMainMenu": true
 }

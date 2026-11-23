@@ -1,6 +1,6 @@
 import { saveAs } from "file-saver";
 import JSON5 from "json5";
-import React, {
+import {
   type ChangeEvent,
   lazy,
   type ReactElement,
@@ -11,7 +11,7 @@ import React, {
 import { IoMdInformationCircleOutline } from "react-icons/io";
 import { useSearchParams } from "react-router-dom";
 import HKCategoryAnyPercent from "../asset/hollowknight/categories/any.json";
-import type { CategoryDefinition } from "../asset/hollowknight/categories/category-directory.json";
+import type { CategoryDefinition } from "../asset/hollowknight/categories/category-directory.json.d";
 import SSCategoryAnyPercent from "../asset/silksong/categories/any-bells.json";
 import { useCurrentGame } from "../hooks";
 import { getCategoryConfigJSON, getCategoryDirectory } from "../lib/categories";
@@ -45,6 +45,7 @@ export default function SplitMaker(): ReactElement {
   const [shareButtonDisabled, setShareButtonDisabled] = useState(true);
 
   const [splitOutput, setSplitOutput] = useState("");
+  const [splitOutputIsLoading, setSplitOutputIsLoading] = useState(false);
   const [splitConfig, setSplitConfig] = useState({});
   const [includeIcons, setIncludeIcons] = useState(true);
 
@@ -101,6 +102,7 @@ export default function SplitMaker(): ReactElement {
   useEffect(() => {
     (async () => {
       if (categoryName && getCategoryDefinition(categoryName)) {
+        onConfigInputChange("{loading...}", true);
         const editorContent = await getCategoryConfigJSON(categoryName, game);
         onConfigInputChange(editorContent, true);
       }
@@ -170,6 +172,12 @@ export default function SplitMaker(): ReactElement {
     return true;
   };
 
+  useEffect(() => {
+    if (splitOutputIsLoading) {
+      setSplitOutput("loading...");
+    }
+  }, [splitOutputIsLoading]);
+
   const onSubmit = async () => {
     let configObject;
     try {
@@ -192,6 +200,7 @@ export default function SplitMaker(): ReactElement {
       "submit-button",
     ) as HTMLInputElement;
     submitButton.disabled = true;
+    setSplitOutputIsLoading(true);
 
     try {
       // todo: runtime schema validation
@@ -204,6 +213,7 @@ export default function SplitMaker(): ReactElement {
       return;
     } finally {
       submitButton.disabled = false;
+      setSplitOutputIsLoading(false);
     }
 
     setSplitOutput(output);
@@ -405,7 +415,7 @@ export default function SplitMaker(): ReactElement {
               id="download-button"
               text="Download"
               onClick={onDownload}
-              disabled={splitOutput.length === 0}
+              disabled={splitOutput.length === 0 || splitOutputIsLoading}
             />
             <ArrowButton
               id="download-button"

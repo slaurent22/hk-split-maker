@@ -16,5 +16,6 @@
         "name": "Hollow Knight",
         "icon": "HollowKnightBoss"
     },
-    "gameName": "Hollow Knight Mods"
+    "gameName": "Hollow Knight Mods",
+    "pauseOnMainMenu": true
 }

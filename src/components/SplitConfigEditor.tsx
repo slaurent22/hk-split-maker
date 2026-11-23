@@ -1,7 +1,13 @@
-import Editor, { type Monaco, useMonaco } from "@monaco-editor/react";
 import JSON5 from "json5";
-import { type editor, Uri } from "monaco-editor";
-import React, { type ReactElement, useEffect, useRef, useState } from "react";
+import type { editor } from "monaco-editor";
+import {
+  lazy,
+  type ReactElement,
+  Suspense,
+  useEffect,
+  useRef,
+  useState,
+} from "react";
 import {
   TiArrowMaximise,
   TiArrowMinimise,
@@ -16,39 +22,15 @@ import { useCurrentGame } from "../hooks";
 import { parseSplitsDefinitions as HollowKnightParseSplitsDefinitions } from "../lib/hollowknight-splits";
 import { type Config, SUB_SPLIT_RE } from "../lib/lss";
 import { parseSplitsDefinitions as SilksongParseSplitsDefinitions } from "../lib/silksong-splits";
-import HKSplitConfigSchema from "../schema/hollowknight/splits.schema";
-import SSSplitConfigSchema from "../schema/silksong/splits.schema";
 import SplitSelect, { type SplitOption } from "./SplitSelect";
 import Tooltip from "./Tooltip";
 import "react-tabs/style/react-tabs.css";
 
+const MonacoEditor = lazy(() => import("./MonacoEditor"));
+
 interface Props {
   defaultValue: string;
   onChange: (value: string | undefined) => void;
-}
-
-function useHandleEditorWillMount(): [(monaco: Monaco) => void, Uri] {
-  const game = useCurrentGame();
-  const splitConfigSchema =
-    game === "hollowknight" ? HKSplitConfigSchema : SSSplitConfigSchema;
-  const { $id: schemaId } = splitConfigSchema;
-
-  const modelUri = Uri.parse(schemaId);
-  return [
-    function handleEditorWillMount(monaco: Monaco) {
-      monaco.languages.json.jsonDefaults.setDiagnosticsOptions({
-        validate: true,
-        schemas: [
-          {
-            uri: schemaId,
-            fileMatch: [modelUri.toString()],
-            schema: splitConfigSchema,
-          },
-        ],
-      });
-    },
-    modelUri,
-  ];
 }
 
 const hkSplitDefinitions = HollowKnightParseSplitsDefinitions();
@@ -345,14 +327,6 @@ function hasSplits(parsedConfig: Partial<Config>): parsedConfig is Config {
 }
 
 export default function SplitConfigEditor(props: Props): ReactElement {
-  const [handleEditorWillMount, modelUri] = useHandleEditorWillMount();
-  const monaco = useMonaco();
-  useEffect(() => {
-    if (monaco) {
-      handleEditorWillMount(monaco);
-    }
-  }, [monaco]);
-
   const editorRef = useRef<editor.IStandaloneCodeEditor | null>(null);
   const handleEditorDidMount = (
     editorInstance: editor.IStandaloneCodeEditor,
@@ -414,21 +388,14 @@ export default function SplitConfigEditor(props: Props): ReactElement {
       <TabPanel>
         <SplitSelect onChange={onChangeSplitSelect} />
         <div className="hk-split-maker-monaco-editor">
-          <Editor
-            defaultLanguage="json"
-            defaultValue={props.defaultValue}
-            value={splitConfig}
-            onChange={onChange}
-            theme="vs-dark"
-            options={{
-              minimap: {
-                enabled: false,
-              },
-            }}
-            path={modelUri.toString()}
-            beforeMount={handleEditorWillMount}
-            onMount={handleEditorDidMount}
-          />
+          <Suspense fallback={<div>Loading editor...</div>}>
+            <MonacoEditor
+              defaultValue={props.defaultValue}
+              value={splitConfig}
+              onChange={onChange}
+              onMount={handleEditorDidMount}
+            />
+          </Suspense>
         </div>
       </TabPanel>
       <TabPanel>

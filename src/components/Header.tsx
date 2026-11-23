@@ -1,4 +1,4 @@
-import React from "react";
+import type React from "react";
 import logo from "../asset/image/logo.png";
 
 const Header: React.FC = () => {

@@ -2,7 +2,7 @@
 // biome-ignore-all assist: reason
 // biome-ignore-all format: reason
 
-const { readFileSync, writeFileSync } = require("fs");
+import { readFileSync, writeFileSync } from "fs";
 
 const FILE = {
   EVERY: "./src/asset/hollowknight/categories/every.json",

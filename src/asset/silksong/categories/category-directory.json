@@ -117,24 +117,17 @@
             "data": {}
         },
         {
-            "fileName": "all-bosses",
-            "displayName": "All Bosses",
-            "data": {
-                "routeNotesURL": "https://app.milanote.com/1VHsXX12I0A9ei?p=gYq4kmb6BNH"
-            }
-        },
-        {
-            "fileName": "all-bosses-mist",
-            "displayName": "All Bosses (Mist Route)",
+            "fileName": "all-bosses-lp",
+            "displayName": "All Bosses (LP Blob Route)",
             "data": {
                 "routeNotesURL": "https://app.milanote.com/1VQX1L1C8nMs0q?p=R1lE2KGJH9w"
             }
         },
         {
-            "fileName": "all-bosses-zodiam",
-            "displayName": "All Bosses (Zodiam Route)",
+            "fileName": "all-bosses-891",
+            "displayName": "All Bosses (1.0.28891 Zodiam Route)",
             "data": {
-                "routeNotesURL": "https://app.milanote.com/1VVhJE1QSvIM9i?p=7MyJrpBqjMC"
+                "routeNotesURL": "https://app.milanote.com/1VYas610p5qr0z?p=TfI2HEtmY7x"
             }
         },
         {

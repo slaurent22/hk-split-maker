@@ -1,4 +1,4 @@
-import React from "react";
+import type React from "react";
 import { useCurrentGame } from "../hooks";
 import type { Game } from "../store/game-slice";
 

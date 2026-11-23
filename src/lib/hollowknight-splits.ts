@@ -1,5 +1,5 @@
 import Icons from "../asset/hollowknight/icons/icons";
-import splits from "../asset/hollowknight/splits.txt";
+import splits from "../asset/hollowknight/splits.txt?raw";
 
 const SPLITS_DEFINITIONS_REGEXP =
   /\[Description\("(?<description>.+)"\), ToolTip\("(?<tooltip>.+)"\)\]\s+(?<id>\w+),/g;
