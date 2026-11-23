@@ -18,7 +18,8 @@
         "test": "vitest run",
         "test:coverage": "vitest run --coverage",
         "test:watch": "vitest watch",
-        "postinstall": "husky install"
+        "postinstall": "husky install",
+        "check-all": "npm run biome-check && npm run typecheck && npm run build && npm run test"
     },
     "author": "",
     "license": "ISC",

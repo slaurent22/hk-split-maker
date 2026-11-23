@@ -41,6 +41,12 @@ Run locally. When it's ready, navigate to `http://localhost:8080/` in your web b
 nvm run serve
 ```
 
+To run all checks before commiting
+
+```sh
+npm run check-all
+```
+
 Additional scripts (typecheck, unit tests, production build) can be found in `package.json`.
 
 ### Linting and Formatting
