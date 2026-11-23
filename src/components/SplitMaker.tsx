@@ -45,6 +45,7 @@ export default function SplitMaker(): ReactElement {
   const [shareButtonDisabled, setShareButtonDisabled] = useState(true);
 
   const [splitOutput, setSplitOutput] = useState("");
+  const [splitOutputIsLoading, setSplitOutputIsLoading] = useState(false);
   const [includeIcons, setIncludeIcons] = useState(true);
 
   useEffect(() => {
@@ -170,6 +171,12 @@ export default function SplitMaker(): ReactElement {
     return true;
   };
 
+  useEffect(() => {
+    if (splitOutputIsLoading) {
+      setSplitOutput("loading...");
+    }
+  }, [splitOutputIsLoading]);
+
   const onSubmit = async () => {
     let configObject;
     try {
@@ -191,6 +198,7 @@ export default function SplitMaker(): ReactElement {
       "submit-button",
     ) as HTMLInputElement;
     submitButton.disabled = true;
+    setSplitOutputIsLoading(true);
 
     try {
       // todo: runtime schema validation
@@ -203,6 +211,7 @@ export default function SplitMaker(): ReactElement {
       return;
     } finally {
       submitButton.disabled = false;
+      setSplitOutputIsLoading(false);
     }
 
     setSplitOutput(output);
@@ -333,7 +342,7 @@ export default function SplitMaker(): ReactElement {
               id="download-button"
               text="Download"
               onClick={onDownload}
-              disabled={splitOutput.length === 0}
+              disabled={splitOutput.length === 0 || splitOutputIsLoading}
             />
           </div>
           <Suspense fallback={<div>Loading split output editor...</div>}>
