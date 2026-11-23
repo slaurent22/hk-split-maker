@@ -1,5 +1,6 @@
 import { saveAs } from "file-saver";
 import JSON5 from "json5";
+import JSZip from "jszip";
 import {
   type ChangeEvent,
   lazy,
@@ -46,7 +47,8 @@ export default function SplitMaker(): ReactElement {
 
   const [splitOutput, setSplitOutput] = useState("");
   const [splitOutputIsLoading, setSplitOutputIsLoading] = useState(false);
-  const [splitConfig, setSplitConfig] = useState({});
+  const [splitConfig, setSplitConfig] = useState<Config | null>(null);
+  const [downloadILsDisabled, setDownloadILsDisabled] = useState(false);
   const [includeIcons, setIncludeIcons] = useState(true);
 
   useEffect(() => {
@@ -234,22 +236,29 @@ export default function SplitMaker(): ReactElement {
     saveAs(outBlob, `${splitName}.lss`);
   };
 
-  const onDownloadILs = async (): void => {
+  const onDownloadILs = async (): Promise<void> => {
+    if (!splitConfig) {
+      throw new Error("Invalid app state, splitConfig missing");
+    }
     const output_lss = [];
     const output_names = [];
 
-    const config_template = {};
-    config_template.categoryName = splitConfig.categoryName + " ILs";
-    config_template.variables = splitConfig.variables;
-    config_template.gameName = splitConfig.gameName;
-    config_template.names = splitConfig.names;
-
-    config_template.endTriggeringAutosplit = true;
-    config_template.splitIds = [];
+    const config_template: Config = {
+      categoryName: splitConfig.categoryName + " ILs",
+      variables: splitConfig.variables,
+      gameName: splitConfig.gameName,
+      names: splitConfig.names,
+      endTriggeringAutosplit: true,
+      splitIds: [],
+    };
 
     const exclude_last =
       game === "hollowknight" && !splitConfig.endTriggeringAutosplit;
-    for (let i = 0; i < splitConfig.splitIds.length - exclude_last; i++) {
+    for (
+      let i = 0;
+      i < splitConfig.splitIds.length - (exclude_last ? 1 : 0);
+      i++
+    ) {
       const currentSplit = splitConfig.splitIds[i];
 
       config_template.splitIds.push(currentSplit);
@@ -277,7 +286,8 @@ export default function SplitMaker(): ReactElement {
         config_template.names = {};
       }
 
-      config_template.names["EndingSplit"] = splitConfig.endingSplit.name;
+      config_template.names["EndingSplit"] =
+        splitConfig.endingSplit?.name ?? "End";
 
       try {
         output_lss.push(createSplitsXml(config_template, game, includeIcons));
@@ -293,8 +303,6 @@ export default function SplitMaker(): ReactElement {
 
     const output = await Promise.all(output_lss);
 
-    const outBlob = new Blob(output);
-
     let splitName = "";
     try {
       const splitsConfig = parseConfigInput();
@@ -302,7 +310,27 @@ export default function SplitMaker(): ReactElement {
     } catch {
       splitName = "splits";
     }
-    saveAs(outBlob, `${splitName}_il_pack.lss`);
+
+    const zip = new JSZip();
+    for (let i = 0; i < output.length; i++) {
+      zip.file(`${i}_${output_names[i]}.lss`, output[i]);
+    }
+
+    setDownloadILsDisabled(true);
+
+    zip
+      .generateAsync({ type: "blob" })
+      .then((content) => {
+        saveAs(content, `${splitName}_il_pack.zip`);
+        setDownloadILsDisabled(false);
+      })
+      .catch((e) => {
+        setDownloadILsDisabled(false);
+        console.error(e);
+        alert(
+          "Failed to create ILs pack. The error has been logged to console.error",
+        );
+      });
   };
 
   const onToggleAct1Start = () => {
@@ -421,7 +449,11 @@ export default function SplitMaker(): ReactElement {
               id="download-button"
               text="Download ILs"
               onClick={onDownloadILs}
-              disabled={splitOutput.length === 0}
+              disabled={
+                splitOutput.length === 0 ||
+                splitOutputIsLoading ||
+                downloadILsDisabled
+              }
             />
           </div>
           <Suspense fallback={<div>Loading split output editor...</div>}>
