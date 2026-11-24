@@ -41,7 +41,7 @@ interface Props {
   onMount: OnMount;
 }
 
-export default function MonacoEditor(props: Props) {
+export default function SplitConfigJsonEditor(props: Props) {
   const [handleEditorWillMount, modelUri] = useHandleEditorWillMount();
   const monaco = useMonaco();
   useEffect(() => {

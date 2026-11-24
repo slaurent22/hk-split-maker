@@ -26,7 +26,7 @@ import SplitSelect, { type SplitOption } from "./SplitSelect";
 import Tooltip from "./Tooltip";
 import "react-tabs/style/react-tabs.css";
 
-const MonacoEditor = lazy(() => import("./MonacoEditor"));
+const SplitConfigJsonEditor = lazy(() => import("./SplitConfigJsonEditor"));
 
 interface Props {
   defaultValue: string;
@@ -389,7 +389,7 @@ export default function SplitConfigEditor(props: Props): ReactElement {
         <SplitSelect onChange={onChangeSplitSelect} />
         <div className="hk-split-maker-monaco-editor">
           <Suspense fallback={<div>Loading editor...</div>}>
-            <MonacoEditor
+            <SplitConfigJsonEditor
               defaultValue={props.defaultValue}
               value={splitConfig}
               onChange={onChange}
