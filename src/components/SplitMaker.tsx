@@ -238,14 +238,12 @@ export default function SplitMaker(): ReactElement {
   };
 
   const onDownloadILs = async (): Promise<void> => {
-    if (!splitConfig) {
-      throw new Error("Invalid app state, splitConfig missing");
-    }
     let output: Array<string> = [];
     let output_names: Array<string> = [];
+    let zip_name = "";
 
     try {
-      ({ output, output_names } = await createILPack(
+      ({ output, output_names, zip_name } = await createILPack(
         splitConfig,
         game,
         includeIcons,
@@ -257,17 +255,15 @@ export default function SplitMaker(): ReactElement {
       );
     }
 
-    const splitName = buildSplitsFileName(splitConfig);
-
     const zip = new JSZip();
     for (let i = 0; i < output.length; i++) {
-      zip.file(`${i}_${output_names[i]}.lss`, output[i]);
+      zip.file(output_names[i], output[i]);
     }
 
     setDownloadILsDisabled(true);
     try {
       const content = await zip.generateAsync({ type: "blob" });
-      saveAs(content, `${splitName}_il_pack.zip`);
+      saveAs(content, zip_name);
     } catch (e) {
       console.error(e);
       alert(

@@ -1113,10 +1113,17 @@ export function importSplitsXml(str: string, game: Game): Config {
 }
 
 export async function createILPack(
-  config: Config,
+  config: Config | null,
   game: Game,
   includeIcons: boolean,
-): Promise<{ output: Array<string>; output_names: Array<string> }> {
+): Promise<{
+  output: Array<string>;
+  output_names: Array<string>;
+  zip_name: string;
+}> {
+  if (!config) {
+    throw new Error("Invalid app state, splitConfig missing");
+  }
   const output_lss = [];
   const output_names = [];
 
@@ -1158,9 +1165,17 @@ export async function createILPack(
 
   const output = await Promise.all(output_lss);
 
+  for (let i = 0; i < output_names.length; i++) {
+    const formattedCount = String(i).padStart(3, "0");
+    output_names[i] = `${formattedCount}_${output_names[i]}.lss`;
+  }
+
   if (output.length !== output_names.length) {
     throw new Error("output and output_names have different lengths");
   }
 
-  return { output, output_names };
+  const splitName = buildSplitsFileName(config);
+  const zip_name = `${splitName}_il_pack.zip`;
+
+  return { output, output_names, zip_name };
 }
