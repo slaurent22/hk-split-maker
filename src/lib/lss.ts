@@ -1140,12 +1140,20 @@ export async function createILPack(
     game === "hollowknight" && !config.endTriggeringAutosplit;
   for (let i = 0; i < config.splitIds.length - (exclude_last ? 1 : 0); i++) {
     const currentSplit = config.splitIds[i];
-
     config_template.splitIds.push(currentSplit);
 
     if (currentSplit[0] != "-") {
-      output_lss.push(createSplitsXml(config_template, game, includeIcons));
-      output_names.push(currentSplit);
+      if (game === "silksong") {
+        config_template.splitIds.unshift(
+          config_template.startTriggeringAutosplit ?? "StartNewGame",
+        );
+      }
+      if (!(game === "silksong" && i === 0)) {
+        output_lss.push(createSplitsXml(config_template, game, includeIcons));
+        output_names.push(currentSplit);
+      }
+
+      // set up for next iteration
       config_template.splitIds = [];
       config_template.startTriggeringAutosplit = config.splitIds[i];
     }
