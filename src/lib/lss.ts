@@ -1111,3 +1111,56 @@ export function importSplitsXml(str: string, game: Game): Config {
       throw new Error(`invalid game ${game}`);
   }
 }
+
+export async function createILPack(
+  config: Config,
+  game: Game,
+  includeIcons: boolean,
+): Promise<{ output: Array<string>; output_names: Array<string> }> {
+  const output_lss = [];
+  const output_names = [];
+
+  const config_template: Config = {
+    categoryName: config.categoryName + " ILs",
+    variables: config.variables,
+    gameName: config.gameName,
+    names: config.names,
+    endTriggeringAutosplit: true,
+    splitIds: [],
+  };
+
+  const exclude_last =
+    game === "hollowknight" && !config.endTriggeringAutosplit;
+  for (let i = 0; i < config.splitIds.length - (exclude_last ? 1 : 0); i++) {
+    const currentSplit = config.splitIds[i];
+
+    config_template.splitIds.push(currentSplit);
+
+    if (currentSplit[0] != "-") {
+      output_lss.push(createSplitsXml(config_template, game, includeIcons));
+      output_names.push(currentSplit);
+      config_template.splitIds = [];
+      config_template.startTriggeringAutosplit = config.splitIds[i];
+    }
+  }
+
+  if (exclude_last) {
+    config_template.splitIds.push("EndingSplit");
+    if (config_template.names === undefined) {
+      config_template.names = {};
+    }
+
+    config_template.names["EndingSplit"] = config.endingSplit?.name ?? "End";
+
+    output_lss.push(createSplitsXml(config_template, game, includeIcons));
+    output_names.push("EndingSplit");
+  }
+
+  const output = await Promise.all(output_lss);
+
+  if (output.length !== output_names.length) {
+    throw new Error("output and output_names have different lengths");
+  }
+
+  return { output, output_names };
+}

@@ -19,6 +19,7 @@ import { getCategoryConfigJSON, getCategoryDirectory } from "../lib/categories";
 import {
   buildSplitsFileName,
   type Config,
+  createILPack,
   createSplitsXml,
   importSplitsXml,
 } from "../lib/lss";
@@ -240,76 +241,23 @@ export default function SplitMaker(): ReactElement {
     if (!splitConfig) {
       throw new Error("Invalid app state, splitConfig missing");
     }
-    const output_lss = [];
-    const output_names = [];
+    let output: Array<string> = [];
+    let output_names: Array<string> = [];
 
-    const config_template: Config = {
-      categoryName: splitConfig.categoryName + " ILs",
-      variables: splitConfig.variables,
-      gameName: splitConfig.gameName,
-      names: splitConfig.names,
-      endTriggeringAutosplit: true,
-      splitIds: [],
-    };
-
-    const exclude_last =
-      game === "hollowknight" && !splitConfig.endTriggeringAutosplit;
-    for (
-      let i = 0;
-      i < splitConfig.splitIds.length - (exclude_last ? 1 : 0);
-      i++
-    ) {
-      const currentSplit = splitConfig.splitIds[i];
-
-      config_template.splitIds.push(currentSplit);
-
-      if (currentSplit[0] != "-") {
-        try {
-          output_lss.push(createSplitsXml(config_template, game, includeIcons));
-          output_names.push(currentSplit);
-        } catch (e) {
-          console.error(e);
-          alert(
-            "Failed to create ILs pack. The error has been logged to console.error",
-          );
-          return;
-        }
-
-        config_template.splitIds = [];
-        config_template.startTriggeringAutosplit = splitConfig.splitIds[i];
-      }
-    }
-
-    if (exclude_last) {
-      config_template.splitIds.push("EndingSplit");
-      if (config_template.names === undefined) {
-        config_template.names = {};
-      }
-
-      config_template.names["EndingSplit"] =
-        splitConfig.endingSplit?.name ?? "End";
-
-      try {
-        output_lss.push(createSplitsXml(config_template, game, includeIcons));
-        output_names.push("EndingSplit");
-      } catch (e) {
-        console.error(e);
-        alert(
-          "Failed to create ILs pack. The error has been logged to console.error",
-        );
-        return;
-      }
-    }
-
-    const output = await Promise.all(output_lss);
-
-    let splitName = "";
     try {
-      const splitsConfig = parseConfigInput();
-      splitName = buildSplitsFileName(splitsConfig);
-    } catch {
-      splitName = "splits";
+      ({ output, output_names } = await createILPack(
+        splitConfig,
+        game,
+        includeIcons,
+      ));
+    } catch (e) {
+      console.error(e);
+      alert(
+        "Failed to create ILs pack. The error has been logged to console.error",
+      );
     }
+
+    const splitName = buildSplitsFileName(splitConfig);
 
     const zip = new JSZip();
     for (let i = 0; i < output.length; i++) {
@@ -317,20 +265,17 @@ export default function SplitMaker(): ReactElement {
     }
 
     setDownloadILsDisabled(true);
-
-    zip
-      .generateAsync({ type: "blob" })
-      .then((content) => {
-        saveAs(content, `${splitName}_il_pack.zip`);
-        setDownloadILsDisabled(false);
-      })
-      .catch((e) => {
-        setDownloadILsDisabled(false);
-        console.error(e);
-        alert(
-          "Failed to create ILs pack. The error has been logged to console.error",
-        );
-      });
+    try {
+      const content = await zip.generateAsync({ type: "blob" });
+      saveAs(content, `${splitName}_il_pack.zip`);
+    } catch (e) {
+      console.error(e);
+      alert(
+        "Failed to create ILs pack. The error has been logged to console.error",
+      );
+    } finally {
+      setDownloadILsDisabled(false);
+    }
   };
 
   const onToggleAct1Start = () => {
