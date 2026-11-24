@@ -1,5 +1,6 @@
 import { saveAs } from "file-saver";
 import JSON5 from "json5";
+import JSZip from "jszip";
 import {
   type ChangeEvent,
   lazy,
@@ -18,6 +19,7 @@ import { getCategoryConfigJSON, getCategoryDirectory } from "../lib/categories";
 import {
   buildSplitsFileName,
   type Config,
+  createILPack,
   createSplitsXml,
   importSplitsXml,
 } from "../lib/lss";
@@ -46,6 +48,8 @@ export default function SplitMaker(): ReactElement {
 
   const [splitOutput, setSplitOutput] = useState("");
   const [splitOutputIsLoading, setSplitOutputIsLoading] = useState(false);
+  const [splitConfig, setSplitConfig] = useState<Config | null>(null);
+  const [downloadButtonsDisabled, setDownloadButtonsDisabled] = useState(false);
   const [includeIcons, setIncludeIcons] = useState(true);
 
   useEffect(() => {
@@ -186,11 +190,12 @@ export default function SplitMaker(): ReactElement {
       alert("Failed to parse config as JSON");
       return;
     }
-
     // Don't let the user generate an invalid splits file
     if (!validateAutosplits(configObject)) {
       return;
     }
+
+    setSplitConfig(configObject);
 
     let output = "";
 
@@ -230,6 +235,50 @@ export default function SplitMaker(): ReactElement {
       splitName = "splits";
     }
     saveAs(outBlob, `${splitName}.lss`);
+  };
+
+  const onDownloadILs = async (): Promise<void> => {
+    let output: Array<string> = [];
+    let output_names: Array<string> = [];
+    let zip_name = "";
+
+    setDownloadButtonsDisabled(true);
+
+    try {
+      ({ output, output_names, zip_name } = await createILPack(
+        splitConfig,
+        game,
+        includeIcons,
+      ));
+    } catch (e) {
+      console.error(e);
+      alert(
+        "Failed to create ILs pack. The error has been logged to console.error",
+      );
+      setDownloadButtonsDisabled(false);
+    }
+
+    const zip = new JSZip();
+    for (let i = 0; i < output.length; i++) {
+      zip.file(output_names[i], output[i]);
+    }
+
+    // do not try to await zip.generateAsync, because React needs to re-render
+    // to use the effect of the above setDownloadILsDisabled
+    zip
+      .generateAsync({ type: "blob" })
+      .then((content) => {
+        saveAs(content, zip_name);
+      })
+      .catch((e) => {
+        console.error(e);
+        alert(
+          "Failed to create ILs pack. The error has been logged to console.error",
+        );
+      })
+      .finally(() => {
+        setDownloadButtonsDisabled(false);
+      });
   };
 
   const onToggleAct1Start = () => {
@@ -342,7 +391,21 @@ export default function SplitMaker(): ReactElement {
               id="download-button"
               text="Download"
               onClick={onDownload}
-              disabled={splitOutput.length === 0 || splitOutputIsLoading}
+              disabled={
+                splitOutput.length === 0 ||
+                splitOutputIsLoading ||
+                downloadButtonsDisabled
+              }
+            />
+            <ArrowButton
+              id="download-button"
+              text="Download ILs"
+              onClick={onDownloadILs}
+              disabled={
+                splitOutput.length === 0 ||
+                splitOutputIsLoading ||
+                downloadButtonsDisabled
+              }
             />
           </div>
           <Suspense fallback={<div>Loading split output editor...</div>}>

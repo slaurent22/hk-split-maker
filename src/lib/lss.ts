@@ -1111,3 +1111,79 @@ export function importSplitsXml(str: string, game: Game): Config {
       throw new Error(`invalid game ${game}`);
   }
 }
+
+export async function createILPack(
+  config: Config | null,
+  game: Game,
+  includeIcons: boolean,
+): Promise<{
+  output: Array<string>;
+  output_names: Array<string>;
+  zip_name: string;
+}> {
+  if (!config) {
+    throw new Error("Invalid app state, splitConfig missing");
+  }
+  const output_lss = [];
+  const output_names = [];
+
+  const config_template: Config = {
+    categoryName: config.categoryName + " ILs",
+    variables: config.variables,
+    gameName: config.gameName,
+    names: config.names,
+    endTriggeringAutosplit: true,
+    splitIds: [],
+  };
+
+  const exclude_last =
+    game === "hollowknight" && !config.endTriggeringAutosplit;
+  for (let i = 0; i < config.splitIds.length - (exclude_last ? 1 : 0); i++) {
+    const currentSplit = config.splitIds[i];
+    config_template.splitIds.push(currentSplit);
+
+    if (currentSplit[0] != "-") {
+      if (game === "silksong") {
+        config_template.splitIds.unshift(
+          config_template.startTriggeringAutosplit ?? "StartNewGame",
+        );
+      }
+      if (!(game === "silksong" && i === 0)) {
+        output_lss.push(createSplitsXml(config_template, game, includeIcons));
+        output_names.push(currentSplit);
+      }
+
+      // set up for next iteration
+      config_template.splitIds = [];
+      config_template.startTriggeringAutosplit = config.splitIds[i];
+    }
+  }
+
+  if (exclude_last) {
+    config_template.splitIds.push("EndingSplit");
+    if (config_template.names === undefined) {
+      config_template.names = {};
+    }
+
+    config_template.names["EndingSplit"] = config.endingSplit?.name ?? "End";
+
+    output_lss.push(createSplitsXml(config_template, game, includeIcons));
+    output_names.push("EndingSplit");
+  }
+
+  const output = await Promise.all(output_lss);
+
+  for (let i = 0; i < output_names.length; i++) {
+    const formattedCount = String(i).padStart(3, "0");
+    output_names[i] = `${formattedCount}_${output_names[i]}.lss`;
+  }
+
+  if (output.length !== output_names.length) {
+    throw new Error("output and output_names have different lengths");
+  }
+
+  const splitName = buildSplitsFileName(config);
+  const zip_name = `${splitName}_il_pack.zip`;
+
+  return { output, output_names, zip_name };
+}
