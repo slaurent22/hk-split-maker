@@ -38,7 +38,6 @@
         "@types/xml": "^1.0.5",
         "@vitejs/plugin-react": "^6.3.0",
         "@vitest/coverage-v8": "^5.1.1",
-        "core-js": "^3.20.3",
         "husky": "^7.0.4",
         "jsdom": "^29.1.1",
         "lint-staged": "^12.3.7",
@@ -63,7 +62,6 @@
         "react-sortablejs": "^6.1.4",
         "react-tabs": "^6.1.1",
         "react-tooltip": "^5.29.1",
-        "regenerator-runtime": "^0.14.1",
         "sortablejs": "^1.15.7",
         "vite-plugin-node-polyfills": "^0.28.0",
         "xml": "^1.0.1"
