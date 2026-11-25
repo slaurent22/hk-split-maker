@@ -209,7 +209,9 @@
         "jsxRuntime": "transparent"
     },
     "html": {
+        "experimentalFullSupportEnabled": true,
         "formatter": {
+            "enabled": true,
             "indentScriptAndStyle": false,
             "selfCloseVoidElements": "always"
         }
