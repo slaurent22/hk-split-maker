@@ -3,10 +3,22 @@ import { createRoot } from "react-dom/client";
 import { Provider } from "react-redux";
 import { BrowserRouter } from "react-router-dom";
 import "./index.css";
+import Loader from "./components/Loader";
 import { store } from "./store";
 
-const App = lazy(() => import("./components/App"));
-const AppWrapper = lazy(() => import("./components/AppWrapper"));
+const AppRoot = lazy(async () => {
+  const [{ default: AppWrapper }, { default: App }] = await Promise.all([
+    import("./components/AppWrapper"),
+    import("./components/App"),
+  ]);
+  return {
+    default: () => (
+      <AppWrapper>
+        <App />
+      </AppWrapper>
+    ),
+  };
+});
 
 const root = document.createElement("div");
 document.body.appendChild(root);
@@ -14,12 +26,8 @@ createRoot(root).render(
   <React.StrictMode>
     <Provider store={store}>
       <BrowserRouter>
-        <Suspense fallback={<div>Loading...</div>}>
-          <AppWrapper>
-            <Suspense fallback={<div>Loading...</div>}>
-              <App />
-            </Suspense>
-          </AppWrapper>
+        <Suspense fallback={<Loader />}>
+          <AppRoot />
         </Suspense>
       </BrowserRouter>
     </Provider>
