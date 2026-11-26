@@ -29,6 +29,9 @@
     },
     "linter": {
         "enabled": true,
+        "domains": {
+            "react": "recommended"
+        },
         "rules": {
             "preset": "recommended",
             "a11y": {
@@ -75,6 +78,9 @@
                 "useWhile": "error"
             },
             "correctness": {
+                "noGlobalDirnameFilename": "error",
+                "noNestedComponentDefinitions": "error",
+                "noReactPropAssignments": "error",
                 "noUndeclaredVariables": "error",
                 "noUnusedInstantiation": "error",
                 "noUnusedImports": "error",
@@ -83,7 +89,8 @@
                     "level": "error",
                     "options": { "ignoreRestSiblings": false }
                 },
-                "useParseIntRadix": "error"
+                "useParseIntRadix": "error",
+                "useSingleJsDocAsterisk": "error"
             },
             "performance": { "noAwaitInLoops": "error" },
             "style": {
