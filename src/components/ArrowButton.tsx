@@ -19,13 +19,9 @@ function ArrowButton({ id, onClick, text, disabled }: Props): ReactNode {
       id={id}
       disabled={disabled ?? false}
     >
-      <img src={arrow} alt="decorative arrow" className="arrow"></img>
+      <img src={arrow} alt="decorative arrow" className="arrow" />
       <span className="button-text">{text}</span>
-      <img
-        src={arrow}
-        alt="decorative arrow"
-        className="arrow arrow-right"
-      ></img>
+      <img src={arrow} alt="decorative arrow" className="arrow arrow-right" />
     </HKSMButton>
   );
 }

@@ -47,10 +47,10 @@ export default function SplitMaker(): ReactElement {
   const [includeIcons, setIncludeIcons] = useState(true);
 
   useEffect(() => {
-    if (window.location.hash) {
+    if (globalThis.location.hash) {
       setSearchParams({
         game,
-        builtin: window.location.hash.substring(1),
+        builtin: globalThis.location.hash.slice(1),
       });
     }
   }, [setSearchParams, game]);
@@ -81,13 +81,10 @@ export default function SplitMaker(): ReactElement {
   };
 
   const getCategoryDefinition = useCallback(
-    (targetCategoryName: string) => {
-      return Object.values(categories)
+    (targetCategoryName: string) =>
+      Object.values(categories)
         .flat()
-        .find((category) => {
-          return category.fileName === targetCategoryName;
-        });
-    },
+        .find((category) => category.fileName === targetCategoryName),
     [categories],
   );
 
@@ -135,9 +132,7 @@ export default function SplitMaker(): ReactElement {
     }
   }, [categoryName, onUpdateCategoryName]);
 
-  const parseConfigInput = (): Config => {
-    return JSON5.parse<Config>(configInput);
-  };
+  const parseConfigInput = (): Config => JSON5.parse<Config>(configInput);
 
   const onImportButton = (): void => {
     document.getElementById("import-input")?.click();
@@ -176,13 +171,14 @@ export default function SplitMaker(): ReactElement {
         alert("For Hollow Knight, you need at least one autosplit.");
         return false;
       }
-    } else if (game === "silksong") {
-      if (!configObject.splitIds || configObject.splitIds.length < 2) {
-        alert(
-          "For Silksong, you need at least two autosplits. The first one is the start trigger, and subsequent ones are the segments.",
-        );
-        return false;
-      }
+    } else if (
+      game === "silksong" &&
+      (!configObject.splitIds || configObject.splitIds.length < 2)
+    ) {
+      alert(
+        "For Silksong, you need at least two autosplits. The first one is the start trigger, and subsequent ones are the segments.",
+      );
+      return false;
     }
 
     return true;

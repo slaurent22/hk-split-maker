@@ -11,7 +11,7 @@ interface AppWrapperProps {
   children: ReactNode;
 }
 
-const VALID_GAMES: Game[] = ["hollowknight", "silksong"];
+const VALID_GAMES: Array<Game> = ["hollowknight", "silksong"];
 
 export default function AppWrapper({ children }: AppWrapperProps): ReactNode {
   const dispatch = useDispatch<AppDispatch>();

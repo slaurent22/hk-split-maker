@@ -2,10 +2,10 @@ import Icons from "../asset/hollowknight/icons/icons";
 import splits from "../asset/hollowknight/splits.txt?raw";
 
 const SPLITS_DEFINITIONS_REGEXP =
-  /\[Description\("(?<description>.+)"\), ToolTip\("(?<tooltip>.+)"\)\]\s+(?<id>\w+),/g;
-export const DESCRIPTION_NAME_REGEXP = /(?<name>.+)\s+\((?<qualifier>.+)\)/;
+  /\[Description\("(?<description>.+)"\), ToolTip\("(?<tooltip>.+)"\)\]\s+(?<id>\w+),/gu;
+export const DESCRIPTION_NAME_REGEXP = /(?<name>.+)\s+\((?<qualifier>.+)\)/u;
 
-const DREAM_NAIL_REGEXP = /Dream Nail/;
+const DREAM_NAIL_REGEXP = /Dream Nail/u;
 
 let splitDefinitions: Map<string, SplitDefinition> | null = null;
 let groupedSplitDefinitions: Map<string, Array<SplitDefinition>> | null = null;
@@ -156,7 +156,7 @@ function getNameAndGroup({
     case "Fragment":
       return [name, "Upgrade"];
     case "Grub":
-      return [name.substring("Rescued ".length), qualifier];
+      return [name.slice("Rescued ".length), qualifier];
     case "Pantheon":
       return [name, "Boss"];
     case "Room":
@@ -241,16 +241,16 @@ export function getSelectOptionGroups(): Array<SelectOptionGroup> {
     return selectOptionGroups;
   }
   const groupedSplits = getGroupedSplitDefinitions();
-  selectOptionGroups = [...groupedSplits].map(([groupName, splitDefs]) => {
-    return Object.freeze({
+  selectOptionGroups = [...groupedSplits].map(([groupName, splitDefs]) =>
+    Object.freeze({
       label: groupName,
       options: splitDefs.map((split) => ({
         value: split.id,
         label: split.description,
         tooltip: split.tooltip,
       })),
-    });
-  });
+    }),
+  );
   return selectOptionGroups;
 }
 

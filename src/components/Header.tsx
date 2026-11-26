@@ -6,7 +6,7 @@ function Header(): ReactNode {
     <div id="app">
       <header>
         <h1>
-          <img id="logo" src={logo} alt="HK Split Maker logo"></img>
+          <img id="logo" src={logo} alt="HK Split Maker logo" />
         </h1>
       </header>
     </div>

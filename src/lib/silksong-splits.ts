@@ -1,7 +1,7 @@
 import Icons from "../asset/silksong/icons/icons";
 import splits from "../asset/silksong/splits.json";
 
-export const DESCRIPTION_NAME_REGEXP = /(?<name>.+)\s+\((?<qualifier>.+)\)/;
+export const DESCRIPTION_NAME_REGEXP = /(?<name>.+)\s+\((?<qualifier>.+)\)/u;
 
 let splitDefinitions: Map<string, SplitDefinition> | null = null;
 let groupedSplitDefinitions: Map<string, Array<SplitDefinition>> | null = null;
@@ -35,7 +35,7 @@ function getNameAndGroup({
   switch (qualifier) {
     case "Flea":
       if (name.startsWith("Rescued")) {
-        return [name.substring("Rescued ".length), qualifier];
+        return [name.slice("Rescued ".length), qualifier];
       }
       break;
     case "Bellway":
@@ -137,16 +137,16 @@ export function getSelectOptionGroups(): Array<SelectOptionGroup> {
     return selectOptionGroups;
   }
   const groupedSplits = getGroupedSplitDefinitions();
-  selectOptionGroups = [...groupedSplits].map(([groupName, splitDefs]) => {
-    return Object.freeze({
+  selectOptionGroups = [...groupedSplits].map(([groupName, splitDefs]) =>
+    Object.freeze({
       label: groupName,
       options: splitDefs.map((split) => ({
         value: split.id,
         label: split.description,
         tooltip: split.tooltip,
       })),
-    });
-  });
+    }),
+  );
   return selectOptionGroups;
 }
 

@@ -65,16 +65,16 @@ function findByAttr(
 
 const DEFAULT_OFFSET = "00:00:00";
 
-export const SUB_SPLIT_RE = /-(?<name>.+)/;
+export const SUB_SPLIT_RE = /-(?<name>.+)/u;
 
 export function buildSplitsFileName(splitsConfig: Config): string {
   const filename = (splitsConfig?.categoryName || "splits")
     .toLowerCase() // Make file name compatible:
-    .replace(/['"]/g, "") // remove ' and "
-    .replace(/[^a-z0-9]/gi, "_") // replace non-alphanum with _
-    .replace(/^_+|_+$/g, "") // remove outer _
-    .replace(/^_+|_+$/g, "") // remove outer _
-    .replace(/_{2,}/g, "_"); // join multiple _
+    .replace(/['"]/gu, "") // remove ' and "
+    .replace(/[^a-z0-9]/giu, "_") // replace non-alphanum with _
+    .replace(/^_+|_+$/gu, "") // remove outer _
+    .replace(/^_+|_+$/gu, "") // remove outer _
+    .replace(/_{2,}/gu, "_"); // join multiple _
   let suffix = "";
   if (splitsConfig.variables?.glitch) {
     const glitch = splitsConfig.variables?.glitch;
@@ -154,9 +154,8 @@ function isAutosplitIdSubsplit(autosplitId: string): {
       throw new Error(`Failed to parse name out of "${autosplitId}"`);
     }
     return { subsplit: true, autosplitId: subSplitMatch.groups.name };
-  } else {
-    return { subsplit: false, autosplitId };
   }
+  return { subsplit: false, autosplitId };
 }
 
 const SILKSONG_SCRIPT_NAME_NODE = {
@@ -176,9 +175,8 @@ function variablesAllGlitches(
     return Object.values(variables).some(
       (v) => v.includes("All Glitches") || v.includes("Fast"),
     );
-  } else {
-    return false;
   }
+  return false;
 }
 
 // <PauseOnMainMenu>False</PauseOnMainMenu>
@@ -204,21 +202,20 @@ function silksongPauseOnFileSelectNodes(
 
   if (pauseOnFileSelectMut === undefined) {
     return [];
-  } else {
-    return [
-      {
-        Setting: [
-          {
-            _attr: {
-              id: "pause_on_file_select",
-              type: "bool",
-            },
-          },
-          pauseOnFileSelectMut ? "True" : "False",
-        ],
-      },
-    ];
   }
+  return [
+    {
+      Setting: [
+        {
+          _attr: {
+            id: "pause_on_file_select",
+            type: "bool",
+          },
+        },
+        pauseOnFileSelectMut ? "True" : "False",
+      ],
+    },
+  ];
 }
 
 export async function createSplitsXml(
@@ -250,7 +247,7 @@ export async function createSplitsXml(
   const liveSplitIconData = new Map<string, string>();
 
   const splitIdCount = new Map<string, number>();
-  const parsedSplitIds: ParsedSplitId[] = splitIds.map((splitId) => {
+  const parsedSplitIds: Array<ParsedSplitId> = splitIds.map((splitId) => {
     let name = "";
 
     const { subsplit, autosplitId } = isAutosplitIdSubsplit(splitId);
@@ -276,7 +273,7 @@ export async function createSplitsXml(
         nameTemplate = nameOverride[currentSplitIdCount];
       }
       if (nameTemplate) {
-        name = nameTemplate.replace(/%s/g, splitDefinition.name);
+        name = nameTemplate.replace(/%s/gu, splitDefinition.name);
       }
     }
 
@@ -699,7 +696,7 @@ function transformNameOverrideForImport(
     return "%s";
   }
   if (splitDefinition?.name && nameOverride.includes(splitDefinition?.name)) {
-    return nameOverride.replace(new RegExp(splitDefinition.name, "g"), "%s");
+    return nameOverride.replace(new RegExp(splitDefinition.name, "gu"), "%s");
   }
   return nameOverride;
 }
@@ -758,20 +755,19 @@ function parseHKAutoSplitterSettings(
       endTriggeringAutosplit,
       pauseOnMainMenu,
     };
-  } else if (xmlDocCustomSettings) {
+  }
+  if (xmlDocCustomSettings) {
     // WASM autosplitter
     const xmlDocSettings = xmlDocCustomSettings.getElementsByTagName("Setting");
     const autostartsplitIds: Array<string> = [];
-    for (let i = 0; i < xmlDocSettings.length; i++) {
-      if (!(xmlDocSettings[i].getAttribute("id") === "splits")) {
+    for (const xmlDocSetting of xmlDocSettings) {
+      if (!(xmlDocSetting.getAttribute("id") === "splits")) {
         continue;
       }
       const xmlDocSplitsSettings =
-        xmlDocSettings[i].getElementsByTagName("Setting");
-      for (let j = 0; j < xmlDocSplitsSettings.length; j++) {
-        autostartsplitIds.push(
-          xmlDocSplitsSettings[j].getAttribute("value") || "",
-        );
+        xmlDocSetting.getElementsByTagName("Setting");
+      for (const xmlDocSplitsSetting of xmlDocSplitsSettings) {
+        autostartsplitIds.push(xmlDocSplitsSetting.getAttribute("value") || "");
       }
     }
     const autostartId = autostartsplitIds[0];
@@ -797,11 +793,10 @@ function parseHKAutoSplitterSettings(
       endTriggeringAutosplit: true,
       pauseOnMainMenu,
     };
-  } else {
-    throw new Error(
-      `Failed to import splits: missing AutoSplitterSettings Splits`,
-    );
   }
+  throw new Error(
+    "Failed to import splits: missing AutoSplitterSettings Splits",
+  );
 }
 
 function parseSSAutoSplitterSettings(
@@ -815,9 +810,8 @@ function parseSSAutoSplitterSettings(
   }
   const autosplitIds: Array<string> = [];
   const xmlDocSettings = xmlDocSplits.getElementsByTagName("Setting");
-  for (let i = 0; i < xmlDocSettings.length; i++) {
-    const settingsNode = xmlDocSettings[i];
-    const autosplitId = settingsNode.getAttribute("value") ?? "ManualSplit";
+  for (const xmlDocSetting of xmlDocSettings) {
+    const autosplitId = xmlDocSetting.getAttribute("value") ?? "ManualSplit";
     autosplitIds.push(autosplitId);
   }
   const xmlDocPauseOnFileSelect = findByAttr(
@@ -852,13 +846,12 @@ function importHKSplitsXml(str: string): Config {
   const potentialVariables: Record<string, string> = {};
   let hasVariables = false;
   if (xmlDocVariables && xmlDocVariables.length > 0) {
-    for (let i = 0; i < xmlDocVariables.length; i++) {
-      const variableName = xmlDocVariables[i].getAttribute("name");
+    for (const xmlDocVariable of xmlDocVariables) {
+      const variableName = xmlDocVariable.getAttribute("name");
       if (!variableName) {
         continue;
       }
-      potentialVariables[variableName] =
-        getTextContent(xmlDocVariables[i]) ?? "";
+      potentialVariables[variableName] = getTextContent(xmlDocVariable) ?? "";
       hasVariables = true;
     }
   }
@@ -870,8 +863,7 @@ function importHKSplitsXml(str: string): Config {
     const xmlDocComponents0 = xmlDoc.getElementsByTagName("Components")[0];
     const xmlDocComponents =
       xmlDocComponents0?.getElementsByTagName("Component") || [];
-    for (let i = 0; i < xmlDocComponents.length; i++) {
-      const xmlDocComponent = xmlDocComponents[i];
+    for (const xmlDocComponent of xmlDocComponents) {
       const path = getTextContentByTagName(xmlDocComponent, "Path");
       if (path === "LiveSplit.AutoSplittingRuntime.dll") {
         autoSplitterSettings =
@@ -880,7 +872,7 @@ function importHKSplitsXml(str: string): Config {
       }
     }
     if (!autoSplitterSettings) {
-      throw new Error(`Failed to import splits: missing AutoSplitterSettings`);
+      throw new Error("Failed to import splits: missing AutoSplitterSettings");
     }
   }
   const {
@@ -891,15 +883,17 @@ function importHKSplitsXml(str: string): Config {
     pauseOnMainMenu,
   } = parseHKAutoSplitterSettings(autoSplitterSettings);
   if (!ordered) {
-    throw new Error(`Failed to import splits: Ordered must be True to import`);
+    throw new Error("Failed to import splits: Ordered must be True to import");
   }
   // autosplitIds vs splitIds: autosplitIds do not contain "-" for subsplits, splitIds can
-  const parsedSplitIds: ParsedSplitId[] = autosplitIds.map((autosplitId) => ({
-    autosplitId,
-    subsplit: false,
-    name: "",
-    iconId: "",
-  }));
+  const parsedSplitIds: Array<ParsedSplitId> = autosplitIds.map(
+    (autosplitId) => ({
+      autosplitId,
+      subsplit: false,
+      name: "",
+      iconId: "",
+    }),
+  );
   // Segments Segment Name -> names, endingSplit name
   const xmlDocSegments0 = xmlDoc.getElementsByTagName("Segments")[0];
   const segments = xmlDocSegments0?.getElementsByTagName("Segment") || [];
@@ -910,7 +904,7 @@ function importHKSplitsXml(str: string): Config {
     if (i < parsedSplitIds.length) {
       if (subsegmentName.startsWith("-")) {
         parsedSplitIds[i].subsplit = true;
-        parsedSplitIds[i].name = subsegmentName.substring(1);
+        parsedSplitIds[i].name = subsegmentName.slice(1);
       } else {
         parsedSplitIds[i].subsplit = false;
         parsedSplitIds[i].name = subsegmentName;
@@ -921,16 +915,18 @@ function importHKSplitsXml(str: string): Config {
     }
   }
   // Deal with "-" subsplit markers
-  const splitIds: string[] = parsedSplitIds.map(({ autosplitId, subsplit }) => {
-    const namePrefix = subsplit ? "-" : "";
-    return `${namePrefix}${autosplitId}`;
-  });
+  const splitIds: Array<string> = parsedSplitIds.map(
+    ({ autosplitId, subsplit }) => {
+      const namePrefix = subsplit ? "-" : "";
+      return `${namePrefix}${autosplitId}`;
+    },
+  );
   const uniqueAutosplitIds: Set<string> = new Set(
     parsedSplitIds.map(({ autosplitId }) => autosplitId),
   );
   const { parseSplitsDefinitions } = splitsFunctions("hollowknight");
   const splitDefinitions = parseSplitsDefinitions();
-  const potentialNameOverrides: Record<string, string | string[]> = {};
+  const potentialNameOverrides: Record<string, string | Array<string>> = {};
   let hasNameOverrides = false;
   for (const uniqueAutosplitId of uniqueAutosplitIds) {
     const splitNames = parsedSplitIds
@@ -994,13 +990,12 @@ function importSSSplitsXml(str: string): Config {
   const potentialVariables: Record<string, string> = {};
   let hasVariables = false;
   if (xmlDocVariables && xmlDocVariables.length > 0) {
-    for (let i = 0; i < xmlDocVariables.length; i++) {
-      const variableName = xmlDocVariables[i].getAttribute("name");
+    for (const xmlDocVariable of xmlDocVariables) {
+      const variableName = xmlDocVariable.getAttribute("name");
       if (!variableName) {
         continue;
       }
-      potentialVariables[variableName] =
-        getTextContent(xmlDocVariables[i]) || "";
+      potentialVariables[variableName] = getTextContent(xmlDocVariable) || "";
       hasVariables = true;
     }
   }
@@ -1011,8 +1006,7 @@ function importSSSplitsXml(str: string): Config {
     const xmlDocComponents0 = xmlDoc.getElementsByTagName("Components")[0];
     const xmlDocComponents =
       xmlDocComponents0?.getElementsByTagName("Component") || [];
-    for (let i = 0; i < xmlDocComponents.length; i++) {
-      const xmlDocComponent = xmlDocComponents[i];
+    for (const xmlDocComponent of xmlDocComponents) {
       const path = getTextContentByTagName(xmlDocComponent, "Path");
       if (path === "LiveSplit.AutoSplittingRuntime.dll") {
         autoSplitterSettings =
@@ -1021,18 +1015,20 @@ function importSSSplitsXml(str: string): Config {
       }
     }
     if (!autoSplitterSettings) {
-      throw new Error(`Failed to import splits: missing AutoSplitterSettings`);
+      throw new Error("Failed to import splits: missing AutoSplitterSettings");
     }
   }
   const { autosplitIds, pauseOnFileSelect } =
     parseSSAutoSplitterSettings(autoSplitterSettings);
   // autosplitIds vs splitIds: autosplitIds do not contain "-" for subsplits, splitIds can
-  const parsedSplitIds: ParsedSplitId[] = autosplitIds.map((autosplitId) => ({
-    autosplitId,
-    subsplit: false,
-    name: "",
-    iconId: "",
-  }));
+  const parsedSplitIds: Array<ParsedSplitId> = autosplitIds.map(
+    (autosplitId) => ({
+      autosplitId,
+      subsplit: false,
+      name: "",
+      iconId: "",
+    }),
+  );
   // Segments Segment Name -> names, endingSplit name
   const xmlDocSegments0 = xmlDoc.getElementsByTagName("Segments")[0];
   const segments = xmlDocSegments0?.getElementsByTagName("Segment") || [];
@@ -1044,7 +1040,7 @@ function importSSSplitsXml(str: string): Config {
       // segments are offset by one because start trigger is in list
       if (subsegmentName.startsWith("-")) {
         parsedSplitIds[i + 1].subsplit = true;
-        parsedSplitIds[i + 1].name = subsegmentName.substring(1);
+        parsedSplitIds[i + 1].name = subsegmentName.slice(1);
       } else {
         parsedSplitIds[i + 1].subsplit = false;
         parsedSplitIds[i + 1].name = subsegmentName;
@@ -1055,16 +1051,18 @@ function importSSSplitsXml(str: string): Config {
     }
   }
   // Deal with "-" subsplit markers
-  const splitIds: string[] = parsedSplitIds.map(({ autosplitId, subsplit }) => {
-    const namePrefix = subsplit ? "-" : "";
-    return `${namePrefix}${autosplitId}`;
-  });
+  const splitIds: Array<string> = parsedSplitIds.map(
+    ({ autosplitId, subsplit }) => {
+      const namePrefix = subsplit ? "-" : "";
+      return `${namePrefix}${autosplitId}`;
+    },
+  );
   const uniqueAutosplitIds: Set<string> = new Set(
     parsedSplitIds.map(({ autosplitId }) => autosplitId),
   );
   const { parseSplitsDefinitions } = splitsFunctions("silksong");
   const splitDefinitions = parseSplitsDefinitions();
-  const potentialNameOverrides: Record<string, string | string[]> = {};
+  const potentialNameOverrides: Record<string, string | Array<string>> = {};
   let hasNameOverrides = false;
   for (const uniqueAutosplitId of uniqueAutosplitIds) {
     const splitNames = parsedSplitIds

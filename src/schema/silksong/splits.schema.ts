@@ -9,23 +9,19 @@ import SplitConfigSchemaSource from "./splits.schema.json";
 const SPLITS: Array<SplitDefinition> = [...parseSplitsDefinitions().values()];
 
 const SPLITS_SCHEMA = SPLITS.map(
-  ({ description: title, tooltip: description, id }) => {
-    return {
-      title,
-      description,
-      const: id,
-    };
-  },
+  ({ description: title, tooltip: description, id }) => ({
+    title,
+    description,
+    const: id,
+  }),
 );
 
 const SUBSPLITS_SCHEMA = SPLITS.map(
-  ({ description: title, tooltip: description, id }) => {
-    return {
-      title,
-      description: `(subsplit) ${description}`,
-      const: `-${id}`,
-    };
-  },
+  ({ description: title, tooltip: description, id }) => ({
+    title,
+    description: `(subsplit) ${description}`,
+    const: `-${id}`,
+  }),
 );
 
 interface SplitIdItem {

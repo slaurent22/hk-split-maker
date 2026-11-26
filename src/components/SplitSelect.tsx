@@ -65,7 +65,7 @@ function SplitSelect({
   );
   return (
     <BaseSelect<SplitOption>
-      id={"id"}
+      id="id"
       options={options}
       placeholder="Add autosplit: Select or type to search..."
       onChange={baseSelectOnChange}

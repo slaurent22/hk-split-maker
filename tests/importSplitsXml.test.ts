@@ -8,7 +8,7 @@ import ss_custom_name_lss from "./fixtures/ss_custom_name.lss?raw";
 import ss_custom_offset_lss from "./fixtures/ss_custom_offset.lss?raw";
 import ss_no_autosplitter_lss from "./fixtures/ss_no_autosplitter.lss?raw";
 import ss_no_category_name_lss from "./fixtures/ss_no_category_name.lss?raw";
-import ss_pause_on_file_select_false from "./fixtures/ss_pause_on_file_select_false.lss?raw";
+import ss_pause_on_file_select_false_lss from "./fixtures/ss_pause_on_file_select_false.lss?raw";
 import ss_repeating_splitid_lss from "./fixtures/ss_repeating_splitid.lss?raw";
 import ss_subsplits_lss from "./fixtures/ss_subsplits.lss?raw";
 import ss_vanilla_lss from "./fixtures/ss_vanilla.lss?raw";
@@ -119,7 +119,10 @@ describe("importSplitsXml", () => {
       });
     });
     test("should import silksong splits with pause_on_file_select False", () => {
-      const config = importSplitsXml(ss_pause_on_file_select_false, "silksong");
+      const config = importSplitsXml(
+        ss_pause_on_file_select_false_lss,
+        "silksong",
+      );
       expect(config.pauseOnFileSelect).toBe(false);
     });
   });

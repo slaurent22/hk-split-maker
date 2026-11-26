@@ -325,12 +325,10 @@ type SplitIdItemInterface = ItemInterface & { splitId: string };
 function getItemInterfaceArr(
   splitIds: Array<string>,
 ): Array<SplitIdItemInterface> {
-  return splitIds.map((splitId, index) => {
-    return {
-      id: index,
-      splitId,
-    };
-  });
+  return splitIds.map((splitId, index) => ({
+    id: index,
+    splitId,
+  }));
 }
 
 function hasSplits(parsedConfig: Partial<Config>): parsedConfig is Config {

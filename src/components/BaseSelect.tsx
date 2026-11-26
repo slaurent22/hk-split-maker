@@ -78,25 +78,21 @@ function createCustomStyles<
       ...provided,
       fontFamily: "sans-serif",
     }),
-    control: (provided: CSSObjectWithLabel): CSSObjectWithLabel => {
-      return {
-        ...provided,
-        display: "flex",
-        border: "1px solid white",
-        borderRadius: "3px",
-        fontSize: "18px",
-        fontFamily: "serif",
-        margin: "8px 8px 8px 0",
-        backgroundColor: "#2f3136",
-        ...controlStyleOverrides,
-      };
-    },
-    container: (provided: CSSObjectWithLabel): CSSObjectWithLabel => {
-      return {
-        ...provided,
-        flex: "1 1 0%",
-      };
-    },
+    control: (provided: CSSObjectWithLabel): CSSObjectWithLabel => ({
+      ...provided,
+      display: "flex",
+      border: "1px solid white",
+      borderRadius: "3px",
+      fontSize: "18px",
+      fontFamily: "serif",
+      margin: "8px 8px 8px 0",
+      backgroundColor: "#2f3136",
+      ...controlStyleOverrides,
+    }),
+    container: (provided: CSSObjectWithLabel): CSSObjectWithLabel => ({
+      ...provided,
+      flex: "1 1 0%",
+    }),
   };
 }
 

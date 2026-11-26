@@ -170,13 +170,13 @@ function CategorySelect({
     [onChange],
   );
   if (!data) {
-    return <BaseSelect id={id}></BaseSelect>;
+    return <BaseSelect id={id} />;
   }
   const optGroups = Object.entries(data).map(([groupName, groupEntries]) => {
     const options = groupEntries.map(defToOption);
     return {
       label: groupName,
-      options: options,
+      options,
     };
   });
 
