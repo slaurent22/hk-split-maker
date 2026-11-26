@@ -153,7 +153,6 @@ export default function SplitMaker(): ReactElement {
           alert(
             "Failed to import splits. The error has been logged to console.error",
           );
-          return;
         }
       }
     };

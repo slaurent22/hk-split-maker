@@ -304,12 +304,12 @@ export async function createSplitsXml(
   });
 
   if (includeIcons) {
-    parsedSplitIds.forEach(({ iconId }) => {
+    for (const { iconId } of parsedSplitIds) {
       const url = allIconURLs.get(iconId);
       if (url) {
         iconURLsToFetch.add(url);
       }
-    });
+    }
     if (!endTriggeringAutosplit && endingSplit?.icon) {
       const url = allIconURLs.get(endingSplit.icon);
       if (url) {
@@ -893,15 +893,12 @@ function importHKSplitsXml(str: string): Config {
     throw new Error(`Failed to import splits: Ordered must be True to import`);
   }
   // autosplitIds vs splitIds: autosplitIds do not contain "-" for subsplits, splitIds can
-  const parsedSplitIds: ParsedSplitId[] = [];
-  autosplitIds.forEach((autosplitId) => {
-    parsedSplitIds.push({
-      autosplitId,
-      subsplit: false,
-      name: "",
-      iconId: "",
-    });
-  });
+  const parsedSplitIds: ParsedSplitId[] = autosplitIds.map((autosplitId) => ({
+    autosplitId,
+    subsplit: false,
+    name: "",
+    iconId: "",
+  }));
   // Segments Segment Name -> names, endingSplit name
   const xmlDocSegments0 = xmlDoc.getElementsByTagName("Segments")[0];
   const segments = xmlDocSegments0?.getElementsByTagName("Segment") || [];
@@ -934,7 +931,7 @@ function importHKSplitsXml(str: string): Config {
   const splitDefinitions = parseSplitsDefinitions();
   const potentialNameOverrides: Record<string, string | string[]> = {};
   let hasNameOverrides = false;
-  uniqueAutosplitIds.forEach((uniqueAutosplitId) => {
+  for (const uniqueAutosplitId of uniqueAutosplitIds) {
     const splitNames = parsedSplitIds
       .filter(({ autosplitId }) => autosplitId === uniqueAutosplitId)
       .map(({ name }) => name);
@@ -962,7 +959,7 @@ function importHKSplitsXml(str: string): Config {
       potentialNameOverrides[uniqueAutosplitId] = nameOverrides;
       hasNameOverrides = true;
     }
-  });
+  }
   let config: Config = {
     categoryName,
     startTriggeringAutosplit,
@@ -1028,15 +1025,12 @@ function importSSSplitsXml(str: string): Config {
   const { autosplitIds, pauseOnFileSelect } =
     parseSSAutoSplitterSettings(autoSplitterSettings);
   // autosplitIds vs splitIds: autosplitIds do not contain "-" for subsplits, splitIds can
-  const parsedSplitIds: ParsedSplitId[] = [];
-  autosplitIds.forEach((autosplitId) => {
-    parsedSplitIds.push({
-      autosplitId,
-      subsplit: false,
-      name: "",
-      iconId: "",
-    });
-  });
+  const parsedSplitIds: ParsedSplitId[] = autosplitIds.map((autosplitId) => ({
+    autosplitId,
+    subsplit: false,
+    name: "",
+    iconId: "",
+  }));
   // Segments Segment Name -> names, endingSplit name
   const xmlDocSegments0 = xmlDoc.getElementsByTagName("Segments")[0];
   const segments = xmlDocSegments0?.getElementsByTagName("Segment") || [];
@@ -1070,7 +1064,7 @@ function importSSSplitsXml(str: string): Config {
   const splitDefinitions = parseSplitsDefinitions();
   const potentialNameOverrides: Record<string, string | string[]> = {};
   let hasNameOverrides = false;
-  uniqueAutosplitIds.forEach((uniqueAutosplitId) => {
+  for (const uniqueAutosplitId of uniqueAutosplitIds) {
     const splitNames = parsedSplitIds
       .filter(({ autosplitId }) => autosplitId === uniqueAutosplitId)
       .map(({ name }) => name);
@@ -1098,7 +1092,7 @@ function importSSSplitsXml(str: string): Config {
       potentialNameOverrides[uniqueAutosplitId] = nameOverrides;
       hasNameOverrides = true;
     }
-  });
+  }
   let config: Config = {
     categoryName,
     splitIds,

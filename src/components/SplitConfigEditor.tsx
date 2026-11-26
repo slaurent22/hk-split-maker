@@ -247,7 +247,7 @@ function SingleAutosplitSelect({
           value={value}
           controlStyleOverrides={{ margin: "8px 8px 8px 8px" }}
           onChange={(val: SplitOption | null): void => {
-            if (!parsedConfig.splitIds || !val) {
+            if (!(parsedConfig.splitIds && val)) {
               return;
             }
             onChange({
@@ -360,7 +360,7 @@ export default function SplitConfigEditor(props: Props): ReactElement {
   }, [props.defaultValue]);
 
   const onChangeSplitSelect = (split: SplitOption | null): void => {
-    if (!split || !editorRef?.current) {
+    if (!(split && editorRef?.current)) {
       return;
     }
     const currentValue = editorRef.current.getValue();

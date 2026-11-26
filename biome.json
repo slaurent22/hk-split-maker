@@ -31,6 +31,9 @@
         "enabled": true,
         "rules": {
             "preset": "recommended",
+            "a11y": {
+                "noNoninteractiveElementInteractions": "error"
+            },
             "nursery": {
                 "useReactFunctionComponentDefinition": "error",
                 "useExplicitReturnType": "error",
@@ -39,16 +42,37 @@
             "complexity": {
                 "noAdjacentSpacesInRegex": "error",
                 "noBannedTypes": "error",
+                "noDivRegex": "error",
+                "noExcessiveCognitiveComplexity": {
+                    "level": "error",
+                    "options": {
+                        "maxAllowedComplexity": 50
+                    }
+                },
+                "noExcessiveNestedCallbacks": "error",
+                "noExcessiveNestedTestSuites": "error",
                 "noExtraBooleanCast": "error",
+                "noForEach": "error",
                 "noImplicitCoercions": "error",
+                "noRedundantDefaultExport": "error",
+                "noUnnecessaryTemplateExpression": "error",
                 "noUselessCatch": "error",
+                "noUselessCatchBinding": "error",
                 "noUselessEscapeInRegex": "error",
                 "noUselessLoneBlockStatements": "error",
+                "noUselessReturn": "error",
                 "noUselessStringConcat": "error",
                 "noUselessThisAlias": "error",
                 "noUselessTypeConstraint": "error",
+                "noUselessUndefined": "error",
                 "noUselessUndefinedInitialization": "error",
-                "noVoid": "error"
+                "noVoid": "error",
+                "useArrayFind": "error",
+                "useArraySome": "error",
+                "useMaxParams": "error",
+                "useRegexpTest": "error",
+                "useSimplifiedLogicExpression": "error",
+                "useWhile": "error"
             },
             "correctness": {
                 "noUndeclaredVariables": "error",
