@@ -2,6 +2,7 @@ import type { ReactElement } from "react";
 import Select, {
   type CSSObjectWithLabel,
   type GroupBase,
+  type GroupProps,
   type Props,
   type StylesConfig,
   type Theme,
@@ -10,7 +11,7 @@ import Select, {
 function createOnMenuOpen(classNamePrefix: string) {
   // https://stackoverflow.com/a/66710895
   // workaround for scrolling to selected item
-  return () => {
+  return (): void => {
     setTimeout(() => {
       const selectedEl = document.getElementsByClassName(
         `${classNamePrefix}__option--is-selected`,
@@ -50,22 +51,25 @@ function createCustomStyles<
   controlStyleOverrides?: CSSObjectWithLabel;
 }): StylesConfig<Option, IsMulti, Group> {
   return {
-    groupHeading: (provided) => ({
+    groupHeading: (provided: CSSObjectWithLabel): CSSObjectWithLabel => ({
       ...provided,
       fontSize: "18px",
       fontFamily: "serif",
       fontWeight: "bold",
       color: "white",
     }),
-    group: (provided, state) => ({
+    group: (
+      provided: CSSObjectWithLabel,
+      state: GroupProps<Option, IsMulti, Group>,
+    ): CSSObjectWithLabel => ({
       ...provided,
       backgroundColor: getGroupColor(state.data.label ?? ""),
     }),
-    option: (provided) => ({
+    option: (provided: CSSObjectWithLabel): CSSObjectWithLabel => ({
       ...provided,
       fontFamily: "sans-serif",
     }),
-    control: (provided) => {
+    control: (provided: CSSObjectWithLabel): CSSObjectWithLabel => {
       return {
         ...provided,
         display: "flex",
@@ -78,7 +82,7 @@ function createCustomStyles<
         ...controlStyleOverrides,
       };
     },
-    container: (provided) => {
+    container: (provided: CSSObjectWithLabel): CSSObjectWithLabel => {
       return {
         ...provided,
         flex: "1 1 0%",

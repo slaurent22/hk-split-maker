@@ -98,7 +98,7 @@ function DeleteAutosplit({
       <TiDelete
         size="1.5em"
         style={{ cursor: "pointer" }}
-        onClick={() => {
+        onClick={(): void => {
           if (!parsedConfig.splitIds) {
             return;
           }
@@ -133,7 +133,7 @@ function AddAutosplit({
       <TiPlus
         size="1em"
         style={{ cursor: "pointer" }}
-        onClick={() => {
+        onClick={(): void => {
           if (!parsedConfig.splitIds) {
             return;
           }
@@ -166,7 +166,7 @@ function AddFirstAutosplit({
       <TiPlus
         size="1.5em"
         style={{ cursor: "pointer" }}
-        onClick={() => {
+        onClick={(): void => {
           if (!parsedConfig) {
             return;
           }
@@ -201,7 +201,7 @@ function ToggleSubsplit({
       <Component
         size="1.5em"
         style={{ cursor: "pointer" }}
-        onClick={() => {
+        onClick={(): void => {
           if (!parsedConfig.splitIds) {
             return;
           }
@@ -250,7 +250,7 @@ function SingleAutosplitSelect({
         <SplitSelect
           value={value}
           controlStyleOverrides={{ margin: "8px 8px 8px 8px" }}
-          onChange={(val) => {
+          onChange={(val): void => {
             if (!parsedConfig.splitIds || !val) {
               return;
             }
@@ -302,7 +302,7 @@ function EndTriggeringAutosplit({
         <input
           id="end-triggering-autosplit"
           type="checkbox"
-          onChange={() => {
+          onChange={(): void => {
             onChange({
               ...parsedConfig,
               endTriggeringAutosplit: !parsedConfig.endTriggeringAutosplit,
@@ -416,7 +416,7 @@ export default function SplitConfigEditor(props: Props): ReactElement {
             ghostClass="autosplits-sortable-ghost-class"
             dragClass="autosplits-sortable-drag-class"
             list={getItemInterfaceArr(parsedConfig.splitIds)}
-            setList={(items: Array<SplitIdItemInterface>) => {
+            setList={(items: Array<SplitIdItemInterface>): void => {
               const newConfig = {
                 ...parsedConfig,
                 splitIds: items.map(({ splitId }) => splitId),

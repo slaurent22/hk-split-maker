@@ -33,12 +33,7 @@
             "preset": "recommended",
             "nursery": {
                 "useReactFunctionComponentDefinition": "error",
-                "useExplicitReturnType": {
-                    "level": "error",
-                    "options": {
-                        "allowExpressions": true
-                    }
-                }
+                "useExplicitReturnType": "error"
             },
             "complexity": {
                 "noAdjacentSpacesInRegex": "error",

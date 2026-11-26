@@ -64,7 +64,7 @@ function SplitSelect({
       className={"SplitSelect"}
       classNamePrefix={"SplitSelect"}
       placeholder="Add autosplit: Select or type to search..."
-      onChange={(newValue) => onChange(newValue ?? null)}
+      onChange={(newValue): void => onChange(newValue ?? null)}
       components={{ Option: SplitSelectOption }}
       value={value}
       controlStyleOverrides={controlStyleOverrides}

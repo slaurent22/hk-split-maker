@@ -177,7 +177,9 @@ function CategorySelect({
     <BaseSelect<CategoryOption>
       id={id}
       options={optGroups}
-      onChange={(newValue) => onChange(newValue ? optionToDef(newValue) : null)}
+      onChange={(newValue): void =>
+        onChange(newValue ? optionToDef(newValue) : null)
+      }
       className={"CategorySelect"}
       classNamePrefix={"CategorySelect"}
       placeholder="Pre-made Category: Select or type to search..."

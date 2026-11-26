@@ -110,7 +110,7 @@ export default function SplitMaker(): ReactElement {
   );
 
   useEffect(() => {
-    (async () => {
+    (async (): Promise<void> => {
       if (categoryName && getCategoryDefinition(categoryName)) {
         onConfigInputChange("{loading...}", true);
         const editorContent = await getCategoryConfigJSON(categoryName, game);
@@ -149,7 +149,7 @@ export default function SplitMaker(): ReactElement {
     }
     const file = ce.target.files[0];
     const reader = new FileReader();
-    reader.onload = (pe: ProgressEvent<FileReader>) => {
+    reader.onload = (pe: ProgressEvent<FileReader>): void => {
       const fileContents = pe.target?.result;
       if (typeof fileContents === "string") {
         try {
@@ -331,7 +331,7 @@ export default function SplitMaker(): ReactElement {
             <input
               type="file"
               id="import-input"
-              onChange={(e) => onImport(e, game)}
+              onChange={(e): void => onImport(e, game)}
             />
             <ArrowButton
               text="Import Splits"
@@ -363,7 +363,7 @@ export default function SplitMaker(): ReactElement {
               id="generate-icons-toggle"
               type="checkbox"
               checked={includeIcons}
-              onChange={(e) => {
+              onChange={(e): void => {
                 setIncludeIcons(e.target.checked);
               }}
             />

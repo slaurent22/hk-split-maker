@@ -18,7 +18,7 @@ function useHandleEditorWillMount(): [(monaco: Monaco) => void, Uri] {
 
   const modelUri = Uri.parse(schemaId);
   return [
-    function handleEditorWillMount(monaco: Monaco) {
+    function handleEditorWillMount(monaco: Monaco): void {
       monaco.languages.json.jsonDefaults.setDiagnosticsOptions({
         validate: true,
         schemas: [
