@@ -1,14 +1,7 @@
 import JSON5 from "json5";
 import type { editor } from "monaco-editor";
-import {
-  lazy,
-  type ReactElement,
-  type ReactNode,
-  Suspense,
-  useEffect,
-  useRef,
-  useState,
-} from "react";
+import type { ReactElement, ReactNode } from "react";
+import { lazy, Suspense, useEffect, useRef, useState } from "react";
 import {
   TiArrowMaximise,
   TiArrowMinimise,
@@ -17,13 +10,16 @@ import {
   TiDelete,
   TiPlus,
 } from "react-icons/ti";
-import { type ItemInterface, ReactSortable } from "react-sortablejs";
+import type { ItemInterface } from "react-sortablejs";
+import { ReactSortable } from "react-sortablejs";
 import { Tab, TabList, TabPanel, Tabs } from "react-tabs";
 import { useCurrentGame } from "../hooks";
 import { parseSplitsDefinitions as HollowKnightParseSplitsDefinitions } from "../lib/hollowknight-splits";
-import { type Config, SUB_SPLIT_RE } from "../lib/lss";
+import type { Config } from "../lib/lss";
+import { SUB_SPLIT_RE } from "../lib/lss";
 import { parseSplitsDefinitions as SilksongParseSplitsDefinitions } from "../lib/silksong-splits";
-import SplitSelect, { type SplitOption } from "./SplitSelect";
+import type { SplitOption } from "./SplitSelect";
+import SplitSelect from "./SplitSelect";
 import Tooltip from "./Tooltip";
 import "react-tabs/style/react-tabs.css";
 

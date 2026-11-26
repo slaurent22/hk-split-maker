@@ -1,4 +1,5 @@
-import { type ReactElement, useState } from "react";
+import type { ReactElement } from "react";
+import { useState } from "react";
 
 export default function AlertBanner(): ReactElement {
   const [alertBannerVisible, setAlertBannerVisible] = useState(true);

@@ -1,12 +1,13 @@
-import { type ReactElement, type ReactNode, useMemo } from "react";
-import {
-  type CSSObjectWithLabel,
-  components,
-  type GroupBase,
-  type OptionProps,
-  type PropsValue,
-  type SingleValue,
+import type { ReactElement, ReactNode } from "react";
+import { useMemo } from "react";
+import type {
+  CSSObjectWithLabel,
+  GroupBase,
+  OptionProps,
+  PropsValue,
+  SingleValue,
 } from "react-select";
+import { components } from "react-select";
 import { useSplitsFunctions } from "../hooks";
 import BaseSelect from "./BaseSelect";
 import Tooltip from "./Tooltip";

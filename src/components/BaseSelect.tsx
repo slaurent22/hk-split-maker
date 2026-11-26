@@ -1,12 +1,13 @@
 import type { ReactElement } from "react";
-import Select, {
-  type CSSObjectWithLabel,
-  type GroupBase,
-  type GroupProps,
-  type Props,
-  type StylesConfig,
-  type Theme,
+import type {
+  CSSObjectWithLabel,
+  GroupBase,
+  GroupProps,
+  Props,
+  StylesConfig,
+  Theme,
 } from "react-select";
+import Select from "react-select";
 
 function createOnMenuOpen(classNamePrefix: string) {
   // https://stackoverflow.com/a/66710895

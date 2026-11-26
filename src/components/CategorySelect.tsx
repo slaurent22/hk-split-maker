@@ -1,13 +1,12 @@
 import type { ReactElement, ReactNode } from "react";
-import {
-  type ContainerProps,
-  components,
-  createFilter,
-  type GroupBase,
-  type OptionProps,
-  type SingleValue,
-  type SingleValueProps,
+import type {
+  ContainerProps,
+  GroupBase,
+  OptionProps,
+  SingleValue,
+  SingleValueProps,
 } from "react-select";
+import { components, createFilter } from "react-select";
 import type { CategoryDefinition } from "../asset/hollowknight/categories/category-directory.json.d";
 import Schy from "../asset/image/schy.png";
 import BaseSelect from "./BaseSelect";

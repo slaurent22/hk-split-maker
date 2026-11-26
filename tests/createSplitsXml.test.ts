@@ -1,4 +1,5 @@
-import { type Config, createSplitsXml } from "../src/lib/lss";
+import type { Config } from "../src/lib/lss";
+import { createSplitsXml } from "../src/lib/lss";
 
 const silksongConfig: Config = {
   categoryName: "Category Name",

@@ -1,6 +1,7 @@
 import { useMemo } from "react";
 import { useSelector } from "react-redux";
-import { type SplitsFunctions, splitsFunctions } from "../lib/splits";
+import type { SplitsFunctions } from "../lib/splits";
+import { splitsFunctions } from "../lib/splits";
 import type { RootState } from "../store";
 import type { Game } from "../store/game-slice";
 

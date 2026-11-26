@@ -1,9 +1,11 @@
-import { type ReactNode, useEffect } from "react";
+import type { ReactNode } from "react";
+import { useEffect } from "react";
 import { useDispatch } from "react-redux";
 import { useSearchParams } from "react-router-dom";
 import { useCurrentGame } from "../hooks";
 import type { AppDispatch } from "../store";
-import { type Game, setGame } from "../store/game-slice";
+import type { Game } from "../store/game-slice";
+import { setGame } from "../store/game-slice";
 
 interface AppWrapperProps {
   children: ReactNode;

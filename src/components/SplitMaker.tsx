@@ -1,15 +1,8 @@
 import { saveAs } from "file-saver";
 import JSON5 from "json5";
 import JSZip from "jszip";
-import {
-  type ChangeEvent,
-  lazy,
-  type ReactElement,
-  Suspense,
-  useCallback,
-  useEffect,
-  useState,
-} from "react";
+import type { ChangeEvent, ReactElement } from "react";
+import { lazy, Suspense, useCallback, useEffect, useState } from "react";
 import { IoMdInformationCircleOutline } from "react-icons/io";
 import { useSearchParams } from "react-router-dom";
 import HKCategoryAnyPercent from "../asset/hollowknight/categories/any.json";
@@ -17,9 +10,9 @@ import type { CategoryDefinition } from "../asset/hollowknight/categories/catego
 import SSCategoryAnyPercent from "../asset/silksong/categories/any-bells.json";
 import { useCurrentGame } from "../hooks";
 import { getCategoryConfigJSON, getCategoryDirectory } from "../lib/categories";
+import type { Config } from "../lib/lss";
 import {
   buildSplitsFileName,
-  type Config,
   createILPack,
   createSplitsXml,
   importSplitsXml,

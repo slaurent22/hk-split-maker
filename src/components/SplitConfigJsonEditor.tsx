@@ -1,11 +1,8 @@
-import Editor, {
-  type Monaco,
-  type OnChange,
-  type OnMount,
-  useMonaco,
-} from "@monaco-editor/react";
+import type { Monaco, OnChange, OnMount } from "@monaco-editor/react";
+import Editor, { useMonaco } from "@monaco-editor/react";
 import { Uri } from "monaco-editor";
-import { type ReactNode, useEffect } from "react";
+import type { ReactNode } from "react";
+import { useEffect } from "react";
 import { useCurrentGame } from "../hooks";
 import HKSplitConfigSchema from "../schema/hollowknight/splits.schema";
 import SSSplitConfigSchema from "../schema/silksong/splits.schema";

@@ -79,7 +79,12 @@
                 "useDefaultParameterLast": "error",
                 "useDefaultSwitchClause": "error",
                 "useGroupedAccessorPairs": "error",
-                "useImportType": "error",
+                "useImportType": {
+                    "level": "error",
+                    "options": {
+                        "style": "separatedType"
+                    }
+                },
                 "useThrowOnlyError": "error"
             },
             "suspicious": {

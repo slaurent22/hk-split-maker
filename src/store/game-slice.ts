@@ -1,10 +1,10 @@
-import {
-  type ActionCreatorWithoutPayload,
-  type ActionCreatorWithPayload,
-  createSlice,
-  type PayloadAction,
-  type WritableDraft,
+import type {
+  ActionCreatorWithoutPayload,
+  ActionCreatorWithPayload,
+  PayloadAction,
+  WritableDraft,
 } from "@reduxjs/toolkit";
+import { createSlice } from "@reduxjs/toolkit";
 
 export type Game = "hollowknight" | "silksong";
 
