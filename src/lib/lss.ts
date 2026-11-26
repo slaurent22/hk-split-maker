@@ -1140,15 +1140,22 @@ export async function createILPack(
     categoryName: `${config.categoryName} ILs`,
     variables: config.variables,
     gameName: config.gameName,
-    names: config.names,
+    // a copy, so the EndingSplit name added below stays out of the caller's config
+    names: config.names && { ...config.names },
     endTriggeringAutosplit: true,
     splitIds: [],
     pauseOnFileSelect: config.pauseOnFileSelect,
     pauseOnMainMenu: config.pauseOnMainMenu,
   };
+  if (game === "hollowknight") {
+    // the first IL starts the same way as the full run
+    configTemplate.startTriggeringAutosplit = config.startTriggeringAutosplit;
+  }
 
-  const excludeLast = game === "hollowknight" && !config.endTriggeringAutosplit;
-  for (let i = 0; i < config.splitIds.length - (excludeLast ? 1 : 0); i++) {
+  // when time ends on credits, every split is followed by one more segment
+  const addEndingSplit =
+    game === "hollowknight" && !config.endTriggeringAutosplit;
+  for (let i = 0; i < config.splitIds.length; i++) {
     const currentSplit = config.splitIds[i];
     configTemplate.splitIds.push(currentSplit);
 
@@ -1172,7 +1179,7 @@ export async function createILPack(
     configTemplate.startTriggeringAutosplit = config.splitIds[i];
   }
 
-  if (excludeLast) {
+  if (addEndingSplit) {
     configTemplate.splitIds.push("EndingSplit");
     configTemplate.names ??= {};
     configTemplate.names.EndingSplit = config.endingSplit?.name ?? "End";
