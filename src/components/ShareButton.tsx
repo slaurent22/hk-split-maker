@@ -1,6 +1,7 @@
 import type { ReactNode } from "react";
 import { TiArrowForwardOutline } from "react-icons/ti";
 import HKSMButton from "./HKSMButton";
+import "./HKSMButton.css";
 
 interface Props {
   id: string;

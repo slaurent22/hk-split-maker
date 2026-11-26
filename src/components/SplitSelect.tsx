@@ -1,5 +1,5 @@
 import type { ReactElement, ReactNode } from "react";
-import { useMemo } from "react";
+import { useCallback, useMemo } from "react";
 import type {
   CSSObjectWithLabel,
   GroupBase,
@@ -59,16 +59,16 @@ function SplitSelect({
     () => getSelectOptionGroups(),
     [getSelectOptionGroups],
   );
+  const baseSelectOnChange = useCallback(
+    (newValue: SingleValue<SplitOption>): void => onChange(newValue ?? null),
+    [onChange],
+  );
   return (
     <BaseSelect<SplitOption>
       id={"id"}
       options={options}
-      className={"SplitSelect"}
-      classNamePrefix={"SplitSelect"}
       placeholder="Add autosplit: Select or type to search..."
-      onChange={(newValue: SingleValue<SplitOption>): void =>
-        onChange(newValue ?? null)
-      }
+      onChange={baseSelectOnChange}
       components={{ Option: SplitSelectOption }}
       value={value}
       controlStyleOverrides={controlStyleOverrides}

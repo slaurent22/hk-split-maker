@@ -1,4 +1,5 @@
 import type { ReactElement, ReactNode } from "react";
+import { useCallback } from "react";
 import type {
   ContainerProps,
   GroupBase,
@@ -163,6 +164,11 @@ function CategorySelect({
   data,
   defaultValue,
 }: Props): ReactNode {
+  const baseSelectOnChange = useCallback(
+    (newValue: SingleValue<CategoryOption>): void =>
+      onChange(newValue ? optionToDef(newValue) : null),
+    [onChange],
+  );
   if (!data) {
     return <BaseSelect id={id}></BaseSelect>;
   }
@@ -173,15 +179,12 @@ function CategorySelect({
       options: options,
     };
   });
+
   return (
     <BaseSelect<CategoryOption>
       id={id}
       options={optGroups}
-      onChange={(newValue: SingleValue<CategoryOption>): void =>
-        onChange(newValue ? optionToDef(newValue) : null)
-      }
-      className={"CategorySelect"}
-      classNamePrefix={"CategorySelect"}
+      onChange={baseSelectOnChange}
       placeholder="Pre-made Category: Select or type to search..."
       defaultValue={defaultValue ? defToOption(defaultValue) : undefined}
       components={{

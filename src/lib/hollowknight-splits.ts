@@ -5,6 +5,8 @@ const SPLITS_DEFINITIONS_REGEXP =
   /\[Description\("(?<description>.+)"\), ToolTip\("(?<tooltip>.+)"\)\]\s+(?<id>\w+),/g;
 export const DESCRIPTION_NAME_REGEXP = /(?<name>.+)\s+\((?<qualifier>.+)\)/;
 
+const DREAM_NAIL_REGEXP = /Dream Nail/;
+
 let splitDefinitions: Map<string, SplitDefinition> | null = null;
 let groupedSplitDefinitions: Map<string, Array<SplitDefinition>> | null = null;
 
@@ -171,7 +173,7 @@ function getNameAndGroup({
     case "Mini Boss":
       return [name, "Enemy"];
     case "Obtain":
-      if (/Dream Nail/.test(name)) {
+      if (DREAM_NAIL_REGEXP.test(name)) {
         return [name, "Essence"];
       }
       return [name, "Item"];

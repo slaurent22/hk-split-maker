@@ -1,26 +1,34 @@
 import type { Game } from "../store/game-slice";
-import * as HollowKnightSplits from "./hollowknight-splits";
-import * as SilksongSplits from "./silksong-splits";
+import {
+  getIconURLs as hkGetIconURLs,
+  getSelectOptionGroups as hkGetSelectOptionGroups,
+  parseSplitsDefinitions as hkParseSplitsDefinitions,
+} from "./hollowknight-splits";
+import {
+  getIconURLs as ssGetIconURLs,
+  getSelectOptionGroups as ssGetSelectOptionGroups,
+  parseSplitsDefinitions as ssParseSplitsDefinitions,
+} from "./silksong-splits";
 
 export interface SplitsFunctions {
-  parseSplitsDefinitions: typeof HollowKnightSplits.parseSplitsDefinitions;
-  getSelectOptionGroups: typeof HollowKnightSplits.getSelectOptionGroups;
-  getIconURLs: typeof HollowKnightSplits.getIconURLs;
+  parseSplitsDefinitions: typeof hkParseSplitsDefinitions;
+  getSelectOptionGroups: typeof hkGetSelectOptionGroups;
+  getIconURLs: typeof hkGetIconURLs;
 }
 
 export function splitsFunctions(game: Game): SplitsFunctions {
   switch (game) {
     case "hollowknight":
       return {
-        parseSplitsDefinitions: HollowKnightSplits.parseSplitsDefinitions,
-        getSelectOptionGroups: HollowKnightSplits.getSelectOptionGroups,
-        getIconURLs: HollowKnightSplits.getIconURLs,
+        parseSplitsDefinitions: hkParseSplitsDefinitions,
+        getSelectOptionGroups: hkGetSelectOptionGroups,
+        getIconURLs: hkGetIconURLs,
       };
     case "silksong":
       return {
-        parseSplitsDefinitions: SilksongSplits.parseSplitsDefinitions,
-        getSelectOptionGroups: SilksongSplits.getSelectOptionGroups,
-        getIconURLs: SilksongSplits.getIconURLs,
+        parseSplitsDefinitions: ssParseSplitsDefinitions,
+        getSelectOptionGroups: ssGetSelectOptionGroups,
+        getIconURLs: ssGetIconURLs,
       };
     default:
       throw new Error(`invalid game ${game}`);
