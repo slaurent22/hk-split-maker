@@ -1,15 +1,12 @@
 import Editor, { type OnChange } from "@monaco-editor/react";
-import type React from "react";
+import type { ReactNode } from "react";
 
 interface Props {
   defaultValue: string;
   onChange: OnChange;
 }
 
-const SplitOutputEditor: React.FC<Props> = ({
-  defaultValue,
-  onChange,
-}: Props) => {
+function SplitOutputEditor({ defaultValue, onChange }: Props): ReactNode {
   return (
     <div className="hk-split-maker-monaco-editor">
       <Editor
@@ -25,6 +22,6 @@ const SplitOutputEditor: React.FC<Props> = ({
       />
     </div>
   );
-};
+}
 
 export default SplitOutputEditor;

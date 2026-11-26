@@ -1,5 +1,4 @@
-import type React from "react";
-import type { ReactElement } from "react";
+import type { ReactElement, ReactNode } from "react";
 import {
   type ContainerProps,
   components,
@@ -158,12 +157,12 @@ function CategorySelectSelectContainer<
   );
 }
 
-const CategorySelect: React.FC<Props> = ({
+function CategorySelect({
   id,
   onChange,
   data,
   defaultValue,
-}: Props) => {
+}: Props): ReactNode {
   if (!data) {
     return <BaseSelect id={id}></BaseSelect>;
   }
@@ -191,5 +190,5 @@ const CategorySelect: React.FC<Props> = ({
       filterOption={createFilter(filterConfig)}
     />
   );
-};
+}
 export default CategorySelect;

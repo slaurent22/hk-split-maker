@@ -1,7 +1,7 @@
-import type React from "react";
+import type { ReactNode } from "react";
 import logo from "../asset/image/logo.png";
 
-const Header: React.FC = () => {
+function Header(): ReactNode {
   return (
     <div id="app">
       <header>
@@ -11,6 +11,6 @@ const Header: React.FC = () => {
       </header>
     </div>
   );
-};
+}
 
 export default Header;

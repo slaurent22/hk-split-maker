@@ -1,4 +1,4 @@
-import type React from "react";
+import type { ReactNode } from "react";
 import { useCurrentGame } from "../hooks";
 import type { Game } from "../store/game-slice";
 
@@ -35,7 +35,7 @@ const SPLITS_EXAMPLE: Record<Game, { name: string; id: string }> = {
   },
 };
 
-const Instructions: React.FC = () => {
+function Instructions(): ReactNode {
   const game = useCurrentGame();
   return (
     <div id="instructions">
@@ -106,6 +106,6 @@ const Instructions: React.FC = () => {
       </div>
     </div>
   );
-};
+}
 
 export default Instructions;

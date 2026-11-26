@@ -1,4 +1,4 @@
-import type React from "react";
+import type { ReactNode } from "react";
 import { TiArrowForwardOutline } from "react-icons/ti";
 import HKSMButton from "./HKSMButton";
 
@@ -8,13 +8,13 @@ interface Props {
   disabled?: boolean;
 }
 
-const ShareButton: React.FC<Props> = ({ id, onClick, disabled }: Props) => {
+function ShareButton({ id, onClick, disabled }: Props): ReactNode {
   return (
     <HKSMButton onClick={onClick} id={id} disabled={disabled ?? false}>
       <span className="button-text">Share</span>
       <TiArrowForwardOutline size="1.5em" />
     </HKSMButton>
   );
-};
+}
 
 export default ShareButton;

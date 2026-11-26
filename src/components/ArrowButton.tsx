@@ -1,4 +1,4 @@
-import type React from "react";
+import type { ReactNode } from "react";
 import arrow from "../asset/image/arrow.png";
 import HKSMButton from "./HKSMButton";
 import "./ArrowButton.css";
@@ -10,12 +10,7 @@ interface Props {
   disabled?: boolean;
 }
 
-const ArrowButton: React.FC<Props> = ({
-  id,
-  onClick,
-  text,
-  disabled,
-}: Props) => {
+function ArrowButton({ id, onClick, text, disabled }: Props): ReactNode {
   return (
     <HKSMButton
       className="arrow-button"
@@ -36,6 +31,6 @@ const ArrowButton: React.FC<Props> = ({
       ></img>
     </HKSMButton>
   );
-};
+}
 
 export default ArrowButton;

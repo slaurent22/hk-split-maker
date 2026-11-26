@@ -1,5 +1,5 @@
 import classNames from "classnames";
-import type React from "react";
+import type { ReactNode } from "react";
 import "./HKSMButton.css";
 
 interface Props {
@@ -10,13 +10,13 @@ interface Props {
   disabled?: boolean;
 }
 
-const HKSMButton: React.FC<Props> = ({
+function HKSMButton({
   id,
   onClick,
   disabled,
   className,
   children,
-}: Props) => {
+}: Props): ReactNode {
   return (
     <button
       className={classNames("hksm-button", className)}
@@ -28,6 +28,6 @@ const HKSMButton: React.FC<Props> = ({
       {children}
     </button>
   );
-};
+}
 
 export default HKSMButton;

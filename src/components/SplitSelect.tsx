@@ -1,4 +1,4 @@
-import React, { type ReactElement, useMemo } from "react";
+import { type ReactElement, type ReactNode, useMemo } from "react";
 import {
   type CSSObjectWithLabel,
   components,
@@ -47,11 +47,11 @@ function SplitSelectOption<
   );
 }
 
-const SplitSelect: React.FC<Props> = ({
+function SplitSelect({
   onChange,
   value,
   controlStyleOverrides,
-}: Props) => {
+}: Props): ReactNode {
   const { getSelectOptionGroups } = useSplitsFunctions();
   const options = useMemo(
     () => getSelectOptionGroups(),
@@ -70,5 +70,5 @@ const SplitSelect: React.FC<Props> = ({
       controlStyleOverrides={controlStyleOverrides}
     />
   );
-};
+}
 export default SplitSelect;
