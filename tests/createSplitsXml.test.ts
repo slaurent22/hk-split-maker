@@ -17,7 +17,7 @@ const hkConfig: Config = {
 
 describe("createSplitsXml", () => {
   describe("silksong", () => {
-    test("1. should create splits xml for silksong", async () => {
+    test("should create splits xml for silksong", async () => {
       const splitsXml = await createSplitsXml(
         silksongConfig,
         "silksong",
@@ -41,7 +41,7 @@ describe("createSplitsXml", () => {
     });
   });
   describe("hollowknight", () => {
-    test("1. should create splits xml for hollowknight", async () => {
+    test("should create splits xml for hollowknight", async () => {
       const splitsXml = await createSplitsXml(hkConfig, "hollowknight", false);
       expect(splitsXml).toBeDefined();
       expect(splitsXml).toContain("<GameName>Hollow Knight</GameName>");

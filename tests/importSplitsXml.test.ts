@@ -16,7 +16,7 @@ import ss_variables_lss from "./fixtures/ss_variables.lss?raw";
 
 describe("importSplitsXml", () => {
   describe("hollowknight", () => {
-    test("1. should import hk vanilla splits", () => {
+    test("should import hk vanilla splits", () => {
       const config = importSplitsXml(hk_vanilla_lss, "hollowknight");
       expect(config.categoryName).toBe("Category Name");
       expect(config.gameName).toBe("Hollow Knight");
@@ -25,7 +25,7 @@ describe("importSplitsXml", () => {
       expect(config.pauseOnFileSelect).toBe(undefined);
     });
 
-    test("2. should import hk path of pain splits", () => {
+    test("should import hk path of pain splits", () => {
       const config = importSplitsXml(hk_path_of_pain_lss, "hollowknight");
       expect(config.categoryName).toBe("Path of Pain");
       expect(config.endTriggeringAutosplit).toBe(true);
@@ -45,12 +45,12 @@ describe("importSplitsXml", () => {
       expect(config.variables).toBe(undefined);
     });
 
-    test("3. should import hk custom offset splits", () => {
+    test("should import hk custom offset splits", () => {
       const config = importSplitsXml(hk_custom_offset_lss, "hollowknight");
       expect(config.offset).toBe("00:00:21.76");
     });
 
-    test("4. should import hk splits with PauseOnMainMenu False", () => {
+    test("should import hk splits with PauseOnMainMenu False", () => {
       const config = importSplitsXml(
         hk_pause_on_main_menu_false_lss,
         "hollowknight",
@@ -59,32 +59,32 @@ describe("importSplitsXml", () => {
     });
   });
   describe("silksong", () => {
-    test("1. should import silksong vanilla splits", () => {
+    test("should import silksong vanilla splits", () => {
       const config = importSplitsXml(ss_vanilla_lss, "silksong");
       expect(config.categoryName).toBe("Category Name");
       expect(config.gameName).toBe("Hollow Knight: Silksong");
       expect(config.pauseOnFileSelect).toBe(true);
       expect(config.pauseOnMainMenu).toBe(undefined);
     });
-    test("2. should import silksong no category name splits", () => {
+    test("should import silksong no category name splits", () => {
       const config = importSplitsXml(ss_no_category_name_lss, "silksong");
       expect(config.categoryName).toBe("Any%");
     });
-    test("3. should throw for silksong no autosplitter splits", () => {
+    test("should throw for silksong no autosplitter splits", () => {
       expect(() => importSplitsXml(ss_no_autosplitter_lss, "silksong")).toThrow(
         "Failed to import splits: missing AutoSplitterSettings",
       );
     });
-    test("4. should import silksong custom offset splits", () => {
+    test("should import silksong custom offset splits", () => {
       const config = importSplitsXml(ss_custom_offset_lss, "silksong");
       expect(config.offset).toBe("00:00:21.76");
     });
-    test("5. should import silksong variables", () => {
+    test("should import silksong variables", () => {
       const config = importSplitsXml(ss_variables_lss, "silksong");
       expect(config.variables).toBeDefined();
       expect(config.variables?.key).toBe("value");
     });
-    test("6. should import silksong subsplits", () => {
+    test("should import silksong subsplits", () => {
       const config = importSplitsXml(ss_subsplits_lss, "silksong");
       expect(config.splitIds).toStrictEqual([
         "StartNewGame",
@@ -93,7 +93,7 @@ describe("importSplitsXml", () => {
         "PlayerDeath",
       ]);
     });
-    test("7. should import silksong with repeating split IDs", () => {
+    test("should import silksong with repeating split IDs", () => {
       const config = importSplitsXml(ss_repeating_splitid_lss, "silksong");
       expect(config.splitIds).toStrictEqual([
         "StartNewGame",
@@ -106,7 +106,7 @@ describe("importSplitsXml", () => {
         BenchAny: ["First Bench", "Second Bench"],
       });
     });
-    test("8. should import silksong with custom names", () => {
+    test("should import silksong with custom names", () => {
       const config = importSplitsXml(ss_custom_name_lss, "silksong");
       expect(config.splitIds).toStrictEqual([
         "StartNewGame",
@@ -118,7 +118,7 @@ describe("importSplitsXml", () => {
         EndingSplit: ["Grand Mother Silk", "Lost Lace"],
       });
     });
-    test("9. should import silksong splits with pause_on_file_select False", () => {
+    test("should import silksong splits with pause_on_file_select False", () => {
       const config = importSplitsXml(ss_pause_on_file_select_false, "silksong");
       expect(config.pauseOnFileSelect).toBe(false);
     });
