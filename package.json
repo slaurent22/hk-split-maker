@@ -28,7 +28,7 @@
     },
     "type": "module",
     "devDependencies": {
-        "@biomejs/biome": "2.6.8",
+        "@biomejs/biome": "^2.6.9",
         "@types/file-saver": "^2.0.2",
         "@types/node": "^24.10.9",
         "@types/react": "^18.3.24",
