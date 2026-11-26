@@ -5,6 +5,7 @@ import {
   type GroupBase,
   type OptionProps,
   type PropsValue,
+  type SingleValue,
 } from "react-select";
 import { useSplitsFunctions } from "../hooks";
 import BaseSelect from "./BaseSelect";
@@ -64,7 +65,9 @@ function SplitSelect({
       className={"SplitSelect"}
       classNamePrefix={"SplitSelect"}
       placeholder="Add autosplit: Select or type to search..."
-      onChange={(newValue): void => onChange(newValue ?? null)}
+      onChange={(newValue: SingleValue<SplitOption>): void =>
+        onChange(newValue ?? null)
+      }
       components={{ Option: SplitSelectOption }}
       value={value}
       controlStyleOverrides={controlStyleOverrides}

@@ -331,7 +331,9 @@ export default function SplitMaker(): ReactElement {
             <input
               type="file"
               id="import-input"
-              onChange={(e): void => onImport(e, game)}
+              onChange={(e: ChangeEvent<HTMLInputElement>): void =>
+                onImport(e, game)
+              }
             />
             <ArrowButton
               text="Import Splits"
@@ -363,7 +365,7 @@ export default function SplitMaker(): ReactElement {
               id="generate-icons-toggle"
               type="checkbox"
               checked={includeIcons}
-              onChange={(e): void => {
+              onChange={(e: ChangeEvent<HTMLInputElement>): void => {
                 setIncludeIcons(e.target.checked);
               }}
             />

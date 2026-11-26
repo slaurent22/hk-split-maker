@@ -5,6 +5,7 @@ import {
   createFilter,
   type GroupBase,
   type OptionProps,
+  type SingleValue,
   type SingleValueProps,
 } from "react-select";
 import type { CategoryDefinition } from "../asset/hollowknight/categories/category-directory.json.d";
@@ -177,7 +178,7 @@ function CategorySelect({
     <BaseSelect<CategoryOption>
       id={id}
       options={optGroups}
-      onChange={(newValue): void =>
+      onChange={(newValue: SingleValue<CategoryOption>): void =>
         onChange(newValue ? optionToDef(newValue) : null)
       }
       className={"CategorySelect"}

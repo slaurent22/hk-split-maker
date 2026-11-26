@@ -1,4 +1,10 @@
-import { createSlice, type PayloadAction } from "@reduxjs/toolkit";
+import {
+  type ActionCreatorWithoutPayload,
+  type ActionCreatorWithPayload,
+  createSlice,
+  type PayloadAction,
+  type WritableDraft,
+} from "@reduxjs/toolkit";
 
 export type Game = "hollowknight" | "silksong";
 
@@ -14,15 +20,20 @@ const gameSlice = createSlice({
   name: "game",
   initialState,
   reducers: {
-    setGame: (state, action: PayloadAction<Game>) => {
+    setGame: (state: WritableDraft<GameState>, action: PayloadAction<Game>) => {
       state.currentGame = action.payload;
     },
-    toggleGame: (state) => {
+    toggleGame: (state: WritableDraft<GameState>) => {
       state.currentGame =
         state.currentGame === "hollowknight" ? "silksong" : "hollowknight";
     },
   },
 });
 
-export const { setGame, toggleGame } = gameSlice.actions;
+interface GameSliceActions {
+  setGame: ActionCreatorWithPayload<Game, "game/setGame">;
+  toggleGame: ActionCreatorWithoutPayload<"game/toggleGame">;
+}
+
+export const { setGame, toggleGame }: GameSliceActions = gameSlice.actions;
 export default gameSlice.reducer;

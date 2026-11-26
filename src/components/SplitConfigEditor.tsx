@@ -250,7 +250,7 @@ function SingleAutosplitSelect({
         <SplitSelect
           value={value}
           controlStyleOverrides={{ margin: "8px 8px 8px 8px" }}
-          onChange={(val): void => {
+          onChange={(val: SplitOption | null): void => {
             if (!parsedConfig.splitIds || !val) {
               return;
             }

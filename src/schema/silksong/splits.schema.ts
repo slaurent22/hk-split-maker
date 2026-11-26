@@ -1,8 +1,12 @@
+import type { SplitDefinition } from "../../lib/silksong-splits";
 import { parseSplitsDefinitions } from "../../lib/silksong-splits";
-import type { SchemaOverridePropItem } from "../../types/schema.d";
+import type {
+  SchemaOverridePropItem,
+  SchemaPropertyOptions,
+} from "../../types/schema.d";
 import SplitConfigSchemaSource from "./splits.schema.json";
 
-const SPLITS = [...parseSplitsDefinitions().values()];
+const SPLITS: Array<SplitDefinition> = [...parseSplitsDefinitions().values()];
 
 const SPLITS_SCHEMA = SPLITS.map(
   ({ description: title, tooltip: description, id }) => {
@@ -60,10 +64,10 @@ for (const split of SPLITS_SCHEMA) {
   namesProperties[split.const] = overrideSchemaPropItem(split.description);
   iconsProperties[split.const] = overrideSchemaPropItem(split.description);
 }
-const names = SplitConfigSchemaSource.properties.names;
+const names: SchemaPropertyOptions = SplitConfigSchemaSource.properties.names;
 names.properties = namesProperties;
 
-const icons = SplitConfigSchemaSource.properties.icons;
+const icons: SchemaPropertyOptions = SplitConfigSchemaSource.properties.icons;
 icons.properties = iconsProperties;
 
 export default SplitConfigSchemaSource;
