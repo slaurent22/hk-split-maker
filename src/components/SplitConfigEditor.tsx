@@ -256,7 +256,7 @@ function SingleAutosplitSelect({
         }}
       >
         <MoveAnchor />
-        {value?.subsplit && <SubsplitIndicator />}
+        {value?.subsplit ? <SubsplitIndicator /> : null}
         <SplitSelect
           value={value}
           controlStyleOverrides={{ margin: "8px 8px 8px 8px" }}

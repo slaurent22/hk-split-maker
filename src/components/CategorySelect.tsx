@@ -108,9 +108,9 @@ function CategorySelectOption<
     <components.Option {...rest}>
       {children}
       {rest.data.value === "pop" && <SchyPicture />}
-      {data.data?.routeNotesURL && (
+      {data.data?.routeNotesURL ? (
         <RouteNotesLink url={data.data.routeNotesURL} isSelected={isSelected} />
-      )}
+      ) : null}
     </components.Option>
   );
 }
@@ -126,9 +126,9 @@ function CategorySelectSingleValue<
     <components.SingleValue {...rest}>
       {children}
       {rest.data.value === "pop" && <SchyPicture />}
-      {rest.data.data?.routeNotesURL && (
+      {rest.data.data?.routeNotesURL ? (
         <em style={{ float: "right" }}>Route notes available</em>
-      )}
+      ) : null}
     </components.SingleValue>
   );
 }
@@ -144,7 +144,7 @@ function CategorySelectSelectContainer<
   return (
     <components.SelectContainer {...rest}>
       {children}
-      {selectedOption?.data?.routeNotesURL && (
+      {selectedOption?.data?.routeNotesURL ? (
         <a
           href={selectedOption.data.routeNotesURL}
           target="_blank"
@@ -153,7 +153,7 @@ function CategorySelectSelectContainer<
         >
           Route Notes for {selectedOption.label}
         </a>
-      )}
+      ) : null}
     </components.SelectContainer>
   );
 }
