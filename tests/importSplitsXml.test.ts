@@ -1,3 +1,4 @@
+import { describe, expect, test } from "vitest";
 import { importSplitsXml } from "../src/lib/lss";
 import hk_custom_offset_lss from "./fixtures/hk_custom_offset.lss?raw";
 import hk_path_of_pain_lss from "./fixtures/hk_path_of_pain.lss?raw";

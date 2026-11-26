@@ -1,3 +1,4 @@
+import { describe, expect, test } from "vitest";
 import type { Config } from "../src/lib/lss";
 import { createSplitsXml } from "../src/lib/lss";
 
