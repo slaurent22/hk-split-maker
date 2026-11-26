@@ -1,4 +1,5 @@
 import { describe, expect, test } from "vitest";
+import pop from "../src/asset/hollowknight/categories/pop.json";
 import type { Config } from "../src/lib/lss";
 import { createILPack, importSplitsXml } from "../src/lib/lss";
 
@@ -152,6 +153,35 @@ describe("createILPack", () => {
       ]);
     });
 
+    test("should give each IL its own start trigger when icons are included", async () => {
+      // The builtin Path of Pain category, downloaded with icons: building a
+      // file waits for its icons, so each IL must not share the template.
+      const { output, outputNames } = await createILPack(
+        pop as Config,
+        "hollowknight",
+        true,
+      );
+
+      expect(outputNames).toStrictEqual([
+        "000_PathOfPainTransition1.lss",
+        "001_PathOfPainTransition2.lss",
+        "002_PathOfPainTransition3.lss",
+        "003_PathOfPain.lss",
+      ]);
+      const ils = output.map((lss) => importSplitsXml(lss, "hollowknight"));
+      expect(
+        ils.map(({ startTriggeringAutosplit }) => startTriggeringAutosplit),
+      ).toStrictEqual([
+        "PathOfPainEntry",
+        "PathOfPainTransition1",
+        "PathOfPainTransition2",
+        "PathOfPainTransition3",
+      ]);
+      expect(ils.map(({ splitIds }) => splitIds)).toStrictEqual(
+        pop.splitIds.map((splitId) => [splitId]),
+      );
+    });
+
     test("should group subsplits into the IL of the following split", async () => {
       const config: Config = {
         ...hkConfig,
@@ -235,8 +265,8 @@ describe("createILPack", () => {
 
       expect(output).toHaveLength(3);
       for (const lss of output) {
-        expect(lss).toMatch(
-          /<Setting id="pause_on_file_select" type="bool">True<\/Setting>/,
+        expect(lss).toContain(
+          '<Setting id="pause_on_file_select" type="bool">True</Setting>',
         );
       }
     });
