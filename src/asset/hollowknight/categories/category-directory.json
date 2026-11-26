@@ -860,6 +860,13 @@
             }
         },
         {
+            "fileName": "nkg-wings",
+            "displayName": "NKG% (Wings)",
+            "data": {
+                "routeNotesURL": "https://pastebin.com/raw/zcpK8aL9"
+            }
+        },
+        {
             "fileName": "nkg-nmms",
             "displayName": "NKG% (No Main Menu Storage)",
             "data": {}

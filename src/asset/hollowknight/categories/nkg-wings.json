@@ -1,0 +1,53 @@
+{
+    "categoryName": "NKG%",
+    "splitIds": [
+        "VengefulSpirit",
+        "EnterGreenpath",
+        "MothwingCloak",
+        "NotchShrumalOgres",
+        "MantisClaw",
+        "BlueLake",
+        "DreamNail",
+        "NightmareLantern",
+        "Grimmchild",
+        "Flame1",
+        "GorgeousHusk",
+        "Lemm2",
+        "StoreroomsStation",
+        "CrystalGuardian1",
+        "CrystalHeart",
+        "ElegantKey",
+        "ShadeSoul",
+        "Grimmchild2",
+        "Flame1",
+        "Flame2",
+        "Flame3",
+        "TroupeMasterGrimm",
+        "Flame1",
+        "MonarchWings",
+        "Flame2",
+        "BrummFlame",
+        "EnterNKG",
+        "NightmareKingGrimm"
+    ],
+    "names": {
+        "NightmareLantern": "[1U] %s",
+        "Grimmchild": "[2U] %s",
+        "Flame1": [
+            "(Seal) Greenpath Flame",
+            "King's Pass Flame",
+            "Ancient Basin Flame"
+        ],
+        "GorgeousHusk": "[1D] %s",
+        "CrystalGuardian1": "[3U, 1U] (Lantern) %s",
+        "ShadeSoul": "[3U] %s",
+        "Grimmchild2": "[2D, 1D ] %s",
+        "Flame2": ["Resting Grounds Flame", "[2D] Fungal Core Flame"],
+        "Flame3": "[1U] Kingdom's Edge Flame",
+        "TroupeMasterGrimm": "[2D] %s",
+        "EnterNKG": "Enter NKG"
+    },
+    "endTriggeringAutosplit": true,
+    "gameName": "Hollow Knight Category Extensions",
+    "pauseOnMainMenu": true
+}
