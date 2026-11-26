@@ -204,7 +204,15 @@
                 "useParseIntRadix": "error",
                 "useSingleJsDocAsterisk": "error"
             },
-            "performance": { "noAwaitInLoops": "error" },
+            "performance": {
+                "noAwaitInLoops": "error",
+                "noBarrelFile": "error",
+                "noJsxPropsBind": "error",
+                "noNamespaceImport": "error",
+                "noReExportAll": "error",
+                "noSyncScripts": "error",
+                "useTopLevelRegex": "error"
+            },
             "style": {
                 "noCommonJs": "error",
                 "noDescendingSpecificity": "error",

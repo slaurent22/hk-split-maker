@@ -1,7 +1,14 @@
 import JSON5 from "json5";
 import type { editor } from "monaco-editor";
 import type { ReactElement, ReactNode } from "react";
-import { lazy, Suspense, useEffect, useRef, useState } from "react";
+import {
+  lazy,
+  Suspense,
+  useCallback,
+  useEffect,
+  useRef,
+  useState,
+} from "react";
 import {
   TiArrowMaximise,
   TiArrowMinimise,
@@ -89,23 +96,24 @@ function DeleteAutosplit({
   onChange,
   parsedConfig,
 }: DeleteAutosplitProps): ReactNode {
+  const deleteOnChange = useCallback((): void => {
+    if (!parsedConfig.splitIds) {
+      return;
+    }
+    onChange({
+      ...parsedConfig,
+      splitIds: [
+        ...parsedConfig.splitIds.slice(0, index),
+        ...parsedConfig.splitIds.slice(index + 1),
+      ],
+    });
+  }, [index, onChange, parsedConfig]);
   return (
     <Tooltip content="Delete this autosplit">
       <TiDelete
         size="1.5em"
         style={{ cursor: "pointer" }}
-        onClick={(): void => {
-          if (!parsedConfig.splitIds) {
-            return;
-          }
-          onChange({
-            ...parsedConfig,
-            splitIds: [
-              ...parsedConfig.splitIds.slice(0, index),
-              ...parsedConfig.splitIds.slice(index + 1),
-            ],
-          });
-        }}
+        onClick={deleteOnChange}
       />
     </Tooltip>
   );
@@ -124,25 +132,22 @@ function AddAutosplit({
 }: AddAutosplitProps): ReactNode {
   const game = useCurrentGame();
   const defaultSplit = game === "hollowknight" ? "AbyssShriek" : "SilkSpear";
+  const addOnChange = useCallback((): void => {
+    if (!parsedConfig.splitIds) {
+      return;
+    }
+    onChange({
+      ...parsedConfig,
+      splitIds: [
+        ...parsedConfig.splitIds.slice(0, index + 1),
+        defaultSplit,
+        ...parsedConfig.splitIds.slice(index + 1),
+      ],
+    });
+  }, [parsedConfig, index, onChange, defaultSplit]);
   return (
     <div style={{ alignItems: "center", display: "flex" }}>
-      <TiPlus
-        size="1em"
-        style={{ cursor: "pointer" }}
-        onClick={(): void => {
-          if (!parsedConfig.splitIds) {
-            return;
-          }
-          onChange({
-            ...parsedConfig,
-            splitIds: [
-              ...parsedConfig.splitIds.slice(0, index + 1),
-              defaultSplit,
-              ...parsedConfig.splitIds.slice(index + 1),
-            ],
-          });
-        }}
-      />
+      <TiPlus size="1em" style={{ cursor: "pointer" }} onClick={addOnChange} />
       <span>Add autosplit</span>
     </div>
   );
@@ -157,20 +162,21 @@ function AddFirstAutosplit({
   parsedConfig,
   onChange,
 }: AddFirstAutosplitProps): ReactNode {
+  const addOnChange = useCallback((): void => {
+    if (!parsedConfig) {
+      return;
+    }
+    onChange({
+      ...parsedConfig,
+      splitIds: ["AbyssShriek"],
+    });
+  }, [parsedConfig, onChange]);
   return (
     <div style={{ alignItems: "center", display: "flex" }}>
       <TiPlus
         size="1.5em"
         style={{ cursor: "pointer" }}
-        onClick={(): void => {
-          if (!parsedConfig) {
-            return;
-          }
-          onChange({
-            ...parsedConfig,
-            splitIds: ["AbyssShriek"],
-          });
-        }}
+        onClick={addOnChange}
       />
       <span style={{ fontSize: "1.5em" }}>Add autosplit</span>
     </div>
@@ -192,28 +198,27 @@ function ToggleSubsplit({
 }: ToggleSubsplitProps): ReactNode {
   const Component = subsplit ? TiArrowMaximise : TiArrowMinimise;
   const tooltip = subsplit ? "Convert to normal split" : "Convert to subsplit";
+  const toggleOnClick = useCallback((): void => {
+    if (!parsedConfig.splitIds) {
+      return;
+    }
+    const currentSplit = parsedConfig.splitIds[index];
+    const toggledSplit = subsplit ? currentSplit.slice(1) : `-${currentSplit}`;
+    onChange({
+      ...parsedConfig,
+      splitIds: [
+        ...parsedConfig.splitIds.slice(0, index),
+        toggledSplit,
+        ...parsedConfig.splitIds.slice(index + 1),
+      ],
+    });
+  }, [index, parsedConfig, onChange, subsplit]);
   return (
     <Tooltip content={tooltip}>
       <Component
         size="1.5em"
         style={{ cursor: "pointer" }}
-        onClick={(): void => {
-          if (!parsedConfig.splitIds) {
-            return;
-          }
-          const currentSplit = parsedConfig.splitIds[index];
-          const toggledSplit = subsplit
-            ? currentSplit.slice(1)
-            : `-${currentSplit}`;
-          onChange({
-            ...parsedConfig,
-            splitIds: [
-              ...parsedConfig.splitIds.slice(0, index),
-              toggledSplit,
-              ...parsedConfig.splitIds.slice(index + 1),
-            ],
-          });
-        }}
+        onClick={toggleOnClick}
       />
     </Tooltip>
   );
@@ -233,6 +238,22 @@ function SingleAutosplitSelect({
   onChange,
 }: SingleAutosplitSelectProps): ReactNode {
   const value = useSplitOption(splitId);
+  const splitSelectOnChange = useCallback(
+    (val: SplitOption | null): void => {
+      if (!(parsedConfig.splitIds && val)) {
+        return;
+      }
+      onChange({
+        ...parsedConfig,
+        splitIds: [
+          ...parsedConfig.splitIds.slice(0, index),
+          `${value?.subsplit ? "-" : ""}${val.value}`,
+          ...parsedConfig.splitIds.slice(index + 1),
+        ],
+      });
+    },
+    [index, onChange, parsedConfig, value],
+  );
   return (
     <div>
       <div
@@ -246,19 +267,7 @@ function SingleAutosplitSelect({
         <SplitSelect
           value={value}
           controlStyleOverrides={{ margin: "8px 8px 8px 8px" }}
-          onChange={(val: SplitOption | null): void => {
-            if (!(parsedConfig.splitIds && val)) {
-              return;
-            }
-            onChange({
-              ...parsedConfig,
-              splitIds: [
-                ...parsedConfig.splitIds.slice(0, index),
-                `${value?.subsplit ? "-" : ""}${val.value}`,
-                ...parsedConfig.splitIds.slice(index + 1),
-              ],
-            });
-          }}
+          onChange={splitSelectOnChange}
         />
         <DeleteAutosplit
           index={index}
@@ -292,18 +301,19 @@ function EndTriggeringAutosplit({
   const message = parsedConfig.endTriggeringAutosplit
     ? "Time will end on last autosplit"
     : "Time will end on game-ending/credits";
+  const inputOnChange = useCallback((): void => {
+    onChange({
+      ...parsedConfig,
+      endTriggeringAutosplit: !parsedConfig.endTriggeringAutosplit,
+    });
+  }, [parsedConfig, onChange]);
   return (
     <>
       <div style={{ fontSize: "1.5em", margin: "5px" }}>
         <input
           id="end-triggering-autosplit"
           type="checkbox"
-          onChange={(): void => {
-            onChange({
-              ...parsedConfig,
-              endTriggeringAutosplit: !parsedConfig.endTriggeringAutosplit,
-            });
-          }}
+          onChange={inputOnChange}
           checked={parsedConfig.endTriggeringAutosplit ?? false}
         />
         <label htmlFor="end-triggering-autosplit">
@@ -386,6 +396,14 @@ export default function SplitConfigEditor(props: Props): ReactElement {
 
   const game = useCurrentGame();
 
+  const sortableSetList = (items: Array<SplitIdItemInterface>): void => {
+    const newConfig = {
+      ...parsedConfig,
+      splitIds: items.map(({ splitId }) => splitId),
+    };
+    onChangeParsedConfig(newConfig);
+  };
+
   return (
     <Tabs focusTabOnClick={false}>
       <TabList>
@@ -412,13 +430,7 @@ export default function SplitConfigEditor(props: Props): ReactElement {
             ghostClass="autosplits-sortable-ghost-class"
             dragClass="autosplits-sortable-drag-class"
             list={getItemInterfaceArr(parsedConfig.splitIds)}
-            setList={(items: Array<SplitIdItemInterface>): void => {
-              const newConfig = {
-                ...parsedConfig,
-                splitIds: items.map(({ splitId }) => splitId),
-              };
-              onChangeParsedConfig(newConfig);
-            }}
+            setList={sortableSetList}
           >
             {parsedConfig.splitIds.map((splitId, index) => (
               <SingleAutosplitSelect

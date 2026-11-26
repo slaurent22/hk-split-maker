@@ -133,32 +133,32 @@ export default function SplitMaker(): ReactElement {
     document.getElementById("import-input")?.click();
   };
 
-  const onImport = (
-    ce: ChangeEvent<HTMLInputElement>,
-    currentGame: Game,
-  ): void => {
-    // file select
-    if (!ce.target.files) {
-      return;
-    }
-    const file = ce.target.files[0];
-    const reader = new FileReader();
-    reader.onload = (pe: ProgressEvent<FileReader>): void => {
-      const fileContents = pe.target?.result;
-      if (typeof fileContents === "string") {
-        try {
-          const jsonConfig = importSplitsXml(fileContents, currentGame);
-          setConfigInput(JSON.stringify(jsonConfig, null, 4));
-        } catch (e) {
-          console.error(e);
-          alert(
-            "Failed to import splits. The error has been logged to console.error",
-          );
-        }
+  const onImport = useCallback(
+    (ce: ChangeEvent<HTMLInputElement>, currentGame: Game): void => {
+      // file select
+      if (!ce.target.files) {
+        return;
       }
-    };
-    reader.readAsText(file);
-  };
+      const file = ce.target.files[0];
+      const reader = new FileReader();
+      reader.onload = (pe: ProgressEvent<FileReader>): void => {
+        const fileContents = pe.target?.result;
+        if (typeof fileContents === "string") {
+          try {
+            const jsonConfig = importSplitsXml(fileContents, currentGame);
+            setConfigInput(JSON.stringify(jsonConfig, null, 4));
+          } catch (e) {
+            console.error(e);
+            alert(
+              "Failed to import splits. The error has been logged to console.error",
+            );
+          }
+        }
+      };
+      reader.readAsText(file);
+    },
+    [],
+  );
 
   const validateAutosplits = (configObject: Config): boolean => {
     if (game === "hollowknight") {
@@ -315,19 +315,25 @@ export default function SplitMaker(): ReactElement {
     setConfigInput(JSON.stringify(newConfig, null, 4));
   };
 
+  const importOnChange = useCallback(
+    (e: ChangeEvent<HTMLInputElement>): void => onImport(e, game),
+    [game, onImport],
+  );
+
+  const toggleIconsOnChange = useCallback(
+    (e: ChangeEvent<HTMLInputElement>): void => {
+      setIncludeIcons(e.target.checked);
+    },
+    [],
+  );
+
   return (
     <div id="input-output">
       <div id="editor-section" className="side">
         <h2>Input Configuration</h2>
         <div className="output-container">
           <div className="row">
-            <input
-              type="file"
-              id="import-input"
-              onChange={(e: ChangeEvent<HTMLInputElement>): void =>
-                onImport(e, game)
-              }
-            />
+            <input type="file" id="import-input" onChange={importOnChange} />
             <ArrowButton
               text="Import Splits"
               id="import-button"
@@ -358,9 +364,7 @@ export default function SplitMaker(): ReactElement {
               id="generate-icons-toggle"
               type="checkbox"
               checked={includeIcons}
-              onChange={(e: ChangeEvent<HTMLInputElement>): void => {
-                setIncludeIcons(e.target.checked);
-              }}
+              onChange={toggleIconsOnChange}
             />
             <label htmlFor="generate-icons-toggle">Include icons</label>
           </div>
