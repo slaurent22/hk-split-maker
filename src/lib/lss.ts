@@ -1140,7 +1140,8 @@ export async function createILPack(
     categoryName: `${config.categoryName} ILs`,
     variables: config.variables,
     gameName: config.gameName,
-    names: config.names,
+    // a copy, so the EndingSplit name added below stays out of the caller's config
+    names: config.names && { ...config.names },
     endTriggeringAutosplit: true,
     splitIds: [],
     pauseOnFileSelect: config.pauseOnFileSelect,
