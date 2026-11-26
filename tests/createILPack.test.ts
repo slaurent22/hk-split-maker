@@ -174,6 +174,35 @@ describe("createILPack", () => {
       ]);
       expect(ils[1].startTriggeringAutosplit).toBe("BeastsDenTrapBench");
     });
+    test("should carry pauseOnMainMenu into every IL", async () => {
+      const config: Config = {
+        ...hkConfig,
+        endTriggeringAutosplit: false,
+        pauseOnMainMenu: false,
+      };
+      const { output } = await createILPack(config, "hollowknight", false);
+
+      expect(output).toHaveLength(hkSplitIds.length + 1);
+      for (const lss of output) {
+        expect(importSplitsXml(lss, "hollowknight").pauseOnMainMenu).toBe(
+          false,
+        );
+      }
+    });
+
+    test("should not add EndingSplit to the caller's names", async () => {
+      const names = { BenchAny: "Bench" };
+      const config: Config = {
+        ...hkConfig,
+        endTriggeringAutosplit: false,
+        names,
+      };
+      const { output } = await createILPack(config, "hollowknight", false);
+
+      expect(output.at(-1)).toContain("<Name>End</Name>");
+      expect(names).toStrictEqual({ BenchAny: "Bench" });
+      expect(config.names).toBe(names);
+    });
   });
 
   describe("silksong", () => {
@@ -195,6 +224,21 @@ describe("createILPack", () => {
         ["BenchAny", "GainedCurse"],
         ["GainedCurse", "PlayerDeath"],
       ]);
+    });
+
+    test("should carry pauseOnFileSelect into every IL", async () => {
+      const { output } = await createILPack(
+        { ...silksongConfig, pauseOnFileSelect: true },
+        "silksong",
+        false,
+      );
+
+      expect(output).toHaveLength(3);
+      for (const lss of output) {
+        expect(lss).toMatch(
+          /<Setting id="pause_on_file_select" type="bool">True<\/Setting>/,
+        );
+      }
     });
   });
 });
