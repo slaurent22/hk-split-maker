@@ -242,13 +242,13 @@ export default function SplitMaker(): ReactElement {
 
   const onDownloadILs = async (): Promise<void> => {
     let output: Array<string> = [];
-    let output_names: Array<string> = [];
-    let zip_name = "";
+    let outputNames: Array<string> = [];
+    let zipName = "";
 
     setDownloadButtonsDisabled(true);
 
     try {
-      ({ output, output_names, zip_name } = await createILPack(
+      ({ output, outputNames, zipName } = await createILPack(
         splitConfig,
         game,
         includeIcons,
@@ -263,7 +263,7 @@ export default function SplitMaker(): ReactElement {
 
     const zip = new JSZip();
     for (let i = 0; i < output.length; i++) {
-      zip.file(output_names[i], output[i]);
+      zip.file(outputNames[i], output[i]);
     }
 
     // do not try to await zip.generateAsync, because React needs to re-render
@@ -271,7 +271,7 @@ export default function SplitMaker(): ReactElement {
     zip
       .generateAsync({ type: "blob" })
       .then((content) => {
-        saveAs(content, zip_name);
+        saveAs(content, zipName);
       })
       .catch((e) => {
         console.error(e);
