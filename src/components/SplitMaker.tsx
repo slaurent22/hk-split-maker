@@ -62,17 +62,6 @@ export default function SplitMaker(): ReactElement {
     [game, setSearchParams],
   );
 
-  const onConfigInputChange = useCallback(
-    (value: string | undefined, loadedFromBuiltin = false) => {
-      if (!loadedFromBuiltin) {
-        setSearchParams({ game });
-      }
-      setConfigInput(value ?? "");
-      setShareButtonDisabled(loadedFromBuiltin);
-    },
-    [game, setSearchParams],
-  );
-
   const onSplitOutputChange = (value: string | undefined): void => {
     setSplitOutput(value ?? "");
   };
@@ -102,16 +91,37 @@ export default function SplitMaker(): ReactElement {
     [categories],
   );
 
+  // Called only by the editor
+  const onUserEdit = useCallback(
+    (value: string | undefined) => {
+      setConfigInput(value ?? "");
+      setShareButtonDisabled(false);
+      setSearchParams({ game });
+    },
+    [game, setSearchParams],
+  );
+
+  // Loads a builtin; no dependency on the handler above
   useEffect(() => {
+    if (!(categoryName && getCategoryDefinition(categoryName))) {
+      return;
+    }
+
+    let cancelled = false;
+    setConfigInput("{loading...}");
+    setShareButtonDisabled(true);
+
     // biome-ignore lint/nursery/noFloatingPromises: valid inside useEffect
-    (async (): Promise<void> => {
-      if (categoryName && getCategoryDefinition(categoryName)) {
-        onConfigInputChange("{loading...}", true);
-        const editorContent = await getCategoryConfigJSON(categoryName, game);
-        onConfigInputChange(editorContent, true);
+    getCategoryConfigJSON(categoryName, game).then((json) => {
+      if (!cancelled) {
+        setConfigInput(json);
       }
-    })();
-  }, [categoryName, getCategoryDefinition, onConfigInputChange, game]);
+    });
+
+    return (): void => {
+      cancelled = true;
+    };
+  }, [categoryName, game, getCategoryDefinition]);
 
   const onCategorySelect = (newValue: CategoryDefinition | null): void => {
     if (newValue) {
@@ -385,10 +395,7 @@ export default function SplitMaker(): ReactElement {
             </div>
           )}
           <Suspense fallback={<div>Loading split config editor...</div>}>
-            <SplitConfigEditor
-              defaultValue={configInput}
-              onChange={onConfigInputChange}
-            />
+            <SplitConfigEditor value={configInput} onChange={onUserEdit} />
           </Suspense>
         </div>
       </div>

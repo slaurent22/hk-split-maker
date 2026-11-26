@@ -1,14 +1,7 @@
 import JSON5 from "json5";
 import type { editor } from "monaco-editor";
 import type { ReactElement, ReactNode } from "react";
-import {
-  lazy,
-  Suspense,
-  useCallback,
-  useEffect,
-  useRef,
-  useState,
-} from "react";
+import { lazy, Suspense, useCallback, useRef } from "react";
 import {
   TiArrowMaximise,
   TiArrowMinimise,
@@ -33,7 +26,7 @@ import "react-tabs/style/react-tabs.css";
 const SplitConfigJsonEditor = lazy(() => import("./SplitConfigJsonEditor"));
 
 interface Props {
-  defaultValue: string;
+  value: string;
   onChange: (value: string | undefined) => void;
 }
 
@@ -352,22 +345,13 @@ export default function SplitConfigEditor(props: Props): ReactElement {
     editorRef.current = editorInstance;
   };
 
-  const [splitConfig, setSplitConfig] = useState(props.defaultValue);
   const onChange = (value: string | undefined): void => {
-    if (value) {
-      setSplitConfig(value);
-      props.onChange(value);
-    }
+    props.onChange(value ?? "");
   };
 
   const onChangeParsedConfig = (value: Partial<Config>): void => {
     onChange(JSON.stringify(value, null, 4));
   };
-
-  useEffect(() => {
-    // lol wut
-    setSplitConfig(props.defaultValue);
-  }, [props.defaultValue]);
 
   const onChangeSplitSelect = (split: SplitOption | null): void => {
     if (!(split && editorRef?.current)) {
@@ -389,7 +373,7 @@ export default function SplitConfigEditor(props: Props): ReactElement {
 
   let parsedConfig: Partial<Config> = {};
   try {
-    parsedConfig = JSON5.parse(splitConfig);
+    parsedConfig = JSON5.parse(props.value);
   } catch (e) {
     console.error(e);
   }
@@ -416,8 +400,7 @@ export default function SplitConfigEditor(props: Props): ReactElement {
         <div className="hk-split-maker-monaco-editor">
           <Suspense fallback={<div>Loading editor...</div>}>
             <SplitConfigJsonEditor
-              defaultValue={props.defaultValue}
-              value={splitConfig}
+              value={props.value}
               onChange={onChange}
               onMount={handleEditorDidMount}
             />

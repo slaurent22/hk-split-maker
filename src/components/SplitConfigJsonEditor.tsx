@@ -32,7 +32,6 @@ function useHandleEditorWillMount(): [(monaco: Monaco) => void, Uri] {
 }
 
 interface Props {
-  defaultValue: string;
   value: string;
   onChange: OnChange;
   onMount: OnMount;
@@ -50,7 +49,6 @@ export default function SplitConfigJsonEditor(props: Props): ReactNode {
   return (
     <Editor
       defaultLanguage="json"
-      defaultValue={props.defaultValue}
       value={props.value}
       onChange={props.onChange}
       theme="vs-dark"
