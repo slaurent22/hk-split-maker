@@ -39,7 +39,6 @@
         "@vitejs/plugin-react": "^6.3.0",
         "@vitest/coverage-v8": "^5.1.1",
         "husky": "^7.0.4",
-        "jsdom": "^29.1.1",
         "lint-staged": "^12.3.7",
         "typescript": "^7.0.2",
         "vite": "^8.3.8",
@@ -48,6 +47,7 @@
     "dependencies": {
         "@monaco-editor/react": "^4.5.0",
         "@reduxjs/toolkit": "^2.9.0",
+        "@xmldom/xmldom": "^0.9.12",
         "classnames": "^2.3.2",
         "file-saver": "^2.0.5",
         "json5": "^2.2.0",

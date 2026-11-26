@@ -1,3 +1,9 @@
+import {
+  DOMParser,
+  type Document,
+  type Element,
+  type Node,
+} from "@xmldom/xmldom";
 import xml from "xml";
 import type { Game } from "../store/game-slice";
 import type { SplitDefinition } from "./hollowknight-splits";
@@ -43,6 +49,22 @@ interface ParsedSplitId {
   subsplit: boolean;
   name: string;
   iconId: string;
+}
+
+function findByAttr(
+  root: Element | Document,
+  attr: string,
+  value: string,
+  tag = "*",
+): Element | null {
+  const all = root.getElementsByTagName(tag);
+  for (let i = 0; i < all.length; i++) {
+    const el = all.item(i);
+    if (el && el.getAttribute(attr) === value) {
+      return el;
+    }
+  }
+  return null;
 }
 
 const DEFAULT_OFFSET = "00:00:00";
@@ -691,7 +713,7 @@ function transformNameOverrideForImport(
   return nameOverride;
 }
 
-function getTextContent(element: Element | ChildNode): string | undefined {
+function getTextContent(element: Element | Node): string | undefined {
   return element.textContent?.trim();
 }
 
@@ -730,12 +752,12 @@ function parseHKAutoSplitterSettings(
     }
     // autosplitIds vs splitIds: autosplitIds do not contain "-" for subsplits, splitIds can
     const autosplitIds: Array<string> = [];
-    xmlDocSplits.childNodes.forEach((c) => {
+    for (const c of xmlDocSplits.childNodes) {
       if (c.nodeName === "Split") {
         const autosplitId = getTextContent(c) || "";
         autosplitIds.push(autosplitId);
       }
-    });
+    }
     const endTriggeringAutosplit = autosplitEndRuns == "True";
     return {
       ordered: orderedStr == "True",
@@ -760,8 +782,10 @@ function parseHKAutoSplitterSettings(
       }
     }
     const autostartId = autostartsplitIds[0];
-    const xmlDocPauseOnMainMenu = xmlDocCustomSettings.querySelector(
-      '[id="pause_on_main_menu"]',
+    const xmlDocPauseOnMainMenu = findByAttr(
+      xmlDocCustomSettings,
+      "id",
+      "pause_on_main_menu",
     );
     let pauseOnMainMenu: boolean | undefined;
     if (xmlDocPauseOnMainMenu) {
@@ -792,7 +816,7 @@ function parseSSAutoSplitterSettings(
 ): ParsedSSAutosplitterSettings {
   const xmlDocCustomSettings =
     autoSplitterSettings.getElementsByTagName("CustomSettings")[0];
-  const xmlDocSplits = xmlDocCustomSettings.querySelector('[id="splits"]');
+  const xmlDocSplits = findByAttr(xmlDocCustomSettings, "id", "splits");
   if (!xmlDocSplits) {
     throw new Error("Failed to import splits: missing splits");
   }
@@ -803,8 +827,10 @@ function parseSSAutoSplitterSettings(
     const autosplitId = settingsNode.getAttribute("value") ?? "ManualSplit";
     autosplitIds.push(autosplitId);
   }
-  const xmlDocPauseOnFileSelect = xmlDocCustomSettings.querySelector(
-    '[id="pause_on_file_select"]',
+  const xmlDocPauseOnFileSelect = findByAttr(
+    xmlDocCustomSettings,
+    "id",
+    "pause_on_file_select",
   );
   let pauseOnFileSelect: boolean | undefined;
   if (xmlDocPauseOnFileSelect) {
