@@ -1143,6 +1143,8 @@ export async function createILPack(
     names: config.names,
     endTriggeringAutosplit: true,
     splitIds: [],
+    pauseOnFileSelect: config.pauseOnFileSelect,
+    pauseOnMainMenu: config.pauseOnMainMenu,
   };
 
   const excludeLast = game === "hollowknight" && !config.endTriggeringAutosplit;
@@ -1150,7 +1152,7 @@ export async function createILPack(
     const currentSplit = config.splitIds[i];
     configTemplate.splitIds.push(currentSplit);
 
-    if (!(currentSplit[0] !== "-")) {
+    if (currentSplit[0] === "-") {
       continue;
     }
     if (game === "silksong") {
@@ -1159,7 +1161,9 @@ export async function createILPack(
       );
     }
     if (!(game === "silksong" && i === 0)) {
-      outputLss.push(createSplitsXml(configTemplate, game, includeIcons));
+      outputLss.push(
+        createSplitsXml(structuredClone(configTemplate), game, includeIcons),
+      );
       outputNames.push(currentSplit);
     }
 
@@ -1173,7 +1177,9 @@ export async function createILPack(
     configTemplate.names ??= {};
     configTemplate.names.EndingSplit = config.endingSplit?.name ?? "End";
 
-    outputLss.push(createSplitsXml(configTemplate, game, includeIcons));
+    outputLss.push(
+      createSplitsXml(structuredClone(configTemplate), game, includeIcons),
+    );
     outputNames.push("EndingSplit");
   }
 
