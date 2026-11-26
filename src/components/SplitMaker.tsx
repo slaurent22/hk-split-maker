@@ -80,11 +80,11 @@ export default function SplitMaker(): ReactElement {
     [game, setSearchParams],
   );
 
-  const onSplitOutputChange = (value: string | undefined) => {
+  const onSplitOutputChange = (value: string | undefined): void => {
     setSplitOutput(value ?? "");
   };
 
-  const onShare = () => {
+  const onShare = (): void => {
     const confirmed = confirm(
       "This will create a disgusting URL. Only use for custom configurations. Proceed?",
     );
@@ -119,7 +119,7 @@ export default function SplitMaker(): ReactElement {
     })();
   }, [categoryName, getCategoryDefinition, onConfigInputChange, game]);
 
-  const onCategorySelect = (newValue: CategoryDefinition | null) => {
+  const onCategorySelect = (newValue: CategoryDefinition | null): void => {
     if (newValue) {
       setCategoryName(newValue.fileName);
     }
@@ -131,15 +131,18 @@ export default function SplitMaker(): ReactElement {
     }
   }, [categoryName, onUpdateCategoryName]);
 
-  const parseConfigInput = () => {
+  const parseConfigInput = (): Config => {
     return JSON5.parse<Config>(configInput);
   };
 
-  const onImportButton = () => {
+  const onImportButton = (): void => {
     document.getElementById("import-input")?.click();
   };
 
-  const onImport = (ce: ChangeEvent<HTMLInputElement>, currentGame: Game) => {
+  const onImport = (
+    ce: ChangeEvent<HTMLInputElement>,
+    currentGame: Game,
+  ): void => {
     // file select
     if (!ce.target.files) {
       return;
@@ -188,7 +191,7 @@ export default function SplitMaker(): ReactElement {
     }
   }, [splitOutputIsLoading]);
 
-  const onSubmit = async () => {
+  const onSubmit = async (): Promise<void> => {
     let configObject: Config | undefined;
     try {
       configObject = parseConfigInput();
@@ -288,7 +291,7 @@ export default function SplitMaker(): ReactElement {
       });
   };
 
-  const onToggleAct1Start = () => {
+  const onToggleAct1Start = (): void => {
     let configObject: Config | undefined;
     try {
       configObject = parseConfigInput();

@@ -2,7 +2,7 @@ import { type ReactElement, useState } from "react";
 
 export default function AlertBanner(): ReactElement {
   const [alertBannerVisible, setAlertBannerVisible] = useState(true);
-  function onClickCloseAlertBanner() {
+  function onClickCloseAlertBanner(): void {
     setAlertBannerVisible(false);
   }
   return (

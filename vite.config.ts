@@ -4,7 +4,7 @@ import react from "@vitejs/plugin-react";
 import { defineConfig } from "vite";
 import { nodePolyfills } from "vite-plugin-node-polyfills";
 
-function git(command: string) {
+function git(command: string): string {
   return execSync(`git ${command}`, { encoding: "utf8" }).trim();
 }
 

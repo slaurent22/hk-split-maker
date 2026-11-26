@@ -3,6 +3,7 @@ import type { editor } from "monaco-editor";
 import {
   lazy,
   type ReactElement,
+  type ReactNode,
   Suspense,
   useEffect,
   useRef,
@@ -35,7 +36,11 @@ interface Props {
 
 const hkSplitDefinitions = HollowKnightParseSplitsDefinitions();
 const ssSplitDefinitions = SilksongParseSplitsDefinitions();
-function useSplitOption(splitId: string) {
+
+type SplitOptionWithSubsplit = SplitOption & {
+  subsplit: boolean;
+};
+function useSplitOption(splitId: string): SplitOptionWithSubsplit | undefined {
   let autosplitId = splitId;
   let subsplit = false;
   const subSplitMatch = SUB_SPLIT_RE.exec(autosplitId);
@@ -61,7 +66,7 @@ function useSplitOption(splitId: string) {
   };
 }
 
-function SubsplitIndicator() {
+function SubsplitIndicator(): ReactNode {
   return (
     <Tooltip content="This is a subsplit">
       <TiChevronRight size="1.5em" />
@@ -69,7 +74,7 @@ function SubsplitIndicator() {
   );
 }
 
-function MoveAnchor() {
+function MoveAnchor(): ReactNode {
   return (
     <span style={{ cursor: "grab" }}>
       <TiArrowMove size="1.5em" />
@@ -87,7 +92,7 @@ function DeleteAutosplit({
   index,
   onChange,
   parsedConfig,
-}: DeleteAutosplitProps) {
+}: DeleteAutosplitProps): ReactNode {
   return (
     <Tooltip content="Delete this autosplit">
       <TiDelete
@@ -116,7 +121,11 @@ interface AddAutosplitProps {
   onChange: (newConfig: Partial<Config>) => void;
 }
 
-function AddAutosplit({ parsedConfig, onChange, index }: AddAutosplitProps) {
+function AddAutosplit({
+  parsedConfig,
+  onChange,
+  index,
+}: AddAutosplitProps): ReactNode {
   const game = useCurrentGame();
   const defaultSplit = game === "hollowknight" ? "AbyssShriek" : "SilkSpear";
   return (
@@ -148,7 +157,10 @@ interface AddFirstAutosplitProps {
   onChange: (newConfig: Partial<Config>) => void;
 }
 
-function AddFirstAutosplit({ parsedConfig, onChange }: AddFirstAutosplitProps) {
+function AddFirstAutosplit({
+  parsedConfig,
+  onChange,
+}: AddFirstAutosplitProps): ReactNode {
   return (
     <div style={{ alignItems: "center", display: "flex" }}>
       <TiPlus
@@ -181,7 +193,7 @@ function ToggleSubsplit({
   subsplit,
   parsedConfig,
   onChange,
-}: ToggleSubsplitProps) {
+}: ToggleSubsplitProps): ReactNode {
   const Component = subsplit ? TiArrowMaximise : TiArrowMinimise;
   const tooltip = subsplit ? "Convert to normal split" : "Convert to subsplit";
   return (
@@ -223,7 +235,7 @@ function SingleAutosplitSelect({
   index,
   parsedConfig,
   onChange,
-}: SingleAutosplitSelectProps) {
+}: SingleAutosplitSelectProps): ReactNode {
   const value = useSplitOption(splitId);
   return (
     <div>
@@ -280,7 +292,7 @@ interface EndTriggeringAutosplitProps {
 function EndTriggeringAutosplit({
   onChange,
   parsedConfig,
-}: EndTriggeringAutosplitProps) {
+}: EndTriggeringAutosplitProps): ReactNode {
   const message = parsedConfig.endTriggeringAutosplit
     ? "Time will end on last autosplit"
     : "Time will end on game-ending/credits";
@@ -330,19 +342,19 @@ export default function SplitConfigEditor(props: Props): ReactElement {
   const editorRef = useRef<editor.IStandaloneCodeEditor | null>(null);
   const handleEditorDidMount = (
     editorInstance: editor.IStandaloneCodeEditor,
-  ) => {
+  ): void => {
     editorRef.current = editorInstance;
   };
 
   const [splitConfig, setSplitConfig] = useState(props.defaultValue);
-  const onChange = (value: string | undefined) => {
+  const onChange = (value: string | undefined): void => {
     if (value) {
       setSplitConfig(value);
       props.onChange(value);
     }
   };
 
-  const onChangeParsedConfig = (value: Partial<Config>) => {
+  const onChangeParsedConfig = (value: Partial<Config>): void => {
     onChange(JSON.stringify(value, null, 4));
   };
 
@@ -351,7 +363,7 @@ export default function SplitConfigEditor(props: Props): ReactElement {
     setSplitConfig(props.defaultValue);
   }, [props.defaultValue]);
 
-  const onChangeSplitSelect = (split: SplitOption | null) => {
+  const onChangeSplitSelect = (split: SplitOption | null): void => {
     if (!split || !editorRef?.current) {
       return;
     }

@@ -18,7 +18,7 @@ export default function App(): ReactElement {
 
   const [searchParams, setSearchParams] = useSearchParams();
 
-  const switchGame = (game: Game) => {
+  const switchGame = (game: Game): void => {
     const newParams = new URLSearchParams(searchParams);
     newParams.set("game", game);
     newParams.delete("builtin");
@@ -26,7 +26,7 @@ export default function App(): ReactElement {
     setSearchParams(newParams, { replace: true });
   };
 
-  const onTabSelect = (index: number) => {
+  const onTabSelect = (index: number): void => {
     // Only set query param here. AppWrapper will map query param to Redux store
     if (index === 0) {
       switchGame("hollowknight");

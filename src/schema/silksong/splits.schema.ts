@@ -1,4 +1,5 @@
 import { parseSplitsDefinitions } from "../../lib/silksong-splits";
+import type { SchemaOverridePropItem } from "../../types/schema.d";
 import SplitConfigSchemaSource from "./splits.schema.json";
 
 const SPLITS = [...parseSplitsDefinitions().values()];
@@ -35,7 +36,9 @@ const items = SplitConfigSchemaSource.properties.splitIds.items as {
 
 items.oneOf = items.oneOf.concat(SPLITS_SCHEMA).concat(SUBSPLITS_SCHEMA);
 
-const overrideSchemaPropItem = (description: string) => ({
+const overrideSchemaPropItem = (
+  description: string,
+): SchemaOverridePropItem => ({
   oneOf: [
     {
       type: "string",

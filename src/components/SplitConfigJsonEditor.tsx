@@ -5,7 +5,7 @@ import Editor, {
   useMonaco,
 } from "@monaco-editor/react";
 import { Uri } from "monaco-editor";
-import { useEffect } from "react";
+import { type ReactNode, useEffect } from "react";
 import { useCurrentGame } from "../hooks";
 import HKSplitConfigSchema from "../schema/hollowknight/splits.schema";
 import SSSplitConfigSchema from "../schema/silksong/splits.schema";
@@ -41,7 +41,7 @@ interface Props {
   onMount: OnMount;
 }
 
-export default function SplitConfigJsonEditor(props: Props) {
+export default function SplitConfigJsonEditor(props: Props): ReactNode {
   const [handleEditorWillMount, modelUri] = useHandleEditorWillMount();
   const monaco = useMonaco();
   useEffect(() => {

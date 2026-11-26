@@ -216,7 +216,7 @@ export function parseSplitsDefinitions(): Map<string, SplitDefinition> {
   return splitDefinitions;
 }
 
-function getGroupedSplitDefinitions() {
+function getGroupedSplitDefinitions(): Map<string, Array<SplitDefinition>> {
   if (groupedSplitDefinitions) {
     return groupedSplitDefinitions;
   }
