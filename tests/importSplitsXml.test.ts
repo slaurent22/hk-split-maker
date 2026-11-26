@@ -81,7 +81,7 @@ describe("importSplitsXml", () => {
     test("5. should import silksong variables", () => {
       const config = importSplitsXml(ss_variables_lss, "silksong");
       expect(config.variables).toBeDefined();
-      expect(config.variables?.["key"]).toBe("value");
+      expect(config.variables?.key).toBe("value");
     });
     test("6. should import silksong subsplits", () => {
       const config = importSplitsXml(ss_subsplits_lss, "silksong");

@@ -1,6 +1,6 @@
+import { execSync } from "node:child_process";
+import path from "node:path";
 import react from "@vitejs/plugin-react";
-import { execSync } from "child_process";
-import path from "path";
 import { defineConfig } from "vite";
 import { nodePolyfills } from "vite-plugin-node-polyfills";
 

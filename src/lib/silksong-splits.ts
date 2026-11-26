@@ -28,7 +28,7 @@ function getNameAndGroup({
   let name = description;
   let qualifier = "Other";
 
-  if (match && match.groups) {
+  if (match?.groups) {
     ({ name, qualifier } = match.groups);
   }
   // biome-ignore lint/style/useDefaultSwitchClause: intentional passthrough

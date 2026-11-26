@@ -93,7 +93,7 @@ function RouteNotesLink({
 }
 
 function SchyPicture(): ReactElement {
-  return <img src={Schy} width="7%" height="7%" />;
+  return <img src={Schy} width="7%" height="7%" alt="Schy logo" />;
 }
 
 function CategorySelectOption<

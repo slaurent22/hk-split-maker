@@ -30,7 +30,7 @@
     "linter": {
         "enabled": true,
         "rules": {
-            "preset": "none",
+            "preset": "recommended",
             "a11y": { "useGenericFontNames": "error" },
             "complexity": {
                 "noAdjacentSpacesInRegex": "error",

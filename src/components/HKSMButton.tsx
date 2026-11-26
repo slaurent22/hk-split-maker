@@ -23,6 +23,7 @@ const HKSMButton: React.FC<Props> = ({
       onClick={onClick}
       id={id}
       disabled={disabled ?? false}
+      type="button"
     >
       {children}
     </button>

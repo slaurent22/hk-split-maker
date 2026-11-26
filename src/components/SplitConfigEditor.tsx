@@ -363,7 +363,7 @@ export default function SplitConfigEditor(props: Props): ReactElement {
     try {
       const currentConfig = JSON5.parse<Config>(currentValue);
       currentConfig.splitIds.push(split.value);
-      editorRef.current.setValue(JSON.stringify(currentConfig, null, 4) + "\n");
+      editorRef.current.setValue(`${JSON.stringify(currentConfig, null, 4)}\n`);
     } catch (e) {
       console.error("Failed to parse config from editor:", e);
     }
@@ -414,6 +414,7 @@ export default function SplitConfigEditor(props: Props): ReactElement {
           >
             {parsedConfig.splitIds.map((splitId, index) => (
               <SingleAutosplitSelect
+                // biome-ignore lint/suspicious/noArrayIndexKey: designing a robust unique-key system for this list is too complicated for now
                 key={index}
                 splitId={splitId}
                 index={index}

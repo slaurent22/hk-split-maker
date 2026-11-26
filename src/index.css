@@ -118,6 +118,16 @@ input[type="file"] {
 }
 
 .close-ab {
+  /* Reset default button styles */
+  background: none;
+  border: none;
+  padding: 0;
+  margin: 0;
+  font: inherit;
+  line-height: inherit;
+  appearance: none;
+
+  /* Former styles from the span element */
   margin-left: 10px;
   margin-right: 1%;
   color: white;

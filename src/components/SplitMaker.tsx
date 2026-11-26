@@ -6,6 +6,7 @@ import {
   lazy,
   type ReactElement,
   Suspense,
+  useCallback,
   useEffect,
   useState,
 } from "react";
@@ -59,22 +60,25 @@ export default function SplitMaker(): ReactElement {
         builtin: window.location.hash.substring(1),
       });
     }
-  }, [window.location.hash]);
+  }, [setSearchParams, game]);
 
-  const onUpdateCategoryName = (newCategoryName: string) => {
-    setSearchParams({ game, builtin: newCategoryName });
-  };
+  const onUpdateCategoryName = useCallback(
+    (newCategoryName: string) => {
+      setSearchParams({ game, builtin: newCategoryName });
+    },
+    [game, setSearchParams],
+  );
 
-  const onConfigInputChange = (
-    value: string | undefined,
-    loadedFromBuiltin = false,
-  ) => {
-    if (!loadedFromBuiltin) {
-      setSearchParams({ game });
-    }
-    setConfigInput(value ?? "");
-    setShareButtonDisabled(loadedFromBuiltin);
-  };
+  const onConfigInputChange = useCallback(
+    (value: string | undefined, loadedFromBuiltin = false) => {
+      if (!loadedFromBuiltin) {
+        setSearchParams({ game });
+      }
+      setConfigInput(value ?? "");
+      setShareButtonDisabled(loadedFromBuiltin);
+    },
+    [game, setSearchParams],
+  );
 
   const onSplitOutputChange = (value: string | undefined) => {
     setSplitOutput(value ?? "");
@@ -94,13 +98,16 @@ export default function SplitMaker(): ReactElement {
     }
   };
 
-  const getCategoryDefinition = (targetCategoryName: string) => {
-    return Object.values(categories)
-      .flat()
-      .find((category) => {
-        return category.fileName === targetCategoryName;
-      });
-  };
+  const getCategoryDefinition = useCallback(
+    (targetCategoryName: string) => {
+      return Object.values(categories)
+        .flat()
+        .find((category) => {
+          return category.fileName === targetCategoryName;
+        });
+    },
+    [categories],
+  );
 
   useEffect(() => {
     (async () => {
@@ -110,7 +117,7 @@ export default function SplitMaker(): ReactElement {
         onConfigInputChange(editorContent, true);
       }
     })();
-  }, [categoryName]);
+  }, [categoryName, getCategoryDefinition, onConfigInputChange, game]);
 
   const onCategorySelect = (newValue: CategoryDefinition | null) => {
     if (newValue) {
@@ -122,7 +129,7 @@ export default function SplitMaker(): ReactElement {
     if (categoryName) {
       onUpdateCategoryName(categoryName);
     }
-  }, [categoryName]);
+  }, [categoryName, onUpdateCategoryName]);
 
   const parseConfigInput = () => {
     return JSON5.parse<Config>(configInput);
@@ -182,7 +189,7 @@ export default function SplitMaker(): ReactElement {
   }, [splitOutputIsLoading]);
 
   const onSubmit = async () => {
-    let configObject;
+    let configObject: Config | undefined;
     try {
       configObject = parseConfigInput();
     } catch (e) {
@@ -282,7 +289,7 @@ export default function SplitMaker(): ReactElement {
   };
 
   const onToggleAct1Start = () => {
-    let configObject;
+    let configObject: Config | undefined;
     try {
       configObject = parseConfigInput();
     } catch (e) {

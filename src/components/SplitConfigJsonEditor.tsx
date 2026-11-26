@@ -48,7 +48,7 @@ export default function SplitConfigJsonEditor(props: Props) {
     if (monaco) {
       handleEditorWillMount(monaco);
     }
-  }, [monaco]);
+  }, [monaco, handleEditorWillMount]);
 
   return (
     <Editor

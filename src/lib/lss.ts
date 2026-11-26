@@ -273,7 +273,7 @@ export async function createSplitsXml(
     }
     const currentSplitIdCount = splitIdCount.get(autosplitId) as number;
 
-    const nameOverride = names && names[autosplitId];
+    const nameOverride = names?.[autosplitId];
     if (nameOverride) {
       let nameTemplate = "";
       if (typeof nameOverride === "string") {
@@ -282,10 +282,7 @@ export async function createSplitsXml(
         nameTemplate = nameOverride[currentSplitIdCount];
       }
       if (nameTemplate) {
-        name = nameTemplate.replace(
-          new RegExp("%s", "g"),
-          splitDefinition.name,
-        );
+        name = nameTemplate.replace(/%s/g, splitDefinition.name);
       }
     }
 
@@ -294,7 +291,7 @@ export async function createSplitsXml(
     }
 
     let iconId = autosplitId;
-    const iconOverride = icons && icons[autosplitId];
+    const iconOverride = icons?.[autosplitId];
     if (typeof iconOverride === "string") {
       iconId = iconOverride;
     } else if (iconOverride?.length) {
@@ -745,9 +742,9 @@ function parseHKAutoSplitterSettings(
       "PauseOnMainMenu",
     );
     let pauseOnMainMenu: boolean | undefined;
-    if (pauseOnMainMenuStr == "True") {
+    if (pauseOnMainMenuStr === "True") {
       pauseOnMainMenu = true;
-    } else if (pauseOnMainMenuStr == "False") {
+    } else if (pauseOnMainMenuStr === "False") {
       pauseOnMainMenu = false;
     }
     // autosplitIds vs splitIds: autosplitIds do not contain "-" for subsplits, splitIds can
@@ -758,9 +755,9 @@ function parseHKAutoSplitterSettings(
         autosplitIds.push(autosplitId);
       }
     }
-    const endTriggeringAutosplit = autosplitEndRuns == "True";
+    const endTriggeringAutosplit = autosplitEndRuns === "True";
     return {
-      ordered: orderedStr == "True",
+      ordered: orderedStr === "True",
       startTriggeringAutosplit: autoStart.length > 0 ? autoStart : undefined,
       autosplitIds,
       endTriggeringAutosplit,
@@ -771,7 +768,7 @@ function parseHKAutoSplitterSettings(
     const xmlDocSettings = xmlDocCustomSettings.getElementsByTagName("Setting");
     const autostartsplitIds: Array<string> = [];
     for (let i = 0; i < xmlDocSettings.length; i++) {
-      if (xmlDocSettings[i].getAttribute("id") == "splits") {
+      if (xmlDocSettings[i].getAttribute("id") === "splits") {
         const xmlDocSplitsSettings =
           xmlDocSettings[i].getElementsByTagName("Setting");
         for (let j = 0; j < xmlDocSplitsSettings.length; j++) {
@@ -790,16 +787,16 @@ function parseHKAutoSplitterSettings(
     let pauseOnMainMenu: boolean | undefined;
     if (xmlDocPauseOnMainMenu) {
       const pauseOnMainMenuStr = getTextContent(xmlDocPauseOnMainMenu);
-      if (pauseOnMainMenuStr == "True") {
+      if (pauseOnMainMenuStr === "True") {
         pauseOnMainMenu = true;
-      } else if (pauseOnMainMenuStr == "False") {
+      } else if (pauseOnMainMenuStr === "False") {
         pauseOnMainMenu = false;
       }
     }
     return {
       ordered: true,
       startTriggeringAutosplit:
-        autostartId == "LegacyStart" ? undefined : autostartId,
+        autostartId === "LegacyStart" ? undefined : autostartId,
       autosplitIds: autostartsplitIds.slice(1),
       endTriggeringAutosplit: true,
       pauseOnMainMenu,
@@ -835,9 +832,9 @@ function parseSSAutoSplitterSettings(
   let pauseOnFileSelect: boolean | undefined;
   if (xmlDocPauseOnFileSelect) {
     const pauseOnFileSelectStr = getTextContent(xmlDocPauseOnFileSelect);
-    if (pauseOnFileSelectStr == "True") {
+    if (pauseOnFileSelectStr === "True") {
       pauseOnFileSelect = true;
-    } else if (pauseOnFileSelectStr == "False") {
+    } else if (pauseOnFileSelectStr === "False") {
       pauseOnFileSelect = false;
     }
   }
@@ -855,8 +852,7 @@ function importHKSplitsXml(str: string): Config {
   const offset = getTextContentByTagName(xmlDoc, "Offset");
   // Metadata Variables -> variables
   const xmlDocVariables0 = xmlDoc.getElementsByTagName("Variables")[0];
-  const xmlDocVariables =
-    xmlDocVariables0 && xmlDocVariables0.getElementsByTagName("Variable");
+  const xmlDocVariables = xmlDocVariables0?.getElementsByTagName("Variable");
   const potentialVariables: Record<string, string> = {};
   let hasVariables = false;
   if (xmlDocVariables && xmlDocVariables.length > 0) {
@@ -876,9 +872,7 @@ function importHKSplitsXml(str: string): Config {
   if (!autoSplitterSettings) {
     const xmlDocComponents0 = xmlDoc.getElementsByTagName("Components")[0];
     const xmlDocComponents =
-      (xmlDocComponents0 &&
-        xmlDocComponents0.getElementsByTagName("Component")) ||
-      [];
+      xmlDocComponents0?.getElementsByTagName("Component") || [];
     for (let i = 0; i < xmlDocComponents.length; i++) {
       const xmlDocComponent = xmlDocComponents[i];
       const path = getTextContentByTagName(xmlDocComponent, "Path");
@@ -914,8 +908,7 @@ function importHKSplitsXml(str: string): Config {
   });
   // Segments Segment Name -> names, endingSplit name
   const xmlDocSegments0 = xmlDoc.getElementsByTagName("Segments")[0];
-  const segments =
-    (xmlDocSegments0 && xmlDocSegments0.getElementsByTagName("Segment")) || [];
+  const segments = xmlDocSegments0?.getElementsByTagName("Segment") || [];
   // subsplitNames vs names: names do not contain "-" for subsplits, subsplitNames can
   let endName = "";
   for (let i = 0; i < segments.length; i++) {
@@ -1003,8 +996,7 @@ function importSSSplitsXml(str: string): Config {
   const offset = getTextContentByTagName(xmlDoc, "Offset") || DEFAULT_OFFSET;
   // Metadata Variables -> variables
   const xmlDocVariables0 = xmlDoc.getElementsByTagName("Variables")[0];
-  const xmlDocVariables =
-    xmlDocVariables0 && xmlDocVariables0.getElementsByTagName("Variable");
+  const xmlDocVariables = xmlDocVariables0?.getElementsByTagName("Variable");
   const potentialVariables: Record<string, string> = {};
   let hasVariables = false;
   if (xmlDocVariables && xmlDocVariables.length > 0) {
@@ -1023,9 +1015,7 @@ function importSSSplitsXml(str: string): Config {
   if (!autoSplitterSettings) {
     const xmlDocComponents0 = xmlDoc.getElementsByTagName("Components")[0];
     const xmlDocComponents =
-      (xmlDocComponents0 &&
-        xmlDocComponents0.getElementsByTagName("Component")) ||
-      [];
+      xmlDocComponents0?.getElementsByTagName("Component") || [];
     for (let i = 0; i < xmlDocComponents.length; i++) {
       const xmlDocComponent = xmlDocComponents[i];
       const path = getTextContentByTagName(xmlDocComponent, "Path");
@@ -1053,8 +1043,7 @@ function importSSSplitsXml(str: string): Config {
   });
   // Segments Segment Name -> names, endingSplit name
   const xmlDocSegments0 = xmlDoc.getElementsByTagName("Segments")[0];
-  const segments =
-    (xmlDocSegments0 && xmlDocSegments0.getElementsByTagName("Segment")) || [];
+  const segments = xmlDocSegments0?.getElementsByTagName("Segment") || [];
   // subsplitNames vs names: names do not contain "-" for subsplits, subsplitNames can
   let endName = "";
   for (let i = 0; i < segments.length; i++) {
@@ -1156,7 +1145,7 @@ export async function createILPack(
   const output_names = [];
 
   const config_template: Config = {
-    categoryName: config.categoryName + " ILs",
+    categoryName: `${config.categoryName} ILs`,
     variables: config.variables,
     gameName: config.gameName,
     names: config.names,
@@ -1170,7 +1159,7 @@ export async function createILPack(
     const currentSplit = config.splitIds[i];
     config_template.splitIds.push(currentSplit);
 
-    if (currentSplit[0] != "-") {
+    if (currentSplit[0] !== "-") {
       if (game === "silksong") {
         config_template.splitIds.unshift(
           config_template.startTriggeringAutosplit ?? "StartNewGame",
@@ -1193,7 +1182,7 @@ export async function createILPack(
       config_template.names = {};
     }
 
-    config_template.names["EndingSplit"] = config.endingSplit?.name ?? "End";
+    config_template.names.EndingSplit = config.endingSplit?.name ?? "End";
 
     output_lss.push(createSplitsXml(config_template, game, includeIcons));
     output_names.push("EndingSplit");

@@ -10,9 +10,13 @@ export default function AlertBanner(): ReactElement {
       className="alert-banner"
       style={alertBannerVisible ? {} : { display: "none" }}
     >
-      <span className="close-ab" onClick={onClickCloseAlertBanner}>
+      <button
+        type="button"
+        className="close-ab"
+        onClick={onClickCloseAlertBanner}
+      >
         &times;
-      </span>
+      </button>
       Interested in contributing or suggesting ideas and splits? Check out
       the&nbsp;
       <a
