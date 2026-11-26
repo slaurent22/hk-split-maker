@@ -24,8 +24,16 @@ function createOnMenuOpen(classNamePrefix: string) {
   };
 }
 
+type GroupColor =
+  | "#06080f"
+  | "#091d66"
+  | "#040e33"
+  | "#061f78"
+  | "#071752"
+  | "";
+
 // https://coolors.co/06080f-091d66-040e33-061f78-071752
-function getGroupColor(section: string): string {
+function getGroupColor(section: string): GroupColor {
   switch (section) {
     case "Main":
       return "#06080f";

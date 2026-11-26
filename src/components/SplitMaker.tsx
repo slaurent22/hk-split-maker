@@ -103,6 +103,7 @@ export default function SplitMaker(): ReactElement {
   );
 
   useEffect(() => {
+    // biome-ignore lint/nursery/noFloatingPromises: valid inside useEffect
     (async (): Promise<void> => {
       if (categoryName && getCategoryDefinition(categoryName)) {
         onConfigInputChange("{loading...}", true);
@@ -229,7 +230,7 @@ export default function SplitMaker(): ReactElement {
 
     // Guess a good file name.
     // Can be inaccurate if a new config has been entered but not processed yet.
-    let splitName = "";
+    let splitName: string;
     try {
       const splitsConfig = parseConfigInput();
       splitName = buildSplitsFileName(splitsConfig);

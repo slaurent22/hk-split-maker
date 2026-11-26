@@ -63,8 +63,6 @@ function SplitSelect({
     <BaseSelect<SplitOption>
       id={"id"}
       options={options}
-      className={"SplitSelect"}
-      classNamePrefix={"SplitSelect"}
       placeholder="Add autosplit: Select or type to search..."
       onChange={(newValue: SingleValue<SplitOption>): void =>
         onChange(newValue ?? null)

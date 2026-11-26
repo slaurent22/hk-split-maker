@@ -14,10 +14,10 @@ import type { ItemInterface } from "react-sortablejs";
 import { ReactSortable } from "react-sortablejs";
 import { Tab, TabList, TabPanel, Tabs } from "react-tabs";
 import { useCurrentGame } from "../hooks";
-import { parseSplitsDefinitions as HollowKnightParseSplitsDefinitions } from "../lib/hollowknight-splits";
+import { parseSplitsDefinitions as hollowKnightParseSplitsDefinitions } from "../lib/hollowknight-splits";
 import type { Config } from "../lib/lss";
 import { SUB_SPLIT_RE } from "../lib/lss";
-import { parseSplitsDefinitions as SilksongParseSplitsDefinitions } from "../lib/silksong-splits";
+import { parseSplitsDefinitions as silksongParseSplitsDefinitions } from "../lib/silksong-splits";
 import type { SplitOption } from "./SplitSelect";
 import SplitSelect from "./SplitSelect";
 import Tooltip from "./Tooltip";
@@ -30,8 +30,8 @@ interface Props {
   onChange: (value: string | undefined) => void;
 }
 
-const hkSplitDefinitions = HollowKnightParseSplitsDefinitions();
-const ssSplitDefinitions = SilksongParseSplitsDefinitions();
+const hkSplitDefinitions = hollowKnightParseSplitsDefinitions();
+const ssSplitDefinitions = silksongParseSplitsDefinitions();
 
 type SplitOptionWithSubsplit = SplitOption & {
   subsplit: boolean;

@@ -2,6 +2,7 @@ import type { ReactNode } from "react";
 import arrow from "../asset/image/arrow.png";
 import HKSMButton from "./HKSMButton";
 import "./ArrowButton.css";
+import "./HKSMButton.css";
 
 interface Props {
   id: string;
@@ -18,11 +19,7 @@ function ArrowButton({ id, onClick, text, disabled }: Props): ReactNode {
       id={id}
       disabled={disabled ?? false}
     >
-      <img
-        src={arrow}
-        alt="decorative arrow"
-        className="arrow arrow-left"
-      ></img>
+      <img src={arrow} alt="decorative arrow" className="arrow"></img>
       <span className="button-text">{text}</span>
       <img
         src={arrow}

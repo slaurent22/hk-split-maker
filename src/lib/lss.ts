@@ -92,7 +92,7 @@ export function buildSplitsFileName(splitsConfig: Config): string {
   return `${filename}${suffix}`;
 }
 
-function boolRepr(bool: boolean): string {
+function boolRepr(bool: boolean): "True" | "False" {
   return bool ? "True" : "False";
 }
 
@@ -187,9 +187,7 @@ function hkPauseOnMainMenuNodes(
   variables: Record<string, string> | undefined,
 ): Array<xml.XmlObject> {
   let pauseOnMainMenuMut = pauseOnMainMenu;
-  if (pauseOnMainMenuMut === undefined) {
-    pauseOnMainMenuMut = !variablesAllGlitches(variables);
-  }
+  pauseOnMainMenuMut ??= !variablesAllGlitches(variables);
 
   return [{ PauseOnMainMenu: boolRepr(pauseOnMainMenuMut) }];
 }
@@ -271,7 +269,7 @@ export async function createSplitsXml(
 
     const nameOverride = names?.[autosplitId];
     if (nameOverride) {
-      let nameTemplate = "";
+      let nameTemplate: string;
       if (typeof nameOverride === "string") {
         nameTemplate = nameOverride;
       } else {
@@ -362,7 +360,7 @@ export async function createSplitsXml(
     return { Setting: [{ _attr: { type: "string", value: autosplitId } }] };
   });
 
-  let autosplitterSettings: Array<xml.XmlObject> = [];
+  let autosplitterSettings: Array<xml.XmlObject>;
   switch (game) {
     case "hollowknight":
       autosplitterSettings = [
@@ -706,14 +704,14 @@ function transformNameOverrideForImport(
   return nameOverride;
 }
 
-function getTextContent(element: Element | Node): string | undefined {
-  return element.textContent?.trim();
+function getTextContent(element: Element | Node): string {
+  return element.textContent?.trim() ?? "";
 }
 
 function getTextContentByTagName(
   element: Element | Document,
   tagName: string,
-): string | undefined {
+): string {
   const elementByTagName = element.getElementsByTagName(tagName)[0];
   return elementByTagName ? getTextContent(elementByTagName) : "";
 }
@@ -732,7 +730,7 @@ function parseHKAutoSplitterSettings(
     );
     const orderedStr = getTextContentByTagName(autoSplitterSettings, "Ordered");
     const autoStart =
-      getTextContentByTagName(autoSplitterSettings, "AutosplitStartRuns") || "";
+      getTextContentByTagName(autoSplitterSettings, "AutosplitStartRuns") ?? "";
     const pauseOnMainMenuStr = getTextContentByTagName(
       autoSplitterSettings,
       "PauseOnMainMenu",
@@ -746,10 +744,11 @@ function parseHKAutoSplitterSettings(
     // autosplitIds vs splitIds: autosplitIds do not contain "-" for subsplits, splitIds can
     const autosplitIds: Array<string> = [];
     for (const c of xmlDocSplits.childNodes) {
-      if (c.nodeName === "Split") {
-        const autosplitId = getTextContent(c) || "";
-        autosplitIds.push(autosplitId);
+      if (!(c.nodeName === "Split")) {
+        continue;
       }
+      const autosplitId = getTextContent(c) ?? "";
+      autosplitIds.push(autosplitId);
     }
     const endTriggeringAutosplit = autosplitEndRuns === "True";
     return {
@@ -764,14 +763,15 @@ function parseHKAutoSplitterSettings(
     const xmlDocSettings = xmlDocCustomSettings.getElementsByTagName("Setting");
     const autostartsplitIds: Array<string> = [];
     for (let i = 0; i < xmlDocSettings.length; i++) {
-      if (xmlDocSettings[i].getAttribute("id") === "splits") {
-        const xmlDocSplitsSettings =
-          xmlDocSettings[i].getElementsByTagName("Setting");
-        for (let j = 0; j < xmlDocSplitsSettings.length; j++) {
-          autostartsplitIds.push(
-            xmlDocSplitsSettings[j].getAttribute("value") || "",
-          );
-        }
+      if (!(xmlDocSettings[i].getAttribute("id") === "splits")) {
+        continue;
+      }
+      const xmlDocSplitsSettings =
+        xmlDocSettings[i].getElementsByTagName("Setting");
+      for (let j = 0; j < xmlDocSplitsSettings.length; j++) {
+        autostartsplitIds.push(
+          xmlDocSplitsSettings[j].getAttribute("value") || "",
+        );
       }
     }
     const autostartId = autostartsplitIds[0];
@@ -843,8 +843,8 @@ function importHKSplitsXml(str: string): Config {
   const xmlDoc = parser.parseFromString(str, "text/xml");
   // GameName, CategoryName -> gameName, categoryName
   const gameName =
-    getTextContentByTagName(xmlDoc, "GameName") || "Hollow Knight";
-  const categoryName = getTextContentByTagName(xmlDoc, "CategoryName") || "";
+    getTextContentByTagName(xmlDoc, "GameName") ?? "Hollow Knight";
+  const categoryName = getTextContentByTagName(xmlDoc, "CategoryName") ?? "";
   const offset = getTextContentByTagName(xmlDoc, "Offset");
   // Metadata Variables -> variables
   const xmlDocVariables0 = xmlDoc.getElementsByTagName("Variables")[0];
@@ -854,11 +854,12 @@ function importHKSplitsXml(str: string): Config {
   if (xmlDocVariables && xmlDocVariables.length > 0) {
     for (let i = 0; i < xmlDocVariables.length; i++) {
       const variableName = xmlDocVariables[i].getAttribute("name");
-      if (variableName) {
-        potentialVariables[variableName] =
-          getTextContent(xmlDocVariables[i]) || "";
-        hasVariables = true;
+      if (!variableName) {
+        continue;
       }
+      potentialVariables[variableName] =
+        getTextContent(xmlDocVariables[i]) ?? "";
+      hasVariables = true;
     }
   }
   // AutoSplitterSettings -> startTriggeringAutosplit, splitIds, endTriggeringAutosplit
@@ -905,7 +906,7 @@ function importHKSplitsXml(str: string): Config {
   // subsplitNames vs names: names do not contain "-" for subsplits, subsplitNames can
   let endName = "";
   for (let i = 0; i < segments.length; i++) {
-    const subsegmentName = getTextContentByTagName(segments[i], "Name") || "";
+    const subsegmentName = getTextContentByTagName(segments[i], "Name") ?? "";
     if (i < parsedSplitIds.length) {
       if (subsegmentName.startsWith("-")) {
         parsedSplitIds[i].subsplit = true;
@@ -949,12 +950,12 @@ function importHKSplitsXml(str: string): Config {
       hasNameOverrides = true;
     } else {
       const nameOverrides = [...splitNames];
-      nameOverrides.forEach((nameOverride, index) => {
+      for (const [index, nameOverride] of nameOverrides.entries()) {
         nameOverrides[index] = transformNameOverrideForImport(
           nameOverride,
           splitDefinition,
         );
-      });
+      }
 
       potentialNameOverrides[uniqueAutosplitId] = nameOverrides;
       hasNameOverrides = true;
@@ -995,11 +996,12 @@ function importSSSplitsXml(str: string): Config {
   if (xmlDocVariables && xmlDocVariables.length > 0) {
     for (let i = 0; i < xmlDocVariables.length; i++) {
       const variableName = xmlDocVariables[i].getAttribute("name");
-      if (variableName) {
-        potentialVariables[variableName] =
-          getTextContent(xmlDocVariables[i]) || "";
-        hasVariables = true;
+      if (!variableName) {
+        continue;
       }
+      potentialVariables[variableName] =
+        getTextContent(xmlDocVariables[i]) || "";
+      hasVariables = true;
     }
   }
   let autoSplitterSettings = xmlDoc.getElementsByTagName(
@@ -1082,12 +1084,12 @@ function importSSSplitsXml(str: string): Config {
       hasNameOverrides = true;
     } else {
       const nameOverrides = [...splitNames];
-      nameOverrides.forEach((nameOverride, index) => {
+      for (const [index, nameOverride] of nameOverrides.entries()) {
         nameOverrides[index] = transformNameOverrideForImport(
           nameOverride,
           splitDefinition,
         );
-      });
+      }
 
       potentialNameOverrides[uniqueAutosplitId] = nameOverrides;
       hasNameOverrides = true;
@@ -1148,29 +1150,27 @@ export async function createILPack(
     const currentSplit = config.splitIds[i];
     configTemplate.splitIds.push(currentSplit);
 
-    if (currentSplit[0] !== "-") {
-      if (game === "silksong") {
-        configTemplate.splitIds.unshift(
-          configTemplate.startTriggeringAutosplit ?? "StartNewGame",
-        );
-      }
-      if (!(game === "silksong" && i === 0)) {
-        outputLss.push(createSplitsXml(configTemplate, game, includeIcons));
-        outputNames.push(currentSplit);
-      }
-
-      // set up for next iteration
-      configTemplate.splitIds = [];
-      configTemplate.startTriggeringAutosplit = config.splitIds[i];
+    if (!(currentSplit[0] !== "-")) {
+      continue;
     }
+    if (game === "silksong") {
+      configTemplate.splitIds.unshift(
+        configTemplate.startTriggeringAutosplit ?? "StartNewGame",
+      );
+    }
+    if (!(game === "silksong" && i === 0)) {
+      outputLss.push(createSplitsXml(configTemplate, game, includeIcons));
+      outputNames.push(currentSplit);
+    }
+
+    // set up for next iteration
+    configTemplate.splitIds = [];
+    configTemplate.startTriggeringAutosplit = config.splitIds[i];
   }
 
   if (excludeLast) {
     configTemplate.splitIds.push("EndingSplit");
-    if (configTemplate.names === undefined) {
-      configTemplate.names = {};
-    }
-
+    configTemplate.names ??= {};
     configTemplate.names.EndingSplit = config.endingSplit?.name ?? "End";
 
     outputLss.push(createSplitsXml(configTemplate, game, includeIcons));

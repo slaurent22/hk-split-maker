@@ -180,8 +180,6 @@ function CategorySelect({
       onChange={(newValue: SingleValue<CategoryOption>): void =>
         onChange(newValue ? optionToDef(newValue) : null)
       }
-      className={"CategorySelect"}
-      classNamePrefix={"CategorySelect"}
       placeholder="Pre-made Category: Select or type to search..."
       defaultValue={defaultValue ? defToOption(defaultValue) : undefined}
       components={{
