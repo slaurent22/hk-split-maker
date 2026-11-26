@@ -102,6 +102,14 @@
             }
         },
         {
+            "fileName": "100-ab-891",
+            "displayName": "100% All Bosses (1.0.28891) (notes are for regular 100%)",
+            "data": {
+                "routeNotesURL": "https://app.milanote.com/1WveEr1gD7FZ4H/100-mist-route-891?p=lxGFEERn8Hw",
+                "searchTerms": ["100", "ab"]
+            }
+        },
+        {
             "fileName": "act1-judgement",
             "displayName": "Act 1 Judgement",
             "data": {}
