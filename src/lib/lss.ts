@@ -1148,9 +1148,15 @@ export async function createILPack(
     endTriggeringAutosplit: true,
     splitIds: [],
   };
+  if (game === "hollowknight") {
+    // the first IL starts the same way as the full run
+    configTemplate.startTriggeringAutosplit = config.startTriggeringAutosplit;
+  }
 
-  const excludeLast = game === "hollowknight" && !config.endTriggeringAutosplit;
-  for (let i = 0; i < config.splitIds.length - (excludeLast ? 1 : 0); i++) {
+  // when time ends on credits, every split is followed by one more segment
+  const addEndingSplit =
+    game === "hollowknight" && !config.endTriggeringAutosplit;
+  for (let i = 0; i < config.splitIds.length; i++) {
     const currentSplit = config.splitIds[i];
     configTemplate.splitIds.push(currentSplit);
 
@@ -1171,7 +1177,7 @@ export async function createILPack(
     }
   }
 
-  if (excludeLast) {
+  if (addEndingSplit) {
     configTemplate.splitIds.push("EndingSplit");
     if (configTemplate.names === undefined) {
       configTemplate.names = {};
