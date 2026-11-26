@@ -35,6 +35,7 @@
     <Version>1.0</Version>
     <CustomSettings>
       <Setting id="script_name" type="string" value="silksong_autosplit_wasm"/>
+      <Setting id="pause_on_file_select" type="bool">True</Setting>
       <Setting id="splits" type="list">
         <Setting type="string" value="StartNewGame">
         </Setting>

@@ -1,11 +1,13 @@
 import { importSplitsXml } from "../src/lib/lss";
 import hk_custom_offset_lss from "./fixtures/hk_custom_offset.lss?raw";
 import hk_path_of_pain_lss from "./fixtures/hk_path_of_pain.lss?raw";
+import hk_pause_on_main_menu_false_lss from "./fixtures/hk_pause_on_main_menu_false.lss?raw";
 import hk_vanilla_lss from "./fixtures/hk_vanilla.lss?raw";
 import ss_custom_name_lss from "./fixtures/ss_custom_name.lss?raw";
 import ss_custom_offset_lss from "./fixtures/ss_custom_offset.lss?raw";
 import ss_no_autosplitter_lss from "./fixtures/ss_no_autosplitter.lss?raw";
 import ss_no_category_name_lss from "./fixtures/ss_no_category_name.lss?raw";
+import ss_pause_on_file_select_false from "./fixtures/ss_pause_on_file_select_false.lss?raw";
 import ss_repeating_splitid_lss from "./fixtures/ss_repeating_splitid.lss?raw";
 import ss_subsplits_lss from "./fixtures/ss_subsplits.lss?raw";
 import ss_vanilla_lss from "./fixtures/ss_vanilla.lss?raw";
@@ -18,6 +20,8 @@ describe("importSplitsXml", () => {
       expect(config.categoryName).toBe("Category Name");
       expect(config.gameName).toBe("Hollow Knight");
       expect(config.splitIds).toStrictEqual(["BenchAny", "PlayerDeath"]);
+      expect(config.pauseOnMainMenu).toBe(true);
+      expect(config.pauseOnFileSelect).toBe(undefined);
     });
 
     test("2. should import hk path of pain splits", () => {
@@ -44,12 +48,22 @@ describe("importSplitsXml", () => {
       const config = importSplitsXml(hk_custom_offset_lss, "hollowknight");
       expect(config.offset).toBe("00:00:21.76");
     });
+
+    test("4. should import hk splits with PauseOnMainMenu False", () => {
+      const config = importSplitsXml(
+        hk_pause_on_main_menu_false_lss,
+        "hollowknight",
+      );
+      expect(config.pauseOnMainMenu).toBe(false);
+    });
   });
   describe("silksong", () => {
     test("1. should import silksong vanilla splits", () => {
       const config = importSplitsXml(ss_vanilla_lss, "silksong");
       expect(config.categoryName).toBe("Category Name");
       expect(config.gameName).toBe("Hollow Knight: Silksong");
+      expect(config.pauseOnFileSelect).toBe(true);
+      expect(config.pauseOnMainMenu).toBe(undefined);
     });
     test("2. should import silksong no category name splits", () => {
       const config = importSplitsXml(ss_no_category_name_lss, "silksong");
@@ -102,6 +116,10 @@ describe("importSplitsXml", () => {
       expect(config.names).toStrictEqual({
         EndingSplit: ["Grand Mother Silk", "Lost Lace"],
       });
+    });
+    test("9. should import silksong splits with pause_on_file_select False", () => {
+      const config = importSplitsXml(ss_pause_on_file_select_false, "silksong");
+      expect(config.pauseOnFileSelect).toBe(false);
     });
   });
 });

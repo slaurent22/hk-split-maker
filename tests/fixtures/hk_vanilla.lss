@@ -44,6 +44,7 @@
     <Ordered>True</Ordered>
     <AutosplitEndRuns>False</AutosplitEndRuns>
     <AutosplitStartRuns></AutosplitStartRuns>
+    <PauseOnMainMenu>True</PauseOnMainMenu>
     <Splits>
       <Split>BenchAny</Split>
       <Split>PlayerDeath</Split>

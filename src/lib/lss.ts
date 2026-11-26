@@ -897,6 +897,7 @@ function importHKSplitsXml(str: string): Config {
     startTriggeringAutosplit,
     autosplitIds,
     endTriggeringAutosplit,
+    pauseOnMainMenu,
   } = parseHKAutoSplitterSettings(autoSplitterSettings);
   if (!ordered) {
     throw new Error(`Failed to import splits: Ordered must be True to import`);
@@ -982,6 +983,7 @@ function importHKSplitsXml(str: string): Config {
     endingSplit: endName.length > 0 ? { name: endName } : undefined,
     gameName,
     variables: hasVariables ? potentialVariables : undefined,
+    pauseOnMainMenu,
   };
   if (offset && offset !== DEFAULT_OFFSET) {
     config = { offset, ...config };
