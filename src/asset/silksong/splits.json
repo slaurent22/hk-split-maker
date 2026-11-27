@@ -139,6 +139,12 @@
     },
     {
         "alias": null,
+        "description": "Enter Deep Docks (Transition)",
+        "key": "EnterDeepDocks",
+        "tooltip": "Splits on entering Deep Docks"
+    },
+    {
+        "alias": null,
         "description": "Swift Step (Skill)",
         "key": "SwiftStep",
         "tooltip": "Splits when obtaining Swift Step (Dash/Sprint)"
@@ -844,6 +850,12 @@
         "description": "Great Taste Reward (Item)",
         "key": "GreatTasteReward",
         "tooltip": "Splits when collecting the Pale Oil reward from the Great Taste of Pharloom wish"
+    },
+    {
+        "alias": null,
+        "description": "Enter Underworks (Transition)",
+        "key": "EnterUnderworks",
+        "tooltip": "Splits when entering Underworks"
     },
     {
         "alias": null,
@@ -2698,6 +2710,12 @@
         "description": "Twisted Bud (Collectable)",
         "key": "TwistedBud",
         "tooltip": "Splits when player picks up the Twisted Bud"
+    },
+    {
+        "alias": null,
+        "description": "Twisted Bud (Transition)",
+        "key": "TwistedBudTrans",
+        "tooltip": "Splits on the transition after obtaining the Twisted Bud"
     },
     {
         "alias": null,

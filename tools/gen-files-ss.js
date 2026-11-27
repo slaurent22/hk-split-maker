@@ -9,7 +9,7 @@ const FILE = {
   ICONS: "./src/asset/silksong/icons/icons.ts",
 };
 
-import splits from "../src/asset/silksong/splits.json";
+import splits from "../src/asset/silksong/splits.json" with { type: "json" };
 
 // TODO: figure out good way to have tools and web share common code
 const DESCRIPTION_NAME_REGEXP = /(?<name>.+)\s+\((?<qualifier>.+)\)/;
@@ -189,6 +189,9 @@ function getUrl(qualifier, id) {
     case "PimpilloTrans":
       return getUrl("Tool", "Pimpillo");
 
+    case "TwistedBudTrans":
+      return getUrl("Collectable", "TwistedBud");
+
     // Skill Transition
     case "SilkSpearTrans":
       return getUrl("Skill", "SilkSpear");
@@ -335,6 +338,10 @@ function getUrl(qualifier, id) {
       return getUrl("Enemy", "SquatcrawJuror");
     case "EnterSprintmasterCave":
       return getUrl("NPC", "SprintmasterSwift");
+    case "EnterDeepDocks":
+      return getUrl("Enemy", "FlintstoneFlyer");
+    case "EnterUnderworks":
+      return getUrl("Enemy", "Underworker");
 
     // Boss Transition/Encountered
     case "MossMotherTrans":

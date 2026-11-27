@@ -25,6 +25,7 @@ import BellBeast from "./Boss/BellBeast.png";
 import BellBeastTrans from "./Boss/BellBeast.png";
 import BellBeastArenaExit from "./Boss/BellBeast.png";
 import MarrowBell from "./Misc/Bell.png";
+import EnterDeepDocks from "./Enemy/FlintstoneFlyer.png";
 import SwiftStep from "./Skill/SwiftStep.png";
 import SwiftStepTrans from "./Skill/SwiftStep.png";
 import Lace1 from "./Boss/Lace.png";
@@ -143,6 +144,7 @@ import TormentedTrobbioTrans from "./Boss/TormentedTrobbio.png";
 import MetMergwin from "./NPC/Mergwin.png";
 import DeliveredCouriersRasher from "./Item/CouriersRasher.png";
 import GreatTasteReward from "./Item/PaleOil.png";
+import EnterUnderworks from "./Enemy/Underworker.png";
 import Clawline from "./Skill/Clawline.png";
 import PostClawlineArenaTrans from "./Skill/Clawline.png";
 import EnterHighHalls from "./Enemy/Minister.png";
@@ -452,6 +454,7 @@ import PaleOil2 from "./Item/PaleOil.png";
 import PaleOil3 from "./Item/PaleOil.png";
 import RuinedTool from "./Collectable/RuinedTool.png";
 import TwistedBud from "./Collectable/TwistedBud.png";
+import TwistedBudTrans from "./Collectable/TwistedBud.png";
 import SteelSpines from "./Collectable/SteelSpines.png";
 import MaidensSoul from "./Collectable/MaidensSoul.png";
 import HermitsSoul from "./Collectable/HermitsSoul.png";
@@ -482,6 +485,7 @@ export default {
   BellBeastTrans,
   BellBeastArenaExit,
   MarrowBell,
+  EnterDeepDocks,
   SwiftStep,
   SwiftStepTrans,
   Lace1,
@@ -600,6 +604,7 @@ export default {
   MetMergwin,
   DeliveredCouriersRasher,
   GreatTasteReward,
+  EnterUnderworks,
   Clawline,
   PostClawlineArenaTrans,
   EnterHighHalls,
@@ -909,6 +914,7 @@ export default {
   PaleOil3,
   RuinedTool,
   TwistedBud,
+  TwistedBudTrans,
   SteelSpines,
   MaidensSoul,
   HermitsSoul,
