@@ -1,10 +1,10 @@
 .loader-wrap {
-  min-height: 100vh; /* fallback */
-  /* biome-ignore lint/suspicious/noDuplicateProperties: correct on mobile browsers with collapsing URL bars */
-  min-height: 100dvh;
   display: flex;
   align-items: center; /* vertical */
   justify-content: center; /* horizontal */
+  min-height: 100vh; /* fallback */
+  /* biome-ignore lint/suspicious/noDuplicateProperties: correct on mobile browsers with collapsing URL bars */
+  min-height: 100dvh;
 }
 
 .spinner {

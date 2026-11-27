@@ -1,17 +1,17 @@
 button.hksm-button {
-  background: none;
-  color: white;
-  font-weight: bold;
-  font-variant: small-caps;
-  font-size: 20px;
-  border: 1px solid white;
-  border-radius: 3px;
-  cursor: pointer;
   display: flex;
   align-items: center;
-  font-family: serif;
-  margin: 8px;
   height: 38px;
+  margin: 8px;
+  font-family: serif;
+  font-size: 20px;
+  font-weight: bold;
+  font-variant: small-caps;
+  color: white;
+  cursor: pointer;
+  background: none;
+  border: 1px solid white;
+  border-radius: 3px;
 }
 
 button.hksm-button:hover {
@@ -24,6 +24,6 @@ button.hksm-button .button-text {
 
 button.hksm-button[disabled] {
   color: grey;
-  border-color: grey;
   cursor: default;
+  border-color: grey;
 }

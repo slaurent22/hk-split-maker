@@ -1,7 +1,7 @@
 body {
-  background-color: #2f3136;
-  color: rgb(220 221 222);
   margin: 0;
+  color: rgb(220 221 222);
+  background-color: #2f3136;
 }
 
 #app {
@@ -11,8 +11,8 @@ body {
 h1,
 h2,
 h3 {
-  color: white;
   font-variant: small-caps;
+  color: white;
   text-align: center;
 }
 
@@ -21,17 +21,17 @@ a {
 }
 
 #logo {
-  height: auto;
   width: 90%;
   max-width: 600px;
+  height: auto;
 }
 
 #instructions {
   max-width: 1024px;
-  margin-left: auto;
-  margin-right: auto;
-  padding-left: 10px;
   padding-right: 10px;
+  padding-left: 10px;
+  margin-right: auto;
+  margin-left: auto;
 }
 
 .layout-instructions {
@@ -72,8 +72,8 @@ a {
 }
 
 #submit-button {
-  margin-left: auto;
   margin-right: 0;
+  margin-left: auto;
 }
 
 #download-button {
@@ -90,8 +90,8 @@ input[type="file"] {
 }
 
 .hk-split-maker-monaco-editor {
-  height: 400px;
   min-width: 100%;
+  height: 400px;
   border: 1px solid #ccc;
 }
 
@@ -104,36 +104,36 @@ input[type="file"] {
 .alert-banner {
   padding: 10px;
   padding-left: 10%;
-  background-color: #010f1a;
-  color: white;
   margin-bottom: 10px;
+  color: white;
+  background-color: #010f1a;
 }
 
 .footer {
   padding: 10px;
-  color: white;
   margin-top: 10px;
   font-size: small;
+  color: white;
   text-align: right;
 }
 
 .close-ab {
-  /* Reset default button styles */
-  background: none;
-  border: none;
+  float: right;
   padding: 0;
   margin: 0;
-  font: inherit;
-  line-height: inherit;
-  appearance: none;
+  margin-right: 1%;
 
   /* Former styles from the span element */
   margin-left: 10px;
-  margin-right: 1%;
-  color: white;
+  font: inherit;
   font-weight: bold;
-  float: right;
+  line-height: inherit;
+  color: white;
+  appearance: none;
   cursor: pointer;
+  /* Reset default button styles */
+  background: none;
+  border: none;
   transition: 0.3s;
 }
 
