@@ -67,6 +67,7 @@
         "lint-staged": "^12.3.7",
         "typescript": "^7.0.2",
         "vite": "^8.3.8",
+        "vite-plugin-node-polyfills": "^0.28.0",
         "vitest": "^5.1.1"
     },
     "engines": {
