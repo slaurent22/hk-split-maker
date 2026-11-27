@@ -1,7 +1,13 @@
-import { describe, expect, test } from "vitest";
+import { describe, expect, test, vi } from "vitest";
 import pop from "../src/asset/hollowknight/categories/pop.json";
 import type { Config } from "../src/lib/lss";
 import { createILPack, importSplitsXml } from "../src/lib/lss";
+
+// Icon URLs are site paths that only resolve in the browser, so the real
+// fetch fails under node. Stub the loader with data derived from the URL.
+vi.mock("../src/lib/image-util", () => ({
+  createLiveSplitIconData: async (url: string) => `icon:${url}`,
+}));
 
 const hkSplitIds = [
   "BenchAny",
@@ -180,6 +186,9 @@ describe("createILPack", () => {
       expect(ils.map(({ splitIds }) => splitIds)).toStrictEqual(
         pop.splitIds.map((splitId) => [splitId]),
       );
+      for (const lss of output) {
+        expect(lss).toContain("<Icon><![CDATA[icon:/src/asset/");
+      }
     });
 
     test("should group subsplits into the IL of the following split", async () => {
