@@ -221,6 +221,7 @@
                 "useBigintLiterals": "error",
                 "useBlockStatementOverIife": "error",
                 "useCapitalizedConstructors": "error",
+                "useConsistentHeadingLevel": "error",
                 "useConsistentIndexedObjectStyle": "error",
                 "useConsistentUnicodeBom": "error",
                 "useControlLabel": "error",
