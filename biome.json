@@ -363,6 +363,7 @@
                 "noConfusingLabels": "error",
                 "noConstantBinaryExpressions": "error",
                 "noDeprecatedImports": "error",
+                "noDuplicateDependencies": "error",
                 "noDuplicatedSpreadProps": "error",
                 "noDuplicateEnumValues": "error",
                 "noDuplicateSelectors": "error",
