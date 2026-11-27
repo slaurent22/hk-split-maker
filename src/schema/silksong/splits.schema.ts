@@ -25,9 +25,9 @@ const SUBSPLITS_SCHEMA = SPLITS.map(
 );
 
 interface SplitIdItem {
-  title: string;
-  description: string;
   const: string;
+  description: string;
+  title: string;
 }
 
 const items = SplitConfigSchemaSource.properties.splitIds.items as {

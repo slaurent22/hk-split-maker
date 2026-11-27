@@ -5,6 +5,6 @@ export interface SchemaOverridePropItem {
 export interface SchemaPropertyOptions {
   additionalProperties: boolean;
   description: string;
-  type: string;
   properties: Record<string, unknown>;
+  type: string;
 }

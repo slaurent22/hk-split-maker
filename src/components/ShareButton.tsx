@@ -4,9 +4,9 @@ import HKSMButton from "./HKSMButton";
 import "./HKSMButton.css";
 
 interface Props {
+  disabled?: boolean;
   id: string;
   onClick: () => void;
-  disabled?: boolean;
 }
 
 function ShareButton({ id, onClick, disabled }: Props): ReactNode {

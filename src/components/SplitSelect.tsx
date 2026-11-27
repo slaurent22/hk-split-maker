@@ -13,15 +13,15 @@ import BaseSelect from "./BaseSelect";
 import Tooltip from "./Tooltip";
 
 export interface SplitOption {
-  value: string;
   label: string;
   tooltip: string;
+  value: string;
 }
 
 interface Props {
-  value?: PropsValue<SplitOption>;
-  onChange: (newValue: SplitOption | null) => void;
   controlStyleOverrides?: CSSObjectWithLabel;
+  onChange: (newValue: SplitOption | null) => void;
+  value?: PropsValue<SplitOption>;
 }
 
 function SplitSelectOption<

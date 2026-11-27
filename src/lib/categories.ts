@@ -9,11 +9,11 @@ import SSCategoryDirectory from "../asset/silksong/categories/category-directory
 import type { Game } from "../store/game-slice";
 
 interface CatContent {
-  splitIds: Array<string>;
-  ordered?: boolean;
+  categoryName: string;
   endTriggeringAutosplit: boolean;
   gameName: string;
-  categoryName: string;
+  ordered?: boolean;
+  splitIds: Array<string>;
   variables: Record<string, string>;
 }
 

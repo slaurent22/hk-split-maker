@@ -13,25 +13,25 @@ import Schy from "../asset/image/schy.png";
 import BaseSelect from "./BaseSelect";
 
 interface Props {
-  id: string;
-  onChange: (newValue: CategoryDefinition | null) => void;
   data?: Record<string, Array<CategoryDefinition>>;
   defaultValue: CategoryDefinition | null;
+  id: string;
+  onChange: (newValue: CategoryDefinition | null) => void;
 }
 
 interface CategoryOption {
-  value: string;
-  label: string;
   data?: {
     routeNotesURL?: string;
     searchTerms?: Array<string>;
   };
+  label: string;
+  value: string;
 }
 
 interface FilterOptionOption<Option> {
+  readonly data: Option;
   readonly label: string;
   readonly value: string;
-  readonly data: Option;
 }
 
 const filterConfig = {
@@ -69,8 +69,8 @@ function optionToDef({
   };
 }
 interface RouteNotesLinkProps {
-  url: string;
   isSelected: boolean;
+  url: string;
 }
 function RouteNotesLink({
   url,

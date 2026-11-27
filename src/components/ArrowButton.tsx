@@ -5,10 +5,10 @@ import "./ArrowButton.css";
 import "./HKSMButton.css";
 
 interface Props {
+  disabled?: boolean;
   id: string;
   onClick: () => void;
   text: string;
-  disabled?: boolean;
 }
 
 function ArrowButton({ id, onClick, text, disabled }: Props): ReactNode {

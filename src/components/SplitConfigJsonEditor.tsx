@@ -32,9 +32,9 @@ function useHandleEditorWillMount(): [(monaco: Monaco) => void, Uri] {
 }
 
 interface Props {
-  value: string;
   onChange: OnChange;
   onMount: OnMount;
+  value: string;
 }
 
 export default function SplitConfigJsonEditor(props: Props): ReactNode {

@@ -3,8 +3,8 @@ import { cloneElement, useId } from "react";
 import { Tooltip as ReactTooltip } from "react-tooltip";
 
 interface TooltipProps {
-  content: string;
   children: ReactElement;
+  content: string;
 }
 export default function Tooltip({
   children,

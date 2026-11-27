@@ -3,11 +3,11 @@ import type { ReactNode } from "react";
 import "./HKSMButton.css";
 
 interface Props {
-  className?: string;
   children: React.ReactNode;
+  className?: string;
+  disabled?: boolean;
   id: string;
   onClick: () => void;
-  disabled?: boolean;
 }
 
 function HKSMButton({

@@ -26,8 +26,8 @@ import "react-tabs/style/react-tabs.css";
 const SplitConfigJsonEditor = lazy(() => import("./SplitConfigJsonEditor"));
 
 interface Props {
-  value: string;
   onChange: (value: string | undefined) => void;
+  value: string;
 }
 
 const hkSplitDefinitions = hollowKnightParseSplitsDefinitions();
@@ -114,8 +114,8 @@ function DeleteAutosplit({
 
 interface AddAutosplitProps {
   index: number;
-  parsedConfig: Partial<Config>;
   onChange: (newConfig: Partial<Config>) => void;
+  parsedConfig: Partial<Config>;
 }
 
 function AddAutosplit({
@@ -147,8 +147,8 @@ function AddAutosplit({
 }
 
 interface AddFirstAutosplitProps {
-  parsedConfig: Partial<Config>;
   onChange: (newConfig: Partial<Config>) => void;
+  parsedConfig: Partial<Config>;
 }
 
 function AddFirstAutosplit({
@@ -178,9 +178,9 @@ function AddFirstAutosplit({
 
 interface ToggleSubsplitProps {
   index: number;
-  subsplit?: boolean;
-  parsedConfig: Partial<Config>;
   onChange: (newConfig: Partial<Config>) => void;
+  parsedConfig: Partial<Config>;
+  subsplit?: boolean;
 }
 
 function ToggleSubsplit({
@@ -218,10 +218,10 @@ function ToggleSubsplit({
 }
 
 interface SingleAutosplitSelectProps {
-  splitId: string;
   index: number;
-  parsedConfig: Partial<Config>;
   onChange: (newConfig: Partial<Config>) => void;
+  parsedConfig: Partial<Config>;
+  splitId: string;
 }
 
 function SingleAutosplitSelect({
@@ -284,8 +284,8 @@ function SingleAutosplitSelect({
 }
 
 interface EndTriggeringAutosplitProps {
-  parsedConfig: Partial<Config>;
   onChange: (newConfig: Partial<Config>) => void;
+  parsedConfig: Partial<Config>;
 }
 function EndTriggeringAutosplit({
   onChange,

@@ -14,10 +14,10 @@ let selectOptionGroups: Array<SelectOptionGroup> | null = null;
 
 export interface SplitDefinition {
   description: string;
-  tooltip: string;
+  group: string;
   id: string;
   name: string;
-  group: string;
+  tooltip: string;
 }
 
 function getNameAndGroup({

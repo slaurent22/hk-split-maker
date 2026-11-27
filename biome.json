@@ -6,6 +6,8 @@
                 "noDuplicateClasses": "on",
                 "organizeImports": "on",
                 "useSortedAttributes": "on",
+                "useSortedEnumMembers": "on",
+                "useSortedInterfaceMembers": "on",
                 "useSortedKeys": "on",
                 "useSortedPackageJson": "on"
             }

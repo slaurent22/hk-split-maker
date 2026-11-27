@@ -11,9 +11,9 @@ import {
 } from "./silksong-splits";
 
 export interface SplitsFunctions {
-  parseSplitsDefinitions: typeof hkParseSplitsDefinitions;
-  getSelectOptionGroups: typeof hkGetSelectOptionGroups;
   getIconURLs: typeof hkGetIconURLs;
+  getSelectOptionGroups: typeof hkGetSelectOptionGroups;
+  parseSplitsDefinitions: typeof hkParseSplitsDefinitions;
 }
 
 export function splitsFunctions(game: Game): SplitsFunctions {

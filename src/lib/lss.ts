@@ -8,31 +8,31 @@ import { splitsFunctions } from "./splits";
 // import DefaultLayout from "./default-layout.xml";
 
 export interface Config {
-  startTriggeringAutosplit?: string;
-  splitIds: Array<string>;
-  names?: Record<string, string | Array<string>>;
-  icons?: Record<string, string | Array<string>>;
-  ordered?: boolean;
-  endTriggeringAutosplit?: boolean;
+  categoryName: string;
   endingSplit?: {
     name?: string;
     icon?: string;
   };
-  categoryName: string;
+  endTriggeringAutosplit?: boolean;
   gameName: string;
-  variables?: Record<string, string>;
+  icons?: Record<string, string | Array<string>>;
+  names?: Record<string, string | Array<string>>;
   offset?: string;
-  pauseOnMainMenu?: boolean;
+  ordered?: boolean;
   pauseOnFileSelect?: boolean;
+  pauseOnMainMenu?: boolean;
+  splitIds: Array<string>;
+  startTriggeringAutosplit?: string;
+  variables?: Record<string, string>;
 }
 
 interface ParsedHKAutoSplitterSettings {
-  startTriggeringAutosplit?: string;
   // autosplitIds vs splitIds: autosplitIds do not contain "-" for subsplits, splitIds can
   autosplitIds: Array<string>;
-  ordered?: boolean;
   endTriggeringAutosplit: boolean;
+  ordered?: boolean;
   pauseOnMainMenu: boolean | undefined;
+  startTriggeringAutosplit?: string;
 }
 
 interface ParsedSSAutosplitterSettings {
@@ -42,9 +42,9 @@ interface ParsedSSAutosplitterSettings {
 
 interface ParsedSplitId {
   autosplitId: string;
-  subsplit: boolean;
-  name: string;
   iconId: string;
+  name: string;
+  subsplit: boolean;
 }
 
 function findByAttr(
