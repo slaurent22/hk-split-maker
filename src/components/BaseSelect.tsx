@@ -89,6 +89,10 @@ function createCustomStyles<
       fontSize: "18px",
       fontWeight: "bold",
     }),
+    menu: (provided: CSSObjectWithLabel) => ({
+      ...provided,
+      zIndex: 5,
+    }),
     option: (provided: CSSObjectWithLabel): CSSObjectWithLabel => ({
       ...provided,
       fontFamily: "sans-serif",
