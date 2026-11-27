@@ -38,7 +38,7 @@ npm install
 Run locally. When it's ready, navigate to `http://localhost:8080/` in your web browser.
 
 ```sh
-nvm run serve
+npm run serve
 ```
 
 To run all checks before commiting
