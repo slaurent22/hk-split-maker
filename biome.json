@@ -182,6 +182,7 @@
                 "noPromiseExecutorReturn": "error",
                 "noReactObjectTypeAsDefaultProp": "error",
                 "noRedundantTypeConstituents": "error",
+                "noRestrictedDependencies": "error",
                 "noReturnArrayPush": "error",
                 "noReturnInFinally": "error",
                 "noReturnInTest": "error",
