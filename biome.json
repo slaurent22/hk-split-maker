@@ -284,6 +284,7 @@
                 "noNestedTernary": "error",
                 "noParameterAssign": "error",
                 "noSubstr": "error",
+                "noTopLevelLiterals": "error",
                 "noUnusedTemplateLiteral": "error",
                 "noUselessElse": "error",
                 "noYodaExpression": "error",
