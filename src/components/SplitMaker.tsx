@@ -19,6 +19,7 @@ import {
 } from "../lib/lss";
 import type { Game } from "../store/game-slice";
 import ArrowButton from "./ArrowButton";
+import EditorLoading from "./EditorLoading";
 import ShareButton from "./ShareButton";
 
 const CategorySelect = lazy(() => import("./CategorySelect"));
@@ -41,6 +42,7 @@ export default function SplitMaker(): ReactElement {
   const [shareButtonDisabled, setShareButtonDisabled] = useState(true);
 
   const [splitOutput, setSplitOutput] = useState("");
+  const [configInputIsLoading, setConfigInputIsLoading] = useState(false);
   const [splitOutputIsLoading, setSplitOutputIsLoading] = useState(false);
   const [splitConfig, setSplitConfig] = useState<Config | null>(null);
   const [downloadButtonsDisabled, setDownloadButtonsDisabled] = useState(false);
@@ -105,18 +107,25 @@ export default function SplitMaker(): ReactElement {
     }
 
     let cancelled = false;
-    setConfigInput("{loading...}");
+    setConfigInputIsLoading(true);
     setShareButtonDisabled(true);
 
     // biome-ignore lint/nursery/noFloatingPromises: valid inside useEffect
-    getCategoryConfigJSON(categoryName, game).then((json) => {
-      if (!cancelled) {
-        setConfigInput(json);
-      }
-    });
+    getCategoryConfigJSON(categoryName, game)
+      .then((json) => {
+        if (!cancelled) {
+          setConfigInput(json);
+        }
+      })
+      .finally(() => {
+        if (!cancelled) {
+          setConfigInputIsLoading(false);
+        }
+      });
 
     return (): void => {
       cancelled = true;
+      setConfigInputIsLoading(false);
     };
   }, [categoryName, game, getCategoryDefinition]);
 
@@ -183,12 +192,6 @@ export default function SplitMaker(): ReactElement {
 
     return true;
   };
-
-  useEffect(() => {
-    if (splitOutputIsLoading) {
-      setSplitOutput("loading...");
-    }
-  }, [splitOutputIsLoading]);
 
   const onSubmit = async (): Promise<void> => {
     let configObject: Config | undefined;
@@ -390,8 +393,18 @@ export default function SplitMaker(): ReactElement {
               </a>
             </div>
           )}
-          <Suspense fallback={<div>Loading split config editor...</div>}>
-            <SplitConfigEditor onChange={onUserEdit} value={configInput} />
+          <Suspense
+            fallback={
+              <div className="hk-split-maker-monaco-editor">
+                <EditorLoading label="Loading split config editor..." />
+              </div>
+            }
+          >
+            <SplitConfigEditor
+              isLoading={configInputIsLoading}
+              onChange={onUserEdit}
+              value={configInput}
+            />
           </Suspense>
         </div>
       </div>
@@ -420,9 +433,16 @@ export default function SplitMaker(): ReactElement {
               text="Download ILs"
             />
           </div>
-          <Suspense fallback={<div>Loading split output editor...</div>}>
+          <Suspense
+            fallback={
+              <div className="hk-split-maker-monaco-editor">
+                <EditorLoading label="Loading split output editor..." />
+              </div>
+            }
+          >
             <SplitOutputEditor
               defaultValue={splitOutput}
+              isLoading={splitOutputIsLoading}
               onChange={onSplitOutputChange}
             />
           </Suspense>
