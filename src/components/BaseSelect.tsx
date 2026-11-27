@@ -136,10 +136,10 @@ export default function BaseSelect<
 ): ReactElement {
   return (
     <Select
+      onMenuOpen={createOnMenuOpen(props.classNamePrefix ?? "BaseSelect")}
       styles={createCustomStyles<Option, IsMulti, Group>({
         controlStyleOverrides: props.controlStyleOverrides,
       })}
-      onMenuOpen={createOnMenuOpen(props.classNamePrefix ?? "BaseSelect")}
       theme={customTheme}
       {...props}
     />

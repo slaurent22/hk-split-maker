@@ -11,7 +11,7 @@ interface Props {
 
 function ShareButton({ id, onClick, disabled }: Props): ReactNode {
   return (
-    <HKSMButton onClick={onClick} id={id} disabled={disabled ?? false}>
+    <HKSMButton disabled={disabled ?? false} id={id} onClick={onClick}>
       <span className="button-text">Share</span>
       <TiArrowForwardOutline size="1.5em" />
     </HKSMButton>

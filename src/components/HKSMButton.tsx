@@ -20,9 +20,9 @@ function HKSMButton({
   return (
     <button
       className={classNames("hksm-button", className)}
-      onClick={onClick}
-      id={id}
       disabled={disabled ?? false}
+      id={id}
+      onClick={onClick}
       type="button"
     >
       {children}

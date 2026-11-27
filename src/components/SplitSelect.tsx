@@ -65,13 +65,13 @@ function SplitSelect({
   );
   return (
     <BaseSelect<SplitOption>
+      components={{ Option: SplitSelectOption }}
+      controlStyleOverrides={controlStyleOverrides}
       id="id"
+      onChange={baseSelectOnChange}
       options={options}
       placeholder="Add autosplit: Select or type to search..."
-      onChange={baseSelectOnChange}
-      components={{ Option: SplitSelectOption }}
       value={value}
-      controlStyleOverrides={controlStyleOverrides}
     />
   );
 }

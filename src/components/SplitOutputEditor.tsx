@@ -12,14 +12,14 @@ function SplitOutputEditor({ defaultValue, onChange }: Props): ReactNode {
     <div className="hk-split-maker-monaco-editor">
       <Editor
         defaultLanguage="xml"
-        theme="vs-dark"
-        value={defaultValue}
         onChange={onChange}
         options={{
           minimap: {
             enabled: false,
           },
         }}
+        theme="vs-dark"
+        value={defaultValue}
       />
     </div>
   );

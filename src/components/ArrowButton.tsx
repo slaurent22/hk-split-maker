@@ -15,13 +15,13 @@ function ArrowButton({ id, onClick, text, disabled }: Props): ReactNode {
   return (
     <HKSMButton
       className="arrow-button"
-      onClick={onClick}
-      id={id}
       disabled={disabled ?? false}
+      id={id}
+      onClick={onClick}
     >
-      <img src={arrow} alt="decorative arrow" className="arrow" />
+      <img alt="decorative arrow" className="arrow" src={arrow} />
       <span className="button-text">{text}</span>
-      <img src={arrow} alt="decorative arrow" className="arrow arrow-right" />
+      <img alt="decorative arrow" className="arrow arrow-right" src={arrow} />
     </HKSMButton>
   );
 }

@@ -12,9 +12,9 @@ export default function AlertBanner(): ReactElement {
       style={alertBannerVisible ? {} : { display: "none" }}
     >
       <button
-        type="button"
         className="close-ab"
         onClick={onClickCloseAlertBanner}
+        type="button"
       >
         &times;
       </button>
@@ -22,16 +22,16 @@ export default function AlertBanner(): ReactElement {
       the&nbsp;
       <a
         href="https://github.com/slaurent22/hk-split-maker"
-        target="_blank"
         rel="noopener noreferrer"
+        target="_blank"
       >
         GitHub Project Site!
       </a>{" "}
       Need help? Join the&nbsp;
       <a
         href="https://discord.gg/3JtHPsBjHD"
-        target="_blank"
         rel="noopener noreferrer"
+        target="_blank"
       >
         Hollow Knight Speedrun Community Discord server
       </a>{" "}

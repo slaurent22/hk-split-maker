@@ -104,9 +104,9 @@ function DeleteAutosplit({
   return (
     <Tooltip content="Delete this autosplit">
       <TiDelete
+        onClick={deleteOnChange}
         size="1.5em"
         style={{ cursor: "pointer" }}
-        onClick={deleteOnChange}
       />
     </Tooltip>
   );
@@ -140,7 +140,7 @@ function AddAutosplit({
   }, [parsedConfig, index, onChange, defaultSplit]);
   return (
     <div style={{ alignItems: "center", display: "flex" }}>
-      <TiPlus size="1em" style={{ cursor: "pointer" }} onClick={addOnChange} />
+      <TiPlus onClick={addOnChange} size="1em" style={{ cursor: "pointer" }} />
       <span>Add autosplit</span>
     </div>
   );
@@ -167,9 +167,9 @@ function AddFirstAutosplit({
   return (
     <div style={{ alignItems: "center", display: "flex" }}>
       <TiPlus
+        onClick={addOnChange}
         size="1.5em"
         style={{ cursor: "pointer" }}
-        onClick={addOnChange}
       />
       <span style={{ fontSize: "1.5em" }}>Add autosplit</span>
     </div>
@@ -209,9 +209,9 @@ function ToggleSubsplit({
   return (
     <Tooltip content={tooltip}>
       <Component
+        onClick={toggleOnClick}
         size="1.5em"
         style={{ cursor: "pointer" }}
-        onClick={toggleOnClick}
       />
     </Tooltip>
   );
@@ -258,9 +258,9 @@ function SingleAutosplitSelect({
         <MoveAnchor />
         {value?.subsplit ? <SubsplitIndicator /> : null}
         <SplitSelect
-          value={value}
           controlStyleOverrides={{ margin: "8px 8px 8px 8px" }}
           onChange={splitSelectOnChange}
+          value={value}
         />
         <DeleteAutosplit
           index={index}
@@ -269,15 +269,15 @@ function SingleAutosplitSelect({
         />
         <ToggleSubsplit
           index={index}
-          subsplit={value?.subsplit}
           onChange={onChange}
           parsedConfig={parsedConfig}
+          subsplit={value?.subsplit}
         />
       </div>
       <AddAutosplit
         index={index}
-        parsedConfig={parsedConfig}
         onChange={onChange}
+        parsedConfig={parsedConfig}
       />
     </div>
   );
@@ -304,10 +304,10 @@ function EndTriggeringAutosplit({
     <>
       <div style={{ fontSize: "1.5em", margin: "5px" }}>
         <input
-          id="end-triggering-autosplit"
-          type="checkbox"
-          onChange={inputOnChange}
           checked={parsedConfig.endTriggeringAutosplit ?? false}
+          id="end-triggering-autosplit"
+          onChange={inputOnChange}
+          type="checkbox"
         />
         <label htmlFor="end-triggering-autosplit">
           End-triggering autosplit
@@ -398,9 +398,9 @@ export default function SplitConfigEditor(props: Props): ReactElement {
         <div className="hk-split-maker-monaco-editor">
           <Suspense fallback={<div>Loading editor...</div>}>
             <SplitConfigJsonEditor
-              value={props.value}
               onChange={onChange}
               onMount={handleEditorDidMount}
+              value={props.value}
             />
           </Suspense>
         </div>
@@ -408,19 +408,19 @@ export default function SplitConfigEditor(props: Props): ReactElement {
       <TabPanel>
         {hasSplits(parsedConfig) ? (
           <ReactSortable
-            ghostClass="autosplits-sortable-ghost-class"
             dragClass="autosplits-sortable-drag-class"
+            ghostClass="autosplits-sortable-ghost-class"
             list={getItemInterfaceArr(parsedConfig.splitIds)}
             setList={sortableSetList}
           >
             {parsedConfig.splitIds.map((splitId, index) => (
               <SingleAutosplitSelect
+                index={index}
                 // biome-ignore lint/suspicious/noArrayIndexKey: designing a robust unique-key system for this list is too complicated for now
                 key={index}
-                splitId={splitId}
-                index={index}
-                parsedConfig={parsedConfig}
                 onChange={onChangeParsedConfig}
+                parsedConfig={parsedConfig}
+                splitId={splitId}
               />
             ))}
           </ReactSortable>

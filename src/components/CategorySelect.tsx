@@ -80,12 +80,12 @@ function RouteNotesLink({
   return (
     <a
       href={url}
-      target="_blank"
       rel="noopener noreferrer"
       style={{
         color,
         float: "right",
       }}
+      target="_blank"
     >
       Route Notes
     </a>
@@ -93,7 +93,7 @@ function RouteNotesLink({
 }
 
 function SchyPicture(): ReactElement {
-  return <img src={Schy} width="7%" height="7%" alt="Schy logo" />;
+  return <img alt="Schy logo" height="7%" src={Schy} width="7%" />;
 }
 
 function CategorySelectOption<
@@ -109,7 +109,7 @@ function CategorySelectOption<
       {children}
       {rest.data.value === "pop" && <SchyPicture />}
       {data.data?.routeNotesURL ? (
-        <RouteNotesLink url={data.data.routeNotesURL} isSelected={isSelected} />
+        <RouteNotesLink isSelected={isSelected} url={data.data.routeNotesURL} />
       ) : null}
     </components.Option>
   );
@@ -147,9 +147,9 @@ function CategorySelectSelectContainer<
       {selectedOption?.data?.routeNotesURL ? (
         <a
           href={selectedOption.data.routeNotesURL}
-          target="_blank"
           rel="noopener noreferrer"
           style={{ display: "block", marginBottom: "0.5rem" }}
+          target="_blank"
         >
           Route Notes for {selectedOption.label}
         </a>
@@ -182,17 +182,17 @@ function CategorySelect({
 
   return (
     <BaseSelect<CategoryOption>
-      id={id}
-      options={optGroups}
-      onChange={baseSelectOnChange}
-      placeholder="Pre-made Category: Select or type to search..."
-      defaultValue={defaultValue ? defToOption(defaultValue) : undefined}
       components={{
         Option: CategorySelectOption,
         SelectContainer: CategorySelectSelectContainer,
         SingleValue: CategorySelectSingleValue,
       }}
+      defaultValue={defaultValue ? defToOption(defaultValue) : undefined}
       filterOption={createFilter(filterConfig)}
+      id={id}
+      onChange={baseSelectOnChange}
+      options={optGroups}
+      placeholder="Pre-made Category: Select or type to search..."
     />
   );
 }

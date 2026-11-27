@@ -335,89 +335,89 @@ export default function SplitMaker(): ReactElement {
 
   return (
     <div id="input-output">
-      <div id="editor-section" className="side">
+      <div className="side" id="editor-section">
         <h2>Input Configuration</h2>
         <div className="output-container">
           <div className="row">
-            <input type="file" id="import-input" onChange={importOnChange} />
+            <input id="import-input" onChange={importOnChange} type="file" />
             <ArrowButton
-              text="Import Splits"
               id="import-button"
               onClick={onImportButton}
+              text="Import Splits"
             />
             <ArrowButton
-              text="Generate"
               id="submit-button"
               // needs to be a promise for Generate to work
               onClick={onSubmit}
+              text="Generate"
             />
             <ShareButton
+              disabled={shareButtonDisabled}
               id="share-button"
               onClick={onShare}
-              disabled={shareButtonDisabled}
             />
           </div>
           <Suspense fallback={<div>Loading category select...</div>}>
             <CategorySelect
-              id="categories"
-              onChange={onCategorySelect}
               data={categories}
               defaultValue={getCategoryDefinition(builtin ?? "") ?? null}
+              id="categories"
+              onChange={onCategorySelect}
             />
           </Suspense>
           <div>
             <input
-              id="generate-icons-toggle"
-              type="checkbox"
               checked={includeIcons}
+              id="generate-icons-toggle"
               onChange={toggleIconsOnChange}
+              type="checkbox"
             />
             <label htmlFor="generate-icons-toggle">Include icons</label>
           </div>
           {game === "silksong" && (
             <div className="row" style={{ alignItems: "center" }}>
               <ArrowButton
-                text="Toggle Autosave Start"
                 id="toggle-act1-start"
                 onClick={onToggleAct1Start}
+                text="Toggle Autosave Start"
               />
               <a
                 href="https://www.speedrun.com/silksong/guides/5a1lq"
-                target="_blank"
                 rel="noreferrer"
+                target="_blank"
               >
                 <IoMdInformationCircleOutline size="1.5em" />
               </a>
             </div>
           )}
           <Suspense fallback={<div>Loading split config editor...</div>}>
-            <SplitConfigEditor value={configInput} onChange={onUserEdit} />
+            <SplitConfigEditor onChange={onUserEdit} value={configInput} />
           </Suspense>
         </div>
       </div>
-      <div id="output-section" className="side">
+      <div className="side" id="output-section">
         <h2>Output Splits File</h2>
         <div className="output-container">
           <div className="row">
             <ArrowButton
-              id="download-button"
-              text="Download"
-              onClick={onDownload}
               disabled={
                 splitOutput.length === 0 ||
                 splitOutputIsLoading ||
                 downloadButtonsDisabled
               }
+              id="download-button"
+              onClick={onDownload}
+              text="Download"
             />
             <ArrowButton
-              id="download-button"
-              text="Download ILs"
-              onClick={onDownloadILs}
               disabled={
                 splitOutput.length === 0 ||
                 splitOutputIsLoading ||
                 downloadButtonsDisabled
               }
+              id="download-button"
+              onClick={onDownloadILs}
+              text="Download ILs"
             />
           </div>
           <Suspense fallback={<div>Loading split output editor...</div>}>

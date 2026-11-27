@@ -41,9 +41,9 @@ export default function App(): ReactElement {
       <AlertBanner />
       <Header />
       <Tabs
+        focusTabOnClick={false}
         onSelect={onTabSelect}
         selectedIndex={selectedIndex}
-        focusTabOnClick={false}
       >
         <TabList>
           <Tab>Hollow Knight</Tab>

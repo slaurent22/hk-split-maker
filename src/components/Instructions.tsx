@@ -50,7 +50,7 @@ function Instructions(): ReactNode {
       <ul>
         <li>
           Find the splits you want to use from the{" "}
-          <a href={SPLITS_LINK[game].href} target="_blank" rel="noreferrer">
+          <a href={SPLITS_LINK[game].href} rel="noreferrer" target="_blank">
             {SPLITS_LINK[game].text}
           </a>{" "}
           file. For example, if you want to split on "
@@ -100,7 +100,7 @@ function Instructions(): ReactNode {
       </ul>
       <h2>Video Tutorial</h2>
       <div className="centered">
-        <a href={VIDEO_URL[game].href} target="_blank" rel="noreferrer">
+        <a href={VIDEO_URL[game].href} rel="noreferrer" target="_blank">
           {VIDEO_URL[game].text}
         </a>
       </div>

@@ -48,18 +48,18 @@ export default function SplitConfigJsonEditor(props: Props): ReactNode {
 
   return (
     <Editor
+      beforeMount={handleEditorWillMount}
       defaultLanguage="json"
-      value={props.value}
       onChange={props.onChange}
-      theme="vs-dark"
+      onMount={props.onMount}
       options={{
         minimap: {
           enabled: false,
         },
       }}
       path={modelUri.toString()}
-      beforeMount={handleEditorWillMount}
-      onMount={props.onMount}
+      theme="vs-dark"
+      value={props.value}
     />
   );
 }
