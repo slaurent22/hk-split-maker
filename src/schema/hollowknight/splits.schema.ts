@@ -10,17 +10,17 @@ const SPLITS: Array<SplitDefinition> = [...parseSplitsDefinitions().values()];
 
 const SPLITS_SCHEMA = SPLITS.map(
   ({ description: title, tooltip: description, id }) => ({
-    title,
-    description,
     const: id,
+    description,
+    title,
   }),
 );
 
 const SUBSPLITS_SCHEMA = SPLITS.map(
   ({ description: title, tooltip: description, id }) => ({
-    title,
-    description: `(subsplit) ${description}`,
     const: `-${id}`,
+    description: `(subsplit) ${description}`,
+    title,
   }),
 );
 
@@ -48,15 +48,15 @@ const overrideSchemaPropItem = (
 ): SchemaOverridePropItem => ({
   oneOf: [
     {
-      type: "string",
       description,
+      type: "string",
     },
     {
-      type: "array",
       description,
       items: {
         type: "string",
       },
+      type: "array",
     },
   ],
 });

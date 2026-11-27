@@ -1,23 +1,9 @@
 {
-    "$schema": "https://json-schema.org/draft/2020-12/schema",
     "$id": "https://hksplitmaker.com/silksong/splits.schema.json",
-    "title": "SS Splits",
-    "description": "A Silksong LiveSplit Configuration",
-    "type": "object",
+    "$schema": "https://json-schema.org/draft/2020-12/schema",
     "additionalProperties": false,
+    "description": "A Silksong LiveSplit Configuration",
     "properties": {
-        "names": {
-            "additionalProperties": false,
-            "description": "Name overrides for the splits. Map each autosplit id to a string or an array of strings.",
-            "type": "object",
-            "properties": {}
-        },
-        "icons": {
-            "additionalProperties": false,
-            "description": "Icon overrides for the splits. Map each autosplit id to a autosplit id or an array of autosplit ids.",
-            "type": "object",
-            "properties": {}
-        },
         "categoryName": {
             "description": "The category name on the associated speedrun.com board.",
             "type": "string"
@@ -29,24 +15,38 @@
                 "Hollow Knight: Silksong Category Extensions"
             ]
         },
-        "variables": {
-            "description": "Additional Info",
+        "icons": {
+            "additionalProperties": false,
+            "description": "Icon overrides for the splits. Map each autosplit id to a autosplit id or an array of autosplit ids.",
+            "properties": {},
             "type": "object"
+        },
+        "names": {
+            "additionalProperties": false,
+            "description": "Name overrides for the splits. Map each autosplit id to a string or an array of strings.",
+            "properties": {},
+            "type": "object"
+        },
+        "offset": {
+            "description": "When time should start (formatted like 00:00:00 or 00:00:00.0000000)",
+            "type": "string"
         },
         "pauseOnFileSelect": {
             "description": "Pause GameTime on Main Menu (Required false for Glitched)",
             "type": "boolean"
         },
         "splitIds": {
-            "type": "array",
             "items": {
                 "oneOf": []
-            }
+            },
+            "type": "array"
         },
-        "offset": {
-            "description": "When time should start (formatted like 00:00:00 or 00:00:00.0000000)",
-            "type": "string"
+        "variables": {
+            "description": "Additional Info",
+            "type": "object"
         }
     },
-    "required": ["categoryName", "gameName", "splitIds"]
+    "required": ["categoryName", "gameName", "splitIds"],
+    "title": "SS Splits",
+    "type": "object"
 }

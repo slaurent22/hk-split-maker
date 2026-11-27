@@ -12,8 +12,8 @@ export default function Tooltip({
 }: TooltipProps): ReactNode {
   const id = useId();
   const childWithProps = cloneElement(children, {
-    "data-tooltip-id": id,
     "data-tooltip-content": content,
+    "data-tooltip-id": id,
   });
 
   return (

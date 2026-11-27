@@ -51,9 +51,9 @@ function defToOption({
   data,
 }: CategoryDefinition): CategoryOption {
   return {
-    value: fileName,
-    label: displayName,
     data,
+    label: displayName,
+    value: fileName,
   };
 }
 
@@ -63,9 +63,9 @@ function optionToDef({
   data,
 }: CategoryOption): CategoryDefinition {
   return {
-    fileName: value,
-    displayName: label,
     data,
+    displayName: label,
+    fileName: value,
   };
 }
 interface RouteNotesLinkProps {
@@ -83,8 +83,8 @@ function RouteNotesLink({
       target="_blank"
       rel="noopener noreferrer"
       style={{
-        float: "right",
         color,
+        float: "right",
       }}
     >
       Route Notes
@@ -149,7 +149,7 @@ function CategorySelectSelectContainer<
           href={selectedOption.data.routeNotesURL}
           target="_blank"
           rel="noopener noreferrer"
-          style={{ marginBottom: "0.5rem", display: "block" }}
+          style={{ display: "block", marginBottom: "0.5rem" }}
         >
           Route Notes for {selectedOption.label}
         </a>
@@ -189,8 +189,8 @@ function CategorySelect({
       defaultValue={defaultValue ? defToOption(defaultValue) : undefined}
       components={{
         Option: CategorySelectOption,
-        SingleValue: CategorySelectSingleValue,
         SelectContainer: CategorySelectSelectContainer,
+        SingleValue: CategorySelectSingleValue,
       }}
       filterOption={createFilter(filterConfig)}
     />

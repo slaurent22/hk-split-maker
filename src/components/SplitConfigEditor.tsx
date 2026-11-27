@@ -55,10 +55,10 @@ function useSplitOption(splitId: string): SplitOptionWithSubsplit | undefined {
     return undefined;
   }
   return {
-    value: split.id,
     label: split.description,
-    tooltip: split.tooltip,
     subsplit,
+    tooltip: split.tooltip,
+    value: split.id,
   };
 }
 
@@ -251,8 +251,8 @@ function SingleAutosplitSelect({
     <div>
       <div
         style={{
-          display: "flex",
           alignItems: "center",
+          display: "flex",
         }}
       >
         <MoveAnchor />

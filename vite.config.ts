@@ -11,6 +11,10 @@ export default defineConfig(() => {
   process.env.VITE_GIT_VERSION = git("describe --always");
 
   return {
+    build: {
+      outDir: "dist",
+      sourcemap: true,
+    },
     plugins: [react()],
     resolve: {
       alias: {
@@ -19,10 +23,6 @@ export default defineConfig(() => {
     },
     server: {
       port: 8080,
-    },
-    build: {
-      outDir: "dist",
-      sourcemap: true,
     },
   };
 });

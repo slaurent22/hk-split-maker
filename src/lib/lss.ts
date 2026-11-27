@@ -153,9 +153,9 @@ function isAutosplitIdSubsplit(autosplitId: string): {
     if (!subSplitMatch.groups) {
       throw new Error(`Failed to parse name out of "${autosplitId}"`);
     }
-    return { subsplit: true, autosplitId: subSplitMatch.groups.name };
+    return { autosplitId: subSplitMatch.groups.name, subsplit: true };
   }
-  return { subsplit: false, autosplitId };
+  return { autosplitId, subsplit: false };
 }
 
 const SILKSONG_SCRIPT_NAME_NODE = {
@@ -292,9 +292,9 @@ export async function createSplitsXml(
     splitIdCount.set(autosplitId, 1 + currentSplitIdCount);
     return {
       autosplitId,
-      subsplit,
-      name,
       iconId,
+      name,
+      subsplit,
     };
   });
 
@@ -749,11 +749,11 @@ function parseHKAutoSplitterSettings(
     }
     const endTriggeringAutosplit = autosplitEndRuns === "True";
     return {
-      ordered: orderedStr === "True",
-      startTriggeringAutosplit: autoStart.length > 0 ? autoStart : undefined,
       autosplitIds,
       endTriggeringAutosplit,
+      ordered: orderedStr === "True",
       pauseOnMainMenu,
+      startTriggeringAutosplit: autoStart.length > 0 ? autoStart : undefined,
     };
   }
   if (xmlDocCustomSettings) {
@@ -786,12 +786,12 @@ function parseHKAutoSplitterSettings(
       }
     }
     return {
-      ordered: true,
-      startTriggeringAutosplit:
-        autostartId === "LegacyStart" ? undefined : autostartId,
       autosplitIds: autostartsplitIds.slice(1),
       endTriggeringAutosplit: true,
+      ordered: true,
       pauseOnMainMenu,
+      startTriggeringAutosplit:
+        autostartId === "LegacyStart" ? undefined : autostartId,
     };
   }
   throw new Error(
@@ -889,9 +889,9 @@ function importHKSplitsXml(str: string): Config {
   const parsedSplitIds: Array<ParsedSplitId> = autosplitIds.map(
     (autosplitId) => ({
       autosplitId,
-      subsplit: false,
-      name: "",
       iconId: "",
+      name: "",
+      subsplit: false,
     }),
   );
   // Segments Segment Name -> names, endingSplit name
@@ -959,14 +959,14 @@ function importHKSplitsXml(str: string): Config {
   }
   let config: Config = {
     categoryName,
-    startTriggeringAutosplit,
-    splitIds,
-    names: hasNameOverrides ? potentialNameOverrides : undefined,
-    endTriggeringAutosplit,
     endingSplit: endName.length > 0 ? { name: endName } : undefined,
+    endTriggeringAutosplit,
     gameName,
-    variables: hasVariables ? potentialVariables : undefined,
+    names: hasNameOverrides ? potentialNameOverrides : undefined,
     pauseOnMainMenu,
+    splitIds,
+    startTriggeringAutosplit,
+    variables: hasVariables ? potentialVariables : undefined,
   };
   if (offset && offset !== DEFAULT_OFFSET) {
     config = { offset, ...config };
@@ -1024,9 +1024,9 @@ function importSSSplitsXml(str: string): Config {
   const parsedSplitIds: Array<ParsedSplitId> = autosplitIds.map(
     (autosplitId) => ({
       autosplitId,
-      subsplit: false,
-      name: "",
       iconId: "",
+      name: "",
+      subsplit: false,
     }),
   );
   // Segments Segment Name -> names, endingSplit name
@@ -1095,12 +1095,12 @@ function importSSSplitsXml(str: string): Config {
   }
   let config: Config = {
     categoryName,
-    splitIds,
-    names: hasNameOverrides ? potentialNameOverrides : undefined,
     endingSplit: endName.length > 0 ? { name: endName } : undefined,
     gameName,
-    variables: hasVariables ? potentialVariables : undefined,
+    names: hasNameOverrides ? potentialNameOverrides : undefined,
     pauseOnFileSelect,
+    splitIds,
+    variables: hasVariables ? potentialVariables : undefined,
   };
   if (offset && offset !== DEFAULT_OFFSET) {
     config = { offset, ...config };
@@ -1136,14 +1136,14 @@ export async function createILPack(
 
   const configTemplate: Config = {
     categoryName: `${config.categoryName} ILs`,
-    variables: config.variables,
+    endTriggeringAutosplit: true,
     gameName: config.gameName,
     // a copy, so the EndingSplit name added below stays out of the caller's config
     names: config.names && { ...config.names },
-    endTriggeringAutosplit: true,
-    splitIds: [],
     pauseOnFileSelect: config.pauseOnFileSelect,
     pauseOnMainMenu: config.pauseOnMainMenu,
+    splitIds: [],
+    variables: config.variables,
   };
   if (game === "hollowknight") {
     // the first IL starts the same way as the full run

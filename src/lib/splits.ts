@@ -20,15 +20,15 @@ export function splitsFunctions(game: Game): SplitsFunctions {
   switch (game) {
     case "hollowknight":
       return {
-        parseSplitsDefinitions: hkParseSplitsDefinitions,
-        getSelectOptionGroups: hkGetSelectOptionGroups,
         getIconURLs: hkGetIconURLs,
+        getSelectOptionGroups: hkGetSelectOptionGroups,
+        parseSplitsDefinitions: hkParseSplitsDefinitions,
       };
     case "silksong":
       return {
-        parseSplitsDefinitions: ssParseSplitsDefinitions,
-        getSelectOptionGroups: ssGetSelectOptionGroups,
         getIconURLs: ssGetIconURLs,
+        getSelectOptionGroups: ssGetSelectOptionGroups,
+        parseSplitsDefinitions: ssParseSplitsDefinitions,
       };
     default:
       throw new Error(`invalid game ${game}`);

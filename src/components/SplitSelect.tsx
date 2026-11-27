@@ -37,9 +37,9 @@ function SplitSelectOption<
         {children}
         <span
           style={{
+            float: "right",
             fontFamily: "monospace",
             fontSize: "14px",
-            float: "right",
           }}
         >
           {rest.data.value}

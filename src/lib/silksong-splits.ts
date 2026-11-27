@@ -104,10 +104,10 @@ export function parseSplitsDefinitions(): Map<string, SplitDefinition> {
     const [name, group] = getNameAndGroup({ description, id });
     splitDefinitions.set(id, {
       description,
-      id,
-      tooltip: tooltip.replace("\\n", ".\n"),
-      name,
       group,
+      id,
+      name,
+      tooltip: tooltip.replace("\\n", ".\n"),
     });
   }
 
@@ -141,9 +141,9 @@ export function getSelectOptionGroups(): Array<SelectOptionGroup> {
     Object.freeze({
       label: groupName,
       options: splitDefs.map((split) => ({
-        value: split.id,
         label: split.description,
         tooltip: split.tooltip,
+        value: split.id,
       })),
     }),
   );

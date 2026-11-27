@@ -60,12 +60,20 @@ function createCustomStyles<
   controlStyleOverrides?: CSSObjectWithLabel;
 }): StylesConfig<Option, IsMulti, Group> {
   return {
-    groupHeading: (provided: CSSObjectWithLabel): CSSObjectWithLabel => ({
+    container: (provided: CSSObjectWithLabel): CSSObjectWithLabel => ({
       ...provided,
-      fontSize: "18px",
+      flex: "1 1 0%",
+    }),
+    control: (provided: CSSObjectWithLabel): CSSObjectWithLabel => ({
+      ...provided,
+      backgroundColor: "#2f3136",
+      border: "1px solid white",
+      borderRadius: "3px",
+      display: "flex",
       fontFamily: "serif",
-      fontWeight: "bold",
-      color: "white",
+      fontSize: "18px",
+      margin: "8px 8px 8px 0",
+      ...controlStyleOverrides,
     }),
     group: (
       provided: CSSObjectWithLabel,
@@ -74,24 +82,16 @@ function createCustomStyles<
       ...provided,
       backgroundColor: getGroupColor(state.data.label ?? ""),
     }),
+    groupHeading: (provided: CSSObjectWithLabel): CSSObjectWithLabel => ({
+      ...provided,
+      color: "white",
+      fontFamily: "serif",
+      fontSize: "18px",
+      fontWeight: "bold",
+    }),
     option: (provided: CSSObjectWithLabel): CSSObjectWithLabel => ({
       ...provided,
       fontFamily: "sans-serif",
-    }),
-    control: (provided: CSSObjectWithLabel): CSSObjectWithLabel => ({
-      ...provided,
-      display: "flex",
-      border: "1px solid white",
-      borderRadius: "3px",
-      fontSize: "18px",
-      fontFamily: "serif",
-      margin: "8px 8px 8px 0",
-      backgroundColor: "#2f3136",
-      ...controlStyleOverrides,
-    }),
-    container: (provided: CSSObjectWithLabel): CSSObjectWithLabel => ({
-      ...provided,
-      flex: "1 1 0%",
     }),
   };
 }
@@ -99,15 +99,8 @@ function createCustomStyles<
 function customTheme(theme: Theme): Theme {
   return {
     ...theme,
-    spacing: {
-      ...theme.spacing,
-    },
     colors: {
       ...theme.colors,
-      primary: theme.colors.primary25,
-      primary75: theme.colors.primary50,
-      primary50: theme.colors.primary75,
-      primary25: theme.colors.primary,
       danger: theme.colors.danger,
       dangerLight: theme.colors.dangerLight,
       neutral0: theme.colors.neutral80,
@@ -121,6 +114,13 @@ function customTheme(theme: Theme): Theme {
       neutral70: theme.colors.neutral5,
       neutral80: theme.colors.neutral0,
       neutral90: theme.colors.neutral0,
+      primary: theme.colors.primary25,
+      primary25: theme.colors.primary,
+      primary50: theme.colors.primary75,
+      primary75: theme.colors.primary50,
+    },
+    spacing: {
+      ...theme.spacing,
     },
   };
 }

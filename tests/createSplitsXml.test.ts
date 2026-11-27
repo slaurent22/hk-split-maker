@@ -4,15 +4,15 @@ import { createSplitsXml } from "../src/lib/lss";
 
 const silksongConfig: Config = {
   categoryName: "Category Name",
-  splitIds: ["StartNewGame", "BenchAny", "GainedCurse", "PlayerDeath"],
   gameName: "Hollow Knight: Silksong",
+  splitIds: ["StartNewGame", "BenchAny", "GainedCurse", "PlayerDeath"],
 };
 
 const hkConfig: Config = {
   categoryName: "Category Name",
-  splitIds: ["BenchAny", "BeastsDenTrapBench", "PlayerDeath", "PathOfPain"],
   endTriggeringAutosplit: false,
   gameName: "Hollow Knight",
+  splitIds: ["BenchAny", "BeastsDenTrapBench", "PlayerDeath", "PathOfPain"],
 };
 
 describe("createSplitsXml", () => {

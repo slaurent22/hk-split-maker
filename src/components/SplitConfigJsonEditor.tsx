@@ -17,14 +17,14 @@ function useHandleEditorWillMount(): [(monaco: Monaco) => void, Uri] {
   return [
     function handleEditorWillMount(monaco: Monaco): void {
       monaco.languages.json.jsonDefaults.setDiagnosticsOptions({
-        validate: true,
         schemas: [
           {
-            uri: schemaId,
             fileMatch: [modelUri.toString()],
             schema: splitConfigSchema,
+            uri: schemaId,
           },
         ],
+        validate: true,
       });
     },
     modelUri,

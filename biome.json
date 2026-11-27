@@ -1,19 +1,14 @@
 {
     "$schema": "https://biomejs.dev/schemas/2.6.9/schema.json",
-    "vcs": { "enabled": true, "clientKind": "git", "useIgnoreFile": true },
-    "files": { "includes": ["**", "!!**/dist"] },
-    "formatter": {
+    "assist": {
+        "actions": {
+            "source": {
+                "organizeImports": "on",
+                "useSortedKeys": "on",
+                "useSortedPackageJson": "on"
+            }
+        },
         "enabled": true,
-        "formatWithErrors": false,
-        "indentStyle": "space",
-        "indentWidth": 2,
-        "lineEnding": "lf",
-        "lineWidth": 80,
-        "attributePosition": "auto",
-        "bracketSameLine": false,
-        "bracketSpacing": true,
-        "expand": "auto",
-        "useEditorconfig": true,
         "includes": [
             "**",
             "!**/node_modules/**",
@@ -22,20 +17,119 @@
             "!src/external-lib/**"
         ]
     },
+    "files": { "includes": ["**", "!!**/dist"] },
+    "formatter": {
+        "attributePosition": "auto",
+        "bracketSameLine": false,
+        "bracketSpacing": true,
+        "enabled": true,
+        "expand": "auto",
+        "formatWithErrors": false,
+        "includes": [
+            "**",
+            "!**/node_modules/**",
+            "!**/dist/**",
+            "!**/.vscode/**",
+            "!src/external-lib/**"
+        ],
+        "indentStyle": "space",
+        "indentWidth": 2,
+        "lineEnding": "lf",
+        "lineWidth": 80,
+        "useEditorconfig": true
+    },
+    "html": {
+        "experimentalFullSupportEnabled": true,
+        "formatter": {
+            "enabled": true,
+            "indentScriptAndStyle": false,
+            "selfCloseVoidElements": "always"
+        }
+    },
+    "javascript": {
+        "formatter": {
+            "arrowParentheses": "always",
+            "attributePosition": "auto",
+            "bracketSameLine": false,
+            "bracketSpacing": true,
+            "jsxQuoteStyle": "double",
+            "quoteProperties": "asNeeded",
+            "quoteStyle": "double",
+            "semicolons": "always",
+            "trailingCommas": "all"
+        },
+        "jsxRuntime": "transparent"
+    },
     "json": {
         "formatter": {
             "indentWidth": 4
         }
     },
     "linter": {
-        "enabled": true,
         "domains": {
             "react": "recommended"
         },
+        "enabled": true,
+        "includes": [
+            "**",
+            "!**/node_modules/**",
+            "!**/dist/**",
+            "!**/.vscode/**",
+            "!src/external-lib/**"
+        ],
         "rules": {
-            "preset": "recommended",
             "a11y": {
                 "noNoninteractiveElementInteractions": "error"
+            },
+            "complexity": {
+                "noAdjacentSpacesInRegex": "error",
+                "noBannedTypes": "error",
+                "noDivRegex": "error",
+                "noExcessiveCognitiveComplexity": {
+                    "level": "error",
+                    "options": {
+                        "maxAllowedComplexity": 50
+                    }
+                },
+                "noExcessiveNestedCallbacks": "error",
+                "noExcessiveNestedTestSuites": "error",
+                "noExtraBooleanCast": "error",
+                "noForEach": "error",
+                "noImplicitCoercions": "error",
+                "noRedundantDefaultExport": "error",
+                "noUnnecessaryTemplateExpression": "error",
+                "noUselessCatch": "error",
+                "noUselessCatchBinding": "error",
+                "noUselessEscapeInRegex": "error",
+                "noUselessLoneBlockStatements": "error",
+                "noUselessReturn": "error",
+                "noUselessStringConcat": "error",
+                "noUselessThisAlias": "error",
+                "noUselessTypeConstraint": "error",
+                "noUselessUndefined": "error",
+                "noUselessUndefinedInitialization": "error",
+                "noVoid": "error",
+                "useArrayFind": "error",
+                "useArraySome": "error",
+                "useMaxParams": "error",
+                "useRegexpTest": "error",
+                "useSimplifiedLogicExpression": "error",
+                "useWhile": "error"
+            },
+            "correctness": {
+                "noGlobalDirnameFilename": "error",
+                "noNestedComponentDefinitions": "error",
+                "noReactPropAssignments": "error",
+                "noUndeclaredVariables": "error",
+                "noUnusedImports": "error",
+                "noUnusedInstantiation": "error",
+                "noUnusedLabels": "error",
+                "noUnusedVariables": {
+                    "level": "error",
+                    "options": { "ignoreRestSiblings": false }
+                },
+                "useParseIntRadix": "error",
+                "useSingleJsDocAsterisk": "error"
             },
             "nursery": {
                 "noAccidentalBitwiseOperators": "error",
@@ -154,56 +248,6 @@
                 "useValidTestTitle": "error",
                 "useWhileLoopCondition": "error"
             },
-            "complexity": {
-                "noAdjacentSpacesInRegex": "error",
-                "noBannedTypes": "error",
-                "noDivRegex": "error",
-                "noExcessiveCognitiveComplexity": {
-                    "level": "error",
-                    "options": {
-                        "maxAllowedComplexity": 50
-                    }
-                },
-                "noExcessiveNestedCallbacks": "error",
-                "noExcessiveNestedTestSuites": "error",
-                "noExtraBooleanCast": "error",
-                "noForEach": "error",
-                "noImplicitCoercions": "error",
-                "noRedundantDefaultExport": "error",
-                "noUnnecessaryTemplateExpression": "error",
-                "noUselessCatch": "error",
-                "noUselessCatchBinding": "error",
-                "noUselessEscapeInRegex": "error",
-                "noUselessLoneBlockStatements": "error",
-                "noUselessReturn": "error",
-                "noUselessStringConcat": "error",
-                "noUselessThisAlias": "error",
-                "noUselessTypeConstraint": "error",
-                "noUselessUndefined": "error",
-                "noUselessUndefinedInitialization": "error",
-                "noVoid": "error",
-                "useArrayFind": "error",
-                "useArraySome": "error",
-                "useMaxParams": "error",
-                "useRegexpTest": "error",
-                "useSimplifiedLogicExpression": "error",
-                "useWhile": "error"
-            },
-            "correctness": {
-                "noGlobalDirnameFilename": "error",
-                "noNestedComponentDefinitions": "error",
-                "noReactPropAssignments": "error",
-                "noUndeclaredVariables": "error",
-                "noUnusedInstantiation": "error",
-                "noUnusedImports": "error",
-                "noUnusedLabels": "error",
-                "noUnusedVariables": {
-                    "level": "error",
-                    "options": { "ignoreRestSiblings": false }
-                },
-                "useParseIntRadix": "error",
-                "useSingleJsDocAsterisk": "error"
-            },
             "performance": {
                 "noAwaitInLoops": "error",
                 "noBarrelFile": "error",
@@ -213,10 +257,11 @@
                 "noSyncScripts": "error",
                 "useTopLevelRegex": "error"
             },
+            "preset": "recommended",
             "style": {
                 "noCommonJs": "error",
-                "noDoneCallback": "error",
                 "noDescendingSpecificity": "error",
+                "noDoneCallback": "error",
                 "noExcessiveClassesPerFile": "error",
                 "noImplicitBoolean": "error",
                 "noInferrableTypes": "error",
@@ -271,13 +316,13 @@
                 "useFragmentSyntax": "error",
                 "useGlobalThis": "error",
                 "useGroupedAccessorPairs": "error",
+                "useImportsFirst": "error",
                 "useImportType": {
                     "level": "error",
                     "options": {
                         "style": "separatedType"
                     }
                 },
-                "useImportsFirst": "error",
                 "useNamedCaptureGroup": "error",
                 "useNumberNamespace": "error",
                 "useNumericSeparators": "error",
@@ -297,8 +342,8 @@
                 "useThrowNewError": "error",
                 "useThrowOnlyError": "error",
                 "useTrimStartEnd": "error",
-                "useUnifiedTypeSignatures": "error",
-                "useUnicodeRegex": "error"
+                "useUnicodeRegex": "error",
+                "useUnifiedTypeSignatures": "error"
             },
             "suspicious": {
                 "noBitwiseOperators": "error",
@@ -342,35 +387,6 @@
                 "useGuardForIn": "error",
                 "useNumberToFixedDigitsArgument": "error"
             }
-        },
-        "includes": [
-            "**",
-            "!**/node_modules/**",
-            "!**/dist/**",
-            "!**/.vscode/**",
-            "!src/external-lib/**"
-        ]
-    },
-    "javascript": {
-        "formatter": {
-            "jsxQuoteStyle": "double",
-            "quoteProperties": "asNeeded",
-            "trailingCommas": "all",
-            "semicolons": "always",
-            "arrowParentheses": "always",
-            "bracketSameLine": false,
-            "quoteStyle": "double",
-            "attributePosition": "auto",
-            "bracketSpacing": true
-        },
-        "jsxRuntime": "transparent"
-    },
-    "html": {
-        "experimentalFullSupportEnabled": true,
-        "formatter": {
-            "enabled": true,
-            "indentScriptAndStyle": false,
-            "selfCloseVoidElements": "always"
         }
     },
     "overrides": [
@@ -389,10 +405,15 @@
             "javascript": {
                 "globals": ["describe", "expect", "test", "it"]
             }
+        },
+        {
+            "assist": {
+                "actions": {
+                    "source": { "useSortedKeys": "off" }
+                }
+            },
+            "includes": ["src/asset/**/*.json", "package*.json"]
         }
     ],
-    "assist": {
-        "enabled": true,
-        "actions": { "source": { "organizeImports": "on" } }
-    }
+    "vcs": { "clientKind": "git", "enabled": true, "useIgnoreFile": true }
 }

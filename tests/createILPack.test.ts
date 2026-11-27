@@ -12,15 +12,15 @@ const hkSplitIds = [
 
 const hkConfig: Config = {
   categoryName: "Category Name",
-  splitIds: hkSplitIds,
   endTriggeringAutosplit: true,
   gameName: "Hollow Knight",
+  splitIds: hkSplitIds,
 };
 
 const silksongConfig: Config = {
   categoryName: "Category Name",
-  splitIds: ["StartNewGame", "BenchAny", "GainedCurse", "PlayerDeath"],
   gameName: "Hollow Knight: Silksong",
+  splitIds: ["StartNewGame", "BenchAny", "GainedCurse", "PlayerDeath"],
 };
 
 describe("createILPack", () => {
@@ -69,8 +69,8 @@ describe("createILPack", () => {
     test("should add a credits IL after the last split when endTriggeringAutosplit is false", async () => {
       const config: Config = {
         ...hkConfig,
-        endTriggeringAutosplit: false,
         endingSplit: { name: "The Hollow Knight" },
+        endTriggeringAutosplit: false,
       };
       const { output, outputNames } = await createILPack(
         config,
@@ -111,8 +111,8 @@ describe("createILPack", () => {
     test("should name the credits IL End when endingSplit is missing", async () => {
       const config: Config = {
         ...hkConfig,
-        splitIds: ["BenchAny"],
         endTriggeringAutosplit: false,
+        splitIds: ["BenchAny"],
       };
       const { output, outputNames } = await createILPack(
         config,
@@ -130,8 +130,8 @@ describe("createILPack", () => {
     test("should start the first IL on startTriggeringAutosplit", async () => {
       const config: Config = {
         ...hkConfig,
-        startTriggeringAutosplit: "PathOfPainEntry",
         splitIds: ["PathOfPainTransition1", "PathOfPain"],
+        startTriggeringAutosplit: "PathOfPainEntry",
       };
       const { output, outputNames } = await createILPack(
         config,

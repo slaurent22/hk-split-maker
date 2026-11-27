@@ -49,15 +49,15 @@ export default function SplitMaker(): ReactElement {
   useEffect(() => {
     if (globalThis.location.hash) {
       setSearchParams({
-        game,
         builtin: globalThis.location.hash.slice(1),
+        game,
       });
     }
   }, [setSearchParams, game]);
 
   const onUpdateCategoryName = useCallback(
     (newCategoryName: string) => {
-      setSearchParams({ game, builtin: newCategoryName });
+      setSearchParams({ builtin: newCategoryName, game });
     },
     [game, setSearchParams],
   );
@@ -73,8 +73,8 @@ export default function SplitMaker(): ReactElement {
     if (confirmed) {
       const condensed = JSON.stringify(JSON.parse(configInput));
       setSearchParams({
-        game,
         config: btoa(condensed),
+        game,
       });
       alert("Copy the URL from your browser's URL bar!");
     }

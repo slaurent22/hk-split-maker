@@ -26,12 +26,12 @@ const SPLITS_LINK: Record<Game, { href: string; text: string }> = {
 
 const SPLITS_EXAMPLE: Record<Game, { name: string; id: string }> = {
   hollowknight: {
-    name: "Mask Fragment 4 (Upgrade)",
     id: "Mask1",
+    name: "Mask Fragment 4 (Upgrade)",
   },
   silksong: {
-    name: "Bell Beast (Boss)",
     id: "BellBeast",
+    name: "Bell Beast (Boss)",
   },
 };
 

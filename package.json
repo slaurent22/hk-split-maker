@@ -1,50 +1,34 @@
 {
     "name": "hk-split-maker",
     "version": "1.0.0",
-    "description": "",
     "private": true,
+    "description": "",
+    "license": "ISC",
+    "author": "",
+    "type": "module",
     "scripts": {
+        "biome": "biome check --write",
+        "biome-check": "biome check",
+        "build": "vite build",
+        "check-all": "npm run biome-check && npm run typecheck && npm run build && npm run test",
+        "format": "biome check --write --linter-enabled=false",
+        "format-check": "biome check --linter-enabled=false",
         "gen-files-hk": "node tools/gen-files-hk.js",
         "gen-files-ss": "node tools/gen-files-ss.js",
-        "typecheck": "tsc -b",
-        "build": "vite build",
-        "serve": "vite",
+        "postinstall": "husky install",
         "lint": "biome check --formatter-enabled=false --assist-enabled=false",
         "lintfix": "biome check --write --formatter-enabled=false --assist-enabled=false",
-        "format-check": "biome check --linter-enabled=false",
-        "format": "biome check --write --linter-enabled=false",
-        "biome-check": "biome check",
-        "biome": "biome check --write",
+        "serve": "vite",
         "test": "vitest run",
-        "test:ui": "vitest watch --ui",
         "test:coverage": "vitest run --coverage",
+        "test:ui": "vitest watch --ui",
         "test:watch": "vitest watch",
-        "postinstall": "husky install",
-        "check-all": "npm run biome-check && npm run typecheck && npm run build && npm run test"
+        "typecheck": "tsc -b"
     },
-    "author": "",
-    "license": "ISC",
-    "engines": {
-        "node": ">=24.13.0"
-    },
-    "type": "module",
-    "devDependencies": {
-        "@biomejs/biome": "^2.6.9",
-        "@types/file-saver": "^2.0.2",
-        "@types/node": "^24.10.9",
-        "@types/react": "^18.3.24",
-        "@types/react-dom": "^18.3.7",
-        "@types/react-tabs": "^2.3.4",
-        "@types/sortablejs": "^1.15.9",
-        "@types/xml": "^1.0.5",
-        "@vitejs/plugin-react": "^6.3.0",
-        "@vitest/coverage-v8": "^5.1.1",
-        "@vitest/ui": "^5.1.2",
-        "husky": "^7.0.4",
-        "lint-staged": "^12.3.7",
-        "typescript": "^7.0.2",
-        "vite": "^8.3.8",
-        "vitest": "^5.1.1"
+    "lint-staged": {
+        "*.{js,jsx,ts,tsx,css,md,json,yml}": [
+            "biome check --write --no-errors-on-unmatched"
+        ]
     },
     "dependencies": {
         "@monaco-editor/react": "^4.5.0",
@@ -67,9 +51,25 @@
         "sortablejs": "^1.15.7",
         "xml": "^1.0.1"
     },
-    "lint-staged": {
-        "*.{js,jsx,ts,tsx,css,md,json,yml}": [
-            "biome check --write --no-errors-on-unmatched"
-        ]
+    "devDependencies": {
+        "@biomejs/biome": "^2.6.9",
+        "@types/file-saver": "^2.0.2",
+        "@types/node": "^24.10.9",
+        "@types/react": "^18.3.24",
+        "@types/react-dom": "^18.3.7",
+        "@types/react-tabs": "^2.3.4",
+        "@types/sortablejs": "^1.15.9",
+        "@types/xml": "^1.0.5",
+        "@vitejs/plugin-react": "^6.3.0",
+        "@vitest/coverage-v8": "^5.1.1",
+        "@vitest/ui": "^5.1.2",
+        "husky": "^7.0.4",
+        "lint-staged": "^12.3.7",
+        "typescript": "^7.0.2",
+        "vite": "^8.3.8",
+        "vitest": "^5.1.1"
+    },
+    "engines": {
+        "node": ">=24.13.0"
     }
 }

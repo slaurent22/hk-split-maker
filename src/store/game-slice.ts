@@ -17,8 +17,8 @@ const initialState: GameState = {
 };
 
 const gameSlice = createSlice({
-  name: "game",
   initialState,
+  name: "game",
   reducers: {
     setGame: (state: WritableDraft<GameState>, action: PayloadAction<Game>) => {
       state.currentGame = action.payload;
