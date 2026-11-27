@@ -159,6 +159,7 @@
                 "noImpliedEval": "error",
                 "noInvalidFileInputAccept": "error",
                 "noInvalidThis": "error",
+                "noJsonUnsafeValues": "error",
                 "noLateCurrentTargetAccess": "error",
                 "noLateEventControl": "error",
                 "noMagicArrayFlatDepth": "error",
