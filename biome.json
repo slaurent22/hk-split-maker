@@ -369,6 +369,7 @@
                 "noDuplicateSelectors": "error",
                 "noEmptyBlock": "error",
                 "noEmptyBlockStatements": "error",
+                "noEmptyObjectKeys": "error",
                 "noEmptySource": "error",
                 "noExplicitAny": "error",
                 "noExtraNonNullAssertion": "error",
