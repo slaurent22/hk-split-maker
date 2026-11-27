@@ -222,6 +222,7 @@
                 "useBlockStatementOverIife": "error",
                 "useCapitalizedConstructors": "error",
                 "useConsistentIndexedObjectStyle": "error",
+                "useConsistentUnicodeBom": "error",
                 "useControlLabel": "error",
                 "useEarlyContinue": "error",
                 "useExhaustiveSwitchCases": "error",
