@@ -1,7 +1,22 @@
-import { describe, expect, test } from "vitest";
+import { readFile } from "node:fs/promises";
+import path from "node:path";
+import { describe, expect, test, vi } from "vitest";
 import pop from "../src/asset/hollowknight/categories/pop.json";
 import type { Config } from "../src/lib/lss";
 import { createILPack, importSplitsXml } from "../src/lib/lss";
+
+// createLiveSplitIconData fetches each split's icon over HTTP in the app, but
+// in tests the icon URLs are local asset paths (e.g.
+// "/src/asset/hollowknight/icons/..."), which fetch cannot parse, so every
+// icon fetch failed with a TypeError dumped to stderr. Serve the real PNG
+// bytes from disk so the icon path is exercised instead.
+async function fetchLocalIcon(
+    input: string | URL | Request,
+  ): Promise<Response> {
+    const url = input instanceof Request ? input.url : String(input);
+    const filePath = path.join(import.meta.dirname, "..", url);
+    return new Response(await readFile(filePath));
+}
 
 const hkSplitIds = [
   "BenchAny",
@@ -156,31 +171,41 @@ describe("createILPack", () => {
     test("should give each IL its own start trigger when icons are included", async () => {
       // The builtin Path of Pain category, downloaded with icons: building a
       // file waits for its icons, so each IL must not share the template.
-      const { output, outputNames } = await createILPack(
-        pop as Config,
-        "hollowknight",
-        true,
-      );
+        vi.stubGlobal("fetch", fetchLocalIcon);
+              try {
+                const { output, outputNames } = await createILPack(
+          pop as Config,
+          "hollowknight",
+          true,
+        );
+      
+        expect(outputNames).toStrictEqual([
+          "000_PathOfPainTransition1.lss",
+          "001_PathOfPainTransition2.lss",
+          "002_PathOfPainTransition3.lss",
+          "003_PathOfPain.lss",
+        ]);
+        const ils = output.map((lss) => importSplitsXml(lss, "hollowknight"));
+        expect(
+          ils.map(({ startTriggeringAutosplit }) => startTriggeringAutosplit),
+        ).toStrictEqual([
+          "PathOfPainEntry",
+          "PathOfPainTransition1",
+          "PathOfPainTransition2",
+          "PathOfPainTransition3",
+        ]);
+        expect(ils.map(({ splitIds }) => splitIds)).toStrictEqual(
+          pop.splitIds.map((splitId) => [splitId]),
+        );
 
-      expect(outputNames).toStrictEqual([
-        "000_PathOfPainTransition1.lss",
-        "001_PathOfPainTransition2.lss",
-        "002_PathOfPainTransition3.lss",
-        "003_PathOfPain.lss",
-      ]);
-      const ils = output.map((lss) => importSplitsXml(lss, "hollowknight"));
-      expect(
-        ils.map(({ startTriggeringAutosplit }) => startTriggeringAutosplit),
-      ).toStrictEqual([
-        "PathOfPainEntry",
-        "PathOfPainTransition1",
-        "PathOfPainTransition2",
-        "PathOfPainTransition3",
-      ]);
-      expect(ils.map(({ splitIds }) => splitIds)).toStrictEqual(
-        pop.splitIds.map((splitId) => [splitId]),
-      );
-    });
+              // the icons were actually fetched: each IL embeds its split's icon
+              for (const lss of output) {
+                            expect(lss).toContain("AAEAAAD");
+              }
+    } finally {
+                vi.unstubAllGlobals();
+    }
+              });
 
     test("should group subsplits into the IL of the following split", async () => {
       const config: Config = {
