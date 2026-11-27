@@ -65,7 +65,6 @@
         "react-tabs": "^6.1.1",
         "react-tooltip": "^5.29.1",
         "sortablejs": "^1.15.7",
-        "vite-plugin-node-polyfills": "^0.28.0",
         "xml": "^1.0.1"
     },
     "lint-staged": {
