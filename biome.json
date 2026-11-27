@@ -254,6 +254,7 @@
                 "useRegexpExec": "error",
                 "useSetSize": "error",
                 "useSimplifiedBooleanReturn": "error",
+                "useSingleTopLevelHeading": "error",
                 "useStringStartsEndsWith": "error",
                 "useTopLevelDescribe": "error",
                 "useUnaryMinus": "error",
