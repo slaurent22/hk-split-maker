@@ -386,6 +386,7 @@
                 "noUselessRegexBackrefs": "error",
                 "noVar": "error",
                 "useAwait": "error",
+                "useBaseline": "error",
                 "useDefaultSwitchClauseLast": "error",
                 "useErrorMessage": "error",
                 "useExpect": "error",
