@@ -20,6 +20,7 @@ import {
 import type { Game } from "../store/game-slice";
 import ArrowButton from "./ArrowButton";
 import EditorLoading from "./EditorLoading";
+import { LABELS } from "./labels";
 import ShareButton from "./ShareButton";
 
 const CategorySelect = lazy(() => import("./CategorySelect"));
@@ -396,7 +397,7 @@ export default function SplitMaker(): ReactElement {
           <Suspense
             fallback={
               <div className="hk-split-maker-monaco-editor">
-                <EditorLoading label="Loading split config editor..." />
+                <EditorLoading label={LABELS.LOADING_SPLIT_CONFIG_EDITOR} />
               </div>
             }
           >
@@ -436,7 +437,7 @@ export default function SplitMaker(): ReactElement {
           <Suspense
             fallback={
               <div className="hk-split-maker-monaco-editor">
-                <EditorLoading label="Loading split output editor..." />
+                <EditorLoading label={LABELS.LOADING_SPLIT_OUTPUT_EDITOR} />
               </div>
             }
           >

@@ -23,6 +23,7 @@ import SplitSelect from "./SplitSelect";
 import Tooltip from "./Tooltip";
 import "react-tabs/style/react-tabs.css";
 import EditorLoading from "./EditorLoading";
+import { LABELS } from "./labels";
 
 const SplitConfigJsonEditor = lazy(() => import("./SplitConfigJsonEditor"));
 
@@ -399,9 +400,9 @@ export default function SplitConfigEditor(props: Props): ReactElement {
         <SplitSelect onChange={onChangeSplitSelect} />
         <div className="hk-split-maker-monaco-editor">
           {props.isLoading ? (
-            <EditorLoading label="Loading configuration..." />
+            <EditorLoading label={LABELS.LOADING_CONFIGURATION} />
           ) : null}
-          <Suspense fallback={<EditorLoading label="Loading editor..." />}>
+          <Suspense fallback={<EditorLoading label={LABELS.LOADING_EDITOR} />}>
             <SplitConfigJsonEditor
               onChange={onChange}
               onMount={handleEditorDidMount}
