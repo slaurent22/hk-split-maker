@@ -2,7 +2,7 @@ import type { ReactNode } from "react";
 import { useEffect } from "react";
 import { useDispatch } from "react-redux";
 import { Navigate, useLocation, useSearchParams } from "react-router-dom";
-import { useCurrentGame } from "../hooks";
+import { useStoredGame } from "../hooks";
 import { parseGameParam, withDefaultGameParam } from "../lib/game-param";
 import type { AppDispatch } from "../store";
 import { setGame } from "../store/game-slice";
@@ -15,7 +15,7 @@ export default function AppWrapper({ children }: AppWrapperProps): ReactNode {
   const dispatch = useDispatch<AppDispatch>();
   const [searchParams] = useSearchParams();
   const { hash } = useLocation();
-  const currentGame = useCurrentGame();
+  const currentGame = useStoredGame();
   const gameParam = parseGameParam(searchParams.get("game"));
 
   // The URL is the source of truth for the game; mirror it into the store.
