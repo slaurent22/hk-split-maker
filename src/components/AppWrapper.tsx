@@ -1,40 +1,36 @@
 import type { ReactNode } from "react";
 import { useEffect } from "react";
 import { useDispatch } from "react-redux";
-import { useSearchParams } from "react-router-dom";
-import { useCurrentGame } from "../hooks";
+import { Navigate, useLocation, useSearchParams } from "react-router-dom";
+import { useStoredGame } from "../hooks";
+import { parseGameParam, withDefaultGameParam } from "../lib/game-param";
 import type { AppDispatch } from "../store";
-import type { Game } from "../store/game-slice";
 import { setGame } from "../store/game-slice";
 
 interface AppWrapperProps {
   children: ReactNode;
 }
 
-const VALID_GAMES: Array<Game> = ["hollowknight", "silksong"];
-
 export default function AppWrapper({ children }: AppWrapperProps): ReactNode {
   const dispatch = useDispatch<AppDispatch>();
-  const [searchParams, setSearchParams] = useSearchParams();
-  const currentGame = useCurrentGame();
+  const [searchParams] = useSearchParams();
+  const { hash } = useLocation();
+  const currentGame = useStoredGame();
+  const gameParam = parseGameParam(searchParams.get("game"));
 
+  // The URL is the source of truth for the game; mirror it into the store.
   useEffect(() => {
-    const gameParam = searchParams.get("game") as Game | null;
-
-    if (gameParam && VALID_GAMES.includes(gameParam)) {
-      if (gameParam !== currentGame) {
-        dispatch(setGame(gameParam));
-      }
-    } else {
-      const fallback: Game = "hollowknight";
-      if (currentGame !== fallback) {
-        dispatch(setGame(fallback));
-      }
-      const newParams = new URLSearchParams(searchParams);
-      newParams.set("game", fallback);
-      setSearchParams(newParams, { replace: true });
+    if (gameParam && gameParam !== currentGame) {
+      dispatch(setGame(gameParam));
     }
-  }, [searchParams, currentGame, dispatch, setSearchParams]);
+  }, [gameParam, currentGame, dispatch]);
+
+  if (!gameParam) {
+    // Missing or unknown game: redirect to the default game, keeping the
+    // other params and the hash (used by legacy #category links).
+    const search = `?${withDefaultGameParam(searchParams).toString()}`;
+    return <Navigate replace={true} to={{ hash, search }} />;
+  }
 
   return <>{children}</>;
 }

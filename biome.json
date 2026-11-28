@@ -248,7 +248,7 @@
                 "usePackageJsonValidEngines": "error",
                 "usePackageJsonValidLicense": "error",
                 "usePromiseRejectErrors": "error",
-                "useReactCompiler": "off",
+                "useReactCompiler": "error",
                 "useReactFunctionComponentDefinition": "error",
                 "useReactNamingConvention": "error",
                 "useRegexpExec": "error",
