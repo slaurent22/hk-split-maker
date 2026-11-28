@@ -6,6 +6,7 @@ import { useEffect } from "react";
 import { useCurrentGame } from "../hooks";
 import HKSplitConfigSchema from "../schema/hollowknight/splits.schema";
 import SSSplitConfigSchema from "../schema/silksong/splits.schema";
+import EditorLoading from "./EditorLoading";
 
 function useHandleEditorWillMount(): [(monaco: Monaco) => void, Uri] {
   const game = useCurrentGame();
@@ -50,6 +51,7 @@ export default function SplitConfigJsonEditor(props: Props): ReactNode {
     <Editor
       beforeMount={handleEditorWillMount}
       defaultLanguage="json"
+      loading={<EditorLoading label="Loading editor..." />}
       onChange={props.onChange}
       onMount={props.onMount}
       options={{
